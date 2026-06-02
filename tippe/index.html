@@ -580,7 +580,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 async function hentKamper() {
   try {
-    const r = await fetch(API_URL);
+    const r = await fetch(API_URL + '?t=' + Date.now());
     const data = await r.json();
     kamper = data.matches.filter(m => m.group); // kun gruppekamper
     byggVinnerDropdown();
