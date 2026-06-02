@@ -537,7 +537,9 @@ body {
 
 <script>
 // ── KONFIG ──────────────────────────────────────────────────
-const AUTOMATE_URL = "DIN_POWER_AUTOMATE_URL_HER"; // Fyll inn etter oppsett
+const GITHUB_TOKEN  = "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";
+const GITHUB_REPO   = "RambergApps/vm2026";
+const GITHUB_BRANCH = "main";
 const TOKEN        = "vm2026-ramberg";
 const API_URL      = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
 
@@ -773,26 +775,56 @@ async function leverTipping() {
   status.innerHTML = '';
 
   try {
-    if (AUTOMATE_URL === "DIN_POWER_AUTOMATE_URL_HER") {
-      // Demo-modus: simuler suksess
-      await new Promise(r => setTimeout(r, 1200));
-      visSucces(navn);
-      return;
-    }
-    const resp = await fetch(AUTOMATE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+    // Bygg filnavn
+    const filnavn = navn.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.json';
+    const filsti  = `tippinger/gruppespill/${filnavn}`;
+    const apiUrl  = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filsti}`;
+
+    // Sjekk om filen finnes (for å hente SHA ved re-innlevering)
+    let sha = null;
+    try {
+      const sjekkResp = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          'Accept': 'application/vnd.github+json'
+        }
+      });
+      if (sjekkResp.ok) {
+        const sjekkData = await sjekkResp.json();
+        sha = sjekkData.sha;
+      }
+    } catch(e) { /* Filen finnes ikke ennå — OK */ }
+
+    // Bygg request body
+    const body = {
+      message: `Tipping: ${navn}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2)))),
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+
+    // PUT til GitHub API
+    const resp = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
     });
-    if (resp.ok || resp.status === 202) {
+
+    if (resp.ok || resp.status === 201) {
       visSucces(navn);
     } else {
-      throw new Error('HTTP ' + resp.status);
+      const feil = await resp.json();
+      throw new Error(feil.message || 'HTTP ' + resp.status);
     }
   } catch(e) {
     btn.disabled = false;
     btn.textContent = '🚀 Prøv igjen';
-    status.innerHTML = '<div class="error-box">Noe gikk galt. Prøv igjen eller kontakt arrangør.</div>';
+    status.innerHTML = `<div class="error-box">Noe gikk galt: ${e.message}. Prøv igjen eller kontakt arrangør.</div>`;
   }
 }
 
