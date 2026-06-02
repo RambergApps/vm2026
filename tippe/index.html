@@ -537,10 +537,12 @@ body {
 
 <script>
 // ── KONFIG ──────────────────────────────────────────────────
-const WORKER_URL    = "https://vm2026-tipping.alexbnielsen92.workers.dev";
+const GITHUB_OWNER  = "RambergApps";
+const GITHUB_REPO   = "vm2026";
+const GITHUB_TOKEN  = "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";
 const GITHUB_BRANCH = "main";
-const TOKEN        = "vm2026-ramberg";
-const API_URL      = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
+const TOKEN         = "vm2026-ramberg";
+const API_URL       = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
 
 // Lagnavn-oversettelser (norsk)
 const OVERSETT = {
@@ -774,17 +776,29 @@ async function leverTipping() {
   status.innerHTML = '';
 
   try {
-    const resp = await fetch(WORKER_URL, {
+    const resp = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/dispatches`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      headers: {
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        event_type: 'motta_tipping',
+        client_payload: {
+          runde: 'gruppespill',
+          navn: navn,
+          data: payload
+        }
+      })
     });
 
     if (resp.ok) {
       visSucces(navn);
     } else {
-      const feil = await resp.json().catch(() => ({}));
-      throw new Error(feil.error || 'HTTP ' + resp.status);
+      const feiltekst = await resp.text();
+      throw new Error(`GitHub API-feil: ${resp.status} ${feiltekst}`);
     }
   } catch(e) {
     btn.disabled = false;
