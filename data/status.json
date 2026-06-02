@@ -1,27 +1,14 @@
 {
   "r32": {
-    "aapen": false,
+    "aapen": true,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      { "id": "r32_1", "hjemme": "Spania", "borte": "Uruguay", "info": "Testkamp 1" },
+      { "id": "r32_2", "hjemme": "Brasil", "borte": "Marokko", "info": "Testkamp 2" }
+    ]
   },
-  "r16": {
-    "aapen": false,
-    "frist": null,
-    "kamper": []
-  },
-  "qf": {
-    "aapen": false,
-    "frist": null,
-    "kamper": []
-  },
-  "sf": {
-    "aapen": false,
-    "frist": null,
-    "kamper": []
-  },
-  "final": {
-    "aapen": false,
-    "frist": null,
-    "kamper": []
-  }
+  "r16": { "aapen": false, "frist": null, "kamper": [] },
+  "qf": { "aapen": false, "frist": null, "kamper": [] },
+  "sf": { "aapen": false, "frist": null, "kamper": [] },
+  "final": { "aapen": false, "frist": null, "kamper": [] }
 }
