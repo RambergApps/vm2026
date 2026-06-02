@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM 2026 — Tippekonkurranse</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+:root {
+  --bg:       #060912;
+  --surface:  #0d1320;
+  --card:     #111a2e;
+  --card2:    #152035;
+  --border:   #1e2d4a;
+  --accent:   #00e676;
+  --gold:     #ffd600;
+  --silver:   #b0bec5;
+  --bronze:   #ff8a65;
+  --text:     #e8f0ff;
+  --muted:    #6b7fa8;
+  --norway:   #ef2b2d;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── BAKGRUNN ── */
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0,230,118,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,230,118,.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-glow {
+  position: fixed; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 600px;
+  background: radial-gradient(ellipse, rgba(0,230,118,.06) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative; z-index: 1;
+  padding: 56px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,230,118,.1);
+  border: 1px solid rgba(0,230,118,.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.8); } }
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 12vw, 120px);
+  line-height: .9;
+  letter-spacing: .02em;
+  color: var(--text);
+}
+.hero h1 .year { color: var(--accent); }
+.hero-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(14px, 3vw, 20px);
+  font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); margin-top: 8px;
+}
+
+/* Countdown */
+.countdown {
+  display: inline-flex; gap: 4px; align-items: center;
+  margin-top: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+.cd-unit { text-align: center; min-width: 44px; }
+.cd-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; line-height: 1;
+  color: var(--text);
+}
+.cd-lbl { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.cd-sep { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--border); align-self: flex-start; padding-top: 2px; }
+
+/* ── STATS-BANNER ── */
+.stats-banner {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 0;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.stat-item {
+  padding: 20px 32px; text-align: center;
+  border-right: 1px solid var(--border);
+  min-width: 120px;
+}
+.stat-item:last-child { border-right: none; }
+.stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px; line-height: 1;
+  color: var(--accent);
+}
+.stat-lbl { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+/* ── NAVIGASJON ── */
+.nav {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 0;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.nav-tab {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: 14px 20px; color: var(--muted);
+  border-bottom: 3px solid transparent;
+  cursor: pointer; white-space: nowrap; transition: all .2s;
+}
+.nav-tab:hover { color: var(--text); }
+.nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── CONTAINER ── */
+.container {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  padding: 32px 16px 80px;
+}
+
+/* ── SEKSJON ── */
+.seksjon { display: none; }
+.seksjon.active { display: block; }
+
+/* ── TOPP 3 PODIUM ── */
+.podium {
+  display: grid; grid-template-columns: 1fr 1.1fr 1fr;
+  gap: 8px; margin-bottom: 32px; align-items: end;
+}
+.podium-plass {
+  border-radius: 10px 10px 0 0;
+  padding: 20px 12px 16px;
+  text-align: center;
+  position: relative;
+  page-break-inside: avoid;
+}
+.podium-plass.p1 { background: linear-gradient(180deg, rgba(255,214,0,.15) 0%, rgba(255,214,0,.05) 100%); border: 1.5px solid rgba(255,214,0,.3); min-height: 160px; }
+.podium-plass.p2 { background: linear-gradient(180deg, rgba(176,190,197,.1) 0%, rgba(176,190,197,.03) 100%); border: 1.5px solid rgba(176,190,197,.2); min-height: 130px; }
+.podium-plass.p3 { background: linear-gradient(180deg, rgba(255,138,101,.1) 0%, rgba(255,138,101,.03) 100%); border: 1.5px solid rgba(255,138,101,.2); min-height: 110px; }
+
+.podium-medal { font-size: 28px; margin-bottom: 8px; }
+.podium-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 800; text-transform: uppercase;
+  word-break: break-word;
+}
+.podium-poeng {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px; line-height: 1; margin-top: 4px;
+}
+.podium-plass.p1 .podium-poeng { color: var(--gold); }
+.podium-plass.p2 .podium-poeng { color: var(--silver); }
+.podium-plass.p3 .podium-poeng { color: var(--bronze); }
+.podium-vinner-tag {
+  font-size: 10px; color: var(--muted);
+  margin-top: 4px; font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ── STILLING-TABELL ── */
+.stilling-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px 60px 60px 80px;
+  gap: 8px; padding: 8px 16px;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); border-bottom: 1px solid var(--border);
+}
+.stilling-rad {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px 60px 60px 80px;
+  gap: 8px; padding: 14px 16px;
+  border-bottom: 1px solid rgba(30,45,74,.6);
+  align-items: center;
+  transition: background .15s; cursor: pointer;
+  page-break-inside: avoid;
+}
+.stilling-rad:hover { background: rgba(255,255,255,.02); }
+.stilling-rad.aktiv { background: rgba(0,230,118,.04); border-color: rgba(0,230,118,.1); }
+.stilling-rad.norge { border-left: 3px solid var(--norway); }
+
+.plass-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px; color: var(--muted); text-align: center;
+}
+.plass-num.p1 { color: var(--gold); }
+.plass-num.p2 { color: var(--silver); }
+.plass-num.p3 { color: var(--bronze); }
+
+.rad-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 700; text-transform: uppercase;
+}
+.rad-vinner {
+  font-size: 11px; color: var(--muted); margin-top: 1px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.rad-vinner.riktig { color: var(--accent); }
+
+.rad-tall {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 700; text-align: right;
+}
+.rad-totalt {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; text-align: right; color: var(--text);
+}
+
+/* Expandert rad */
+.detaljer {
+  display: none;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px;
+}
+.detaljer.vis { display: block; }
+.detaljer-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.kamp-rad {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid rgba(30,45,74,.4);
+  font-size: 13px;
+}
+.kamp-rad:last-child { border-bottom: none; }
+.kamp-lag { flex: 1; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; }
+.kamp-score { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--muted); min-width: 80px; text-align: center; }
+.kamp-score.riktig { color: var(--accent); }
+.kamp-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 16px;
+  min-width: 40px; text-align: right;
+}
+.kamp-poeng.p0 { color: var(--muted); }
+.kamp-poeng.p2 { color: var(--text); }
+.kamp-poeng.p4 { color: var(--gold); }
+
+/* ── INGEN DATA ── */
+.ingen-data {
+  text-align: center; padding: 64px 24px; color: var(--muted);
+}
+.ingen-data .stor { font-size: 48px; margin-bottom: 16px; }
+.ingen-data h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px; font-weight: 800; text-transform: uppercase;
+  color: var(--text); margin-bottom: 8px;
+}
+.ingen-data a {
+  display: inline-block; margin-top: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 6px;
+  background: var(--accent); color: #000; text-decoration: none;
+  transition: all .2s;
+}
+.ingen-data a:hover { background: #00ff85; transform: translateY(-1px); }
+
+/* ── OPPDATERT ── */
+.sist-oppdatert {
+  text-align: center; font-size: 11px; color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif; letter-spacing: .08em;
+  padding: 16px 0 0;
+}
+
+/* ── RUNDE-FILTER ── */
+.runde-filter {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.runde-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px;
+  border: 1.5px solid var(--border);
+  background: transparent; color: var(--muted); cursor: pointer; transition: all .15s;
+}
+.runde-btn:hover { color: var(--text); border-color: var(--muted); }
+.runde-btn.active { background: rgba(0,230,118,.1); border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 600px) {
+  .podium { grid-template-columns: 1fr 1.05fr 1fr; gap: 6px; }
+  .podium-navn { font-size: 13px; }
+  .stilling-header,
+  .stilling-rad { grid-template-columns: 32px 1fr 52px 52px 80px; }
+  .stilling-header .col-gruppe,
+  .stilling-rad .col-gruppe { display: none; }
+  .stat-item { padding: 16px 20px; }
+}
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stilling-rad { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">
+    <div class="live-dot"></div>
+    Live oppdatert
+  </div>
+  <h1>VM <span class="year">2026</span></h1>
+  <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
+
+  <div class="countdown" id="countdown">
+    <div class="cd-unit"><div class="cd-val" id="cd-d">--</div><div class="cd-lbl">Dager</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-val" id="cd-h">--</div><div class="cd-lbl">Timer</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-val" id="cd-m">--</div><div class="cd-lbl">Min</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-val" id="cd-s">--</div><div class="cd-lbl">Sek</div></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-banner" id="statsBanner" style="display:none">
+  <div class="stat-item"><div class="stat-val" id="statDeltakere">0</div><div class="stat-lbl">Deltakere</div></div>
+  <div class="stat-item"><div class="stat-val" id="statLeder">—</div><div class="stat-lbl">Leder</div></div>
+  <div class="stat-item"><div class="stat-val" id="statMaxPoeng">0</div><div class="stat-lbl">Topppoeng</div></div>
+  <div class="stat-item"><div class="stat-val" id="statKamper">0</div><div class="stat-lbl">Kamper spilt</div></div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-tab active" onclick="byttSeksjon('stilling', this)">Stilling</div>
+  <div class="nav-tab" onclick="byttSeksjon('detaljer-seksjon', this)">Detaljer</div>
+  <div class="nav-tab" onclick="byttSeksjon('regler', this)">Regler</div>
+</div>
+
+<div class="container">
+
+  <!-- ── STILLING ── -->
+  <div class="seksjon active" id="stilling">
+    <div id="stillingsinnhold">
+      <div class="ingen-data">
+        <div class="stor">⏳</div>
+        <h3>Laster stilling...</h3>
+        <p>Henter data fra serveren</p>
+      </div>
+    </div>
+    <div class="sist-oppdatert" id="sistOppdatert"></div>
+  </div>
+
+  <!-- ── DETALJER ── -->
+  <div class="seksjon" id="detaljer-seksjon">
+    <div class="runde-filter" id="rundeFilter"></div>
+    <div id="detaljertabell"></div>
+  </div>
+
+  <!-- ── REGLER ── -->
+  <div class="seksjon" id="regler">
+    <div style="max-width:600px">
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:36px;margin-bottom:24px;color:var(--accent)">Poengregler</h2>
+
+      <table style="width:100%;border-collapse:collapse;margin-bottom:32px">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Type</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Riktig vinner</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Eksakt resultat</th>
+          </tr>
+        </thead>
+        <tbody id="reglerTabell"></tbody>
+      </table>
+
+      <div style="background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Turneringsvinner</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold)">35 poeng</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">Tippa ved registrering — kan ikke endres</div>
+      </div>
+
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Maks poeng totalt</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent)">408</div>
+      </div>
+
+      <div style="margin-top:24px;text-align:center">
+        <a href="tippe/" style="display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:14px 40px;border-radius:6px;background:var(--accent);color:#000;text-decoration:none">
+          ⚽ Lever tipping
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data/data.js"></script>
+<script>
+// ── POENGREGLER ────────────────────────────────────────────
+const REGLER = [
+  { type: "Gruppespill",   vinner: 2, eksakt: 2 },
+  { type: "Runde av 32",   vinner: 3, eksakt: 2 },
+  { type: "Runde av 16",   vinner: 4, eksakt: 2 },
+  { type: "Kvartfinale",   vinner: 5, eksakt: 2 },
+  { type: "Semifinale",    vinner: 6, eksakt: 2 },
+  { type: "Finale",        vinner: 7, eksakt: 2 },
+];
+
+// ── REGLER-TABELL ──────────────────────────────────────────
+document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
+  <tr>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">${r.type}</td>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text)">${r.vinner}p</td>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--accent)">+${r.eksakt}p</td>
+  </tr>
+`).join("");
+
+// ── COUNTDOWN ──────────────────────────────────────────────
+const VM_START = new Date("2026-06-11T19:00:00+02:00");
+
+function oppdaterCountdown() {
+  const nå   = new Date();
+  const diff = VM_START - nå;
+  if (diff <= 0) {
+    document.getElementById("countdown").innerHTML =
+      '<span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;color:var(--accent);font-size:16px;letter-spacing:.1em">⚽ VM ER I GANG!</span>';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById("cd-d").textContent = String(d).padStart(2,"0");
+  document.getElementById("cd-h").textContent = String(h).padStart(2,"0");
+  document.getElementById("cd-m").textContent = String(m).padStart(2,"0");
+  document.getElementById("cd-s").textContent = String(s).padStart(2,"0");
+}
+oppdaterCountdown();
+setInterval(oppdaterCountdown, 1000);
+
+// ── BYGG STILLING ──────────────────────────────────────────
+function byggStilling() {
+  if (typeof VM_DATA === "undefined" || !VM_DATA.stilling?.length) {
+    document.getElementById("stillingsinnhold").innerHTML = `
+      <div class="ingen-data">
+        <div class="stor">🏆</div>
+        <h3>Ingen tippinger ennå</h3>
+        <p>Vær den første til å levere!</p>
+        <a href="tippe/">⚽ Lever tipping nå</a>
+      </div>`;
+    return;
+  }
+
+  const stilling = VM_DATA.stilling;
+  const topp3    = stilling.slice(0, 3);
+  const resten   = stilling.slice(3);
+
+  // Stats
+  document.getElementById("statsBanner").style.display = "flex";
+  document.getElementById("statDeltakere").textContent = stilling.length;
+  document.getElementById("statLeder").textContent     = stilling[0]?.navn.split(" ")[0] || "—";
+  document.getElementById("statMaxPoeng").textContent  = stilling[0]?.poeng_totalt || 0;
+  const ferdigeKamper = stilling[0]?.tippinger?.filter(t => t.ferdig)?.length || 0;
+  document.getElementById("statKamper").textContent    = ferdigeKamper;
+
+  // Podium
+  let podiumHTML = '<div class="podium">';
+  const podiumRekkefølge = topp3.length >= 2 ? [topp3[1], topp3[0], topp3[2]] : topp3;
+  const podiumKlasser = topp3.length >= 2 ? ["p2","p1","p3"] : ["p1"];
+  const medals = topp3.length >= 2 ? ["🥈","🥇","🥉"] : ["🥇"];
+
+  podiumRekkefølge.forEach((d, i) => {
+    if (!d) { podiumHTML += '<div></div>'; return; }
+    podiumHTML += `
+      <div class="podium-plass ${podiumKlasser[i]}">
+        <div class="podium-medal">${medals[i]}</div>
+        <div class="podium-navn">${escHTML(d.navn)}</div>
+        <div class="podium-poeng">${d.poeng_totalt}</div>
+        <div class="podium-vinner-tag">${escHTML(d.turneringsvinner || "")}</div>
+      </div>`;
+  });
+  podiumHTML += '</div>';
+
+  // Tabell
+  let tabellHTML = `
+    <div class="stilling-header">
+      <div>#</div><div>Navn</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe</div>
+      <div style="text-align:right">Utsl.</div>
+      <div style="text-align:right">Turn.</div>
+      <div style="text-align:right">Totalt</div>
+    </div>`;
+
+  stilling.forEach((d, i) => {
+    const plass    = i + 1;
+    const plassCls = plass <= 3 ? `p${plass}` : "";
+    const vinnerCls = d.turneringsvinner_riktig ? "riktig" : "";
+
+    tabellHTML += `
+      <div class="stilling-rad" onclick="toggleDetaljer(${i})" id="rad-${i}">
+        <div class="plass-num ${plassCls}">${plass}</div>
+        <div>
+          <div class="rad-navn">${escHTML(d.navn)}</div>
+          <div class="rad-vinner ${vinnerCls}">🏆 ${escHTML(d.turneringsvinner || "—")}</div>
+        </div>
+        <div class="rad-tall col-gruppe">${d.poeng_gruppespill}</div>
+        <div class="rad-tall">${d.poeng_utslagsrunder}</div>
+        <div class="rad-tall">${d.poeng_turneringsvinner}</div>
+        <div class="rad-totalt">${d.poeng_totalt}</div>
+      </div>
+      <div class="detaljer" id="detaljer-${i}">
+        ${byggDetaljer(d)}
+      </div>`;
+  });
+
+  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + tabellHTML;
+
+  // Sist oppdatert
+  if (VM_DATA.sist_oppdatert) {
+    const dato = new Date(VM_DATA.sist_oppdatert);
+    document.getElementById("sistOppdatert").textContent =
+      "Sist oppdatert: " + dato.toLocaleString("no-NO", {day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+  }
+
+  // Bygg detaljert tabell
+  byggDetaljertTabell();
+}
+
+function byggDetaljer(d) {
+  if (!d.tippinger?.length) return '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
+
+  const ferdigeKamper = d.tippinger.filter(t => t.ferdig);
+  if (!ferdigeKamper.length) return '<p style="color:var(--muted);font-size:13px">Ingen kamper ferdigspilt ennå</p>';
+
+  const rundeNavn = { gruppe:"Gruppespill", r32:"R32", r16:"R16", qf:"QF", sf:"SF", final:"Finale" };
+
+  let html = '<div class="detaljer-tittel">Tippinger</div>';
+  ferdigeKamper.forEach(t => {
+    const eksakt = t.eksakt;
+    const scoreCls = eksakt ? "riktig" : "";
+    const poengCls = t.poeng === 0 ? "p0" : t.poeng <= 2 ? "p2" : "p4";
+    const runde = rundeNavn[t.runde] || t.runde || "";
+
+    html += `
+      <div class="kamp-rad">
+        <div class="kamp-lag">${escHTML(t.hjemmelag || "")} – ${escHTML(t.bortelag || "")}</div>
+        <div class="kamp-score ${scoreCls}">
+          ${t.tippa_h ?? "–"}–${t.tippa_b ?? "–"}
+          <span style="color:var(--muted);font-size:11px"> (${t.faktisk_h}–${t.faktisk_b})</span>
+        </div>
+        <div style="font-size:10px;color:var(--muted);white-space:nowrap">${runde}</div>
+        <div class="kamp-poeng ${poengCls}">${t.poeng}p</div>
+      </div>`;
+  });
+
+  return html;
+}
+
+function toggleDetaljer(i) {
+  const detaljer = document.getElementById("detaljer-" + i);
+  const rad      = document.getElementById("rad-" + i);
+  const erAktiv  = detaljer.classList.contains("vis");
+  document.querySelectorAll(".detaljer").forEach(d => d.classList.remove("vis"));
+  document.querySelectorAll(".stilling-rad").forEach(r => r.classList.remove("aktiv"));
+  if (!erAktiv) {
+    detaljer.classList.add("vis");
+    rad.classList.add("aktiv");
+  }
+}
+
+// ── DETALJERT TABELL ───────────────────────────────────────
+let aktivRunde = "alle";
+
+function byggDetaljertTabell() {
+  if (!VM_DATA?.stilling?.length) return;
+
+  const runder = ["alle","gruppe","r32","r16","qf","sf","final"];
+  const rundeNavn = { alle:"Alle",gruppe:"Gruppe",r32:"R32",r16:"R16",qf:"QF",sf:"SF",final:"Finale" };
+
+  // Filter-knapper
+  document.getElementById("rundeFilter").innerHTML = runder.map(r => `
+    <button class="runde-btn ${r === aktivRunde ? 'active' : ''}"
+      onclick="filtrerRunde('${r}')">${rundeNavn[r]}</button>
+  `).join("");
+
+  // Tabell
+  let html = `
+    <div class="stilling-header">
+      <div>#</div><div>Navn</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe</div>
+      <div style="text-align:right">Utsl.</div>
+      <div style="text-align:right">Turn.</div>
+      <div style="text-align:right">Totalt</div>
+    </div>`;
+
+  VM_DATA.stilling.forEach((d, i) => {
+    const poengGruppe = aktivRunde === "alle" ? d.poeng_gruppespill :
+      aktivRunde === "gruppe" ? d.poeng_gruppespill : 0;
+    const poengUtsl = aktivRunde === "alle" ? d.poeng_utslagsrunder :
+      aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((s,t) => s+t.poeng, 0) || 0) : 0;
+    const poengTurn = aktivRunde === "alle" ? d.poeng_turneringsvinner : 0;
+    const totalt = aktivRunde === "alle" ? d.poeng_totalt : poengGruppe + poengUtsl;
+
+    html += `
+      <div class="stilling-rad">
+        <div class="plass-num ${i<3?'p'+(i+1):''}">${i+1}</div>
+        <div><div class="rad-navn">${escHTML(d.navn)}</div></div>
+        <div class="rad-tall col-gruppe">${poengGruppe}</div>
+        <div class="rad-tall">${poengUtsl}</div>
+        <div class="rad-tall">${poengTurn}</div>
+        <div class="rad-totalt">${totalt}</div>
+      </div>`;
+  });
+
+  document.getElementById("detaljertabell").innerHTML = html;
+}
+
+function filtrerRunde(runde) {
+  aktivRunde = runde;
+  byggDetaljertTabell();
+}
+
+// ── NAVIGASJON ─────────────────────────────────────────────
+function byttSeksjon(id, el) {
+  document.querySelectorAll(".seksjon").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  el.classList.add("active");
+}
+
+function escHTML(str) {
+  return String(str)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+// ── START ──────────────────────────────────────────────────
+byggStilling();
+</script>
+</body>
+</html>
