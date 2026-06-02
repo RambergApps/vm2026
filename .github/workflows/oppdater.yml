@@ -1,0 +1,45 @@
+name: Oppdater VM 2026 Leaderboard
+
+on:
+  # Kjør hver time under VM (11. juni - 19. juli)
+  schedule:
+    - cron: '0 * * * *'
+
+  # Kjør automatisk når ny tipping-fil pushes
+  push:
+    paths:
+      - 'tippinger/**'
+
+  # Kjør manuelt fra GitHub-grensesnittet
+  workflow_dispatch:
+
+jobs:
+  oppdater:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer avhengigheter
+        run: pip install requests
+
+      - name: Kjør poengregning
+        run: python scripts/poengregning.py
+        env:
+          GITHUB_ACTIONS: true
+
+      - name: Commit og push oppdatert data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/data.js data/status.json
+          git diff --staged --quiet || git commit -m "Auto: oppdater leaderboard $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
