@@ -459,12 +459,12 @@ body {
 
 <script>
 // ── KONFIG ─────────────────────────────────────────────────
-const WORKER_URL    = "https://vm2026-tipping.alexbnielsen92.workers.dev";
+const SUBMIT_URL   = "https://vm2026-submit-api.vercel.app/api/submit";
 const TOKEN        = "vm2026-ramberg";
 
 // Status-fil fra repoet — GitHub Actions oppdaterer denne
 // I demo-modus simulerer vi at R32 er åpen
-const STATUS_URL = "./data/status.json";
+const STATUS_URL = "../data/status.json";
 
 // Poeng per runde
 const POENG = { r32: 3, r16: 4, qf: 5, sf: 6, final: 7 };
@@ -797,17 +797,23 @@ async function leverRunde(runde) {
   };
 
   try {
-    const resp = await fetch(WORKER_URL, {
+    const resp = await fetch(SUBMIT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        runde: runde,
+        navn: navn,
+        data: payload
+      })
     });
 
     if (resp.ok) {
       visSucces(navn, runde);
     } else {
-      const feil = await resp.json().catch(() => ({}));
-      throw new Error(feil.error || 'HTTP ' + resp.status);
+      const feil = await resp.json().catch(() => null);
+      throw new Error(
+        feil?.details || feil?.error || 'Submit-feil: ' + resp.status
+      );
     }
   } catch(e) {
     btn.disabled = false;
