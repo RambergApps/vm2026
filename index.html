@@ -417,7 +417,9 @@ body {
 
 </div>
 
-<script src="data/data.js"></script>
+<script>
+  document.write('<script src="data/data.js?v=' + Date.now() + '"><\/script>');
+</script>
 <script>
 // ── POENGREGLER ────────────────────────────────────────────
 const REGLER = [
