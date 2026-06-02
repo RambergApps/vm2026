@@ -459,7 +459,9 @@ body {
 
 <script>
 // ── KONFIG ─────────────────────────────────────────────────
-const AUTOMATE_URL = "DIN_POWER_AUTOMATE_URL_HER";
+const GITHUB_TOKEN  = "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";
+const GITHUB_REPO   = "RambergApps/vm2026";
+const GITHUB_BRANCH = "main";
 const TOKEN        = "vm2026-ramberg";
 
 // Status-fil fra repoet — GitHub Actions oppdaterer denne
@@ -797,24 +799,47 @@ async function leverRunde(runde) {
   };
 
   try {
-    if (AUTOMATE_URL === "DIN_POWER_AUTOMATE_URL_HER") {
-      await new Promise(r => setTimeout(r, 1000));
-      visSucces(navn, runde);
-      return;
-    }
-    const resp = await fetch(AUTOMATE_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+    const filnavn = navn.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.json';
+    const filsti  = `tippinger/${runde}/${filnavn}`;
+    const apiUrl  = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filsti}`;
+
+    let sha = null;
+    try {
+      const sjekkResp = await fetch(apiUrl, {
+        headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github+json' }
+      });
+      if (sjekkResp.ok) { const d = await sjekkResp.json(); sha = d.sha; }
+    } catch(e) {}
+
+    const body = {
+      message: `Tipping ${runde}: ${navn}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2)))),
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+
+    const resp = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
     });
-    if (resp.ok || resp.status === 202) {
+
+    if (resp.ok || resp.status === 201) {
       visSucces(navn, runde);
-    } else throw new Error("HTTP " + resp.status);
+    } else {
+      const feil = await resp.json();
+      throw new Error(feil.message || 'HTTP ' + resp.status);
+    }
   } catch(e) {
     btn.disabled = false;
     btn.textContent = "🚀 Prøv igjen";
     document.getElementById("advarsel-" + runde).innerHTML +=
-      '<div class="error-box">Noe gikk galt. Prøv igjen.</div>';
+      `<div class="error-box">Noe gikk galt: ${e.message}. Prøv igjen.</div>`;
   }
 }
 
