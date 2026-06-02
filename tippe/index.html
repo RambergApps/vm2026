@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM 2026 — Tipp her!</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+  print-color-adjust: exact; -webkit-print-color-adjust: exact;
+}
+:root {
+  --bg:      #0a0f1e;
+  --surface: #111827;
+  --card:    #1a2235;
+  --border:  #2a3650;
+  --accent:  #00e676;
+  --accent2: #ffd600;
+  --red:     #ff4444;
+  --text:    #f0f4ff;
+  --muted:   #7a8aaa;
+  --norway:  #ef2b2d;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #0a0f1e 0%, #0d1f3c 50%, #0a1628 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 24px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '⚽';
+  position: absolute;
+  font-size: 200px;
+  opacity: .03;
+  top: -40px; right: -40px;
+  line-height: 1;
+}
+.hero .badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .15em;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 8vw, 72px);
+  font-weight: 900;
+  letter-spacing: -.01em;
+  line-height: .95;
+  text-transform: uppercase;
+}
+.hero h1 span { color: var(--accent2); }
+.hero p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.deadline-banner {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,214,0,.1);
+  border: 1px solid rgba(255,214,0,.3);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+/* ── LAYOUT ── */
+.container { max-width: 900px; margin: 0 auto; padding: 32px 16px 80px; }
+
+/* ── STEG-INDIKATOR ── */
+.steps {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.step-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background .3s;
+}
+.step-dot.active { background: var(--accent); }
+.step-dot.done   { background: var(--accent2); }
+
+/* ── SEKSJON ── */
+.section { display: none; }
+.section.active { display: block; }
+
+/* ── NAVN-SKJEMA ── */
+.navn-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+.navn-card h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.navn-card p { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.form-group { text-align: left; margin-bottom: 16px; }
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--accent);
+}
+.form-group select option { background: var(--surface); }
+
+/* ── GRUPPE-HEADER ── */
+.gruppe-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 16px;
+}
+.gruppe-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+.gruppe-tag.norway { background: var(--norway); color: #fff; }
+.gruppe-header h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.gruppe-header .lag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+/* ── KAMP-KORT ── */
+.kamp-kort {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  transition: border-color .2s;
+  page-break-inside: avoid;
+}
+.kamp-kort:hover { border-color: #3a4a65; }
+.kamp-kort.norway-kamp { border-color: rgba(239,43,45,.3); background: rgba(239,43,45,.05); }
+.kamp-kort.locked { opacity: .5; pointer-events: none; }
+
+.lag-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.lag-navn.right { text-align: right; }
+.kamp-dato {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.kamp-dato.right { text-align: right; }
+
+.score-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+.score-input input[type=number] {
+  width: 44px;
+  height: 44px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border-color .2s;
+  -moz-appearance: textfield;
+}
+.score-input input[type=number]::-webkit-inner-spin-button,
+.score-input input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+.score-input input[type=number]:focus { border-color: var(--accent); }
+.score-input input[type=number].filled { border-color: rgba(0,230,118,.4); }
+.score-sep {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+/* ── PROGRESS ── */
+.progress-bar-wrap {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.progress-bar-wrap .label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width .3s;
+  width: 0%;
+}
+.progress-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ── NAVIGASJON ── */
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: flex-end;
+}
+.btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+}
+.btn-primary:hover { background: #00ff85; transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid var(--border);
+}
+.btn-secondary:hover { color: var(--text); border-color: var(--muted); }
+.btn-lever {
+  background: var(--accent2);
+  color: #000;
+  font-size: 17px;
+  padding: 14px 40px;
+  width: 100%;
+  margin-top: 8px;
+}
+.btn-lever:hover { background: #ffe033; transform: translateY(-1px); }
+.btn-lever:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── SAMMENDRAG ── */
+.sammendrag-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.sammendrag-kort {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.sammendrag-kort .tall {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.sammendrag-kort .tekst {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.sammendrag-kort.gull .tall { color: var(--accent2); }
+
+/* ── SUKSESS ── */
+.suksess {
+  text-align: center;
+  padding: 40px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.suksess .emoji { font-size: 64px; margin-bottom: 16px; }
+.suksess h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.suksess p { color: var(--muted); margin-bottom: 24px; }
+.suksess .info-box {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* ── LOADING ── */
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: var(--muted);
+}
+.spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── ERROR ── */
+.error-box {
+  background: rgba(255,68,68,.1);
+  border: 1px solid rgba(255,68,68,.3);
+  border-radius: 8px;
+  padding: 16px;
+  color: #ff8888;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 500px) {
+  .sammendrag-grid { grid-template-columns: 1fr; }
+  .lag-navn { font-size: 14px; }
+  .kamp-kort { gap: 8px; }
+}
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">⚽ VM 2026 · USA / Canada / Mexico</div>
+  <h1>Tippe<span>konkurranse</span></h1>
+  <p>Tipp alle 48 gruppekamper + turneringsvinner</p>
+  <div class="deadline-banner">
+    ⏰ Frist: 11. juni 2026 kl. 19:00 norsk tid
+  </div>
+</div>
+
+<!-- PROGRESS BAR (vises under gruppespill) -->
+<div class="progress-bar-wrap" id="progressWrap" style="display:none">
+  <span class="label">Fullført</span>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-count" id="progressCount">0 / 48</span>
+</div>
+
+<div class="container">
+
+  <!-- ── STEG 1: NAVN OG VINNER ── -->
+  <div class="section active" id="steg1">
+    <div class="navn-card">
+      <h2>Registrer deg</h2>
+      <p>Fyll inn navn og tipp hvem som vinner VM 2026</p>
+
+      <div class="form-group">
+        <label>Ditt navn</label>
+        <input type="text" id="navnInput" placeholder="Kari Nordmann" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label>Turneringsvinner 🏆</label>
+        <select id="vinnerSelect">
+          <option value="">— Velg vinner —</option>
+        </select>
+      </div>
+
+      <div id="steg1Error" class="error-box" style="display:none"></div>
+
+      <div class="nav-buttons" style="justify-content:center; margin-top:24px;">
+        <button class="btn btn-primary" onclick="gaaTilSteg2()">Neste: Tipp kampene →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STEG 2: GRUPPESPILL ── -->
+  <div class="section" id="steg2">
+    <div id="kampListe">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Laster kampprogram...</p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" onclick="gaaTilSteg(1)">← Tilbake</button>
+      <button class="btn btn-primary" onclick="gaaTilSteg3()">Neste: Sammendrag →</button>
+    </div>
+  </div>
+
+  <!-- ── STEG 3: SAMMENDRAG OG LEVER ── -->
+  <div class="section" id="steg3">
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:24px;">
+      Sammendrag
+    </h2>
+    <div class="sammendrag-grid" id="sammendragGrid"></div>
+
+    <div style="background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px;margin-bottom:24px;">
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;">Turneringsvinner</div>
+      <div id="sammendragVinner" style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;"></div>
+    </div>
+
+    <div id="steg3Advarsel" class="error-box" style="display:none;background:rgba(255,214,0,.1);border-color:rgba(255,214,0,.3);color:var(--accent2);"></div>
+
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;text-align:center;">
+      Ved å levere godtar du at siste innlevering gjelder.
+    </div>
+
+    <div id="leverStatus"></div>
+    <button class="btn btn-lever" id="leverBtn" onclick="leverTipping()">🚀 Lever tipping</button>
+
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" onclick="gaaTilSteg(2)">← Gå tilbake og endre</button>
+    </div>
+  </div>
+
+  <!-- ── STEG 4: SUKSESS ── -->
+  <div class="section" id="steg4">
+    <div class="suksess">
+      <div class="emoji">🎉</div>
+      <h2>Tipping levert!</h2>
+      <p id="suksessNavn"></p>
+      <div class="info-box">
+        <strong style="color:var(--text);">Hva skjer nå?</strong><br><br>
+        Tippingen din er registrert. Etter at gruppespillet er ferdig (~27. juni) åpner runde 2 der du tipper utslagsrundene.<br><br>
+        Leaderboard publiseres når VM starter 11. juni.
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ── KONFIG ──────────────────────────────────────────────────
+const AUTOMATE_URL = "DIN_POWER_AUTOMATE_URL_HER"; // Fyll inn etter oppsett
+const TOKEN        = "vm2026-ramberg";
+const API_URL      = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
+
+// Lagnavn-oversettelser (norsk)
+const OVERSETT = {
+  "Mexico": "Mexico", "South Africa": "Sør-Afrika", "South Korea": "Sør-Korea",
+  "Czech Republic": "Tsjekkia", "Canada": "Canada", "Switzerland": "Sveits",
+  "Qatar": "Qatar", "Brazil": "Brasil", "Morocco": "Marokko", "Haiti": "Haiti",
+  "Scotland": "Skottland", "USA": "USA", "Paraguay": "Paraguay",
+  "Australia": "Australia", "Germany": "Tyskland", "Curaçao": "Curaçao",
+  "Ivory Coast": "Elfenbenskysten", "Ecuador": "Ecuador", "Netherlands": "Nederland",
+  "Japan": "Japan", "Tunisia": "Tunisia", "Belgium": "Belgia", "Egypt": "Egypt",
+  "Iran": "Iran", "New Zealand": "New Zealand", "Spain": "Spania",
+  "Cape Verde": "Kapp Verde", "Saudi Arabia": "Saudi-Arabia", "Uruguay": "Uruguay",
+  "France": "Frankrike", "Senegal": "Senegal", "Norway": "Norge",
+  "Argentina": "Argentina", "Algeria": "Algerie", "Austria": "Østerrike",
+  "Jordan": "Jordan", "Portugal": "Portugal", "Colombia": "Colombia",
+  "Uzbekistan": "Usbekistan", "England": "England", "Croatia": "Kroatia",
+  "Ghana": "Ghana", "Panama": "Panama",
+  "UEFA Path A winner": "UEFA play-off A",
+  "UEFA Path B winner": "UEFA play-off B",
+  "UEFA Path C winner": "UEFA play-off C",
+  "UEFA Path D winner": "UEFA play-off D",
+  "IC Path 1 winner": "IC play-off 1",
+  "IC Path 2 winner": "Irak"
+};
+
+function norsk(navn) { return OVERSETT[navn] || navn; }
+
+// ── STATE ────────────────────────────────────────────────────
+let kamper = [];
+let tippinger = {};
+let aktivSteg = 1;
+
+// ── INIT ─────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  lastFraStorage();
+  hentKamper();
+});
+
+async function hentKamper() {
+  try {
+    const r = await fetch(API_URL);
+    const data = await r.json();
+    kamper = data.matches.filter(m => m.group); // kun gruppekamper
+    byggVinnerDropdown();
+    byggKampListe();
+    oppdaterProgress();
+  } catch(e) {
+    document.getElementById('kampListe').innerHTML =
+      '<div class="error-box">Kunne ikke laste kamper. Sjekk internettforbindelsen og prøv igjen.</div>';
+  }
+}
+
+function byggVinnerDropdown() {
+  const lag = new Set();
+  kamper.forEach(k => {
+    if (!k.team1.includes('winner') && !k.team1.includes('Path')) lag.add(k.team1);
+    if (!k.team2.includes('winner') && !k.team2.includes('Path')) lag.add(k.team2);
+  });
+  const sel = document.getElementById('vinnerSelect');
+  [...lag].sort((a,b) => norsk(a).localeCompare(norsk(b))).forEach(l => {
+    const o = document.createElement('option');
+    o.value = l;
+    o.textContent = norsk(l);
+    sel.appendChild(o);
+  });
+  if (localStorage.getItem('vm2026_vinner'))
+    sel.value = localStorage.getItem('vm2026_vinner');
+}
+
+function byggKampListe() {
+  const grupper = {};
+  kamper.forEach(k => {
+    const g = k.group;
+    if (!grupper[g]) grupper[g] = [];
+    grupper[g].push(k);
+  });
+
+  let html = '';
+  const nå = new Date();
+
+  Object.keys(grupper).sort().forEach(gruppe => {
+    const erNorge = grupper[gruppe].some(k => k.team1 === 'Norway' || k.team2 === 'Norway');
+    html += `
+      <div class="gruppe-header">
+        <span class="gruppe-tag ${erNorge ? 'norway' : ''}">${gruppe}</span>
+        <h3>${grupper[gruppe].map(k => norsk(k.team1)).filter((v,i,a) => a.indexOf(v)===i).join(' · ')}</h3>
+      </div>`;
+
+    grupper[gruppe].forEach(kamp => {
+      const id = kampId(kamp);
+      const dato = new Date(kamp.date + 'T00:00:00');
+      const kampDato = dato.toLocaleDateString('no-NO', {weekday:'short', day:'numeric', month:'short'});
+      const locked = dato < nå && new Date() > new Date(kamp.date + 'T23:59:00');
+      const norgeKamp = kamp.team1 === 'Norway' || kamp.team2 === 'Norway';
+      const lagret = tippinger[id] || {};
+
+      html += `
+        <div class="kamp-kort ${norgeKamp ? 'norway-kamp' : ''} ${locked ? 'locked' : ''}" id="kort-${id}">
+          <div>
+            <div class="lag-navn">${norsk(kamp.team1)}</div>
+            <div class="kamp-dato">${kampDato}</div>
+          </div>
+          <div class="score-input">
+            <input type="number" min="0" max="20" placeholder="–"
+              id="h-${id}" value="${lagret.h ?? ''}"
+              class="${lagret.h !== undefined ? 'filled' : ''}"
+              onchange="lagreTipping('${id}')" oninput="lagreTipping('${id}')">
+            <span class="score-sep">–</span>
+            <input type="number" min="0" max="20" placeholder="–"
+              id="b-${id}" value="${lagret.b ?? ''}"
+              class="${lagret.b !== undefined ? 'filled' : ''}"
+              onchange="lagreTipping('${id}')" oninput="lagreTipping('${id}')">
+          </div>
+          <div>
+            <div class="lag-navn right">${norsk(kamp.team2)}</div>
+            <div class="kamp-dato right">${kamp.ground.split('(')[0].trim()}</div>
+          </div>
+        </div>`;
+    });
+  });
+
+  document.getElementById('kampListe').innerHTML = html;
+}
+
+function kampId(k) {
+  return (k.team1 + '_' + k.team2 + '_' + k.date).replace(/[^a-zA-Z0-9]/g, '_');
+}
+
+function lagreTipping(id) {
+  const h = document.getElementById('h-' + id);
+  const b = document.getElementById('b-' + id);
+  if (h.value !== '') {
+    tippinger[id] = { h: parseInt(h.value), b: parseInt(b.value || 0) };
+    h.classList.add('filled');
+    b.classList.add('filled');
+  }
+  lagreTilStorage();
+  oppdaterProgress();
+}
+
+function oppdaterProgress() {
+  const antall = Object.keys(tippinger).length;
+  const total = kamper.length;
+  const pct = total > 0 ? Math.round(antall / total * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = antall + ' / ' + total;
+  if (aktivSteg === 2) document.getElementById('progressWrap').style.display = 'flex';
+}
+
+// ── NAVIGASJON ───────────────────────────────────────────────
+function gaaTilSteg2() {
+  const navn = document.getElementById('navnInput').value.trim();
+  const vinner = document.getElementById('vinnerSelect').value;
+  const err = document.getElementById('steg1Error');
+  if (!navn) { err.textContent = 'Du må fylle inn navn.'; err.style.display = 'block'; return; }
+  if (!vinner) { err.textContent = 'Du må velge turneringsvinner.'; err.style.display = 'block'; return; }
+  err.style.display = 'none';
+  lagreTilStorage();
+  gaaTilSteg(2);
+}
+
+function gaaTilSteg3() {
+  // Sammendrag
+  const antall = Object.keys(tippinger).length;
+  const total = kamper.length;
+  const mangler = total - antall;
+
+  document.getElementById('sammendragGrid').innerHTML = `
+    <div class="sammendrag-kort">
+      <div class="tall">${antall}</div>
+      <div class="tekst">Kamper tippa</div>
+    </div>
+    <div class="sammendrag-kort ${mangler > 0 ? '' : 'gull'}">
+      <div class="tall">${mangler}</div>
+      <div class="tekst">Mangler</div>
+    </div>`;
+
+  const vinner = document.getElementById('vinnerSelect');
+  document.getElementById('sammendragVinner').textContent =
+    '🏆 ' + (vinner.options[vinner.selectedIndex]?.text || '—');
+
+  const adv = document.getElementById('steg3Advarsel');
+  if (mangler > 0) {
+    adv.textContent = `⚠ Du har ${mangler} kampresultat${mangler > 1 ? 'er' : ''} som ikke er fylt ut. Kamper uten tipping gir 0 poeng.`;
+    adv.style.display = 'block';
+  } else {
+    adv.style.display = 'none';
+  }
+  gaaTilSteg(3);
+}
+
+function gaaTilSteg(n) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('steg' + n).classList.add('active');
+  aktivSteg = n;
+  document.getElementById('progressWrap').style.display = n === 2 ? 'flex' : 'none';
+  window.scrollTo(0, 0);
+}
+
+// ── LEVER TIPPING ────────────────────────────────────────────
+async function leverTipping() {
+  const btn = document.getElementById('leverBtn');
+  const status = document.getElementById('leverStatus');
+  const navn = document.getElementById('navnInput').value.trim();
+  const vinner = document.getElementById('vinnerSelect').value;
+
+  const payload = {
+    meta: {
+      navn: navn,
+      innlevert: new Date().toISOString(),
+      token: TOKEN
+    },
+    turneringsvinner: vinner,
+    gruppespill: kamper.map(k => {
+      const id = kampId(k);
+      const t = tippinger[id];
+      return {
+        kamp_id: id,
+        hjemmelag: k.team1,
+        bortelag: k.team2,
+        dato: k.date,
+        gruppe: k.group,
+        hjemme: t?.h ?? null,
+        borte: t?.b ?? null
+      };
+    })
+  };
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Sender...';
+  status.innerHTML = '';
+
+  try {
+    if (AUTOMATE_URL === "DIN_POWER_AUTOMATE_URL_HER") {
+      // Demo-modus: simuler suksess
+      await new Promise(r => setTimeout(r, 1200));
+      visSucces(navn);
+      return;
+    }
+    const resp = await fetch(AUTOMATE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (resp.ok || resp.status === 202) {
+      visSucces(navn);
+    } else {
+      throw new Error('HTTP ' + resp.status);
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = '🚀 Prøv igjen';
+    status.innerHTML = '<div class="error-box">Noe gikk galt. Prøv igjen eller kontakt arrangør.</div>';
+  }
+}
+
+function visSucces(navn) {
+  localStorage.removeItem('vm2026_tipping');
+  document.getElementById('suksessNavn').textContent =
+    'Tipping registrert for ' + navn + ' 👍';
+  gaaTilSteg(4);
+}
+
+// ── LOCALSTORAGE ─────────────────────────────────────────────
+function lagreTilStorage() {
+  const data = {
+    navn: document.getElementById('navnInput').value,
+    vinner: document.getElementById('vinnerSelect').value,
+    tippinger: tippinger
+  };
+  localStorage.setItem('vm2026_tipping', JSON.stringify(data));
+}
+
+function lastFraStorage() {
+  try {
+    const raw = localStorage.getItem('vm2026_tipping');
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (data.navn) document.getElementById('navnInput').value = data.navn;
+    if (data.tippinger) tippinger = data.tippinger;
+  } catch(e) {}
+}
+</script>
+</body>
+</html>
