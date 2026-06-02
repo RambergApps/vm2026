@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM 2026 — Utslagsrunder</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+  print-color-adjust: exact; -webkit-print-color-adjust: exact;
+}
+:root {
+  --bg:      #0a0f1e;
+  --surface: #111827;
+  --card:    #1a2235;
+  --border:  #2a3650;
+  --accent:  #00e676;
+  --accent2: #ffd600;
+  --red:     #ff4444;
+  --text:    #f0f4ff;
+  --muted:   #7a8aaa;
+  --locked:  #1a1f2e;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #0a0f1e 0%, #0d1f3c 50%, #0a1628 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 24px 28px;
+  text-align: center;
+}
+.hero .badge {
+  display: inline-block;
+  background: var(--accent2);
+  color: #000;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .15em;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 6vw, 52px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: .95;
+}
+.hero h1 span { color: var(--accent2); }
+.hero p { margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+/* ── RUNDE-TABS ── */
+.runde-tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0 16px;
+}
+.runde-tab {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.runde-tab:hover { color: var(--text); }
+.runde-tab.active { color: var(--accent2); border-bottom-color: var(--accent2); }
+.runde-tab.locked { color: #3a4a65; cursor: default; }
+.runde-tab.done { color: var(--accent); }
+.runde-tab .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ── PROGRESS ── */
+.progress-bar-wrap {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.progress-bar-wrap .label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.progress-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent2); border-radius: 3px; transition: width .3s; width: 0%; }
+.progress-count { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--accent2); white-space: nowrap; }
+
+/* ── CONTAINER ── */
+.container { max-width: 680px; margin: 0 auto; padding: 24px 16px 80px; }
+
+/* ── RUNDE-SEKSJON ── */
+.runde-seksjon { display: none; }
+.runde-seksjon.active { display: block; }
+
+/* ── RUNDE-HEADER ── */
+.runde-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.runde-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: var(--accent2);
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+.runde-header h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.runde-header .poeng-info {
+  margin-left: auto;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+.runde-header .poeng-info span { color: var(--accent2); font-weight: 700; }
+
+/* ── KAMP-KORT ── */
+.kamp-kort {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color .2s;
+  page-break-inside: avoid;
+}
+.kamp-kort:hover { border-color: #3a4a65; }
+.kamp-kort.locked-kamp {
+  opacity: .5;
+  pointer-events: none;
+  background: var(--locked);
+}
+
+/* Lag-rader */
+.lag-rad {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background .15s;
+  gap: 12px;
+}
+.lag-rad:hover { background: rgba(255,255,255,.03); }
+.lag-rad.valgt { background: rgba(0,230,118,.08); }
+.lag-rad.valgt .lag-navn { color: var(--accent); }
+.lag-rad + .lag-rad { border-top: 1px solid var(--border); }
+
+.lag-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  transition: color .15s;
+}
+.lag-gruppe {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+/* Score-input */
+.score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.score-input-felt {
+  width: 40px; height: 40px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border-color .2s;
+  -moz-appearance: textfield;
+}
+.score-input-felt::-webkit-inner-spin-button,
+.score-input-felt::-webkit-outer-spin-button { -webkit-appearance: none; }
+.score-input-felt:focus { border-color: var(--accent2); }
+.score-input-felt.filled { border-color: rgba(255,214,0,.4); }
+.score-sep {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+/* Velg-ikon */
+.velg-ikon {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  transition: all .15s;
+  flex-shrink: 0;
+}
+.lag-rad.valgt .velg-ikon {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+/* Videre-banner */
+.videre-banner {
+  background: rgba(0,230,118,.08);
+  border-top: 1px solid rgba(0,230,118,.2);
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* Uavgjort-panel */
+.uavgjort-panel {
+  background: rgba(255,214,0,.06);
+  border-top: 1px solid rgba(255,214,0,.2);
+  padding: 12px 16px;
+  display: none;
+}
+.uavgjort-panel.vis { display: block; }
+.uavgjort-panel label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  display: block;
+}
+.uavgjort-valg {
+  display: flex;
+  gap: 8px;
+}
+.uavgjort-btn {
+  flex: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+}
+.uavgjort-btn:hover { color: var(--text); border-color: var(--accent2); }
+.uavgjort-btn.valgt {
+  background: rgba(255,214,0,.15);
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+/* ── IKKE ÅPEN ── */
+.ikke-aapen {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--muted);
+}
+.ikke-aapen .ikon { font-size: 48px; margin-bottom: 16px; }
+.ikke-aapen h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.ikke-aapen p { font-size: 14px; }
+
+/* ── NAVN-INPUT ── */
+.navn-wrap {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navn-wrap label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.navn-wrap input {
+  flex: 1;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--text);
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+  outline: none;
+}
+.navn-wrap input:focus { border-color: var(--accent2); }
+
+/* ── LEVER-KNAPP ── */
+.lever-wrap { margin-top: 24px; }
+.btn-lever {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent2);
+  color: #000;
+  width: 100%;
+  transition: all .2s;
+}
+.btn-lever:hover { background: #ffe033; transform: translateY(-1px); }
+.btn-lever:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; }
+
+/* ── SUKSESS ── */
+.suksess {
+  text-align: center;
+  padding: 48px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+  display: none;
+}
+.suksess.vis { display: block; }
+.suksess .emoji { font-size: 56px; margin-bottom: 16px; }
+.suksess h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.suksess p { color: var(--muted); font-size: 14px; }
+
+/* ── ERROR ── */
+.error-box {
+  background: rgba(255,68,68,.1);
+  border: 1px solid rgba(255,68,68,.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #ff8888;
+  margin: 12px 0;
+  font-size: 13px;
+}
+.advarsel-box {
+  background: rgba(255,214,0,.08);
+  border: 1px solid rgba(255,214,0,.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--accent2);
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .lag-navn { font-size: 15px; }
+  .runde-tab { padding: 12px 10px; font-size: 11px; }
+}
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">⚽ VM 2026 · Utslagsrunder</div>
+  <h1>Tipp <span>utslagsrundene</span></h1>
+  <p>Tipp vinner og resultat etter 90 min for hver kamp</p>
+</div>
+
+<!-- TABS -->
+<div class="runde-tabs" id="rundeTabs"></div>
+
+<!-- PROGRESS -->
+<div class="progress-bar-wrap">
+  <span class="label">Fullført</span>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-count" id="progressCount">0 / 0</span>
+</div>
+
+<div class="container">
+
+  <!-- NAVN -->
+  <div class="navn-wrap">
+    <label>Ditt navn</label>
+    <input type="text" id="navnInput" placeholder="Kari Nordmann" autocomplete="name">
+  </div>
+
+  <!-- RUNDE-SEKSJONER genereres dynamisk -->
+  <div id="rundeSeksjoner"></div>
+
+  <!-- SUKSESS -->
+  <div class="suksess" id="suksess">
+    <div class="emoji">🎉</div>
+    <h2>Tipping levert!</h2>
+    <p id="suksessNavn"></p>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+// ── KONFIG ─────────────────────────────────────────────────
+const AUTOMATE_URL = "DIN_POWER_AUTOMATE_URL_HER";
+const TOKEN        = "vm2026-ramberg";
+
+// Status-fil fra repoet — GitHub Actions oppdaterer denne
+// I demo-modus simulerer vi at R32 er åpen
+const STATUS_URL = "./data/status.json";
+
+// Poeng per runde
+const POENG = { r32: 3, r16: 4, qf: 5, sf: 6, final: 7 };
+
+const RUNDE_NAVN = {
+  r32:   "Runde av 32",
+  r16:   "Runde av 16",
+  qf:    "Kvartfinale",
+  sf:    "Semifinale",
+  final: "Finale"
+};
+
+const RUNDE_REKKEFØLGE = ["r32","r16","qf","sf","final"];
+
+// ── STATE ──────────────────────────────────────────────────
+let status = null;
+let kamper = {};      // { r32: [...], r16: [...], ... }
+let tippinger = {};   // { "kamp_id": { hjemme: 1, borte: 0, vinner: "Spania" } }
+let aktivRunde = null;
+
+// ── INIT ───────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', async () => {
+  lastFraStorage();
+  await hentStatus();
+});
+
+async function hentStatus() {
+  try {
+    const r = await fetch(STATUS_URL + '?t=' + Date.now());
+    status = await r.json();
+  } catch(e) {
+    // Demo-modus: simuler at R32 er åpen med eksempellag
+    status = {
+      r32:   { aapen: true,  kamper: demoKamper("r32") },
+      r16:   { aapen: false, kamper: [] },
+      qf:    { aapen: false, kamper: [] },
+      sf:    { aapen: false, kamper: [] },
+      final: { aapen: false, kamper: [] }
+    };
+  }
+  byggUI();
+}
+
+// ── DEMO-DATA ─────────────────────────────────────────────
+function demoKamper(runde) {
+  if (runde !== "r32") return [];
+  return [
+    { id:"r32_1",  hjemme:"Spania",    borte:"Uruguay",    info:"Vinner Gruppe H vs 2. Gruppe J" },
+    { id:"r32_2",  hjemme:"Brasil",    borte:"Marokko",    info:"Vinner Gruppe C vs 2. Gruppe A" },
+    { id:"r32_3",  hjemme:"Frankrike", borte:"Senegal",    info:"Vinner Gruppe I vs 2. Gruppe K" },
+    { id:"r32_4",  hjemme:"Norge",     borte:"Irak",       info:"2. Gruppe I vs Vinner Gruppe ?" },
+    { id:"r32_5",  hjemme:"Argentina", borte:"Algerie",    info:"Vinner Gruppe J vs 2. Gruppe I" },
+    { id:"r32_6",  hjemme:"England",   borte:"Kroatia",    info:"Vinner Gruppe L vs 2. Gruppe F" },
+    { id:"r32_7",  hjemme:"Tyskland",  borte:"Nederland",  info:"Vinner Gruppe E vs 2. Gruppe B" },
+    { id:"r32_8",  hjemme:"Portugal",  borte:"Colombia",   info:"Vinner Gruppe K vs 2. Gruppe L" },
+    { id:"r32_9",  hjemme:"USA",       borte:"Mexico",     info:"Vinner Gruppe D vs Vinner Gruppe A" },
+    { id:"r32_10", hjemme:"Belgia",    borte:"Egypt",      info:"Vinner Gruppe G vs 2. Gruppe G" },
+    { id:"r32_11", hjemme:"Japan",     borte:"Tunisia",    info:"Vinner Gruppe F vs 2. Gruppe E" },
+    { id:"r32_12", hjemme:"Canada",    borte:"Sveits",     info:"Vinner Gruppe B vs 2. Gruppe C" },
+    { id:"r32_13", hjemme:"Østerrike", borte:"Jordan",     info:"2. Gruppe J vs 3. plass" },
+    { id:"r32_14", hjemme:"Australia", borte:"Paraguay",   info:"2. Gruppe D vs 3. plass" },
+    { id:"r32_15", hjemme:"Sør-Korea", borte:"Tsjekkia",   info:"2. Gruppe A vs 3. plass" },
+    { id:"r32_16", hjemme:"Ghana",     borte:"Panama",     info:"2. Gruppe L vs 3. plass" }
+  ];
+}
+
+// ── BYGG UI ────────────────────────────────────────────────
+function byggUI() {
+  byggTabs();
+  byggSeksjoner();
+  // Aktiver første åpne runde
+  const første = RUNDE_REKKEFØLGE.find(r => status[r]?.aapen);
+  if (første) byttRunde(første);
+  else byttRunde("r32");
+  oppdaterProgress();
+}
+
+function byggTabs() {
+  const tabs = document.getElementById("rundeTabs");
+  tabs.innerHTML = "";
+  RUNDE_REKKEFØLGE.forEach(r => {
+    const st = status[r];
+    const div = document.createElement("div");
+    div.className = "runde-tab" +
+      (!st?.aapen && !harLevert(r) ? " locked" : "") +
+      (harLevert(r) ? " done" : "");
+    div.id = "tab-" + r;
+    div.textContent = RUNDE_NAVN[r];
+    if (harLevert(r)) {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      div.appendChild(dot);
+    }
+    if (st?.aapen || harLevert(r)) div.onclick = () => byttRunde(r);
+    tabs.appendChild(div);
+  });
+}
+
+function byggSeksjoner() {
+  const cont = document.getElementById("rundeSeksjoner");
+  cont.innerHTML = "";
+  RUNDE_REKKEFØLGE.forEach(r => {
+    const div = document.createElement("div");
+    div.className = "runde-seksjon";
+    div.id = "seksjon-" + r;
+    const st = status[r];
+
+    if (!st?.aapen) {
+      div.innerHTML = `
+        <div class="ikke-aapen">
+          <div class="ikon">🔒</div>
+          <h3>${RUNDE_NAVN[r]}</h3>
+          <p>Åpner når forrige runde er ferdigspilt</p>
+        </div>`;
+    } else {
+      div.innerHTML = byggRundeHTML(r, st.kamper);
+    }
+    cont.appendChild(div);
+  });
+}
+
+function byggRundeHTML(runde, kampListe) {
+  const p = POENG[runde];
+  let html = `
+    <div class="runde-header">
+      <span class="runde-tag">${RUNDE_NAVN[runde]}</span>
+      <h2>${kampListe.length} kamper</h2>
+      <div class="poeng-info">Vinner: <span>${p}p</span> · Eksakt: <span>+2p</span></div>
+    </div>`;
+
+  kampListe.forEach(k => {
+    const t = tippinger[k.id] || {};
+    const erNorge = k.hjemme === "Norge" || k.borte === "Norge";
+    const uavgjort = t.hjemme !== undefined && t.borte !== undefined && t.hjemme === t.borte;
+
+    html += `
+      <div class="kamp-kort ${erNorge ? 'norge-kamp' : ''}" id="kort-${k.id}"
+           style="${erNorge ? 'border-color:rgba(239,43,45,.4);background:rgba(239,43,45,.04)' : ''}">
+
+        <!-- Hjemmelag -->
+        <div class="lag-rad ${t.vinner === k.hjemme ? 'valgt' : ''}"
+             onclick="velgVinner('${k.id}','${k.hjemme}','${runde}')">
+          <div>
+            <div class="lag-navn">${k.hjemme}</div>
+            <div class="lag-gruppe">${k.info || ''}</div>
+          </div>
+          <div class="score-wrap">
+            <input type="number" min="0" max="20" placeholder="–"
+              id="h-${k.id}" value="${t.hjemme ?? ''}"
+              class="score-input-felt ${t.hjemme !== undefined ? 'filled' : ''}"
+              onclick="event.stopPropagation()"
+              oninput="oppdaterScore('${k.id}','${runde}')">
+          </div>
+          <div class="velg-ikon">${t.vinner === k.hjemme ? '✓' : ''}</div>
+        </div>
+
+        <!-- Bortelag -->
+        <div class="lag-rad ${t.vinner === k.borte ? 'valgt' : ''}"
+             onclick="velgVinner('${k.id}','${k.borte}','${runde}')">
+          <div>
+            <div class="lag-navn">${k.borte}</div>
+          </div>
+          <div class="score-wrap">
+            <input type="number" min="0" max="20" placeholder="–"
+              id="b-${k.id}" value="${t.borte ?? ''}"
+              class="score-input-felt ${t.borte !== undefined ? 'filled' : ''}"
+              onclick="event.stopPropagation()"
+              oninput="oppdaterScore('${k.id}','${runde}')">
+          </div>
+          <div class="velg-ikon">${t.vinner === k.borte ? '✓' : ''}</div>
+        </div>
+
+        <!-- Uavgjort-panel: vis hvem går videre -->
+        <div class="uavgjort-panel ${uavgjort ? 'vis' : ''}" id="uavgjort-${k.id}">
+          <label>Uavgjort etter 90 min — hvem går videre?</label>
+          <div class="uavgjort-valg">
+            <button class="uavgjort-btn ${t.vinner === k.hjemme && uavgjort ? 'valgt' : ''}"
+              onclick="velgVinner('${k.id}','${k.hjemme}','${runde}')">${k.hjemme}</button>
+            <button class="uavgjort-btn ${t.vinner === k.borte && uavgjort ? 'valgt' : ''}"
+              onclick="velgVinner('${k.id}','${k.borte}','${runde}')">${k.borte}</button>
+          </div>
+        </div>
+
+        <!-- Videre-banner -->
+        <div class="videre-banner" id="videre-${k.id}"
+             style="${t.vinner ? '' : 'display:none'}">
+          ✓ ${t.vinner || ''} går videre
+        </div>
+
+      </div>`;
+  });
+
+  html += `
+    <div id="advarsel-${runde}"></div>
+    <div class="lever-wrap">
+      <button class="btn-lever" id="leverBtn-${runde}"
+        onclick="leverRunde('${runde}')">
+        🚀 Lever tipping — ${RUNDE_NAVN[runde]}
+      </button>
+    </div>`;
+
+  return html;
+}
+
+// ── INTERAKSJON ────────────────────────────────────────────
+function velgVinner(kampId, lag, runde) {
+  if (!tippinger[kampId]) tippinger[kampId] = {};
+  tippinger[kampId].vinner = lag;
+
+  // Oppdater visuelt
+  oppdaterKampKort(kampId, runde);
+  lagreTilStorage();
+  oppdaterProgress();
+}
+
+function oppdaterScore(kampId, runde) {
+  const h = document.getElementById("h-" + kampId);
+  const b = document.getElementById("b-" + kampId);
+  if (!tippinger[kampId]) tippinger[kampId] = {};
+
+  if (h.value !== "") {
+    tippinger[kampId].hjemme = parseInt(h.value);
+    h.classList.add("filled");
+  }
+  if (b.value !== "") {
+    tippinger[kampId].borte = parseInt(b.value);
+    b.classList.add("filled");
+  }
+
+  oppdaterKampKort(kampId, runde);
+  lagreTilStorage();
+  oppdaterProgress();
+}
+
+function oppdaterKampKort(kampId, runde) {
+  const t = tippinger[kampId] || {};
+  const k = finnKamp(kampId, runde);
+  if (!k) return;
+
+  const uavgjort = t.hjemme !== undefined && t.borte !== undefined && t.hjemme === t.borte;
+
+  // Oppdater lag-rader
+  document.querySelectorAll(`#kort-${kampId} .lag-rad`).forEach((rad, i) => {
+    const lagNavn = i === 0 ? k.hjemme : k.borte;
+    rad.classList.toggle("valgt", t.vinner === lagNavn);
+    rad.querySelector(".velg-ikon").textContent = t.vinner === lagNavn ? "✓" : "";
+  });
+
+  // Uavgjort-panel
+  const uPanel = document.getElementById("uavgjort-" + kampId);
+  if (uPanel) {
+    uPanel.classList.toggle("vis", uavgjort);
+    uPanel.querySelectorAll(".uavgjort-btn").forEach((btn, i) => {
+      const lagNavn = i === 0 ? k.hjemme : k.borte;
+      btn.classList.toggle("valgt", t.vinner === lagNavn && uavgjort);
+    });
+  }
+
+  // Videre-banner
+  const vBanner = document.getElementById("videre-" + kampId);
+  if (vBanner) {
+    vBanner.style.display = t.vinner ? "" : "none";
+    vBanner.textContent = t.vinner ? "✓ " + t.vinner + " går videre" : "";
+  }
+}
+
+function finnKamp(kampId, runde) {
+  return status[runde]?.kamper?.find(k => k.id === kampId);
+}
+
+// ── TABS ───────────────────────────────────────────────────
+function byttRunde(runde) {
+  aktivRunde = runde;
+  document.querySelectorAll(".runde-seksjon").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".runde-tab").forEach(t => t.classList.remove("active"));
+  document.getElementById("seksjon-" + runde)?.classList.add("active");
+  document.getElementById("tab-" + runde)?.classList.add("active");
+  oppdaterProgress();
+}
+
+// ── PROGRESS ───────────────────────────────────────────────
+function oppdaterProgress() {
+  if (!aktivRunde || !status[aktivRunde]?.aapen) return;
+  const kampListe = status[aktivRunde]?.kamper || [];
+  const total = kampListe.length;
+  const antall = kampListe.filter(k => tippinger[k.id]?.vinner).length;
+  const pct = total > 0 ? Math.round(antall / total * 100) : 0;
+  document.getElementById("progressFill").style.width = pct + "%";
+  document.getElementById("progressCount").textContent = antall + " / " + total;
+}
+
+// ── LEVER ──────────────────────────────────────────────────
+async function leverRunde(runde) {
+  const navn = document.getElementById("navnInput").value.trim();
+  if (!navn) {
+    document.getElementById("advarsel-" + runde).innerHTML =
+      '<div class="error-box">Du må fylle inn navn.</div>';
+    return;
+  }
+
+  const kampListe = status[runde]?.kamper || [];
+  const mangler = kampListe.filter(k => !tippinger[k.id]?.vinner).length;
+
+  if (mangler > 0) {
+    document.getElementById("advarsel-" + runde).innerHTML =
+      `<div class="advarsel-box">⚠ ${mangler} kamp${mangler > 1 ? 'er' : ''} mangler vinner. Disse gir 0 poeng.</div>`;
+  } else {
+    document.getElementById("advarsel-" + runde).innerHTML = "";
+  }
+
+  const btn = document.getElementById("leverBtn-" + runde);
+  btn.disabled = true;
+  btn.textContent = "⏳ Sender...";
+
+  const payload = {
+    meta: {
+      navn: navn,
+      innlevert: new Date().toISOString(),
+      token: TOKEN,
+      runde: runde
+    },
+    tippinger: kampListe.map(k => ({
+      kamp_id: k.id,
+      hjemmelag: k.hjemme,
+      bortelag: k.borte,
+      hjemme: tippinger[k.id]?.hjemme ?? null,
+      borte: tippinger[k.id]?.borte ?? null,
+      vinner: tippinger[k.id]?.vinner ?? null
+    }))
+  };
+
+  try {
+    if (AUTOMATE_URL === "DIN_POWER_AUTOMATE_URL_HER") {
+      await new Promise(r => setTimeout(r, 1000));
+      visSucces(navn, runde);
+      return;
+    }
+    const resp = await fetch(AUTOMATE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (resp.ok || resp.status === 202) {
+      visSucces(navn, runde);
+    } else throw new Error("HTTP " + resp.status);
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = "🚀 Prøv igjen";
+    document.getElementById("advarsel-" + runde).innerHTML +=
+      '<div class="error-box">Noe gikk galt. Prøv igjen.</div>';
+  }
+}
+
+function visSucces(navn, runde) {
+  markerLevert(runde);
+  byggTabs();
+  document.getElementById("suksess").classList.add("vis");
+  document.getElementById("suksessNavn").textContent =
+    navn + " — " + RUNDE_NAVN[runde] + " levert ✓";
+  document.getElementById("rundeSeksjoner").style.display = "none";
+  window.scrollTo(0, 0);
+}
+
+// ── LOCALSTORAGE ───────────────────────────────────────────
+function lagreTilStorage() {
+  localStorage.setItem("vm2026_utslagsrunder", JSON.stringify({
+    navn: document.getElementById("navnInput").value,
+    tippinger: tippinger
+  }));
+}
+
+function lastFraStorage() {
+  try {
+    const raw = localStorage.getItem("vm2026_utslagsrunder");
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (data.navn) document.getElementById("navnInput").value = data.navn;
+    if (data.tippinger) tippinger = data.tippinger;
+  } catch(e) {}
+}
+
+function markerLevert(runde) {
+  try {
+    const levert = JSON.parse(localStorage.getItem("vm2026_levert") || "[]");
+    if (!levert.includes(runde)) levert.push(runde);
+    localStorage.setItem("vm2026_levert", JSON.stringify(levert));
+  } catch(e) {}
+}
+
+function harLevert(runde) {
+  try {
+    const levert = JSON.parse(localStorage.getItem("vm2026_levert") || "[]");
+    return levert.includes(runde);
+  } catch(e) { return false; }
+}
+</script>
+</body>
+</html>
