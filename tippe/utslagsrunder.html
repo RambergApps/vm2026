@@ -459,9 +459,7 @@ body {
 
 <script>
 // ── KONFIG ─────────────────────────────────────────────────
-const GITHUB_TOKEN  = "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";
-const GITHUB_REPO   = "RambergApps/vm2026";
-const GITHUB_BRANCH = "main";
+const WORKER_URL    = "https://vm2026-tipping.alexbnielsen92.workers.dev";
 const TOKEN        = "vm2026-ramberg";
 
 // Status-fil fra repoet — GitHub Actions oppdaterer denne
@@ -799,41 +797,17 @@ async function leverRunde(runde) {
   };
 
   try {
-    const filnavn = navn.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.json';
-    const filsti  = `tippinger/${runde}/${filnavn}`;
-    const apiUrl  = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filsti}`;
-
-    let sha = null;
-    try {
-      const sjekkResp = await fetch(apiUrl, {
-        headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github+json' }
-      });
-      if (sjekkResp.ok) { const d = await sjekkResp.json(); sha = d.sha; }
-    } catch(e) {}
-
-    const body = {
-      message: `Tipping ${runde}: ${navn}`,
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2)))),
-      branch: GITHUB_BRANCH
-    };
-    if (sha) body.sha = sha;
-
-    const resp = await fetch(apiUrl, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${GITHUB_TOKEN}`,
-        'Accept': 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
+    const resp = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
 
-    if (resp.ok || resp.status === 201) {
+    if (resp.ok) {
       visSucces(navn, runde);
     } else {
-      const feil = await resp.json();
-      throw new Error(feil.message || 'HTTP ' + resp.status);
+      const feil = await resp.json().catch(() => ({}));
+      throw new Error(feil.error || 'HTTP ' + resp.status);
     }
   } catch(e) {
     btn.disabled = false;
