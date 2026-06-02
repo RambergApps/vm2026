@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "innlevert": "2026-06-02T19:28:39.203Z",
+    "navn": "Alex",
+    "runde": "r32",
+    "token": "vm2026-ramberg"
+  },
+  "tippinger": [
+    {
+      "borte": 0,
+      "bortelag": "Uruguay",
+      "hjemme": 2,
+      "hjemmelag": "Spania",
+      "kamp_id": "r32_1",
+      "vinner": "Uruguay"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Marokko",
+      "hjemme": 2,
+      "hjemmelag": "Brasil",
+      "kamp_id": "r32_2",
+      "vinner": "Brasil"
+    }
+  ]
+}
