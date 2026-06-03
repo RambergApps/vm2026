@@ -29,13 +29,15 @@ STATUS_JSON    = DATA_DIR / "status.json"
 DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
 
 # Poeng per runde
+# Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter.
+# "utfall" betyr H/U/B etter 90 min, ikke hvem som går videre etter ekstraomganger/straffer.
 POENG = {
-    "gruppe": {"vinner": 2, "eksakt": 4},
-    "r32":    {"vinner": 3, "eksakt": 4},
-    "r16":    {"vinner": 4, "eksakt": 4},
-    "qf":     {"vinner": 5, "eksakt": 4},
-    "sf":     {"vinner": 6, "eksakt": 4},
-    "final":  {"vinner": 7, "eksakt": 4},
+    "gruppe": {"utfall": 2, "eksakt": 4},
+    "r32":    {"utfall": 3, "eksakt": 4},
+    "r16":    {"utfall": 4, "eksakt": 4},
+    "qf":     {"utfall": 5, "eksakt": 4},
+    "sf":     {"utfall": 6, "eksakt": 4},
+    "final":  {"utfall": 7, "eksakt": 4},
 }
 POENG_TURNERINGSVINNER = 70
 
@@ -277,42 +279,34 @@ def regn_poeng_for_kamp(tippa_h, tippa_b, faktisk_h, faktisk_b, runde, tippa_vin
     """
     Regner poeng for én kamp.
 
-    Gruppespill:
-      - Riktig utfall: vinner-poeng
-      - Eksakt resultat: +eksakt-poeng
+    Felles regel for gruppespill og utslagsrunder:
+      - Riktig utfall etter ordinær tid / 90 minutter: runde-poeng
+      - Eksakt resultat etter ordinær tid / 90 minutter: +eksakt-poeng
 
-    Utslagsrunder:
-      - Riktig vinner (går videre): vinner-poeng
-      - Eksakt resultat etter 90 min: +eksakt-poeng
+    Ekstraomganger, straffer og hvilket lag som går videre brukes ikke i
+    kamp-poengberegningen. Parametrene tippa_vinner/faktisk_vinner beholdes
+    kun for bakoverkompatibilitet med eldre innleveringer, men ignoreres.
     """
     if faktisk_h is None or faktisk_b is None:
         return 0, False, False  # Kamp ikke ferdigspilt
 
-    poeng_config = POENG.get(runde, POENG["gruppe"])
-    poeng        = 0
+    if tippa_h is None or tippa_b is None:
+        return 0, False, False  # Mangler tips
+
+    poeng_config  = POENG.get(runde, POENG["gruppe"])
+    poeng         = 0
     riktig_utfall = False
     eksakt        = False
 
-    if runde == "gruppe":
-        # Sjekk utfall
-        if utfall(tippa_h, tippa_b) == utfall(faktisk_h, faktisk_b):
-            poeng += poeng_config["vinner"]
-            riktig_utfall = True
-        # Sjekk eksakt
-        if tippa_h == faktisk_h and tippa_b == faktisk_b:
-            poeng += poeng_config["eksakt"]
-            eksakt = True
+    # Riktig H/U/B etter 90 minutter
+    if utfall(tippa_h, tippa_b) == utfall(faktisk_h, faktisk_b):
+        poeng += poeng_config["utfall"]
+        riktig_utfall = True
 
-    else:
-        # Utslagsrunder — sjekk vinner (går videre)
-        if tippa_vinner and faktisk_vinner and tippa_vinner == faktisk_vinner:
-            poeng += poeng_config["vinner"]
-            riktig_utfall = True
-        # Sjekk eksakt resultat etter 90 min
-        if tippa_h is not None and tippa_b is not None:
-            if tippa_h == faktisk_h and tippa_b == faktisk_b:
-                poeng += poeng_config["eksakt"]
-                eksakt = True
+    # Eksakt resultat etter 90 minutter
+    if tippa_h == faktisk_h and tippa_b == faktisk_b:
+        poeng += poeng_config["eksakt"]
+        eksakt = True
 
     return poeng, riktig_utfall, eksakt
 
@@ -378,9 +372,7 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
         p, riktig, eksakt = regn_poeng_for_kamp(
             t.get("hjemme"), t.get("borte"),
             res["hjemme"], res["borte"],
-            runde,
-            tippa_vinner=t.get("vinner"),
-            faktisk_vinner=res.get("vinner")
+            runde
         )
         poeng_utslagsrunder += p
         tipping_detaljer.append({
@@ -391,8 +383,6 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
             "tippa_b":        t.get("borte"),
             "faktisk_h":      res["hjemme"],
             "faktisk_b":      res["borte"],
-            "tippa_vinner":   t.get("vinner"),
-            "faktisk_vinner": res.get("vinner"),
             "poeng":          p,
             "riktig_utfall":  riktig,
             "eksakt":         eksakt,
