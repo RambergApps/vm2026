@@ -100,13 +100,29 @@ function modusChanged(){
 }
 function manualMap(){return new Map(manuelle.map(k=>[k.kamp_id,k]))}
 function missingSet(){return new Set(mangler.map(k=>k.kamp_id))}
+function matchNoForRound(runde,index,k){
+  if(k&&k.match_no)return Number(k.match_no);
+  const base={r32:73,r16:89,qf:97,sf:101,final:104}[runde];
+  return base?base+index:null;
+}
 function getBaseRows(){
   if(val('modus')==='gruppe'){
     const g=val('gruppeSelect');
     return gruppespillKamper.filter(k=>k.gruppe===g);
   }
   const r=val('rundeSelect');
-  return ((statusData[r]&&statusData[r].kamper)||[]).map(k=>({kamp_id:k.id||kampId(k.hjemme,k.borte,k.dato),runde:r,gruppe:'',dato:k.dato,hjemmelag:k.hjemme,bortelag:k.borte,hjemme:null,borte:null,ferdig:false,kilde:'status'}));
+  return ((statusData[r]&&statusData[r].kamper)||[]).map((k,index)=>{
+    const match_no=matchNoForRound(r,index,k);
+    const hjemmelag=k.hjemme||'';
+    const bortelag=k.borte||'';
+    return {
+      kamp_id:k.id||kampId(hjemmelag,bortelag,k.dato),
+      runde:r,gruppe:'',dato:k.dato,hjemmelag,bortelag,
+      hjemme:null,borte:null,ferdig:false,kilde:'status',
+      match_no,slot_hjemme:k.slot_hjemme||hjemmelag,slot_borte:k.slot_borte||bortelag,
+      avanserer:k.avanserer||''
+    };
+  });
 }
 function enrichRows(rows){
   const mm=manualMap();
@@ -126,8 +142,30 @@ function rowMatchesFilter(k){
 }
 function safe(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function teamOptions(current){
-  const cur=normalizeTeamForSelect(current);const values=new Set(lagliste);if(cur)values.add(cur);
+  const cur=normalizeTeamForSelect(current);const values=new Set(lagliste);if(cur&&!isPlaceholder(cur))values.add(cur);
   return ['<option value="">— velg lag —</option>',...[...values].sort((a,b)=>a.localeCompare(b,'no')).map(t=>`<option value="${safe(t)}" ${t===cur?'selected':''}>${safe(t)}</option>`)].join('');
+}
+function avansererOptions(home,away,selected){
+  const values=[];[home,away,selected].forEach(t=>{t=normalizeTeamForSelect(t);if(t&&!isPlaceholder(t)&&!values.includes(t))values.push(t)});
+  return ['<option value="">— velg ved uavgjort/avansement —</option>',...values.map(t=>`<option value="${safe(t)}" ${t===selected?'selected':''}>${safe(t)}</option>`)].join('');
+}
+function updateAdvOptions(i){
+  const adv=el(`adv_${i}`);if(!adv)return;
+  const old=adv.value;
+  const home=val(`hjemmelag_${i}`);
+  const away=val(`bortelag_${i}`);
+  adv.innerHTML=avansererOptions(home,away,old);
+  if(old)adv.value=old;
+}
+function autoSetAvanserer(i){
+  if(val('modus')!=='utslag')return;
+  updateAdvOptions(i);
+  const adv=el(`adv_${i}`);if(!adv)return;
+  const h=scoreFrom(`h_${i}`),b=scoreFrom(`b_${i}`);
+  const home=val(`hjemmelag_${i}`);
+  const away=val(`bortelag_${i}`);
+  if(h!==null&&b!==null&&h>b&&home)adv.value=home;
+  else if(h!==null&&b!==null&&b>h&&away)adv.value=away;
 }
 function renderBatch(){
   const rows=enrichRows(getBaseRows()).filter(rowMatchesFilter);
@@ -140,13 +178,16 @@ function renderBatch(){
   if(!rows.length){el('batchTable').innerHTML='<div class="small">Ingen kamper å vise.</div>';return}
   const body=rows.map((k,i)=>{
     const hVal=k.hjemme??'';const bVal=k.borte??'';const checked=k.ferdig||k.harManuell?'checked':'';
-    const teamCell=isGroup?`<div class="teams">${safe(k.hjemmelag)} – ${safe(k.bortelag)}</div>`:`<div style="display:flex;gap:8px;align-items:center"><select class="team-select" id="hjemmelag_${i}" onchange="markRow(${i})">${teamOptions(k.hjemmelag)}</select><span>–</span><select class="team-select" id="bortelag_${i}" onchange="markRow(${i})">${teamOptions(k.bortelag)}</select></div>`;
-    return `<tr data-i="${i}"><td><input type="checkbox" class="row-check" id="chk_${i}" ${checked}></td><td class="date">${norskDato(k.dato)}<div class="small">${safe(k.runde)} ${k.gruppe?`· ${safe(k.gruppe)}`:''}</div></td><td>${teamCell}<div class="small">${safe(k.kamp_id)}</div></td><td><input class="score-input" id="h_${i}" type="number" min="0" value="${hVal}" oninput="scoreChanged(${i})"></td><td><input class="score-input" id="b_${i}" type="number" min="0" value="${bVal}" oninput="scoreChanged(${i})"></td><td><input type="checkbox" id="f_${i}" ${k.ferdig?'checked':''} onchange="markRow(${i})"></td><td>${k.harManuell?'<span class="tag green">manuell</span>':''}${missingSet().has(k.kamp_id)?'<span class="tag yellow">mangler</span>':''}</td></tr>`;
+    const homeForSelect=isGroup?k.hjemmelag:(isPlaceholder(k.hjemmelag)?'':k.hjemmelag);
+    const awayForSelect=isGroup?k.bortelag:(isPlaceholder(k.bortelag)?'':k.bortelag);
+    const teamCell=isGroup?`<div class="teams">${safe(k.hjemmelag)} – ${safe(k.bortelag)}</div>`:`<div style="display:flex;gap:8px;align-items:center"><select class="team-select" id="hjemmelag_${i}" onchange="updateAdvOptions(${i});markRow(${i})">${teamOptions(homeForSelect)}</select><span>–</span><select class="team-select" id="bortelag_${i}" onchange="updateAdvOptions(${i});markRow(${i})">${teamOptions(awayForSelect)}</select></div><div class="small">Slot: ${safe(k.slot_hjemme||'')} – ${safe(k.slot_borte||'')} · Kamp ${safe(k.match_no||'')}</div>`;
+    const advCell=isGroup?'–':`<select id="adv_${i}" onchange="markRow(${i})">${avansererOptions(homeForSelect,awayForSelect,k.avanserer||'')}</select><div class="small">Brukes kun til å fylle neste runde, ikke poeng.</div>`;
+    return `<tr data-i="${i}"><td><input type="checkbox" class="row-check" id="chk_${i}" ${checked}></td><td class="date">${norskDato(k.dato)}<div class="small">${safe(k.runde)} ${k.gruppe?`· ${safe(k.gruppe)}`:''}</div></td><td>${teamCell}<div class="small">${safe(k.kamp_id)}</div></td><td><input class="score-input" id="h_${i}" type="number" min="0" value="${hVal}" oninput="scoreChanged(${i})"></td><td><input class="score-input" id="b_${i}" type="number" min="0" value="${bVal}" oninput="scoreChanged(${i})"></td><td><input type="checkbox" id="f_${i}" ${k.ferdig?'checked':''} onchange="markRow(${i})"></td><td>${advCell}</td><td>${k.harManuell?'<span class="tag green">manuell</span>':''}${missingSet().has(k.kamp_id)?'<span class="tag yellow">mangler</span>':''}</td></tr>`;
   }).join('');
-  el('batchTable').innerHTML=`<div class="table-wrap"><table class="result-table"><thead><tr><th>Velg</th><th>Dato</th><th>Kamp</th><th>H</th><th>B</th><th>Ferdig</th><th>Status</th></tr></thead><tbody>${body}</tbody></table></div>`;
+  el('batchTable').innerHTML=`<div class="table-wrap"><table class="result-table"><thead><tr><th>Velg</th><th>Dato</th><th>Kamp</th><th>H</th><th>B</th><th>Ferdig</th><th>Går videre</th><th>Status</th></tr></thead><tbody>${body}</tbody></table></div>`;
 }
 function markRow(i){const c=el(`chk_${i}`);if(c)c.checked=true}
-function scoreChanged(i){markRow(i);const h=scoreFrom(`h_${i}`),b=scoreFrom(`b_${i}`);if(h!==null&&b!==null)el(`f_${i}`).checked=true}
+function scoreChanged(i){markRow(i);const h=scoreFrom(`h_${i}`),b=scoreFrom(`b_${i}`);if(h!==null&&b!==null)el(`f_${i}`).checked=true;autoSetAvanserer(i)}
 function checkAllVisible(on){visibleRows.forEach((_,i)=>{const c=el(`chk_${i}`);if(c)c.checked=on})}
 function collectChecked(requireScore=false){
   const out=[];const isGroup=val('modus')==='gruppe';
@@ -158,7 +199,9 @@ function collectChecked(requireScore=false){
     const bortelag=isGroup?k.bortelag:val(`bortelag_${i}`);
     if(!hjemmelag||!bortelag)return;
     const id=(hjemmelag===k.hjemmelag&&bortelag===k.bortelag)?k.kamp_id:kampId(hjemmelag,bortelag,k.dato);
-    out.push({kamp_id:id,runde:k.runde||'gruppe',gruppe:k.gruppe||'',dato:k.dato,hjemmelag,bortelag,hjemme:hScore,borte:bScore,ferdig:!!el(`f_${i}`)?.checked});
+    const kamp={kamp_id:id,runde:k.runde||'gruppe',gruppe:k.gruppe||'',dato:k.dato,hjemmelag,bortelag,hjemme:hScore,borte:bScore,ferdig:!!el(`f_${i}`)?.checked};
+    if(!isGroup){kamp.match_no=k.match_no||null;kamp.slot_hjemme=k.slot_hjemme||'';kamp.slot_borte=k.slot_borte||'';kamp.avanserer=val(`adv_${i}`)||'';}
+    out.push(kamp);
   });
   return out;
 }
@@ -183,7 +226,7 @@ function bulkScores(){
   }
   setStatus('bulkStatus',`${count} resultat(er) lagt inn i tabellen. Husk å trykke Lagre valgte.`, count?'ok':'err');
 }
-function card(k,source){const ferdig=k.ferdig&&k.hjemme!==null&&k.borte!==null;return `<div class="match"><div class="match-head"><div><div class="teams">${safe(k.hjemmelag||'?')} – ${safe(k.bortelag||'?')}</div><div class="meta">${safe(k.dato||'')} · ${safe(k.runde||'gruppe')} ${k.gruppe?`· Gruppe ${safe(k.gruppe)}`:''}</div><div><span class="tag ${source==='missing'?'yellow':'green'}">${source==='missing'?'mangler':'manuell'}</span>${ferdig?'<span class="tag green">ferdig</span>':'<span class="tag yellow">uten resultat</span>'}</div><div class="small">${safe(k.kamp_id||'')}</div></div><div class="score">${ferdig?`${k.hjemme}–${k.borte}`:'–'}</div></div></div>`}
+function card(k,source){const ferdig=k.ferdig&&k.hjemme!==null&&k.borte!==null;return `<div class="match"><div class="match-head"><div><div class="teams">${safe(k.hjemmelag||'?')} – ${safe(k.bortelag||'?')}</div><div class="meta">${safe(k.dato||'')} · ${safe(k.runde||'gruppe')} ${k.gruppe?`· Gruppe ${safe(k.gruppe)}`:''}</div><div><span class="tag ${source==='missing'?'yellow':'green'}">${source==='missing'?'mangler':'manuell'}</span>${ferdig?'<span class="tag green">ferdig</span>':'<span class="tag yellow">uten resultat</span>'}</div><div class="small">${safe(k.kamp_id||'')}${k.avanserer?` · Går videre: ${safe(k.avanserer)}`:''}</div></div><div class="score">${ferdig?`${k.hjemme}–${k.borte}`:'–'}</div></div></div>`}
 function renderSideLists(){
   el('missingList').innerHTML=(mangler.slice(0,8).map(k=>card(k,'missing')).join('')||'<div class="small">Ingen manglende resultater.</div>');
   el('manualList').innerHTML=(manuelle.slice(0,8).map(k=>card(k,'manual')).join('')||'<div class="small">Ingen manuelle kamper/resultater.</div>');
