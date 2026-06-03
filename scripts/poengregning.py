@@ -30,14 +30,14 @@ DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
 
 # Poeng per runde
 POENG = {
-    "gruppe": {"vinner": 2, "eksakt": 2},
-    "r32":    {"vinner": 3, "eksakt": 2},
-    "r16":    {"vinner": 4, "eksakt": 2},
-    "qf":     {"vinner": 5, "eksakt": 2},
-    "sf":     {"vinner": 6, "eksakt": 2},
-    "final":  {"vinner": 7, "eksakt": 2},
+    "gruppe": {"vinner": 2, "eksakt": 4},
+    "r32":    {"vinner": 3, "eksakt": 4},
+    "r16":    {"vinner": 4, "eksakt": 4},
+    "qf":     {"vinner": 5, "eksakt": 4},
+    "sf":     {"vinner": 6, "eksakt": 4},
+    "final":  {"vinner": 7, "eksakt": 4},
 }
-POENG_TURNERINGSVINNER = 35
+POENG_TURNERINGSVINNER = 70
 
 # ── TESTMODUS ─────────────────────────────────────────────────────────────────
 TEST_MODE = not os.environ.get("GITHUB_ACTIONS")
@@ -631,9 +631,9 @@ def main():
     if TEST_MODE:
         print("\n── TESTVERIFISERING ──")
         print("\nForventet poeng:")
-        print("  Kari Nordmann: Mexico 2-1 ✓ eksakt (4p) + Korea 1-1 ✓ eksakt (4p) + Norge 3-0 ✓ eksakt (4p) = 12p")
-        print("  Ole Hansen:    Mexico 1-0 ✗ (0p) + Korea 2-1 ✗ (0p) + Norge 3-0 ✓ eksakt (4p) = 4p")
-        print("  Petter Ås:     Mexico 0-2 ✗ (0p) + Korea 1-1 ✓ eksakt (4p) + Norge 2-1 ✓ utfall (2p) = 6p")
+        print("  Kari Nordmann: Mexico 2-1 ✓ eksakt (6p) + Korea 1-1 ✓ eksakt (6p) + Norge 3-0 ✓ eksakt (6p) = 18p")
+        print("  Ole Hansen:    Mexico 1-0 ✓ utfall (2p) + Korea 2-1 ✗ (0p) + Norge 3-0 ✓ eksakt (6p) = 8p")
+        print("  Petter Ås:     Mexico 0-2 ✗ (0p) + Korea 1-1 ✓ eksakt (6p) + Norge 2-1 ✓ utfall (2p) = 8p")
         print("\nBeregnede poeng:")
         for d in sorted(stilling, key=lambda x: x["poeng_totalt"], reverse=True):
             print(f"  {d['navn']} (id: {d['deltaker_id']}): {d['poeng_totalt']}p")
