@@ -27,6 +27,8 @@ DATA_DIR       = REPO_ROOT / "data"
 DATA_JS        = DATA_DIR / "data.js"
 STATUS_JSON    = DATA_DIR / "status.json"
 DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
+MANUELLE_KAMPER_JSON = DATA_DIR / "manuelle-kamper.json"
+MANGLER_RESULTATER_JSON = DATA_DIR / "mangler-resultater.json"
 
 # Poeng per runde
 # Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter.
@@ -179,6 +181,151 @@ def bygg_resultat_lookup(api_data):
     ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"])
     print(f"  → {len(lookup)} kamper totalt, {ferdig_antall} ferdigspilte")
     return lookup
+
+
+# ── MANUELLE KAMPER / FALLBACK ───────────────────────────────────────────────
+def les_manuelle_kamper():
+    """
+    Leser data/manuelle-kamper.json hvis den finnes.
+
+    Brukes som midlertidig fallback:
+      - OpenFootball er master hvis OpenFootball har ferdig resultat.
+      - Manuell kamp/resultat brukes hvis OpenFootball mangler kampen eller score.
+      - Når OpenFootball senere får resultat for samme kamp_id, vinner OpenFootball automatisk.
+    """
+    if not MANUELLE_KAMPER_JSON.exists():
+        return []
+
+    try:
+        data = json.loads(MANUELLE_KAMPER_JSON.read_text(encoding="utf-8"))
+        kamper = data.get("kamper", [])
+        if not isinstance(kamper, list):
+            print("  ADVARSEL: data/manuelle-kamper.json har ikke listefeltet 'kamper'")
+            return []
+        return kamper
+    except Exception as e:
+        print(f"  ADVARSEL: Kunne ikke lese manuelle kamper: {e}")
+        return []
+
+
+def normaliser_manuell_kamp(kamp):
+    """Normaliserer én manuell kamp til samme format som resultat_lookup."""
+    hjemmelag = (kamp.get("hjemmelag") or kamp.get("hjemme_lag") or kamp.get("hjemmeNavn") or "").strip()
+    bortelag = (kamp.get("bortelag") or kamp.get("borte_lag") or kamp.get("borteNavn") or "").strip()
+    dato = (kamp.get("dato") or kamp.get("date") or "").strip()
+
+    kid = (kamp.get("kamp_id") or kamp.get("id") or "").strip()
+    if not kid and hjemmelag and bortelag and dato:
+        kid = kamp_id(hjemmelag, bortelag, dato)
+
+    try:
+        hjemme_score = kamp.get("hjemme")
+        borte_score = kamp.get("borte")
+        hjemme_score = int(hjemme_score) if hjemme_score not in (None, "") else None
+        borte_score = int(borte_score) if borte_score not in (None, "") else None
+    except Exception:
+        hjemme_score = None
+        borte_score = None
+
+    ferdig = bool(kamp.get("ferdig")) and hjemme_score is not None and borte_score is not None
+
+    return kid, {
+        "hjemmelag": hjemmelag,
+        "bortelag": bortelag,
+        "hjemme": hjemme_score,
+        "borte": borte_score,
+        "ferdig": ferdig,
+        "runde": kamp.get("runde", "gruppe"),
+        "gruppe": kamp.get("gruppe", ""),
+        "dato": dato,
+        "kilde": "manuell_fallback",
+    }
+
+
+def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
+    """
+    Fletter manuelle kamper/resultater inn i OpenFootball-lookup.
+
+    Regel:
+      1. OpenFootball-resultat vinner hvis OpenFootball har ferdig score.
+      2. Manuelt resultat brukes hvis OpenFootball mangler score.
+      3. Manuell kamp brukes hvis OpenFootball mangler hele kampen.
+    """
+    brukt = 0
+    lagt_til = 0
+    ignorert = 0
+
+    for raw in manuelle_kamper:
+        kid, manuell = normaliser_manuell_kamp(raw)
+        if not kid:
+            print(f"  ADVARSEL: Hopper over manuell kamp uten kamp_id/lag/dato: {raw}")
+            continue
+
+        eksisterende = resultat_lookup.get(kid)
+        if not eksisterende:
+            resultat_lookup[kid] = manuell
+            lagt_til += 1
+            continue
+
+        # OpenFootball er master når den har ferdig resultat.
+        if eksisterende.get("ferdig"):
+            ignorert += 1
+            continue
+
+        # Hvis OpenFootball har kamp, men ikke resultat, kan manuell fallback brukes.
+        if manuell.get("ferdig"):
+            resultat_lookup[kid] = {
+                **eksisterende,
+                "hjemme": manuell["hjemme"],
+                "borte": manuell["borte"],
+                "ferdig": True,
+                "kilde": "manuell_fallback",
+            }
+            brukt += 1
+        else:
+            # Behold OpenFootball-kampen, men fyll eventuelt inn manglende metadata fra manuell kamp.
+            resultat_lookup[kid] = {
+                **manuell,
+                **eksisterende,
+                "kilde": eksisterende.get("kilde", "openfootball"),
+            }
+
+    print(f"  → Manuell fallback: {lagt_til} kamper lagt til, {brukt} resultater brukt, {ignorert} ignorert fordi OpenFootball har resultat")
+    return resultat_lookup
+
+
+def skriv_mangler_resultater(resultat_lookup):
+    """
+    Skriver data/mangler-resultater.json med kamper som er datert før i dag,
+    men fortsatt mangler resultat etter 90 minutter.
+    """
+    today = datetime.now(timezone.utc).date()
+    mangler = []
+
+    for kid, kamp in resultat_lookup.items():
+        dato_txt = kamp.get("dato", "")
+        try:
+            kamp_dato = datetime.fromisoformat(dato_txt[:10]).date()
+        except Exception:
+            continue
+
+        if kamp_dato < today and not kamp.get("ferdig"):
+            mangler.append({
+                "kamp_id": kid,
+                "hjemmelag": kamp.get("hjemmelag", ""),
+                "bortelag": kamp.get("bortelag", ""),
+                "dato": dato_txt,
+                "runde": kamp.get("runde", "gruppe"),
+                "gruppe": kamp.get("gruppe", ""),
+                "status": "mangler_resultat",
+            })
+
+    data = {
+        "sist_sjekket": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "kamper": sorted(mangler, key=lambda x: (x.get("dato", ""), x.get("runde", ""), x.get("hjemmelag", "")))
+    }
+    MANGLER_RESULTATER_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  → Skrev mangler-resultater.json med {len(mangler)} kamper")
 
 # ── LES TIPPINGER ─────────────────────────────────────────────────────────────
 def les_alle_tippinger():
@@ -551,20 +698,32 @@ def main():
     if TEST_MODE:
         print("\n[TEST] Bruker mock-resultater")
         resultat_lookup = {r["kamp_id"]: r for r in MOCK_RESULTATER}
-        faktisk_turneringsvinner = None
     else:
         api_data = hent_api_data()
         resultat_lookup = bygg_resultat_lookup(api_data)
-        faktisk_turneringsvinner = None
-        final_kamper = [v for v in resultat_lookup.values() if v["runde"] == "final" and v["ferdig"]]
-        if final_kamper:
-            f = final_kamper[0]
-            if f["hjemme"] > f["borte"]:
-                faktisk_turneringsvinner = f["hjemmelag"]
-            elif f["borte"] > f["hjemme"]:
-                faktisk_turneringsvinner = f["bortelag"]
-            else:
-                faktisk_turneringsvinner = f.get("vinner")
+
+    # Les manuelle kamper/resultater som midlertidig fallback
+    print("\nLeser manuelle kamp-/resultat-fallbacks...")
+    manuelle_kamper = les_manuelle_kamper()
+    if manuelle_kamper:
+        resultat_lookup = flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper)
+    else:
+        print("  → Ingen manuelle kamper/resultater funnet")
+
+    faktisk_turneringsvinner = None
+    final_kamper = [v for v in resultat_lookup.values() if v["runde"] == "final" and v["ferdig"]]
+    if final_kamper:
+        f = final_kamper[0]
+        if f["hjemme"] > f["borte"]:
+            faktisk_turneringsvinner = f["hjemmelag"]
+        elif f["borte"] > f["hjemme"]:
+            faktisk_turneringsvinner = f["bortelag"]
+        else:
+            faktisk_turneringsvinner = None
+
+    # Skriv liste over kamper som burde vært ferdig, men mangler resultat
+    print("\nSkriver mangler-resultater.json...")
+    skriv_mangler_resultater(resultat_lookup)
 
     # Les tippinger
     print("\nLeser tippinger...")
