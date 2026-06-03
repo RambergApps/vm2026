@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>VM 2026 — Tippekonkurranse</title>
+<title>VM 2026 — Velkomst</title>
+<!-- CLEAN_CARD_VERSION_2026_06_03: kortene inneholder kun ikon + tittel -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -95,12 +96,15 @@ h1 span { color: var(--accent); }
   background: linear-gradient(180deg, rgba(21,32,53,.96), rgba(13,19,32,.96));
   border: 1.5px solid var(--border);
   border-radius: 16px;
-  padding: 22px 18px;
-  min-height: 180px;
+  padding: 26px 18px;
+  min-height: 150px;
   text-decoration: none;
   color: var(--text);
   overflow: hidden;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .link-card:hover {
   transform: translateY(-3px);
@@ -109,35 +113,24 @@ h1 span { color: var(--accent); }
 }
 .link-card.score:hover { border-color: rgba(255,214,0,.65); box-shadow: 0 14px 34px rgba(0,0,0,.28), 0 0 26px rgba(255,214,0,.08); }
 .card-icon {
-  font-size: 32px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  margin-bottom: 18px;
 }
 .link-card h2 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.02;
   text-transform: uppercase;
   letter-spacing: .03em;
 }
-.link-card p {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
+.link-card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
 }
-.link-card .cta {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.link-card.score .cta { color: var(--gold); }
+.link-card.score:focus-visible { outline-color: var(--gold); }
+/* Sikkerhet: kortene skal kun vise ikon + tittel */
+.link-card p, .link-card .cta, .link-card .card-cta, .link-card span:not(.card-icon) { display: none !important; }
+
 .info-grid {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -234,7 +227,7 @@ h1 span { color: var(--accent); }
 @media (max-width: 760px) {
   .page { padding-top: 28px; }
   .quick-links { grid-template-columns: 1fr; }
-  .link-card { min-height: 154px; }
+  .link-card { min-height: 126px; }
   .info-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 24px; }
 }
@@ -253,22 +246,16 @@ h1 span { color: var(--accent); }
     <a class="link-card" href="./tippe/">
       <div class="card-icon">📝</div>
       <h2>Tipp gruppespill</h2>
-      <p>Lever resultater for alle gruppespillkampene og velg turneringsvinner.</p>
-      <div class="cta">Gå til gruppespill →</div>
     </a>
 
     <a class="link-card" href="./tippe/utslagsrunder.html">
       <div class="card-icon">🏆</div>
       <h2>Tipp utslagsrunder</h2>
-      <p>Utslagsrundene åpnes runde for runde når kampene er klare.</p>
-      <div class="cta">Gå til utslagsrunder →</div>
     </a>
 
     <a class="link-card score" href="./">
       <div class="card-icon">📊</div>
       <h2>Scoreboard</h2>
-      <p>Følg stillingen og poengberegningen gjennom turneringen.</p>
-      <div class="cta">Se scoreboard →</div>
     </a>
   </section>
 
