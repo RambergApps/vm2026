@@ -4,116 +4,165 @@
     "frist": null,
     "kamper": [
       {
-        "id": "2A_2B_2026_06_28",
-        "hjemme": "2A",
-        "borte": "2B",
+        "id": "England_Egypt_2026_06_28",
+        "hjemme": "England",
+        "borte": "Egypt",
         "dato": "2026-06-28",
-        "info": ""
+        "info": "Manuell fallback",
+        "match_no": 73,
+        "slot_hjemme": "2A",
+        "slot_borte": "2B",
+        "avanserer": "England"
       },
       {
         "id": "1E_3A_B_C_D_F_2026_06_29",
         "hjemme": "1E",
         "borte": "3A/B/C/D/F",
         "dato": "2026-06-29",
-        "info": ""
+        "info": "",
+        "match_no": 74,
+        "slot_hjemme": "1E",
+        "slot_borte": "3A/B/C/D/F"
       },
       {
         "id": "1F_2C_2026_06_29",
         "hjemme": "1F",
         "borte": "2C",
         "dato": "2026-06-29",
-        "info": ""
+        "info": "",
+        "match_no": 75,
+        "slot_hjemme": "1F",
+        "slot_borte": "2C"
       },
       {
         "id": "1C_2F_2026_06_29",
         "hjemme": "1C",
         "borte": "2F",
         "dato": "2026-06-29",
-        "info": ""
+        "info": "",
+        "match_no": 76,
+        "slot_hjemme": "1C",
+        "slot_borte": "2F"
       },
       {
         "id": "1I_3C_D_F_G_H_2026_06_30",
         "hjemme": "1I",
         "borte": "3C/D/F/G/H",
         "dato": "2026-06-30",
-        "info": ""
+        "info": "",
+        "match_no": 77,
+        "slot_hjemme": "1I",
+        "slot_borte": "3C/D/F/G/H"
       },
       {
         "id": "2E_2I_2026_06_30",
         "hjemme": "2E",
         "borte": "2I",
         "dato": "2026-06-30",
-        "info": ""
+        "info": "",
+        "match_no": 78,
+        "slot_hjemme": "2E",
+        "slot_borte": "2I"
       },
       {
         "id": "1A_3C_E_F_H_I_2026_06_30",
         "hjemme": "1A",
         "borte": "3C/E/F/H/I",
         "dato": "2026-06-30",
-        "info": ""
+        "info": "",
+        "match_no": 79,
+        "slot_hjemme": "1A",
+        "slot_borte": "3C/E/F/H/I"
       },
       {
         "id": "1L_3E_H_I_J_K_2026_07_01",
         "hjemme": "1L",
         "borte": "3E/H/I/J/K",
         "dato": "2026-07-01",
-        "info": ""
+        "info": "",
+        "match_no": 80,
+        "slot_hjemme": "1L",
+        "slot_borte": "3E/H/I/J/K"
       },
       {
         "id": "1D_3B_E_F_I_J_2026_07_01",
         "hjemme": "1D",
         "borte": "3B/E/F/I/J",
         "dato": "2026-07-01",
-        "info": ""
+        "info": "",
+        "match_no": 81,
+        "slot_hjemme": "1D",
+        "slot_borte": "3B/E/F/I/J"
       },
       {
         "id": "1G_3A_E_H_I_J_2026_07_01",
         "hjemme": "1G",
         "borte": "3A/E/H/I/J",
         "dato": "2026-07-01",
-        "info": ""
+        "info": "",
+        "match_no": 82,
+        "slot_hjemme": "1G",
+        "slot_borte": "3A/E/H/I/J"
       },
       {
         "id": "2K_2L_2026_07_02",
         "hjemme": "2K",
         "borte": "2L",
         "dato": "2026-07-02",
-        "info": ""
+        "info": "",
+        "match_no": 83,
+        "slot_hjemme": "2K",
+        "slot_borte": "2L"
       },
       {
         "id": "1H_2J_2026_07_02",
         "hjemme": "1H",
         "borte": "2J",
         "dato": "2026-07-02",
-        "info": ""
+        "info": "",
+        "match_no": 84,
+        "slot_hjemme": "1H",
+        "slot_borte": "2J"
       },
       {
         "id": "1B_3E_F_G_I_J_2026_07_02",
         "hjemme": "1B",
         "borte": "3E/F/G/I/J",
         "dato": "2026-07-02",
-        "info": ""
+        "info": "",
+        "match_no": 85,
+        "slot_hjemme": "1B",
+        "slot_borte": "3E/F/G/I/J"
       },
       {
         "id": "1J_2H_2026_07_03",
         "hjemme": "1J",
         "borte": "2H",
         "dato": "2026-07-03",
-        "info": ""
+        "info": "",
+        "match_no": 86,
+        "slot_hjemme": "1J",
+        "slot_borte": "2H"
       },
       {
         "id": "1K_3D_E_I_J_L_2026_07_03",
         "hjemme": "1K",
         "borte": "3D/E/I/J/L",
         "dato": "2026-07-03",
-        "info": ""
+        "info": "",
+        "match_no": 87,
+        "slot_hjemme": "1K",
+        "slot_borte": "3D/E/I/J/L"
       },
       {
         "id": "2D_2G_2026_07_03",
         "hjemme": "2D",
         "borte": "2G",
         "dato": "2026-07-03",
-        "info": ""
+        "info": "",
+        "match_no": 88,
+        "slot_hjemme": "2D",
+        "slot_borte": "2G"
       }
     ]
   },
@@ -126,56 +175,80 @@
         "hjemme": "W74",
         "borte": "W77",
         "dato": "2026-07-04",
-        "info": ""
+        "info": "",
+        "match_no": 89,
+        "slot_hjemme": "W74",
+        "slot_borte": "W77"
       },
       {
         "id": "W73_W75_2026_07_04",
         "hjemme": "W73",
         "borte": "W75",
         "dato": "2026-07-04",
-        "info": ""
+        "info": "",
+        "match_no": 90,
+        "slot_hjemme": "W73",
+        "slot_borte": "W75"
       },
       {
         "id": "W76_W78_2026_07_05",
         "hjemme": "W76",
         "borte": "W78",
         "dato": "2026-07-05",
-        "info": ""
+        "info": "",
+        "match_no": 91,
+        "slot_hjemme": "W76",
+        "slot_borte": "W78"
       },
       {
         "id": "W79_W80_2026_07_05",
         "hjemme": "W79",
         "borte": "W80",
         "dato": "2026-07-05",
-        "info": ""
+        "info": "",
+        "match_no": 92,
+        "slot_hjemme": "W79",
+        "slot_borte": "W80"
       },
       {
         "id": "W83_W84_2026_07_06",
         "hjemme": "W83",
         "borte": "W84",
         "dato": "2026-07-06",
-        "info": ""
+        "info": "",
+        "match_no": 93,
+        "slot_hjemme": "W83",
+        "slot_borte": "W84"
       },
       {
         "id": "W81_W82_2026_07_06",
         "hjemme": "W81",
         "borte": "W82",
         "dato": "2026-07-06",
-        "info": ""
+        "info": "",
+        "match_no": 94,
+        "slot_hjemme": "W81",
+        "slot_borte": "W82"
       },
       {
         "id": "W86_W88_2026_07_07",
         "hjemme": "W86",
         "borte": "W88",
         "dato": "2026-07-07",
-        "info": ""
+        "info": "",
+        "match_no": 95,
+        "slot_hjemme": "W86",
+        "slot_borte": "W88"
       },
       {
         "id": "W85_W87_2026_07_07",
         "hjemme": "W85",
         "borte": "W87",
         "dato": "2026-07-07",
-        "info": ""
+        "info": "",
+        "match_no": 96,
+        "slot_hjemme": "W85",
+        "slot_borte": "W87"
       }
     ]
   },
@@ -188,28 +261,40 @@
         "hjemme": "W89",
         "borte": "W90",
         "dato": "2026-07-09",
-        "info": ""
+        "info": "",
+        "match_no": 97,
+        "slot_hjemme": "W89",
+        "slot_borte": "W90"
       },
       {
         "id": "W93_W94_2026_07_10",
         "hjemme": "W93",
         "borte": "W94",
         "dato": "2026-07-10",
-        "info": ""
+        "info": "",
+        "match_no": 98,
+        "slot_hjemme": "W93",
+        "slot_borte": "W94"
       },
       {
         "id": "W91_W92_2026_07_11",
         "hjemme": "W91",
         "borte": "W92",
         "dato": "2026-07-11",
-        "info": ""
+        "info": "",
+        "match_no": 99,
+        "slot_hjemme": "W91",
+        "slot_borte": "W92"
       },
       {
         "id": "W95_W96_2026_07_11",
         "hjemme": "W95",
         "borte": "W96",
         "dato": "2026-07-11",
-        "info": ""
+        "info": "",
+        "match_no": 100,
+        "slot_hjemme": "W95",
+        "slot_borte": "W96"
       }
     ]
   },
@@ -222,14 +307,20 @@
         "hjemme": "W97",
         "borte": "W98",
         "dato": "2026-07-14",
-        "info": ""
+        "info": "",
+        "match_no": 101,
+        "slot_hjemme": "W97",
+        "slot_borte": "W98"
       },
       {
         "id": "W99_W100_2026_07_15",
         "hjemme": "W99",
         "borte": "W100",
         "dato": "2026-07-15",
-        "info": ""
+        "info": "",
+        "match_no": 102,
+        "slot_hjemme": "W99",
+        "slot_borte": "W100"
       }
     ]
   },
@@ -242,7 +333,10 @@
         "hjemme": "W101",
         "borte": "W102",
         "dato": "2026-07-19",
-        "info": ""
+        "info": "",
+        "match_no": 104,
+        "slot_hjemme": "W101",
+        "slot_borte": "W102"
       }
     ]
   }
