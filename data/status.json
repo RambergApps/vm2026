@@ -4,15 +4,16 @@
     "frist": null,
     "kamper": [
       {
-  "id": "2A_2B_2026_06_28",
-  "hjemme": "2A",
-  "borte": "2B",
-  "dato": "2026-06-28",
-  "info": "",
-  "match_no": 73,
-  "slot_hjemme": "2A",
-  "slot_borte": "2B"
-},
+        "id": "France_Germany_2026_06_28",
+        "hjemme": "France",
+        "borte": "Germany",
+        "dato": "2026-06-28",
+        "info": "Manuell fallback",
+        "match_no": 73,
+        "slot_hjemme": "2A",
+        "slot_borte": "2B",
+        "avanserer": "France"
+      },
       {
         "id": "1E_3A_B_C_D_F_2026_06_29",
         "hjemme": "1E",
@@ -180,11 +181,11 @@
         "slot_borte": "W77"
       },
       {
-        "id": "W73_W75_2026_07_04",
-        "hjemme": "W73",
+        "id": "France_W75_2026_07_04",
+        "hjemme": "France",
         "borte": "W75",
         "dato": "2026-07-04",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 90,
         "slot_hjemme": "W73",
         "slot_borte": "W75"

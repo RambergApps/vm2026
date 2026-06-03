@@ -1,4 +1,22 @@
 {
-  "sist_oppdatert": "2026-06-03T12:20:07Z",
-  "kamper": []
+  "sist_oppdatert": "2026-06-03T12:30:00Z",
+  "kamper": [
+    {
+      "kamp_id": "France_Germany_2026_06_28",
+      "runde": "r32",
+      "gruppe": "",
+      "dato": "2026-06-28",
+      "hjemmelag": "France",
+      "bortelag": "Germany",
+      "hjemme": 1,
+      "borte": 0,
+      "ferdig": true,
+      "kilde": "manuell_fallback",
+      "oppdatert": "2026-06-03T12:30:00Z",
+      "match_no": 73,
+      "slot_hjemme": "2A",
+      "slot_borte": "2B",
+      "avanserer": "France"
+    }
+  ]
 }
