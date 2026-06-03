@@ -2,26 +2,248 @@
   "r32": {
     "aapen": false,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      {
+        "id": "2A_2B_2026_06_28",
+        "hjemme": "2A",
+        "borte": "2B",
+        "dato": "2026-06-28",
+        "info": ""
+      },
+      {
+        "id": "1E_3A_B_C_D_F_2026_06_29",
+        "hjemme": "1E",
+        "borte": "3A/B/C/D/F",
+        "dato": "2026-06-29",
+        "info": ""
+      },
+      {
+        "id": "1F_2C_2026_06_29",
+        "hjemme": "1F",
+        "borte": "2C",
+        "dato": "2026-06-29",
+        "info": ""
+      },
+      {
+        "id": "1C_2F_2026_06_29",
+        "hjemme": "1C",
+        "borte": "2F",
+        "dato": "2026-06-29",
+        "info": ""
+      },
+      {
+        "id": "1I_3C_D_F_G_H_2026_06_30",
+        "hjemme": "1I",
+        "borte": "3C/D/F/G/H",
+        "dato": "2026-06-30",
+        "info": ""
+      },
+      {
+        "id": "2E_2I_2026_06_30",
+        "hjemme": "2E",
+        "borte": "2I",
+        "dato": "2026-06-30",
+        "info": ""
+      },
+      {
+        "id": "1A_3C_E_F_H_I_2026_06_30",
+        "hjemme": "1A",
+        "borte": "3C/E/F/H/I",
+        "dato": "2026-06-30",
+        "info": ""
+      },
+      {
+        "id": "1L_3E_H_I_J_K_2026_07_01",
+        "hjemme": "1L",
+        "borte": "3E/H/I/J/K",
+        "dato": "2026-07-01",
+        "info": ""
+      },
+      {
+        "id": "1D_3B_E_F_I_J_2026_07_01",
+        "hjemme": "1D",
+        "borte": "3B/E/F/I/J",
+        "dato": "2026-07-01",
+        "info": ""
+      },
+      {
+        "id": "1G_3A_E_H_I_J_2026_07_01",
+        "hjemme": "1G",
+        "borte": "3A/E/H/I/J",
+        "dato": "2026-07-01",
+        "info": ""
+      },
+      {
+        "id": "2K_2L_2026_07_02",
+        "hjemme": "2K",
+        "borte": "2L",
+        "dato": "2026-07-02",
+        "info": ""
+      },
+      {
+        "id": "1H_2J_2026_07_02",
+        "hjemme": "1H",
+        "borte": "2J",
+        "dato": "2026-07-02",
+        "info": ""
+      },
+      {
+        "id": "1B_3E_F_G_I_J_2026_07_02",
+        "hjemme": "1B",
+        "borte": "3E/F/G/I/J",
+        "dato": "2026-07-02",
+        "info": ""
+      },
+      {
+        "id": "1J_2H_2026_07_03",
+        "hjemme": "1J",
+        "borte": "2H",
+        "dato": "2026-07-03",
+        "info": ""
+      },
+      {
+        "id": "1K_3D_E_I_J_L_2026_07_03",
+        "hjemme": "1K",
+        "borte": "3D/E/I/J/L",
+        "dato": "2026-07-03",
+        "info": ""
+      },
+      {
+        "id": "2D_2G_2026_07_03",
+        "hjemme": "2D",
+        "borte": "2G",
+        "dato": "2026-07-03",
+        "info": ""
+      }
+    ]
   },
   "r16": {
     "aapen": false,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      {
+        "id": "W74_W77_2026_07_04",
+        "hjemme": "W74",
+        "borte": "W77",
+        "dato": "2026-07-04",
+        "info": ""
+      },
+      {
+        "id": "W73_W75_2026_07_04",
+        "hjemme": "W73",
+        "borte": "W75",
+        "dato": "2026-07-04",
+        "info": ""
+      },
+      {
+        "id": "W76_W78_2026_07_05",
+        "hjemme": "W76",
+        "borte": "W78",
+        "dato": "2026-07-05",
+        "info": ""
+      },
+      {
+        "id": "W79_W80_2026_07_05",
+        "hjemme": "W79",
+        "borte": "W80",
+        "dato": "2026-07-05",
+        "info": ""
+      },
+      {
+        "id": "W83_W84_2026_07_06",
+        "hjemme": "W83",
+        "borte": "W84",
+        "dato": "2026-07-06",
+        "info": ""
+      },
+      {
+        "id": "W81_W82_2026_07_06",
+        "hjemme": "W81",
+        "borte": "W82",
+        "dato": "2026-07-06",
+        "info": ""
+      },
+      {
+        "id": "W86_W88_2026_07_07",
+        "hjemme": "W86",
+        "borte": "W88",
+        "dato": "2026-07-07",
+        "info": ""
+      },
+      {
+        "id": "W85_W87_2026_07_07",
+        "hjemme": "W85",
+        "borte": "W87",
+        "dato": "2026-07-07",
+        "info": ""
+      }
+    ]
   },
   "qf": {
     "aapen": false,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      {
+        "id": "W89_W90_2026_07_09",
+        "hjemme": "W89",
+        "borte": "W90",
+        "dato": "2026-07-09",
+        "info": ""
+      },
+      {
+        "id": "W93_W94_2026_07_10",
+        "hjemme": "W93",
+        "borte": "W94",
+        "dato": "2026-07-10",
+        "info": ""
+      },
+      {
+        "id": "W91_W92_2026_07_11",
+        "hjemme": "W91",
+        "borte": "W92",
+        "dato": "2026-07-11",
+        "info": ""
+      },
+      {
+        "id": "W95_W96_2026_07_11",
+        "hjemme": "W95",
+        "borte": "W96",
+        "dato": "2026-07-11",
+        "info": ""
+      }
+    ]
   },
   "sf": {
     "aapen": false,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      {
+        "id": "W97_W98_2026_07_14",
+        "hjemme": "W97",
+        "borte": "W98",
+        "dato": "2026-07-14",
+        "info": ""
+      },
+      {
+        "id": "W99_W100_2026_07_15",
+        "hjemme": "W99",
+        "borte": "W100",
+        "dato": "2026-07-15",
+        "info": ""
+      }
+    ]
   },
   "final": {
     "aapen": false,
     "frist": null,
-    "kamper": []
+    "kamper": [
+      {
+        "id": "W101_W102_2026_07_19",
+        "hjemme": "W101",
+        "borte": "W102",
+        "dato": "2026-07-19",
+        "info": ""
+      }
+    ]
   }
 }
