@@ -1,18 +1,4 @@
 {
   "sist_oppdatert": "2026-06-03T11:36:08Z",
-  "kamper": [
-    {
-      "kamp_id": "Mexico_South_Afric_2026_11_06",
-      "runde": "gruppe",
-      "gruppe": "A",
-      "dato": "2026-11-06",
-      "hjemmelag": "Mexico",
-      "bortelag": "South Afric",
-      "hjemme": 2,
-      "borte": 1,
-      "ferdig": true,
-      "kilde": "manuell_fallback",
-      "oppdatert": "2026-06-03T11:36:08Z"
-    }
-  ]
+  "kamper": []
 }
