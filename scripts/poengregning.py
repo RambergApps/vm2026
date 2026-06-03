@@ -789,7 +789,37 @@ def oppdater_status_med_api_kamper(status, resultat_lookup):
                     "avanserer": v.get("avanserer", kamp.get("avanserer", "")),
                 })
 
+def reset_status_til_originale_slots(status):
+    """
+    Bygger statusvisningen opp igjen fra opprinnelige bracket-slots før API/manuell fallback legges på.
+
+    Dette hindrer at gamle manuelle testdata blir liggende igjen i status.json etter at
+    fallback-kampen er slettet fra data/manuelle-kamper.json.
+    """
+    for runde in RUNDE_REKKEFOLGE:
+        for index, kamp in enumerate(status.get(runde, {}).get("kamper", [])):
+            match_no = match_no_for(runde, index, kamp)
+            slot_h = kamp.get("slot_hjemme") or kamp.get("hjemme", "")
+            slot_b = kamp.get("slot_borte") or kamp.get("borte", "")
+            dato = kamp.get("dato", "")
+
+            kamp["match_no"] = match_no
+            kamp["slot_hjemme"] = slot_h
+            kamp["slot_borte"] = slot_b
+            kamp["hjemme"] = slot_h
+            kamp["borte"] = slot_b
+            kamp["id"] = kamp_id(slot_h, slot_b, dato)
+            kamp["info"] = ""
+            kamp.pop("avanserer", None)
+
 def autofyll_neste_runder(status, resultat_lookup):
+    """
+    Fyller neste utslagsrunde basert på feltet `avanserer`.
+
+    Poeng beregnes fortsatt kun fra 90-minuttersresultatet. `avanserer` brukes bare
+    for bracket-bygging. Hvis bare én side av neste kamp er kjent, fylles bare den
+    siden, mens den andre siden beholder Wxx-placeholder.
+    """
     avanserer_by_no = bygg_avanserer_by_match_no(resultat_lookup)
     for runde, neste in NESTE_RUNDE.items():
         for kamp in status.get(neste, {}).get("kamper", []):
@@ -797,10 +827,17 @@ def autofyll_neste_runder(status, resultat_lookup):
             slot_b = kamp.get("slot_borte") or kamp.get("borte", "")
             lag_h = slot_vinner(slot_h, avanserer_by_no)
             lag_b = slot_vinner(slot_b, avanserer_by_no)
-            if lag_h and lag_b:
+
+            changed = False
+            if lag_h:
                 kamp["hjemme"] = lag_h
+                changed = True
+            if lag_b:
                 kamp["borte"] = lag_b
-                kamp["id"] = kamp_id(lag_h, lag_b, kamp.get("dato", ""))
+                changed = True
+
+            if changed:
+                kamp["id"] = kamp_id(kamp.get("hjemme", slot_h), kamp.get("borte", slot_b), kamp.get("dato", ""))
                 kamp["info"] = "Autofyll fra avansement"
 
 def oppdater_status(resultat_lookup):
@@ -819,6 +856,7 @@ def oppdater_status(resultat_lookup):
         return
 
     sikre_status_metadata(status)
+    reset_status_til_originale_slots(status)
     legg_match_no_fra_status(resultat_lookup, status)
     oppdater_status_med_api_kamper(status, resultat_lookup)
     sikre_status_metadata(status)
