@@ -12,7 +12,7 @@ Intern tippekonkurranse for VM 2026 (USA/Canada/Mexico, 11. juni – 19. juli).
 
 ## Mappestruktur
 
-```
+```text
 vm2026/
 ├── index.html                  ← Leaderboard (forsiden)
 ├── tippe/
@@ -20,6 +20,7 @@ vm2026/
 │   └── utslagsrunder.html      ← Tipping-app utslagsrunder
 ├── data/
 │   ├── data.js                 ← Genereres av GitHub Actions
+│   ├── deltakere.json          ← Genereres av GitHub Actions
 │   └── status.json             ← Hvilke runder som er åpne
 ├── tippinger/
 │   ├── gruppespill/            ← JSON-filer fra deltakere
@@ -38,17 +39,19 @@ vm2026/
 
 ## Poengregler
 
-| Type | Riktig vinner | Eksakt resultat |
-|------|--------------|-----------------|
-| Gruppespill | 2p | +2p |
-| Runde av 32 | 3p | +2p |
-| Runde av 16 | 4p | +2p |
-| Kvartfinale | 5p | +2p |
-| Semifinale | 6p | +2p |
-| Finale | 7p | +2p |
-| Turneringsvinner (tippa ved start) | 35p | — |
+Alle kamper poengberegnes på **resultat etter ordinær tid / 90 minutter**. Ekstraomganger, straffer og hvilket lag som går videre i utslagsrundene gir ikke kamp-poeng.
 
-**Maks totalt: 408 poeng**
+| Type | Riktig utfall etter 90 min | Eksakt resultat etter 90 min |
+|------|-----------------------------|------------------------------|
+| Gruppespill | 2p | +4p |
+| Runde av 32 | 3p | +4p |
+| Runde av 16 | 4p | +4p |
+| Kvartfinale | 5p | +4p |
+| Semifinale | 6p | +4p |
+| Finale | 7p | +4p |
+| Turneringsvinner (tippa ved start) | 70p | — |
+
+**Maks totalt: 601 poeng**
 
 ## Vedlikehold
 
