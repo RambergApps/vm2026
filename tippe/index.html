@@ -428,6 +428,33 @@ body {
   .kamp-kort { gap: 8px; }
 }
 
+
+.autofill-wrap {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:0 0 20px;
+}
+.autofill-note {
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:-4px;
+}
+.btn-autofill {
+  background:rgba(255,214,0,.12);
+  color:var(--accent2);
+  border:1.5px solid rgba(255,214,0,.35);
+}
+.btn-autofill:hover {
+  background:rgba(255,214,0,.18);
+  border-color:var(--accent2);
+  color:var(--accent2);
+}
+
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
@@ -481,6 +508,10 @@ body {
 
   <!-- ── STEG 2: GRUPPESPILL ── -->
   <div class="section" id="steg2">
+    <div class="autofill-wrap">
+      <button class="btn btn-autofill" type="button" onclick="autofyllTommeKamper()">🎲 Autofyll tomme kamper</button>
+      <div class="autofill-note">Fyller bare kamper uten tips. Resultater settes tilfeldig fra 0 til 3 mål.</div>
+    </div>
     <div id="kampListe">
       <div class="loading">
         <div class="spinner"></div>
@@ -678,6 +709,42 @@ function lagreTipping(id) {
   }
   lagreTilStorage();
   oppdaterProgress();
+}
+
+function tilfeldigMaal() {
+  return Math.floor(Math.random() * 4);
+}
+
+function autofyllTommeKamper() {
+  if (!kamper.length) return;
+  let fylt = 0;
+
+  kamper.forEach(k => {
+    const id = kampId(k);
+    const h = document.getElementById('h-' + id);
+    const b = document.getElementById('b-' + id);
+    if (!h || !b) return;
+
+    const harLagret = tippinger[id] && tippinger[id].h !== undefined && tippinger[id].b !== undefined;
+    const harFelt = h.value !== '' || b.value !== '';
+    if (harLagret || harFelt) return;
+
+    h.value = tilfeldigMaal();
+    b.value = tilfeldigMaal();
+    tippinger[id] = { h: parseInt(h.value, 10), b: parseInt(b.value, 10) };
+    h.classList.add('filled');
+    b.classList.add('filled');
+    fylt++;
+  });
+
+  lagreTilStorage();
+  oppdaterProgress();
+
+  if (fylt === 0) {
+    alert('Ingen tomme kamper å autofylle.');
+  } else {
+    alert('Autofylte ' + fylt + ' tomme kamper.');
+  }
 }
 
 function oppdaterProgress() {
