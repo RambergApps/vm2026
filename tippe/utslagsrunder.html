@@ -588,25 +588,30 @@ function byggDeltakerDropdown(deltakere) {
 }
 
 
+// ── DEMO-DATA ─────────────────────────────────────────────
+// Brukes kun lokalt når status.json ikke er tilgjengelig.
+// ID-er følger kamp_id()-formatet fra poengregning.py:
+//   rens(team1)_rens(team2)_rens(dato)  →  "Spain_Panama_2026_06_28"
+// Lagnavn er engelske (som API returnerer) for konsistens med poengregning.
 function demoKamper(runde) {
   if (runde !== "r32") return [];
   return [
-    { id:"r32_1",  hjemme:"Spania",    borte:"Uruguay",    info:"Vinner Gruppe H vs 2. Gruppe J" },
-    { id:"r32_2",  hjemme:"Brasil",    borte:"Marokko",    info:"Vinner Gruppe C vs 2. Gruppe A" },
-    { id:"r32_3",  hjemme:"Frankrike", borte:"Senegal",    info:"Vinner Gruppe I vs 2. Gruppe K" },
-    { id:"r32_4",  hjemme:"Norge",     borte:"Irak",       info:"2. Gruppe I vs Vinner Gruppe ?" },
-    { id:"r32_5",  hjemme:"Argentina", borte:"Algerie",    info:"Vinner Gruppe J vs 2. Gruppe I" },
-    { id:"r32_6",  hjemme:"England",   borte:"Kroatia",    info:"Vinner Gruppe L vs 2. Gruppe F" },
-    { id:"r32_7",  hjemme:"Tyskland",  borte:"Nederland",  info:"Vinner Gruppe E vs 2. Gruppe B" },
-    { id:"r32_8",  hjemme:"Portugal",  borte:"Colombia",   info:"Vinner Gruppe K vs 2. Gruppe L" },
-    { id:"r32_9",  hjemme:"USA",       borte:"Mexico",     info:"Vinner Gruppe D vs Vinner Gruppe A" },
-    { id:"r32_10", hjemme:"Belgia",    borte:"Egypt",      info:"Vinner Gruppe G vs 2. Gruppe G" },
-    { id:"r32_11", hjemme:"Japan",     borte:"Tunisia",    info:"Vinner Gruppe F vs 2. Gruppe E" },
-    { id:"r32_12", hjemme:"Canada",    borte:"Sveits",     info:"Vinner Gruppe B vs 2. Gruppe C" },
-    { id:"r32_13", hjemme:"Østerrike", borte:"Jordan",     info:"2. Gruppe J vs 3. plass" },
-    { id:"r32_14", hjemme:"Australia", borte:"Paraguay",   info:"2. Gruppe D vs 3. plass" },
-    { id:"r32_15", hjemme:"Sør-Korea", borte:"Tsjekkia",   info:"2. Gruppe A vs 3. plass" },
-    { id:"r32_16", hjemme:"Ghana",     borte:"Panama",     info:"2. Gruppe L vs 3. plass" }
+    { id:"Spain_Panama_2026_06_28",         hjemme:"Spain",       borte:"Panama",        dato:"2026-06-28", info:"" },
+    { id:"Brazil_Scotland_2026_06_28",      hjemme:"Brazil",      borte:"Scotland",      dato:"2026-06-28", info:"" },
+    { id:"France_South_Korea_2026_06_29",   hjemme:"France",      borte:"South Korea",   dato:"2026-06-29", info:"" },
+    { id:"Norway_Jordan_2026_06_29",        hjemme:"Norway",      borte:"Jordan",        dato:"2026-06-29", info:"" },
+    { id:"Argentina_Iran_2026_06_29",       hjemme:"Argentina",   borte:"Iran",          dato:"2026-06-29", info:"" },
+    { id:"England_New_Zealand_2026_06_29",  hjemme:"England",     borte:"New Zealand",   dato:"2026-06-29", info:"" },
+    { id:"Germany_Tunisia_2026_06_30",      hjemme:"Germany",     borte:"Tunisia",       dato:"2026-06-30", info:"" },
+    { id:"Portugal_Cape_Verde_2026_06_30",  hjemme:"Portugal",    borte:"Cape Verde",    dato:"2026-06-30", info:"" },
+    { id:"USA_Czech_Republic_2026_06_30",   hjemme:"USA",         borte:"Czech Republic",dato:"2026-06-30", info:"" },
+    { id:"Belgium_Ecuador_2026_06_30",      hjemme:"Belgium",     borte:"Ecuador",       dato:"2026-06-30", info:"" },
+    { id:"Netherlands_Uruguay_2026_07_01",  hjemme:"Netherlands", borte:"Uruguay",       dato:"2026-07-01", info:"" },
+    { id:"Mexico_Colombia_2026_07_01",      hjemme:"Mexico",      borte:"Colombia",      dato:"2026-07-01", info:"" },
+    { id:"Canada_Egypt_2026_07_01",         hjemme:"Canada",      borte:"Egypt",         dato:"2026-07-01", info:"" },
+    { id:"Japan_Switzerland_2026_07_01",    hjemme:"Japan",       borte:"Switzerland",   dato:"2026-07-01", info:"" },
+    { id:"Australia_Algeria_2026_07_02",    hjemme:"Australia",   borte:"Algeria",       dato:"2026-07-02", info:"" },
+    { id:"South_Africa_Morocco_2026_07_02", hjemme:"South Africa",borte:"Morocco",       dato:"2026-07-02", info:"" }
   ];
 }
 
