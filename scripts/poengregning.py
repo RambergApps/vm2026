@@ -444,10 +444,44 @@ const VM_DATA = {json.dumps({
     print(f"  → Skrev data.js med {len(stilling_sortert)} deltakere")
 
 # ── OPPDATER STATUS.JSON ──────────────────────────────────────────────────────
+
+# Hvilken runde som må være ferdig før neste åpnes
+FORRIGE_RUNDE = {
+    "r32":   "gruppe",
+    "r16":   "r32",
+    "qf":    "r16",
+    "sf":    "qf",
+    "final": "sf",
+}
+
+def er_kjent_lag(navn):
+    """
+    Returnerer False hvis lagnavn er en API-plassholder.
+    Eksempler: "Winner Group A", "IC Path 2 winner", "TBD", "UEFA Path B winner"
+    """
+    if not navn or not navn.strip():
+        return False
+    n = navn.lower().strip()
+    PLASSHOLDERE = ["winner", "loser", "path", "tbd", "place", "runner"]
+    return not any(p in n for p in PLASSHOLDERE)
+
 def oppdater_status(resultat_lookup):
     """
-    Sjekker om alle gruppekamper er ferdigspilt.
-    Hvis ja, setter r32 til åpen (hvis den ikke allerede er åpen).
+    Populerer status.json med kampdata fra API og åpner runder automatisk.
+
+    Kjøres etter bygg_resultat_lookup() — alle kamper fra API ligger i lookup,
+    nøklet på kamp_id(team1, team2, dato).
+
+    Per utslagsrunde:
+      1. Finn alle kamper for runden fra resultat_lookup
+      2. Filtrer ut kamper med plassholdernavn (lag ikke kjent ennå)
+      3. Skriv kjente kamper til status.json[runde]["kamper"]
+         — id = kamp_id()-output, identisk nøkkel som i resultat_lookup
+      4. Åpne runden automatisk hvis:
+         - Forrige runde er 100% ferdigspilt
+         - ALLE kamper i denne runden har kjente lag (ingen plassholdere igjen)
+
+    Mellom VM-runder er det alltid minst én dag, så ingen tidsbuffer er nødvendig.
     """
     try:
         with open(STATUS_JSON, encoding="utf-8") as f:
@@ -456,13 +490,62 @@ def oppdater_status(resultat_lookup):
         print("  ADVARSEL: Kunne ikke lese status.json — hopper over oppdatering")
         return
 
-    gruppe_kamper = [v for v in resultat_lookup.values() if v["runde"] == "gruppe"]
-    gruppe_ferdig = all(k["ferdig"] for k in gruppe_kamper) if gruppe_kamper else False
+    utslagsrunder = ["r32", "r16", "qf", "sf", "final"]
 
-    # Åpne r32 automatisk hvis alle gruppekamper er ferdig
-    if gruppe_ferdig and not status.get("r32", {}).get("aapen"):
-        print("  → Alle gruppekamper ferdig! Setter r32 til åpen.")
-        status["r32"]["aapen"] = True
+    for runde in utslagsrunder:
+
+        # ── 1. Finn alle kamper for runden i API-data ────────────────────────
+        alle_api_kamper = [
+            (kid, v) for kid, v in resultat_lookup.items()
+            if v["runde"] == runde
+        ]
+
+        if not alle_api_kamper:
+            continue  # API har ingen kamper for denne runden ennå
+
+        # ── 2. Skill mellom kjente og ukjente lag ────────────────────────────
+        kjente  = [
+            (kid, v) for kid, v in alle_api_kamper
+            if er_kjent_lag(v["hjemmelag"]) and er_kjent_lag(v["bortelag"])
+        ]
+        ukjente = len(alle_api_kamper) - len(kjente)
+
+        # ── 3. Populer kamper-listen ─────────────────────────────────────────
+        # Kamp-ID fra kamp_id() — identisk nøkkel som i resultat_lookup og
+        # som utslagsrunder.html videresender ved innlevering.
+        if kjente:
+            status[runde]["kamper"] = [
+                {
+                    "id":     kid,
+                    "hjemme": v["hjemmelag"],
+                    "borte":  v["bortelag"],
+                    "dato":   v["dato"],
+                    "info":   "",
+                }
+                for kid, v in sorted(kjente, key=lambda x: x[1].get("dato", ""))
+            ]
+            melding = f"  → {runde}: populert med {len(kjente)} kamper"
+            if ukjente:
+                melding += f" ({ukjente} lag fremdeles ukjente — venter med åpning)"
+            print(melding)
+
+        # ── 4. Åpne runden automatisk ────────────────────────────────────────
+        if status[runde].get("aapen"):
+            continue  # allerede åpen — ikke endre
+
+        forrige        = FORRIGE_RUNDE[runde]
+        forrige_alle   = [v for v in resultat_lookup.values() if v["runde"] == forrige]
+        forrige_ferdig = bool(forrige_alle) and all(k["ferdig"] for k in forrige_alle)
+        alle_kjente    = (ukjente == 0) and bool(kjente)
+
+        if forrige_ferdig and alle_kjente:
+            status[runde]["aapen"] = True
+            print(f"  → ÅPNER {runde.upper()}! Alle {forrige}-kamper ferdig og alle lag kjente.")
+        elif forrige_ferdig and not alle_kjente:
+            print(f"  → {runde}: forrige runde ferdig, men {ukjente} lag ukjente — venter.")
+        else:
+            ferdig_ant = sum(1 for k in forrige_alle if k["ferdig"])
+            print(f"  → {runde}: venter på {forrige} ({ferdig_ant}/{len(forrige_alle)} kamper ferdig)")
 
     with open(STATUS_JSON, "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
