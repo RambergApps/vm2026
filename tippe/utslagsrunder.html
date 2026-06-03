@@ -76,7 +76,6 @@ body {
   padding: 14px 16px;
   color: var(--muted);
   border-bottom: 3px solid transparent;
-  cursor: pointer;
   white-space: nowrap;
   transition: all .2s;
 }
@@ -174,10 +173,9 @@ body {
 /* Lag-rader */
 .lag-rad {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   padding: 12px 16px;
-  cursor: pointer;
   transition: background .15s;
   gap: 12px;
 }
@@ -231,75 +229,8 @@ body {
   color: var(--muted);
 }
 
-/* Velg-ikon */
-.velg-ikon {
-  width: 24px; height: 24px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px;
-  transition: all .15s;
-  flex-shrink: 0;
-}
-.lag-rad.valgt .velg-ikon {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #000;
-}
 
-/* Videre-banner */
-.videre-banner {
-  background: rgba(0,230,118,.08);
-  border-top: 1px solid rgba(0,230,118,.2);
-  padding: 8px 16px;
-  font-size: 12px;
-  color: var(--accent);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
 
-/* Uavgjort-panel */
-.uavgjort-panel {
-  background: rgba(255,214,0,.06);
-  border-top: 1px solid rgba(255,214,0,.2);
-  padding: 12px 16px;
-  display: none;
-}
-.uavgjort-panel.vis { display: block; }
-.uavgjort-panel label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--muted);
-  margin-bottom: 8px;
-  display: block;
-}
-.uavgjort-valg {
-  display: flex;
-  gap: 8px;
-}
-.uavgjort-btn {
-  flex: 1;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 8px 12px;
-  border-radius: 5px;
-  border: 1.5px solid var(--border);
-  background: var(--surface);
-  color: var(--muted);
-  cursor: pointer;
-  transition: all .15s;
-}
-.uavgjort-btn:hover { color: var(--text); border-color: var(--accent2); }
-.uavgjort-btn.valgt {
-  background: rgba(255,214,0,.15);
-  border-color: var(--accent2);
-  color: var(--accent2);
-}
 
 /* ── IKKE ÅPEN ── */
 .ikke-aapen {
@@ -349,7 +280,6 @@ body {
   font-size: 15px;
   font-family: 'Barlow', sans-serif;
   outline: none;
-  cursor: pointer;
 }
 .navn-wrap input:focus,
 .navn-wrap select:focus { border-color: var(--accent2); }
@@ -366,7 +296,6 @@ body {
   padding: 14px 40px;
   border-radius: 6px;
   border: none;
-  cursor: pointer;
   background: var(--accent2);
   color: #000;
   width: 100%;
@@ -428,7 +357,7 @@ body {
 <div class="hero">
   <div class="badge">⚽ VM 2026 · Utslagsrunder</div>
   <h1>Tipp <span>utslagsrundene</span></h1>
-  <p>Tipp vinner og resultat etter 90 min for hver kamp</p>
+  <p>Tipp resultat etter ordinær tid / 90 min. Ekstraomganger og straffer teller ikke.</p>
 </div>
 
 <!-- TABS -->
@@ -489,7 +418,7 @@ const RUNDE_REKKEFØLGE = ["r32","r16","qf","sf","final"];
 // ── STATE ──────────────────────────────────────────────────
 let status     = null;
 let kamper     = {};      // { r32: [...], r16: [...], ... }
-let tippinger  = {};      // { "kamp_id": { hjemme: 1, borte: 0, vinner: "Spania" } }
+let tippinger  = {};      // { "kamp_id": { hjemme: 1, borte: 0 } }
 let aktivRunde = null;
 let deltakerId = null;    // ← NY: stabil ID satt når deltaker velges fra dropdown
 
@@ -676,21 +605,19 @@ function byggRundeHTML(runde, kampListe) {
     <div class="runde-header">
       <span class="runde-tag">${RUNDE_NAVN[runde]}</span>
       <h2>${kampListe.length} kamper</h2>
-      <div class="poeng-info">Vinner: <span>${p}p</span> · Eksakt: <span>+4p</span></div>
+      <div class="poeng-info">Utfall 90 min: <span>${p}p</span> · Eksakt: <span>+4p</span></div>
     </div>`;
 
   kampListe.forEach(k => {
     const t = tippinger[k.id] || {};
     const erNorge = k.hjemme === "Norge" || k.borte === "Norge";
-    const uavgjort = t.hjemme !== undefined && t.borte !== undefined && t.hjemme === t.borte;
 
     html += `
       <div class="kamp-kort ${erNorge ? 'norge-kamp' : ''}" id="kort-${k.id}"
            style="${erNorge ? 'border-color:rgba(239,43,45,.4);background:rgba(239,43,45,.04)' : ''}">
 
         <!-- Hjemmelag -->
-        <div class="lag-rad ${t.vinner === k.hjemme ? 'valgt' : ''}"
-             onclick="velgVinner('${k.id}','${k.hjemme}','${runde}')">
+        <div class="lag-rad">
           <div>
             <div class="lag-navn">${k.hjemme}</div>
             <div class="lag-gruppe">${k.info || ''}</div>
@@ -699,15 +626,12 @@ function byggRundeHTML(runde, kampListe) {
             <input type="number" min="0" max="20" placeholder="–"
               id="h-${k.id}" value="${t.hjemme ?? ''}"
               class="score-input-felt ${t.hjemme !== undefined ? 'filled' : ''}"
-              onclick="event.stopPropagation()"
               oninput="oppdaterScore('${k.id}','${runde}')">
           </div>
-          <div class="velg-ikon">${t.vinner === k.hjemme ? '✓' : ''}</div>
         </div>
 
         <!-- Bortelag -->
-        <div class="lag-rad ${t.vinner === k.borte ? 'valgt' : ''}"
-             onclick="velgVinner('${k.id}','${k.borte}','${runde}')">
+        <div class="lag-rad">
           <div>
             <div class="lag-navn">${k.borte}</div>
           </div>
@@ -715,27 +639,8 @@ function byggRundeHTML(runde, kampListe) {
             <input type="number" min="0" max="20" placeholder="–"
               id="b-${k.id}" value="${t.borte ?? ''}"
               class="score-input-felt ${t.borte !== undefined ? 'filled' : ''}"
-              onclick="event.stopPropagation()"
               oninput="oppdaterScore('${k.id}','${runde}')">
           </div>
-          <div class="velg-ikon">${t.vinner === k.borte ? '✓' : ''}</div>
-        </div>
-
-        <!-- Uavgjort-panel: vis hvem går videre -->
-        <div class="uavgjort-panel ${uavgjort ? 'vis' : ''}" id="uavgjort-${k.id}">
-          <label>Uavgjort etter 90 min — hvem går videre?</label>
-          <div class="uavgjort-valg">
-            <button class="uavgjort-btn ${t.vinner === k.hjemme && uavgjort ? 'valgt' : ''}"
-              onclick="velgVinner('${k.id}','${k.hjemme}','${runde}')">${k.hjemme}</button>
-            <button class="uavgjort-btn ${t.vinner === k.borte && uavgjort ? 'valgt' : ''}"
-              onclick="velgVinner('${k.id}','${k.borte}','${runde}')">${k.borte}</button>
-          </div>
-        </div>
-
-        <!-- Videre-banner -->
-        <div class="videre-banner" id="videre-${k.id}"
-             style="${t.vinner ? '' : 'display:none'}">
-          ✓ ${t.vinner || ''} går videre
         </div>
 
       </div>`;
@@ -754,69 +659,38 @@ function byggRundeHTML(runde, kampListe) {
 }
 
 // ── INTERAKSJON ────────────────────────────────────────────
-function velgVinner(kampId, lag, runde) {
-  if (!tippinger[kampId]) tippinger[kampId] = {};
-  tippinger[kampId].vinner = lag;
-
-  // Oppdater visuelt
-  oppdaterKampKort(kampId, runde);
-  lagreTilStorage();
-  oppdaterProgress();
-}
-
 function oppdaterScore(kampId, runde) {
   const h = document.getElementById("h-" + kampId);
   const b = document.getElementById("b-" + kampId);
   if (!tippinger[kampId]) tippinger[kampId] = {};
 
   if (h.value !== "") {
-    tippinger[kampId].hjemme = parseInt(h.value);
+    tippinger[kampId].hjemme = parseInt(h.value, 10);
     h.classList.add("filled");
-  }
-  if (b.value !== "") {
-    tippinger[kampId].borte = parseInt(b.value);
-    b.classList.add("filled");
+  } else {
+    delete tippinger[kampId].hjemme;
+    h.classList.remove("filled");
   }
 
-  oppdaterKampKort(kampId, runde);
+  if (b.value !== "") {
+    tippinger[kampId].borte = parseInt(b.value, 10);
+    b.classList.add("filled");
+  } else {
+    delete tippinger[kampId].borte;
+    b.classList.remove("filled");
+  }
+
   lagreTilStorage();
   oppdaterProgress();
 }
 
-function oppdaterKampKort(kampId, runde) {
-  const t = tippinger[kampId] || {};
-  const k = finnKamp(kampId, runde);
-  if (!k) return;
-
-  const uavgjort = t.hjemme !== undefined && t.borte !== undefined && t.hjemme === t.borte;
-
-  // Oppdater lag-rader
-  document.querySelectorAll(`#kort-${kampId} .lag-rad`).forEach((rad, i) => {
-    const lagNavn = i === 0 ? k.hjemme : k.borte;
-    rad.classList.toggle("valgt", t.vinner === lagNavn);
-    rad.querySelector(".velg-ikon").textContent = t.vinner === lagNavn ? "✓" : "";
-  });
-
-  // Uavgjort-panel
-  const uPanel = document.getElementById("uavgjort-" + kampId);
-  if (uPanel) {
-    uPanel.classList.toggle("vis", uavgjort);
-    uPanel.querySelectorAll(".uavgjort-btn").forEach((btn, i) => {
-      const lagNavn = i === 0 ? k.hjemme : k.borte;
-      btn.classList.toggle("valgt", t.vinner === lagNavn && uavgjort);
-    });
-  }
-
-  // Videre-banner
-  const vBanner = document.getElementById("videre-" + kampId);
-  if (vBanner) {
-    vBanner.style.display = t.vinner ? "" : "none";
-    vBanner.textContent = t.vinner ? "✓ " + t.vinner + " går videre" : "";
-  }
-}
-
 function finnKamp(kampId, runde) {
   return status[runde]?.kamper?.find(k => k.id === kampId);
+}
+
+function harFulltResultat(kampId) {
+  const t = tippinger[kampId];
+  return t && t.hjemme !== undefined && t.borte !== undefined;
 }
 
 // ── TABS ───────────────────────────────────────────────────
@@ -834,7 +708,7 @@ function oppdaterProgress() {
   if (!aktivRunde || !status[aktivRunde]?.aapen) return;
   const kampListe = status[aktivRunde]?.kamper || [];
   const total = kampListe.length;
-  const antall = kampListe.filter(k => tippinger[k.id]?.vinner).length;
+  const antall = kampListe.filter(k => harFulltResultat(k.id)).length;
   const pct = total > 0 ? Math.round(antall / total * 100) : 0;
   document.getElementById("progressFill").style.width = pct + "%";
   document.getElementById("progressCount").textContent = antall + " / " + total;
@@ -850,11 +724,11 @@ async function leverRunde(runde) {
   }
 
   const kampListe = status[runde]?.kamper || [];
-  const mangler   = kampListe.filter(k => !tippinger[k.id]?.vinner).length;
+  const mangler   = kampListe.filter(k => !harFulltResultat(k.id)).length;
 
   if (mangler > 0) {
     document.getElementById("advarsel-" + runde).innerHTML =
-      `<div class="advarsel-box">⚠ ${mangler} kamp${mangler > 1 ? 'er' : ''} mangler vinner. Disse gir 0 poeng.</div>`;
+      `<div class="advarsel-box">⚠ ${mangler} kamp${mangler > 1 ? 'er' : ''} mangler resultat. Disse gir 0 poeng.</div>`;
   } else {
     document.getElementById("advarsel-" + runde).innerHTML = "";
   }
@@ -876,8 +750,7 @@ async function leverRunde(runde) {
       hjemmelag: k.hjemme,
       bortelag:  k.borte,
       hjemme:    tippinger[k.id]?.hjemme ?? null,
-      borte:     tippinger[k.id]?.borte  ?? null,
-      vinner:    tippinger[k.id]?.vinner ?? null
+      borte:     tippinger[k.id]?.borte  ?? null
     }))
   };
 
