@@ -115,6 +115,36 @@ def lag_deltaker_id(navn):
     s = re.sub(r"_+", "_", s).strip("_")
     return s or "ukjent"
 
+
+
+def parse_int(v):
+    if v in (None, ""):
+        return None
+    try:
+        return int(v)
+    except Exception:
+        return None
+
+def finn_avanserer(kamp):
+    """
+    Returnerer laget som faktisk går videre fra en utslagskamp.
+    Dette brukes kun til bracket/neste runde, ikke til poeng.
+    """
+    explicit = (kamp.get("avanserer") or "").strip()
+    if explicit:
+        return explicit
+    if not kamp.get("ferdig"):
+        return None
+    h = kamp.get("hjemme")
+    b = kamp.get("borte")
+    if h is None or b is None:
+        return None
+    if h > b:
+        return kamp.get("hjemmelag")
+    if b > h:
+        return kamp.get("bortelag")
+    return None
+
 # ── HENT API-DATA ─────────────────────────────────────────────────────────────
 def hent_api_data():
     """Henter VM-data fra openfootball API."""
@@ -229,7 +259,7 @@ def normaliser_manuell_kamp(kamp):
 
     ferdig = bool(kamp.get("ferdig")) and hjemme_score is not None and borte_score is not None
 
-    return kid, {
+    item = {
         "hjemmelag": hjemmelag,
         "bortelag": bortelag,
         "hjemme": hjemme_score,
@@ -240,6 +270,16 @@ def normaliser_manuell_kamp(kamp):
         "dato": dato,
         "kilde": "manuell_fallback",
     }
+    match_no = parse_int(kamp.get("match_no"))
+    if match_no is not None:
+        item["match_no"] = match_no
+    if kamp.get("slot_hjemme"):
+        item["slot_hjemme"] = str(kamp.get("slot_hjemme"))
+    if kamp.get("slot_borte"):
+        item["slot_borte"] = str(kamp.get("slot_borte"))
+    if kamp.get("avanserer"):
+        item["avanserer"] = str(kamp.get("avanserer")).strip()
+    return kid, item
 
 
 def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
@@ -268,7 +308,13 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
             continue
 
         # OpenFootball er master når den har ferdig resultat.
+        # Men manuell "avanserer" kan fortsatt brukes til å bygge neste runde
+        # hvis kampen står uavgjort etter 90 minutter.
         if eksisterende.get("ferdig"):
+            if manuell.get("avanserer") and not eksisterende.get("avanserer"):
+                eksisterende["avanserer"] = manuell.get("avanserer")
+            if manuell.get("match_no") and not eksisterende.get("match_no"):
+                eksisterende["match_no"] = manuell.get("match_no")
             ignorert += 1
             continue
 
@@ -281,6 +327,9 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
                 "ferdig": True,
                 "kilde": "manuell_fallback",
             }
+            for felt in ("avanserer", "match_no", "slot_hjemme", "slot_borte"):
+                if manuell.get(felt) is not None:
+                    resultat_lookup[kid][felt] = manuell.get(felt)
             brukt += 1
         else:
             # Behold OpenFootball-kampen, men fyll eventuelt inn manglende metadata fra manuell kamp.
@@ -324,6 +373,7 @@ def skriv_mangler_resultater(resultat_lookup):
         "sist_sjekket": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "kamper": sorted(mangler, key=lambda x: (x.get("dato", ""), x.get("runde", ""), x.get("hjemmelag", "")))
     }
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     MANGLER_RESULTATER_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  → Skrev mangler-resultater.json med {len(mangler)} kamper")
 
@@ -415,6 +465,7 @@ def skriv_deltakere_json(deltakere):
         [{"id": d["deltaker_id"], "navn": d["navn"]} for d in deltakere.values()],
         key=lambda x: x["navn"].lower()
     )
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     DELTAKERE_JSON.write_text(
         json.dumps(liste, ensure_ascii=False, indent=2),
         encoding="utf-8"
@@ -577,6 +628,7 @@ const VM_DATA = {json.dumps({
 }, ensure_ascii=False, indent=2)};
 """
 
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     DATA_JS.write_text(js_innhold, encoding="utf-8")
     print(f"  → Skrev data.js med {len(stilling_sortert)} deltakere")
 
@@ -591,34 +643,173 @@ FORRIGE_RUNDE = {
     "final": "sf",
 }
 
+RUNDE_REKKEFOLGE = ["r32", "r16", "qf", "sf", "final"]
+FORVENTET_ANTALL = {"r32": 16, "r16": 8, "qf": 4, "sf": 2, "final": 1}
+KAMP_NR_START = {"r32": 73, "r16": 89, "qf": 97, "sf": 101, "final": 104}
+NESTE_RUNDE = {"r32": "r16", "r16": "qf", "qf": "sf", "sf": "final"}
+
 def er_kjent_lag(navn):
-    """
-    Returnerer False hvis lagnavn er en API-plassholder.
-    Eksempler: "Winner Group A", "IC Path 2 winner", "TBD", "UEFA Path B winner"
-    """
-    if not navn or not navn.strip():
+    """Returnerer False for placeholders som W74, 1A, 3A/B/C, TBD osv."""
+    if not navn or not str(navn).strip():
         return False
-    n = navn.lower().strip()
+    n = str(navn).strip()
+    low = n.lower()
+    if "/" in n:
+        return False
+    if re.fullmatch(r"[123][A-L]", n, re.I):
+        return False
+    if re.fullmatch(r"W\d+", n, re.I):
+        return False
     PLASSHOLDERE = ["winner", "loser", "path", "tbd", "place", "runner"]
-    return not any(p in n for p in PLASSHOLDERE)
+    return not any(p in low for p in PLASSHOLDERE)
+
+def match_no_for(runde, index, kamp=None):
+    if kamp and kamp.get("match_no") is not None:
+        try:
+            return int(kamp.get("match_no"))
+        except Exception:
+            pass
+    base = KAMP_NR_START.get(runde)
+    return base + index if base is not None else None
+
+def sikre_status_metadata(status):
+    """Legger på match_no og originale slots uten å endre synlig kampoppsett."""
+    for runde in RUNDE_REKKEFOLGE:
+        kamper = status.get(runde, {}).get("kamper", [])
+        for index, kamp in enumerate(kamper):
+            kamp.setdefault("match_no", match_no_for(runde, index, kamp))
+            kamp.setdefault("slot_hjemme", kamp.get("slot_hjemme") or kamp.get("hjemme", ""))
+            kamp.setdefault("slot_borte", kamp.get("slot_borte") or kamp.get("borte", ""))
+
+def status_id_til_match_no(status):
+    out = {}
+    for runde in RUNDE_REKKEFOLGE:
+        for index, kamp in enumerate(status.get(runde, {}).get("kamper", [])):
+            mn = match_no_for(runde, index, kamp)
+            if kamp.get("id"):
+                out[kamp["id"]] = mn
+    return out
+
+def legg_match_no_fra_status(resultat_lookup, status):
+    idmap = status_id_til_match_no(status)
+    for kid, kamp in resultat_lookup.items():
+        if kamp.get("runde") in RUNDE_REKKEFOLGE and not kamp.get("match_no") and kid in idmap:
+            kamp["match_no"] = idmap[kid]
+
+def runde_ferdig_i_status(status, resultat_lookup, runde):
+    if runde == "gruppe":
+        gruppekamper = [v for v in resultat_lookup.values() if v.get("runde") == "gruppe"]
+        return bool(gruppekamper) and all(k.get("ferdig") for k in gruppekamper)
+    kamper = status.get(runde, {}).get("kamper", [])
+    if not kamper:
+        return False
+    ferdige = 0
+    for kamp in kamper:
+        kid = kamp.get("id")
+        if kid and resultat_lookup.get(kid, {}).get("ferdig"):
+            ferdige += 1
+    return ferdige == len(kamper)
+
+def alle_lag_kjente_i_status(status, runde):
+    kamper = status.get(runde, {}).get("kamper", [])
+    return bool(kamper) and all(er_kjent_lag(k.get("hjemme")) and er_kjent_lag(k.get("borte")) for k in kamper)
+
+def bygg_avanserer_by_match_no(resultat_lookup):
+    out = {}
+    for kamp in resultat_lookup.values():
+        runde = kamp.get("runde")
+        if runde not in RUNDE_REKKEFOLGE:
+            continue
+        mn = kamp.get("match_no")
+        if mn is None:
+            continue
+        avanserer = finn_avanserer(kamp)
+        if avanserer:
+            out[int(mn)] = avanserer
+    return out
+
+def slot_vinner(slot, avanserer_by_no):
+    slot = str(slot or "").strip()
+    m = re.fullmatch(r"W(\d+)", slot, re.I)
+    if not m:
+        return slot if er_kjent_lag(slot) else None
+    return avanserer_by_no.get(int(m.group(1)))
+
+def oppdater_status_med_api_kamper(status, resultat_lookup):
+    """
+    OpenFootball er master når den har komplett sett med kjente kamper for en runde.
+    Hvis ikke bevares eksisterende status, og manuelle fallback-kamper kan fylle hull.
+    """
+    for runde in RUNDE_REKKEFOLGE:
+        forventet = FORVENTET_ANTALL[runde]
+        api_kjente = [
+            (kid, v) for kid, v in resultat_lookup.items()
+            if v.get("runde") == runde
+            and v.get("kilde") != "manuell_fallback"
+            and er_kjent_lag(v.get("hjemmelag"))
+            and er_kjent_lag(v.get("bortelag"))
+        ]
+        if len(api_kjente) >= forventet:
+            status[runde]["kamper"] = [
+                {
+                    "id": kid,
+                    "hjemme": v.get("hjemmelag", ""),
+                    "borte": v.get("bortelag", ""),
+                    "dato": v.get("dato", ""),
+                    "info": "OpenFootball",
+                    "match_no": match_no_for(runde, i),
+                    "slot_hjemme": v.get("hjemmelag", ""),
+                    "slot_borte": v.get("bortelag", ""),
+                }
+                for i, (kid, v) in enumerate(sorted(api_kjente, key=lambda x: x[1].get("dato", "")))
+            ]
+            print(f"  → {runde}: OpenFootball har komplett kampoppsett ({len(api_kjente)})")
+            continue
+
+        # Manuelle utslagskamper kan fylle kjent lag på korrekt match_no uten å miste øvrige placeholders.
+        manual_by_no = {
+            int(v["match_no"]): (kid, v)
+            for kid, v in resultat_lookup.items()
+            if v.get("runde") == runde
+            and v.get("kilde") == "manuell_fallback"
+            and v.get("match_no") is not None
+            and er_kjent_lag(v.get("hjemmelag"))
+            and er_kjent_lag(v.get("bortelag"))
+        }
+        for kamp in status.get(runde, {}).get("kamper", []):
+            mn = kamp.get("match_no")
+            if mn in manual_by_no:
+                kid, v = manual_by_no[mn]
+                kamp.update({
+                    "id": kid,
+                    "hjemme": v.get("hjemmelag", ""),
+                    "borte": v.get("bortelag", ""),
+                    "dato": v.get("dato", kamp.get("dato", "")),
+                    "info": "Manuell fallback",
+                    "avanserer": v.get("avanserer", kamp.get("avanserer", "")),
+                })
+
+def autofyll_neste_runder(status, resultat_lookup):
+    avanserer_by_no = bygg_avanserer_by_match_no(resultat_lookup)
+    for runde, neste in NESTE_RUNDE.items():
+        for kamp in status.get(neste, {}).get("kamper", []):
+            slot_h = kamp.get("slot_hjemme") or kamp.get("hjemme", "")
+            slot_b = kamp.get("slot_borte") or kamp.get("borte", "")
+            lag_h = slot_vinner(slot_h, avanserer_by_no)
+            lag_b = slot_vinner(slot_b, avanserer_by_no)
+            if lag_h and lag_b:
+                kamp["hjemme"] = lag_h
+                kamp["borte"] = lag_b
+                kamp["id"] = kamp_id(lag_h, lag_b, kamp.get("dato", ""))
+                kamp["info"] = "Autofyll fra avansement"
 
 def oppdater_status(resultat_lookup):
     """
-    Populerer status.json med kampdata fra API og åpner runder automatisk.
+    Oppdaterer status.json.
 
-    Kjøres etter bygg_resultat_lookup() — alle kamper fra API ligger i lookup,
-    nøklet på kamp_id(team1, team2, dato).
-
-    Per utslagsrunde:
-      1. Finn alle kamper for runden fra resultat_lookup
-      2. Filtrer ut kamper med plassholdernavn (lag ikke kjent ennå)
-      3. Skriv kjente kamper til status.json[runde]["kamper"]
-         — id = kamp_id()-output, identisk nøkkel som i resultat_lookup
-      4. Åpne runden automatisk hvis:
-         - Forrige runde er 100% ferdigspilt
-         - ALLE kamper i denne runden har kjente lag (ingen plassholdere igjen)
-
-    Mellom VM-runder er det alltid minst én dag, så ingen tidsbuffer er nødvendig.
+    OpenFootball er master for kampoppsett når datakilden har komplett runde.
+    Manuelle fallback-kamper/resultater brukes midlertidig når OpenFootball mangler data.
+    Feltet `avanserer` brukes bare til å fylle neste utslagsrunde, ikke til poeng.
     """
     try:
         with open(STATUS_JSON, encoding="utf-8") as f:
@@ -627,62 +818,24 @@ def oppdater_status(resultat_lookup):
         print("  ADVARSEL: Kunne ikke lese status.json — hopper over oppdatering")
         return
 
-    utslagsrunder = ["r32", "r16", "qf", "sf", "final"]
+    sikre_status_metadata(status)
+    legg_match_no_fra_status(resultat_lookup, status)
+    oppdater_status_med_api_kamper(status, resultat_lookup)
+    sikre_status_metadata(status)
+    legg_match_no_fra_status(resultat_lookup, status)
+    autofyll_neste_runder(status, resultat_lookup)
 
-    for runde in utslagsrunder:
-
-        # ── 1. Finn alle kamper for runden i API-data ────────────────────────
-        alle_api_kamper = [
-            (kid, v) for kid, v in resultat_lookup.items()
-            if v["runde"] == runde
-        ]
-
-        if not alle_api_kamper:
-            continue  # API har ingen kamper for denne runden ennå
-
-        # ── 2. Skill mellom kjente og ukjente lag ────────────────────────────
-        kjente  = [
-            (kid, v) for kid, v in alle_api_kamper
-            if er_kjent_lag(v["hjemmelag"]) and er_kjent_lag(v["bortelag"])
-        ]
-        ukjente = len(alle_api_kamper) - len(kjente)
-
-        # ── 3. Populer kamper-listen ─────────────────────────────────────────
-        # Kamp-ID fra kamp_id() — identisk nøkkel som i resultat_lookup og
-        # som utslagsrunder.html videresender ved innlevering.
-        if kjente:
-            status[runde]["kamper"] = [
-                {
-                    "id":     kid,
-                    "hjemme": v["hjemmelag"],
-                    "borte":  v["bortelag"],
-                    "dato":   v["dato"],
-                    "info":   "",
-                }
-                for kid, v in sorted(kjente, key=lambda x: x[1].get("dato", ""))
-            ]
-            melding = f"  → {runde}: populert med {len(kjente)} kamper"
-            if ukjente:
-                melding += f" ({ukjente} lag fremdeles ukjente — venter med åpning)"
-            print(melding)
-
-        # ── 4. Åpne runden automatisk ────────────────────────────────────────
+    for runde in RUNDE_REKKEFOLGE:
         if status[runde].get("aapen"):
-            continue  # allerede åpen — ikke endre
-
-        forrige        = FORRIGE_RUNDE[runde]
-        forrige_alle   = [v for v in resultat_lookup.values() if v["runde"] == forrige]
-        forrige_ferdig = bool(forrige_alle) and all(k["ferdig"] for k in forrige_alle)
-        alle_kjente    = (ukjente == 0) and bool(kjente)
-
+            continue
+        forrige = FORRIGE_RUNDE[runde]
+        forrige_ferdig = runde_ferdig_i_status(status, resultat_lookup, forrige)
+        alle_kjente = alle_lag_kjente_i_status(status, runde)
         if forrige_ferdig and alle_kjente:
             status[runde]["aapen"] = True
-            print(f"  → ÅPNER {runde.upper()}! Alle {forrige}-kamper ferdig og alle lag kjente.")
-        elif forrige_ferdig and not alle_kjente:
-            print(f"  → {runde}: forrige runde ferdig, men {ukjente} lag ukjente — venter.")
+            print(f"  → ÅPNER {runde.upper()}! Forrige runde ferdig og alle lag kjente.")
         else:
-            ferdig_ant = sum(1 for k in forrige_alle if k["ferdig"])
-            print(f"  → {runde}: venter på {forrige} ({ferdig_ant}/{len(forrige_alle)} kamper ferdig)")
+            print(f"  → {runde}: venter (forrige ferdig={forrige_ferdig}, alle lag kjente={alle_kjente})")
 
     with open(STATUS_JSON, "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
@@ -713,13 +866,7 @@ def main():
     faktisk_turneringsvinner = None
     final_kamper = [v for v in resultat_lookup.values() if v["runde"] == "final" and v["ferdig"]]
     if final_kamper:
-        f = final_kamper[0]
-        if f["hjemme"] > f["borte"]:
-            faktisk_turneringsvinner = f["hjemmelag"]
-        elif f["borte"] > f["hjemme"]:
-            faktisk_turneringsvinner = f["bortelag"]
-        else:
-            faktisk_turneringsvinner = None
+        faktisk_turneringsvinner = finn_avanserer(final_kamper[0])
 
     # Skriv liste over kamper som burde vært ferdig, men mangler resultat
     print("\nSkriver mangler-resultater.json...")
