@@ -59,6 +59,11 @@ jobs:
                   return None
               return int(v)
 
+          def clean_int(v):
+              if v in (None, ''):
+                  return None
+              return int(v)
+
           def normalize(k):
               hjemmelag = (k.get('hjemmelag') or '').strip()
               bortelag = (k.get('bortelag') or '').strip()
@@ -73,7 +78,7 @@ jobs:
               borte = clean_score(k.get('borte'))
               ferdig = bool(k.get('ferdig')) and hjemme is not None and borte is not None
 
-              return {
+              item = {
                   'kamp_id': kid,
                   'runde': k.get('runde', 'gruppe'),
                   'gruppe': k.get('gruppe', ''),
@@ -86,6 +91,18 @@ jobs:
                   'kilde': 'manuell_fallback',
                   'oppdatert': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
               }
+              # Brukes kun for å bygge neste utslagsrunde/bracket.
+              # Gir ikke poeng i seg selv.
+              match_no = clean_int(k.get('match_no'))
+              if match_no is not None:
+                  item['match_no'] = match_no
+              if k.get('slot_hjemme'):
+                  item['slot_hjemme'] = str(k.get('slot_hjemme'))
+              if k.get('slot_borte'):
+                  item['slot_borte'] = str(k.get('slot_borte'))
+              if k.get('avanserer'):
+                  item['avanserer'] = str(k.get('avanserer')).strip()
+              return item
 
           existing = {k.get('kamp_id'): k for k in data['kamper'] if k.get('kamp_id')}
 
@@ -93,7 +110,17 @@ jobs:
               k = normalize(raw)
               if is_delete:
                   existing.pop(k['kamp_id'], None)
+                  if k.get('match_no') is not None:
+                      for old_id, old in list(existing.items()):
+                          if old.get('runde') == k.get('runde') and old.get('match_no') == k.get('match_no'):
+                              existing.pop(old_id, None)
               else:
+                  # Hvis samme utslagskamp er lagret med nytt faktisk lagnavn,
+                  # fjern gammel variant basert på runde + match_no.
+                  if k.get('match_no') is not None:
+                      for old_id, old in list(existing.items()):
+                          if old.get('runde') == k.get('runde') and old.get('match_no') == k.get('match_no') and old_id != k['kamp_id']:
+                              existing.pop(old_id, None)
                   existing[k['kamp_id']] = k
 
           data['sist_oppdatert'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
