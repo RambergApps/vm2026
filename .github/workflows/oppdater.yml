@@ -9,6 +9,7 @@ on:
   push:
     paths:
       - 'tippinger/**'
+      - 'data/manuelle-kamper.json'
 
   # Kjør manuelt fra GitHub-grensesnittet
   workflow_dispatch:
@@ -40,6 +41,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/data.js data/status.json data/deltakere.json
+          git add data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/manuelle-kamper.json
           git diff --staged --quiet || git commit -m "Auto: oppdater leaderboard $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
