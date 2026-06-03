@@ -1,0 +1,128 @@
+name: Motta manuelt resultat
+
+on:
+  repository_dispatch:
+    types: [motta_resultat]
+
+permissions:
+  contents: write
+
+jobs:
+  lagre-resultat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+
+      - name: Lagre / oppdater manuelle kamper
+        run: |
+          mkdir -p data
+          cat > payload.json <<'JSON'
+          ${{ toJson(github.event.client_payload) }}
+          JSON
+
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          payload = json.loads(Path('payload.json').read_text(encoding='utf-8'))
+          action = payload.get('action', 'upsert')
+          incoming = []
+
+          if isinstance(payload.get('kamper'), list):
+              incoming.extend(payload['kamper'])
+          elif isinstance(payload.get('kamp'), dict):
+              incoming.append(payload['kamp'])
+
+          path = Path('data/manuelle-kamper.json')
+          if path.exists():
+              try:
+                  data = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  data = {'sist_oppdatert': None, 'kamper': []}
+          else:
+              data = {'sist_oppdatert': None, 'kamper': []}
+
+          if not isinstance(data.get('kamper'), list):
+              data['kamper'] = []
+
+          def kamp_id(team1, team2, dato):
+              def rens(s):
+                  return ''.join(c if c.isalnum() else '_' for c in str(s))
+              return f"{rens(team1)}_{rens(team2)}_{rens(dato)}"
+
+          def clean_score(v):
+              if v in (None, ''):
+                  return None
+              return int(v)
+
+          def normalize(k):
+              hjemmelag = (k.get('hjemmelag') or '').strip()
+              bortelag = (k.get('bortelag') or '').strip()
+              dato = (k.get('dato') or '').strip()
+              kid = (k.get('kamp_id') or k.get('id') or '').strip()
+              if not kid and hjemmelag and bortelag and dato:
+                  kid = kamp_id(hjemmelag, bortelag, dato)
+              if not kid:
+                  raise ValueError('Mangler kamp_id eller lag/dato for å generere kamp_id')
+              hjemme = clean_score(k.get('hjemme'))
+              borte = clean_score(k.get('borte'))
+              ferdig = bool(k.get('ferdig')) and hjemme is not None and borte is not None
+              return {
+                  'kamp_id': kid,
+                  'runde': k.get('runde', 'gruppe'),
+                  'gruppe': k.get('gruppe', ''),
+                  'dato': dato,
+                  'hjemmelag': hjemmelag,
+                  'bortelag': bortelag,
+                  'hjemme': hjemme,
+                  'borte': borte,
+                  'ferdig': ferdig,
+                  'kilde': 'manuell_fallback',
+                  'oppdatert': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              }
+
+          existing = {k.get('kamp_id'): k for k in data['kamper'] if k.get('kamp_id')}
+
+          for raw in incoming:
+              k = normalize(raw)
+              if action == 'delete':
+                  existing.pop(k['kamp_id'], None)
+              else:
+                  existing[k['kamp_id']] = k
+
+          data['sist_oppdatert'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+          data['kamper'] = sorted(existing.values(), key=lambda x: (x.get('dato', ''), x.get('runde', ''), x.get('gruppe', ''), x.get('hjemmelag', '')))
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(f"Skrev {len(data['kamper'])} manuelle kamper til {path}")
+          PY
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer avhengigheter
+        run: pip install requests
+
+      - name: Kjør poengregning
+        run: python scripts/poengregning.py
+        env:
+          GITHUB_ACTIONS: true
+
+      - name: Commit manuelt resultat og oppdatert leaderboard-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/manuelle-kamper.json data/mangler-resultater.json data/data.js data/status.json data/deltakere.json
+
+          if git diff --cached --quiet; then
+            echo "Ingen endringer å committe"
+          else
+            git commit -m "Motta manuelt resultat og oppdater leaderboard"
+            git push
+          fi
