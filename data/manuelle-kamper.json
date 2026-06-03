@@ -1,31 +1,4 @@
 {
-  "sist_oppdatert": "2026-06-03T11:57:32Z",
-  "kamper": [
-    {
-      "kamp_id": "Mexico_South_Africa_2026_06_11",
-      "runde": "gruppe",
-      "gruppe": "Group A",
-      "dato": "2026-06-11",
-      "hjemmelag": "Mexico",
-      "bortelag": "South Africa",
-      "hjemme": 1,
-      "borte": 0,
-      "ferdig": true,
-      "kilde": "manuell_fallback",
-      "oppdatert": "2026-06-03T11:57:32Z"
-    },
-    {
-      "kamp_id": "South_Korea_Czech_Republic_2026_06_11",
-      "runde": "gruppe",
-      "gruppe": "Group A",
-      "dato": "2026-06-11",
-      "hjemmelag": "South Korea",
-      "bortelag": "Czech Republic",
-      "hjemme": 1,
-      "borte": 0,
-      "ferdig": true,
-      "kilde": "manuell_fallback",
-      "oppdatert": "2026-06-03T11:57:32Z"
-    }
-  ]
+  "sist_oppdatert": "2026-06-03T11:59:38Z",
+  "kamper": []
 }
