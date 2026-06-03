@@ -389,8 +389,8 @@ body {
         <thead>
           <tr>
             <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Type</th>
-            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Riktig vinner</th>
-            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Eksakt resultat</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Riktig utfall</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Eksakt resultat 90 min</th>
           </tr>
         </thead>
         <tbody id="reglerTabell"></tbody>
@@ -400,6 +400,10 @@ body {
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Turneringsvinner</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold)">70 poeng</div>
         <div style="font-size:13px;color:var(--muted);margin-top:4px">Tippa ved registrering — kan ikke endres</div>
+      </div>
+
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px;font-size:13px;color:var(--muted);line-height:1.5">
+        Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter. Ekstraomganger, straffer og hvilket lag som går videre påvirker ikke kamp-poengene.
       </div>
 
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
@@ -423,19 +427,19 @@ body {
 <script>
 // ── POENGREGLER ────────────────────────────────────────────
 const REGLER = [
-  { type: "Gruppespill",   vinner: 2, eksakt: 4 },
-  { type: "Runde av 32",   vinner: 3, eksakt: 4 },
-  { type: "Runde av 16",   vinner: 4, eksakt: 4 },
-  { type: "Kvartfinale",   vinner: 5, eksakt: 4 },
-  { type: "Semifinale",    vinner: 6, eksakt: 4 },
-  { type: "Finale",        vinner: 7, eksakt: 4 },
+  { type: "Gruppespill",   utfall: 2, eksakt: 4 },
+  { type: "Runde av 32",   utfall: 3, eksakt: 4 },
+  { type: "Runde av 16",   utfall: 4, eksakt: 4 },
+  { type: "Kvartfinale",   utfall: 5, eksakt: 4 },
+  { type: "Semifinale",    utfall: 6, eksakt: 4 },
+  { type: "Finale",        utfall: 7, eksakt: 4 },
 ];
 
 // ── REGLER-TABELL ──────────────────────────────────────────
 document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
   <tr>
     <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">${r.type}</td>
-    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text)">${r.vinner}p</td>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text)">${r.utfall}p</td>
     <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--accent)">+${r.eksakt}p</td>
   </tr>
 `).join("");
