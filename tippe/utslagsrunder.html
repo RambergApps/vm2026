@@ -338,7 +338,8 @@ body {
   color: var(--muted);
   white-space: nowrap;
 }
-.navn-wrap input {
+.navn-wrap input,
+.navn-wrap select {
   flex: 1;
   background: var(--surface);
   border: 1.5px solid var(--border);
@@ -348,8 +349,11 @@ body {
   font-size: 15px;
   font-family: 'Barlow', sans-serif;
   outline: none;
+  cursor: pointer;
 }
-.navn-wrap input:focus { border-color: var(--accent2); }
+.navn-wrap input:focus,
+.navn-wrap select:focus { border-color: var(--accent2); }
+.navn-wrap select option { background: var(--surface); color: var(--text); }
 
 /* ── LEVER-KNAPP ── */
 .lever-wrap { margin-top: 24px; }
@@ -439,9 +443,14 @@ body {
 
 <div class="container">
 
-  <!-- NAVN -->
+  <!-- DELTAKER / NAVN -->
   <div class="navn-wrap">
-    <label>Ditt navn</label>
+    <label id="navnLabel">Ditt navn</label>
+    <!-- Dropdown: vises når deltakere.json er lastet. Skjult ID — kun navn vises. -->
+    <select id="deltakerSelect" style="display:none" aria-label="Velg deg selv">
+      <option value="">— Velg deg selv —</option>
+    </select>
+    <!-- Tekstfelt: fallback og skjult kilde for navn-verdi ved levering -->
     <input type="text" id="navnInput" placeholder="Kari Nordmann" autocomplete="name">
   </div>
 
@@ -459,12 +468,10 @@ body {
 
 <script>
 // ── KONFIG ─────────────────────────────────────────────────
-const SUBMIT_URL   = "https://vm2026-submit-api.vercel.app/api/submit";
-const TOKEN        = "vm2026-ramberg";
-
-// Status-fil fra repoet — GitHub Actions oppdaterer denne
-// I demo-modus simulerer vi at R32 er åpen
-const STATUS_URL = "../data/status.json";
+const SUBMIT_URL    = "https://vm2026-submit-api.vercel.app/api/submit";
+const TOKEN         = "vm2026-ramberg";
+const STATUS_URL    = "../data/status.json";
+const DELTAKERE_URL = "../data/deltakere.json";   // ← NY: liste over kjente deltakere
 
 // Poeng per runde
 const POENG = { r32: 3, r16: 4, qf: 5, sf: 6, final: 7 };
@@ -480,15 +487,17 @@ const RUNDE_NAVN = {
 const RUNDE_REKKEFØLGE = ["r32","r16","qf","sf","final"];
 
 // ── STATE ──────────────────────────────────────────────────
-let status = null;
-let kamper = {};      // { r32: [...], r16: [...], ... }
-let tippinger = {};   // { "kamp_id": { hjemme: 1, borte: 0, vinner: "Spania" } }
+let status     = null;
+let kamper     = {};      // { r32: [...], r16: [...], ... }
+let tippinger  = {};      // { "kamp_id": { hjemme: 1, borte: 0, vinner: "Spania" } }
 let aktivRunde = null;
+let deltakerId = null;    // ← NY: stabil ID satt når deltaker velges fra dropdown
 
 // ── INIT ───────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', async () => {
   lastFraStorage();
-  await hentStatus();
+  // Kjør parallelt: hent deltakerliste og kampstatus
+  await Promise.all([hentDeltakere(), hentStatus()]);
 });
 
 async function hentStatus() {
@@ -508,7 +517,77 @@ async function hentStatus() {
   byggUI();
 }
 
-// ── DEMO-DATA ─────────────────────────────────────────────
+// ── DELTAKERE ──────────────────────────────────────────────
+/**
+ * Henter data/deltakere.json og bygger dropdown med kjente deltakere.
+ * Faller tilbake til vanlig tekstfelt hvis filen ikke finnes ennå
+ * (f.eks. første gang, eller dersom ingen har levert gruppespill).
+ */
+async function hentDeltakere() {
+  try {
+    const r = await fetch(DELTAKERE_URL + '?t=' + Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+    if (Array.isArray(data) && data.length > 0) {
+      byggDeltakerDropdown(data);
+    }
+    // Hvis tom liste: behold tekstfelt som det er
+  } catch(e) {
+    // Nettverksfeil eller filen finnes ikke ennå — tekstfelt brukes
+  }
+}
+
+/**
+ * Bytter ut tekstfeltet med en dropdown over kjente deltakere.
+ * ID-en er skjult for brukeren; de ser bare sitt eget navn i listen.
+ */
+function byggDeltakerDropdown(deltakere) {
+  const sel   = document.getElementById('deltakerSelect');
+  const input = document.getElementById('navnInput');
+  const label = document.getElementById('navnLabel');
+
+  // Sorter alfabetisk på navn
+  deltakere.sort((a, b) => a.navn.localeCompare(b.navn, 'no'));
+
+  deltakere.forEach(d => {
+    const o = document.createElement('option');
+    o.value = d.id;
+    o.textContent = d.navn;
+    sel.appendChild(o);
+  });
+
+  // Gjenopprett tidligere valg fra localStorage
+  const lagretId = localStorage.getItem('vm2026_deltaker_id');
+  if (lagretId) {
+    const funnet = deltakere.find(d => d.id === lagretId);
+    if (funnet) {
+      sel.value    = lagretId;
+      deltakerId   = lagretId;
+      input.value  = funnet.navn;
+    }
+  }
+
+  // Reager på nytt valg
+  sel.addEventListener('change', () => {
+    const funnet = deltakere.find(d => d.id === sel.value);
+    if (funnet) {
+      deltakerId  = funnet.id;
+      input.value = funnet.navn;
+      localStorage.setItem('vm2026_deltaker_id', deltakerId);
+    } else {
+      deltakerId  = null;
+      input.value = '';
+    }
+    lagreTilStorage();
+  });
+
+  // Vis dropdown, skjul tekstfelt, oppdater label
+  sel.style.display   = '';
+  input.style.display = 'none';
+  label.textContent   = 'Hvem er du?';
+}
+
+
 function demoKamper(runde) {
   if (runde !== "r32") return [];
   return [
@@ -761,12 +840,12 @@ async function leverRunde(runde) {
   const navn = document.getElementById("navnInput").value.trim();
   if (!navn) {
     document.getElementById("advarsel-" + runde).innerHTML =
-      '<div class="error-box">Du må fylle inn navn.</div>';
+      '<div class="error-box">Du må velge hvem du er.</div>';
     return;
   }
 
   const kampListe = status[runde]?.kamper || [];
-  const mangler = kampListe.filter(k => !tippinger[k.id]?.vinner).length;
+  const mangler   = kampListe.filter(k => !tippinger[k.id]?.vinner).length;
 
   if (mangler > 0) {
     document.getElementById("advarsel-" + runde).innerHTML =
@@ -776,23 +855,24 @@ async function leverRunde(runde) {
   }
 
   const btn = document.getElementById("leverBtn-" + runde);
-  btn.disabled = true;
+  btn.disabled    = true;
   btn.textContent = "⏳ Sender...";
 
   const payload = {
     meta: {
-      navn: navn,
-      innlevert: new Date().toISOString(),
-      token: TOKEN,
-      runde: runde
+      navn:        navn,
+      innlevert:   new Date().toISOString(),
+      token:       TOKEN,
+      runde:       runde,
+      deltaker_id: deltakerId || null   // ← NY: kobler til gruppespill-profil
     },
     tippinger: kampListe.map(k => ({
-      kamp_id: k.id,
+      kamp_id:   k.id,
       hjemmelag: k.hjemme,
-      bortelag: k.borte,
-      hjemme: tippinger[k.id]?.hjemme ?? null,
-      borte: tippinger[k.id]?.borte ?? null,
-      vinner: tippinger[k.id]?.vinner ?? null
+      bortelag:  k.borte,
+      hjemme:    tippinger[k.id]?.hjemme ?? null,
+      borte:     tippinger[k.id]?.borte  ?? null,
+      vinner:    tippinger[k.id]?.vinner ?? null
     }))
   };
 
@@ -836,8 +916,9 @@ function visSucces(navn, runde) {
 // ── LOCALSTORAGE ───────────────────────────────────────────
 function lagreTilStorage() {
   localStorage.setItem("vm2026_utslagsrunder", JSON.stringify({
-    navn: document.getElementById("navnInput").value,
-    tippinger: tippinger
+    navn:        document.getElementById("navnInput").value,
+    deltaker_id: deltakerId,   // ← NY
+    tippinger:   tippinger
   }));
 }
 
@@ -846,8 +927,9 @@ function lastFraStorage() {
     const raw = localStorage.getItem("vm2026_utslagsrunder");
     if (!raw) return;
     const data = JSON.parse(raw);
-    if (data.navn) document.getElementById("navnInput").value = data.navn;
-    if (data.tippinger) tippinger = data.tippinger;
+    if (data.navn)        document.getElementById("navnInput").value = data.navn;
+    if (data.deltaker_id) deltakerId = data.deltaker_id;   // ← NY
+    if (data.tippinger)   tippinger  = data.tippinger;
   } catch(e) {}
 }
 
