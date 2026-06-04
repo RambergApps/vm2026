@@ -40,6 +40,7 @@ jobs:
         run: python scripts/poengregning.py
         env:
           GITHUB_ACTIONS: true
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
 
       - name: Commit tipping og oppdatert leaderboard-data
         run: |
