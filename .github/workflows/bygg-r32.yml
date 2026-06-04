@@ -1,0 +1,151 @@
+name: Bygg r32-oppsett fra football-data.org
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bygg-r32:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer avhengigheter
+        run: pip install requests
+
+      - name: Hent r32-oppsett fra football-data.org
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import requests
+          from pathlib import Path
+
+          TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "")
+          if not TOKEN:
+              print("FEIL: FOOTBALL_DATA_TOKEN ikke satt")
+              exit(1)
+
+          # Lagnavn-mapping: football-data.org → OpenFootball
+          FD_NAVN_TIL_OF = {
+              "Bosnia-Herzegovina": "Bosnia & Herzegovina",
+              "Cape Verde Islands":  "Cape Verde",
+              "Congo DR":            "DR Congo",
+              "Czechia":             "Czech Republic",
+          }
+
+          def rens(s):
+              return "".join(c if c.isalnum() else "_" for c in str(s or ""))
+
+          def kamp_id(h, b, d):
+              return f"{rens(h)}_{rens(b)}_{rens(d)}"
+
+          print("Henter kamper fra football-data.org...")
+          r = requests.get(
+              "https://api.football-data.org/v4/competitions/WC/matches",
+              headers={"X-Auth-Token": TOKEN},
+              timeout=15,
+          )
+          r.raise_for_status()
+          data = r.json()
+
+          # Filtrer r32-kamper med faktiske lagnavn (ikke placeholders)
+          PLACEHOLDERS = ["winner", "loser", "path", "tbd", "place", "runner", "w7", "w8", "w9"]
+
+          def er_kjent_lag(navn):
+              if not navn:
+                  return False
+              low = navn.lower()
+              return not any(p in low for p in PLACEHOLDERS)
+
+          r32_kamper = []
+          for kamp in data.get("matches", []):
+              stage = kamp.get("stage", "").upper()
+              if "ROUND_OF_32" not in stage and "LAST_32" not in stage:
+                  continue
+
+              team1 = FD_NAVN_TIL_OF.get(kamp["homeTeam"]["name"], kamp["homeTeam"]["name"])
+              team2 = FD_NAVN_TIL_OF.get(kamp["awayTeam"]["name"], kamp["awayTeam"]["name"])
+              dato  = kamp.get("utcDate", "")[:10]
+
+              if not er_kjent_lag(team1) or not er_kjent_lag(team2):
+                  print(f"  Hopper over (placeholder): {team1} vs {team2} ({dato})")
+                  continue
+
+              kid = kamp_id(team1, team2, dato)
+              r32_kamper.append({
+                  "kamp_id":    kid,
+                  "runde":      "r32",
+                  "gruppe":     "",
+                  "dato":       dato,
+                  "hjemmelag":  team1,
+                  "bortelag":   team2,
+                  "hjemme":     None,
+                  "borte":      None,
+                  "ferdig":     False,
+                  "kilde":      "football_data_org_r32",
+              })
+              print(f"  {kid}")
+
+          if not r32_kamper:
+              print("Ingen r32-kamper med kjente lag funnet ennå — prøv igjen etter gruppespillet.")
+              exit(0)
+
+          print(f"\n{len(r32_kamper)} r32-kamper funnet")
+
+          # Les eksisterende manuelle-kamper.json
+          path = Path("data/manuelle-kamper.json")
+          if path.exists():
+              try:
+                  existing = json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  existing = {"kamper": []}
+          else:
+              existing = {"kamper": []}
+
+          if not isinstance(existing.get("kamper"), list):
+              existing["kamper"] = []
+
+          # Behold eksisterende kamper som ikke er r32 fra fd.org
+          # (ikke overskriv manuelle resultater som allerede er satt)
+          beholdt = [
+              k for k in existing["kamper"]
+              if not (k.get("runde") == "r32" and k.get("kilde") == "football_data_org_r32")
+          ]
+
+          # Legg til nye r32-kamper, men ikke overskriv eksisterende r32-kamper med score
+          eksisterende_r32_kids = {
+              k["kamp_id"] for k in existing["kamper"]
+              if k.get("runde") == "r32" and k.get("ferdig")
+          }
+
+          nye = [k for k in r32_kamper if k["kamp_id"] not in eksisterende_r32_kids]
+          existing["kamper"] = beholdt + nye
+
+          from datetime import datetime, timezone
+          existing["sist_oppdatert"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+          path.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+          print(f"Skrev {len(existing['kamper'])} kamper til {path} ({len(nye)} nye r32-kamper lagt til)")
+          PY
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
+      - name: Commit r32-oppsett
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/manuelle-kamper.json
+          git diff --staged --quiet || git commit -m "Bygg r32-oppsett fra football-data.org $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
