@@ -232,12 +232,18 @@ def hent_football_data_org():
         if hjemme is None or borte is None:
             continue
 
+        # Hent winner og duration for utslagskamper
+        winner   = score.get("winner")    # HOME_TEAM / AWAY_TEAM / DRAW
+        duration = score.get("duration")  # REGULAR / EXTRA_TIME / PENALTY_SHOOTOUT
+
         kid = kamp_id(team1, team2, dato)
         fd_lookup[kid] = {
-            "hjemme": hjemme,
-            "borte":  borte,
-            "ferdig": True,
-            "kilde":  "football_data_org",
+            "hjemme":   hjemme,
+            "borte":    borte,
+            "ferdig":   True,
+            "kilde":    "football_data_org",
+            "winner":   winner,
+            "duration": duration,
         }
 
     print(f"  -> {len(fd_lookup)} ferdigspilte kamper fra football-data.org")
@@ -318,7 +324,13 @@ def bygg_resultat_lookup(api_data, fd_lookup):
                 base["borte"]   = fd["borte"]
                 base["ferdig"]  = True
                 base["kilde"]   = "football_data_org"
-                print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato})")
+                # Sett avanserer automatisk fra fd.org winner-felt (gjelder utslagskamper)
+                if fd.get("winner") == "HOME_TEAM":
+                    base["avanserer"] = team1
+                elif fd.get("winner") == "AWAY_TEAM":
+                    base["avanserer"] = team2
+                duration = fd.get("duration", "REGULAR")
+                print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{duration}]")
             lookup[kid] = base
 
     of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "openfootball")
