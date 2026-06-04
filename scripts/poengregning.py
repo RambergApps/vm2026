@@ -1,14 +1,21 @@
 """
 VM 2026 Tippekonkurranse — Poengregningscript
-Kjøres av GitHub Actions hver time.
+Kjøres av GitHub Actions hvert 30. minutt.
 
 Flyt:
-1. Hent ferdigspilte kamper fra VM API
-2. Les alle tippinger fra /tippinger/
-3. Regn poeng per deltaker
-4. Skriv data/data.js
-5. Skriv data/deltakere.json  (nytt — kobler navn til stabil ID)
-6. Oppdater data/status.json med utslagsrunde-info
+1. Hent kampoppsett fra OpenFootball API (primærkilde for struktur)
+2. For kamper uten score: hent fra football-data.org (fallback for resultater)
+3. Les manuelle fallback-kamper fra data/manuelle-kamper.json
+4. Les alle tippinger fra /tippinger/
+5. Regn poeng per deltaker
+6. Skriv data/data.js
+7. Skriv data/deltakere.json  (kobler navn til stabil ID)
+8. Oppdater data/status.json med utslagsrunde-info
+
+Kilder og prioritet for score:
+  1. OpenFootball (hvis score.ft finnes)
+  2. football-data.org (hvis OF mangler score og kampen er FINISHED)
+  3. Manuelle fallback-kamper (data/manuelle-kamper.json)
 """
 
 import json
@@ -20,7 +27,19 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 # ── KONFIG ────────────────────────────────────────────────────────────────────
-API_URL        = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
+API_URL               = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
+FOOTBALL_DATA_API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
+FOOTBALL_DATA_TOKEN   = os.environ.get("FOOTBALL_DATA_TOKEN", "")
+
+# Lagnavn-mapping: football-data.org → OpenFootball
+# OpenFootball-navn er master siden tipping-appen og kamp-ID-er er basert på disse.
+FD_NAVN_TIL_OF = {
+    "Bosnia-Herzegovina": "Bosnia & Herzegovina",
+    "Cape Verde Islands":  "Cape Verde",
+    "Congo DR":            "DR Congo",
+    "Czechia":             "Czech Republic",
+}
+
 REPO_ROOT      = Path(__file__).parent.parent
 TIPPINGER      = REPO_ROOT / "tippinger"
 DATA_DIR       = REPO_ROOT / "data"
@@ -42,6 +61,14 @@ POENG = {
     "final":  {"utfall": 7, "eksakt": 4},
 }
 POENG_TURNERINGSVINNER = 70
+POENG_BONUS = 10
+BONUS_SPORSMAL = {
+    "r32":   {"id": "antall_uavgjort",      "tekst": "Antall kamper som ender uavgjort etter 90 min"},
+    "r16":   {"id": "antall_nullen",        "tekst": "Antall lag som holder nullen etter 90 min"},
+    "qf":    {"id": "antall_ettmaalsseier", "tekst": "Antall kamper avgjort med ett mål etter 90 min"},
+    "sf":    {"id": "totale_maal",          "tekst": "Totalt antall mål i semifinalene etter 90 min"},
+    "final": {"id": "begge_lag_scorer",     "tekst": "Scorer begge lag i finalen etter 90 min"},
+}
 
 # ── TESTMODUS ─────────────────────────────────────────────────────────────────
 TEST_MODE = not os.environ.get("GITHUB_ACTIONS")
@@ -148,7 +175,7 @@ def finn_avanserer(kamp):
 # ── HENT API-DATA ─────────────────────────────────────────────────────────────
 def hent_api_data():
     """Henter VM-data fra openfootball API."""
-    print("Henter kampdata fra API...")
+    print("Henter kampdata fra OpenFootball...")
     try:
         r = requests.get(API_URL, timeout=15)
         r.raise_for_status()
@@ -157,13 +184,77 @@ def hent_api_data():
         print(f"FEIL: Kunne ikke hente API-data: {e}")
         sys.exit(1)
 
-def bygg_resultat_lookup(api_data):
+
+def hent_football_data_org():
     """
-    Bygger en dict med kamp_id → resultat for alle ferdigspilte kamper.
-    Format: { "Mexico_South_Africa_2026_06_11": { hjemme: 2, borte: 1, ferdig: True, runde: "gruppe" } }
+    Henter kampresultater fra football-data.org.
+
+    Returnerer en dict med kamp_id → {hjemme, borte, ferdig} for alle
+    kamper med status FINISHED. Lagnavn normaliseres til OpenFootball-format
+    via FD_NAVN_TIL_OF-mappingen slik at kamp-ID-er matcher.
+
+    Returnerer tom dict hvis token mangler eller kall feiler.
+    """
+    if not FOOTBALL_DATA_TOKEN:
+        print("  ADVARSEL: FOOTBALL_DATA_TOKEN ikke satt — hopper over football-data.org")
+        return {}
+
+    print("Henter kampresultater fra football-data.org...")
+    try:
+        r = requests.get(
+            FOOTBALL_DATA_API_URL,
+            headers={"X-Auth-Token": FOOTBALL_DATA_TOKEN},
+            timeout=15,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  ADVARSEL: Kunne ikke hente fra football-data.org: {e}")
+        return {}
+
+    fd_lookup = {}
+    for kamp in data.get("matches", []):
+        if kamp.get("status") != "FINISHED":
+            continue
+
+        # Normaliser lagnavn til OpenFootball-format
+        team1 = FD_NAVN_TIL_OF.get(kamp["homeTeam"]["name"], kamp["homeTeam"]["name"])
+        team2 = FD_NAVN_TIL_OF.get(kamp["awayTeam"]["name"], kamp["awayTeam"]["name"])
+
+        # Dato fra utcDate (format: 2026-06-11T19:00:00Z -> 2026-06-11)
+        dato = kamp.get("utcDate", "")[:10]
+
+        score = kamp.get("score", {})
+        ft    = score.get("fullTime", {})
+        hjemme = ft.get("home")
+        borte  = ft.get("away")
+
+        if hjemme is None or borte is None:
+            continue
+
+        kid = kamp_id(team1, team2, dato)
+        fd_lookup[kid] = {
+            "hjemme": hjemme,
+            "borte":  borte,
+            "ferdig": True,
+            "kilde":  "football_data_org",
+        }
+
+    print(f"  -> {len(fd_lookup)} ferdigspilte kamper fra football-data.org")
+    return fd_lookup
+
+
+def bygg_resultat_lookup(api_data, fd_lookup):
+    """
+    Bygger en dict med kamp_id -> resultat for alle kamper.
+
+    Prioritet for score:
+      1. OpenFootball (hvis score.ft finnes)
+      2. football-data.org (hvis OF mangler score og kampen er FINISHED hos fd.org)
+
+    Format: { "Mexico_South_Africa_2026_06_11": { hjemme: 2, borte: 1, ferdig: True, runde: "gruppe", kilde: "..." } }
     """
     lookup = {}
-    now = datetime.now(timezone.utc)
 
     for kamp in api_data.get("matches", []):
         dato  = kamp.get("date", "")
@@ -192,25 +283,49 @@ def bygg_resultat_lookup(api_data):
         else:
             runde = "ukjent"
 
-        # Sjekk om kampen er ferdigspilt
-        ferdig = False
-        if ht and ht[0] is not None and ht[1] is not None:
-            ferdig = True
+        # Sjekk om OpenFootball har ferdig score
+        of_ferdig = bool(ht and ht[0] is not None and ht[1] is not None)
 
         kid = kamp_id(team1, team2, dato)
-        lookup[kid] = {
-            "hjemmelag": team1,
-            "bortelag":  team2,
-            "hjemme":    ht[0] if ht else None,
-            "borte":     ht[1] if ht else None,
-            "ferdig":    ferdig,
-            "runde":     runde,
-            "dato":      dato,
-        }
 
-    ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"])
-    print(f"  → {len(lookup)} kamper totalt, {ferdig_antall} ferdigspilte")
+        if of_ferdig:
+            # OpenFootball har score -- bruk den
+            lookup[kid] = {
+                "hjemmelag": team1,
+                "bortelag":  team2,
+                "hjemme":    ht[0],
+                "borte":     ht[1],
+                "ferdig":    True,
+                "runde":     runde,
+                "dato":      dato,
+                "kilde":     "openfootball",
+            }
+        else:
+            # OpenFootball mangler score -- bygg oppforing og sjekk fd.org
+            base = {
+                "hjemmelag": team1,
+                "bortelag":  team2,
+                "hjemme":    None,
+                "borte":     None,
+                "ferdig":    False,
+                "runde":     runde,
+                "dato":      dato,
+                "kilde":     "openfootball",
+            }
+            fd = fd_lookup.get(kid)
+            if fd:
+                base["hjemme"]  = fd["hjemme"]
+                base["borte"]   = fd["borte"]
+                base["ferdig"]  = True
+                base["kilde"]   = "football_data_org"
+                print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato})")
+            lookup[kid] = base
+
+    of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "openfootball")
+    fd_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "football_data_org")
+    print(f"  -> {len(lookup)} kamper totalt | OpenFootball: {of_ferdig_antall} ferdigspilte | football-data.org fallback: {fd_ferdig_antall}")
     return lookup
+
 
 
 # ── MANUELLE KAMPER / FALLBACK ───────────────────────────────────────────────
@@ -431,6 +546,7 @@ def les_alle_tippinger():
                         "turneringsvinner": "",
                         "gruppespill":      [],
                         "utslagsrunder":    [],
+                        "bonus":            {},
                     }
 
                 # ── Legg til tippinger ───────────────────────────────────────
@@ -442,6 +558,8 @@ def les_alle_tippinger():
                     for t in data.get("tippinger", []):
                         t["runde"] = runde
                         deltakere[did]["utslagsrunder"].append(t)
+                    if data.get("bonus"):
+                        deltakere[did].setdefault("bonus", {})[runde] = data.get("bonus")
 
             except Exception as e:
                 print(f"  FEIL ved lesing av {fil}: {e}")
@@ -508,12 +626,56 @@ def regn_poeng_for_kamp(tippa_h, tippa_b, faktisk_h, faktisk_b, runde, tippa_vin
 
     return poeng, riktig_utfall, eksakt
 
+def bonus_fasit_for_runde(runde, resultat_lookup):
+    """
+    Returnerer (fasit, ferdig) for bonusspørsmålet i en utslagsrunde.
+    Bonus regnes først når forventet antall kamper i runden har ferdig 90-minuttersresultat.
+    """
+    kamper = [
+        k for k in resultat_lookup.values()
+        if k.get("runde") == runde and k.get("ferdig") and k.get("hjemme") is not None and k.get("borte") is not None
+    ]
+    forventet = FORVENTET_ANTALL.get(runde)
+    if not forventet or len(kamper) < forventet:
+        return None, False
+
+    if runde == "r32":
+        return sum(1 for k in kamper if k["hjemme"] == k["borte"]), True
+    if runde == "r16":
+        return sum((1 if k["hjemme"] == 0 else 0) + (1 if k["borte"] == 0 else 0) for k in kamper), True
+    if runde == "qf":
+        return sum(1 for k in kamper if abs(k["hjemme"] - k["borte"]) == 1), True
+    if runde == "sf":
+        return sum(k["hjemme"] + k["borte"] for k in kamper), True
+    if runde == "final":
+        k = kamper[0]
+        return "ja" if k["hjemme"] > 0 and k["borte"] > 0 else "nei", True
+    return None, False
+
+
+def normaliser_bonus_svar(svar):
+    if svar is None:
+        return None
+    if isinstance(svar, str):
+        s = svar.strip().lower()
+        if s == "":
+            return None
+        if s in ("ja", "nei"):
+            return s
+        try:
+            return int(s)
+        except Exception:
+            return s
+    return svar
+
+
 def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None):
     """Regner totale poeng for én deltaker."""
     navn                 = deltaker["navn"]
     poeng_totalt         = 0
     poeng_gruppespill    = 0
     poeng_utslagsrunder  = 0
+    poeng_bonus          = 0
     poeng_turneringsvinner = 0
     tipping_detaljer     = []
 
@@ -588,12 +750,33 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
             "runde":          runde,
         })
 
+    # ── Bonusspørsmål i utslagsrunder ──
+    for runde, bonus in deltaker.get("bonus", {}).items():
+        if runde not in BONUS_SPORSMAL:
+            continue
+        fasit, ferdig_bonus = bonus_fasit_for_runde(runde, resultat_lookup)
+        svar = normaliser_bonus_svar(bonus.get("svar") if isinstance(bonus, dict) else bonus)
+        fasit_norm = normaliser_bonus_svar(fasit)
+        riktig_bonus = ferdig_bonus and svar is not None and fasit_norm is not None and svar == fasit_norm
+        p_bonus = POENG_BONUS if riktig_bonus else 0
+        poeng_bonus += p_bonus
+        tipping_detaljer.append({
+            "type": "bonus",
+            "runde": runde,
+            "sporsmal": BONUS_SPORSMAL[runde]["tekst"],
+            "svar": svar,
+            "fasit": fasit,
+            "poeng": p_bonus,
+            "riktig": riktig_bonus,
+            "ferdig": ferdig_bonus,
+        })
+
     # ── Turneringsvinner ──
     if faktisk_turneringsvinner and deltaker.get("turneringsvinner"):
         if deltaker["turneringsvinner"] == faktisk_turneringsvinner:
             poeng_turneringsvinner = POENG_TURNERINGSVINNER
 
-    poeng_totalt = poeng_gruppespill + poeng_utslagsrunder + poeng_turneringsvinner
+    poeng_totalt = poeng_gruppespill + poeng_utslagsrunder + poeng_bonus + poeng_turneringsvinner
 
     return {
         "navn":                    navn,
@@ -601,6 +784,7 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
         "poeng_totalt":            poeng_totalt,
         "poeng_gruppespill":       poeng_gruppespill,
         "poeng_utslagsrunder":     poeng_utslagsrunder,
+        "poeng_bonus":            poeng_bonus,
         "poeng_turneringsvinner":  poeng_turneringsvinner,
         "turneringsvinner":        deltaker.get("turneringsvinner", ""),
         "turneringsvinner_riktig": poeng_turneringsvinner > 0,
@@ -745,7 +929,7 @@ def oppdater_status_med_api_kamper(status, resultat_lookup):
         api_kjente = [
             (kid, v) for kid, v in resultat_lookup.items()
             if v.get("runde") == runde
-            and v.get("kilde") != "manuell_fallback"
+            and v.get("kilde") in ("openfootball", "football_data_org")
             and er_kjent_lag(v.get("hjemmelag"))
             and er_kjent_lag(v.get("bortelag"))
         ]
@@ -891,7 +1075,8 @@ def main():
         resultat_lookup = {r["kamp_id"]: r for r in MOCK_RESULTATER}
     else:
         api_data = hent_api_data()
-        resultat_lookup = bygg_resultat_lookup(api_data)
+        fd_lookup = hent_football_data_org()
+        resultat_lookup = bygg_resultat_lookup(api_data, fd_lookup)
 
     # Les manuelle kamper/resultater som midlertidig fallback
     print("\nLeser manuelle kamp-/resultat-fallbacks...")
@@ -924,6 +1109,7 @@ def main():
                 "turneringsvinner": d.get("turneringsvinner", ""),
                 "gruppespill":      d.get("gruppespill", []),
                 "utslagsrunder":    [],
+                "bonus":            {},
             }
         print(f"  → {len(deltakere)} test-deltakere")
     else:
@@ -945,6 +1131,7 @@ def main():
         print(f"  {deltaker['navn']} ({did}): {resultat['poeng_totalt']}p "
               f"(gruppe: {resultat['poeng_gruppespill']}p, "
               f"utslagsrunder: {resultat['poeng_utslagsrunder']}p, "
+              f"bonus: {resultat.get('poeng_bonus', 0)}p, "
               f"turneringsvinner: {resultat['poeng_turneringsvinner']}p)")
 
     # Skriv data.js
