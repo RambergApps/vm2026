@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-06T16:04:31Z
+// Sist oppdatert: 2026-06-06T17:34:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-06T16:04:31Z",
+  "sist_oppdatert": "2026-06-06T17:34:04Z",
   "stilling": [
     {
       "navn": "Alex Myrvokd",
@@ -8786,6 +8786,884 @@ const VM_DATA = {
       "plass": 10
     },
     {
+      "navn": "Kjetil bjerke",
+      "deltaker_id": "kjetil_bjerke",
+      "poeng_totalt": 0,
+      "poeng_gruppespill": 0,
+      "poeng_utslagsrunder": 0,
+      "poeng_bonus": 0,
+      "poeng_turneringsvinner": 0,
+      "turneringsvinner": "France",
+      "turneringsvinner_riktig": false,
+      "tippinger": [
+        {
+          "kamp_id": "Mexico_South_Africa_2026_06_11",
+          "hjemmelag": "Mexico",
+          "bortelag": "South Africa",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "South_Korea_Czech_Republic_2026_06_11",
+          "hjemmelag": "South Korea",
+          "bortelag": "Czech Republic",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Czech_Republic_South_Africa_2026_06_18",
+          "hjemmelag": "Czech Republic",
+          "bortelag": "South Africa",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Mexico_South_Korea_2026_06_18",
+          "hjemmelag": "Mexico",
+          "bortelag": "South Korea",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Czech_Republic_Mexico_2026_06_24",
+          "hjemmelag": "Czech Republic",
+          "bortelag": "Mexico",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "South_Africa_South_Korea_2026_06_24",
+          "hjemmelag": "South Africa",
+          "bortelag": "South Korea",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Canada_Bosnia___Herzegovina_2026_06_12",
+          "hjemmelag": "Canada",
+          "bortelag": "Bosnia & Herzegovina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Qatar_Switzerland_2026_06_13",
+          "hjemmelag": "Qatar",
+          "bortelag": "Switzerland",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Bosnia & Herzegovina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Canada_Qatar_2026_06_18",
+          "hjemmelag": "Canada",
+          "bortelag": "Qatar",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Switzerland_Canada_2026_06_24",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Canada",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
+          "hjemmelag": "Bosnia & Herzegovina",
+          "bortelag": "Qatar",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Brazil_Morocco_2026_06_13",
+          "hjemmelag": "Brazil",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Haiti_Scotland_2026_06_13",
+          "hjemmelag": "Haiti",
+          "bortelag": "Scotland",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Scotland_Morocco_2026_06_19",
+          "hjemmelag": "Scotland",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Brazil_Haiti_2026_06_19",
+          "hjemmelag": "Brazil",
+          "bortelag": "Haiti",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Scotland_Brazil_2026_06_24",
+          "hjemmelag": "Scotland",
+          "bortelag": "Brazil",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Morocco_Haiti_2026_06_24",
+          "hjemmelag": "Morocco",
+          "bortelag": "Haiti",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "USA_Paraguay_2026_06_12",
+          "hjemmelag": "USA",
+          "bortelag": "Paraguay",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Australia_Turkey_2026_06_13",
+          "hjemmelag": "Australia",
+          "bortelag": "Turkey",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "USA_Australia_2026_06_19",
+          "hjemmelag": "USA",
+          "bortelag": "Australia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Turkey_Paraguay_2026_06_19",
+          "hjemmelag": "Turkey",
+          "bortelag": "Paraguay",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Turkey_USA_2026_06_25",
+          "hjemmelag": "Turkey",
+          "bortelag": "USA",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Paraguay_Australia_2026_06_25",
+          "hjemmelag": "Paraguay",
+          "bortelag": "Australia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Germany_Cura_ao_2026_06_14",
+          "hjemmelag": "",
+          "bortelag": "",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Ecuador_2026_06_14",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Ecuador",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Germany_Ivory_Coast_2026_06_20",
+          "hjemmelag": "Germany",
+          "bortelag": "Ivory Coast",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Ecuador_Cura_ao_2026_06_20",
+          "hjemmelag": "",
+          "bortelag": "",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Cura_ao_Ivory_Coast_2026_06_25",
+          "hjemmelag": "",
+          "bortelag": "",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Ecuador_Germany_2026_06_25",
+          "hjemmelag": "Ecuador",
+          "bortelag": "Germany",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Netherlands_Japan_2026_06_14",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Japan",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Sweden_Tunisia_2026_06_14",
+          "hjemmelag": "Sweden",
+          "bortelag": "Tunisia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Netherlands_Sweden_2026_06_20",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Sweden",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Tunisia_Japan_2026_06_20",
+          "hjemmelag": "Tunisia",
+          "bortelag": "Japan",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Japan_Sweden_2026_06_25",
+          "hjemmelag": "Japan",
+          "bortelag": "Sweden",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Tunisia_Netherlands_2026_06_25",
+          "hjemmelag": "Tunisia",
+          "bortelag": "Netherlands",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Egypt_2026_06_15",
+          "hjemmelag": "Belgium",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Iran_New_Zealand_2026_06_15",
+          "hjemmelag": "Iran",
+          "bortelag": "New Zealand",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Iran_2026_06_21",
+          "hjemmelag": "Belgium",
+          "bortelag": "Iran",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "New_Zealand_Egypt_2026_06_21",
+          "hjemmelag": "New Zealand",
+          "bortelag": "Egypt",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Egypt_Iran_2026_06_26",
+          "hjemmelag": "Egypt",
+          "bortelag": "Iran",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "New_Zealand_Belgium_2026_06_26",
+          "hjemmelag": "New Zealand",
+          "bortelag": "Belgium",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Cape_Verde_2026_06_15",
+          "hjemmelag": "Spain",
+          "bortelag": "Cape Verde",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Saudi_Arabia_Uruguay_2026_06_15",
+          "hjemmelag": "Saudi Arabia",
+          "bortelag": "Uruguay",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
+          "hjemmelag": "Spain",
+          "bortelag": "Saudi Arabia",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Uruguay_Cape_Verde_2026_06_21",
+          "hjemmelag": "Uruguay",
+          "bortelag": "Cape Verde",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Cape_Verde_Saudi_Arabia_2026_06_26",
+          "hjemmelag": "Cape Verde",
+          "bortelag": "Saudi Arabia",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Uruguay_Spain_2026_06_26",
+          "hjemmelag": "Uruguay",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "France_Senegal_2026_06_16",
+          "hjemmelag": "France",
+          "bortelag": "Senegal",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Iraq_Norway_2026_06_16",
+          "hjemmelag": "Iraq",
+          "bortelag": "Norway",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "France_Iraq_2026_06_22",
+          "hjemmelag": "France",
+          "bortelag": "Iraq",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Norway_Senegal_2026_06_22",
+          "hjemmelag": "Norway",
+          "bortelag": "Senegal",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Norway_France_2026_06_26",
+          "hjemmelag": "Norway",
+          "bortelag": "France",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Senegal_Iraq_2026_06_26",
+          "hjemmelag": "Senegal",
+          "bortelag": "Iraq",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Algeria_2026_06_16",
+          "hjemmelag": "Argentina",
+          "bortelag": "Algeria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Austria_Jordan_2026_06_16",
+          "hjemmelag": "Austria",
+          "bortelag": "Jordan",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Austria_2026_06_22",
+          "hjemmelag": "Argentina",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Jordan_Algeria_2026_06_22",
+          "hjemmelag": "Jordan",
+          "bortelag": "Algeria",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Algeria_Austria_2026_06_27",
+          "hjemmelag": "Algeria",
+          "bortelag": "Austria",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Jordan_Argentina_2026_06_27",
+          "hjemmelag": "Jordan",
+          "bortelag": "Argentina",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Portugal_DR_Congo_2026_06_17",
+          "hjemmelag": "Portugal",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Uzbekistan_Colombia_2026_06_17",
+          "hjemmelag": "Uzbekistan",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Portugal_Uzbekistan_2026_06_23",
+          "hjemmelag": "Portugal",
+          "bortelag": "Uzbekistan",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Colombia_DR_Congo_2026_06_23",
+          "hjemmelag": "Colombia",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Colombia_Portugal_2026_06_27",
+          "hjemmelag": "Colombia",
+          "bortelag": "Portugal",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
+          "hjemmelag": "DR Congo",
+          "bortelag": "Uzbekistan",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "England_Croatia_2026_06_17",
+          "hjemmelag": "England",
+          "bortelag": "Croatia",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Ghana_Panama_2026_06_17",
+          "hjemmelag": "Ghana",
+          "bortelag": "Panama",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "England_Ghana_2026_06_23",
+          "hjemmelag": "England",
+          "bortelag": "Ghana",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Panama_Croatia_2026_06_23",
+          "hjemmelag": "Panama",
+          "bortelag": "Croatia",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Panama_England_2026_06_27",
+          "hjemmelag": "Panama",
+          "bortelag": "England",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Croatia_Ghana_2026_06_27",
+          "hjemmelag": "Croatia",
+          "bortelag": "Ghana",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "runde": "gruppe"
+        }
+      ],
+      "plass": 11
+    },
+    {
       "navn": "Magnus Børrud",
       "deltaker_id": "magnus_boerrud",
       "poeng_totalt": 0,
@@ -9661,7 +10539,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 11
+      "plass": 12
     },
     {
       "navn": "Marita Hauge Gjerde",
@@ -10539,7 +11417,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 12
+      "plass": 13
     },
     {
       "navn": "Pål André Nilsen",
@@ -11417,7 +12295,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 13
+      "plass": 14
     },
     {
       "navn": "Sebastian Luranc",
@@ -12295,7 +13173,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 14
+      "plass": 15
     },
     {
       "navn": "sergio gomes",
@@ -13173,7 +14051,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 15
+      "plass": 16
     },
     {
       "navn": "Sjur Revheim",
@@ -14051,7 +14929,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 16
+      "plass": 17
     },
     {
       "navn": "Thomas Lindland",
@@ -14929,7 +15807,7 @@ const VM_DATA = {
           "runde": "gruppe"
         }
       ],
-      "plass": 17
+      "plass": 18
     }
   ]
 };
