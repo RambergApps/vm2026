@@ -126,6 +126,31 @@ def kamp_id(team1, team2, dato):
         return "".join(c if c.isalnum() else "_" for c in s)
     return f"{rens(team1)}_{rens(team2)}_{rens(dato)}"
 
+def kamp_id_til_ascii(kid):
+    """
+    Konverterer en kamp-ID til ASCII-only format.
+    Brukes for å matche tippinger generert av JavaScript der
+    spesialtegn (f.eks. ç i Curaçao) erstattes med _.
+    """
+    return "".join(c if (c.isascii() and c.isalnum()) or c == "_" else "_" for c in kid)
+
+def bygg_ascii_lookup(resultat_lookup):
+    """
+    Bygger en sekundær lookup med ASCII-normaliserte kamp-ID-er.
+    Fanger opp tippinger der JavaScript har erstattet f.eks. ç med _.
+    Returnerer kun oppføringer der ASCII-ID avviker fra original-ID.
+    """
+    ascii_lookup = {}
+    for kid, val in resultat_lookup.items():
+        ascii_kid = kamp_id_til_ascii(kid)
+        if ascii_kid != kid:
+            ascii_lookup[ascii_kid] = val
+    if ascii_lookup:
+        print(f"  -> ASCII-fallback lookup: {len(ascii_lookup)} kamp(er) med spesialtegn")
+        for k in ascii_lookup:
+            print(f"     {k}")
+    return ascii_lookup
+
 def lag_deltaker_id(navn):
     """
     Genererer en stabil, URL-sikker deltaker_id fra navn.
@@ -681,7 +706,7 @@ def normaliser_bonus_svar(svar):
     return svar
 
 
-def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None):
+def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None, ascii_lookup=None):
     """Regner totale poeng for én deltaker."""
     navn                 = deltaker["navn"]
     poeng_totalt         = 0
@@ -695,6 +720,8 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
     for t in deltaker.get("gruppespill", []):
         kid = t.get("kamp_id", "")
         res = resultat_lookup.get(kid)
+        if res is None and ascii_lookup:
+            res = ascii_lookup.get(kid)
 
         if not res or not res["ferdig"]:
             tipping_detaljer.append({
@@ -737,6 +764,8 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
         kid   = t.get("kamp_id", "")
         runde = t.get("runde", "r32")
         res   = resultat_lookup.get(kid)
+        if res is None and ascii_lookup:
+            res = ascii_lookup.get(kid)
 
         if not res or not res["ferdig"]:
             continue
@@ -1134,11 +1163,14 @@ def main():
     print("\nSkriver deltakere.json...")
     skriv_deltakere_json(deltakere)
 
+    # Bygg ASCII-fallback lookup for tippinger med spesialtegn (f.eks. Curaçao → Cura_ao)
+    ascii_lookup = bygg_ascii_lookup(resultat_lookup)
+
     # Regn poeng
     print("\nRegner poeng...")
     stilling = []
     for did, deltaker in deltakere.items():
-        resultat = regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner)
+        resultat = regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner, ascii_lookup)
         stilling.append(resultat)
         print(f"  {deltaker['navn']} ({did}): {resultat['poeng_totalt']}p "
               f"(gruppe: {resultat['poeng_gruppespill']}p, "
