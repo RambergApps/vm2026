@@ -31,7 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── BAKGRUNN ── */
 .bg-grid {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image:
@@ -46,7 +45,6 @@ body {
   pointer-events: none; z-index: 0;
 }
 
-/* ── HERO ── */
 .hero {
   position: relative; z-index: 1;
   padding: 56px 24px 48px;
@@ -84,7 +82,6 @@ body {
   color: var(--muted); margin-top: 8px;
 }
 
-/* Countdown */
 .countdown {
   display: inline-flex; gap: 4px; align-items: center;
   margin-top: 28px;
@@ -102,7 +99,6 @@ body {
 .cd-lbl { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
 .cd-sep { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--border); align-self: flex-start; padding-top: 2px; }
 
-/* ── STATS-BANNER ── */
 .stats-banner {
   position: relative; z-index: 1;
   display: flex; justify-content: center; gap: 0;
@@ -122,7 +118,6 @@ body {
 }
 .stat-lbl { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
 
-/* ── NAVIGASJON ── */
 .nav {
   position: relative; z-index: 1;
   display: flex; justify-content: center; gap: 0;
@@ -140,18 +135,15 @@ body {
 .nav-tab:hover { color: var(--text); }
 .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* ── CONTAINER ── */
 .container {
   position: relative; z-index: 1;
   max-width: 860px; margin: 0 auto;
   padding: 32px 16px 80px;
 }
 
-/* ── SEKSJON ── */
 .seksjon { display: none; }
 .seksjon.active { display: block; }
 
-/* ── TOPP 3 PODIUM ── */
 .podium {
   display: grid; grid-template-columns: 1fr 1.1fr 1fr;
   gap: 8px; margin-bottom: 32px; align-items: end;
@@ -185,7 +177,6 @@ body {
   margin-top: 4px; font-family: 'Barlow Condensed', sans-serif;
 }
 
-/* ── STILLING-TABELL ── */
 .stilling-header {
   display: grid;
   grid-template-columns: 40px 1fr 60px 60px 60px 80px;
@@ -217,7 +208,10 @@ body {
 .rad-navn {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px; font-weight: 700; text-transform: uppercase;
+  color: var(--accent); text-decoration: underline; text-decoration-color: rgba(0,230,118,.3);
+  cursor: pointer; display: inline;
 }
+.rad-navn:hover { text-decoration-color: var(--accent); }
 .rad-vinner {
   font-size: 11px; color: var(--muted); margin-top: 1px;
   font-family: 'Barlow Condensed', sans-serif;
@@ -233,7 +227,6 @@ body {
   font-size: 22px; text-align: right; color: var(--text);
 }
 
-/* Expandert rad */
 .detaljer {
   display: none;
   background: var(--surface);
@@ -263,7 +256,115 @@ body {
 .kamp-poeng.p2 { color: var(--text); }
 .kamp-poeng.p4 { color: var(--gold); }
 
-/* ── INGEN DATA ── */
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(6,9,18,.88);
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  padding: 24px 16px;
+}
+.modal-overlay.vis { display: flex; align-items: flex-start; justify-content: center; }
+.modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%; max-width: 640px;
+  margin: auto;
+  animation: modalInn .2s ease;
+}
+@keyframes modalInn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+.modal-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.modal-navn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; line-height: 1; color: var(--text);
+}
+.modal-meta {
+  font-size: 12px; color: var(--muted); margin-top: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.modal-lukk {
+  background: none; border: none; color: var(--muted);
+  font-size: 22px; cursor: pointer; padding: 4px; line-height: 1;
+  flex-shrink: 0; margin-left: 12px;
+  transition: color .15s;
+}
+.modal-lukk:hover { color: var(--text); }
+
+.modal-stats {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+.modal-stat {
+  flex: 1; text-align: center; padding: 14px 8px;
+  border-right: 1px solid var(--border);
+}
+.modal-stat:last-child { border-right: none; }
+.modal-stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; line-height: 1; color: var(--accent);
+}
+.modal-stat-lbl {
+  font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-top: 3px;
+}
+
+.modal-body { padding: 16px 20px 20px; }
+
+.modal-runde-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted); padding: 10px 0 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px; margin-top: 8px;
+}
+.modal-runde-tittel:first-child { margin-top: 0; }
+
+.modal-kamp {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px; align-items: center;
+  padding: 7px 4px;
+  border-bottom: 1px solid rgba(30,45,74,.4);
+  font-size: 13px;
+}
+.modal-kamp:last-child { border-bottom: none; }
+
+.modal-kamp-lag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13.5px; font-weight: 700; text-transform: uppercase;
+  color: var(--text); line-height: 1.2;
+}
+.modal-kamp-lag .dato { font-size: 10px; color: var(--muted); font-weight: 400; text-transform: none; display: block; margin-top: 1px; }
+
+.modal-kamp-score {
+  text-align: center; min-width: 110px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px;
+}
+.modal-score-tippa {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+  color: var(--text);
+}
+.modal-score-tippa.riktig { color: var(--accent); }
+.modal-score-tippa.delvis { color: var(--gold); }
+.modal-score-actual {
+  font-size: 11px; color: var(--muted); margin-top: 1px;
+}
+.modal-kamp-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  min-width: 36px; text-align: right;
+}
+.modal-kamp-poeng.p0 { color: var(--muted); }
+.modal-kamp-poeng.pp { color: var(--text); }
+.modal-kamp-poeng.phigh { color: var(--gold); }
+.modal-kamp-pending { color: var(--muted); font-size: 11px; text-align: right; }
+
 .ingen-data {
   text-align: center; padding: 64px 24px; color: var(--muted);
 }
@@ -283,14 +384,12 @@ body {
 }
 .ingen-data a:hover { background: #00ff85; transform: translateY(-1px); }
 
-/* ── OPPDATERT ── */
 .sist-oppdatert {
   text-align: center; font-size: 11px; color: var(--muted);
   font-family: 'Barlow Condensed', sans-serif; letter-spacing: .08em;
   padding: 16px 0 0;
 }
 
-/* ── RUNDE-FILTER ── */
 .runde-filter {
   display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
 }
@@ -312,6 +411,7 @@ body {
   .stilling-header .col-gruppe,
   .stilling-rad .col-gruppe { display: none; }
   .stat-item { padding: 16px 20px; }
+  .modal-kamp { grid-template-columns: 1fr auto auto; }
 }
 
 @media print {
@@ -325,6 +425,11 @@ body {
 <div class="bg-grid"></div>
 <div class="bg-glow"></div>
 
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="lukkModalKlikk(event)">
+  <div class="modal" id="modalInnhold"></div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-badge">
@@ -333,7 +438,6 @@ body {
   </div>
   <h1>VM <span class="year">2026</span></h1>
   <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
-
   <div class="countdown" id="countdown">
     <div class="cd-unit"><div class="cd-val" id="cd-d">--</div><div class="cd-lbl">Dager</div></div>
     <div class="cd-sep">:</div>
@@ -362,7 +466,7 @@ body {
 
 <div class="container">
 
-  <!-- ── STILLING ── -->
+  <!-- STILLING -->
   <div class="seksjon active" id="stilling">
     <div id="stillingsinnhold">
       <div class="ingen-data">
@@ -374,17 +478,16 @@ body {
     <div class="sist-oppdatert" id="sistOppdatert"></div>
   </div>
 
-  <!-- ── DETALJER ── -->
+  <!-- DETALJER -->
   <div class="seksjon" id="detaljer-seksjon">
     <div class="runde-filter" id="rundeFilter"></div>
     <div id="detaljertabell"></div>
   </div>
 
-  <!-- ── REGLER ── -->
+  <!-- REGLER -->
   <div class="seksjon" id="regler">
     <div style="max-width:600px">
       <h2 style="font-family:'Bebas Neue',sans-serif;font-size:36px;margin-bottom:24px;color:var(--accent)">Poengregler</h2>
-
       <table style="width:100%;border-collapse:collapse;margin-bottom:32px">
         <thead>
           <tr>
@@ -395,22 +498,18 @@ body {
         </thead>
         <tbody id="reglerTabell"></tbody>
       </table>
-
       <div style="background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Turneringsvinner</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold)">70 poeng</div>
         <div style="font-size:13px;color:var(--muted);margin-top:4px">Tippa ved registrering — kan ikke endres</div>
       </div>
-
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px;font-size:13px;color:var(--muted);line-height:1.5">
         Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter. Ekstraomganger, straffer og hvilket lag som går videre påvirker ikke kamp-poengene.
       </div>
-
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Maks poeng totalt</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent)">601</div>
       </div>
-
       <div style="margin-top:24px;text-align:center">
         <a href="tippe/" style="display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:14px 40px;border-radius:6px;background:var(--accent);color:#000;text-decoration:none">
           ⚽ Lever tipping
@@ -425,7 +524,6 @@ body {
   document.write('<script src="data/data.js?v=' + Date.now() + '"><\/script>');
 </script>
 <script>
-// ── POENGREGLER ────────────────────────────────────────────
 const REGLER = [
   { type: "Gruppespill",   utfall: 2, eksakt: 4 },
   { type: "Runde av 32",   utfall: 3, eksakt: 4 },
@@ -435,7 +533,6 @@ const REGLER = [
   { type: "Finale",        utfall: 7, eksakt: 4 },
 ];
 
-// ── REGLER-TABELL ──────────────────────────────────────────
 document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
   <tr>
     <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">${r.type}</td>
@@ -444,7 +541,6 @@ document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
   </tr>
 `).join("");
 
-// ── COUNTDOWN ──────────────────────────────────────────────
 const VM_START = new Date("2026-06-11T19:00:00+02:00");
 
 function oppdaterCountdown() {
@@ -467,6 +563,114 @@ function oppdaterCountdown() {
 oppdaterCountdown();
 setInterval(oppdaterCountdown, 1000);
 
+// ── MODAL ─────────────────────────────────────────────────
+const RUNDE_NAVN = { gruppe:"Gruppespill", r32:"Runde av 32", r16:"Runde av 16", qf:"Kvartfinale", sf:"Semifinale", final:"Finale" };
+
+function aapneModal(event, i) {
+  event.stopPropagation();
+  const d = VM_DATA.stilling[i];
+  if (!d) return;
+
+  const ferdigeKamper  = (d.tippinger || []).filter(t => t.ferdig);
+  const ventende       = (d.tippinger || []).filter(t => !t.ferdig);
+  const poengGruppe    = d.poeng_gruppespill || 0;
+  const poengUtsl      = d.poeng_utslagsrunder || 0;
+  const poengVinner    = d.poeng_turneringsvinner || 0;
+  const vinnerCls      = d.turneringsvinner_riktig ? 'color:var(--accent)' : 'color:var(--muted)';
+
+  // Gruppér tippinger per runde
+  const rundeRekkefølge = ['gruppe','r32','r16','qf','sf','final'];
+  const perRunde = {};
+  (d.tippinger || []).forEach(t => {
+    const r = t.runde || 'gruppe';
+    if (!perRunde[r]) perRunde[r] = [];
+    perRunde[r].push(t);
+  });
+
+  let kampHTML = '';
+  rundeRekkefølge.forEach(runde => {
+    const kamper = perRunde[runde];
+    if (!kamper?.length) return;
+
+    kampHTML += `<div class="modal-runde-tittel">${RUNDE_NAVN[runde] || runde}</div>`;
+    kamper.forEach(t => {
+      if (t.ferdig) {
+        const eksakt = t.eksakt;
+        const riktig = t.riktig_utfall;
+        const scoreCls = eksakt ? 'riktig' : riktig ? 'delvis' : '';
+        const poengCls = t.poeng === 0 ? 'p0' : t.poeng >= 6 ? 'phigh' : 'pp';
+        kampHTML += `
+          <div class="modal-kamp">
+            <div class="modal-kamp-lag">
+              ${escHTML(t.hjemmelag || '')} – ${escHTML(t.bortelag || '')}
+            </div>
+            <div class="modal-kamp-score">
+              <div class="modal-score-tippa ${scoreCls}">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div>
+              <div class="modal-score-actual">Fasit: ${t.faktisk_h}–${t.faktisk_b}</div>
+            </div>
+            <div class="modal-kamp-poeng ${poengCls}">${t.poeng}p</div>
+          </div>`;
+      } else {
+        kampHTML += `
+          <div class="modal-kamp">
+            <div class="modal-kamp-lag">
+              ${escHTML(t.hjemmelag || '?')} – ${escHTML(t.bortelag || '?')}
+            </div>
+            <div class="modal-kamp-score">
+              <div class="modal-score-tippa">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div>
+              <div class="modal-score-actual">Ikke spilt</div>
+            </div>
+            <div class="modal-kamp-pending">–</div>
+          </div>`;
+      }
+    });
+  });
+
+  document.getElementById("modalInnhold").innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">${escHTML(d.navn)}</div>
+        <div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div>
+      </div>
+      <button class="modal-lukk" onclick="lukkModal()">✕</button>
+    </div>
+    <div class="modal-stats">
+      <div class="modal-stat">
+        <div class="modal-stat-val">${d.poeng_totalt}</div>
+        <div class="modal-stat-lbl">Totalt</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-val">${poengGruppe}</div>
+        <div class="modal-stat-lbl">Gruppe</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-val">${poengUtsl}</div>
+        <div class="modal-stat-lbl">Utslag</div>
+      </div>
+      <div class="modal-stat">
+        <div class="modal-stat-val">${ferdigeKamper.length}</div>
+        <div class="modal-stat-lbl">Ferdig</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      ${kampHTML || '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>'}
+    </div>`;
+
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function lukkModal() {
+  document.getElementById("modalOverlay").classList.remove("vis");
+  document.body.style.overflow = "";
+}
+
+function lukkModalKlikk(e) {
+  if (e.target === document.getElementById("modalOverlay")) lukkModal();
+}
+
+document.addEventListener("keydown", e => { if (e.key === "Escape") lukkModal(); });
+
 // ── BYGG STILLING ──────────────────────────────────────────
 function byggStilling() {
   if (typeof VM_DATA === "undefined" || !VM_DATA.stilling?.length) {
@@ -482,9 +686,7 @@ function byggStilling() {
 
   const stilling = VM_DATA.stilling;
   const topp3    = stilling.slice(0, 3);
-  const resten   = stilling.slice(3);
 
-  // Stats
   document.getElementById("statsBanner").style.display = "flex";
   document.getElementById("statDeltakere").textContent = stilling.length;
   document.getElementById("statLeder").textContent     = stilling[0]?.navn.split(" ")[0] || "—";
@@ -492,7 +694,6 @@ function byggStilling() {
   const ferdigeKamper = stilling[0]?.tippinger?.filter(t => t.ferdig)?.length || 0;
   document.getElementById("statKamper").textContent    = ferdigeKamper;
 
-  // Podium
   let podiumHTML = '<div class="podium">';
   const podiumRekkefølge = topp3.length >= 2 ? [topp3[1], topp3[0], topp3[2]] : topp3;
   const podiumKlasser = topp3.length >= 2 ? ["p2","p1","p3"] : ["p1"];
@@ -510,7 +711,6 @@ function byggStilling() {
   });
   podiumHTML += '</div>';
 
-  // Tabell
   let tabellHTML = `
     <div class="stilling-header">
       <div>#</div><div>Navn</div>
@@ -529,7 +729,7 @@ function byggStilling() {
       <div class="stilling-rad" onclick="toggleDetaljer(${i})" id="rad-${i}">
         <div class="plass-num ${plassCls}">${plass}</div>
         <div>
-          <div class="rad-navn">${escHTML(d.navn)}</div>
+          <span class="rad-navn" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</span>
           <div class="rad-vinner ${vinnerCls}">🏆 ${escHTML(d.turneringsvinner || "—")}</div>
         </div>
         <div class="rad-tall col-gruppe">${d.poeng_gruppespill}</div>
@@ -544,32 +744,26 @@ function byggStilling() {
 
   document.getElementById("stillingsinnhold").innerHTML = podiumHTML + tabellHTML;
 
-  // Sist oppdatert
   if (VM_DATA.sist_oppdatert) {
     const dato = new Date(VM_DATA.sist_oppdatert);
     document.getElementById("sistOppdatert").textContent =
       "Sist oppdatert: " + dato.toLocaleString("no-NO", {day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
   }
 
-  // Bygg detaljert tabell
   byggDetaljertTabell();
 }
 
 function byggDetaljer(d) {
   if (!d.tippinger?.length) return '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
-
   const ferdigeKamper = d.tippinger.filter(t => t.ferdig);
   if (!ferdigeKamper.length) return '<p style="color:var(--muted);font-size:13px">Ingen kamper ferdigspilt ennå</p>';
-
   const rundeNavn = { gruppe:"Gruppespill", r32:"R32", r16:"R16", qf:"QF", sf:"SF", final:"Finale" };
-
   let html = '<div class="detaljer-tittel">Tippinger</div>';
   ferdigeKamper.forEach(t => {
     const eksakt = t.eksakt;
     const scoreCls = eksakt ? "riktig" : "";
     const poengCls = t.poeng === 0 ? "p0" : t.poeng <= 2 ? "p2" : "p4";
     const runde = rundeNavn[t.runde] || t.runde || "";
-
     html += `
       <div class="kamp-rad">
         <div class="kamp-lag">${escHTML(t.hjemmelag || "")} – ${escHTML(t.bortelag || "")}</div>
@@ -581,7 +775,6 @@ function byggDetaljer(d) {
         <div class="kamp-poeng ${poengCls}">${t.poeng}p</div>
       </div>`;
   });
-
   return html;
 }
 
@@ -597,22 +790,16 @@ function toggleDetaljer(i) {
   }
 }
 
-// ── DETALJERT TABELL ───────────────────────────────────────
 let aktivRunde = "alle";
 
 function byggDetaljertTabell() {
   if (!VM_DATA?.stilling?.length) return;
-
   const runder = ["alle","gruppe","r32","r16","qf","sf","final"];
   const rundeNavn = { alle:"Alle",gruppe:"Gruppe",r32:"R32",r16:"R16",qf:"QF",sf:"SF",final:"Finale" };
-
-  // Filter-knapper
   document.getElementById("rundeFilter").innerHTML = runder.map(r => `
     <button class="runde-btn ${r === aktivRunde ? 'active' : ''}"
       onclick="filtrerRunde('${r}')">${rundeNavn[r]}</button>
   `).join("");
-
-  // Tabell
   let html = `
     <div class="stilling-header">
       <div>#</div><div>Navn</div>
@@ -621,7 +808,6 @@ function byggDetaljertTabell() {
       <div style="text-align:right">Turn.</div>
       <div style="text-align:right">Totalt</div>
     </div>`;
-
   VM_DATA.stilling.forEach((d, i) => {
     const poengGruppe = aktivRunde === "alle" ? d.poeng_gruppespill :
       aktivRunde === "gruppe" ? d.poeng_gruppespill : 0;
@@ -629,18 +815,16 @@ function byggDetaljertTabell() {
       aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((s,t) => s+t.poeng, 0) || 0) : 0;
     const poengTurn = aktivRunde === "alle" ? d.poeng_turneringsvinner : 0;
     const totalt = aktivRunde === "alle" ? d.poeng_totalt : poengGruppe + poengUtsl;
-
     html += `
       <div class="stilling-rad">
         <div class="plass-num ${i<3?'p'+(i+1):''}">${i+1}</div>
-        <div><div class="rad-navn">${escHTML(d.navn)}</div></div>
+        <div><div class="rad-navn" style="cursor:pointer" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</div></div>
         <div class="rad-tall col-gruppe">${poengGruppe}</div>
         <div class="rad-tall">${poengUtsl}</div>
         <div class="rad-tall">${poengTurn}</div>
         <div class="rad-totalt">${totalt}</div>
       </div>`;
   });
-
   document.getElementById("detaljertabell").innerHTML = html;
 }
 
@@ -649,7 +833,6 @@ function filtrerRunde(runde) {
   byggDetaljertTabell();
 }
 
-// ── NAVIGASJON ─────────────────────────────────────────────
 function byttSeksjon(id, el) {
   document.querySelectorAll(".seksjon").forEach(s => s.classList.remove("active"));
   document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
@@ -663,7 +846,6 @@ function escHTML(str) {
     .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 }
 
-// ── START ──────────────────────────────────────────────────
 byggStilling();
 </script>
 </body>
