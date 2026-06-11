@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-11T16:36:26Z
+// Sist oppdatert: 2026-06-11T17:47:00Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-11T16:36:26Z",
+  "sist_oppdatert": "2026-06-11T17:47:00Z",
   "stilling": [
     {
       "navn": "Alex Myrvokd",
@@ -16702,7 +16702,7 @@ const VM_DATA = {
           "kamp_id": "Mexico_South_Africa_2026_06_11",
           "hjemmelag": "Mexico",
           "bortelag": "South Africa",
-          "tippa_h": 2,
+          "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": null,
           "faktisk_b": null,
