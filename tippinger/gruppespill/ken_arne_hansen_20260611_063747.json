@@ -1,0 +1,658 @@
+{
+  "gruppespill": [
+    {
+      "borte": 0,
+      "bortelag": "South Africa",
+      "dato": "2026-06-11",
+      "gruppe": "Group A",
+      "hjemme": 1,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_South_Africa_2026_06_11"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Czech Republic",
+      "dato": "2026-06-11",
+      "gruppe": "Group A",
+      "hjemme": 1,
+      "hjemmelag": "South Korea",
+      "kamp_id": "South_Korea_Czech_Republic_2026_06_11"
+    },
+    {
+      "borte": 0,
+      "bortelag": "South Africa",
+      "dato": "2026-06-18",
+      "gruppe": "Group A",
+      "hjemme": 1,
+      "hjemmelag": "Czech Republic",
+      "kamp_id": "Czech_Republic_South_Africa_2026_06_18"
+    },
+    {
+      "borte": 0,
+      "bortelag": "South Korea",
+      "dato": "2026-06-18",
+      "gruppe": "Group A",
+      "hjemme": 2,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_South_Korea_2026_06_18"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Mexico",
+      "dato": "2026-06-24",
+      "gruppe": "Group A",
+      "hjemme": 2,
+      "hjemmelag": "Czech Republic",
+      "kamp_id": "Czech_Republic_Mexico_2026_06_24"
+    },
+    {
+      "borte": 2,
+      "bortelag": "South Korea",
+      "dato": "2026-06-24",
+      "gruppe": "Group A",
+      "hjemme": 0,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_South_Korea_2026_06_24"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Bosnia & Herzegovina",
+      "dato": "2026-06-12",
+      "gruppe": "Group B",
+      "hjemme": 1,
+      "hjemmelag": "Canada",
+      "kamp_id": "Canada_Bosnia___Herzegovina_2026_06_12"
+    },
+    {
+      "borte": 3,
+      "bortelag": "Switzerland",
+      "dato": "2026-06-13",
+      "gruppe": "Group B",
+      "hjemme": 1,
+      "hjemmelag": "Qatar",
+      "kamp_id": "Qatar_Switzerland_2026_06_13"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Bosnia & Herzegovina",
+      "dato": "2026-06-18",
+      "gruppe": "Group B",
+      "hjemme": 2,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Qatar",
+      "dato": "2026-06-18",
+      "gruppe": "Group B",
+      "hjemme": 2,
+      "hjemmelag": "Canada",
+      "kamp_id": "Canada_Qatar_2026_06_18"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Canada",
+      "dato": "2026-06-24",
+      "gruppe": "Group B",
+      "hjemme": 2,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Canada_2026_06_24"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Qatar",
+      "dato": "2026-06-24",
+      "gruppe": "Group B",
+      "hjemme": 2,
+      "hjemmelag": "Bosnia & Herzegovina",
+      "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Morocco",
+      "dato": "2026-06-13",
+      "gruppe": "Group C",
+      "hjemme": 2,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Morocco_2026_06_13"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Scotland",
+      "dato": "2026-06-13",
+      "gruppe": "Group C",
+      "hjemme": 0,
+      "hjemmelag": "Haiti",
+      "kamp_id": "Haiti_Scotland_2026_06_13"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Morocco",
+      "dato": "2026-06-19",
+      "gruppe": "Group C",
+      "hjemme": 1,
+      "hjemmelag": "Scotland",
+      "kamp_id": "Scotland_Morocco_2026_06_19"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Haiti",
+      "dato": "2026-06-19",
+      "gruppe": "Group C",
+      "hjemme": 4,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Haiti_2026_06_19"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Brazil",
+      "dato": "2026-06-24",
+      "gruppe": "Group C",
+      "hjemme": 0,
+      "hjemmelag": "Scotland",
+      "kamp_id": "Scotland_Brazil_2026_06_24"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Haiti",
+      "dato": "2026-06-24",
+      "gruppe": "Group C",
+      "hjemme": 3,
+      "hjemmelag": "Morocco",
+      "kamp_id": "Morocco_Haiti_2026_06_24"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Paraguay",
+      "dato": "2026-06-12",
+      "gruppe": "Group D",
+      "hjemme": 2,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Paraguay_2026_06_12"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Turkey",
+      "dato": "2026-06-13",
+      "gruppe": "Group D",
+      "hjemme": 1,
+      "hjemmelag": "Australia",
+      "kamp_id": "Australia_Turkey_2026_06_13"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Australia",
+      "dato": "2026-06-19",
+      "gruppe": "Group D",
+      "hjemme": 0,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Australia_2026_06_19"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Paraguay",
+      "dato": "2026-06-19",
+      "gruppe": "Group D",
+      "hjemme": 1,
+      "hjemmelag": "Turkey",
+      "kamp_id": "Turkey_Paraguay_2026_06_19"
+    },
+    {
+      "borte": 0,
+      "bortelag": "USA",
+      "dato": "2026-06-25",
+      "gruppe": "Group D",
+      "hjemme": 1,
+      "hjemmelag": "Turkey",
+      "kamp_id": "Turkey_USA_2026_06_25"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Australia",
+      "dato": "2026-06-25",
+      "gruppe": "Group D",
+      "hjemme": 1,
+      "hjemmelag": "Paraguay",
+      "kamp_id": "Paraguay_Australia_2026_06_25"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Curaçao",
+      "dato": "2026-06-14",
+      "gruppe": "Group E",
+      "hjemme": 2,
+      "hjemmelag": "Germany",
+      "kamp_id": "Germany_Cura_ao_2026_06_14"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ecuador",
+      "dato": "2026-06-14",
+      "gruppe": "Group E",
+      "hjemme": 0,
+      "hjemmelag": "Ivory Coast",
+      "kamp_id": "Ivory_Coast_Ecuador_2026_06_14"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Ivory Coast",
+      "dato": "2026-06-20",
+      "gruppe": "Group E",
+      "hjemme": 2,
+      "hjemmelag": "Germany",
+      "kamp_id": "Germany_Ivory_Coast_2026_06_20"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Curaçao",
+      "dato": "2026-06-20",
+      "gruppe": "Group E",
+      "hjemme": 2,
+      "hjemmelag": "Ecuador",
+      "kamp_id": "Ecuador_Cura_ao_2026_06_20"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Ivory Coast",
+      "dato": "2026-06-25",
+      "gruppe": "Group E",
+      "hjemme": 1,
+      "hjemmelag": "Curaçao",
+      "kamp_id": "Cura_ao_Ivory_Coast_2026_06_25"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Germany",
+      "dato": "2026-06-25",
+      "gruppe": "Group E",
+      "hjemme": 0,
+      "hjemmelag": "Ecuador",
+      "kamp_id": "Ecuador_Germany_2026_06_25"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Japan",
+      "dato": "2026-06-14",
+      "gruppe": "Group F",
+      "hjemme": 1,
+      "hjemmelag": "Netherlands",
+      "kamp_id": "Netherlands_Japan_2026_06_14"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Tunisia",
+      "dato": "2026-06-14",
+      "gruppe": "Group F",
+      "hjemme": 2,
+      "hjemmelag": "Sweden",
+      "kamp_id": "Sweden_Tunisia_2026_06_14"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Sweden",
+      "dato": "2026-06-20",
+      "gruppe": "Group F",
+      "hjemme": 2,
+      "hjemmelag": "Netherlands",
+      "kamp_id": "Netherlands_Sweden_2026_06_20"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Japan",
+      "dato": "2026-06-20",
+      "gruppe": "Group F",
+      "hjemme": 0,
+      "hjemmelag": "Tunisia",
+      "kamp_id": "Tunisia_Japan_2026_06_20"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Sweden",
+      "dato": "2026-06-25",
+      "gruppe": "Group F",
+      "hjemme": 1,
+      "hjemmelag": "Japan",
+      "kamp_id": "Japan_Sweden_2026_06_25"
+    },
+    {
+      "borte": 4,
+      "bortelag": "Netherlands",
+      "dato": "2026-06-25",
+      "gruppe": "Group F",
+      "hjemme": 0,
+      "hjemmelag": "Tunisia",
+      "kamp_id": "Tunisia_Netherlands_2026_06_25"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "dato": "2026-06-15",
+      "gruppe": "Group G",
+      "hjemme": 3,
+      "hjemmelag": "Belgium",
+      "kamp_id": "Belgium_Egypt_2026_06_15"
+    },
+    {
+      "borte": 1,
+      "bortelag": "New Zealand",
+      "dato": "2026-06-15",
+      "gruppe": "Group G",
+      "hjemme": 2,
+      "hjemmelag": "Iran",
+      "kamp_id": "Iran_New_Zealand_2026_06_15"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Iran",
+      "dato": "2026-06-21",
+      "gruppe": "Group G",
+      "hjemme": 2,
+      "hjemmelag": "Belgium",
+      "kamp_id": "Belgium_Iran_2026_06_21"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Egypt",
+      "dato": "2026-06-21",
+      "gruppe": "Group G",
+      "hjemme": 1,
+      "hjemmelag": "New Zealand",
+      "kamp_id": "New_Zealand_Egypt_2026_06_21"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Iran",
+      "dato": "2026-06-26",
+      "gruppe": "Group G",
+      "hjemme": 0,
+      "hjemmelag": "Egypt",
+      "kamp_id": "Egypt_Iran_2026_06_26"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "dato": "2026-06-26",
+      "gruppe": "Group G",
+      "hjemme": 0,
+      "hjemmelag": "New Zealand",
+      "kamp_id": "New_Zealand_Belgium_2026_06_26"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Cape Verde",
+      "dato": "2026-06-15",
+      "gruppe": "Group H",
+      "hjemme": 4,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Cape_Verde_2026_06_15"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Uruguay",
+      "dato": "2026-06-15",
+      "gruppe": "Group H",
+      "hjemme": 0,
+      "hjemmelag": "Saudi Arabia",
+      "kamp_id": "Saudi_Arabia_Uruguay_2026_06_15"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Saudi Arabia",
+      "dato": "2026-06-21",
+      "gruppe": "Group H",
+      "hjemme": 1,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Saudi_Arabia_2026_06_21"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Cape Verde",
+      "dato": "2026-06-21",
+      "gruppe": "Group H",
+      "hjemme": 3,
+      "hjemmelag": "Uruguay",
+      "kamp_id": "Uruguay_Cape_Verde_2026_06_21"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Saudi Arabia",
+      "dato": "2026-06-26",
+      "gruppe": "Group H",
+      "hjemme": 0,
+      "hjemmelag": "Cape Verde",
+      "kamp_id": "Cape_Verde_Saudi_Arabia_2026_06_26"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Spain",
+      "dato": "2026-06-26",
+      "gruppe": "Group H",
+      "hjemme": 0,
+      "hjemmelag": "Uruguay",
+      "kamp_id": "Uruguay_Spain_2026_06_26"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Senegal",
+      "dato": "2026-06-16",
+      "gruppe": "Group I",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Senegal_2026_06_16"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Norway",
+      "dato": "2026-06-16",
+      "gruppe": "Group I",
+      "hjemme": 0,
+      "hjemmelag": "Iraq",
+      "kamp_id": "Iraq_Norway_2026_06_16"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Iraq",
+      "dato": "2026-06-22",
+      "gruppe": "Group I",
+      "hjemme": 1,
+      "hjemmelag": "France",
+      "kamp_id": "France_Iraq_2026_06_22"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Senegal",
+      "dato": "2026-06-22",
+      "gruppe": "Group I",
+      "hjemme": 2,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_Senegal_2026_06_22"
+    },
+    {
+      "borte": 1,
+      "bortelag": "France",
+      "dato": "2026-06-26",
+      "gruppe": "Group I",
+      "hjemme": 1,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_France_2026_06_26"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Iraq",
+      "dato": "2026-06-26",
+      "gruppe": "Group I",
+      "hjemme": 1,
+      "hjemmelag": "Senegal",
+      "kamp_id": "Senegal_Iraq_2026_06_26"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Algeria",
+      "dato": "2026-06-16",
+      "gruppe": "Group J",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Algeria_2026_06_16"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Jordan",
+      "dato": "2026-06-16",
+      "gruppe": "Group J",
+      "hjemme": 1,
+      "hjemmelag": "Austria",
+      "kamp_id": "Austria_Jordan_2026_06_16"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Austria",
+      "dato": "2026-06-22",
+      "gruppe": "Group J",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Austria_2026_06_22"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Algeria",
+      "dato": "2026-06-22",
+      "gruppe": "Group J",
+      "hjemme": 2,
+      "hjemmelag": "Jordan",
+      "kamp_id": "Jordan_Algeria_2026_06_22"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Austria",
+      "dato": "2026-06-27",
+      "gruppe": "Group J",
+      "hjemme": 1,
+      "hjemmelag": "Algeria",
+      "kamp_id": "Algeria_Austria_2026_06_27"
+    },
+    {
+      "borte": 3,
+      "bortelag": "Argentina",
+      "dato": "2026-06-27",
+      "gruppe": "Group J",
+      "hjemme": 0,
+      "hjemmelag": "Jordan",
+      "kamp_id": "Jordan_Argentina_2026_06_27"
+    },
+    {
+      "borte": 0,
+      "bortelag": "DR Congo",
+      "dato": "2026-06-17",
+      "gruppe": "Group K",
+      "hjemme": 3,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_DR_Congo_2026_06_17"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Colombia",
+      "dato": "2026-06-17",
+      "gruppe": "Group K",
+      "hjemme": 0,
+      "hjemmelag": "Uzbekistan",
+      "kamp_id": "Uzbekistan_Colombia_2026_06_17"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Uzbekistan",
+      "dato": "2026-06-23",
+      "gruppe": "Group K",
+      "hjemme": 2,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Uzbekistan_2026_06_23"
+    },
+    {
+      "borte": 0,
+      "bortelag": "DR Congo",
+      "dato": "2026-06-23",
+      "gruppe": "Group K",
+      "hjemme": 1,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_DR_Congo_2026_06_23"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Portugal",
+      "dato": "2026-06-27",
+      "gruppe": "Group K",
+      "hjemme": 0,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Portugal_2026_06_27"
+    },
+    {
+      "borte": 2,
+      "bortelag": "Uzbekistan",
+      "dato": "2026-06-27",
+      "gruppe": "Group K",
+      "hjemme": 2,
+      "hjemmelag": "DR Congo",
+      "kamp_id": "DR_Congo_Uzbekistan_2026_06_27"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Croatia",
+      "dato": "2026-06-17",
+      "gruppe": "Group L",
+      "hjemme": 1,
+      "hjemmelag": "England",
+      "kamp_id": "England_Croatia_2026_06_17"
+    },
+    {
+      "borte": 0,
+      "bortelag": "Panama",
+      "dato": "2026-06-17",
+      "gruppe": "Group L",
+      "hjemme": 2,
+      "hjemmelag": "Ghana",
+      "kamp_id": "Ghana_Panama_2026_06_17"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ghana",
+      "dato": "2026-06-23",
+      "gruppe": "Group L",
+      "hjemme": 2,
+      "hjemmelag": "England",
+      "kamp_id": "England_Ghana_2026_06_23"
+    },
+    {
+      "borte": 3,
+      "bortelag": "Croatia",
+      "dato": "2026-06-23",
+      "gruppe": "Group L",
+      "hjemme": 0,
+      "hjemmelag": "Panama",
+      "kamp_id": "Panama_Croatia_2026_06_23"
+    },
+    {
+      "borte": 2,
+      "bortelag": "England",
+      "dato": "2026-06-27",
+      "gruppe": "Group L",
+      "hjemme": 0,
+      "hjemmelag": "Panama",
+      "kamp_id": "Panama_England_2026_06_27"
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ghana",
+      "dato": "2026-06-27",
+      "gruppe": "Group L",
+      "hjemme": 2,
+      "hjemmelag": "Croatia",
+      "kamp_id": "Croatia_Ghana_2026_06_27"
+    }
+  ],
+  "meta": {
+    "innlevert": "2026-06-11T06:37:36.779Z",
+    "navn": "Ken Arne Hansen",
+    "token": "vm2026-ramberg"
+  },
+  "turneringsvinner": "Argentina"
+}
