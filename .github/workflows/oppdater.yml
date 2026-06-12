@@ -3,7 +3,7 @@ name: Oppdater VM 2026 Leaderboard
 on:
   # Kjør hver time under VM (11. juni - 19. juli)
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '7,37 * * * *'
 
   # Kjør automatisk når ny tipping-fil pushes
   push:
