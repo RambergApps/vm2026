@@ -1,4 +1,14 @@
 {
-  "sist_sjekket": "2026-06-11T23:18:55Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-12T01:42:52Z",
+  "kamper": [
+    {
+      "kamp_id": "South_Korea_Czech_Republic_2026_06_11",
+      "hjemmelag": "South Korea",
+      "bortelag": "Czech Republic",
+      "dato": "2026-06-11",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
