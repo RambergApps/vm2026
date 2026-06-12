@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-12T19:30:53Z
+// Sist oppdatert: 2026-06-12T20:00:58Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-12T19:30:53Z",
+  "sist_oppdatert": "2026-06-12T20:00:58Z",
   "stilling": [
     {
       "navn": "Anders Rikheim",
