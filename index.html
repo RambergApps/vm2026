@@ -94,7 +94,7 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(14px, 3vw, 20px);
   font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--muted); margin-top: 8px;
+  color: rgba(255,255,255,.85); margin-top: 8px;
 }
 
 
@@ -281,6 +281,7 @@ body {
   color: var(--muted);
 }
 .kamp-tid.ferdig { color: var(--accent); }
+.kamp-tid.paagaar { color: #ef2b2d; font-weight: 700; }
 .kamp-hjemme {
   display: flex; align-items: center; gap: 8px;
 }
@@ -459,6 +460,11 @@ body {
 @media (max-width: 600px) {
   .podium { grid-template-columns: 1fr 1.05fr 1fr; gap: 6px; }
   .podium-navn { font-size: 13px; }
+  .podium-plass.p1 { min-height: 130px; border-color: rgba(255,214,0,.4); }
+  .podium-plass.p2 { min-height: 110px; }
+  .podium-plass.p3 { min-height: 95px; border-color: rgba(255,138,101,.3); }
+  .podium-plass.p1 .podium-poeng { color: var(--gold) !important; }
+  .podium-plass.p3 .podium-poeng { color: var(--bronze) !important; }
   .stilling-header,
   .stilling-rad { grid-template-columns: 32px 1fr 52px 52px 80px; }
   .stilling-header .col-gruppe,
@@ -638,7 +644,7 @@ function byggDagensKamper() {
     VM_DATA.stilling[0].tippinger?.forEach(t => {
       if (t.hjemmelag && t.bortelag) {
         const navnKey = normNavn(t.hjemmelag) + '__' + normNavn(t.bortelag);
-        resultatLookup[navnKey] = { faktisk_h: t.faktisk_h, faktisk_b: t.faktisk_b, ferdig: t.ferdig };
+        resultatLookup[navnKey] = { faktisk_h: t.faktisk_h, faktisk_b: t.faktisk_b, ferdig: t.ferdig, status: t.status || (t.ferdig ? 'FINISHED' : 'TIMED') };
       }
     });
   }
@@ -651,8 +657,10 @@ function byggDagensKamper() {
     const navnKey = k.hjemmelag && k.bortelag ? normFd(k.hjemmelag)+'__'+normFd(k.bortelag) : null;
     const res = navnKey ? resultatLookup[navnKey] : null;
     const ferdig = res?.ferdig;
-    const tidTxt = ferdig ? 'Ferdig' : k.klokkeslett_norsk;
-    const tidCls = ferdig ? 'ferdig' : '';
+    const status = res?.status || (ferdig ? 'FINISHED' : 'TIMED');
+    const paagaar = status === 'IN_PLAY' || status === 'PAUSED';
+    const tidTxt = ferdig ? 'Ferdig' : paagaar ? (status === 'PAUSED' ? 'Pause 🔴' : 'Pågående 🔴') : k.klokkeslett_norsk;
+    const tidCls = ferdig ? 'ferdig' : paagaar ? 'paagaar' : '';
     const h = visNavn(k.hjemmelag || '?');
     const b = visNavn(k.bortelag  || '?');
     const gruppe = escHTML(k.gruppe || k.runde || '');
