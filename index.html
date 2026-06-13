@@ -256,6 +256,63 @@ body {
 .kamp-poeng.p2 { color: var(--text); }
 .kamp-poeng.p4 { color: var(--gold); }
 
+/* ── DAGENS KAMPER ── */
+.dagens-kamper {
+  margin-bottom: 28px;
+}
+.dagens-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 14px;
+}
+.dagens-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted);
+}
+.dagens-dato {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: var(--accent);
+}
+.kamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+.kamp-kort {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.kamp-kort.ferdig { border-color: rgba(0,230,118,.2); }
+.kamp-kort.live { border-color: rgba(255,214,0,.3); animation: border-pulse 2s ease-in-out infinite; }
+@keyframes border-pulse { 0%,100% { border-color: rgba(255,214,0,.3); } 50% { border-color: rgba(255,214,0,.7); } }
+.kamp-tid {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  color: var(--muted); text-transform: uppercase;
+}
+.kamp-tid.ferdig { color: var(--accent); }
+.kamp-lag-rad {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.kamp-lagnavn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 800; text-transform: uppercase;
+  color: var(--text); flex: 1; line-height: 1.2;
+}
+.kamp-resultat {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; line-height: 1; color: var(--gold);
+  white-space: nowrap; min-width: 44px; text-align: center;
+}
+.kamp-resultat.venter { color: var(--border); font-size: 16px; }
+.kamp-gruppe {
+  font-size: 10px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase;
+}
+
 /* ── MODAL ── */
 .modal-overlay {
   display: none;
@@ -564,6 +621,86 @@ oppdaterCountdown();
 setInterval(oppdaterCountdown, 1000);
 
 // ── MODAL ─────────────────────────────────────────────────
+// ── KAMPDATA ──────────────────────────────────────────────
+let ALLE_KAMPER = [];
+
+async function lastKampData() {
+  try {
+    const r = await fetch('data/kamper.json?t=' + Date.now());
+    const data = await r.json();
+    ALLE_KAMPER = data.kamper || [];
+  } catch(e) {
+    console.warn('Kunne ikke laste kamper.json:', e);
+  }
+}
+
+function iDagNorsk() {
+  return new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+}
+
+function byggDagensKamper() {
+  if (!ALLE_KAMPER.length) return '';
+
+  const idag = iDagNorsk();
+  const dagensKamper = ALLE_KAMPER.filter(k => k.dato_norsk === idag);
+  if (!dagensKamper.length) return '';
+
+  // Bygg resultat-lookup fra VM_DATA
+  const resultatLookup = {};
+  if (VM_DATA?.stilling?.length) {
+    VM_DATA.stilling[0].tippinger?.forEach(t => {
+      if (t.kamp_id) {
+        resultatLookup[t.kamp_id] = {
+          faktisk_h: t.faktisk_h,
+          faktisk_b: t.faktisk_b,
+          ferdig: t.ferdig,
+        };
+      }
+    });
+  }
+
+  const datoNorsk = new Date().toLocaleDateString('no-NO', {
+    timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long'
+  });
+
+  const kortHTML = dagensKamper.map(k => {
+    const res = k.kamp_id ? resultatLookup[k.kamp_id] : null;
+    const ferdig = res?.ferdig;
+
+    const tidCls  = ferdig ? 'ferdig' : '';
+    const kortCls = ferdig ? 'ferdig' : '';
+    const tidTxt  = ferdig ? 'Ferdig' : k.klokkeslett_norsk;
+
+    const resultat = ferdig
+      ? `<div class="kamp-resultat">${res.faktisk_h}–${res.faktisk_b}</div>`
+      : `<div class="kamp-resultat venter">–</div>`;
+
+    const hjemme = escHTML(k.hjemmelag || '?');
+    const borte  = escHTML(k.bortelag  || '?');
+    const gruppe = escHTML(k.gruppe || k.runde || '');
+
+    return `
+      <div class="kamp-kort ${kortCls}">
+        <div class="kamp-tid ${tidCls}">${tidTxt}</div>
+        <div class="kamp-lag-rad">
+          <div class="kamp-lagnavn">${hjemme}</div>
+          ${resultat}
+          <div class="kamp-lagnavn" style="text-align:right">${borte}</div>
+        </div>
+        <div class="kamp-gruppe">${gruppe}</div>
+      </div>`;
+  }).join('');
+
+  return `
+    <div class="dagens-kamper">
+      <div class="dagens-header">
+        <div class="dagens-tittel">Kamper i dag</div>
+        <div class="dagens-dato">${escHTML(datoNorsk)}</div>
+      </div>
+      <div class="kamp-grid">${kortHTML}</div>
+    </div>`;
+}
+
 const RUNDE_NAVN = { gruppe:"Gruppespill", r32:"Runde av 32", r16:"Runde av 16", qf:"Kvartfinale", sf:"Semifinale", final:"Finale" };
 
 function aapneModal(event, i) {
@@ -742,7 +879,8 @@ function byggStilling() {
       </div>`;
   });
 
-  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + tabellHTML;
+  const dagensHTML = byggDagensKamper();
+  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + dagensHTML + tabellHTML;
 
   if (VM_DATA.sist_oppdatert) {
     const dato = new Date(VM_DATA.sist_oppdatert);
@@ -846,7 +984,11 @@ function escHTML(str) {
     .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 }
 
-byggStilling();
+async function init() {
+  await lastKampData();
+  byggStilling();
+}
+init();
 </script>
 </body>
 </html>
