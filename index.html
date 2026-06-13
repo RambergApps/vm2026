@@ -97,22 +97,7 @@ body {
   color: var(--muted); margin-top: 8px;
 }
 
-.countdown {
-  display: inline-flex; gap: 4px; align-items: center;
-  margin-top: 28px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 20px;
-}
-.cd-unit { text-align: center; min-width: 44px; }
-.cd-val {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px; line-height: 1;
-  color: var(--text);
-}
-.cd-lbl { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
-.cd-sep { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--border); align-self: flex-start; padding-top: 2px; }
+
 
 
 
@@ -595,27 +580,7 @@ document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
   </tr>
 `).join("");
 
-const VM_START = new Date("2026-06-11T19:00:00+02:00");
 
-function oppdaterCountdown() {
-  const nå   = new Date();
-  const diff = VM_START - nå;
-  if (diff <= 0) {
-    document.getElementById("countdown").innerHTML =
-      '<span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;color:var(--accent);font-size:16px;letter-spacing:.1em">🇳🇴 Heia Norge!</span>';
-    return;
-  }
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById("cd-d").textContent = String(d).padStart(2,"0");
-  document.getElementById("cd-h").textContent = String(h).padStart(2,"0");
-  document.getElementById("cd-m").textContent = String(m).padStart(2,"0");
-  document.getElementById("cd-s").textContent = String(s).padStart(2,"0");
-}
-oppdaterCountdown();
-setInterval(oppdaterCountdown, 1000);
 
 // ── MODAL ─────────────────────────────────────────────────
 // ── KAMPDATA ──────────────────────────────────────────────
