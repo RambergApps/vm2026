@@ -14,7 +14,7 @@
   --card:     #111a2e;
   --card2:    #152035;
   --border:   #1e2d4a;
-  --accent:   #00e676;
+  --accent:   #ef2b2d;
   --gold:     #ffd600;
   --silver:   #b0bec5;
   --bronze:   #ff8a65;
@@ -50,6 +50,21 @@ body {
   padding: 56px 24px 48px;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  background-image:
+    linear-gradient(180deg,
+      rgba(6,9,18,.55) 0%,
+      rgba(6,9,18,.45) 40%,
+      rgba(6,9,18,.75) 75%,
+      rgba(6,9,18,.97) 100%),
+    url('Haaland.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
@@ -99,24 +114,7 @@ body {
 .cd-lbl { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
 .cd-sep { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--border); align-self: flex-start; padding-top: 2px; }
 
-.stats-banner {
-  position: relative; z-index: 1;
-  display: flex; justify-content: center; gap: 0;
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto;
-}
-.stat-item {
-  padding: 20px 32px; text-align: center;
-  border-right: 1px solid var(--border);
-  min-width: 120px;
-}
-.stat-item:last-child { border-right: none; }
-.stat-val {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 32px; line-height: 1;
-  color: var(--accent);
-}
-.stat-lbl { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
 
 .nav {
   position: relative; z-index: 1;
@@ -508,23 +506,10 @@ body {
   </div>
   <h1>VM <span class="year">2026</span></h1>
   <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
-  <div class="countdown" id="countdown">
-    <div class="cd-unit"><div class="cd-val" id="cd-d">--</div><div class="cd-lbl">Dager</div></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-val" id="cd-h">--</div><div class="cd-lbl">Timer</div></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-val" id="cd-m">--</div><div class="cd-lbl">Min</div></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-val" id="cd-s">--</div><div class="cd-lbl">Sek</div></div>
-  </div>
+
 </div>
 
-<!-- STATS -->
-<div class="stats-banner" id="statsBanner" style="display:none">
-  <div class="stat-item"><div class="stat-val" id="statDeltakere">0</div><div class="stat-lbl">Deltakere</div></div>
-  <div class="stat-item"><div class="stat-val" id="statMaxPoeng">0</div><div class="stat-lbl">Topppoeng</div></div>
-  <div class="stat-item"><div class="stat-val" id="statKamper">0</div><div class="stat-lbl">Kamper spilt</div></div>
-</div>
+
 
 <!-- NAV -->
 <div class="nav">
@@ -617,7 +602,7 @@ function oppdaterCountdown() {
   const diff = VM_START - nå;
   if (diff <= 0) {
     document.getElementById("countdown").innerHTML =
-      '<span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;color:var(--accent);font-size:16px;letter-spacing:.1em">⚽ VM ER I GANG!</span>';
+      '<span style="font-family:\'Barlow Condensed\',sans-serif;font-weight:700;color:var(--accent);font-size:16px;letter-spacing:.1em">🇳🇴 Heia Norge!</span>';
     return;
   }
   const d = Math.floor(diff / 86400000);
@@ -859,11 +844,7 @@ function byggStilling() {
   const stilling = VM_DATA.stilling;
   const topp3    = stilling.slice(0, 3);
 
-  document.getElementById("statsBanner").style.display = "flex";
-  document.getElementById("statDeltakere").textContent = stilling.length;
-  document.getElementById("statMaxPoeng").textContent  = stilling[0]?.poeng_totalt || 0;
-  const ferdigeKamper = stilling[0]?.tippinger?.filter(t => t.ferdig)?.length || 0;
-  document.getElementById("statKamper").textContent    = ferdigeKamper;
+
 
   let podiumHTML = '<div class="podium">';
   const podiumRekkefølge = topp3.length >= 2 ? [topp3[1], topp3[0], topp3[2]] : topp3;
