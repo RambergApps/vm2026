@@ -1,4 +1,14 @@
 {
-  "sist_sjekket": "2026-06-12T23:30:51Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-13T00:01:01Z",
+  "kamper": [
+    {
+      "kamp_id": "USA_Paraguay_2026_06_12",
+      "hjemmelag": "USA",
+      "bortelag": "Paraguay",
+      "dato": "2026-06-12",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
