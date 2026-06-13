@@ -522,7 +522,6 @@ body {
 <!-- STATS -->
 <div class="stats-banner" id="statsBanner" style="display:none">
   <div class="stat-item"><div class="stat-val" id="statDeltakere">0</div><div class="stat-lbl">Deltakere</div></div>
-  <div class="stat-item"><div class="stat-val" id="statLeder">—</div><div class="stat-lbl">Leder</div></div>
   <div class="stat-item"><div class="stat-val" id="statMaxPoeng">0</div><div class="stat-lbl">Topppoeng</div></div>
   <div class="stat-item"><div class="stat-val" id="statKamper">0</div><div class="stat-lbl">Kamper spilt</div></div>
 </div>
@@ -862,7 +861,6 @@ function byggStilling() {
 
   document.getElementById("statsBanner").style.display = "flex";
   document.getElementById("statDeltakere").textContent = stilling.length;
-  document.getElementById("statLeder").textContent     = stilling[0]?.navn.split(" ")[0] || "—";
   document.getElementById("statMaxPoeng").textContent  = stilling[0]?.poeng_totalt || 0;
   const ferdigeKamper = stilling[0]?.tippinger?.filter(t => t.ferdig)?.length || 0;
   document.getElementById("statKamper").textContent    = ferdigeKamper;
