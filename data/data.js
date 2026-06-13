@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-13T19:01:03Z
+// Sist oppdatert: 2026-06-13T19:31:01Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-13T19:01:03Z",
+  "sist_oppdatert": "2026-06-13T19:31:01Z",
   "stilling": [
     {
       "navn": "Alexander",
