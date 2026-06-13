@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-13T21:01:01Z
+// Sist oppdatert: 2026-06-13T21:14:40Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-13T21:01:01Z",
+  "sist_oppdatert": "2026-06-13T21:14:40Z",
   "stilling": [
     {
       "navn": "Alexander",
@@ -112,10 +112,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -998,10 +1000,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -1884,10 +1888,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -2770,10 +2776,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -3656,10 +3664,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -4542,10 +4552,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -5428,10 +5440,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -6314,10 +6328,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -7200,10 +7216,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -8086,10 +8104,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -8972,10 +8992,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -9858,10 +9880,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -10744,10 +10768,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -11630,10 +11656,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -12516,10 +12544,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -13402,10 +13432,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -14288,10 +14320,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -15174,10 +15208,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -16060,10 +16096,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -16946,10 +16984,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 3,
           "tippa_b": 4,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -17832,10 +17872,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -18718,10 +18760,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -19604,10 +19648,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -20490,10 +20536,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -21376,10 +21424,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -22262,10 +22312,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -23148,10 +23200,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -24034,10 +24088,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
@@ -24920,10 +24976,12 @@ const VM_DATA = {
           "bortelag": "Switzerland",
           "tippa_h": 0,
           "tippa_b": 4,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 1,
           "poeng": 0,
-          "ferdig": false,
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "gruppe"
         },
         {
