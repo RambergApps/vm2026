@@ -239,7 +239,8 @@ def hent_football_data_org():
 
     fd_lookup = {}
     for kamp in data.get("matches", []):
-        if kamp.get("status") != "FINISHED":
+        status_fd = kamp.get("status")
+        if status_fd not in ("FINISHED", "IN_PLAY", "PAUSED"):
             continue
 
         # Normaliser lagnavn til OpenFootball-format
@@ -265,14 +266,16 @@ def hent_football_data_org():
         fd_lookup[kid] = {
             "hjemme":   hjemme,
             "borte":    borte,
-            "ferdig":   True,
+            "ferdig":   status_fd == "FINISHED",
             "kilde":    "football_data_org",
             "winner":   winner,
             "duration": duration,
-            "status":   kamp.get("status", "FINISHED"),
+            "status":   status_fd,
         }
 
-    print(f"  -> {len(fd_lookup)} ferdigspilte kamper fra football-data.org")
+    ferdig_antall  = sum(1 for v in fd_lookup.values() if v["ferdig"])
+    paagaar_antall = sum(1 for v in fd_lookup.values() if not v["ferdig"])
+    print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående/pause fra football-data.org")
     return fd_lookup
 
 
@@ -348,15 +351,19 @@ def bygg_resultat_lookup(api_data, fd_lookup):
             if fd:
                 base["hjemme"]  = fd["hjemme"]
                 base["borte"]   = fd["borte"]
-                base["ferdig"]  = True
+                base["ferdig"]  = fd.get("ferdig", False)
+                base["status"]  = fd.get("status", "TIMED")
                 base["kilde"]   = "football_data_org"
                 # Sett avanserer automatisk fra fd.org winner-felt (gjelder utslagskamper)
-                if fd.get("winner") == "HOME_TEAM":
+                if fd.get("ferdig") and fd.get("winner") == "HOME_TEAM":
                     base["avanserer"] = team1
-                elif fd.get("winner") == "AWAY_TEAM":
+                elif fd.get("ferdig") and fd.get("winner") == "AWAY_TEAM":
                     base["avanserer"] = team2
                 duration = fd.get("duration", "REGULAR")
-                print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{duration}]")
+                if fd.get("ferdig"):
+                    print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{duration}]")
+                else:
+                    print(f"    fd.org pågående: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{fd.get('status')}]")
             lookup[kid] = base
 
     of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "openfootball")
