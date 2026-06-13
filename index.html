@@ -660,7 +660,14 @@ function byggDagensKamper() {
     const h = visNavn(k.hjemmelag || '?');
     const b = visNavn(k.bortelag  || '?');
     const gruppe = escHTML(k.gruppe || k.runde || '');
-    const scoreHTML = ferdig
+    const harScore =
+      res &&
+      res.faktisk_h !== null &&
+      res.faktisk_h !== undefined &&
+      res.faktisk_b !== null &&
+      res.faktisk_b !== undefined;
+
+    const scoreHTML = harScore
       ? `<div class="kamp-score">${res.faktisk_h}–${res.faktisk_b}</div>`
       : `<div class="kamp-score venter">–</div>`;
     return `
