@@ -269,6 +269,7 @@ def hent_football_data_org():
             "kilde":    "football_data_org",
             "winner":   winner,
             "duration": duration,
+            "status":   kamp.get("status", "FINISHED"),
         }
 
     print(f"  -> {len(fd_lookup)} ferdigspilte kamper fra football-data.org")
@@ -734,6 +735,7 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
                 "faktisk_b": res["borte"]  if res else None,
                 "poeng":     0,
                 "ferdig":    False,
+                "status":    res.get("status", "TIMED") if res else "TIMED",
                 "runde":     "gruppe",
             })
             continue
@@ -756,6 +758,7 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
             "riktig_utfall": riktig,
             "eksakt":        eksakt,
             "ferdig":        True,
+            "status":        res.get("status", "FINISHED"),
             "runde":         "gruppe",
         })
 
