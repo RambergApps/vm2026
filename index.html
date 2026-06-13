@@ -645,15 +645,25 @@ function byggDagensKamper() {
   const dagensKamper = ALLE_KAMPER.filter(k => k.dato_norsk === idag);
   if (!dagensKamper.length) return '';
 
-  // Bygg resultat-lookup fra VM_DATA
+  // Bygg resultat-lookup fra VM_DATA — matcher på normaliserte lagnavn
+  // Bruker navn-matching i stedet for kamp_id fordi fd.org og OpenFootball
+  // bruker forskjellige lagnavn og datoer for samme kamp
+  const normNavn = s => String(s||'').toLowerCase()
+    .replace(/[^a-z0-9]/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_|_$/g, '');
+
   const resultatLookup = {};
   if (VM_DATA?.stilling?.length) {
     VM_DATA.stilling[0].tippinger?.forEach(t => {
-      if (t.kamp_id) {
-        resultatLookup[t.kamp_id] = {
+      if (t.hjemmelag && t.bortelag) {
+        // Nøkkel basert på normaliserte lagnavn (dato-uavhengig)
+        const navnKey = normNavn(t.hjemmelag) + '__' + normNavn(t.bortelag);
+        resultatLookup[navnKey] = {
           faktisk_h: t.faktisk_h,
           faktisk_b: t.faktisk_b,
           ferdig: t.ferdig,
+          kamp_id: t.kamp_id,
         };
       }
     });
@@ -664,7 +674,22 @@ function byggDagensKamper() {
   });
 
   const kortHTML = dagensKamper.map(k => {
-    const res = k.kamp_id ? resultatLookup[k.kamp_id] : null;
+    // Navn-basert matching med fd.org → OpenFootball mapping
+    const FD_TIL_OF = {
+      'united states': 'usa',
+      'cape verde islands': 'cape verde',
+      'congo dr': 'dr congo',
+      'czechia': 'czech republic',
+    };
+    const normFd = s => {
+      const low = String(s||'').toLowerCase().trim();
+      const mapped = FD_TIL_OF[low] || low;
+      return mapped.replace(/[^a-z0-9]/g,'_').replace(/_+/g,'_').replace(/^_|_$/g,'');
+    };
+    const navnKey = k.hjemmelag && k.bortelag
+      ? normFd(k.hjemmelag) + '__' + normFd(k.bortelag)
+      : null;
+    const res = navnKey ? resultatLookup[navnKey] : null;
     const ferdig = res?.ferdig;
 
     const tidCls  = ferdig ? 'ferdig' : '';
