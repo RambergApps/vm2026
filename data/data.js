@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-13T21:36:11Z
+// Sist oppdatert: 2026-06-13T22:00:59Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-13T21:36:11Z",
+  "sist_oppdatert": "2026-06-13T22:00:59Z",
   "stilling": [
     {
       "navn": "Alexander",
@@ -28,6 +28,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -42,6 +43,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -54,6 +56,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -66,6 +69,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -78,6 +82,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -90,6 +95,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -104,6 +110,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -118,6 +125,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -130,6 +138,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -142,6 +151,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -154,6 +164,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -166,6 +177,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -178,6 +190,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -190,6 +203,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -202,6 +216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -214,6 +229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -226,6 +242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -238,6 +255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -252,6 +270,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -264,6 +283,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -276,6 +296,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -288,6 +309,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -300,6 +322,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -312,6 +335,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -324,6 +348,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -336,6 +361,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -348,6 +374,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -360,6 +387,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -372,6 +400,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -384,6 +413,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -396,6 +426,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -408,6 +439,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -420,6 +452,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -432,6 +465,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -444,6 +478,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -456,6 +491,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -468,6 +504,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -480,6 +517,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -492,6 +530,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -504,6 +543,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -516,6 +556,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -528,6 +569,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -540,6 +582,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -552,6 +595,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -564,6 +608,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -576,6 +621,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -588,6 +634,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -600,6 +647,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -612,6 +660,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -624,6 +673,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -636,6 +686,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -648,6 +699,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -660,6 +712,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -672,6 +725,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -684,6 +738,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -696,6 +751,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -708,6 +764,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -720,6 +777,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -732,6 +790,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -744,6 +803,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -756,6 +816,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -768,6 +829,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -780,6 +842,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -792,6 +855,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -804,6 +868,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -816,6 +881,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -828,6 +894,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -840,6 +907,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -852,6 +920,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -864,6 +933,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -876,6 +946,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -888,6 +959,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -916,6 +988,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -930,6 +1003,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -942,6 +1016,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -954,6 +1029,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -966,6 +1042,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -978,6 +1055,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -992,6 +1070,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1006,6 +1085,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1018,6 +1098,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1030,6 +1111,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1042,6 +1124,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1054,6 +1137,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1066,6 +1150,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1078,6 +1163,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1090,6 +1176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1102,6 +1189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1114,6 +1202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1126,6 +1215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1140,6 +1230,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1152,6 +1243,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1164,6 +1256,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1176,6 +1269,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1188,6 +1282,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1200,6 +1295,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1212,6 +1308,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1224,6 +1321,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1236,6 +1334,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1248,6 +1347,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1260,6 +1360,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1272,6 +1373,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1284,6 +1386,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1296,6 +1399,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1308,6 +1412,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1320,6 +1425,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1332,6 +1438,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1344,6 +1451,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1356,6 +1464,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1368,6 +1477,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1380,6 +1490,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1392,6 +1503,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1404,6 +1516,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1416,6 +1529,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1428,6 +1542,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1440,6 +1555,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1452,6 +1568,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1464,6 +1581,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1476,6 +1594,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1488,6 +1607,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1500,6 +1620,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1512,6 +1633,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1524,6 +1646,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1536,6 +1659,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1548,6 +1672,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1560,6 +1685,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1572,6 +1698,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1584,6 +1711,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1596,6 +1724,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1608,6 +1737,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1620,6 +1750,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1632,6 +1763,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1644,6 +1776,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1656,6 +1789,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1668,6 +1802,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1680,6 +1815,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1692,6 +1828,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1704,6 +1841,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1716,6 +1854,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1728,6 +1867,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1740,6 +1880,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1752,6 +1893,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1764,6 +1906,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1776,6 +1919,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -1804,6 +1948,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1818,6 +1963,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1830,6 +1976,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1842,6 +1989,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1854,6 +2002,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1866,6 +2015,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1880,6 +2030,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1894,6 +2045,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -1906,6 +2058,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1918,6 +2071,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1930,6 +2084,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1942,6 +2097,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1954,6 +2110,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1966,6 +2123,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1978,6 +2136,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -1990,6 +2149,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2002,6 +2162,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2014,6 +2175,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2028,6 +2190,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2040,6 +2203,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2052,6 +2216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2064,6 +2229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2076,6 +2242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2088,6 +2255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2100,6 +2268,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2112,6 +2281,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2124,6 +2294,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2136,6 +2307,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2148,6 +2320,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2160,6 +2333,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2172,6 +2346,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2184,6 +2359,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2196,6 +2372,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2208,6 +2385,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2220,6 +2398,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2232,6 +2411,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2244,6 +2424,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2256,6 +2437,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2268,6 +2450,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2280,6 +2463,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2292,6 +2476,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2304,6 +2489,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2316,6 +2502,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2328,6 +2515,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2340,6 +2528,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2352,6 +2541,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2364,6 +2554,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2376,6 +2567,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2388,6 +2580,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2400,6 +2593,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2412,6 +2606,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2424,6 +2619,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2436,6 +2632,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2448,6 +2645,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2460,6 +2658,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2472,6 +2671,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2484,6 +2684,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2496,6 +2697,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2508,6 +2710,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2520,6 +2723,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2532,6 +2736,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2544,6 +2749,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2556,6 +2762,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2568,6 +2775,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2580,6 +2788,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2592,6 +2801,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2604,6 +2814,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2616,6 +2827,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2628,6 +2840,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2640,6 +2853,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2652,6 +2866,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2664,6 +2879,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -2692,6 +2908,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2706,6 +2923,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2718,6 +2936,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2730,6 +2949,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2742,6 +2962,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2754,6 +2975,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2768,6 +2990,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2782,6 +3005,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2794,6 +3018,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2806,6 +3031,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2818,6 +3044,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2830,6 +3057,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2842,6 +3070,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2854,6 +3083,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2866,6 +3096,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2878,6 +3109,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2890,6 +3122,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2902,6 +3135,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2916,6 +3150,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -2928,6 +3163,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2940,6 +3176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2952,6 +3189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2964,6 +3202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2976,6 +3215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -2988,6 +3228,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3000,6 +3241,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3012,6 +3254,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3024,6 +3267,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3036,6 +3280,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3048,6 +3293,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3060,6 +3306,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3072,6 +3319,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3084,6 +3332,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3096,6 +3345,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3108,6 +3358,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3120,6 +3371,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3132,6 +3384,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3144,6 +3397,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3156,6 +3410,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3168,6 +3423,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3180,6 +3436,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3192,6 +3449,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3204,6 +3462,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3216,6 +3475,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3228,6 +3488,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3240,6 +3501,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3252,6 +3514,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3264,6 +3527,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3276,6 +3540,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3288,6 +3553,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3300,6 +3566,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3312,6 +3579,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3324,6 +3592,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3336,6 +3605,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3348,6 +3618,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3360,6 +3631,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3372,6 +3644,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3384,6 +3657,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3396,6 +3670,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3408,6 +3683,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3420,6 +3696,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3432,6 +3709,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3444,6 +3722,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3456,6 +3735,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3468,6 +3748,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3480,6 +3761,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3492,6 +3774,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3504,6 +3787,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3516,6 +3800,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3528,6 +3813,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3540,6 +3826,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3552,6 +3839,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -3580,6 +3868,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3594,6 +3883,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3606,6 +3896,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3618,6 +3909,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3630,6 +3922,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3642,6 +3935,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3656,6 +3950,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3670,6 +3965,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3682,6 +3978,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3694,6 +3991,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3706,6 +4004,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3718,6 +4017,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3730,6 +4030,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3742,6 +4043,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3754,6 +4056,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3766,6 +4069,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3778,6 +4082,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3790,6 +4095,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3804,6 +4110,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3816,6 +4123,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3828,6 +4136,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3840,6 +4149,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3852,6 +4162,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3864,6 +4175,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3876,6 +4188,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3888,6 +4201,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3900,6 +4214,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3912,6 +4227,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3924,6 +4240,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3936,6 +4253,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3948,6 +4266,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3960,6 +4279,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3972,6 +4292,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3984,6 +4305,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -3996,6 +4318,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4008,6 +4331,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4020,6 +4344,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4032,6 +4357,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4044,6 +4370,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4056,6 +4383,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4068,6 +4396,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4080,6 +4409,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4092,6 +4422,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4104,6 +4435,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4116,6 +4448,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4128,6 +4461,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4140,6 +4474,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4152,6 +4487,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4164,6 +4500,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4176,6 +4513,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4188,6 +4526,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4200,6 +4539,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4212,6 +4552,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4224,6 +4565,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4236,6 +4578,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4248,6 +4591,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4260,6 +4604,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4272,6 +4617,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4284,6 +4630,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4296,6 +4643,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4308,6 +4656,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4320,6 +4669,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4332,6 +4682,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4344,6 +4695,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4356,6 +4708,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4368,6 +4721,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4380,6 +4734,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4392,6 +4747,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4404,6 +4760,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4416,6 +4773,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4428,6 +4786,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4440,6 +4799,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -4468,6 +4828,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4482,6 +4843,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4494,6 +4856,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4506,6 +4869,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4518,6 +4882,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4530,6 +4895,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4544,6 +4910,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4558,6 +4925,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4570,6 +4938,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4582,6 +4951,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4594,6 +4964,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4606,6 +4977,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4618,6 +4990,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4630,6 +5003,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4642,6 +5016,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4654,6 +5029,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4666,6 +5042,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4678,6 +5055,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4692,6 +5070,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4704,6 +5083,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4716,6 +5096,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4728,6 +5109,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4740,6 +5122,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4752,6 +5135,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4764,6 +5148,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4776,6 +5161,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4788,6 +5174,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4800,6 +5187,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4812,6 +5200,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4824,6 +5213,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4836,6 +5226,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4848,6 +5239,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4860,6 +5252,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4872,6 +5265,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4884,6 +5278,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4896,6 +5291,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4908,6 +5304,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4920,6 +5317,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4932,6 +5330,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4944,6 +5343,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4956,6 +5356,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4968,6 +5369,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4980,6 +5382,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4992,6 +5395,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5004,6 +5408,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5016,6 +5421,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5028,6 +5434,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5040,6 +5447,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5052,6 +5460,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5064,6 +5473,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5076,6 +5486,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5088,6 +5499,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5100,6 +5512,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5112,6 +5525,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5124,6 +5538,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5136,6 +5551,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5148,6 +5564,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5160,6 +5577,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5172,6 +5590,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5184,6 +5603,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5196,6 +5616,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5208,6 +5629,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5220,6 +5642,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5232,6 +5655,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5244,6 +5668,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5256,6 +5681,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5268,6 +5694,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5280,6 +5707,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5292,6 +5720,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5304,6 +5733,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5316,6 +5746,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5328,6 +5759,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -5356,6 +5788,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5370,6 +5803,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5382,6 +5816,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5394,6 +5829,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5406,6 +5842,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5418,6 +5855,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5432,6 +5870,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5446,6 +5885,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5458,6 +5898,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5470,6 +5911,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5482,6 +5924,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5494,6 +5937,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5506,6 +5950,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5518,6 +5963,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5530,6 +5976,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5542,6 +5989,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5554,6 +6002,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5566,6 +6015,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5580,6 +6030,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5592,6 +6043,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5604,6 +6056,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5616,6 +6069,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5628,6 +6082,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5640,6 +6095,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5652,6 +6108,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5664,6 +6121,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5676,6 +6134,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5688,6 +6147,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5700,6 +6160,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5712,6 +6173,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5724,6 +6186,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5736,6 +6199,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5748,6 +6212,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5760,6 +6225,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5772,6 +6238,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5784,6 +6251,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5796,6 +6264,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5808,6 +6277,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5820,6 +6290,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5832,6 +6303,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5844,6 +6316,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5856,6 +6329,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5868,6 +6342,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5880,6 +6355,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5892,6 +6368,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5904,6 +6381,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5916,6 +6394,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5928,6 +6407,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5940,6 +6420,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5952,6 +6433,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5964,6 +6446,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5976,6 +6459,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5988,6 +6472,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6000,6 +6485,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6012,6 +6498,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6024,6 +6511,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6036,6 +6524,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6048,6 +6537,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6060,6 +6550,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6072,6 +6563,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6084,6 +6576,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6096,6 +6589,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6108,6 +6602,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6120,6 +6615,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6132,6 +6628,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6144,6 +6641,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6156,6 +6654,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6168,6 +6667,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6180,6 +6680,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6192,6 +6693,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6204,6 +6706,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6216,6 +6719,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -6244,6 +6748,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6258,6 +6763,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6270,6 +6776,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6282,6 +6789,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6294,6 +6802,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6306,6 +6815,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6320,6 +6830,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6334,6 +6845,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6346,6 +6858,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6358,6 +6871,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6370,6 +6884,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6382,6 +6897,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6394,6 +6910,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6406,6 +6923,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6418,6 +6936,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6430,6 +6949,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6442,6 +6962,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6454,6 +6975,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6468,6 +6990,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6480,6 +7003,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6492,6 +7016,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6504,6 +7029,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6516,6 +7042,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6528,6 +7055,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6540,6 +7068,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6552,6 +7081,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6564,6 +7094,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6576,6 +7107,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6588,6 +7120,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6600,6 +7133,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6612,6 +7146,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6624,6 +7159,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6636,6 +7172,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6648,6 +7185,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6660,6 +7198,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6672,6 +7211,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6684,6 +7224,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6696,6 +7237,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6708,6 +7250,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6720,6 +7263,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6732,6 +7276,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6744,6 +7289,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6756,6 +7302,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6768,6 +7315,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6780,6 +7328,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6792,6 +7341,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6804,6 +7354,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6816,6 +7367,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6828,6 +7380,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6840,6 +7393,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6852,6 +7406,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6864,6 +7419,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6876,6 +7432,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6888,6 +7445,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6900,6 +7458,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6912,6 +7471,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6924,6 +7484,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6936,6 +7497,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6948,6 +7510,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6960,6 +7523,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6972,6 +7536,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6984,6 +7549,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6996,6 +7562,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7008,6 +7575,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7020,6 +7588,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7032,6 +7601,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7044,6 +7614,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7056,6 +7627,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7068,6 +7640,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7080,6 +7653,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7092,6 +7666,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7104,6 +7679,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -7132,6 +7708,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7146,6 +7723,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7158,6 +7736,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7170,6 +7749,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7182,6 +7762,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7194,6 +7775,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7208,6 +7790,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7222,6 +7805,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7234,6 +7818,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7246,6 +7831,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7258,6 +7844,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7270,6 +7857,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7282,6 +7870,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7294,6 +7883,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7306,6 +7896,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7318,6 +7909,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7330,6 +7922,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7342,6 +7935,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7356,6 +7950,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7368,6 +7963,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7380,6 +7976,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7392,6 +7989,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7404,6 +8002,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7416,6 +8015,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7428,6 +8028,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7440,6 +8041,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7452,6 +8054,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7464,6 +8067,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7476,6 +8080,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7488,6 +8093,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7500,6 +8106,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7512,6 +8119,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7524,6 +8132,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7536,6 +8145,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7548,6 +8158,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7560,6 +8171,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7572,6 +8184,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7584,6 +8197,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7596,6 +8210,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7608,6 +8223,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7620,6 +8236,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7632,6 +8249,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7644,6 +8262,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7656,6 +8275,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7668,6 +8288,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7680,6 +8301,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7692,6 +8314,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7704,6 +8327,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7716,6 +8340,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7728,6 +8353,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7740,6 +8366,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7752,6 +8379,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7764,6 +8392,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7776,6 +8405,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7788,6 +8418,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7800,6 +8431,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7812,6 +8444,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7824,6 +8457,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7836,6 +8470,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7848,6 +8483,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7860,6 +8496,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7872,6 +8509,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7884,6 +8522,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7896,6 +8535,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7908,6 +8548,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7920,6 +8561,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7932,6 +8574,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7944,6 +8587,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7956,6 +8600,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7968,6 +8613,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7980,6 +8626,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7992,6 +8639,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -8020,6 +8668,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8034,6 +8683,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8046,6 +8696,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8058,6 +8709,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8070,6 +8722,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8082,6 +8735,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8096,6 +8750,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8110,6 +8765,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8122,6 +8778,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8134,6 +8791,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8146,6 +8804,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8158,6 +8817,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8170,6 +8830,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8182,6 +8843,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8194,6 +8856,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8206,6 +8869,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8218,6 +8882,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8230,6 +8895,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8244,6 +8910,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8256,6 +8923,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8268,6 +8936,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8280,6 +8949,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8292,6 +8962,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8304,6 +8975,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8316,6 +8988,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8328,6 +9001,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8340,6 +9014,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8352,6 +9027,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8364,6 +9040,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8376,6 +9053,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8388,6 +9066,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8400,6 +9079,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8412,6 +9092,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8424,6 +9105,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8436,6 +9118,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8448,6 +9131,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8460,6 +9144,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8472,6 +9157,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8484,6 +9170,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8496,6 +9183,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8508,6 +9196,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8520,6 +9209,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8532,6 +9222,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8544,6 +9235,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8556,6 +9248,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8568,6 +9261,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8580,6 +9274,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8592,6 +9287,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8604,6 +9300,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8616,6 +9313,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8628,6 +9326,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8640,6 +9339,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8652,6 +9352,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8664,6 +9365,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8676,6 +9378,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8688,6 +9391,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8700,6 +9404,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8712,6 +9417,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8724,6 +9430,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8736,6 +9443,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8748,6 +9456,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8760,6 +9469,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8772,6 +9482,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8784,6 +9495,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8796,6 +9508,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8808,6 +9521,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8820,6 +9534,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8832,6 +9547,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8844,6 +9560,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8856,6 +9573,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8868,6 +9586,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8880,6 +9599,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -8908,6 +9628,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8922,6 +9643,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8934,6 +9656,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8946,6 +9669,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8958,6 +9682,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8970,6 +9695,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8984,6 +9710,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8998,6 +9725,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9010,6 +9738,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9022,6 +9751,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9034,6 +9764,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9046,6 +9777,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9058,6 +9790,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9070,6 +9803,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9082,6 +9816,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9094,6 +9829,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9106,6 +9842,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9118,6 +9855,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9132,6 +9870,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9144,6 +9883,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9156,6 +9896,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9168,6 +9909,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9180,6 +9922,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9192,6 +9935,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9204,6 +9948,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9216,6 +9961,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9228,6 +9974,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9240,6 +9987,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9252,6 +10000,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9264,6 +10013,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9276,6 +10026,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9288,6 +10039,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9300,6 +10052,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9312,6 +10065,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9324,6 +10078,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9336,6 +10091,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9348,6 +10104,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9360,6 +10117,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9372,6 +10130,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9384,6 +10143,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9396,6 +10156,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9408,6 +10169,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9420,6 +10182,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9432,6 +10195,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9444,6 +10208,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9456,6 +10221,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9468,6 +10234,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9480,6 +10247,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9492,6 +10260,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9504,6 +10273,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9516,6 +10286,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9528,6 +10299,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9540,6 +10312,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9552,6 +10325,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9564,6 +10338,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9576,6 +10351,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9588,6 +10364,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9600,6 +10377,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9612,6 +10390,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9624,6 +10403,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9636,6 +10416,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9648,6 +10429,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9660,6 +10442,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9672,6 +10455,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9684,6 +10468,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9696,6 +10481,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9708,6 +10494,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9720,6 +10507,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9732,6 +10520,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9744,6 +10533,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9756,6 +10546,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9768,6 +10559,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -9796,6 +10588,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9810,6 +10603,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9822,6 +10616,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9834,6 +10629,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9846,6 +10642,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9858,6 +10655,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9872,6 +10670,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9886,6 +10685,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9898,6 +10698,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9910,6 +10711,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9922,6 +10724,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9934,6 +10737,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9946,6 +10750,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9958,6 +10763,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9970,6 +10776,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9982,6 +10789,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9994,6 +10802,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10006,6 +10815,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10020,6 +10830,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10032,6 +10843,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10044,6 +10856,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10056,6 +10869,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10068,6 +10882,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10080,6 +10895,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10092,6 +10908,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10104,6 +10921,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10116,6 +10934,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10128,6 +10947,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10140,6 +10960,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10152,6 +10973,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10164,6 +10986,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10176,6 +10999,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10188,6 +11012,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10200,6 +11025,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10212,6 +11038,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10224,6 +11051,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10236,6 +11064,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10248,6 +11077,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10260,6 +11090,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10272,6 +11103,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10284,6 +11116,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10296,6 +11129,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10308,6 +11142,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10320,6 +11155,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10332,6 +11168,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10344,6 +11181,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10356,6 +11194,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10368,6 +11207,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10380,6 +11220,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10392,6 +11233,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10404,6 +11246,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10416,6 +11259,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10428,6 +11272,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10440,6 +11285,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10452,6 +11298,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10464,6 +11311,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10476,6 +11324,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10488,6 +11337,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10500,6 +11350,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10512,6 +11363,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10524,6 +11376,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10536,6 +11389,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10548,6 +11402,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10560,6 +11415,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10572,6 +11428,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10584,6 +11441,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10596,6 +11454,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10608,6 +11467,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10620,6 +11480,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10632,6 +11493,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10644,6 +11506,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10656,6 +11519,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -10684,6 +11548,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10698,6 +11563,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10710,6 +11576,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10722,6 +11589,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10734,6 +11602,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10746,6 +11615,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10760,6 +11630,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10774,6 +11645,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10786,6 +11658,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10798,6 +11671,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10810,6 +11684,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10822,6 +11697,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10834,6 +11710,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10846,6 +11723,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10858,6 +11736,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10870,6 +11749,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10882,6 +11762,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10894,6 +11775,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10908,6 +11790,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10920,6 +11803,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10932,6 +11816,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10944,6 +11829,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10956,6 +11842,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10968,6 +11855,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10980,6 +11868,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10992,6 +11881,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11004,6 +11894,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11016,6 +11907,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11028,6 +11920,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11040,6 +11933,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11052,6 +11946,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11064,6 +11959,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11076,6 +11972,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11088,6 +11985,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11100,6 +11998,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11112,6 +12011,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11124,6 +12024,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11136,6 +12037,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11148,6 +12050,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11160,6 +12063,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11172,6 +12076,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11184,6 +12089,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11196,6 +12102,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11208,6 +12115,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11220,6 +12128,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11232,6 +12141,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11244,6 +12154,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11256,6 +12167,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11268,6 +12180,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11280,6 +12193,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11292,6 +12206,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11304,6 +12219,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11316,6 +12232,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11328,6 +12245,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11340,6 +12258,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11352,6 +12271,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11364,6 +12284,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11376,6 +12297,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11388,6 +12310,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11400,6 +12323,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11412,6 +12336,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11424,6 +12349,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11436,6 +12362,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11448,6 +12375,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11460,6 +12388,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11472,6 +12401,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11484,6 +12414,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11496,6 +12427,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11508,6 +12440,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11520,6 +12453,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11532,6 +12466,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11544,6 +12479,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -11572,6 +12508,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11586,6 +12523,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11598,6 +12536,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11610,6 +12549,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11622,6 +12562,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11634,6 +12575,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11648,6 +12590,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11662,6 +12605,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11674,6 +12618,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11686,6 +12631,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11698,6 +12644,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11710,6 +12657,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11722,6 +12670,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11734,6 +12683,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11746,6 +12696,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11758,6 +12709,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11770,6 +12722,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11782,6 +12735,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11796,6 +12750,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11808,6 +12763,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11820,6 +12776,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11832,6 +12789,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11844,6 +12802,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11856,6 +12815,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11868,6 +12828,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11880,6 +12841,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11892,6 +12854,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11904,6 +12867,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11916,6 +12880,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11928,6 +12893,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11940,6 +12906,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11952,6 +12919,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11964,6 +12932,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11976,6 +12945,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11988,6 +12958,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12000,6 +12971,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12012,6 +12984,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12024,6 +12997,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12036,6 +13010,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12048,6 +13023,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12060,6 +13036,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12072,6 +13049,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12084,6 +13062,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12096,6 +13075,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12108,6 +13088,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12120,6 +13101,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12132,6 +13114,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12144,6 +13127,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12156,6 +13140,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12168,6 +13153,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12180,6 +13166,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12192,6 +13179,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12204,6 +13192,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12216,6 +13205,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12228,6 +13218,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12240,6 +13231,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12252,6 +13244,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12264,6 +13257,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12276,6 +13270,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12288,6 +13283,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12300,6 +13296,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12312,6 +13309,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12324,6 +13322,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12336,6 +13335,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12348,6 +13348,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12360,6 +13361,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12372,6 +13374,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12384,6 +13387,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12396,6 +13400,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12408,6 +13413,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12420,6 +13426,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12432,6 +13439,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -12460,6 +13468,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12474,6 +13483,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12486,6 +13496,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12498,6 +13509,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12510,6 +13522,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12522,6 +13535,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12536,6 +13550,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12550,6 +13565,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12562,6 +13578,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12574,6 +13591,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12586,6 +13604,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12598,6 +13617,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12610,6 +13630,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12622,6 +13643,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12634,6 +13656,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12646,6 +13669,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12658,6 +13682,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12670,6 +13695,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12684,6 +13710,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12696,6 +13723,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12708,6 +13736,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12720,6 +13749,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12732,6 +13762,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12744,6 +13775,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12756,6 +13788,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12768,6 +13801,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12780,6 +13814,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12792,6 +13827,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12804,6 +13840,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12816,6 +13853,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12828,6 +13866,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12840,6 +13879,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12852,6 +13892,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12864,6 +13905,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12876,6 +13918,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12888,6 +13931,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12900,6 +13944,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12912,6 +13957,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12924,6 +13970,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12936,6 +13983,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12948,6 +13996,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12960,6 +14009,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12972,6 +14022,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12984,6 +14035,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12996,6 +14048,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13008,6 +14061,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13020,6 +14074,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13032,6 +14087,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13044,6 +14100,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13056,6 +14113,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13068,6 +14126,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13080,6 +14139,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13092,6 +14152,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13104,6 +14165,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13116,6 +14178,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13128,6 +14191,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13140,6 +14204,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13152,6 +14217,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13164,6 +14230,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13176,6 +14243,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13188,6 +14256,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13200,6 +14269,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13212,6 +14282,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13224,6 +14295,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13236,6 +14308,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13248,6 +14321,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13260,6 +14334,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13272,6 +14347,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13284,6 +14360,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13296,6 +14373,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13308,6 +14386,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13320,6 +14399,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -13348,6 +14428,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13362,6 +14443,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13374,6 +14456,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13386,6 +14469,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13398,6 +14482,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13410,6 +14495,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13424,6 +14510,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13438,6 +14525,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13450,6 +14538,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13462,6 +14551,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13474,6 +14564,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13486,6 +14577,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13498,6 +14590,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13510,6 +14603,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13522,6 +14616,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13534,6 +14629,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13546,6 +14642,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13558,6 +14655,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13572,6 +14670,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13584,6 +14683,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13596,6 +14696,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13608,6 +14709,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13620,6 +14722,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13632,6 +14735,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13644,6 +14748,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13656,6 +14761,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13668,6 +14774,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13680,6 +14787,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13692,6 +14800,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13704,6 +14813,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13716,6 +14826,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13728,6 +14839,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13740,6 +14852,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13752,6 +14865,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13764,6 +14878,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13776,6 +14891,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13788,6 +14904,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13800,6 +14917,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13812,6 +14930,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13824,6 +14943,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13836,6 +14956,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13848,6 +14969,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13860,6 +14982,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13872,6 +14995,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13884,6 +15008,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13896,6 +15021,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13908,6 +15034,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13920,6 +15047,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13932,6 +15060,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13944,6 +15073,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13956,6 +15086,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13968,6 +15099,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13980,6 +15112,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13992,6 +15125,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14004,6 +15138,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14016,6 +15151,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14028,6 +15164,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14040,6 +15177,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14052,6 +15190,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14064,6 +15203,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14076,6 +15216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14088,6 +15229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14100,6 +15242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14112,6 +15255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14124,6 +15268,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14136,6 +15281,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14148,6 +15294,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14160,6 +15307,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14172,6 +15320,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14184,6 +15333,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14196,6 +15346,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14208,6 +15359,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -14236,6 +15388,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14250,6 +15403,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14262,6 +15416,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14274,6 +15429,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14286,6 +15442,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14298,6 +15455,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14312,6 +15470,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14326,6 +15485,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14338,6 +15498,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14350,6 +15511,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14362,6 +15524,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14374,6 +15537,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14386,6 +15550,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14398,6 +15563,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14410,6 +15576,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14422,6 +15589,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14434,6 +15602,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14446,6 +15615,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14460,6 +15630,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14472,6 +15643,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14484,6 +15656,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14496,6 +15669,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14508,6 +15682,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14520,6 +15695,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14532,6 +15708,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14544,6 +15721,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14556,6 +15734,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14568,6 +15747,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14580,6 +15760,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14592,6 +15773,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14604,6 +15786,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14616,6 +15799,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14628,6 +15812,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14640,6 +15825,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14652,6 +15838,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14664,6 +15851,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14676,6 +15864,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14688,6 +15877,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14700,6 +15890,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14712,6 +15903,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14724,6 +15916,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14736,6 +15929,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14748,6 +15942,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14760,6 +15955,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14772,6 +15968,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14784,6 +15981,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14796,6 +15994,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14808,6 +16007,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14820,6 +16020,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14832,6 +16033,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14844,6 +16046,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14856,6 +16059,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14868,6 +16072,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14880,6 +16085,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14892,6 +16098,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14904,6 +16111,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14916,6 +16124,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14928,6 +16137,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14940,6 +16150,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14952,6 +16163,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14964,6 +16176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14976,6 +16189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14988,6 +16202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15000,6 +16215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15012,6 +16228,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15024,6 +16241,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15036,6 +16254,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15048,6 +16267,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15060,6 +16280,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15072,6 +16293,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15084,6 +16306,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15096,6 +16319,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -15124,6 +16348,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15138,6 +16363,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15150,6 +16376,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15162,6 +16389,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15174,6 +16402,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15186,6 +16415,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15200,6 +16430,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15214,6 +16445,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15226,6 +16458,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15238,6 +16471,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15250,6 +16484,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15262,6 +16497,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15274,6 +16510,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15286,6 +16523,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15298,6 +16536,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15310,6 +16549,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15322,6 +16562,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15334,6 +16575,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15348,6 +16590,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15360,6 +16603,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15372,6 +16616,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15384,6 +16629,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15396,6 +16642,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15408,6 +16655,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15420,6 +16668,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15432,6 +16681,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15444,6 +16694,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15456,6 +16707,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15468,6 +16720,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15480,6 +16733,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15492,6 +16746,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15504,6 +16759,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15516,6 +16772,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15528,6 +16785,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15540,6 +16798,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15552,6 +16811,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15564,6 +16824,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15576,6 +16837,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15588,6 +16850,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15600,6 +16863,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15612,6 +16876,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15624,6 +16889,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15636,6 +16902,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15648,6 +16915,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15660,6 +16928,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15672,6 +16941,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15684,6 +16954,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15696,6 +16967,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15708,6 +16980,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15720,6 +16993,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15732,6 +17006,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15744,6 +17019,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15756,6 +17032,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15768,6 +17045,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15780,6 +17058,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15792,6 +17071,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15804,6 +17084,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15816,6 +17097,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15828,6 +17110,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15840,6 +17123,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15852,6 +17136,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15864,6 +17149,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15876,6 +17162,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15888,6 +17175,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15900,6 +17188,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15912,6 +17201,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15924,6 +17214,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15936,6 +17227,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15948,6 +17240,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15960,6 +17253,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15972,6 +17266,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15984,6 +17279,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -16012,6 +17308,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16026,6 +17323,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16038,6 +17336,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16050,6 +17349,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16062,6 +17362,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16074,6 +17375,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16088,6 +17390,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16102,6 +17405,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16114,6 +17418,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16126,6 +17431,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16138,6 +17444,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16150,6 +17457,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16162,6 +17470,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16174,6 +17483,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16186,6 +17496,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16198,6 +17509,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16210,6 +17522,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16222,6 +17535,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16236,6 +17550,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16248,6 +17563,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16260,6 +17576,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16272,6 +17589,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16284,6 +17602,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16296,6 +17615,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16308,6 +17628,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16320,6 +17641,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16332,6 +17654,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16344,6 +17667,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16356,6 +17680,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16368,6 +17693,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16380,6 +17706,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16392,6 +17719,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16404,6 +17732,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16416,6 +17745,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16428,6 +17758,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16440,6 +17771,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16452,6 +17784,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16464,6 +17797,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16476,6 +17810,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16488,6 +17823,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16500,6 +17836,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16512,6 +17849,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16524,6 +17862,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16536,6 +17875,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16548,6 +17888,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16560,6 +17901,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16572,6 +17914,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16584,6 +17927,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16596,6 +17940,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16608,6 +17953,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16620,6 +17966,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16632,6 +17979,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16644,6 +17992,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16656,6 +18005,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16668,6 +18018,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16680,6 +18031,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16692,6 +18044,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16704,6 +18057,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16716,6 +18070,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16728,6 +18083,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16740,6 +18096,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16752,6 +18109,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16764,6 +18122,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16776,6 +18135,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16788,6 +18148,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16800,6 +18161,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16812,6 +18174,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16824,6 +18187,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16836,6 +18200,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16848,6 +18213,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16860,6 +18226,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16872,6 +18239,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -16900,6 +18268,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16914,6 +18283,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16926,6 +18296,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16938,6 +18309,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16950,6 +18322,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16962,6 +18335,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16976,6 +18350,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16990,6 +18365,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17002,6 +18378,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17014,6 +18391,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17026,6 +18404,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17038,6 +18417,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17050,6 +18430,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17062,6 +18443,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17074,6 +18456,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17086,6 +18469,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17098,6 +18482,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17110,6 +18495,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17124,6 +18510,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17136,6 +18523,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17148,6 +18536,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17160,6 +18549,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17172,6 +18562,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17184,6 +18575,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17196,6 +18588,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17208,6 +18601,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17220,6 +18614,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17232,6 +18627,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17244,6 +18640,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17256,6 +18653,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17268,6 +18666,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17280,6 +18679,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17292,6 +18692,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17304,6 +18705,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17316,6 +18718,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17328,6 +18731,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17340,6 +18744,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17352,6 +18757,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17364,6 +18770,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17376,6 +18783,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17388,6 +18796,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17400,6 +18809,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17412,6 +18822,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17424,6 +18835,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17436,6 +18848,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17448,6 +18861,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17460,6 +18874,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17472,6 +18887,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17484,6 +18900,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17496,6 +18913,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17508,6 +18926,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17520,6 +18939,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17532,6 +18952,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17544,6 +18965,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17556,6 +18978,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17568,6 +18991,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17580,6 +19004,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17592,6 +19017,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17604,6 +19030,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17616,6 +19043,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17628,6 +19056,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17640,6 +19069,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17652,6 +19082,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17664,6 +19095,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17676,6 +19108,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17688,6 +19121,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17700,6 +19134,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17712,6 +19147,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17724,6 +19160,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17736,6 +19173,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17748,6 +19186,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17760,6 +19199,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -17788,6 +19228,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17802,6 +19243,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17814,6 +19256,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17826,6 +19269,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17838,6 +19282,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17850,6 +19295,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17864,6 +19310,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17878,6 +19325,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17890,6 +19338,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17902,6 +19351,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17914,6 +19364,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17926,6 +19377,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17938,6 +19390,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17950,6 +19403,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17962,6 +19416,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17974,6 +19429,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17986,6 +19442,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17998,6 +19455,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18012,6 +19470,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18024,6 +19483,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18036,6 +19496,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18048,6 +19509,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18060,6 +19522,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18072,6 +19535,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18084,6 +19548,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18096,6 +19561,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18108,6 +19574,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18120,6 +19587,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18132,6 +19600,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18144,6 +19613,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18156,6 +19626,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18168,6 +19639,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18180,6 +19652,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18192,6 +19665,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18204,6 +19678,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18216,6 +19691,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18228,6 +19704,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18240,6 +19717,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18252,6 +19730,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18264,6 +19743,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18276,6 +19756,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18288,6 +19769,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18300,6 +19782,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18312,6 +19795,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18324,6 +19808,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18336,6 +19821,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18348,6 +19834,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18360,6 +19847,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18372,6 +19860,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18384,6 +19873,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18396,6 +19886,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18408,6 +19899,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18420,6 +19912,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18432,6 +19925,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18444,6 +19938,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18456,6 +19951,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18468,6 +19964,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18480,6 +19977,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18492,6 +19990,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18504,6 +20003,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18516,6 +20016,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18528,6 +20029,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18540,6 +20042,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18552,6 +20055,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18564,6 +20068,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18576,6 +20081,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18588,6 +20094,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18600,6 +20107,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18612,6 +20120,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18624,6 +20133,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18636,6 +20146,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18648,6 +20159,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -18676,6 +20188,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18690,6 +20203,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18702,6 +20216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18714,6 +20229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18726,6 +20242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18738,6 +20255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18752,6 +20270,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18766,6 +20285,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18778,6 +20298,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18790,6 +20311,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18802,6 +20324,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18814,6 +20337,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18826,6 +20350,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18838,6 +20363,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18850,6 +20376,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18862,6 +20389,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18874,6 +20402,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18886,6 +20415,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18900,6 +20430,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18912,6 +20443,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18924,6 +20456,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18936,6 +20469,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18948,6 +20482,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18960,6 +20495,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18972,6 +20508,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18984,6 +20521,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18996,6 +20534,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19008,6 +20547,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19020,6 +20560,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19032,6 +20573,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19044,6 +20586,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19056,6 +20599,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19068,6 +20612,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19080,6 +20625,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19092,6 +20638,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19104,6 +20651,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19116,6 +20664,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19128,6 +20677,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19140,6 +20690,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19152,6 +20703,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19164,6 +20716,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19176,6 +20729,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19188,6 +20742,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19200,6 +20755,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19212,6 +20768,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19224,6 +20781,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19236,6 +20794,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19248,6 +20807,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19260,6 +20820,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19272,6 +20833,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19284,6 +20846,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19296,6 +20859,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19308,6 +20872,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19320,6 +20885,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19332,6 +20898,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19344,6 +20911,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19356,6 +20924,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19368,6 +20937,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19380,6 +20950,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19392,6 +20963,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19404,6 +20976,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19416,6 +20989,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19428,6 +21002,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19440,6 +21015,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19452,6 +21028,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19464,6 +21041,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19476,6 +21054,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19488,6 +21067,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19500,6 +21080,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19512,6 +21093,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19524,6 +21106,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19536,6 +21119,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -19564,6 +21148,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19578,6 +21163,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19590,6 +21176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19602,6 +21189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19614,6 +21202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19626,6 +21215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19640,6 +21230,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19654,6 +21245,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19666,6 +21258,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19678,6 +21271,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19690,6 +21284,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19702,6 +21297,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19714,6 +21310,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19726,6 +21323,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19738,6 +21336,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19750,6 +21349,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19762,6 +21362,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19774,6 +21375,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19788,6 +21390,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19800,6 +21403,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19812,6 +21416,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19824,6 +21429,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19836,6 +21442,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19848,6 +21455,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19860,6 +21468,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19872,6 +21481,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19884,6 +21494,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19896,6 +21507,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19908,6 +21520,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19920,6 +21533,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19932,6 +21546,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19944,6 +21559,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19956,6 +21572,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19968,6 +21585,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19980,6 +21598,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19992,6 +21611,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20004,6 +21624,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20016,6 +21637,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20028,6 +21650,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20040,6 +21663,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20052,6 +21676,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20064,6 +21689,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20076,6 +21702,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20088,6 +21715,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20100,6 +21728,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20112,6 +21741,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20124,6 +21754,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20136,6 +21767,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20148,6 +21780,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20160,6 +21793,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20172,6 +21806,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20184,6 +21819,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20196,6 +21832,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20208,6 +21845,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20220,6 +21858,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20232,6 +21871,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20244,6 +21884,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20256,6 +21897,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20268,6 +21910,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20280,6 +21923,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20292,6 +21936,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20304,6 +21949,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20316,6 +21962,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20328,6 +21975,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20340,6 +21988,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20352,6 +22001,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20364,6 +22014,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20376,6 +22027,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20388,6 +22040,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20400,6 +22053,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20412,6 +22066,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20424,6 +22079,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -20452,6 +22108,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20466,6 +22123,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20478,6 +22136,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20490,6 +22149,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20502,6 +22162,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20514,6 +22175,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20528,6 +22190,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20542,6 +22205,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20554,6 +22218,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20566,6 +22231,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20578,6 +22244,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20590,6 +22257,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20602,6 +22270,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20614,6 +22283,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20626,6 +22296,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20638,6 +22309,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20650,6 +22322,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20662,6 +22335,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20676,6 +22350,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20688,6 +22363,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20700,6 +22376,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20712,6 +22389,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20724,6 +22402,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20736,6 +22415,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20748,6 +22428,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20760,6 +22441,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20772,6 +22454,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20784,6 +22467,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20796,6 +22480,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20808,6 +22493,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20820,6 +22506,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20832,6 +22519,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20844,6 +22532,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20856,6 +22545,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20868,6 +22558,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20880,6 +22571,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20892,6 +22584,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20904,6 +22597,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20916,6 +22610,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20928,6 +22623,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20940,6 +22636,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20952,6 +22649,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20964,6 +22662,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20976,6 +22675,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20988,6 +22688,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21000,6 +22701,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21012,6 +22714,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21024,6 +22727,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21036,6 +22740,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21048,6 +22753,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21060,6 +22766,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21072,6 +22779,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21084,6 +22792,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21096,6 +22805,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21108,6 +22818,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21120,6 +22831,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21132,6 +22844,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21144,6 +22857,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21156,6 +22870,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21168,6 +22883,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21180,6 +22896,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21192,6 +22909,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21204,6 +22922,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21216,6 +22935,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21228,6 +22948,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21240,6 +22961,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21252,6 +22974,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21264,6 +22987,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21276,6 +23000,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21288,6 +23013,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21300,6 +23026,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21312,6 +23039,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -21340,6 +23068,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -21354,6 +23083,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -21366,6 +23096,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21378,6 +23109,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21390,6 +23122,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21402,6 +23135,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21416,6 +23150,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -21430,6 +23165,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -21442,6 +23178,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21454,6 +23191,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21466,6 +23204,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21478,6 +23217,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21490,6 +23230,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21502,6 +23243,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21514,6 +23256,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21526,6 +23269,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21538,6 +23282,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21550,6 +23295,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21564,6 +23310,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -21576,6 +23323,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21588,6 +23336,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21600,6 +23349,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21612,6 +23362,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21624,6 +23375,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21636,6 +23388,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21648,6 +23401,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21660,6 +23414,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21672,6 +23427,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21684,6 +23440,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21696,6 +23453,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21708,6 +23466,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21720,6 +23479,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21732,6 +23492,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21744,6 +23505,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21756,6 +23518,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21768,6 +23531,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21780,6 +23544,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21792,6 +23557,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21804,6 +23570,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21816,6 +23583,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21828,6 +23596,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21840,6 +23609,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21852,6 +23622,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21864,6 +23635,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21876,6 +23648,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21888,6 +23661,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21900,6 +23674,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21912,6 +23687,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21924,6 +23700,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21936,6 +23713,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21948,6 +23726,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21960,6 +23739,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21972,6 +23752,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21984,6 +23765,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21996,6 +23778,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22008,6 +23791,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22020,6 +23804,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22032,6 +23817,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22044,6 +23830,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22056,6 +23843,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22068,6 +23856,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22080,6 +23869,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22092,6 +23882,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22104,6 +23895,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22116,6 +23908,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22128,6 +23921,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22140,6 +23934,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22152,6 +23947,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22164,6 +23960,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22176,6 +23973,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22188,6 +23986,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22200,6 +23999,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -22228,6 +24028,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22242,6 +24043,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22254,6 +24056,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22266,6 +24069,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22278,6 +24082,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22290,6 +24095,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22304,6 +24110,7 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22318,6 +24125,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22330,6 +24138,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22342,6 +24151,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22354,6 +24164,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22366,6 +24177,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22378,6 +24190,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22390,6 +24203,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22402,6 +24216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22414,6 +24229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22426,6 +24242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22438,6 +24255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22452,6 +24270,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22464,6 +24283,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22476,6 +24296,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22488,6 +24309,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22500,6 +24322,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22512,6 +24335,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22524,6 +24348,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22536,6 +24361,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22548,6 +24374,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22560,6 +24387,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22572,6 +24400,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22584,6 +24413,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22596,6 +24426,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22608,6 +24439,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22620,6 +24452,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22632,6 +24465,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22644,6 +24478,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22656,6 +24491,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22668,6 +24504,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22680,6 +24517,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22692,6 +24530,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22704,6 +24543,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22716,6 +24556,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22728,6 +24569,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22740,6 +24582,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22752,6 +24595,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22764,6 +24608,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22776,6 +24621,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22788,6 +24634,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22800,6 +24647,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22812,6 +24660,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22824,6 +24673,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22836,6 +24686,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22848,6 +24699,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22860,6 +24712,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22872,6 +24725,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22884,6 +24738,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22896,6 +24751,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22908,6 +24764,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22920,6 +24777,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22932,6 +24790,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22944,6 +24803,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22956,6 +24816,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22968,6 +24829,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22980,6 +24842,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22992,6 +24855,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23004,6 +24868,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23016,6 +24881,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23028,6 +24894,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23040,6 +24907,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23052,6 +24920,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23064,6 +24933,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23076,6 +24946,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23088,6 +24959,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -23116,6 +24988,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23130,6 +25003,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23142,6 +25016,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23154,6 +25029,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23166,6 +25042,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23178,6 +25055,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23192,6 +25070,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23206,6 +25085,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23218,6 +25098,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23230,6 +25111,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23242,6 +25124,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23254,6 +25137,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23266,6 +25150,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23278,6 +25163,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23290,6 +25176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23302,6 +25189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23314,6 +25202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23326,6 +25215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23340,6 +25230,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23352,6 +25243,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23364,6 +25256,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23376,6 +25269,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23388,6 +25282,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23400,6 +25295,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23412,6 +25308,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23424,6 +25321,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23436,6 +25334,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23448,6 +25347,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23460,6 +25360,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23472,6 +25373,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23484,6 +25386,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23496,6 +25399,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23508,6 +25412,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23520,6 +25425,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23532,6 +25438,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23544,6 +25451,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23556,6 +25464,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23568,6 +25477,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23580,6 +25490,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23592,6 +25503,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23604,6 +25516,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23616,6 +25529,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23628,6 +25542,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23640,6 +25555,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23652,6 +25568,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23664,6 +25581,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23676,6 +25594,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23688,6 +25607,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23700,6 +25620,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23712,6 +25633,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23724,6 +25646,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23736,6 +25659,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23748,6 +25672,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23760,6 +25685,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23772,6 +25698,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23784,6 +25711,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23796,6 +25724,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23808,6 +25737,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23820,6 +25750,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23832,6 +25763,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23844,6 +25776,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23856,6 +25789,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23868,6 +25802,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23880,6 +25815,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23892,6 +25828,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23904,6 +25841,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23916,6 +25854,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23928,6 +25867,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23940,6 +25880,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23952,6 +25893,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23964,6 +25906,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23976,6 +25919,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -24004,6 +25948,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24018,6 +25963,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24030,6 +25976,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24042,6 +25989,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24054,6 +26002,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24066,6 +26015,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24080,6 +26030,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24094,6 +26045,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24106,6 +26058,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24118,6 +26071,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24130,6 +26084,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24142,6 +26097,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24154,6 +26110,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24166,6 +26123,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24178,6 +26136,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24190,6 +26149,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24202,6 +26162,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24214,6 +26175,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24228,6 +26190,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24240,6 +26203,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24252,6 +26216,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24264,6 +26229,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24276,6 +26242,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24288,6 +26255,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24300,6 +26268,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24312,6 +26281,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24324,6 +26294,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24336,6 +26307,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24348,6 +26320,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24360,6 +26333,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24372,6 +26346,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24384,6 +26359,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24396,6 +26372,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24408,6 +26385,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24420,6 +26398,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24432,6 +26411,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24444,6 +26424,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24456,6 +26437,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24468,6 +26450,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24480,6 +26463,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24492,6 +26476,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24504,6 +26489,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24516,6 +26502,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24528,6 +26515,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24540,6 +26528,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24552,6 +26541,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24564,6 +26554,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24576,6 +26567,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24588,6 +26580,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24600,6 +26593,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24612,6 +26606,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24624,6 +26619,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24636,6 +26632,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24648,6 +26645,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24660,6 +26658,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24672,6 +26671,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24684,6 +26684,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24696,6 +26697,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24708,6 +26710,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24720,6 +26723,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24732,6 +26736,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24744,6 +26749,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24756,6 +26762,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24768,6 +26775,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24780,6 +26788,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24792,6 +26801,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24804,6 +26814,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24816,6 +26827,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24828,6 +26840,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24840,6 +26853,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24852,6 +26866,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24864,6 +26879,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
@@ -24892,6 +26908,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24906,6 +26923,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24918,6 +26936,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24930,6 +26949,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24942,6 +26962,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24954,6 +26975,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24968,6 +26990,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24982,6 +27005,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24994,6 +27018,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25006,6 +27031,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25018,6 +27044,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25030,6 +27057,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25042,6 +27070,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25054,6 +27083,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25066,6 +27096,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25078,6 +27109,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25090,6 +27122,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25102,6 +27135,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25116,6 +27150,7 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -25128,6 +27163,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25140,6 +27176,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25152,6 +27189,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25164,6 +27202,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25176,6 +27215,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25188,6 +27228,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25200,6 +27241,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25212,6 +27254,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25224,6 +27267,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25236,6 +27280,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25248,6 +27293,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25260,6 +27306,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25272,6 +27319,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25284,6 +27332,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25296,6 +27345,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25308,6 +27358,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25320,6 +27371,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25332,6 +27384,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25344,6 +27397,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25356,6 +27410,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25368,6 +27423,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25380,6 +27436,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25392,6 +27449,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25404,6 +27462,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25416,6 +27475,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25428,6 +27488,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25440,6 +27501,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25452,6 +27514,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25464,6 +27527,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25476,6 +27540,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25488,6 +27553,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25500,6 +27566,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25512,6 +27579,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25524,6 +27592,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25536,6 +27605,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25548,6 +27618,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25560,6 +27631,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25572,6 +27644,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25584,6 +27657,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25596,6 +27670,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25608,6 +27683,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25620,6 +27696,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25632,6 +27709,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25644,6 +27722,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25656,6 +27735,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25668,6 +27748,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25680,6 +27761,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25692,6 +27774,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25704,6 +27787,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25716,6 +27800,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25728,6 +27813,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25740,6 +27826,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25752,6 +27839,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
+          "status": "TIMED",
           "runde": "gruppe"
         }
       ],
