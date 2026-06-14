@@ -33,8 +33,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Skriv alltid en timestamp slik at GitHub ikke throttler scheduled runs
-          echo "{"sjekket": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"}" > data/last-checked.json
-          git add data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/manuelle-kamper.json data/last-checked.json data/fd_debug.json
-          git commit -m "Auto: oppdater leaderboard $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          # Skriv alltid en gyldig JSON-timestamp slik at scheduled runs gir sporbarhet
+          printf '{"sjekket":"%s"}\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > data/last-checked.json
+          git add data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/manuelle-kamper.json data/last-checked.json data/fd_debug.json data/kamp-mapping.json
+          if git diff --cached --quiet; then
+            echo "Ingen endringer å committe"
+          else
+            git commit -m "Auto: oppdater leaderboard $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
