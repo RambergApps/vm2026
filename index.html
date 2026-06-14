@@ -636,10 +636,37 @@ function byggDagensKamper() {
   const normFd = s => { const low=String(s||'').toLowerCase().trim(); return (FD_TIL_OF2[low]||low).replace(/[^a-z0-9]/g,'_').replace(/_+/g,'_').replace(/^_|_$/g,''); };
 
   const resultatLookup = {};
-  if (VM_DATA?.stilling?.length) {
+  const resultatLookupId = {};
+  const leggTilResultat = (kid, r) => {
+    if (!r) return;
+    const hjemmelag = r.hjemmelag || r.homeTeam || '';
+    const bortelag = r.bortelag || r.awayTeam || '';
+    const value = {
+      faktisk_h: r.hjemme ?? r.faktisk_h ?? null,
+      faktisk_b: r.borte ?? r.faktisk_b ?? null,
+      ferdig: !!r.ferdig,
+      status: r.status || (r.ferdig ? 'FINISHED' : 'TIMED'),
+      kilde_score: r.kilde_score || r.kilde || '',
+      kamp_id: kid
+    };
+
+    if (kid) resultatLookupId[kid] = value;
+    if (r.canonical_kamp_id && r.canonical_kamp_id !== kid) resultatLookupId[r.canonical_kamp_id] = value;
+    if (r.alias_for && r.alias_for !== kid) resultatLookupId[r.alias_for] = value;
+
+    if (hjemmelag && bortelag) {
+      const navnKey = normFd(hjemmelag) + '__' + normFd(bortelag);
+      resultatLookup[navnKey] = value;
+    }
+  };
+
+  if (VM_DATA?.resultater && typeof VM_DATA.resultater === 'object') {
+    Object.entries(VM_DATA.resultater).forEach(([kid, r]) => leggTilResultat(kid, r));
+  } else if (VM_DATA?.stilling?.length) {
+    // Bakoverkompatibilitet mot eldre data.js uten VM_DATA.resultater.
     VM_DATA.stilling[0].tippinger?.forEach(t => {
       if (t.hjemmelag && t.bortelag) {
-        const navnKey = normNavn(t.hjemmelag) + '__' + normNavn(t.bortelag);
+        const navnKey = normFd(t.hjemmelag) + '__' + normFd(t.bortelag);
         resultatLookup[navnKey] = { faktisk_h: t.faktisk_h, faktisk_b: t.faktisk_b, ferdig: t.ferdig, status: t.status || (t.ferdig ? 'FINISHED' : 'TIMED') };
       }
     });
@@ -651,7 +678,7 @@ function byggDagensKamper() {
 
   const raderHTML = dagensKamper.map(k => {
     const navnKey = k.hjemmelag && k.bortelag ? normFd(k.hjemmelag)+'__'+normFd(k.bortelag) : null;
-    const res = navnKey ? resultatLookup[navnKey] : null;
+    const res = (k.kamp_id && resultatLookupId[k.kamp_id]) || (navnKey ? resultatLookup[navnKey] : null);
     const ferdig = res?.ferdig;
     const status = res?.status || (ferdig ? 'FINISHED' : 'TIMED');
     const paagaar = status === 'IN_PLAY' || status === 'PAUSED';
