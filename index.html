@@ -416,12 +416,85 @@ body {
   font-family: 'Bebas Neue', sans-serif; font-size: 22px; text-align: right; color: var(--gold);
 }
 
+.kampoversikt-mobile { display: none; }
+
 @media (max-width: 640px) {
-  .kamper-intro { display: block; }
-  .kamper-oppdatert { margin-top: 8px; }
-  .kampoversikt-rad { grid-template-columns: 56px 1fr 56px; }
-  .kampoversikt-lag.borte { justify-content: flex-start; text-align: left; grid-column: 2; }
-  .kampoversikt-status { grid-column: 3; grid-row: 1 / span 2; }
+  /* Kun mobiltilpasning for Kamper-fanen */
+  .kamper-intro { display: block; margin-bottom: 12px; }
+  .kamper-intro h2 { font-size: 34px; }
+  .kamper-intro p { display: none; }
+  .kamper-oppdatert { margin-top: 6px; font-size: 10px; }
+
+  .kamper-filter {
+    flex-wrap: nowrap; overflow-x: auto; gap: 8px;
+    margin: 0 -16px 14px; padding: 0 16px 6px;
+    scrollbar-width: none;
+  }
+  .kamper-filter::-webkit-scrollbar { display: none; }
+  .kamper-btn {
+    flex: 0 0 auto; padding: 8px 13px; font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .kampdato-gruppe { margin-bottom: 16px; }
+  .kampdato-tittel { font-size: 11px; margin-bottom: 7px; padding-left: 3px; }
+  .kampoversikt-liste {
+    border: 0; border-radius: 0; overflow: visible; background: transparent;
+  }
+  .kampoversikt-rad {
+    display: block; padding: 0; margin-bottom: 10px;
+    border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; background: var(--card);
+    box-shadow: 0 10px 24px rgba(0,0,0,.16);
+  }
+  .kampoversikt-rad:nth-child(odd),
+  .kampoversikt-rad:nth-child(even) { background: var(--card); }
+  .kampoversikt-rad > .kampoversikt-tid,
+  .kampoversikt-rad > .kampoversikt-lag,
+  .kampoversikt-rad > .kampoversikt-score,
+  .kampoversikt-rad > .kampoversikt-status { display: none; }
+
+  .kampoversikt-mobile { display: block; padding: 12px 14px 11px; }
+  .kampmobil-top {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; margin-bottom: 10px;
+  }
+  .kampmobil-tid {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+    letter-spacing: .08em; color: var(--muted);
+  }
+  .kampmobil-status {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 900;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+    border: 1px solid rgba(122,138,170,.35); border-radius: 999px;
+    padding: 4px 8px;
+  }
+  .kampmobil-status.ferdig { color: var(--accent); border-color: rgba(239,43,45,.36); }
+  .kampmobil-status.live { color: #fff; background: #ef2b2d; border-color: #ef2b2d; }
+  .kampmobil-lagrow {
+    display: grid; grid-template-columns: minmax(0,1fr) auto;
+    align-items: center; gap: 10px; min-height: 30px;
+  }
+  .kampmobil-lagnavn {
+    min-width: 0; display: flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900;
+    text-transform: uppercase; color: var(--text);
+  }
+  .kampmobil-lagnavn .kampmobil-navn {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .kampmobil-score {
+    font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: .9;
+    color: var(--gold); min-width: 24px; text-align: right;
+  }
+  .kampmobil-score.venter { color: var(--muted); opacity: .7; }
+  .kampmobil-poenginfo {
+    margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(30,45,74,.65);
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  }
+  .kampmobil-poenginfo.aktiv { color: var(--accent2); }
+
   .poenggiver-rad { grid-template-columns: 1fr 70px 42px; }
 }
 
@@ -1026,6 +1099,17 @@ function canonicalKampId(kamp) {
   return kamp.canonical_kamp_id || kamp.alias_for || kamp.kamp_id || '';
 }
 
+
+function erKjentLag(navn) {
+  const n = String(navn || '').trim();
+  if (!n) return false;
+  const low = n.toLowerCase();
+  if (n.includes('/')) return false;
+  if (/^[123][A-L]$/i.test(n)) return false;
+  if (/^W\d+$/i.test(n)) return false;
+  return !['winner','runner','path','tbd','place','placeholder'].some(x => low.includes(x));
+}
+
 function alleKampIdVarianter(kamp) {
   const ids = new Set();
   [kamp.kamp_id, kamp.canonical_kamp_id, kamp.alias_for].filter(Boolean).forEach(id => ids.add(id));
@@ -1045,6 +1129,11 @@ function hentKamperFraResultater() {
   const byCanonical = new Map();
   Object.values(resultater).forEach(k => {
     if (!k) return;
+
+    // Ikke vis bracket-/placeholder-kamper som 2A–2B, W74 osv. i Kamper-fanen.
+    // De blir først relevante når status/poengscriptet har fylt inn ekte lag.
+    if (!erKjentLag(k.hjemmelag) || !erKjentLag(k.bortelag)) return;
+
     const canonical = canonicalKampId(k);
     if (!canonical) return;
     const eksisterende = byCanonical.get(canonical);
@@ -1103,13 +1192,33 @@ function byggKamperFane() {
       const harScore = k.hjemme !== null && k.hjemme !== undefined && k.borte !== null && k.borte !== undefined;
       const score = harScore ? `${k.hjemme}–${k.borte}` : 'Ikke spilt';
       const scoreCls = harScore ? '' : 'venter';
+      const tid = formaterDatoNorsk(k, true).split(' ').slice(-1)[0] || '';
+      const hjemScore = harScore ? k.hjemme : '–';
+      const bortScore = harScore ? k.borte : '–';
+      const poengAntall = status.type === 'ferdig' ? poenggivereForKamp(k).length : null;
+      const poengTekst = poengAntall !== null ? `${poengAntall} fikk poeng →` : '';
       html += `
         <div class="kampoversikt-rad" onclick="aapneKampModal('${escHTML(canonicalKampId(k))}')">
-          <div class="kampoversikt-tid">${escHTML(formaterDatoNorsk(k, true).split(' ').slice(-1)[0] || '')}</div>
+          <div class="kampoversikt-tid">${escHTML(tid)}</div>
           <div class="kampoversikt-lag"><span>${flaggLag(h)}</span><span>${escHTML(h)}</span></div>
           <div class="kampoversikt-score ${scoreCls}">${escHTML(score)}</div>
           <div class="kampoversikt-lag borte"><span>${escHTML(b)}</span><span>${flaggLag(b)}</span></div>
           <div class="kampoversikt-status ${status.cls}">${status.tekst}</div>
+          <div class="kampoversikt-mobile" aria-hidden="true">
+            <div class="kampmobil-top">
+              <div class="kampmobil-tid">${escHTML(tid)}</div>
+              <div class="kampmobil-status ${status.cls}">${escHTML(status.tekst)}</div>
+            </div>
+            <div class="kampmobil-lagrow">
+              <div class="kampmobil-lagnavn"><span>${flaggLag(h)}</span><span class="kampmobil-navn">${escHTML(h)}</span></div>
+              <div class="kampmobil-score ${harScore ? '' : 'venter'}">${escHTML(String(hjemScore))}</div>
+            </div>
+            <div class="kampmobil-lagrow">
+              <div class="kampmobil-lagnavn"><span>${flaggLag(b)}</span><span class="kampmobil-navn">${escHTML(b)}</span></div>
+              <div class="kampmobil-score ${harScore ? '' : 'venter'}">${escHTML(String(bortScore))}</div>
+            </div>
+            ${poengTekst ? `<div class="kampmobil-poenginfo aktiv">${escHTML(poengTekst)}</div>` : ''}
+          </div>
         </div>`;
     });
     html += '</div></div>';
