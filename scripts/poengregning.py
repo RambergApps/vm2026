@@ -13,8 +13,8 @@ Flyt:
 8. Oppdater data/status.json med utslagsrunde-info
 
 Kilder og prioritet for score:
-  1. OpenFootball (hvis score.ft finnes)
-  2. football-data.org (hvis OF mangler score og kampen er FINISHED)
+  1. football-data.org (rask resultat-/statuskilde, matchet tilbake til OpenFootball-ID)
+  2. OpenFootball (kampoppsett og stabil kamp-ID)
   3. Manuelle fallback-kamper (data/manuelle-kamper.json)
 """
 
@@ -23,6 +23,7 @@ import os
 import re
 import sys
 import requests
+import unicodedata
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -39,6 +40,8 @@ FD_NAVN_TIL_OF = {
     "Congo DR":            "DR Congo",
     "Czechia":             "Czech Republic",
     "Türkiye":             "Turkey",
+    "United States":       "USA",
+    "Curacao":             "Curaçao",
 }
 
 REPO_ROOT      = Path(__file__).parent.parent
@@ -50,6 +53,7 @@ DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
 MANUELLE_KAMPER_JSON = DATA_DIR / "manuelle-kamper.json"
 DEBUG_JSON           = DATA_DIR / "fd_debug.json"
 MANGLER_RESULTATER_JSON = DATA_DIR / "mangler-resultater.json"
+KAMP_MAPPING_JSON       = DATA_DIR / "kamp-mapping.json"
 
 # Poeng per runde
 # Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter.
@@ -219,15 +223,113 @@ def hent_api_data():
         sys.exit(1)
 
 
+def parse_dato(dato):
+    """Parser YYYY-MM-DD til date. Returnerer None ved ugyldig verdi."""
+    try:
+        return datetime.fromisoformat(str(dato or "")[:10]).date()
+    except Exception:
+        return None
+
+
+def dato_avvik_dager(dato_a, dato_b):
+    """Returnerer absolutt datoavvik i dager, eller None hvis en dato ikke kan parses."""
+    a = parse_dato(dato_a)
+    b = parse_dato(dato_b)
+    if not a or not b:
+        return None
+    return abs((a - b).days)
+
+
+def normaliser_lagnavn_for_match(navn):
+    """
+    Normaliserer lagnavn for trygg matching mellom OpenFootball og football-data.org.
+    Beholder ikke visningsnavn — dette er kun en teknisk sammenligningsnøkkel.
+    """
+    s = str(navn or "").strip()
+    s = FD_NAVN_TIL_OF.get(s, s)
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
+    s = s.lower().replace("&", "and")
+    s = re.sub(r"[^a-z0-9]+", "_", s)
+    return re.sub(r"_+", "_", s).strip("_")
+
+
+def runde_fra_openfootball_kamp(kamp):
+    """Bestemmer intern runde fra OpenFootball-kamp."""
+    if kamp.get("group"):
+        return "gruppe"
+    if kamp.get("round"):
+        r = kamp["round"].lower()
+        if "round of 32" in r or "r32" in r:
+            return "r32"
+        if "round of 16" in r or "r16" in r:
+            return "r16"
+        if "quarter" in r:
+            return "qf"
+        if "semi" in r:
+            return "sf"
+        if "final" in r:
+            return "final"
+    return "ukjent"
+
+
+def les_kamp_mapping():
+    """
+    Leser data/kamp-mapping.json.
+
+    Format:
+    {
+      "sist_oppdatert": "...",
+      "kamper": {
+        "OpenFootball_kamp_id": {
+          "fd_match_id": 123,
+          ...
+        }
+      }
+    }
+    """
+    if not KAMP_MAPPING_JSON.exists():
+        return {"sist_oppdatert": None, "kamper": {}}
+
+    try:
+        data = json.loads(KAMP_MAPPING_JSON.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"  ADVARSEL: Kunne ikke lese kamp-mapping.json: {e}")
+        return {"sist_oppdatert": None, "kamper": {}}
+
+    # Bakoverkompatibilitet hvis filen senere skulle ha blitt lagret som ren dict.
+    if isinstance(data, dict) and "kamper" not in data:
+        data = {"sist_oppdatert": None, "kamper": data}
+
+    if not isinstance(data.get("kamper"), dict):
+        data["kamper"] = {}
+
+    return data
+
+
+def skriv_kamp_mapping(mapping_data, force=False):
+    """Skriver data/kamp-mapping.json bare hvis innholdet faktisk er endret."""
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    mapping_data = {
+        "sist_oppdatert": mapping_data.get("sist_oppdatert"),
+        "kamper": dict(sorted(mapping_data.get("kamper", {}).items())),
+    }
+    ny = json.dumps(mapping_data, ensure_ascii=False, indent=2) + "\n"
+    gammel = KAMP_MAPPING_JSON.read_text(encoding="utf-8") if KAMP_MAPPING_JSON.exists() else None
+
+    if not force and gammel == ny:
+        print("  → kamp-mapping.json uendret")
+        return
+
+    KAMP_MAPPING_JSON.write_text(ny, encoding="utf-8")
+    print(f"  → Skrev kamp-mapping.json med {len(mapping_data.get('kamper', {}))} koblinger")
+
+
 def hent_football_data_org():
     """
-    Henter kampresultater fra football-data.org.
+    Henter kampresultater/status fra football-data.org.
 
-    Returnerer en dict med kamp_id → {hjemme, borte, ferdig} for alle
-    kamper med status FINISHED. Lagnavn normaliseres til OpenFootball-format
-    via FD_NAVN_TIL_OF-mappingen slik at kamp-ID-er matcher.
-
-    Returnerer tom dict hvis token mangler eller kall feiler.
+    Returnerer en dict med fd_match_id → data. Disse ID-ene brukes bare til
+    kildekobling. Poeng og frontend skal fortsatt bruke OpenFootball-kamp_id.
     """
     if not FOOTBALL_DATA_TOKEN:
         print("  ADVARSEL: FOOTBALL_DATA_TOKEN ikke satt — hopper over football-data.org")
@@ -247,80 +349,86 @@ def hent_football_data_org():
         return {}
 
     fd_lookup = {}
+    tillatte_status = {"SCHEDULED", "TIMED", "IN_PLAY", "PAUSED", "FINISHED"}
+
     for kamp in data.get("matches", []):
-        status_fd = kamp.get("status")
-        if status_fd not in ("FINISHED", "IN_PLAY", "PAUSED"):
+        status_fd = kamp.get("status") or "TIMED"
+        if status_fd not in tillatte_status:
             continue
+
+        home_raw = kamp.get("homeTeam", {}).get("name", "")
+        away_raw = kamp.get("awayTeam", {}).get("name", "")
 
         # Normaliser lagnavn til OpenFootball-format
-        team1 = FD_NAVN_TIL_OF.get(kamp["homeTeam"]["name"], kamp["homeTeam"]["name"])
-        team2 = FD_NAVN_TIL_OF.get(kamp["awayTeam"]["name"], kamp["awayTeam"]["name"])
+        team1 = FD_NAVN_TIL_OF.get(home_raw, home_raw)
+        team2 = FD_NAVN_TIL_OF.get(away_raw, away_raw)
 
-        # Dato fra utcDate (format: 2026-06-11T19:00:00Z -> 2026-06-11)
-        dato = kamp.get("utcDate", "")[:10]
+        # Dato fra utcDate (format: 2026-06-14T04:00:00Z -> 2026-06-14)
+        utc_date = kamp.get("utcDate", "")
+        dato = utc_date[:10]
 
-        score = kamp.get("score", {})
-        ft    = score.get("fullTime", {})
+        score = kamp.get("score", {}) or {}
+        ft = score.get("fullTime") or {}
+        rt = score.get("regularTime") or {}
+
         hjemme = ft.get("home")
-        borte  = ft.get("away")
-
+        borte = ft.get("away")
         if hjemme is None or borte is None:
-            continue
+            hjemme = rt.get("home")
+            borte = rt.get("away")
 
         # Hent winner og duration for utslagskamper
         winner   = score.get("winner")    # HOME_TEAM / AWAY_TEAM / DRAW
         duration = score.get("duration")  # REGULAR / EXTRA_TIME / PENALTY_SHOOTOUT
 
-        fd_data = {
-            "hjemme":   hjemme,
-            "borte":    borte,
-            "ferdig":   status_fd == "FINISHED",
-            "kilde":    "football_data_org",
-            "winner":   winner,
+        fd_match_id = kamp.get("id")
+        fd_key = str(fd_match_id or kamp_id(team1, team2, dato))
+
+        fd_lookup[fd_key] = {
+            "fd_match_id": fd_match_id,
+            "hjemmelag": team1,
+            "bortelag": team2,
+            "fd_hjemmelag": home_raw,
+            "fd_bortelag": away_raw,
+            "hjemme": hjemme,
+            "borte": borte,
+            "har_score": hjemme is not None and borte is not None,
+            "ferdig": status_fd == "FINISHED",
+            "kilde": "football_data_org",
+            "winner": winner,
             "duration": duration,
-            "status":   status_fd,
-            "fd_dato":  dato,
+            "status": status_fd,
+            "fd_dato": dato,
+            "fd_utcDate": utc_date,
+            "fd_stage": kamp.get("stage", ""),
+            "fd_group": kamp.get("group", ""),
+            "fd_kamp_id_basert_paa_dato": kamp_id(team1, team2, dato),
         }
 
-        # Primær-ID basert på fd.org sin utcDate.
-        # I noen tilfeller bruker OpenFootball lokal kampdato, mens fd.org bruker UTC-dato.
-        # Da kan samme kamp havne på datoen før i OpenFootball. Derfor legges også
-        # en alias-ID inn med fd.org-dato minus én dag. Eksempel:
-        #   fd.org:       Australia_Turkey_2026_06_14
-        #   OpenFootball: Australia_Turkey_2026_06_13
-        kid = kamp_id(team1, team2, dato)
-        fd_lookup[kid] = fd_data
-
-        dato_minus_1 = dato_minus_en_dag(dato)
-        if dato_minus_1 and dato_minus_1 != dato:
-            kid_minus_1 = kamp_id(team1, team2, dato_minus_1)
-            fd_lookup.setdefault(kid_minus_1, {
-                **fd_data,
-                "fd_alias": True,
-                "fd_original_kamp_id": kid,
-            })
-
-    reelle_fd_kamper = [v for v in fd_lookup.values() if not v.get("fd_alias")]
-    alias_antall = sum(1 for v in fd_lookup.values() if v.get("fd_alias"))
-    ferdig_antall  = sum(1 for v in reelle_fd_kamper if v["ferdig"])
-    paagaar_antall = sum(1 for v in reelle_fd_kamper if not v["ferdig"])
-    print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående/pause fra football-data.org")
-    if alias_antall:
-        print(f"  -> {alias_antall} ekstra dato-alias lagt til for UTC/lokal-dato-avvik")
+    ferdig_antall  = sum(1 for v in fd_lookup.values() if v["ferdig"])
+    paagaar_antall = sum(1 for v in fd_lookup.values() if v["status"] in ("IN_PLAY", "PAUSED"))
+    med_score      = sum(1 for v in fd_lookup.values() if v.get("har_score"))
+    print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående/pause, {med_score} med score fra football-data.org")
 
     # Skriv debug-fil så vi kan inspisere hva fd.org faktisk returnerte
     debug_data = {
         "tidspunkt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "kamper": {
-            kid: {
-                "kamp_id":  kid,
-                "status":   v["status"],
-                "ferdig":   v["ferdig"],
-                "hjemme":   v["hjemme"],
-                "borte":    v["borte"],
-                **({"fd_alias": True, "fd_original_kamp_id": v.get("fd_original_kamp_id")} if v.get("fd_alias") else {}),
+            fd_key: {
+                "fd_match_id": v.get("fd_match_id"),
+                "fd_hjemmelag": v.get("fd_hjemmelag"),
+                "fd_bortelag": v.get("fd_bortelag"),
+                "hjemmelag_normalisert": v.get("hjemmelag"),
+                "bortelag_normalisert": v.get("bortelag"),
+                "status": v.get("status"),
+                "ferdig": v.get("ferdig"),
+                "hjemme": v.get("hjemme"),
+                "borte": v.get("borte"),
+                "fd_dato": v.get("fd_dato"),
+                "fd_utcDate": v.get("fd_utcDate"),
+                "fd_kamp_id_basert_paa_dato": v.get("fd_kamp_id_basert_paa_dato"),
             }
-            for kid, v in sorted(fd_lookup.items())
+            for fd_key, v in sorted(fd_lookup.items(), key=lambda x: x[0])
         }
     }
     DEBUG_JSON.write_text(json.dumps(debug_data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -329,96 +437,186 @@ def hent_football_data_org():
     return fd_lookup
 
 
+def finn_fd_match_for_of(kid, team1, team2, dato, runde, fd_lookup, mapping_data, now_iso):
+    """
+    Finner riktig football-data.org-kamp for én OpenFootball-kamp.
+
+    Prioritet:
+      1. Eksisterende data/kamp-mapping.json
+      2. Auto-match på hjemmelag/bortelag + datoavvik maks ±1 dag
+
+    Returnerer (fd, mapping_endret).
+    """
+    mapping = mapping_data.setdefault("kamper", {})
+    eksisterende = mapping.get(kid)
+
+    if eksisterende:
+        fd_id = str(eksisterende.get("fd_match_id") or "")
+        if fd_id and fd_id in fd_lookup:
+            return fd_lookup[fd_id], False
+        # Hvis fd_match_id mangler eller ikke finnes i dagens fd.org-payload,
+        # prøver vi auto-match på nytt i stedet for å låse oss til en død kobling.
+        print(f"    ADVARSEL: Lagret fd_match_id mangler for {kid} — prøver auto-match på nytt")
+
+    of_home_key = normaliser_lagnavn_for_match(team1)
+    of_away_key = normaliser_lagnavn_for_match(team2)
+    kandidater = []
+
+    for fd_key, fd in fd_lookup.items():
+        if normaliser_lagnavn_for_match(fd.get("hjemmelag")) != of_home_key:
+            continue
+        if normaliser_lagnavn_for_match(fd.get("bortelag")) != of_away_key:
+            continue
+
+        avvik = dato_avvik_dager(dato, fd.get("fd_dato"))
+        if avvik is None or avvik > 1:
+            continue
+
+        kandidater.append((avvik, fd_key, fd))
+
+    if not kandidater:
+        return None, False
+
+    kandidater.sort(key=lambda x: (x[0], 0 if x[2].get("har_score") else 1, x[1]))
+    beste_avvik = kandidater[0][0]
+    beste = [k for k in kandidater if k[0] == beste_avvik]
+
+    # Hvis det finnes flere like gode treff, ikke gjett.
+    if len(beste) > 1:
+        print(f"    ADVARSEL: Flere mulige fd.org-treff for {kid}: {[x[1] for x in beste]} — hopper over auto-match")
+        return None, False
+
+    _, fd_key, fd = beste[0]
+    fd_match_id = fd.get("fd_match_id")
+
+    mapping[kid] = {
+        "of_kamp_id": kid,
+        "of_dato": dato,
+        "of_hjemmelag": team1,
+        "of_bortelag": team2,
+        "runde": runde,
+        "fd_match_id": fd_match_id,
+        "fd_dato": fd.get("fd_dato"),
+        "fd_utcDate": fd.get("fd_utcDate"),
+        "fd_hjemmelag": fd.get("fd_hjemmelag"),
+        "fd_bortelag": fd.get("fd_bortelag"),
+        "fd_hjemmelag_normalisert": fd.get("hjemmelag"),
+        "fd_bortelag_normalisert": fd.get("bortelag"),
+        "dato_avvik_dager": beste_avvik,
+        "match_type": "auto_lag_dato",
+        "confidence": "high",
+        "sist_matchet": now_iso,
+    }
+    mapping_data["sist_oppdatert"] = now_iso
+
+    if beste_avvik:
+        print(f"    fd.org mapping datoavvik: {kid} -> fd_match_id={fd_match_id} ({team1}–{team2}, OF {dato}, fd {fd.get('fd_dato')})")
+
+    return fd, True
+
+
+def bruk_fd_paa_base(base, fd, team1, team2):
+    """Legger fd.org-status/score inn på en OpenFootball-basert kampoppføring."""
+    if not fd:
+        return base
+
+    base["status"] = fd.get("status", base.get("status", "TIMED"))
+    base["fd_match_id"] = fd.get("fd_match_id")
+    base["dato_fd_org"] = fd.get("fd_dato")
+    base["fd_utcDate"] = fd.get("fd_utcDate")
+    base["fd_hjemmelag"] = fd.get("fd_hjemmelag")
+    base["fd_bortelag"] = fd.get("fd_bortelag")
+
+    if fd.get("har_score"):
+        base["hjemme"] = fd.get("hjemme")
+        base["borte"] = fd.get("borte")
+        base["ferdig"] = fd.get("ferdig", False)
+        base["kilde"] = "football_data_org"
+        base["kilde_score"] = "football_data_org"
+
+        # Sett avanserer automatisk fra fd.org winner-felt (gjelder utslagskamper)
+        if fd.get("ferdig") and fd.get("winner") == "HOME_TEAM":
+            base["avanserer"] = team1
+        elif fd.get("ferdig") and fd.get("winner") == "AWAY_TEAM":
+            base["avanserer"] = team2
+
+    return base
+
+
 def bygg_resultat_lookup(api_data, fd_lookup):
     """
-    Bygger en dict med kamp_id -> resultat for alle kamper.
+    Bygger en dict med OpenFootball kamp_id -> resultat for alle kamper.
 
-    Prioritet for score:
-      1. OpenFootball (hvis score.ft finnes)
-      2. football-data.org (hvis OF mangler score og kampen er FINISHED hos fd.org)
+    Viktig prinsipp:
+      - OpenFootball eier kamp-ID og kampoppsett.
+      - football-data.org eier rask score/status.
+      - data/kamp-mapping.json kobler fd_match_id tilbake til OpenFootball-ID.
 
-    Format: { "Mexico_South_Africa_2026_06_11": { hjemme: 2, borte: 1, ferdig: True, runde: "gruppe", kilde: "..." } }
+    Format:
+      {
+        "Australia_Turkey_2026_06_13": {
+          hjemme: 2,
+          borte: 0,
+          ferdig: True,
+          runde: "gruppe",
+          kilde_score: "football_data_org"
+        }
+      }
     """
     lookup = {}
+    mapping_data = les_kamp_mapping()
+    mapping_endret = False
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for kamp in api_data.get("matches", []):
         dato  = kamp.get("date", "")
         team1 = kamp.get("team1", "")
         team2 = kamp.get("team2", "")
-        score = kamp.get("score", {})
+        score = kamp.get("score", {}) or {}
         ht    = score.get("ft", [None, None])  # full time score
-
-        # Bestem runde
-        if kamp.get("group"):
-            runde = "gruppe"
-        elif kamp.get("round"):
-            r = kamp["round"].lower()
-            if "round of 32" in r or "r32" in r:
-                runde = "r32"
-            elif "round of 16" in r or "r16" in r:
-                runde = "r16"
-            elif "quarter" in r:
-                runde = "qf"
-            elif "semi" in r:
-                runde = "sf"
-            elif "final" in r:
-                runde = "final"
-            else:
-                runde = "ukjent"
-        else:
-            runde = "ukjent"
-
-        # Sjekk om OpenFootball har ferdig score
-        of_ferdig = bool(ht and ht[0] is not None and ht[1] is not None)
+        runde = runde_fra_openfootball_kamp(kamp)
 
         kid = kamp_id(team1, team2, dato)
 
-        if of_ferdig:
-            # OpenFootball har score -- bruk den
-            lookup[kid] = {
-                "hjemmelag": team1,
-                "bortelag":  team2,
-                "hjemme":    ht[0],
-                "borte":     ht[1],
-                "ferdig":    True,
-                "runde":     runde,
-                "dato":      dato,
-                "kilde":     "openfootball",
-            }
-        else:
-            # OpenFootball mangler score -- bygg oppforing og sjekk fd.org
-            base = {
-                "hjemmelag": team1,
-                "bortelag":  team2,
-                "hjemme":    None,
-                "borte":     None,
-                "ferdig":    False,
-                "runde":     runde,
-                "dato":      dato,
-                "kilde":     "openfootball",
-            }
-            fd = fd_lookup.get(kid)
-            if fd:
-                base["hjemme"]  = fd["hjemme"]
-                base["borte"]   = fd["borte"]
-                base["ferdig"]  = fd.get("ferdig", False)
-                base["status"]  = fd.get("status", "TIMED")
-                base["kilde"]   = "football_data_org"
-                # Sett avanserer automatisk fra fd.org winner-felt (gjelder utslagskamper)
-                if fd.get("ferdig") and fd.get("winner") == "HOME_TEAM":
-                    base["avanserer"] = team1
-                elif fd.get("ferdig") and fd.get("winner") == "AWAY_TEAM":
-                    base["avanserer"] = team2
-                duration = fd.get("duration", "REGULAR")
-                if fd.get("ferdig"):
-                    print(f"    fd.org fallback: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{duration}]")
-                else:
-                    print(f"    fd.org pågående: {team1} {fd['hjemme']}-{fd['borte']} {team2} ({dato}) [{fd.get('status')}]")
-            lookup[kid] = base
+        # OpenFootball-score brukes kun hvis fd.org ikke har score/status med mål.
+        of_ferdig = bool(ht and ht[0] is not None and ht[1] is not None)
 
-    of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "openfootball")
-    fd_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde") == "football_data_org")
-    print(f"  -> {len(lookup)} kamper totalt | OpenFootball: {of_ferdig_antall} ferdigspilte | football-data.org fallback: {fd_ferdig_antall}")
+        base = {
+            "hjemmelag": team1,
+            "bortelag":  team2,
+            "hjemme":    ht[0] if of_ferdig else None,
+            "borte":     ht[1] if of_ferdig else None,
+            "ferdig":    of_ferdig,
+            "runde":     runde,
+            "dato":      dato,
+            "dato_openfootball": dato,
+            "status":    "FINISHED" if of_ferdig else "TIMED",
+            "kilde":     "openfootball",
+            "kilde_score": "openfootball" if of_ferdig else None,
+        }
+
+        fd, endret = finn_fd_match_for_of(kid, team1, team2, dato, runde, fd_lookup, mapping_data, now_iso)
+        mapping_endret = mapping_endret or endret
+        if fd:
+            base = bruk_fd_paa_base(base, fd, team1, team2)
+            duration = fd.get("duration", "REGULAR")
+            if fd.get("har_score"):
+                if fd.get("ferdig"):
+                    print(f"    fd.org score: {team1} {fd['hjemme']}-{fd['borte']} {team2} (OF {dato}, fd {fd.get('fd_dato')}) [{duration}]")
+                else:
+                    print(f"    fd.org pågående: {team1} {fd['hjemme']}-{fd['borte']} {team2} (OF {dato}, fd {fd.get('fd_dato')}) [{fd.get('status')}]")
+            else:
+                print(f"    fd.org status: {team1}–{team2} (OF {dato}, fd {fd.get('fd_dato')}) [{fd.get('status')}]")
+
+        lookup[kid] = base
+
+    if fd_lookup:
+        skriv_kamp_mapping(mapping_data, force=mapping_endret or not KAMP_MAPPING_JSON.exists())
+
+    of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde_score") == "openfootball")
+    fd_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde_score") == "football_data_org")
+    fd_paagaar_antall = sum(1 for v in lookup.values() if not v["ferdig"] and v.get("kilde_score") == "football_data_org")
+    print(f"  -> {len(lookup)} kamper totalt | OpenFootball-score: {of_ferdig_antall} | football-data.org ferdig: {fd_ferdig_antall} | football-data.org pågående: {fd_paagaar_antall}")
     return lookup
 
 
@@ -893,7 +1091,50 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
     }
 
 # ── SKRIV DATA.JS ─────────────────────────────────────────────────────────────
-def skriv_data_js(stilling, sist_oppdatert):
+def bygg_public_resultater(resultat_lookup):
+    """
+    Bygger canonical resultatliste til frontend.
+
+    Nøkkel er OpenFootball-kamp_id. Hvis en kamp_id inneholder spesialtegn
+    som kan ha blitt ASCII-normalisert av gammel JavaScript, legges det også
+    inn en alias-nøkkel som peker på samme resultat.
+    """
+    resultater = {}
+
+    for kid, kamp in sorted(resultat_lookup.items(), key=lambda x: (x[1].get("dato", ""), x[0])):
+        item = {
+            "kamp_id": kid,
+            "canonical_kamp_id": kid,
+            "hjemmelag": kamp.get("hjemmelag", ""),
+            "bortelag": kamp.get("bortelag", ""),
+            "hjemme": kamp.get("hjemme"),
+            "borte": kamp.get("borte"),
+            "ferdig": bool(kamp.get("ferdig")),
+            "status": kamp.get("status", "FINISHED" if kamp.get("ferdig") else "TIMED"),
+            "runde": kamp.get("runde", "gruppe"),
+            "dato_openfootball": kamp.get("dato_openfootball") or kamp.get("dato", ""),
+            "kilde_score": kamp.get("kilde_score") or kamp.get("kilde", ""),
+        }
+
+        for felt in ("dato_fd_org", "fd_match_id", "fd_utcDate", "fd_hjemmelag", "fd_bortelag", "avanserer", "match_no"):
+            if kamp.get(felt) is not None:
+                item[felt] = kamp.get(felt)
+
+        resultater[kid] = item
+
+        ascii_kid = kamp_id_til_ascii(kid)
+        if ascii_kid != kid and ascii_kid not in resultater:
+            resultater[ascii_kid] = {
+                **item,
+                "kamp_id": ascii_kid,
+                "canonical_kamp_id": kid,
+                "alias_for": kid,
+            }
+
+    return resultater
+
+
+def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None):
     """Skriver ferdig data.js som leaderboard-siden leser."""
 
     # Sorter etter poeng totalt
@@ -903,19 +1144,22 @@ def skriv_data_js(stilling, sist_oppdatert):
     for i, d in enumerate(stilling_sortert):
         d["plass"] = i + 1
 
+    payload = {
+        "sist_oppdatert": sist_oppdatert,
+        "resultater": bygg_public_resultater(resultat_lookup or {}),
+        "stilling": stilling_sortert,
+    }
+
     js_innhold = f"""// Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
 // Sist oppdatert: {sist_oppdatert}
 
-const VM_DATA = {json.dumps({
-    "sist_oppdatert": sist_oppdatert,
-    "stilling": stilling_sortert,
-}, ensure_ascii=False, indent=2)};
+const VM_DATA = {json.dumps(payload, ensure_ascii=False, indent=2)};
 """
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     DATA_JS.write_text(js_innhold, encoding="utf-8")
-    print(f"  → Skrev data.js med {len(stilling_sortert)} deltakere")
+    print(f"  → Skrev data.js med {len(stilling_sortert)} deltakere og {len(payload['resultater'])} resultatoppføringer")
 
 # ── OPPDATER STATUS.JSON ──────────────────────────────────────────────────────
 
@@ -1241,7 +1485,7 @@ def main():
     # Skriv data.js
     print("\nSkriver data.js...")
     sist_oppdatert = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    skriv_data_js(stilling, sist_oppdatert)
+    skriv_data_js(stilling, sist_oppdatert, resultat_lookup)
 
     # Oppdater status.json (kun produksjon)
     if not TEST_MODE:
