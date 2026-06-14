@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-14T21:30:51Z",
+  "tidspunkt": "2026-06-14T21:54:14Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -430,7 +430,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 2,
-      "borte": 1,
+      "borte": 2,
       "fd_dato": "2026-06-14",
       "fd_utcDate": "2026-06-14T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Netherlands_Japan_2026_06_14"
