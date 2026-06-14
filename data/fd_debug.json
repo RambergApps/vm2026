@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-14T17:00:18Z",
+  "tidspunkt": "2026-06-14T17:01:02Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -357,7 +357,7 @@
       "fd_bortelag": "Ecuador",
       "hjemmelag_normalisert": "Ivory Coast",
       "bortelag_normalisert": "Ecuador",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "ferdig": false,
       "hjemme": null,
       "borte": null,
