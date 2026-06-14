@@ -48,6 +48,7 @@ DATA_JS        = DATA_DIR / "data.js"
 STATUS_JSON    = DATA_DIR / "status.json"
 DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
 MANUELLE_KAMPER_JSON = DATA_DIR / "manuelle-kamper.json"
+DEBUG_JSON           = DATA_DIR / "fd_debug.json"
 MANGLER_RESULTATER_JSON = DATA_DIR / "mangler-resultater.json"
 
 # Poeng per runde
@@ -277,6 +278,24 @@ def hent_football_data_org():
     ferdig_antall  = sum(1 for v in fd_lookup.values() if v["ferdig"])
     paagaar_antall = sum(1 for v in fd_lookup.values() if not v["ferdig"])
     print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående/pause fra football-data.org")
+
+    # Skriv debug-fil så vi kan inspisere hva fd.org faktisk returnerte
+    debug_data = {
+        "tidspunkt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "kamper": {
+            kid: {
+                "kamp_id":  kid,
+                "status":   v["status"],
+                "ferdig":   v["ferdig"],
+                "hjemme":   v["hjemme"],
+                "borte":    v["borte"],
+            }
+            for kid, v in sorted(fd_lookup.items())
+        }
+    }
+    DEBUG_JSON.write_text(json.dumps(debug_data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  -> Skrev fd_debug.json med {len(fd_lookup)} kamper")
+
     return fd_lookup
 
 
