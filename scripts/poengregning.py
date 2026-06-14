@@ -356,16 +356,25 @@ def hent_football_data_org():
         if status_fd not in tillatte_status:
             continue
 
-        home_raw = kamp.get("homeTeam", {}).get("name", "")
-        away_raw = kamp.get("awayTeam", {}).get("name", "")
+        # football-data.org kan returnere null for lag/dato på enkelte fremtidige/ikke-fastlagte kamper.
+        # Disse kan ikke matches trygt mot OpenFootball-ID og skal derfor ikke inn i fd_lookup.
+        home_raw = ((kamp.get("homeTeam") or {}).get("name") or "").strip()
+        away_raw = ((kamp.get("awayTeam") or {}).get("name") or "").strip()
 
         # Normaliser lagnavn til OpenFootball-format
-        team1 = FD_NAVN_TIL_OF.get(home_raw, home_raw)
-        team2 = FD_NAVN_TIL_OF.get(away_raw, away_raw)
+        team1 = (FD_NAVN_TIL_OF.get(home_raw, home_raw) or "").strip()
+        team2 = (FD_NAVN_TIL_OF.get(away_raw, away_raw) or "").strip()
 
         # Dato fra utcDate (format: 2026-06-14T04:00:00Z -> 2026-06-14)
-        utc_date = kamp.get("utcDate", "")
+        utc_date = (kamp.get("utcDate") or "").strip()
         dato = utc_date[:10]
+
+        if not team1 or not team2 or not dato:
+            print(
+                "  -> Hopper over fd.org-kamp uten komplett lag/dato: "
+                f"id={kamp.get('id')} home='{home_raw}' away='{away_raw}' utcDate='{utc_date}'"
+            )
+            continue
 
         score = kamp.get("score", {}) or {}
         ft = score.get("fullTime") or {}
