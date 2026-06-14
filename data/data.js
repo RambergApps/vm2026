@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-14T17:31:01Z
+// Sist oppdatert: 2026-06-14T18:01:08Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-14T17:31:01Z",
+  "sist_oppdatert": "2026-06-14T18:01:08Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -159,10 +159,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Germany_Curaçao_2026_06_14",
       "hjemmelag": "Germany",
       "bortelag": "Curaçao",
-      "hjemme": 1,
+      "hjemme": 3,
       "borte": 1,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
       "kilde_score": "football_data_org",
@@ -177,10 +177,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Germany_Curaçao_2026_06_14",
       "hjemmelag": "Germany",
       "bortelag": "Curaçao",
-      "hjemme": 1,
+      "hjemme": 3,
       "borte": 1,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
       "kilde_score": "football_data_org",
@@ -2126,11 +2126,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -3092,11 +3092,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4058,11 +4058,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5024,11 +5024,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5990,11 +5990,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6956,11 +6956,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7922,11 +7922,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8888,11 +8888,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9854,11 +9854,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 6,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10820,11 +10820,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 6,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11786,11 +11786,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -12752,11 +12752,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13718,11 +13718,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -14684,11 +14684,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -15650,11 +15650,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16616,11 +16616,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17582,11 +17582,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18548,11 +18548,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19514,11 +19514,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20480,11 +20480,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21446,11 +21446,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22412,11 +22412,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23378,11 +23378,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24344,11 +24344,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -25310,11 +25310,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26276,11 +26276,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27242,11 +27242,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28208,11 +28208,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29174,11 +29174,11 @@ const VM_DATA = {
           "bortelag": "Curaçao",
           "tippa_h": 6,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 3,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
