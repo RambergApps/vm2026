@@ -38,6 +38,7 @@ FD_NAVN_TIL_OF = {
     "Cape Verde Islands":  "Cape Verde",
     "Congo DR":            "DR Congo",
     "Czechia":             "Czech Republic",
+    "Türkiye":             "Turkey",
 }
 
 REPO_ROOT      = Path(__file__).parent.parent
