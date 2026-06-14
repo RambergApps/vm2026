@@ -1,12 +1,30 @@
 {
-  "tidspunkt": "2026-06-14T06:30:56Z",
+  "tidspunkt": "2026-06-14T06:41:31Z",
   "kamper": {
+    "Australia_Turkey_2026_06_13": {
+      "kamp_id": "Australia_Turkey_2026_06_13",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 2,
+      "borte": 0,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Australia_Turkey_2026_06_14"
+    },
     "Australia_Turkey_2026_06_14": {
       "kamp_id": "Australia_Turkey_2026_06_14",
       "status": "FINISHED",
       "ferdig": true,
       "hjemme": 2,
       "borte": 0
+    },
+    "Brazil_Morocco_2026_06_12": {
+      "kamp_id": "Brazil_Morocco_2026_06_12",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Brazil_Morocco_2026_06_13"
     },
     "Brazil_Morocco_2026_06_13": {
       "kamp_id": "Brazil_Morocco_2026_06_13",
@@ -15,12 +33,30 @@
       "hjemme": 1,
       "borte": 1
     },
+    "Canada_Bosnia___Herzegovina_2026_06_11": {
+      "kamp_id": "Canada_Bosnia___Herzegovina_2026_06_11",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Canada_Bosnia___Herzegovina_2026_06_12"
+    },
     "Canada_Bosnia___Herzegovina_2026_06_12": {
       "kamp_id": "Canada_Bosnia___Herzegovina_2026_06_12",
       "status": "FINISHED",
       "ferdig": true,
       "hjemme": 1,
       "borte": 1
+    },
+    "Haiti_Scotland_2026_06_13": {
+      "kamp_id": "Haiti_Scotland_2026_06_13",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 0,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Haiti_Scotland_2026_06_14"
     },
     "Haiti_Scotland_2026_06_14": {
       "kamp_id": "Haiti_Scotland_2026_06_14",
@@ -29,12 +65,30 @@
       "hjemme": 0,
       "borte": 1
     },
+    "Mexico_South_Africa_2026_06_10": {
+      "kamp_id": "Mexico_South_Africa_2026_06_10",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 2,
+      "borte": 0,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Mexico_South_Africa_2026_06_11"
+    },
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
       "status": "FINISHED",
       "ferdig": true,
       "hjemme": 2,
       "borte": 0
+    },
+    "Qatar_Switzerland_2026_06_12": {
+      "kamp_id": "Qatar_Switzerland_2026_06_12",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "Qatar_Switzerland_2026_06_13"
     },
     "Qatar_Switzerland_2026_06_13": {
       "kamp_id": "Qatar_Switzerland_2026_06_13",
@@ -43,12 +97,30 @@
       "hjemme": 1,
       "borte": 1
     },
+    "South_Korea_Czech_Republic_2026_06_11": {
+      "kamp_id": "South_Korea_Czech_Republic_2026_06_11",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 2,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "South_Korea_Czech_Republic_2026_06_12"
+    },
     "South_Korea_Czech_Republic_2026_06_12": {
       "kamp_id": "South_Korea_Czech_Republic_2026_06_12",
       "status": "FINISHED",
       "ferdig": true,
       "hjemme": 2,
       "borte": 1
+    },
+    "United_States_Paraguay_2026_06_12": {
+      "kamp_id": "United_States_Paraguay_2026_06_12",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 4,
+      "borte": 1,
+      "fd_alias": true,
+      "fd_original_kamp_id": "United_States_Paraguay_2026_06_13"
     },
     "United_States_Paraguay_2026_06_13": {
       "kamp_id": "United_States_Paraguay_2026_06_13",
