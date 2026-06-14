@@ -310,6 +310,121 @@ body {
   text-align: right; line-height: 1.3;
 }
 
+
+
+/* ── KAMPER-FANE ── */
+.kamper-intro {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 16px; margin-bottom: 18px;
+}
+.kamper-intro h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px; line-height: 1; color: var(--accent);
+}
+.kamper-intro p {
+  color: var(--muted); font-size: 13px; margin-top: 6px; max-width: 560px;
+}
+.kamper-oppdatert {
+  color: var(--muted); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.kamper-filter {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px;
+}
+.kamper-btn {
+  background: transparent; color: var(--muted); border: 1.5px solid var(--border);
+  border-radius: 999px; padding: 7px 13px; cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.kamper-btn.active, .kamper-btn:hover { color: #000; background: var(--accent); border-color: var(--accent); }
+.kampdato-gruppe { margin-bottom: 24px; }
+.kampdato-tittel {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 8px; padding-left: 2px;
+}
+.kampoversikt-liste {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  background: var(--card);
+}
+.kampoversikt-rad {
+  display: grid; grid-template-columns: 72px 1fr 76px 1fr 86px;
+  gap: 10px; align-items: center; padding: 12px 14px;
+  border-bottom: 1px solid rgba(30,45,74,.55); cursor: pointer;
+  transition: background .15s, transform .15s;
+}
+.kampoversikt-rad:last-child { border-bottom: none; }
+.kampoversikt-rad:nth-child(odd) { background: var(--surface); }
+.kampoversikt-rad:nth-child(even) { background: var(--card); }
+.kampoversikt-rad:hover { background: rgba(0,230,118,.06); }
+.kampoversikt-tid {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .06em; color: var(--muted);
+}
+.kampoversikt-lag {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; color: var(--text); min-width: 0;
+}
+.kampoversikt-lag.borte { justify-content: flex-end; text-align: right; }
+.kampoversikt-lag span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kampoversikt-score {
+  font-family: 'Bebas Neue', sans-serif; font-size: 24px; line-height: 1;
+  color: var(--gold); text-align: center; white-space: nowrap;
+}
+.kampoversikt-score.venter {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .08em; color: var(--muted); text-transform: uppercase;
+}
+.kampoversikt-status {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; text-align: right; color: var(--muted);
+}
+.kampoversikt-status.ferdig { color: var(--accent); }
+.kampoversikt-status.live { color: #ef2b2d; }
+.kamp-modal-resultat {
+  display: flex; justify-content: space-between; gap: 12px; align-items: center;
+  background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 20px;
+}
+.kamp-modal-score {
+  font-family: 'Bebas Neue', sans-serif; font-size: 42px; line-height: 1; color: var(--gold);
+}
+.kamp-modal-tid {
+  color: var(--muted); font-size: 12px; font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.poenggivere-tittel {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 4px;
+}
+.poenggiver-rad {
+  display: grid; grid-template-columns: 1fr 92px 46px; gap: 10px; align-items: center;
+  padding: 9px 4px; border-bottom: 1px solid rgba(30,45,74,.45);
+}
+.poenggiver-rad:last-child { border-bottom: none; }
+.poenggiver-navn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; color: var(--text);
+}
+.poenggiver-tips {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px; text-align: center; color: var(--text);
+}
+.poenggiver-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 22px; text-align: right; color: var(--gold);
+}
+
+@media (max-width: 640px) {
+  .kamper-intro { display: block; }
+  .kamper-oppdatert { margin-top: 8px; }
+  .kampoversikt-rad { grid-template-columns: 56px 1fr 56px; }
+  .kampoversikt-lag.borte { justify-content: flex-start; text-align: left; grid-column: 2; }
+  .kampoversikt-status { grid-column: 3; grid-row: 1 / span 2; }
+  .poenggiver-rad { grid-template-columns: 1fr 70px 42px; }
+}
+
 /* ── MODAL ── */
 .modal-overlay {
   display: none;
@@ -501,6 +616,7 @@ body {
 <!-- NAV -->
 <div class="nav">
   <div class="nav-tab active" onclick="byttSeksjon('stilling', this)">Stilling</div>
+  <div class="nav-tab" onclick="byttSeksjon('kamper-seksjon', this)">Kamper</div>
   <div class="nav-tab" onclick="byttSeksjon('detaljer-seksjon', this)">Detaljer</div>
   <div class="nav-tab" onclick="byttSeksjon('regler', this)">Regler</div>
 </div>
@@ -517,6 +633,19 @@ body {
       </div>
     </div>
     <div class="sist-oppdatert" id="sistOppdatert"></div>
+  </div>
+
+  <!-- KAMPER -->
+  <div class="seksjon" id="kamper-seksjon">
+    <div class="kamper-intro">
+      <div>
+        <h2>Kamper</h2>
+        <p>Alle kamper vises med norsk dato og tid. Kamp-ID og poengmatching bruker fortsatt canonical OpenFootball-ID.</p>
+      </div>
+      <div class="kamper-oppdatert" id="kamperOppdatert"></div>
+    </div>
+    <div class="kamper-filter" id="kamperFilter"></div>
+    <div id="kamperInnhold"></div>
   </div>
 
   <!-- DETALJER -->
@@ -800,10 +929,6 @@ function aapneModal(event, i) {
         <div class="modal-stat-lbl">Totalt</div>
       </div>
       <div class="modal-stat">
-        <div class="modal-stat-val">${poengGruppe}</div>
-        <div class="modal-stat-lbl">Gruppe</div>
-      </div>
-      <div class="modal-stat">
         <div class="modal-stat-val">${poengUtsl}</div>
         <div class="modal-stat-lbl">Utslag</div>
       </div>
@@ -830,6 +955,248 @@ function lukkModalKlikk(e) {
 }
 
 document.addEventListener("keydown", e => { if (e.key === "Escape") lukkModal(); });
+
+
+
+// ── KAMPER-FANE ──────────────────────────────────────────
+let aktivKampFilter = 'alle';
+
+const FLAGG_LAG = {
+  'Mexico':'🇲🇽','South Africa':'🇿🇦','South Korea':'🇰🇷','Czech Republic':'🇨🇿',
+  'Canada':'🇨🇦','Bosnia & Herzegovina':'🇧🇦','USA':'🇺🇸','United States':'🇺🇸','Paraguay':'🇵🇾',
+  'Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦',
+  'Haiti':'🇭🇹','Scotland':'🏴','Australia':'🇦🇺','Turkey':'🇹🇷',
+  'Germany':'🇩🇪','Curaçao':'🇨🇼','Curacao':'🇨🇼','Netherlands':'🇳🇱','Japan':'🇯🇵',
+  'Ivory Coast':'🇨🇮','Ecuador':'🇪🇨','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
+  'Cape Verde':'🇨🇻','Belgium':'🇧🇪','Egypt':'🇪🇬','Saudi Arabia':'🇸🇦',
+  'Uruguay':'🇺🇾','Iran':'🇮🇷','New Zealand':'🇳🇿','France':'🇫🇷',
+  'Senegal':'🇸🇳','Iraq':'🇮🇶','Norway':'🇳🇴','Argentina':'🇦🇷',
+  'Algeria':'🇩🇿','Austria':'🇦🇹','Jordan':'🇯🇴','Portugal':'🇵🇹',
+  'DR Congo':'🇨🇩','England':'🏴','Ghana':'🇬🇭','Panama':'🇵🇦',
+  'Uzbekistan':'🇺🇿','Colombia':'🇨🇴','Croatia':'🇭🇷'
+};
+const flaggLag = navn => FLAGG_LAG[navn] || '';
+
+function kampIdTilAscii(kid) {
+  return String(kid || '').split('').map(c => {
+    if (c === '_') return '_';
+    return (/^[a-z0-9]$/i.test(c) && c.charCodeAt(0) < 128) ? c : '_';
+  }).join('');
+}
+
+function kampStatus(kamp) {
+  const status = kamp.status || (kamp.ferdig ? 'FINISHED' : 'TIMED');
+  if (kamp.ferdig || status === 'FINISHED') return { tekst: 'Ferdig', cls: 'ferdig', type: 'ferdig' };
+  if (status === 'IN_PLAY') return { tekst: 'Live', cls: 'live', type: 'live' };
+  if (status === 'PAUSED') return { tekst: 'Pause', cls: 'live', type: 'live' };
+  return { tekst: 'Ikke spilt', cls: '', type: 'kommende' };
+}
+
+function kampTidspunkt(kamp) {
+  if (kamp.fd_utcDate) {
+    const d = new Date(kamp.fd_utcDate);
+    if (!Number.isNaN(d.getTime())) return d;
+  }
+  const dato = kamp.dato_openfootball || kamp.dato || '';
+  if (dato) {
+    const d = new Date(dato + 'T12:00:00Z');
+    if (!Number.isNaN(d.getTime())) return d;
+  }
+  return new Date(8640000000000000);
+}
+
+function formaterDatoNorsk(kamp, medTid = true) {
+  const d = kampTidspunkt(kamp);
+  if (Number.isNaN(d.getTime())) return '';
+  const opts = medTid && kamp.fd_utcDate
+    ? { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }
+    : { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit' };
+  return new Intl.DateTimeFormat('nb-NO', opts).format(d).replace(',', '');
+}
+
+function datoGruppeNorsk(kamp) {
+  const d = kampTidspunkt(kamp);
+  if (Number.isNaN(d.getTime())) return 'Ukjent dato';
+  return new Intl.DateTimeFormat('nb-NO', {
+    timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long'
+  }).format(d);
+}
+
+function canonicalKampId(kamp) {
+  return kamp.canonical_kamp_id || kamp.alias_for || kamp.kamp_id || '';
+}
+
+function alleKampIdVarianter(kamp) {
+  const ids = new Set();
+  [kamp.kamp_id, kamp.canonical_kamp_id, kamp.alias_for].filter(Boolean).forEach(id => ids.add(id));
+  const canonical = canonicalKampId(kamp);
+  Object.values(VM_DATA?.resultater || {}).forEach(r => {
+    if (!r) return;
+    if (r.canonical_kamp_id === canonical || r.alias_for === canonical || r.kamp_id === canonical) {
+      [r.kamp_id, r.canonical_kamp_id, r.alias_for].filter(Boolean).forEach(id => ids.add(id));
+    }
+  });
+  Array.from(ids).forEach(id => ids.add(kampIdTilAscii(id)));
+  return ids;
+}
+
+function hentKamperFraResultater() {
+  const resultater = VM_DATA?.resultater || {};
+  const byCanonical = new Map();
+  Object.values(resultater).forEach(k => {
+    if (!k) return;
+    const canonical = canonicalKampId(k);
+    if (!canonical) return;
+    const eksisterende = byCanonical.get(canonical);
+    // Foretrekk canonical-oppføring fremfor ASCII-/aliasoppføring.
+    if (!eksisterende || (!k.alias_for && k.kamp_id === canonical)) byCanonical.set(canonical, k);
+  });
+  return Array.from(byCanonical.values()).sort((a,b) => kampTidspunkt(a) - kampTidspunkt(b));
+}
+
+function byggKamperFane() {
+  const el = document.getElementById('kamperInnhold');
+  const filterEl = document.getElementById('kamperFilter');
+  if (!el || !filterEl) return;
+
+  const alle = hentKamperFraResultater();
+  const counts = alle.reduce((acc, k) => {
+    const type = kampStatus(k).type;
+    acc[type] = (acc[type] || 0) + 1;
+    acc.alle++;
+    return acc;
+  }, { alle: 0, ferdig: 0, live: 0, kommende: 0 });
+
+  const filtere = [
+    ['alle', `Alle (${counts.alle})`],
+    ['ferdig', `Ferdig (${counts.ferdig})`],
+    ['live', `Live (${counts.live})`],
+    ['kommende', `Kommende (${counts.kommende})`]
+  ];
+  filterEl.innerHTML = filtere.map(([id, tekst]) => `
+    <button class="kamper-btn ${aktivKampFilter === id ? 'active' : ''}" onclick="settKampFilter('${id}')">${tekst}</button>
+  `).join('');
+
+  const kamper = aktivKampFilter === 'alle'
+    ? alle
+    : alle.filter(k => kampStatus(k).type === aktivKampFilter);
+
+  if (!kamper.length) {
+    el.innerHTML = '<div class="ingen-data"><div class="stor">⚽</div><h3>Ingen kamper å vise</h3></div>';
+    return;
+  }
+
+  const grupper = new Map();
+  kamper.forEach(k => {
+    const g = datoGruppeNorsk(k);
+    if (!grupper.has(g)) grupper.set(g, []);
+    grupper.get(g).push(k);
+  });
+
+  let html = '';
+  grupper.forEach((liste, dato) => {
+    html += `<div class="kampdato-gruppe"><div class="kampdato-tittel">${escHTML(dato)}</div><div class="kampoversikt-liste">`;
+    liste.forEach(k => {
+      const status = kampStatus(k);
+      const h = k.hjemmelag || '?';
+      const b = k.bortelag || '?';
+      const harScore = k.hjemme !== null && k.hjemme !== undefined && k.borte !== null && k.borte !== undefined;
+      const score = harScore ? `${k.hjemme}–${k.borte}` : 'Ikke spilt';
+      const scoreCls = harScore ? '' : 'venter';
+      html += `
+        <div class="kampoversikt-rad" onclick="aapneKampModal('${escHTML(canonicalKampId(k))}')">
+          <div class="kampoversikt-tid">${escHTML(formaterDatoNorsk(k, true).split(' ').slice(-1)[0] || '')}</div>
+          <div class="kampoversikt-lag"><span>${flaggLag(h)}</span><span>${escHTML(h)}</span></div>
+          <div class="kampoversikt-score ${scoreCls}">${escHTML(score)}</div>
+          <div class="kampoversikt-lag borte"><span>${escHTML(b)}</span><span>${flaggLag(b)}</span></div>
+          <div class="kampoversikt-status ${status.cls}">${status.tekst}</div>
+        </div>`;
+    });
+    html += '</div></div>';
+  });
+  el.innerHTML = html;
+
+  const oppdatert = document.getElementById('kamperOppdatert');
+  if (oppdatert && VM_DATA?.sist_oppdatert) {
+    oppdatert.textContent = 'Sist oppdatert ' + new Date(VM_DATA.sist_oppdatert).toLocaleString('nb-NO', {
+      timeZone: 'Europe/Oslo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    });
+  }
+}
+
+function settKampFilter(filter) {
+  aktivKampFilter = filter;
+  byggKamperFane();
+}
+
+function finnKamp(canonicalId) {
+  return hentKamperFraResultater().find(k => canonicalKampId(k) === canonicalId || k.kamp_id === canonicalId);
+}
+
+function poenggivereForKamp(kamp) {
+  const ids = alleKampIdVarianter(kamp);
+  const rows = [];
+  (VM_DATA?.stilling || []).forEach(d => {
+    const treff = (d.tippinger || []).find(t => ids.has(t.kamp_id) || ids.has(kampIdTilAscii(t.kamp_id)));
+    if (treff && Number(treff.poeng || 0) > 0) {
+      rows.push({
+        navn: d.navn,
+        poeng: Number(treff.poeng || 0),
+        tips: `${treff.tippa_h ?? '–'}–${treff.tippa_b ?? '–'}`,
+        eksakt: !!treff.eksakt,
+        riktig_utfall: !!treff.riktig_utfall
+      });
+    }
+  });
+  return rows.sort((a,b) => b.poeng - a.poeng || a.navn.localeCompare(b.navn, 'nb'));
+}
+
+function aapneKampModal(canonicalId) {
+  const kamp = finnKamp(canonicalId);
+  if (!kamp) return;
+  const status = kampStatus(kamp);
+  const h = kamp.hjemmelag || '?';
+  const b = kamp.bortelag || '?';
+  const harScore = kamp.hjemme !== null && kamp.hjemme !== undefined && kamp.borte !== null && kamp.borte !== undefined;
+  const score = harScore ? `${kamp.hjemme}–${kamp.borte}` : '–';
+  const poenggivere = poenggivereForKamp(kamp);
+
+  let body = '';
+  if (!kamp.ferdig && status.type !== 'ferdig') {
+    body = '<p style="color:var(--muted);font-size:13px">Kampen er ikke ferdigspilt ennå. Poengoversikt vises når resultatet er klart.</p>';
+  } else if (!poenggivere.length) {
+    body = '<p style="color:var(--muted);font-size:13px">Ingen fikk poeng på denne kampen.</p>';
+  } else {
+    body = `
+      <div class="poenggivere-tittel">Poenggivende tips</div>
+      ${poenggivere.map(p => `
+        <div class="poenggiver-rad">
+          <div class="poenggiver-navn">${escHTML(p.navn)}</div>
+          <div class="poenggiver-tips">${escHTML(p.tips)}</div>
+          <div class="poenggiver-poeng">${p.poeng}p</div>
+        </div>
+      `).join('')}`;
+  }
+
+  document.getElementById('modalInnhold').innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">${escHTML(h)} – ${escHTML(b)}</div>
+        <div class="modal-meta">${escHTML(formaterDatoNorsk(kamp, true))}</div>
+      </div>
+      <button class="modal-lukk" onclick="lukkModal()">✕</button>
+    </div>
+    <div class="kamp-modal-resultat">
+      <div>
+        <div class="kamp-modal-tid">${escHTML(status.tekst)}</div>
+      </div>
+      <div class="kamp-modal-score">${escHTML(score)}</div>
+    </div>
+    <div class="modal-body">${body}</div>`;
+
+  document.getElementById('modalOverlay').classList.add('vis');
+  document.body.style.overflow = 'hidden';
+}
 
 // ── BYGG STILLING ──────────────────────────────────────────
 function byggStilling() {
@@ -994,6 +1361,7 @@ function byttSeksjon(id, el) {
   document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   el.classList.add("active");
+  if (id === 'kamper-seksjon') byggKamperFane();
 }
 
 function escHTML(str) {
@@ -1005,6 +1373,7 @@ function escHTML(str) {
 async function init() {
   await lastKampData();
   byggStilling();
+  byggKamperFane();
 }
 init();
 </script>
