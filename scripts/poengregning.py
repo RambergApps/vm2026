@@ -24,7 +24,7 @@ import re
 import sys
 import requests
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 # ── KONFIG ────────────────────────────────────────────────────────────────────
 API_URL               = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
@@ -127,6 +127,13 @@ def kamp_id(team1, team2, dato):
     def rens(s):
         return "".join(c if c.isalnum() else "_" for c in s)
     return f"{rens(team1)}_{rens(team2)}_{rens(dato)}"
+
+def dato_minus_en_dag(dato):
+    """Returnerer YYYY-MM-DD minus én dag. Brukes for UTC/lokal-dato-avvik mellom kilder."""
+    try:
+        return (datetime.fromisoformat(dato[:10]) - timedelta(days=1)).strftime("%Y-%m-%d")
+    except Exception:
+        return ""
 
 def kamp_id_til_ascii(kid):
     """
@@ -264,8 +271,7 @@ def hent_football_data_org():
         winner   = score.get("winner")    # HOME_TEAM / AWAY_TEAM / DRAW
         duration = score.get("duration")  # REGULAR / EXTRA_TIME / PENALTY_SHOOTOUT
 
-        kid = kamp_id(team1, team2, dato)
-        fd_lookup[kid] = {
+        fd_data = {
             "hjemme":   hjemme,
             "borte":    borte,
             "ferdig":   status_fd == "FINISHED",
@@ -273,11 +279,34 @@ def hent_football_data_org():
             "winner":   winner,
             "duration": duration,
             "status":   status_fd,
+            "fd_dato":  dato,
         }
 
-    ferdig_antall  = sum(1 for v in fd_lookup.values() if v["ferdig"])
-    paagaar_antall = sum(1 for v in fd_lookup.values() if not v["ferdig"])
+        # Primær-ID basert på fd.org sin utcDate.
+        # I noen tilfeller bruker OpenFootball lokal kampdato, mens fd.org bruker UTC-dato.
+        # Da kan samme kamp havne på datoen før i OpenFootball. Derfor legges også
+        # en alias-ID inn med fd.org-dato minus én dag. Eksempel:
+        #   fd.org:       Australia_Turkey_2026_06_14
+        #   OpenFootball: Australia_Turkey_2026_06_13
+        kid = kamp_id(team1, team2, dato)
+        fd_lookup[kid] = fd_data
+
+        dato_minus_1 = dato_minus_en_dag(dato)
+        if dato_minus_1 and dato_minus_1 != dato:
+            kid_minus_1 = kamp_id(team1, team2, dato_minus_1)
+            fd_lookup.setdefault(kid_minus_1, {
+                **fd_data,
+                "fd_alias": True,
+                "fd_original_kamp_id": kid,
+            })
+
+    reelle_fd_kamper = [v for v in fd_lookup.values() if not v.get("fd_alias")]
+    alias_antall = sum(1 for v in fd_lookup.values() if v.get("fd_alias"))
+    ferdig_antall  = sum(1 for v in reelle_fd_kamper if v["ferdig"])
+    paagaar_antall = sum(1 for v in reelle_fd_kamper if not v["ferdig"])
     print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående/pause fra football-data.org")
+    if alias_antall:
+        print(f"  -> {alias_antall} ekstra dato-alias lagt til for UTC/lokal-dato-avvik")
 
     # Skriv debug-fil så vi kan inspisere hva fd.org faktisk returnerte
     debug_data = {
@@ -289,6 +318,7 @@ def hent_football_data_org():
                 "ferdig":   v["ferdig"],
                 "hjemme":   v["hjemme"],
                 "borte":    v["borte"],
+                **({"fd_alias": True, "fd_original_kamp_id": v.get("fd_original_kamp_id")} if v.get("fd_alias") else {}),
             }
             for kid, v in sorted(fd_lookup.items())
         }
