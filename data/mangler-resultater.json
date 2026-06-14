@@ -1,19 +1,10 @@
 {
-  "sist_sjekket": "2026-06-14T00:01:04Z",
+  "sist_sjekket": "2026-06-14T00:18:36Z",
   "kamper": [
     {
       "kamp_id": "Australia_Turkey_2026_06_13",
       "hjemmelag": "Australia",
       "bortelag": "Turkey",
-      "dato": "2026-06-13",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "kamp_id": "Brazil_Morocco_2026_06_13",
-      "hjemmelag": "Brazil",
-      "bortelag": "Morocco",
       "dato": "2026-06-13",
       "runde": "gruppe",
       "gruppe": "",
