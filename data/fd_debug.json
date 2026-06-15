@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-15T19:01:10Z",
+  "tidspunkt": "2026-06-15T19:30:56Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -511,10 +511,10 @@
       "fd_bortelag": "Egypt",
       "hjemmelag_normalisert": "Belgium",
       "bortelag_normalisert": "Egypt",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 1,
       "fd_dato": "2026-06-15",
       "fd_utcDate": "2026-06-15T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Belgium_Egypt_2026_06_15"
