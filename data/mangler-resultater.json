@@ -1,4 +1,14 @@
 {
-  "sist_sjekket": "2026-06-15T06:01:01Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-15T06:30:53Z",
+  "kamper": [
+    {
+      "kamp_id": "Ivory_Coast_Ecuador_2026_06_14",
+      "hjemmelag": "Ivory Coast",
+      "bortelag": "Ecuador",
+      "dato": "2026-06-14",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
