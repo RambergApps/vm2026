@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-16T02:01:07Z",
+  "tidspunkt": "2026-06-16T02:11:37Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -525,7 +525,7 @@
       "fd_bortelag": "New Zealand",
       "hjemmelag_normalisert": "Iran",
       "bortelag_normalisert": "New Zealand",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 1,
       "borte": 1,
