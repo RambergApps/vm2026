@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-16T21:01:07Z",
+  "tidspunkt": "2026-06-16T21:30:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -679,10 +679,10 @@
       "fd_bortelag": "Senegal",
       "hjemmelag_normalisert": "France",
       "bortelag_normalisert": "Senegal",
-      "status": "IN_PLAY",
-      "ferdig": false,
-      "hjemme": 2,
-      "borte": 0,
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 3,
+      "borte": 1,
       "fd_dato": "2026-06-16",
       "fd_utcDate": "2026-06-16T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "France_Senegal_2026_06_16"
