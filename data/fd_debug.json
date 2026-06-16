@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-15T23:30:53Z",
+  "tidspunkt": "2026-06-16T00:01:11Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -612,7 +612,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 0,
+      "borte": 1,
       "fd_dato": "2026-06-15",
       "fd_utcDate": "2026-06-15T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Saudi_Arabia_Uruguay_2026_06_15"

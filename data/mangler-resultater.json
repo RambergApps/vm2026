@@ -1,4 +1,23 @@
 {
-  "sist_sjekket": "2026-06-15T23:30:53Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-16T00:01:11Z",
+  "kamper": [
+    {
+      "kamp_id": "Iran_New_Zealand_2026_06_15",
+      "hjemmelag": "Iran",
+      "bortelag": "New Zealand",
+      "dato": "2026-06-15",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "kamp_id": "Saudi_Arabia_Uruguay_2026_06_15",
+      "hjemmelag": "Saudi Arabia",
+      "bortelag": "Uruguay",
+      "dato": "2026-06-15",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
