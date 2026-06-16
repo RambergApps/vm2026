@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-16T03:01:07Z",
+  "tidspunkt": "2026-06-16T03:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -93,8 +93,8 @@
       "bortelag_normalisert": "Bosnia & Herzegovina",
       "status": "FINISHED",
       "ferdig": true,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-06-12",
       "fd_utcDate": "2026-06-12T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Bosnia___Herzegovina_2026_06_12"
@@ -525,8 +525,8 @@
       "fd_bortelag": "New Zealand",
       "hjemmelag_normalisert": "Iran",
       "bortelag_normalisert": "New Zealand",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 2,
       "borte": 2,
       "fd_dato": "2026-06-16",
