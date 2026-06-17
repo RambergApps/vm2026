@@ -1,14 +1,4 @@
 {
-  "sist_sjekket": "2026-06-17T06:01:05Z",
-  "kamper": [
-    {
-      "kamp_id": "Austria_Jordan_2026_06_16",
-      "hjemmelag": "Austria",
-      "bortelag": "Jordan",
-      "dato": "2026-06-16",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-17T06:30:57Z",
+  "kamper": []
 }
