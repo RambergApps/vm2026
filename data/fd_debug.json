@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T00:01:05Z",
+  "tidspunkt": "2026-06-17T00:17:38Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -693,10 +693,10 @@
       "fd_bortelag": "Norway",
       "hjemmelag_normalisert": "Iraq",
       "bortelag_normalisert": "Norway",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 1,
-      "borte": 3,
+      "borte": 4,
       "fd_dato": "2026-06-16",
       "fd_utcDate": "2026-06-16T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Iraq_Norway_2026_06_16"

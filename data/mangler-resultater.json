@@ -1,5 +1,5 @@
 {
-  "sist_sjekket": "2026-06-17T00:01:05Z",
+  "sist_sjekket": "2026-06-17T00:17:38Z",
   "kamper": [
     {
       "kamp_id": "Argentina_Algeria_2026_06_16",
@@ -14,15 +14,6 @@
       "kamp_id": "Austria_Jordan_2026_06_16",
       "hjemmelag": "Austria",
       "bortelag": "Jordan",
-      "dato": "2026-06-16",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "kamp_id": "Iraq_Norway_2026_06_16",
-      "hjemmelag": "Iraq",
-      "bortelag": "Norway",
       "dato": "2026-06-16",
       "runde": "gruppe",
       "gruppe": "",
