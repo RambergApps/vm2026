@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T20:36:45Z",
+  "tidspunkt": "2026-06-17T21:01:12Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -931,10 +931,10 @@
       "fd_bortelag": "Croatia",
       "hjemmelag_normalisert": "England",
       "bortelag_normalisert": "Croatia",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
-      "hjemme": 1,
-      "borte": 0,
+      "hjemme": 2,
+      "borte": 2,
       "fd_dato": "2026-06-17",
       "fd_utcDate": "2026-06-17T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "England_Croatia_2026_06_17"
