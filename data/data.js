@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-17T02:30:55Z
+// Sist oppdatert: 2026-06-17T03:00:58Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-17T02:30:55Z",
+  "sist_oppdatert": "2026-06-17T03:00:58Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -16,7 +16,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-11",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-11",
+      "fd_match_id": 537327,
+      "fd_utcDate": "2026-06-11T19:00:00Z",
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "South Africa",
+      "avanserer": "Mexico"
     },
     "South_Korea_Czech_Republic_2026_06_11": {
       "kamp_id": "South_Korea_Czech_Republic_2026_06_11",
@@ -29,7 +35,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-11",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-12",
+      "fd_match_id": 537328,
+      "fd_utcDate": "2026-06-12T02:00:00Z",
+      "fd_hjemmelag": "South Korea",
+      "fd_bortelag": "Czechia",
+      "avanserer": "South Korea"
     },
     "Canada_Bosnia___Herzegovina_2026_06_12": {
       "kamp_id": "Canada_Bosnia___Herzegovina_2026_06_12",
@@ -42,7 +54,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-12",
+      "fd_match_id": 537333,
+      "fd_utcDate": "2026-06-12T19:00:00Z",
+      "fd_hjemmelag": "Canada",
+      "fd_bortelag": "Bosnia-Herzegovina"
     },
     "USA_Paraguay_2026_06_12": {
       "kamp_id": "USA_Paraguay_2026_06_12",
@@ -55,7 +72,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-13",
+      "fd_match_id": 537345,
+      "fd_utcDate": "2026-06-13T01:00:00Z",
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Paraguay",
+      "avanserer": "USA"
     },
     "Australia_Turkey_2026_06_13": {
       "kamp_id": "Australia_Turkey_2026_06_13",
@@ -68,7 +91,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-13",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537346,
+      "fd_utcDate": "2026-06-14T04:00:00Z",
+      "fd_hjemmelag": "Australia",
+      "fd_bortelag": "Turkey",
+      "avanserer": "Australia"
     },
     "Brazil_Morocco_2026_06_13": {
       "kamp_id": "Brazil_Morocco_2026_06_13",
@@ -81,7 +110,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-13",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-13",
+      "fd_match_id": 537339,
+      "fd_utcDate": "2026-06-13T22:00:00Z",
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Morocco"
     },
     "Haiti_Scotland_2026_06_13": {
       "kamp_id": "Haiti_Scotland_2026_06_13",
@@ -94,7 +128,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-13",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537340,
+      "fd_utcDate": "2026-06-14T01:00:00Z",
+      "fd_hjemmelag": "Haiti",
+      "fd_bortelag": "Scotland",
+      "avanserer": "Scotland"
     },
     "Qatar_Switzerland_2026_06_13": {
       "kamp_id": "Qatar_Switzerland_2026_06_13",
@@ -107,7 +147,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-13",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-13",
+      "fd_match_id": 537334,
+      "fd_utcDate": "2026-06-13T19:00:00Z",
+      "fd_hjemmelag": "Qatar",
+      "fd_bortelag": "Switzerland"
     },
     "Germany_Curaçao_2026_06_14": {
       "kamp_id": "Germany_Curaçao_2026_06_14",
@@ -120,7 +165,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537351,
+      "fd_utcDate": "2026-06-14T17:00:00Z",
+      "fd_hjemmelag": "Germany",
+      "fd_bortelag": "Curaçao",
+      "avanserer": "Germany"
     },
     "Germany_Cura_ao_2026_06_14": {
       "kamp_id": "Germany_Cura_ao_2026_06_14",
@@ -133,7 +184,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537351,
+      "fd_utcDate": "2026-06-14T17:00:00Z",
+      "fd_hjemmelag": "Germany",
+      "fd_bortelag": "Curaçao",
+      "avanserer": "Germany",
       "alias_for": "Germany_Curaçao_2026_06_14"
     },
     "Ivory_Coast_Ecuador_2026_06_14": {
@@ -147,7 +204,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537352,
+      "fd_utcDate": "2026-06-14T23:00:00Z",
+      "fd_hjemmelag": "Ivory Coast",
+      "fd_bortelag": "Ecuador",
+      "avanserer": "Ivory Coast"
     },
     "Netherlands_Japan_2026_06_14": {
       "kamp_id": "Netherlands_Japan_2026_06_14",
@@ -160,7 +223,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-14",
+      "fd_match_id": 537357,
+      "fd_utcDate": "2026-06-14T20:00:00Z",
+      "fd_hjemmelag": "Netherlands",
+      "fd_bortelag": "Japan"
     },
     "Sweden_Tunisia_2026_06_14": {
       "kamp_id": "Sweden_Tunisia_2026_06_14",
@@ -173,7 +241,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-14",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-15",
+      "fd_match_id": 537358,
+      "fd_utcDate": "2026-06-15T02:00:00Z",
+      "fd_hjemmelag": "Sweden",
+      "fd_bortelag": "Tunisia",
+      "avanserer": "Sweden"
     },
     "Belgium_Egypt_2026_06_15": {
       "kamp_id": "Belgium_Egypt_2026_06_15",
@@ -186,7 +260,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-15",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-15",
+      "fd_match_id": 537363,
+      "fd_utcDate": "2026-06-15T19:00:00Z",
+      "fd_hjemmelag": "Belgium",
+      "fd_bortelag": "Egypt"
     },
     "Iran_New_Zealand_2026_06_15": {
       "kamp_id": "Iran_New_Zealand_2026_06_15",
@@ -199,7 +278,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-15",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-16",
+      "fd_match_id": 537364,
+      "fd_utcDate": "2026-06-16T01:00:00Z",
+      "fd_hjemmelag": "Iran",
+      "fd_bortelag": "New Zealand"
     },
     "Saudi_Arabia_Uruguay_2026_06_15": {
       "kamp_id": "Saudi_Arabia_Uruguay_2026_06_15",
@@ -212,7 +296,12 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-15",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-15",
+      "fd_match_id": 537370,
+      "fd_utcDate": "2026-06-15T22:00:00Z",
+      "fd_hjemmelag": "Saudi Arabia",
+      "fd_bortelag": "Uruguay"
     },
     "Spain_Cape_Verde_2026_06_15": {
       "kamp_id": "Spain_Cape_Verde_2026_06_15",
@@ -225,20 +314,30 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-15",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-15",
+      "fd_match_id": 537369,
+      "fd_utcDate": "2026-06-15T16:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Cape Verde Islands"
     },
     "Argentina_Algeria_2026_06_16": {
       "kamp_id": "Argentina_Algeria_2026_06_16",
       "canonical_kamp_id": "Argentina_Algeria_2026_06_16",
       "hjemmelag": "Argentina",
       "bortelag": "Algeria",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 3,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-16",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-17",
+      "fd_match_id": 537397,
+      "fd_utcDate": "2026-06-17T01:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Algeria"
     },
     "Austria_Jordan_2026_06_16": {
       "kamp_id": "Austria_Jordan_2026_06_16",
@@ -251,7 +350,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-16",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-17",
+      "fd_match_id": 537398,
+      "fd_utcDate": "2026-06-17T04:00:00Z",
+      "fd_hjemmelag": "Austria",
+      "fd_bortelag": "Jordan"
     },
     "France_Senegal_2026_06_16": {
       "kamp_id": "France_Senegal_2026_06_16",
@@ -264,7 +368,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-16",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-16",
+      "fd_match_id": 537391,
+      "fd_utcDate": "2026-06-16T19:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Senegal",
+      "avanserer": "France"
     },
     "Iraq_Norway_2026_06_16": {
       "kamp_id": "Iraq_Norway_2026_06_16",
@@ -277,7 +387,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-16",
-      "kilde_score": "openfootball"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-06-16",
+      "fd_match_id": 537392,
+      "fd_utcDate": "2026-06-16T22:00:00Z",
+      "fd_hjemmelag": "Iraq",
+      "fd_bortelag": "Norway",
+      "avanserer": "Norway"
     },
     "England_Croatia_2026_06_17": {
       "kamp_id": "England_Croatia_2026_06_17",
@@ -290,7 +406,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-17",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-17",
+      "fd_match_id": 537409,
+      "fd_utcDate": "2026-06-17T20:00:00Z",
+      "fd_hjemmelag": "England",
+      "fd_bortelag": "Croatia"
     },
     "Ghana_Panama_2026_06_17": {
       "kamp_id": "Ghana_Panama_2026_06_17",
@@ -303,7 +424,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-17",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-17",
+      "fd_match_id": 537410,
+      "fd_utcDate": "2026-06-17T23:00:00Z",
+      "fd_hjemmelag": "Ghana",
+      "fd_bortelag": "Panama"
     },
     "Portugal_DR_Congo_2026_06_17": {
       "kamp_id": "Portugal_DR_Congo_2026_06_17",
@@ -316,7 +442,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-17",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-17",
+      "fd_match_id": 537403,
+      "fd_utcDate": "2026-06-17T17:00:00Z",
+      "fd_hjemmelag": "Portugal",
+      "fd_bortelag": "Congo DR"
     },
     "Uzbekistan_Colombia_2026_06_17": {
       "kamp_id": "Uzbekistan_Colombia_2026_06_17",
@@ -329,7 +460,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-17",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-18",
+      "fd_match_id": 537404,
+      "fd_utcDate": "2026-06-18T02:00:00Z",
+      "fd_hjemmelag": "Uzbekistan",
+      "fd_bortelag": "Colombia"
     },
     "Canada_Qatar_2026_06_18": {
       "kamp_id": "Canada_Qatar_2026_06_18",
@@ -342,7 +478,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-18",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-18",
+      "fd_match_id": 537336,
+      "fd_utcDate": "2026-06-18T22:00:00Z",
+      "fd_hjemmelag": "Canada",
+      "fd_bortelag": "Qatar"
     },
     "Czech_Republic_South_Africa_2026_06_18": {
       "kamp_id": "Czech_Republic_South_Africa_2026_06_18",
@@ -355,7 +496,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-18",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-18",
+      "fd_match_id": 537329,
+      "fd_utcDate": "2026-06-18T16:00:00Z",
+      "fd_hjemmelag": "Czechia",
+      "fd_bortelag": "South Africa"
     },
     "Mexico_South_Korea_2026_06_18": {
       "kamp_id": "Mexico_South_Korea_2026_06_18",
@@ -368,7 +514,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-18",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-19",
+      "fd_match_id": 537330,
+      "fd_utcDate": "2026-06-19T01:00:00Z",
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "South Korea"
     },
     "Switzerland_Bosnia___Herzegovina_2026_06_18": {
       "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -381,7 +532,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-18",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-18",
+      "fd_match_id": 537335,
+      "fd_utcDate": "2026-06-18T19:00:00Z",
+      "fd_hjemmelag": "Switzerland",
+      "fd_bortelag": "Bosnia-Herzegovina"
     },
     "Brazil_Haiti_2026_06_19": {
       "kamp_id": "Brazil_Haiti_2026_06_19",
@@ -394,7 +550,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-19",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-20",
+      "fd_match_id": 537341,
+      "fd_utcDate": "2026-06-20T00:30:00Z",
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Haiti"
     },
     "Scotland_Morocco_2026_06_19": {
       "kamp_id": "Scotland_Morocco_2026_06_19",
@@ -407,7 +568,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-19",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-19",
+      "fd_match_id": 537342,
+      "fd_utcDate": "2026-06-19T22:00:00Z",
+      "fd_hjemmelag": "Scotland",
+      "fd_bortelag": "Morocco"
     },
     "Turkey_Paraguay_2026_06_19": {
       "kamp_id": "Turkey_Paraguay_2026_06_19",
@@ -420,7 +586,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-19",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-20",
+      "fd_match_id": 537347,
+      "fd_utcDate": "2026-06-20T03:00:00Z",
+      "fd_hjemmelag": "Turkey",
+      "fd_bortelag": "Paraguay"
     },
     "USA_Australia_2026_06_19": {
       "kamp_id": "USA_Australia_2026_06_19",
@@ -433,7 +604,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-19",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-19",
+      "fd_match_id": 537348,
+      "fd_utcDate": "2026-06-19T19:00:00Z",
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Australia"
     },
     "Ecuador_Curaçao_2026_06_20": {
       "kamp_id": "Ecuador_Curaçao_2026_06_20",
@@ -446,7 +622,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-20",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537354,
+      "fd_utcDate": "2026-06-21T00:00:00Z",
+      "fd_hjemmelag": "Ecuador",
+      "fd_bortelag": "Curaçao"
     },
     "Ecuador_Cura_ao_2026_06_20": {
       "kamp_id": "Ecuador_Cura_ao_2026_06_20",
@@ -460,6 +641,11 @@ const VM_DATA = {
       "runde": "gruppe",
       "dato_openfootball": "2026-06-20",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537354,
+      "fd_utcDate": "2026-06-21T00:00:00Z",
+      "fd_hjemmelag": "Ecuador",
+      "fd_bortelag": "Curaçao",
       "alias_for": "Ecuador_Curaçao_2026_06_20"
     },
     "Germany_Ivory_Coast_2026_06_20": {
@@ -473,7 +659,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-20",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-20",
+      "fd_match_id": 537353,
+      "fd_utcDate": "2026-06-20T20:00:00Z",
+      "fd_hjemmelag": "Germany",
+      "fd_bortelag": "Ivory Coast"
     },
     "Netherlands_Sweden_2026_06_20": {
       "kamp_id": "Netherlands_Sweden_2026_06_20",
@@ -486,7 +677,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-20",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-20",
+      "fd_match_id": 537359,
+      "fd_utcDate": "2026-06-20T17:00:00Z",
+      "fd_hjemmelag": "Netherlands",
+      "fd_bortelag": "Sweden"
     },
     "Tunisia_Japan_2026_06_20": {
       "kamp_id": "Tunisia_Japan_2026_06_20",
@@ -499,7 +695,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-20",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537360,
+      "fd_utcDate": "2026-06-21T04:00:00Z",
+      "fd_hjemmelag": "Tunisia",
+      "fd_bortelag": "Japan"
     },
     "Belgium_Iran_2026_06_21": {
       "kamp_id": "Belgium_Iran_2026_06_21",
@@ -512,7 +713,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-21",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537365,
+      "fd_utcDate": "2026-06-21T19:00:00Z",
+      "fd_hjemmelag": "Belgium",
+      "fd_bortelag": "Iran"
     },
     "New_Zealand_Egypt_2026_06_21": {
       "kamp_id": "New_Zealand_Egypt_2026_06_21",
@@ -525,7 +731,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-21",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-22",
+      "fd_match_id": 537366,
+      "fd_utcDate": "2026-06-22T01:00:00Z",
+      "fd_hjemmelag": "New Zealand",
+      "fd_bortelag": "Egypt"
     },
     "Spain_Saudi_Arabia_2026_06_21": {
       "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
@@ -538,7 +749,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-21",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537371,
+      "fd_utcDate": "2026-06-21T16:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Saudi Arabia"
     },
     "Uruguay_Cape_Verde_2026_06_21": {
       "kamp_id": "Uruguay_Cape_Verde_2026_06_21",
@@ -551,7 +767,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-21",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-21",
+      "fd_match_id": 537372,
+      "fd_utcDate": "2026-06-21T22:00:00Z",
+      "fd_hjemmelag": "Uruguay",
+      "fd_bortelag": "Cape Verde Islands"
     },
     "Argentina_Austria_2026_06_22": {
       "kamp_id": "Argentina_Austria_2026_06_22",
@@ -564,7 +785,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-22",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-22",
+      "fd_match_id": 537399,
+      "fd_utcDate": "2026-06-22T17:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Austria"
     },
     "France_Iraq_2026_06_22": {
       "kamp_id": "France_Iraq_2026_06_22",
@@ -577,7 +803,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-22",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-22",
+      "fd_match_id": 537393,
+      "fd_utcDate": "2026-06-22T21:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Iraq"
     },
     "Jordan_Algeria_2026_06_22": {
       "kamp_id": "Jordan_Algeria_2026_06_22",
@@ -590,7 +821,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-22",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-23",
+      "fd_match_id": 537400,
+      "fd_utcDate": "2026-06-23T03:00:00Z",
+      "fd_hjemmelag": "Jordan",
+      "fd_bortelag": "Algeria"
     },
     "Norway_Senegal_2026_06_22": {
       "kamp_id": "Norway_Senegal_2026_06_22",
@@ -603,7 +839,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-22",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-23",
+      "fd_match_id": 537394,
+      "fd_utcDate": "2026-06-23T00:00:00Z",
+      "fd_hjemmelag": "Norway",
+      "fd_bortelag": "Senegal"
     },
     "Colombia_DR_Congo_2026_06_23": {
       "kamp_id": "Colombia_DR_Congo_2026_06_23",
@@ -616,7 +857,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-24",
+      "fd_match_id": 537406,
+      "fd_utcDate": "2026-06-24T02:00:00Z",
+      "fd_hjemmelag": "Colombia",
+      "fd_bortelag": "Congo DR"
     },
     "England_Ghana_2026_06_23": {
       "kamp_id": "England_Ghana_2026_06_23",
@@ -629,7 +875,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-23",
+      "fd_match_id": 537411,
+      "fd_utcDate": "2026-06-23T20:00:00Z",
+      "fd_hjemmelag": "England",
+      "fd_bortelag": "Ghana"
     },
     "Panama_Croatia_2026_06_23": {
       "kamp_id": "Panama_Croatia_2026_06_23",
@@ -642,7 +893,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-23",
+      "fd_match_id": 537412,
+      "fd_utcDate": "2026-06-23T23:00:00Z",
+      "fd_hjemmelag": "Panama",
+      "fd_bortelag": "Croatia"
     },
     "Portugal_Uzbekistan_2026_06_23": {
       "kamp_id": "Portugal_Uzbekistan_2026_06_23",
@@ -655,7 +911,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-23",
+      "fd_match_id": 537405,
+      "fd_utcDate": "2026-06-23T17:00:00Z",
+      "fd_hjemmelag": "Portugal",
+      "fd_bortelag": "Uzbekistan"
     },
     "Bosnia___Herzegovina_Qatar_2026_06_24": {
       "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
@@ -668,7 +929,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-24",
+      "fd_match_id": 537338,
+      "fd_utcDate": "2026-06-24T19:00:00Z",
+      "fd_hjemmelag": "Bosnia-Herzegovina",
+      "fd_bortelag": "Qatar"
     },
     "Czech_Republic_Mexico_2026_06_24": {
       "kamp_id": "Czech_Republic_Mexico_2026_06_24",
@@ -681,7 +947,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537331,
+      "fd_utcDate": "2026-06-25T01:00:00Z",
+      "fd_hjemmelag": "Czechia",
+      "fd_bortelag": "Mexico"
     },
     "Morocco_Haiti_2026_06_24": {
       "kamp_id": "Morocco_Haiti_2026_06_24",
@@ -694,7 +965,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-24",
+      "fd_match_id": 537344,
+      "fd_utcDate": "2026-06-24T22:00:00Z",
+      "fd_hjemmelag": "Morocco",
+      "fd_bortelag": "Haiti"
     },
     "Scotland_Brazil_2026_06_24": {
       "kamp_id": "Scotland_Brazil_2026_06_24",
@@ -707,7 +983,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-24",
+      "fd_match_id": 537343,
+      "fd_utcDate": "2026-06-24T22:00:00Z",
+      "fd_hjemmelag": "Scotland",
+      "fd_bortelag": "Brazil"
     },
     "South_Africa_South_Korea_2026_06_24": {
       "kamp_id": "South_Africa_South_Korea_2026_06_24",
@@ -720,7 +1001,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537332,
+      "fd_utcDate": "2026-06-25T01:00:00Z",
+      "fd_hjemmelag": "South Africa",
+      "fd_bortelag": "South Korea"
     },
     "Switzerland_Canada_2026_06_24": {
       "kamp_id": "Switzerland_Canada_2026_06_24",
@@ -733,7 +1019,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-24",
+      "fd_match_id": 537337,
+      "fd_utcDate": "2026-06-24T19:00:00Z",
+      "fd_hjemmelag": "Switzerland",
+      "fd_bortelag": "Canada"
     },
     "Curaçao_Ivory_Coast_2026_06_25": {
       "kamp_id": "Curaçao_Ivory_Coast_2026_06_25",
@@ -746,7 +1037,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537356,
+      "fd_utcDate": "2026-06-25T20:00:00Z",
+      "fd_hjemmelag": "Curaçao",
+      "fd_bortelag": "Ivory Coast"
     },
     "Cura_ao_Ivory_Coast_2026_06_25": {
       "kamp_id": "Cura_ao_Ivory_Coast_2026_06_25",
@@ -760,6 +1056,11 @@ const VM_DATA = {
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537356,
+      "fd_utcDate": "2026-06-25T20:00:00Z",
+      "fd_hjemmelag": "Curaçao",
+      "fd_bortelag": "Ivory Coast",
       "alias_for": "Curaçao_Ivory_Coast_2026_06_25"
     },
     "Ecuador_Germany_2026_06_25": {
@@ -773,7 +1074,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537355,
+      "fd_utcDate": "2026-06-25T20:00:00Z",
+      "fd_hjemmelag": "Ecuador",
+      "fd_bortelag": "Germany"
     },
     "Japan_Sweden_2026_06_25": {
       "kamp_id": "Japan_Sweden_2026_06_25",
@@ -786,7 +1092,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537362,
+      "fd_utcDate": "2026-06-25T23:00:00Z",
+      "fd_hjemmelag": "Japan",
+      "fd_bortelag": "Sweden"
     },
     "Paraguay_Australia_2026_06_25": {
       "kamp_id": "Paraguay_Australia_2026_06_25",
@@ -799,7 +1110,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-26",
+      "fd_match_id": 537350,
+      "fd_utcDate": "2026-06-26T02:00:00Z",
+      "fd_hjemmelag": "Paraguay",
+      "fd_bortelag": "Australia"
     },
     "Tunisia_Netherlands_2026_06_25": {
       "kamp_id": "Tunisia_Netherlands_2026_06_25",
@@ -812,7 +1128,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-25",
+      "fd_match_id": 537361,
+      "fd_utcDate": "2026-06-25T23:00:00Z",
+      "fd_hjemmelag": "Tunisia",
+      "fd_bortelag": "Netherlands"
     },
     "Turkey_USA_2026_06_25": {
       "kamp_id": "Turkey_USA_2026_06_25",
@@ -825,7 +1146,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-26",
+      "fd_match_id": 537349,
+      "fd_utcDate": "2026-06-26T02:00:00Z",
+      "fd_hjemmelag": "Turkey",
+      "fd_bortelag": "United States"
     },
     "Cape_Verde_Saudi_Arabia_2026_06_26": {
       "kamp_id": "Cape_Verde_Saudi_Arabia_2026_06_26",
@@ -838,7 +1164,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537374,
+      "fd_utcDate": "2026-06-27T00:00:00Z",
+      "fd_hjemmelag": "Cape Verde Islands",
+      "fd_bortelag": "Saudi Arabia"
     },
     "Egypt_Iran_2026_06_26": {
       "kamp_id": "Egypt_Iran_2026_06_26",
@@ -851,7 +1182,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537368,
+      "fd_utcDate": "2026-06-27T03:00:00Z",
+      "fd_hjemmelag": "Egypt",
+      "fd_bortelag": "Iran"
     },
     "New_Zealand_Belgium_2026_06_26": {
       "kamp_id": "New_Zealand_Belgium_2026_06_26",
@@ -864,7 +1200,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537367,
+      "fd_utcDate": "2026-06-27T03:00:00Z",
+      "fd_hjemmelag": "New Zealand",
+      "fd_bortelag": "Belgium"
     },
     "Norway_France_2026_06_26": {
       "kamp_id": "Norway_France_2026_06_26",
@@ -877,7 +1218,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-26",
+      "fd_match_id": 537395,
+      "fd_utcDate": "2026-06-26T19:00:00Z",
+      "fd_hjemmelag": "Norway",
+      "fd_bortelag": "France"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
@@ -890,7 +1236,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-26",
+      "fd_match_id": 537396,
+      "fd_utcDate": "2026-06-26T19:00:00Z",
+      "fd_hjemmelag": "Senegal",
+      "fd_bortelag": "Iraq"
     },
     "Uruguay_Spain_2026_06_26": {
       "kamp_id": "Uruguay_Spain_2026_06_26",
@@ -903,7 +1254,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537373,
+      "fd_utcDate": "2026-06-27T00:00:00Z",
+      "fd_hjemmelag": "Uruguay",
+      "fd_bortelag": "Spain"
     },
     "Algeria_Austria_2026_06_27": {
       "kamp_id": "Algeria_Austria_2026_06_27",
@@ -916,7 +1272,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-28",
+      "fd_match_id": 537402,
+      "fd_utcDate": "2026-06-28T02:00:00Z",
+      "fd_hjemmelag": "Algeria",
+      "fd_bortelag": "Austria"
     },
     "Colombia_Portugal_2026_06_27": {
       "kamp_id": "Colombia_Portugal_2026_06_27",
@@ -929,7 +1290,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537407,
+      "fd_utcDate": "2026-06-27T23:30:00Z",
+      "fd_hjemmelag": "Colombia",
+      "fd_bortelag": "Portugal"
     },
     "Croatia_Ghana_2026_06_27": {
       "kamp_id": "Croatia_Ghana_2026_06_27",
@@ -942,7 +1308,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537414,
+      "fd_utcDate": "2026-06-27T21:00:00Z",
+      "fd_hjemmelag": "Croatia",
+      "fd_bortelag": "Ghana"
     },
     "DR_Congo_Uzbekistan_2026_06_27": {
       "kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
@@ -955,7 +1326,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537408,
+      "fd_utcDate": "2026-06-27T23:30:00Z",
+      "fd_hjemmelag": "Congo DR",
+      "fd_bortelag": "Uzbekistan"
     },
     "Jordan_Argentina_2026_06_27": {
       "kamp_id": "Jordan_Argentina_2026_06_27",
@@ -968,7 +1344,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-28",
+      "fd_match_id": 537401,
+      "fd_utcDate": "2026-06-28T02:00:00Z",
+      "fd_hjemmelag": "Jordan",
+      "fd_bortelag": "Argentina"
     },
     "Panama_England_2026_06_27": {
       "kamp_id": "Panama_England_2026_06_27",
@@ -981,7 +1362,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-27",
+      "fd_match_id": 537413,
+      "fd_utcDate": "2026-06-27T21:00:00Z",
+      "fd_hjemmelag": "Panama",
+      "fd_bortelag": "England"
     },
     "2A_2B_2026_06_28": {
       "kamp_id": "2A_2B_2026_06_28",
@@ -2156,11 +2542,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3142,11 +3528,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4128,11 +4514,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5114,11 +5500,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6100,11 +6486,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7086,11 +7472,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8072,11 +8458,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9058,11 +9444,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10044,11 +10430,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11030,11 +11416,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12016,11 +12402,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13002,11 +13388,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13988,11 +14374,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14974,11 +15360,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15960,11 +16346,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16946,11 +17332,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17932,11 +18318,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18918,11 +19304,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19904,11 +20290,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20890,11 +21276,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21876,11 +22262,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22862,11 +23248,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23848,11 +24234,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24834,11 +25220,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25820,11 +26206,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26806,11 +27192,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27792,11 +28178,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28778,11 +29164,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29764,11 +30150,11 @@ const VM_DATA = {
           "bortelag": "Algeria",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 3,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
