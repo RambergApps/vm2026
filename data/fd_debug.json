@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T17:01:11Z",
+  "tidspunkt": "2026-06-17T17:31:00Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -847,10 +847,10 @@
       "fd_bortelag": "Congo DR",
       "hjemmelag_normalisert": "Portugal",
       "bortelag_normalisert": "DR Congo",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-17",
       "fd_utcDate": "2026-06-17T17:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Portugal_DR_Congo_2026_06_17"
