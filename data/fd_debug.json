@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T21:30:56Z",
+  "tidspunkt": "2026-06-17T22:01:01Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -933,7 +933,7 @@
       "bortelag_normalisert": "Croatia",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 3,
+      "hjemme": 4,
       "borte": 2,
       "fd_dato": "2026-06-17",
       "fd_utcDate": "2026-06-17T20:00:00Z",
