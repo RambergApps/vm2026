@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T04:30:53Z",
+  "tidspunkt": "2026-06-17T05:00:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -777,7 +777,7 @@
       "fd_bortelag": "Jordan",
       "hjemmelag_normalisert": "Austria",
       "bortelag_normalisert": "Jordan",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 1,
       "borte": 0,
