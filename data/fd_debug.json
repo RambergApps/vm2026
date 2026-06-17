@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-17T01:01:00Z",
+  "tidspunkt": "2026-06-17T01:30:56Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -763,10 +763,10 @@
       "fd_bortelag": "Algeria",
       "hjemmelag_normalisert": "Argentina",
       "bortelag_normalisert": "Algeria",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-17",
       "fd_utcDate": "2026-06-17T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Argentina_Algeria_2026_06_17"
