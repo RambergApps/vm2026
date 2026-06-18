@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T20:30:55Z",
+  "tidspunkt": "2026-06-18T21:01:00Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -121,8 +121,8 @@
       "bortelag_normalisert": "Bosnia & Herzegovina",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-18",
       "fd_utcDate": "2026-06-18T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Switzerland_Bosnia___Herzegovina_2026_06_18"
