@@ -1,14 +1,11 @@
 name: Oppdater VM 2026 Leaderboard
 on:
-  # Kjør hver halvtime under VM (11. juni - 19. juli)
   schedule:
     - cron: '7,37 * * * *'
-  # Kjør automatisk når ny tipping-fil pushes
   push:
     paths:
       - 'tippinger/**'
       - 'data/manuelle-kamper.json'
-  # Kjør manuelt fra GitHub-grensesnittet
   workflow_dispatch:
 jobs:
   oppdater:
@@ -33,11 +30,11 @@ jobs:
         run: python scripts/generer-historikk.py
         env:
           GITHUB_ACTIONS: true
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
       - name: Commit og push oppdatert data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Skriv alltid en gyldig JSON-timestamp slik at scheduled runs gir sporbarhet
           printf '{"sjekket":"%s"}\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > data/last-checked.json
           git add data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/manuelle-kamper.json data/last-checked.json data/fd_debug.json data/kamp-mapping.json data/kamppost.json data/kamp-referanser.json
           if git diff --cached --quiet; then
