@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-18T02:01:07Z
+// Sist oppdatert: 2026-06-18T02:30:51Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-18T02:01:07Z",
+  "sist_oppdatert": "2026-06-18T02:30:51Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -457,13 +457,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Uzbekistan_Colombia_2026_06_17",
       "hjemmelag": "Uzbekistan",
       "bortelag": "Colombia",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-17",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-18",
       "fd_match_id": 537404,
       "fd_utcDate": "2026-06-18T02:00:00Z",
@@ -2642,11 +2642,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3636,11 +3636,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4630,11 +4630,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5624,11 +5624,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6618,11 +6618,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7612,11 +7612,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 4,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8606,11 +8606,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9600,11 +9600,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10594,11 +10594,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11588,11 +11588,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12582,11 +12582,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13576,11 +13576,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14570,11 +14570,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15564,11 +15564,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16558,11 +16558,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17552,11 +17552,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 5,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18546,11 +18546,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19540,11 +19540,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20534,11 +20534,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21528,11 +21528,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22522,11 +22522,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23516,11 +23516,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24510,11 +24510,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25504,11 +25504,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 4,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26498,11 +26498,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27492,11 +27492,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28486,11 +28486,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29480,11 +29480,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30474,11 +30474,11 @@ const VM_DATA = {
           "bortelag": "Colombia",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
