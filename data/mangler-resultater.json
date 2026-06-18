@@ -1,15 +1,6 @@
 {
-  "sist_sjekket": "2026-06-18T02:30:51Z",
+  "sist_sjekket": "2026-06-18T03:00:59Z",
   "kamper": [
-    {
-      "kamp_id": "Ghana_Panama_2026_06_17",
-      "hjemmelag": "Ghana",
-      "bortelag": "Panama",
-      "dato": "2026-06-17",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "kamp_id": "Uzbekistan_Colombia_2026_06_17",
       "hjemmelag": "Uzbekistan",
