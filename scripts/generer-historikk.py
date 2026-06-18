@@ -6,9 +6,10 @@ Flyt:
 1. Finn gårsdagens ferdigspilte kamper (norsk tid) fra data/data.js
 2. Sjekk om kamppost.json allerede er generert for i går
 3. Søk etter kampreferat via Serper.dev (Google snippets)
-4. Slå opp historikk og fakta fra data/kamp-referanser.json
-5. Kombiner til ferdig recap-tekst per kamp
-6. Skriv data/kamppost.json
+4. Filtrer snippets — behold bare faktasetninger med scorere/minutter
+5. Slå opp historikk og fakta fra data/kamp-referanser.json
+6. Kombiner til ferdig recap-tekst per kamp
+7. Skriv data/kamppost.json
 """
 
 import json
@@ -16,7 +17,6 @@ import os
 import re
 import time
 import urllib.request
-import urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -34,16 +34,44 @@ NORSKE_DAGER    = ["Mandag","Tirsdag","Onsdag","Torsdag","Fredag","Lørdag","Sø
 NORSKE_MAANEDER = ["januar","februar","mars","april","mai","juni",
                    "juli","august","september","oktober","november","desember"]
 
+# Ord som indikerer promo/preview/reklame — disse snippetene kastes
+PROMO_ORD = [
+    "highlights", "watch", "stream", "announced by", "click here",
+    "subscribe", "follow", "tune in", "broadcast", "tv channel",
+    "how to watch", "where to watch", "kick-off", "kickoff",
+    "preview", "prediction", "odds", "betting", "under pressure",
+    "crucial", "face ", "will face", "set to", "ahead of",
+    "check out", "find out", "read more", "full coverage",
+    "live updates", "live blog", "as it happened",
+]
+
+# Ord som indikerer at snippeten inneholder faktisk kampinfo
+FAKTA_ORD = [
+    "scored", "goal", "minute", "penalty", "header", "assist",
+    "red card", "yellow card", "own goal", "equaliser", "equalizer",
+    "winner", "substitute", "substitut", "brace", "hat-trick",
+]
+
 # ── DATO ──────────────────────────────────────────────────────────────────────
 
 def norsk_dato_igaar():
     return (datetime.now(NORSK_TZ) - timedelta(days=1)).date()
 
+def utc_til_norsk_dato(utc_str):
+    """Konverter UTC-datostreng (ISO 8601) til norsk dato-streng YYYY-MM-DD."""
+    if not utc_str:
+        return None
+    try:
+        dt = datetime.fromisoformat(utc_str.replace("Z", "+00:00"))
+        return dt.astimezone(NORSK_TZ).strftime("%Y-%m-%d")
+    except Exception:
+        return utc_str[:10]
+
 def formater_norsk_dato(dato_str):
     dato = datetime.strptime(dato_str, "%Y-%m-%d")
     return f"{NORSKE_DAGER[dato.weekday()]} {dato.day}. {NORSKE_MAANEDER[dato.month-1]} {dato.year}"
 
-# ── LES FILER ────────────────────────────────────────────────────────────────
+# ── LES FILER ─────────────────────────────────────────────────────────────────
 
 def les_data_js():
     tekst = DATA_JS.read_text(encoding="utf-8")
@@ -65,25 +93,37 @@ def les_eksisterende_kamppost():
     except Exception:
         return None
 
-# ── KAMPER ───────────────────────────────────────────────────────────────────
+# ── KAMPER ────────────────────────────────────────────────────────────────────
 
 def kampreferat_noekkel(hjemme, borte):
     lag = sorted([hjemme, borte])
     return f"{lag[0]}|||{lag[1]}"
 
 def finn_gaarsdagens_kamper(vm_data):
+    """
+    Finn ferdigspilte kamper fra i går — bruker norsk tid konsekvent.
+    fd_utcDate konverteres til norsk dato før sammenligning.
+    """
     igaar = str(norsk_dato_igaar())
     kamper = []
+
     for kid, kamp in vm_data.get("resultater", {}).items():
         hjemme = kamp.get("hjemmelag", "")
         borte  = kamp.get("bortelag", "")
+
+        # Hopp over placeholder-kamper
         if re.match(r"^[W1-9]", hjemme) or re.match(r"^[W1-9]", borte):
             continue
         if not kamp.get("ferdig"):
             continue
-        dato = kamp.get("dato_openfootball") or kamp.get("dato_fd_org", "")[:10]
-        if dato == igaar:
+
+        # Konverter til norsk dato — prioriter fd_utcDate siden den er mest presis
+        fd_utc  = kamp.get("fd_utcDate", "")
+        norsk_dato = utc_til_norsk_dato(fd_utc) if fd_utc else kamp.get("dato_openfootball", "")
+
+        if norsk_dato == igaar:
             kamper.append(kamp)
+
     return sorted(kamper, key=lambda k: k.get("fd_utcDate", k.get("dato_openfootball", "")))
 
 def hent_tippinger_for_kamp(vm_data, kamp_id):
@@ -105,20 +145,19 @@ def hent_tippinger_for_kamp(vm_data, kamp_id):
                     bom.append(info)
     return {"eksakt": eksakt, "riktig": riktig, "bom": bom}
 
-# ── SØK VIA SERPER ───────────────────────────────────────────────────────────
+# ── SØK VIA SERPER ────────────────────────────────────────────────────────────
 
 def soek_serper(hjemme, borte, h_score, b_score):
-    """Søk via Serper.dev og returner organiske snippets."""
+    """Søk via Serper.dev og returner rå snippets."""
     if not SERPER_API_KEY:
-        print("  ADVARSEL: SERPER_API_KEY ikke satt — hopper over søk")
+        print("  ADVARSEL: SERPER_API_KEY ikke satt")
         return []
 
-    spørring = f"{hjemme} {borte} {h_score}-{b_score} World Cup 2026 match report goals"
-    payload  = json.dumps({"q": spørring, "num": 5}).encode("utf-8")
-    url      = "https://google.serper.dev/search"
+    spørring = f"{hjemme} {borte} {h_score}-{b_score} World Cup 2026 match report goals scorers"
+    payload  = json.dumps({"q": spørring, "num": 8}).encode("utf-8")
 
     req = urllib.request.Request(
-        url,
+        "https://google.serper.dev/search",
         data    = payload,
         headers = {
             "X-API-KEY":    SERPER_API_KEY,
@@ -139,71 +178,82 @@ def soek_serper(hjemme, borte, h_score, b_score):
         if snippet and len(snippet) > 40:
             snippets.append(snippet)
 
-    print(f"  → Fant {len(snippets)} snippets fra Serper")
-    return snippets[:5]
+    print(f"  → Hentet {len(snippets)} rå snippets fra Serper")
+    return snippets
 
-# ── BYGG RECAP-TEKST ─────────────────────────────────────────────────────────
-
-def bygg_recap_tekst(kamp, snippets, ref, tippinger):
+def filtrer_snippets(snippets):
     """
-    Kombinerer snippets + referanser + tippinger til en sammenhengende
-    norsk recap-tekst per kamp.
+    Behold bare faktasetninger med kampinfo.
+    Kast promo, preview og reklame.
     """
-    hjemme  = kamp["hjemmelag"]
-    borte   = kamp["bortelag"]
-    h       = kamp["hjemme"]
-    b       = kamp["borte"]
+    gode = []
+    for snippet in snippets:
+        lav = snippet.lower()
 
-    hjemme_kallenavn = ref.get("kallenavn", {}).get(hjemme, hjemme)
-    borte_kallenavn  = ref.get("kallenavn", {}).get(borte,  borte)
-    historikk        = ref.get("historikk", "")
-    fakta            = ref.get("fakta", [])
-    gruppe           = ref.get("gruppe", "")
+        # Kast hvis inneholder promo-ord
+        if any(p in lav for p in PROMO_ORD):
+            continue
 
-    linjer = []
+        # Behold hvis inneholder faktaord
+        if any(f in lav for f in FAKTA_ORD):
+            # Rens dato-prefixer som "Jun 18, 2026 ·"
+            snippet = re.sub(r"^[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s*[·\-–]\s*", "", snippet).strip()
+            if snippet:
+                gode.append(snippet)
 
-    # ── Kampoverskrift ──
-    gruppe_tekst = f" — Gruppe {gruppe}" if gruppe else ""
+    print(f"  → {len(gode)} snippets etter filtrering")
+    return gode
+
+# ── BYGG RECAP-TEKST ──────────────────────────────────────────────────────────
+
+def bygg_recap_tekst(kamp, snippets_raa, ref, tippinger):
+    """
+    Bygger recap-tekst i tre separate avsnitt:
+    1. Kampreferat (fra filtrerte snippets)
+    2. Historikk/fakta (fra kamp-referanser.json)
+    3. Tippingsoppsummering
+    """
+    hjemme = kamp["hjemmelag"]
+    borte  = kamp["bortelag"]
+    h      = kamp["hjemme"]
+    b      = kamp["borte"]
+
+    historikk = ref.get("historikk", "")
+    fakta     = ref.get("fakta", [])
+
+    snippets_filtrert = filtrer_snippets(snippets_raa)
+
+    avsnitt = []
+
+    # ── Avsnitt 1: Kampreferat ──
+    kamp_linjer = []
+
+    # Kampresultat
     if h == b:
-        utfall = f"{hjemme_kallenavn} og {borte_kallenavn} delte poengene {h}-{b}{gruppe_tekst}."
+        kamp_linjer.append(f"{hjemme} og {borte} delte poengene {h}-{b}.")
     elif h > b:
-        utfall = f"{hjemme_kallenavn} slo {borte_kallenavn} {h}-{b}{gruppe_tekst}."
+        kamp_linjer.append(f"{hjemme} slo {borte} {h}-{b}.")
     else:
-        utfall = f"{borte_kallenavn} slo {hjemme_kallenavn} {b}-{h}{gruppe_tekst}."
-    linjer.append(utfall)
+        kamp_linjer.append(f"{borte} slo {hjemme} {b}-{h}.")
 
-    # ── Snippet-innhold ──
-    if snippets:
-        # Bruk beste snippet — rens og trim
-        beste = snippets[0]
-        # Fjern dato-prefixer som "Jun 18, 2026 ·"
-        beste = re.sub(r"^[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s*[·\-–]\s*", "", beste)
-        beste = beste.strip()
-        if beste and not beste.endswith("."):
-            beste += "."
-        if beste:
-            linjer.append(beste)
+    # Legg til filtrerte snippets
+    for s in snippets_filtrert[:2]:
+        if not s.endswith("."):
+            s += "."
+        kamp_linjer.append(s)
 
-        # Hvis det er flere snippets med ny info, trekk ut ekstra detaljer
-        for s in snippets[1:3]:
-            s = re.sub(r"^[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s*[·\-–]\s*", "", s).strip()
-            # Bare legg til hvis den inneholder mål/scorere og ikke er for lik forrige
-            if any(ord in s.lower() for ord in ["goal", "scored", "penalty", "header", "minute"]):
-                if s and s not in linjer:
-                    if not s.endswith("."):
-                        s += "."
-                    linjer.append(s)
-                    break
+    avsnitt.append(" ".join(kamp_linjer))
 
-    # ── Historikk ──
+    # ── Avsnitt 2: Historikk og fakta ──
+    hist_linjer = []
     if historikk:
-        linjer.append(historikk)
-
-    # ── Fakta ──
+        hist_linjer.append(historikk)
     if fakta:
-        linjer.append(fakta[0])
+        hist_linjer.append(fakta[0])
+    if hist_linjer:
+        avsnitt.append(" ".join(hist_linjer))
 
-    # ── Tippinger ──
+    # ── Avsnitt 3: Tippingsoppsummering ──
     eksakt = tippinger["eksakt"]
     riktig = tippinger["riktig"]
     bom    = tippinger["bom"]
@@ -217,30 +267,28 @@ def bygg_recap_tekst(kamp, snippets, ref, tippinger):
         if len(eksakt) == 1:
             tips_linjer.append(f"{navn_liste} traff eksakt og får 6 poeng!")
         else:
-            tips_linjer.append(f"{len(eksakt)} tippere traff eksakt: {navn_liste}. 6 poeng hver!")
+            tips_linjer.append(
+                f"{len(eksakt)} tippere traff eksakt: {navn_liste}. 6 poeng hver!"
+            )
 
     if riktig:
         navn_liste = ", ".join(
             f"{d['navn']} ({d['tippa_h']}-{d['tippa_b']})" for d in riktig
         )
         if len(riktig) == 1:
-            tips_linjer.append(f"{navn_liste} tippa riktig utfall og får 2 poeng.")
+            tips_linjer.append(
+                f"{navn_liste} tippa riktig utfall og får 2 poeng."
+            )
         else:
             tips_linjer.append(f"Riktig utfall (2p): {navn_liste}.")
 
     if bom:
-        if len(bom) == 1:
-            d = bom[0]
-            tips_linjer.append(
-                f"{d['navn']} tippa {d['tippa_h']}-{d['tippa_b']} og bommer fullstendig."
-            )
-        elif len(bom) <= 5:
+        if len(bom) <= 4:
             navn_liste = ", ".join(
                 f"{d['navn']} ({d['tippa_h']}-{d['tippa_b']})" for d in bom
             )
             tips_linjer.append(f"Bom (0p): {navn_liste}.")
         else:
-            # Mange bom — nevn noen og antall
             utvalg = ", ".join(
                 f"{d['navn']} ({d['tippa_h']}-{d['tippa_b']})" for d in bom[:3]
             )
@@ -249,11 +297,12 @@ def bygg_recap_tekst(kamp, snippets, ref, tippinger):
             )
 
     if tips_linjer:
-        linjer.append(" ".join(tips_linjer))
+        avsnitt.append(" ".join(tips_linjer))
 
-    return " ".join(linjer)
+    # Returner avsnitt separert med dobbelt linjeskift
+    return "\n\n".join(avsnitt)
 
-# ── STILLING ─────────────────────────────────────────────────────────────────
+# ── STILLING ──────────────────────────────────────────────────────────────────
 
 def bygg_stilling(vm_data, alle_kamp_ids):
     stilling = []
@@ -296,8 +345,8 @@ def main():
     print("Leser data/kamp-referanser.json...")
     referanser = les_referanser()
 
-    # Finn gårsdagens kamper
-    print(f"\nFinner kamper fra {igaar_str}...")
+    # Finn gårsdagens kamper (norsk tid)
+    print(f"\nFinner kamper fra {igaar_str} (norsk tid)...")
     gaarsdagens = finn_gaarsdagens_kamper(vm_data)
 
     if not gaarsdagens:
@@ -319,21 +368,21 @@ def main():
 
         ref         = referanser.get(kampreferat_noekkel(hjemme, borte), {})
         tippinger   = hent_tippinger_for_kamp(vm_data, kamp_id)
-        snippets    = soek_serper(hjemme, borte, h_score, b_score)
-        recap_tekst = bygg_recap_tekst(kamp, snippets, ref, tippinger)
+        snippets_raa = soek_serper(hjemme, borte, h_score, b_score)
+        recap_tekst = bygg_recap_tekst(kamp, snippets_raa, ref, tippinger)
 
         print(f"  Eksakt: {len(tippinger['eksakt'])} | Riktig: {len(tippinger['riktig'])} | Bom: {len(tippinger['bom'])}")
 
         kamposter.append({
-            "kamp_id":      kamp_id,
-            "hjemmelag":    hjemme,
-            "bortelag":     borte,
-            "hjemme_score": h_score,
-            "borte_score":  b_score,
-            "gruppe":       ref.get("gruppe", kamp.get("gruppe", "")),
-            "kallenavn":    ref.get("kallenavn", {}),
-            "recap_tekst":  recap_tekst,
-            "tippinger":    tippinger,
+            "kamp_id":       kamp_id,
+            "hjemmelag":     hjemme,
+            "bortelag":      borte,
+            "hjemme_score":  h_score,
+            "borte_score":   b_score,
+            "gruppe":        ref.get("gruppe", kamp.get("gruppe", "")),
+            "recap_tekst":   recap_tekst,
+            "snippets_raa":  snippets_raa,
+            "tippinger":     tippinger,
         })
 
         time.sleep(1)
