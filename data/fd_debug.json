@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T17:30:56Z",
+  "tidspunkt": "2026-06-18T18:00:59Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -38,7 +38,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 0,
+      "borte": 1,
       "fd_dato": "2026-06-18",
       "fd_utcDate": "2026-06-18T16:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Czech_Republic_South_Africa_2026_06_18"
