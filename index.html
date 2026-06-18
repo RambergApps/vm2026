@@ -339,6 +339,89 @@ body {
   letter-spacing: .08em; text-transform: uppercase;
 }
 .kamper-btn.active, .kamper-btn:hover { color: #000; background: var(--accent); border-color: var(--accent); }
+
+/* ── GÅRSDAGENS RECAP ── */
+.recap-boks {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 24px;
+}
+.recap-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 800; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 4px;
+}
+.recap-dato {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; line-height: 1.1; color: var(--text);
+  margin-bottom: 16px;
+}
+.recap-kamp {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+.recap-kamp:first-of-type { border-top: none; padding-top: 0; }
+.recap-kamp-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px;
+}
+.recap-kamp-lag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 800; text-transform: uppercase;
+  color: var(--text); flex: 1;
+}
+.recap-kamp-lag.borte { text-align: right; }
+.recap-kamp-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; color: var(--gold);
+  white-space: nowrap; text-align: center;
+}
+.recap-gruppe {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  text-align: center;
+}
+.recap-snippet {
+  font-size: 14px; line-height: 1.6; color: var(--text);
+  margin-bottom: 12px;
+}
+.recap-historikk {
+  font-size: 13px; color: var(--muted);
+  font-style: italic; margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
+.recap-poeng-rad {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; margin-bottom: 8px;
+}
+.recap-poeng-brikke {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700;
+  padding: 3px 10px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.recap-poeng-brikke.eksakt {
+  background: rgba(255,214,0,.15); color: var(--gold);
+  border: 1px solid rgba(255,214,0,.3);
+}
+.recap-poeng-brikke.riktig {
+  background: rgba(232,240,255,.08); color: var(--text);
+  border: 1px solid var(--border);
+}
+.recap-poeng-brikke.bom {
+  background: transparent; color: var(--muted);
+  border: 1px solid rgba(30,45,74,.4);
+}
+.recap-poeng-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  margin-top: 10px; margin-bottom: 4px;
+}
 .kampdato-gruppe { margin-bottom: 24px; }
 .kampdato-tittel {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
@@ -717,6 +800,7 @@ body {
       </div>
       <div class="kamper-oppdatert" id="kamperOppdatert"></div>
     </div>
+    <div id="gaarsdagensRecap"></div>
     <div class="kamper-filter" id="kamperFilter"></div>
     <div id="kamperInnhold"></div>
   </div>
@@ -1148,6 +1232,8 @@ function byggKamperFane() {
   const filterEl = document.getElementById('kamperFilter');
   if (!el || !filterEl) return;
 
+  byggGaarsdagensRecap();
+
   const alle = hentKamperFraResultater();
   const counts = alle.reduce((acc, k) => {
     const type = kampStatus(k).type;
@@ -1236,6 +1322,101 @@ function byggKamperFane() {
 function settKampFilter(filter) {
   aktivKampFilter = filter;
   byggKamperFane();
+}
+
+async function byggGaarsdagensRecap() {
+  const el = document.getElementById('gaarsdagensRecap');
+  if (!el) return;
+
+  let data;
+  try {
+    const r = await fetch('data/kamppost.json?t=' + Date.now());
+    if (!r.ok) { el.innerHTML = ''; return; }
+    data = await r.json();
+  } catch(e) {
+    el.innerHTML = '';
+    return;
+  }
+
+  if (!data || !data.kamper || !data.kamper.length) {
+    el.innerHTML = '';
+    return;
+  }
+
+  const FLAGG = {
+    'Mexico':'🇲🇽','South Africa':'🇿🇦','South Korea':'🇰🇷','Czech Republic':'🇨🇿',
+    'Canada':'🇨🇦','Bosnia & Herzegovina':'🇧🇦','USA':'🇺🇸','Paraguay':'🇵🇾',
+    'Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦',
+    'Haiti':'🇭🇹','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Australia':'🇦🇺','Turkey':'🇹🇷',
+    'Germany':'🇩🇪','Curaçao':'🇨🇼','Netherlands':'🇳🇱','Japan':'🇯🇵',
+    'Ivory Coast':'🇨🇮','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
+    'Saudi Arabia':'🇸🇦','Uruguay':'🇺🇾','Cape Verde':'🇨🇻','Argentina':'🇦🇷',
+    'Algeria':'🇩🇿','Jordan':'🇯🇴','Austria':'🇦🇹','France':'🇫🇷',
+    'Norway':'🇳🇴','Senegal':'🇸🇳','Iraq':'🇮🇶','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+    'Croatia':'🇭🇷','Ghana':'🇬🇭','Panama':'🇵🇦','Portugal':'🇵🇹',
+    'DR Congo':'🇨🇩','Uzbekistan':'🇺🇿','Colombia':'🇨🇴','Belgium':'🇧🇪',
+    'Egypt':'🇪🇬','Iran':'🇮🇷','New Zealand':'🇳🇿','Ecuador':'🇪🇨',
+  };
+
+  function flagg(lag) { return FLAGG[lag] || '🏳️'; }
+  function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  let html = `
+    <div class="recap-boks">
+      <div class="recap-tittel">⚽ Gårsdagens kamper</div>
+      <div class="recap-dato">${esc(data.dato_norsk)}</div>
+  `;
+
+  data.kamper.forEach((kamp) => {
+    const hjemmeKallenavn = kamp.kallenavn?.[kamp.hjemmelag] || kamp.hjemmelag;
+    const borteKallenavn  = kamp.kallenavn?.[kamp.bortelag]  || kamp.bortelag;
+    const snippet = kamp.snippets && kamp.snippets[0] ? kamp.snippets[0] : '';
+    const eksakt  = kamp.tippinger?.eksakt || [];
+    const riktig  = kamp.tippinger?.riktig || [];
+    const bom     = kamp.tippinger?.bom    || [];
+
+    let poengHTML = '';
+    if (eksakt.length) {
+      poengHTML += `<div class="recap-poeng-label">🎯 Eksakt (6p)</div><div class="recap-poeng-rad">`;
+      eksakt.forEach(d => {
+        poengHTML += `<span class="recap-poeng-brikke eksakt">${esc(d.navn)} ${esc(d.tippa_h)}-${esc(d.tippa_b)}</span>`;
+      });
+      poengHTML += '</div>';
+    }
+    if (riktig.length) {
+      poengHTML += `<div class="recap-poeng-label">✓ Riktig utfall (2p)</div><div class="recap-poeng-rad">`;
+      riktig.forEach(d => {
+        poengHTML += `<span class="recap-poeng-brikke riktig">${esc(d.navn)} ${esc(d.tippa_h)}-${esc(d.tippa_b)}</span>`;
+      });
+      poengHTML += '</div>';
+    }
+    if (bom.length) {
+      poengHTML += `<div class="recap-poeng-label">✗ Bom (0p)</div><div class="recap-poeng-rad">`;
+      bom.forEach(d => {
+        poengHTML += `<span class="recap-poeng-brikke bom">${esc(d.navn)} ${esc(d.tippa_h)}-${esc(d.tippa_b)}</span>`;
+      });
+      poengHTML += '</div>';
+    }
+
+    html += `
+      <div class="recap-kamp">
+        <div class="recap-kamp-header">
+          <div class="recap-kamp-lag">${flagg(kamp.hjemmelag)} ${esc(hjemmeKallenavn)}</div>
+          <div>
+            <div class="recap-kamp-score">${kamp.hjemme_score}–${kamp.borte_score}</div>
+            ${kamp.gruppe ? `<div class="recap-gruppe">Gruppe ${esc(kamp.gruppe)}</div>` : ''}
+          </div>
+          <div class="recap-kamp-lag borte">${esc(borteKallenavn)} ${flagg(kamp.bortelag)}</div>
+        </div>
+        ${snippet ? `<div class="recap-snippet">${esc(snippet)}</div>` : ''}
+        ${kamp.historikk ? `<div class="recap-historikk">${esc(kamp.historikk)}</div>` : ''}
+        ${poengHTML}
+      </div>
+    `;
+  });
+
+  html += '</div>';
+  el.innerHTML = html;
 }
 
 function finnKamp(canonicalId) {
