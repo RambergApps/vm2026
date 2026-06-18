@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T05:30:49Z",
+  "tidspunkt": "2026-06-18T06:01:00Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -945,8 +945,8 @@
       "fd_bortelag": "Panama",
       "hjemmelag_normalisert": "Ghana",
       "bortelag_normalisert": "Panama",
-      "status": "FINISHED",
-      "ferdig": true,
+      "status": "IN_PLAY",
+      "ferdig": false,
       "hjemme": 1,
       "borte": 0,
       "fd_dato": "2026-06-17",
