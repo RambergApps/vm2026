@@ -361,34 +361,36 @@ body {
 }
 .recap-kamp {
   border-top: 1px solid var(--border);
-  padding: 18px 0 4px;
+  padding: 18px 0 6px;
 }
 .recap-kamp:first-of-type { border-top: none; padding-top: 0; }
 .recap-kamp-header {
   display: flex; align-items: center;
-  gap: 12px; margin-bottom: 12px;
+  gap: 12px; margin-bottom: 14px;
 }
 .recap-kamp-lag {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px; font-weight: 800; text-transform: uppercase;
+  font-size: 17px; font-weight: 800; text-transform: uppercase;
   color: var(--text); flex: 1;
 }
 .recap-kamp-lag.borte { text-align: right; }
 .recap-kamp-score-wrap { text-align: center; min-width: 80px; }
 .recap-kamp-score {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px; color: var(--gold);
-  display: block;
+  font-size: 30px; color: var(--gold);
+  display: block; line-height: 1;
 }
 .recap-gruppe {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; color: var(--muted);
+  display: block; margin-top: 2px;
 }
-.recap-tekst {
+.recap-avsnitt {
   font-size: 14px; line-height: 1.7; color: var(--text);
-  padding-bottom: 16px;
+  margin-bottom: 10px;
 }
+.recap-avsnitt:last-child { margin-bottom: 16px; }
 .kampdato-gruppe { margin-bottom: 24px; }
 .kampdato-tittel {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
@@ -1335,20 +1337,23 @@ async function byggGaarsdagensRecap() {
   `;
 
   data.kamper.forEach(kamp => {
-    const hjemmeKallenavn = kamp.kallenavn?.[kamp.hjemmelag] || kamp.hjemmelag;
-    const borteKallenavn  = kamp.kallenavn?.[kamp.bortelag]  || kamp.bortelag;
+    // Recap-tekst er separert med \n\n — vis hvert avsnitt separat
+    const avsnitt = (kamp.recap_tekst || '').split('\n\n').filter(a => a.trim());
+    const avsnitHtml = avsnitt.map(a =>
+      `<div class="recap-avsnitt">${esc(a.trim())}</div>`
+    ).join('');
 
     html += `
       <div class="recap-kamp">
         <div class="recap-kamp-header">
-          <div class="recap-kamp-lag">${flagg(kamp.hjemmelag)} ${esc(hjemmeKallenavn)}</div>
+          <div class="recap-kamp-lag">${flagg(kamp.hjemmelag)} ${esc(kamp.hjemmelag)}</div>
           <div class="recap-kamp-score-wrap">
             <span class="recap-kamp-score">${kamp.hjemme_score}–${kamp.borte_score}</span>
             ${kamp.gruppe ? `<span class="recap-gruppe">Gruppe ${esc(kamp.gruppe)}</span>` : ''}
           </div>
-          <div class="recap-kamp-lag borte">${esc(borteKallenavn)} ${flagg(kamp.bortelag)}</div>
+          <div class="recap-kamp-lag borte">${esc(kamp.bortelag)} ${flagg(kamp.bortelag)}</div>
         </div>
-        <div class="recap-tekst">${esc(kamp.recap_tekst || '')}</div>
+        ${avsnitHtml}
       </div>
     `;
   });
