@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T22:05:18Z",
+  "tidspunkt": "2026-06-18T22:30:21Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -133,10 +133,10 @@
       "fd_bortelag": "Qatar",
       "hjemmelag_normalisert": "Canada",
       "bortelag_normalisert": "Qatar",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-18",
       "fd_utcDate": "2026-06-18T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Qatar_2026_06_18"
