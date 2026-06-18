@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T20:00:59Z",
+  "tidspunkt": "2026-06-18T20:30:55Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -119,7 +119,7 @@
       "fd_bortelag": "Bosnia-Herzegovina",
       "hjemmelag_normalisert": "Switzerland",
       "bortelag_normalisert": "Bosnia & Herzegovina",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": null,
       "borte": null,
