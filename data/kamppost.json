@@ -1,0 +1,591 @@
+{
+  "dato": "2026-06-18",
+  "dato_norsk": "Torsdag 18. juni 2026",
+  "generert": "2026-06-18T22:05:21Z",
+  "antall_kamper": 2,
+  "kamper": [
+    {
+      "kamp_id": "Czech_Republic_South_Africa_2026_06_18",
+      "hjemmelag": "Czech Republic",
+      "bortelag": "South Africa",
+      "hjemme_score": 1,
+      "borte_score": 1,
+      "gruppe": "A",
+      "kallenavn": {
+        "Czech Republic": "Løvene",
+        "South Africa": "Bafana Bafana"
+      },
+      "historikk": "Sør-Afrika er tilbake i VM etter å sist ha vært der i 2010 da de var vertsnasjon — og ble første vertsnasjon til å gå ut i gruppespillet.",
+      "fakta": [
+        "Sør-Afrika var sist i VM i 2010 som vertsnasjon",
+        "Tsjekkia kvalifiserte seg via playoff"
+      ],
+      "scorere": {
+        "hjemme": [],
+        "borte": []
+      },
+      "snippets": [],
+      "tippinger": {
+        "eksakt": [
+          {
+            "navn": "Alexander",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 6
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 6
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 6
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 6
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 6
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 0,
+            "tippa_b": 0,
+            "poeng": 2
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Atle Johansen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Sjur Revheim",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Bror Ramberg",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Magnus Børrud",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Selina Marie Kortvedt",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          }
+        ]
+      }
+    },
+    {
+      "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
+      "hjemmelag": "Switzerland",
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme_score": 4,
+      "borte_score": 1,
+      "gruppe": "B",
+      "kallenavn": {
+        "Bosnia & Herzegovina": "Zmajevima",
+        "Switzerland": "Nati"
+      },
+      "historikk": "Sveits er et solid VM-lag som jevnlig tar seg til utslagsrundene. Bosnia er tilbake etter 2014-debuten.",
+      "fakta": [
+        "Sveits tok seg til kvartfinalen i 2022",
+        "Bosnia & Herzegovina debuterte i VM i 2014"
+      ],
+      "scorere": {
+        "hjemme": [],
+        "borte": []
+      },
+      "snippets": [],
+      "tippinger": {
+        "eksakt": [],
+        "riktig": [
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Sjur Revheim",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Bror Ramberg",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Atle Johansen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Magnus Børrud",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Selina Marie Kortvedt",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          }
+        ]
+      }
+    }
+  ],
+  "stilling": [
+    {
+      "navn": "Alexander",
+      "plass": 1,
+      "poeng_totalt": 52,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Pål André Nilsen",
+      "plass": 2,
+      "poeng_totalt": 48,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Arne Kristian Johansen",
+      "plass": 3,
+      "poeng_totalt": 44,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Olympus fc",
+      "plass": 4,
+      "poeng_totalt": 40,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Vegard Hammervold Midtbø",
+      "plass": 5,
+      "poeng_totalt": 38,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Anders Rikheim",
+      "plass": 6,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Bjørnar Tallaksrud",
+      "plass": 7,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Ken Arne Hansen",
+      "plass": 8,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Kjetil bjerke",
+      "plass": 9,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Anders Sundero",
+      "plass": 10,
+      "poeng_totalt": 30,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Atle Johansen",
+      "plass": 11,
+      "poeng_totalt": 30,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Sjur Revheim",
+      "plass": 12,
+      "poeng_totalt": 30,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Sebastian Luranc",
+      "plass": 13,
+      "poeng_totalt": 28,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Alex Myrvokd",
+      "plass": 14,
+      "poeng_totalt": 26,
+      "poeng_i_dag": 4
+    },
+    {
+      "navn": "Chris Hortman",
+      "plass": 15,
+      "poeng_totalt": 26,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Diyan K.",
+      "plass": 16,
+      "poeng_totalt": 26,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Jorgen Lindland",
+      "plass": 17,
+      "poeng_totalt": 26,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Sondre Garstad",
+      "plass": 18,
+      "poeng_totalt": 26,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Bror Ramberg",
+      "plass": 19,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Geir Magne Evensen",
+      "plass": 20,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Jakob Rødahl Thingnes",
+      "plass": 21,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Magnus Børrud",
+      "plass": 22,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Rickard Jacobsson",
+      "plass": 23,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "sergio gomes",
+      "plass": 24,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Thomas Lindland",
+      "plass": 25,
+      "poeng_totalt": 24,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Andreas Handelsby",
+      "plass": 26,
+      "poeng_totalt": 22,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Marita Hauge Gjerde",
+      "plass": 27,
+      "poeng_totalt": 20,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Selina Marie Kortvedt",
+      "plass": 28,
+      "poeng_totalt": 20,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Ulf-Morten Johansen",
+      "plass": 29,
+      "poeng_totalt": 16,
+      "poeng_i_dag": 0
+    }
+  ]
+}
