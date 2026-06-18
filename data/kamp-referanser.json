@@ -1,0 +1,620 @@
+{
+  "_info": "Statisk referansefil for VM 2026 kampreferat-generator. Oppdateres manuelt ved behov.",
+  "_noekkel_format": "Lag1|||Lag2 (alltid alfabetisk sortert)",
+
+  "Algeria|||Argentina": {
+    "gruppe": "J",
+    "kallenavn": { "Algeria": "De grønne", "Argentina": "La Albiceleste" },
+    "historikk": "Argentina er regjerende verdensmestere og møter debutant-utfordrerne Algerie i en gruppe mange regner som ren walkover for søramerikanerne.",
+    "fakta": ["Argentina har vunnet VM tre ganger (1978, 1986, 2022)", "Algerie deltok sist i VM i 2014 og gikk ut i åttedelsfinalen", "Messi jaktet på sin andre VM-tittel"]
+  },
+
+  "Algeria|||Austria": {
+    "gruppe": "J",
+    "kallenavn": { "Algeria": "De grønne", "Austria": "Das Team" },
+    "historikk": "Disse to har aldri møttes i et VM. Østerrike er tilbake i VM for første gang siden 1998.",
+    "fakta": ["Østerrike er tilbake i VM etter 28 år", "Algerie vant sitt eneste VM-trofé... nei, de har aldri vunnet VM"]
+  },
+
+  "Algeria|||Jordan": {
+    "gruppe": "J",
+    "kallenavn": { "Algeria": "De grønne", "Jordan": "De nasjonale" },
+    "historikk": "Jordan er på sitt aller første VM. Algerie er de store favorittene i dette oppgjøret.",
+    "fakta": ["Jordan debuterer i VM 2026", "Algerie nådde sist 16-delsfinalen i 2014"]
+  },
+
+  "Argentina|||Austria": {
+    "gruppe": "J",
+    "kallenavn": { "Argentina": "La Albiceleste", "Austria": "Das Team" },
+    "historikk": "Argentina slo Østerrike 1-0 i VM 1998. Regjerende mestre mot nykommeren fra alpene.",
+    "fakta": ["Messi er Argentinas all-time toppscorer", "Østerrike er tilbake i VM etter 28 år"]
+  },
+
+  "Argentina|||Jordan": {
+    "gruppe": "J",
+    "kallenavn": { "Argentina": "La Albiceleste", "Jordan": "De nasjonale" },
+    "historikk": "Jordan debuterer i VM mot de regjerende verdensmesterne. Neppe drømmestarten.",
+    "fakta": ["Jordan debuterer i VM 2026", "Argentina er regjerende verdensmestere"]
+  },
+
+  "Australia|||Paraguay": {
+    "gruppe": "D",
+    "kallenavn": { "Australia": "Socceroos", "Paraguay": "La Albirroja" },
+    "historikk": "Disse to har møttes én gang i VM — i 2010 endte det 0-0. Paraguay slo USA i kvartfinalen det året.",
+    "fakta": ["Australia ble semifinalister i 2022", "Paraguay var i kvartfinalen i 2010"]
+  },
+
+  "Australia|||Turkey": {
+    "gruppe": "D",
+    "kallenavn": { "Australia": "Socceroos", "Turkey": "Ay-Yıldızlılar" },
+    "historikk": "Tyrkia er tilbake i VM etter å ha vært borte siden 2002 da de ble nummer tre. Australia var semifinalister i 2022.",
+    "fakta": ["Tyrkia ble nummer tre i VM 2002", "Australia nådde semifinalen i 2022 for første gang"]
+  },
+
+  "Australia|||USA": {
+    "gruppe": "D",
+    "kallenavn": { "Australia": "Socceroos", "USA": "Stars and Stripes" },
+    "historikk": "USA er vertsnasjon og møter et australsk lag som har vist de kan overraske. I 2022 slo Australia Danmark i 16-delsfinalen.",
+    "fakta": ["USA er vertsnasjon", "Australia var i kvartfinalen i 2022", "Folarin Balogun er USAs store stjerne"]
+  },
+
+  "Austria|||Jordan": {
+    "gruppe": "J",
+    "kallenavn": { "Austria": "Das Team", "Jordan": "De nasjonale" },
+    "historikk": "Jordan debuterer i VM og møter et østerriksk lag som er tilbake etter 28 år borte.",
+    "fakta": ["Begge lag spiller sitt første VM på lenge — Østerrike 28 år, Jordan aldri vært der"]
+  },
+
+  "Belgium|||Egypt": {
+    "gruppe": "G",
+    "kallenavn": { "Belgium": "De røde djevlene", "Egypt": "Faraonene" },
+    "historikk": "Belgia er fortsatt i gullgenerasjonen sin, mens Egypt er tilbake i VM etter å ha mislyktes med kvalifisering i 2022.",
+    "fakta": ["Belgia ble nummer tre i VM 2018", "Egypt var sist i VM i 2018", "Mo Salah er Egypts store stjerne"]
+  },
+
+  "Belgium|||Iran": {
+    "gruppe": "G",
+    "kallenavn": { "Belgium": "De røde djevlene", "Iran": "Team Melli" },
+    "historikk": "Belgia slo Iran 5-2 i VM 2014 etter å ha vært nede 1-2 til pause. Iran har aldri slått en europeisk nasjon i VM.",
+    "fakta": ["Belgia snudde 1-2 til 5-2 mot Iran i 2014", "Iran er på sitt fjerde strake VM"]
+  },
+
+  "Belgium|||New Zealand": {
+    "gruppe": "G",
+    "kallenavn": { "Belgium": "De røde djevlene", "New Zealand": "All Whites" },
+    "historikk": "Disse to har aldri møttes i et VM. New Zealand er tilbake for første gang siden 2010.",
+    "fakta": ["New Zealand var ubeseiret i 2010 — spilte tre uavgjort og gikk likevel ut", "Belgia er rangert blant topp 5 i verden"]
+  },
+
+  "Bosnia & Herzegovina|||Canada": {
+    "gruppe": "B",
+    "kallenavn": { "Bosnia & Herzegovina": "Zmajevima", "Canada": "Les Rouges" },
+    "historikk": "Canada er vertsnasjon og spiller sitt andre VM noensinne. Bosnia & Herzegovina debuterte i VM i 2014.",
+    "fakta": ["Canada er vertsnasjon i 2026", "Canada kvalifiserte seg sist til VM i 1986 — og tapte alle tre kamper"]
+  },
+
+  "Bosnia & Herzegovina|||Qatar": {
+    "gruppe": "B",
+    "kallenavn": { "Bosnia & Herzegovina": "Zmajevima", "Qatar": "Al Annabi" },
+    "historikk": "Qatar ble historisk i 2022 som første vertsnasjon noensinne som gikk ut i gruppespillet. Bosnia er tilbake etter debuten i 2014.",
+    "fakta": ["Qatar er eneste vertsnasjon som har gått ut i gruppespillet", "Bosnia & Herzegovina nådde ikke videre fra gruppen i 2014 heller"]
+  },
+
+  "Bosnia & Herzegovina|||Switzerland": {
+    "gruppe": "B",
+    "kallenavn": { "Bosnia & Herzegovina": "Zmajevima", "Switzerland": "Nati" },
+    "historikk": "Sveits er et solid VM-lag som jevnlig tar seg til utslagsrundene. Bosnia er tilbake etter 2014-debuten.",
+    "fakta": ["Sveits tok seg til kvartfinalen i 2022", "Bosnia & Herzegovina debuterte i VM i 2014"]
+  },
+
+  "Brazil|||Haiti": {
+    "gruppe": "C",
+    "kallenavn": { "Brazil": "Seleção", "Haiti": "Les Grenadiè" },
+    "historikk": "Haiti er på sitt andre VM noensinne — sist var i 1974. Brasil er fem ganger verdensmestre og favoritter.",
+    "fakta": ["Haiti deltok sist i VM i 1974", "Brasil har vunnet VM fem ganger", "Neymar er tilbake etter skade"]
+  },
+
+  "Brazil|||Morocco": {
+    "gruppe": "C",
+    "kallenavn": { "Brazil": "Seleção", "Morocco": "Atlas-løvene" },
+    "historikk": "Marokko var sensasjonen i 2022 og nådde semifinalen som første afrikanske nasjon noensinne. Brasil vil ha revansj på kontinentet som slo dem.",
+    "fakta": ["Marokko nådde semifinalen i VM 2022 — første afrikanske land noensinne", "Brasil ble slått av Kroatia på straffer i kvartfinalen i 2022"]
+  },
+
+  "Brazil|||Scotland": {
+    "gruppe": "C",
+    "kallenavn": { "Brazil": "Seleção", "Scotland": "The Tartan Army" },
+    "historikk": "Skottland er tilbake i VM for første gang siden 1998 — da tapte de åpningskampen mot Brasil 1-2. Historien gjentar seg?",
+    "fakta": ["Skottland var sist i VM i 1998 og tapte mot Brasil", "Skottland har aldri tatt seg videre fra gruppespillet i VM", "28 år uten VM er over for skottene"]
+  },
+
+  "Canada|||Qatar": {
+    "gruppe": "B",
+    "kallenavn": { "Canada": "Les Rouges", "Qatar": "Al Annabi" },
+    "historikk": "Canada er vertsnasjon. Qatar gikk ut i gruppespillet som eneste vertsnasjon noensinne i 2022.",
+    "fakta": ["Canada er vertsnasjon i 2026", "Qatar gikk historisk ut i gruppespillet som vertsnasjon i 2022"]
+  },
+
+  "Canada|||Switzerland": {
+    "gruppe": "B",
+    "kallenavn": { "Canada": "Les Rouges", "Switzerland": "Nati" },
+    "historikk": "Sveits er VM-erfarne og tok seg til kvartfinalen i 2022. Canada er vertsnasjon og spiller sin andre VM-deltakelse.",
+    "fakta": ["Canada er vertsnasjon", "Sveits tok seg til kvartfinalen i 2022"]
+  },
+
+  "Cape Verde|||Saudi Arabia": {
+    "gruppe": "H",
+    "kallenavn": { "Cape Verde": "De blå hajene", "Saudi Arabia": "De grønne falker" },
+    "historikk": "Begge lag er i VM for relativt sjeldent. Saudi-Arabia er kjent for å overraske — de slo Argentina i 2022.",
+    "fakta": ["Saudi Arabia slo Argentina 2-1 i VM 2022 i en av historiens største VM-overraskelser", "Kapp Verde debuterer i VM 2026"]
+  },
+
+  "Cape Verde|||Spain": {
+    "gruppe": "H",
+    "kallenavn": { "Cape Verde": "De blå hajene", "Spain": "La Roja" },
+    "historikk": "Spania er regjerende europamestre og blant favorittene. Kapp Verde debuterer i VM.",
+    "fakta": ["Spania vant EM 2024", "Kapp Verde debuterer i VM 2026", "Yamal er Spanias nye superstjerne"]
+  },
+
+  "Cape Verde|||Uruguay": {
+    "gruppe": "H",
+    "kallenavn": { "Cape Verde": "De blå hajene", "Uruguay": "La Celeste" },
+    "historikk": "Uruguay er et av de mest VM-suksessrike landene i historien med to titler. Kapp Verde debuterer.",
+    "fakta": ["Uruguay har vunnet VM to ganger (1930 og 1950)", "Kapp Verde debuterer i VM 2026"]
+  },
+
+  "Colombia|||DR Congo": {
+    "gruppe": "K",
+    "kallenavn": { "Colombia": "Los Cafeteros", "DR Congo": "Leopardene" },
+    "historikk": "Colombia er tilbake i VM etter åtte år borte. DR Congo spiller sitt første VM siden 1974 da de het Zaire.",
+    "fakta": ["DR Congo (Zaire) fikk 0-14 totalt i VM 1974", "Colombia nådde kvartfinalen i 2014 på hjemmebane", "Luis Díaz er Colombias store stjerne"]
+  },
+
+  "Colombia|||Portugal": {
+    "gruppe": "K",
+    "kallenavn": { "Colombia": "Los Cafeteros", "Portugal": "A Seleção das Quinas" },
+    "historikk": "Portugal med Ronaldo mot det colombianske laget bygget rundt Luis Díaz. To av verdens mest underholdende angrepslinjer.",
+    "fakta": ["Portugal ble nummer tre i VM 1966", "Colombia sin beste VM-plassering er kvartfinalen i 2014", "Ronaldo er 41 år og vil vise at han fortsatt er relevant"]
+  },
+
+  "Colombia|||Uzbekistan": {
+    "gruppe": "K",
+    "kallenavn": { "Colombia": "Los Cafeteros", "Uzbekistan": "De hvite ulver" },
+    "historikk": "Usbekistan debuterer i VM. Colombia er solide favoritter men Sentral-Asia har overrasket i andre turneringer.",
+    "fakta": ["Usbekistan debuterer i VM 2026", "Colombia er tilbake i VM etter åtte år borte"]
+  },
+
+  "Croatia|||England": {
+    "gruppe": "L",
+    "kallenavn": { "Croatia": "De rutete", "England": "The Three Lions" },
+    "historikk": "Kroatia sendte England ut av VM i 2018 i semifinalen etter ekstraomganger (2-1). England slo tilbake i EM 2020 (1-0). Nå er det revansjtid igjen.",
+    "fakta": ["Kroatia slo England i VM 2018-semifinalen", "England slo Kroatia i EM 2020", "Harry Kane er Englands all-time toppscorer", "Kroatia ble nummer to i VM 2018"]
+  },
+
+  "Croatia|||Ghana": {
+    "gruppe": "L",
+    "kallenavn": { "Croatia": "De rutete", "Ghana": "The Black Stars" },
+    "historikk": "Disse møttes i VM 2006 — Kroatia vant 1-0. Ghana er Afrikas mest VM-suksessrike nasjon med kvartfinale i 2010.",
+    "fakta": ["Kroatia slo Ghana 1-0 i VM 2006", "Ghana nådde kvartfinalen i VM 2010 og tapte på straffer mot Uruguay"]
+  },
+
+  "Croatia|||Panama": {
+    "gruppe": "L",
+    "kallenavn": { "Croatia": "De rutete", "Panama": "Los Canaleros" },
+    "historikk": "Disse to har aldri møttes i et VM. Panama er på sitt andre VM noensinne og har aldri vunnet en VM-kamp.",
+    "fakta": ["Panama har aldri vunnet en VM-kamp (spilte VM første gang i 2018)", "Kroatia er VM-finalister fra 2018"]
+  },
+
+  "Curaçao|||Ecuador": {
+    "gruppe": "E",
+    "kallenavn": { "Curaçao": "De blå", "Ecuador": "La Tri" },
+    "historikk": "Curaçao debuterer i VM. Ecuador er et solid søramerikansk lag som nådde 16-delsfinalen i 2006.",
+    "fakta": ["Curaçao debuterer i VM 2026", "Ecuador nådde 16-delsfinalen i VM 2006"]
+  },
+
+  "Curaçao|||Germany": {
+    "gruppe": "E",
+    "kallenavn": { "Curaçao": "De blå", "Germany": "Die Mannschaft" },
+    "historikk": "Tyskland er fire ganger verdensmestere. Curaçao debuterer. Det er ikke ventet å bli jevnt.",
+    "fakta": ["Tyskland har vunnet VM fire ganger", "Curaçao debuterer i VM 2026", "Kai Havertz er Tysklands nye stjerne"]
+  },
+
+  "Curaçao|||Ivory Coast": {
+    "gruppe": "E",
+    "kallenavn": { "Curaçao": "De blå", "Ivory Coast": "De elefantene" },
+    "historikk": "Elfenbenskysten er Afrikas mest profilerte lag med stjerner som Drogba i fortiden. Curaçao debuterer.",
+    "fakta": ["Curaçao debuterer i VM 2026", "Elfenbenskysten nådde aldri lenger enn gruppespillet i VM"]
+  },
+
+  "Czech Republic|||Mexico": {
+    "gruppe": "A",
+    "kallenavn": { "Czech Republic": "Løvene", "Mexico": "El Tri" },
+    "historikk": "Mexico er vertsnasjon og skal spille foran hjemmepublikum. Tsjekkia er tilbake i VM etter en lang pause.",
+    "fakta": ["Mexico er vertsnasjon i 2026", "Mexico har aldri nådd lenger enn kvartfinalen i VM", "Tsjekkia kvalifiserte seg via playoff"]
+  },
+
+  "Czech Republic|||South Africa": {
+    "gruppe": "A",
+    "kallenavn": { "Czech Republic": "Løvene", "South Africa": "Bafana Bafana" },
+    "historikk": "Sør-Afrika er tilbake i VM etter å sist ha vært der i 2010 da de var vertsnasjon — og ble første vertsnasjon til å gå ut i gruppespillet.",
+    "fakta": ["Sør-Afrika var sist i VM i 2010 som vertsnasjon", "Tsjekkia kvalifiserte seg via playoff"]
+  },
+
+  "Czech Republic|||South Korea": {
+    "gruppe": "A",
+    "kallenavn": { "Czech Republic": "Løvene", "South Korea": "Taeguk Warriors" },
+    "historikk": "Disse to møttes i VM 2006 — Tsjekkia vant 3-2. Sør-Korea er et solid asiatisk lag.",
+    "fakta": ["Tsjekkia slo Sør-Korea 3-2 i VM 2006", "Sør-Korea nådde semifinalen i VM 2002 på hjemmebane"]
+  },
+
+  "DR Congo|||Portugal": {
+    "gruppe": "K",
+    "kallenavn": { "DR Congo": "Leopardene", "Portugal": "A Seleção das Quinas" },
+    "historikk": "DR Congo (da Zaire) deltok sist i VM i 1974 med den imponerende målstatistikken 0-14. Portugal med Ronaldo er favoritter, men Kongo har verdens beste Wissa på laget.",
+    "fakta": ["DR Congo (Zaire) tapte 0-9 mot Yugoslavia i 1974", "DR Congo (Zaire) tapte totalt 0-14 i VM 1974", "Ronaldo er 41 år — verdens eldste utespiller til å starte en VM-kamp", "Yoane Wissa scorer for DR Congo og skriver sin nasjon inn i VM-historien"]
+  },
+
+  "DR Congo|||Uzbekistan": {
+    "gruppe": "K",
+    "kallenavn": { "DR Congo": "Leopardene", "Uzbekistan": "De hvite ulver" },
+    "historikk": "To debutanter (eller nesten) møtes. DR Congo var sist i VM som Zaire i 1974. Usbekistan er på sitt aller første VM.",
+    "fakta": ["DR Congo (Zaire) var sist i VM i 1974", "Usbekistan debuterer i VM 2026"]
+  },
+
+  "Ecuador|||Germany": {
+    "gruppe": "E",
+    "kallenavn": { "Ecuador": "La Tri", "Germany": "Die Mannschaft" },
+    "historikk": "Ecuador møtte Tyskland i VM 2006 — og tapte 0-3. Tyskland er fire ganger verdensmestere.",
+    "fakta": ["Ecuador tapte 0-3 mot Tyskland i VM 2006", "Ecuador nådde 16-delsfinalen i 2006"]
+  },
+
+  "Ecuador|||Ivory Coast": {
+    "gruppe": "E",
+    "kallenavn": { "Ecuador": "La Tri", "Ivory Coast": "De elefantene" },
+    "historikk": "Elfenbenskysten er kjent for sine store stjerner. Ecuador er et solid søramerikansk lag.",
+    "fakta": ["Elfenbenskysten har aldri nådd lenger enn gruppespillet i VM"]
+  },
+
+  "Egypt|||Iran": {
+    "gruppe": "G",
+    "kallenavn": { "Egypt": "Faraonene", "Iran": "Team Melli" },
+    "historikk": "To sterke fotballnasjoner fra hvert sitt kontinent. Egypt har Mo Salah, Iran er på sitt fjerde strake VM.",
+    "fakta": ["Mo Salah er Egypts all-time toppscorer", "Iran er på sitt fjerde strake VM", "Iran holdt nullen mot Portugal i VM 2018 (1-1)"]
+  },
+
+  "Egypt|||New Zealand": {
+    "gruppe": "G",
+    "kallenavn": { "Egypt": "Faraonene", "New Zealand": "All Whites" },
+    "historikk": "New Zealand var ubeseiret i VM 2010 — tre kamper, tre uavgjort, og likevel gikk de ut. Egypt var sist i VM i 2018.",
+    "fakta": ["New Zealand spilte tre uavgjort i VM 2010 og gikk ut", "Egypt var sist i VM i 2018"]
+  },
+
+  "England|||Ghana": {
+    "gruppe": "L",
+    "kallenavn": { "England": "The Three Lions", "Ghana": "The Black Stars" },
+    "historikk": "Disse to har bare møttes én gang — en 1-1 vennligkamp i 2011. England er store favoritter.",
+    "fakta": ["England og Ghana møttes bare én gang i vennligkamp i 2011", "Ghana nådde kvartfinalen i VM 2010"]
+  },
+
+  "England|||Panama": {
+    "gruppe": "L",
+    "kallenavn": { "England": "The Three Lions", "Panama": "Los Canaleros" },
+    "historikk": "England slo Panama 6-1 i VM 2018 der Kane scoret hat-trick. Panama vil ha revansj.",
+    "fakta": ["England slo Panama 6-1 i VM 2018", "Harry Kane scoret hat-trick mot Panama i 2018", "Panama har aldri vunnet en VM-kamp"]
+  },
+
+  "France|||Iraq": {
+    "gruppe": "I",
+    "kallenavn": { "France": "Les Bleus", "Iraq": "Mesopotamia-løvene" },
+    "historikk": "Frankrike er to ganger verdensmestere. Irak debuterer i VM 2026.",
+    "fakta": ["Frankrike har vunnet VM to ganger (1998 og 2018)", "Irak debuterer i VM 2026", "Mbappé er Frankrikes store stjerne"]
+  },
+
+  "France|||Norway": {
+    "gruppe": "I",
+    "kallenavn": { "France": "Les Bleus", "Norway": "Drillo-gutta" },
+    "historikk": "Norge er tilbake i VM for første gang siden 1998! Frankrike vant VM det året. Erling Haaland er Norges store håp.",
+    "fakta": ["Norge var sist i VM i 1998", "Erling Haaland er Norges all-time toppscorer i VM-kvalifisering", "Frankrike er regjerende VM-nummer to fra 2022"]
+  },
+
+  "France|||Senegal": {
+    "gruppe": "I",
+    "kallenavn": { "France": "Les Bleus", "Senegal": "Løvene fra Teranga" },
+    "historikk": "Senegal slo Frankrike i åpningskampen i VM 2002 (1-0) i en av historiens største VM-overraskelser. Mange franske spillere har senegalesiske røtter.",
+    "fakta": ["Senegal slo Frankrike 1-0 i VM 2002", "Senegal vant afrikamesterskapet i 2021 og 2022", "Mange franske spillere har senegalesiske røtter — og spiller for Frankrike"]
+  },
+
+  "Germany|||Ivory Coast": {
+    "gruppe": "E",
+    "kallenavn": { "Germany": "Die Mannschaft", "Ivory Coast": "De elefantene" },
+    "historikk": "Disse møttes i VM 2006 — Elfenbenskysten tapte 0-3 mot Tyskland. Minner om den gangen Drogba gråt.",
+    "fakta": ["Tyskland slo Elfenbenskysten 3-0 i VM 2006", "Elfenbenskysten har aldri nådd lenger enn gruppespillet"]
+  },
+
+  "Ghana|||Panama": {
+    "gruppe": "L",
+    "kallenavn": { "Ghana": "The Black Stars", "Panama": "Los Canaleros" },
+    "historikk": "Disse to har aldri møttes i et VM. Ghana nådde kvartfinalen i 2010. Panama har aldri vunnet en VM-kamp.",
+    "fakta": ["Ghana tapte på straffer mot Uruguay i VM 2010-kvartfinalen etter den beryktede Suárez-hendelsen", "Panama har aldri vunnet en VM-kamp", "Caleb Yirenkyi scorer i 95. minutt og skriver seg inn i historien"]
+  },
+
+  "Haiti|||Morocco": {
+    "gruppe": "C",
+    "kallenavn": { "Haiti": "Les Grenadiè", "Morocco": "Atlas-løvene" },
+    "historikk": "Marokko var sensasjonen i 2022. Haiti er tilbake i VM for første gang siden 1974.",
+    "fakta": ["Marokko nådde semifinalen i VM 2022", "Haiti var sist i VM i 1974", "Haiti debuterte i VM i 1974"]
+  },
+
+  "Haiti|||Scotland": {
+    "gruppe": "C",
+    "kallenavn": { "Haiti": "Les Grenadiè", "Scotland": "The Tartan Army" },
+    "historikk": "Skottland er tilbake i VM etter 28 år. Haiti er tilbake etter over 50 år borte. Begge lag sulter etter poeng.",
+    "fakta": ["Skottland var sist i VM i 1998", "Haiti var sist i VM i 1974", "Skottland har aldri nådd videre fra gruppespillet i VM"]
+  },
+
+  "Iran|||New Zealand": {
+    "gruppe": "G",
+    "kallenavn": { "Iran": "Team Melli", "New Zealand": "All Whites" },
+    "historikk": "New Zealand er tilbake i VM for første gang siden 2010 der de var ubeseiret men gikk ut. Iran er på sitt fjerde strake VM.",
+    "fakta": ["New Zealand var ubeseiret i VM 2010 — tre uavgjort og likevel ut", "Iran er på sitt fjerde strake VM"]
+  },
+
+  "Iraq|||Norway": {
+    "gruppe": "I",
+    "kallenavn": { "Iraq": "Mesopotamia-løvene", "Norway": "Drillo-gutta" },
+    "historikk": "Norge er tilbake i VM etter 28 år. Irak debuterer. Erling Haaland møter en nasjon som aldri har vært i VM.",
+    "fakta": ["Norge var sist i VM i 1998", "Irak debuterer i VM 2026", "Haaland er Norges store håp om avansement"]
+  },
+
+  "Iraq|||Senegal": {
+    "gruppe": "I",
+    "kallenavn": { "Iraq": "Mesopotamia-løvene", "Senegal": "Løvene fra Teranga" },
+    "historikk": "Senegal vant afrikamesterskapet i 2021 og 2022. Irak debuterer i VM. Senegal er klare favoritter.",
+    "fakta": ["Senegal vant AFCON i 2021 og 2022", "Irak debuterer i VM 2026"]
+  },
+
+  "Japan|||Netherlands": {
+    "gruppe": "F",
+    "kallenavn": { "Japan": "De blå samurai", "Netherlands": "Oranje" },
+    "historikk": "Nederland er en av verdens mest tradisjonsrike fotballnasjoner men har aldri vunnet VM til tross for tre finaler. Japan er Asia-favoritten.",
+    "fakta": ["Nederland har tapt tre VM-finaler (1974, 1978, 2010)", "Japan nådde 16-delsfinalen i VM 2022 og slo Spania og Tyskland i gruppen"]
+  },
+
+  "Japan|||Sweden": {
+    "gruppe": "F",
+    "kallenavn": { "Japan": "De blå samurai", "Sweden": "Blågult" },
+    "historikk": "Sverige er tilbake i VM. Japan er Asia sin sterkeste utfordrer. Disse to har aldri møttes i et VM.",
+    "fakta": ["Japan slo Spania og Tyskland i VM 2022 gruppespillet", "Sverige var sist i VM i 2018 der de nådde kvartfinalen"]
+  },
+
+  "Japan|||Tunisia": {
+    "gruppe": "F",
+    "kallenavn": { "Japan": "De blå samurai", "Tunisia": "Ørnekartagerne" },
+    "historikk": "Disse to møttes i VM 2002 — Japan vant 2-1. Japan er klare favoritter igjen.",
+    "fakta": ["Japan slo Tunisia 2-1 i VM 2002", "Tunisia har aldri nådd videre fra gruppespillet i VM"]
+  },
+
+  "Mexico|||South Africa": {
+    "gruppe": "A",
+    "kallenavn": { "Mexico": "El Tri", "South Africa": "Bafana Bafana" },
+    "historikk": "Disse to spilte uavgjort 1-1 i åpningskampen i VM 2010 da Sør-Afrika var vertsnasjon. Nå er Mexico vertsnasjon og åpner turneringen igjen mot akkurat samme motstander.",
+    "fakta": ["Mexico og Sør-Afrika spilte 1-1 i åpningskampen i VM 2010", "Mexico er vertsnasjon i 2026 og åpner på Azteca", "Første gang i VM-historien at åpningskamp-motstanden gjentas", "Sør-Afrika ble første vertsnasjon til å gå ut i gruppespillet i 2010"]
+  },
+
+  "Mexico|||South Korea": {
+    "gruppe": "A",
+    "kallenavn": { "Mexico": "El Tri", "South Korea": "Taeguk Warriors" },
+    "historikk": "Mexico slo Sør-Korea 3-1 i VM 2018 og 1-0 i VM 2014. Mexico er vertsnasjon og spiller foran hjemmepublikum.",
+    "fakta": ["Mexico slo Sør-Korea i VM 2018 (3-1) og 2014 (1-0)", "Mexico er vertsnasjon i 2026"]
+  },
+
+  "Morocco|||Haiti": {
+    "gruppe": "C",
+    "kallenavn": { "Morocco": "Atlas-løvene", "Haiti": "Les Grenadiè" },
+    "historikk": "Marokko nådde semifinalen i 2022. Haiti er tilbake i VM etter over 50 år borte.",
+    "fakta": ["Marokko nådde semifinalen i VM 2022 som første afrikanske nasjon noensinne", "Haiti var sist i VM i 1974"]
+  },
+
+  "Morocco|||Scotland": {
+    "gruppe": "C",
+    "kallenavn": { "Morocco": "Atlas-løvene", "Scotland": "The Tartan Army" },
+    "historikk": "Marokko er en av turneringens favoritter. Skottland er tilbake etter 28 år. Drømmematch for Tartan Army.",
+    "fakta": ["Marokko nådde semifinalen i VM 2022", "Skottland var sist i VM i 1998 og har aldri nådd videre fra gruppespillet"]
+  },
+
+  "Netherlands|||Sweden": {
+    "gruppe": "F",
+    "kallenavn": { "Netherlands": "Oranje", "Sweden": "Blågult" },
+    "historikk": "To skandinavisk-nærliggende fotballnasjoner. Nederland er klare favoritter men Sverige er aldri enkle.",
+    "fakta": ["Nederland har nådd tre VM-finaler uten å vinne", "Sverige nådde kvartfinalen i VM 2018"]
+  },
+
+  "Netherlands|||Tunisia": {
+    "gruppe": "F",
+    "kallenavn": { "Netherlands": "Oranje", "Tunisia": "Ørnekartagerne" },
+    "historikk": "Nederland slo Tunisia i VM 2022. Tunisia er fast VM-deltaker men har aldri nådd videre.",
+    "fakta": ["Nederland slo Tunisia i VM 2022", "Tunisia er på sitt syvende VM men har aldri nådd videre fra gruppespillet"]
+  },
+
+  "Norway|||Senegal": {
+    "gruppe": "I",
+    "kallenavn": { "Norway": "Drillo-gutta", "Senegal": "Løvene fra Teranga" },
+    "historikk": "Norge er tilbake i VM etter 28 år. Senegal er afrikamestre. Haaland mot Senegal — det er det folk ser frem til.",
+    "fakta": ["Norge var sist i VM i 1998 der de slo Brasil 2-1", "Senegal vant AFCON i 2021 og 2022", "Haaland er Norges store håp"]
+  },
+
+  "Paraguay|||Turkey": {
+    "gruppe": "D",
+    "kallenavn": { "Paraguay": "La Albirroja", "Turkey": "Ay-Yıldızlılar" },
+    "historikk": "Tyrkia er tilbake i VM for første gang siden 2002 da de ble nummer tre. Paraguay var i kvartfinalen i 2010.",
+    "fakta": ["Tyrkia ble nummer tre i VM 2002", "Paraguay nådde kvartfinalen i VM 2010"]
+  },
+
+  "Paraguay|||USA": {
+    "gruppe": "D",
+    "kallenavn": { "Paraguay": "La Albirroja", "USA": "Stars and Stripes" },
+    "historikk": "USA er vertsnasjon og møter Paraguay i åpningskampen. USA slo Paraguay i VM 1930 (3-0).",
+    "fakta": ["USA er vertsnasjon i 2026", "USA slo Paraguay 3-0 i VM 1930", "Pulisic er USAs store stjerne"]
+  },
+
+  "Portugal|||Uzbekistan": {
+    "gruppe": "K",
+    "kallenavn": { "Portugal": "A Seleção das Quinas", "Uzbekistan": "De hvite ulver" },
+    "historikk": "Portugal møter VM-debutantene Usbekistan i det som på papiret er den enkleste oppgaven i gruppen.",
+    "fakta": ["Usbekistan debuterer i VM 2026", "Ronaldo er 41 år og spiller sitt sjette VM"]
+  },
+
+  "Qatar|||Switzerland": {
+    "gruppe": "B",
+    "kallenavn": { "Qatar": "Al Annabi", "Switzerland": "Nati" },
+    "historikk": "Qatar gikk historisk ut som vertsnasjon i 2022. Sveits er et solid VM-lag som tok seg til kvartfinalen i 2022.",
+    "fakta": ["Qatar gikk ut i gruppespillet som vertsnasjon i 2022", "Sveits nådde kvartfinalen i VM 2022"]
+  },
+
+  "Saudi Arabia|||Spain": {
+    "gruppe": "H",
+    "kallenavn": { "Saudi Arabia": "De grønne falker", "Spain": "La Roja" },
+    "historikk": "Saudi Arabia slo Argentina i den største VM-overraskelsen i 2022. Kan de gjøre det igjen mot Spania?",
+    "fakta": ["Saudi Arabia slo Argentina 2-1 i VM 2022", "Spania vant EM 2024", "Yamal er Spanias nye stjerne"]
+  },
+
+  "Saudi Arabia|||Uruguay": {
+    "gruppe": "H",
+    "kallenavn": { "Saudi Arabia": "De grønne falker", "Uruguay": "La Celeste" },
+    "historikk": "Uruguay er et av de mest VM-suksessrike landene med to titler. Saudi Arabia er kjent for overraskelsene sine.",
+    "fakta": ["Uruguay har vunnet VM to ganger (1930 og 1950)", "Saudi Arabia slo Argentina i VM 2022"]
+  },
+
+  "Scotland|||Brazil": {
+    "gruppe": "C",
+    "kallenavn": { "Scotland": "The Tartan Army", "Brazil": "Seleção" },
+    "historikk": "Skottland møtte Brasil i åpningskampen i VM 1998 og tapte 1-2. Nå gjentar historien seg — igjen første kamp, igjen Brasil.",
+    "fakta": ["Skottland tapte 1-2 mot Brasil i åpningskampen i VM 1998", "Skottland er tilbake i VM etter 28 år", "Brasil er fem ganger verdensmestere"]
+  },
+
+  "Scotland|||Morocco": {
+    "gruppe": "C",
+    "kallenavn": { "Scotland": "The Tartan Army", "Morocco": "Atlas-løvene" },
+    "historikk": "Marokko nådde semifinalen i 2022. Skottland er tilbake etter 28 år. Ujevnt på papiret men Tartan Army brenner alltid.",
+    "fakta": ["Marokko er første afrikanske nasjon til å nå VM-semifinalen", "Skottland er tilbake i VM etter 28 år"]
+  },
+
+  "Senegal|||Iraq": {
+    "gruppe": "I",
+    "kallenavn": { "Senegal": "Løvene fra Teranga", "Iraq": "Mesopotamia-løvene" },
+    "historikk": "Senegal er klare favoritter mot VM-debutantene Irak.",
+    "fakta": ["Senegal vant AFCON i 2021 og 2022", "Irak debuterer i VM 2026"]
+  },
+
+  "South Africa|||South Korea": {
+    "gruppe": "A",
+    "kallenavn": { "South Africa": "Bafana Bafana", "South Korea": "Taeguk Warriors" },
+    "historikk": "Sør-Korea nådde semifinalen i VM 2002 på hjemmebane. Sør-Afrika er tilbake i VM etter 2010.",
+    "fakta": ["Sør-Korea nådde semifinalen i VM 2002", "Sør-Afrika var sist i VM i 2010 som vertsnasjon"]
+  },
+
+  "South Korea|||Czech Republic": {
+    "gruppe": "A",
+    "kallenavn": { "South Korea": "Taeguk Warriors", "Czech Republic": "Løvene" },
+    "historikk": "Tsjekkia slo Sør-Korea 3-2 i VM 2006. Begge lag trenger poeng for å avansere fra en tøff gruppe.",
+    "fakta": ["Tsjekkia slo Sør-Korea 3-2 i VM 2006", "Sør-Korea nådde semifinalen i VM 2002"]
+  },
+
+  "Spain|||Uruguay": {
+    "gruppe": "H",
+    "kallenavn": { "Spain": "La Roja", "Uruguay": "La Celeste" },
+    "historikk": "Spania er regjerende EM-mestre. Uruguay er to ganger VM-mestere. To giganter møtes.",
+    "fakta": ["Spania vant VM i 2010", "Uruguay har vunnet VM to ganger", "Yamal er Spanias nye superstjerne"]
+  },
+
+  "Sweden|||Tunisia": {
+    "gruppe": "F",
+    "kallenavn": { "Sweden": "Blågult", "Tunisia": "Ørnekartagerne" },
+    "historikk": "Sverige nådde kvartfinalen i 2018. Tunisia er fast VM-deltaker men har aldri nådd videre fra gruppespillet.",
+    "fakta": ["Sverige nådde kvartfinalen i VM 2018", "Tunisia er på sitt syvende VM uten å ha nådd videre fra gruppen"]
+  },
+
+  "Switzerland|||Bosnia & Herzegovina": {
+    "gruppe": "B",
+    "kallenavn": { "Switzerland": "Nati", "Bosnia & Herzegovina": "Zmajevima" },
+    "historikk": "Sveits er solide VM-deltakere og nådde kvartfinalen i 2022. Bosnia er tilbake etter 2014-debuten.",
+    "fakta": ["Sveits nådde kvartfinalen i VM 2022", "Bosnia & Herzegovina debuterte i VM i 2014"]
+  },
+
+  "Switzerland|||Canada": {
+    "gruppe": "B",
+    "kallenavn": { "Switzerland": "Nati", "Canada": "Les Rouges" },
+    "historikk": "Canada er vertsnasjon. Sveits er gjengangere i VM og tok seg til kvartfinalen i 2022.",
+    "fakta": ["Canada er vertsnasjon i 2026", "Sveits nådde kvartfinalen i VM 2022"]
+  },
+
+  "Tunisia|||Japan": {
+    "gruppe": "F",
+    "kallenavn": { "Tunisia": "Ørnekartagerne", "Japan": "De blå samurai" },
+    "historikk": "Japan slo Tunisia 2-1 i VM 2002. Japan er store favoritter igjen.",
+    "fakta": ["Japan slo Tunisia 2-1 i VM 2002", "Tunisia har aldri nådd videre fra gruppespillet i VM"]
+  },
+
+  "Tunisia|||Netherlands": {
+    "gruppe": "F",
+    "kallenavn": { "Tunisia": "Ørnekartagerne", "Netherlands": "Oranje" },
+    "historikk": "Nederland slo Tunisia i VM 2022. Gjentakelse?",
+    "fakta": ["Nederland slo Tunisia i VM 2022", "Nederland har nådd tre VM-finaler uten å vinne"]
+  },
+
+  "Turkey|||Paraguay": {
+    "gruppe": "D",
+    "kallenavn": { "Turkey": "Ay-Yıldızlılar", "Paraguay": "La Albirroja" },
+    "historikk": "Tyrkia er tilbake i VM etter 2002 da de ble nummer tre. Paraguay var i kvartfinalen i 2010.",
+    "fakta": ["Tyrkia ble nummer tre i VM 2002", "Paraguay nådde kvartfinalen i VM 2010"]
+  },
+
+  "Turkey|||USA": {
+    "gruppe": "D",
+    "kallenavn": { "Turkey": "Ay-Yıldızlılar", "USA": "Stars and Stripes" },
+    "historikk": "USA er vertsnasjon. Tyrkia er tilbake i VM for første gang siden 2002. Begge lag trenger poeng.",
+    "fakta": ["USA er vertsnasjon i 2026", "Tyrkia var sist i VM i 2002 der de ble nummer tre"]
+  },
+
+  "Uruguay|||Cape Verde": {
+    "gruppe": "H",
+    "kallenavn": { "Uruguay": "La Celeste", "Cape Verde": "De blå hajene" },
+    "historikk": "Uruguay er to ganger verdensmestere. Kapp Verde debuterer i VM. Ikke ventet å bli jevnt.",
+    "fakta": ["Uruguay har vunnet VM to ganger (1930 og 1950)", "Kapp Verde debuterer i VM 2026"]
+  },
+
+  "Uruguay|||Saudi Arabia": {
+    "gruppe": "H",
+    "kallenavn": { "Uruguay": "La Celeste", "Saudi Arabia": "De grønne falker" },
+    "historikk": "Saudi Arabia er kjent for VM-overraskelsene sine (Argentina 2022). Uruguay er rutinerte veteraner.",
+    "fakta": ["Saudi Arabia slo Argentina 2-1 i VM 2022", "Uruguay har vunnet VM to ganger"]
+  },
+
+  "Uruguay|||Spain": {
+    "gruppe": "H",
+    "kallenavn": { "Uruguay": "La Celeste", "Spain": "La Roja" },
+    "historikk": "Spania slo Uruguay i semifinalen i VM 2010 (1-0). Nå møtes de igjen i gruppespillet.",
+    "fakta": ["Spania slo Uruguay i VM 2010-semifinalen", "Spania vant VM i 2010", "Uruguay har vunnet VM to ganger"]
+  },
+
+  "USA|||Australia": {
+    "gruppe": "D",
+    "kallenavn": { "USA": "Stars and Stripes", "Australia": "Socceroos" },
+    "historikk": "USA er vertsnasjon. Australia nådde kvartfinalen i 2022 og slo Argentina i 16-delsfinalen.",
+    "fakta": ["USA er vertsnasjon i 2026", "Australia nådde kvartfinalen i VM 2022", "Australia slo Danmark i 16-delsfinalen i 2022"]
+  },
+
+  "USA|||Paraguay": {
+    "gruppe": "D",
+    "kallenavn": { "USA": "Stars and Stripes", "Paraguay": "La Albirroja" },
+    "historikk": "USA er vertsnasjon og møter Paraguay i åpningskampen. USA slo Paraguay 3-0 i VM 1930.",
+    "fakta": ["USA slo Paraguay 3-0 i VM 1930", "USA er vertsnasjon i 2026", "Folarin Balogun er USAs store stjerne"]
+  },
+
+  "Uzbekistan|||Colombia": {
+    "gruppe": "K",
+    "kallenavn": { "Uzbekistan": "De hvite ulver", "Colombia": "Los Cafeteros" },
+    "historikk": "Usbekistan debuterer i VM og spiller sin første kamp noensinne i turneringen mot Colombia. De klarte å utligne til 1-1 men Colombia snudde det til 3-1.",
+    "fakta": ["Usbekistan debuterer i VM 2026", "Abbosbek Fayzullaev scorer Usbekistans første VM-mål noensinne", "Colombia er tilbake i VM etter åtte år borte", "Luis Díaz spiller for Bayern München"]
+  }
+}
