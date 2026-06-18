@@ -36,7 +36,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           printf '{"sjekket":"%s"}\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > data/last-checked.json
-          git add data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/manuelle-kamper.json data/last-checked.json data/fd_debug.json data/kamp-mapping.json data/kamppost.json data/kamp-referanser.json
+          git add data/*.js data/*.json
           if git diff --cached --quiet; then
             echo "Ingen endringer å committe"
           else
