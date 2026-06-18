@@ -391,6 +391,68 @@ body {
   margin-bottom: 10px;
 }
 .recap-avsnitt:last-child { margin-bottom: 16px; }
+
+.recap-poengboks {
+  margin-top: 14px;
+  background: rgba(6,9,18,.36);
+  border: 1px solid rgba(30,45,74,.9);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.recap-poeng-header {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; margin-bottom: 8px;
+}
+.recap-poeng-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 900; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted);
+}
+.recap-poeng-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--accent);
+  white-space: nowrap;
+}
+.recap-poeng-row {
+  display: grid; grid-template-columns: 74px minmax(0,1fr);
+  gap: 10px; align-items: start; padding-top: 8px;
+}
+.recap-poeng-row + .recap-poeng-row {
+  border-top: 1px solid rgba(30,45,74,.55);
+  margin-top: 8px;
+}
+.recap-poeng-label {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 26px; border-radius: 999px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; line-height: 1; letter-spacing: .02em;
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.04);
+}
+.recap-poeng-label.p6 { color: var(--gold); border-color: rgba(255,214,0,.26); background: rgba(255,214,0,.08); }
+.recap-poeng-label.p2 { color: var(--text); border-color: rgba(232,240,255,.16); }
+.recap-poeng-navn {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.recap-poeng-chip {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 800; line-height: 1;
+  text-transform: uppercase; letter-spacing: .03em;
+  color: var(--text);
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 999px;
+  padding: 6px 9px;
+}
+.recap-poeng-empty {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 .kampdato-gruppe { margin-bottom: 24px; }
 .kampdato-tittel {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
@@ -548,7 +610,13 @@ body {
   .kampmobil-poenginfo.aktiv { color: var(--accent2); }
 
   .poenggiver-rad { grid-template-columns: 1fr 70px 42px; }
+
+  .recap-poeng-header { align-items: flex-start; }
+  .recap-poeng-row { grid-template-columns: 56px minmax(0,1fr); gap: 8px; }
+  .recap-poeng-label { min-height: 24px; font-size: 16px; }
+  .recap-poeng-chip { font-size: 11px; padding: 6px 8px; }
 }
+
 
 /* ── MODAL ── */
 .modal-overlay {
@@ -1330,6 +1398,78 @@ async function byggGaarsdagensRecap() {
   function flagg(lag) { return FLAGG[lag] || '🏳️'; }
   function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+  function erTippeAvsnitt(tekst) {
+    const t = String(tekst || '').toLowerCase();
+    return (
+      t.includes('traff eksakt') ||
+      t.includes('riktig utfall') ||
+      t.includes('bom (0p)') ||
+      t.includes('tippere bommet') ||
+      t.includes('tippa riktig utfall') ||
+      t.includes('får 6 poeng') ||
+      t.includes('får 2 poeng')
+    );
+  }
+
+  function hentPoengListe(liste, fallbackPoeng) {
+    if (!Array.isArray(liste)) return [];
+    const sett = new Set();
+    return liste
+      .map(d => ({
+        navn: String(d?.navn || '').trim(),
+        poeng: Number(d?.poeng ?? fallbackPoeng)
+      }))
+      .filter(d => d.navn && d.poeng > 0)
+      .filter(d => {
+        const key = `${d.navn.toLowerCase()}|${d.poeng}`;
+        if (sett.has(key)) return false;
+        sett.add(key);
+        return true;
+      });
+  }
+
+  function byggPoengRad(poeng, liste) {
+    if (!liste.length) return '';
+    const klasse = poeng >= 6 ? 'p6' : 'p2';
+    return `
+      <div class="recap-poeng-row">
+        <div class="recap-poeng-label ${klasse}">${poeng}p</div>
+        <div class="recap-poeng-navn">
+          ${liste.map(d => `<span class="recap-poeng-chip">${esc(d.navn)}</span>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function byggPoengboks(kamp) {
+    const tippinger = kamp.tippinger || {};
+    const eksakt = hentPoengListe(tippinger.eksakt, 6);
+    const riktig = hentPoengListe(tippinger.riktig, 2);
+    const total = eksakt.length + riktig.length;
+
+    if (!total) {
+      return `
+        <div class="recap-poengboks">
+          <div class="recap-poeng-header">
+            <div class="recap-poeng-tittel">Poeng fra kampen</div>
+          </div>
+          <div class="recap-poeng-empty">Ingen fikk poeng på denne kampen</div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="recap-poengboks">
+        <div class="recap-poeng-header">
+          <div class="recap-poeng-tittel">Poeng fra kampen</div>
+          <div class="recap-poeng-count">${total} med poeng</div>
+        </div>
+        ${byggPoengRad(6, eksakt)}
+        ${byggPoengRad(2, riktig)}
+      </div>
+    `;
+  }
+
   let html = `
     <div class="recap-boks">
       <div class="recap-tittel">⚽ Gårsdagens kamper</div>
@@ -1337,10 +1477,15 @@ async function byggGaarsdagensRecap() {
   `;
 
   data.kamper.forEach(kamp => {
-    // Recap-tekst er separert med \n\n — vis hvert avsnitt separat
-    const avsnitt = (kamp.recap_tekst || '').split('\n\n').filter(a => a.trim());
+    // Recap-tekst er separert med \n\n — vis hvert avsnitt separat.
+    // Eldre kamppost.json kan fortsatt ha tippeoppsummering i recap_tekst, så den filtreres bort her.
+    const avsnitt = (kamp.recap_tekst || '')
+      .split('\n\n')
+      .map(a => a.trim())
+      .filter(a => a && !erTippeAvsnitt(a));
+
     const avsnitHtml = avsnitt.map(a =>
-      `<div class="recap-avsnitt">${esc(a.trim())}</div>`
+      `<div class="recap-avsnitt">${esc(a)}</div>`
     ).join('');
 
     html += `
@@ -1354,6 +1499,7 @@ async function byggGaarsdagensRecap() {
           <div class="recap-kamp-lag borte">${esc(kamp.bortelag)} ${flagg(kamp.bortelag)}</div>
         </div>
         ${avsnitHtml}
+        ${byggPoengboks(kamp)}
       </div>
     `;
   });
