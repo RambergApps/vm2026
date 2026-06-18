@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T03:30:51Z",
+  "tidspunkt": "2026-06-18T04:01:04Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -864,7 +864,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 1,
+      "borte": 2,
       "fd_dato": "2026-06-18",
       "fd_utcDate": "2026-06-18T02:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Uzbekistan_Colombia_2026_06_18"
