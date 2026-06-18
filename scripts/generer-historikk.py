@@ -18,6 +18,7 @@ import os
 import re
 import time
 import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
@@ -230,27 +231,44 @@ def aliases_for(lag):
     return resultat
 
 
-def quote_or_alias(lag):
+def sokelag_navn(lag):
+    """
+    Returnerer ett søkevennlig lagnavn.
+    Vi unngår avansert Google-syntaks med OR/parenteser fordi Serper kan avvise
+    for komplekse query-strenger med HTTP 400.
+    """
     aliaser = aliases_for(lag)
-    if len(aliaser) == 1:
-        return f'"{aliaser[0]}"'
-    return "(" + " OR ".join(f'"{a}"' for a in aliaser) + ")"
+    foretrukket = {
+        "Czech Republic": "Czechia",
+        "Bosnia & Herzegovina": "Bosnia Herzegovina",
+        "USA": "United States",
+        "DR Congo": "Congo DR",
+        "Ivory Coast": "Ivory Coast",
+        "South Korea": "South Korea",
+        "Cape Verde": "Cape Verde",
+    }
+    return foretrukket.get(lag, aliaser[0] if aliaser else lag)
 
 
 def bygg_serper_query(hjemme, borte, h_score, b_score):
-    resultat = f'"{h_score}-{b_score}"'
-    # Negative fraser bygges eksplisitt slik at vi ikke bruker ekstra Serper-søk på dårlige treff.
+    """
+    Lager én robust Serper-query per kamp.
+    Bevisst enkel syntaks: ingen OR, ingen parenteser og ingen negative quoted phrases.
+    Scoringen i etterkant avgjør hvilke treff som er gode nok.
+    """
     negative_terms = [
         "-watch", "-highlights", "-stream", "-preview", "-prediction", "-odds", "-betting",
         "-youtube", "-tiktok", "-instagram", "-reddit", "-tickets", "-lineups",
-        "-\"how to watch\"", "-\"live blog\"", "-\"live updates\"",
+        "-liveblog", "-liveupdates",
     ]
-    return (
-        f"{quote_or_alias(hjemme)} {quote_or_alias(borte)} {resultat} "
-        f'"World Cup" ("match report" OR recap OR goals OR scorers OR "full-time") '
-        + " ".join(negative_terms)
-    )
-
+    return " ".join([
+        sokelag_navn(hjemme),
+        sokelag_navn(borte),
+        f"{h_score}-{b_score}",
+        "World Cup 2026",
+        "match report recap goals scorers full-time",
+        *negative_terms,
+    ])
 
 def domene_fra_url(url):
     try:
@@ -379,6 +397,15 @@ def soek_serper_api(query):
     try:
         with urllib.request.urlopen(req, timeout=12) as resp:
             data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        try:
+            body = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            body = ""
+        print(f"  ADVARSEL: Serper-søk feilet: HTTP {e.code}: {e.reason}")
+        if body:
+            print(f"  Serper-respons: {body[:500]}")
+        return []
     except Exception as e:
         print(f"  ADVARSEL: Serper-søk feilet: {e}")
         return []
