@@ -1,14 +1,4 @@
 {
-  "sist_sjekket": "2026-06-18T06:01:00Z",
-  "kamper": [
-    {
-      "kamp_id": "Ghana_Panama_2026_06_17",
-      "hjemmelag": "Ghana",
-      "bortelag": "Panama",
-      "dato": "2026-06-17",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-18T06:30:53Z",
+  "kamper": []
 }
