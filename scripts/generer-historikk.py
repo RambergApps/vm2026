@@ -4,7 +4,7 @@ Kjøres av GitHub Actions etter poengregning.py.
 
 Prinsipp:
 1. Finn gårsdagens ferdigspilte kamper (norsk tid) fra data/data.js
-2. Sjekk om kamppost.json allerede er generert for i går
+2. Hvis kamppost.json allerede finnes for datoen: regenerer rapporten, men seed Serper-cache fra eksisterende data
 3. Hent kampkandidater fra Serper med streng kvotekontroll og cache
 4. Score kandidater basert på kilde/tittel/snippet/resultat/kampord
 5. Bruk kun snippets som rågrunnlag/debug — publisert recap_tekst skal være norsk
@@ -156,6 +156,56 @@ def skriv_serper_cache(cache):
         json.dumps(cache, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
+
+
+def seed_cache_fra_eksisterende_kamppost(eksisterende, cache):
+    """
+    Hvis kamppost.json finnes fra før, kan den inneholde gode Serper-kandidater.
+    Bruk disse til å fylle serper-cache.json når cache mangler, slik at en ren
+    regenerering av teksten ikke brenner nye Serper-søk.
+    """
+    if not eksisterende or not isinstance(eksisterende, dict):
+        return 0
+
+    antall = 0
+    for kamp in eksisterende.get("kamper", []) or []:
+        kvalitet = kamp.get("recap_kvalitet", {}) or {}
+        key = kvalitet.get("cache_key")
+        if not key:
+            kamp_id = kamp.get("kamp_id")
+            h_score = kamp.get("hjemme_score")
+            b_score = kamp.get("borte_score")
+            if kamp_id is None or h_score is None or b_score is None:
+                continue
+            key = cache_noekkel(kamp_id, h_score, b_score)
+
+        kandidater = kamp.get("serper_kandidater", []) or []
+        # Ikke overskriv eksisterende cache med data fra kamppost, med mindre cache mangler kandidater.
+        if key in cache and cache.get(key, {}).get("kandidater"):
+            continue
+
+        cache[key] = {
+            "kamp_id": kamp.get("kamp_id", ""),
+            "resultat": f"{kamp.get('hjemme_score', '')}-{kamp.get('borte_score', '')}",
+            "sist_sokt": eksisterende.get("generert") or iso_utc_na(),
+            "antall_sok": int(kvalitet.get("antall_sok", 0) or 0),
+            "beste_score": int(kvalitet.get("score", -100) or -100),
+            "status": kvalitet.get("status", "ok" if int(kvalitet.get("score", -100) or -100) >= MIN_KVALITETSSCORE else "lav_score"),
+            "query": (kandidater[0].get("query", "") if kandidater else ""),
+            "kandidater": kandidater[:10],
+        }
+        antall += 1
+
+    return antall
+
+
+def uten_generert(obj):
+    """Returner kopi brukt til diff-sjekk uten feltet som alltid endrer seg."""
+    if not isinstance(obj, dict):
+        return obj
+    kopi = dict(obj)
+    kopi.pop("generert", None)
+    return kopi
 
 
 # ── KAMPER ────────────────────────────────────────────────────────────────────
@@ -510,123 +560,311 @@ def hent_kandidater_med_cache(kamp, cache, serper_teller):
 
 # ── NORSK RECAP-TEKST ─────────────────────────────────────────────────────────
 
+# Bruk norske navn i publisert tekst. Dette påvirker ikke datafeltene/kamp_id.
+NORSKE_LAGNAVN = {
+    "Czech Republic": "Tsjekkia",
+    "Czechia": "Tsjekkia",
+    "South Africa": "Sør-Afrika",
+    "South Korea": "Sør-Korea",
+    "Switzerland": "Sveits",
+    "Bosnia & Herzegovina": "Bosnia-Hercegovina",
+    "Uzbekistan": "Usbekistan",
+    "Ivory Coast": "Elfenbenskysten",
+    "DR Congo": "DR Kongo",
+    "Germany": "Tyskland",
+    "France": "Frankrike",
+    "Norway": "Norge",
+    "Sweden": "Sverige",
+    "Netherlands": "Nederland",
+    "Egypt": "Egypt",
+    "New Zealand": "New Zealand",
+    "Saudi Arabia": "Saudi-Arabia",
+    "Cape Verde": "Kapp Verde",
+    "Spain": "Spania",
+    "Brazil": "Brasil",
+    "Morocco": "Marokko",
+    "Scotland": "Skottland",
+    "Turkey": "Tyrkia",
+    "Austria": "Østerrike",
+    "Algeria": "Algerie",
+}
+
+NAVNEORD_STOPP = {
+    "World", "Cup", "Fifa", "FIFA", "Full", "Time", "Final", "Score", "Group",
+    "Round", "Match", "Report", "Game", "Analysis", "Expert", "Recap", "Wednesday",
+    "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "June", "Jun",
+    "Second", "Half", "First", "Late", "Goal", "Goals", "Penalty", "Substitutes",
+}
+
+
+def visningsnavn_lag(lag):
+    return NORSKE_LAGNAVN.get(lag, lag)
+
+
 def resultatsetning(hjemme, borte, h, b):
+    hnavn = visningsnavn_lag(hjemme)
+    bnavn = visningsnavn_lag(borte)
     if h == b:
-        return f"{hjemme} og {borte} delte poengene {h}–{b}."
+        return f"{hnavn} og {bnavn} delte poengene {h}–{b}."
     if h > b:
-        return f"{hjemme} slo {borte} {h}–{b}."
-    return f"{borte} slo {hjemme} {b}–{h}."
+        return f"{hnavn} slo {bnavn} {h}–{b}."
+    return f"{bnavn} slo {hnavn} {b}–{h}."
 
 
 def fallback_kamptekst(hjemme, borte, h, b):
     if h == b:
-        return f"Begge lag fikk med seg ett poeng etter en jevn kamp i gruppespillet."
-    vinner = hjemme if h > b else borte
-    taper = borte if h > b else hjemme
-    return f"{vinner} fikk en sterk start på kampenes poengfangst, mens {taper} må jakte svar i neste runde."
+        return "Begge lag fikk med seg ett poeng etter en jevn kamp i gruppespillet."
+    vinner = visningsnavn_lag(hjemme if h > b else borte)
+    taper = visningsnavn_lag(borte if h > b else hjemme)
+    return f"{vinner} fikk en sterk start på gruppespillet, mens {taper} må jakte svar i neste runde."
 
 
-def finn_mulig_scorer_og_hendelse(kandidater):
-    """
-    Forsiktig, regelbasert uthenting av enkle fakta fra engelsk snippet.
-    Brukes kun til å lage norsk maltekst. Rå snippet publiseres ikke.
-    """
-    if not kandidater:
-        return None
-
+def kandidattekst_liste(kandidater, maks=4):
     gode = [k for k in kandidater if k.get("score", -100) >= MIN_KVALITETSSCORE]
     if not gode:
-        return None
+        return []
+    return [re.sub(r"\s+", " ", f"{k.get('title','')} {k.get('snippet','')}").strip() for k in gode[:maks]]
 
-    tekst = " ".join((gode[0].get("title", ""), gode[0].get("snippet", "")))
-    ren = re.sub(r"\s+", " ", tekst).strip()
 
-    # Eksempler som fanges:
-    # "Caleb Yirenkyi scored a 95th-minute winner"
-    # "A late penalty from Teboho Mokoena secured ..."
-    # "Michal Sadilek fired the Czechs into the lead in the sixth minute"
-    patterns = [
-        (r"([A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+scored\s+(?:a\s+)?(?:\d+(?:st|nd|rd|th)?[- ]minute\s+)?(winner|equaliser|equalizer|goal|penalty)?", "scored"),
-        (r"(?:penalty|goal)\s+from\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})", "from_goal"),
-        (r"([A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?:fired|headed|converted|netted|levelled|leveled|equalised|equalized)", "action"),
+def rens_spillernavn(navn, hjemme=None, borte=None):
+    if not navn:
+        return ""
+    navn = re.sub(r"\s+", " ", navn).strip(" .,:;–—-•⚽️⏰")
+
+    # Fjern lagnavn/alias som noen snippets limer foran spillernavnet, f.eks. "Panama Caleb Yirenkyi".
+    lag_aliaser = []
+    for lag in [hjemme, borte]:
+        if lag:
+            lag_aliaser.extend(aliases_for(lag))
+            lag_aliaser.append(sokelag_navn(lag))
+            lag_aliaser.append(visningsnavn_lag(lag))
+    lag_aliaser = sorted({a for a in lag_aliaser if a}, key=len, reverse=True)
+    endret = True
+    while endret:
+        endret = False
+        for alias in lag_aliaser:
+            if navn.lower().startswith(alias.lower() + " "):
+                navn = navn[len(alias):].strip()
+                endret = True
+
+    deler = [d for d in navn.split() if d not in NAVNEORD_STOPP]
+    navn = " ".join(deler).strip()
+
+    # Ikke returner åpenbare lagnavn/generiske treff.
+    lav = navn.lower()
+    if not navn or len(navn) < 3:
+        return ""
+    for alias in lag_aliaser:
+        if lav == alias.lower():
+            return ""
+    if lav in ["world cup", "fifa world", "match report", "final score", "game analysis"]:
+        return ""
+    return navn
+
+
+def finn_navn_i_tekst(pattern, tekst, hjemme=None, borte=None):
+    m = re.search(pattern, tekst)
+    if not m:
+        return ""
+    return rens_spillernavn(m.group(1), hjemme, borte)
+
+
+def utled_kampdetaljer(kamp, kandidater):
+    """
+    Trekker ut noen trygge kampdetaljer fra de beste kandidatene.
+    Målet er ikke å forstå alt, men å få med mer av verdien i snippets uten å publisere rå engelsk tekst.
+    """
+    hjemme = kamp["hjemmelag"]
+    borte = kamp["bortelag"]
+    tekster = kandidattekst_liste(kandidater, maks=5)
+    samlet = " ".join(tekster)
+    lav = samlet.lower()
+
+    detaljer = {
+        "tekster": tekster,
+        "late": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "late", "90+", "90'+", "seven minutes from fulltime"]),
+        "stoppage": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "90+", "90'+", "95th-minute", "94"]),
+        "winner": "winner" in lav or "lone goal" in lav,
+        "penalty": "penalty" in lav or "from the spot" in lav,
+        "equaliser": any(x in lav for x in ["equaliser", "equalizer", "equalised", "equalized", "salvaged a point", "salvage draw", "rescues a draw"]),
+        "goalless_first_half": "goalless first half" in lav,
+        "second_half_goals": "second-half goals" in lav or "second half goals" in lav,
+        "substitutes": "substitutes" in lav or "substitute" in lav,
+        "debutants": "debutants" in lav or "debutant" in lav,
+        "scorere": [],
+        "penalty_scorer": "",
+        "sub_names": [],
+        "minute_text": "",
+    }
+
+    # Minutt/tilleggstid.
+    if re.search(r"90\s*'\s*\+\s*5|90\+5|95th-minute|fifth minute of second-half stoppage", lav):
+        detaljer["minute_text"] = "på overtid"
+    elif "seven minutes from fulltime" in lav:
+        detaljer["minute_text"] = "sju minutter før slutt"
+    elif re.search(r"83(?:rd)? minute|83'", lav):
+        detaljer["minute_text"] = "mot slutten av kampen"
+
+    # Spiller som scoret / avgjorde.
+    score_patterns = [
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+scored\s+(?:deep into\s+)?(?:in\s+)?(?:the\s+)?(?:\w+[- ]minute\s+)?(?:of\s+second-half\s+stoppage\s+time\s+)?(?:a\s+)?(?:winner|goal|penalty)?",
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+struck\s+the\s+lone\s+goal",
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?:levelled|leveled|equalised|equalized|converted|netted|fired|headed)",
     ]
-
-    spiller = None
-    hendelse = "mål"
-    for pattern, typ in patterns:
-        m = re.search(pattern, ren)
-        if m:
-            spiller = m.group(1).strip()
-            lower = ren.lower()
-            if "stoppage time" in lower or "95th-minute" in lower or "94" in lower or "late" in lower:
-                hendelse = "sen scoring"
-            if "penalty" in lower:
-                hendelse = "straffescoring"
-            if "winner" in lower:
-                hendelse = "vinnermål"
-            if "equaliser" in lower or "equalizer" in lower or "levelled" in lower or "leveled" in lower:
-                hendelse = "utligning"
+    for pattern in score_patterns:
+        navn = finn_navn_i_tekst(pattern, samlet, hjemme, borte)
+        if navn:
+            detaljer["scorere"].append(navn)
             break
 
-    if not spiller:
-        return None
+    # Penalty from Teboho Mokoena / late penalty from ...
+    pnavn = finn_navn_i_tekst(r"(?i:(?:penalty|spot-kick)\s+from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})", samlet, hjemme, borte)
+    if not pnavn:
+        pnavn = finn_navn_i_tekst(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:levelled|leveled|equalised|equalized|converted).*?(?:penalty|spot))", samlet, hjemme, borte)
+    if pnavn:
+        detaljer["penalty_scorer"] = pnavn
+        if pnavn not in detaljer["scorere"]:
+            detaljer["scorere"].append(pnavn)
 
-    # Unngå å bruke lagnavn eller generiske ord som spiller.
-    if spiller.lower() in ["world cup", "full time", "fifa world", "match report"]:
-        return None
+    # Second-half goals from Luis Díaz and Jáminton Campaz.
+    m = re.search(
+        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        samlet,
+        )
+    if m:
+        n1 = rens_spillernavn(m.group(1), hjemme, borte)
+        n2 = rens_spillernavn(m.group(2), hjemme, borte)
+        detaljer["scorere"] = [n for n in [n1, n2] if n]
+        detaljer["second_half_goals"] = True
 
-    return {"spiller": spiller, "hendelse": hendelse, "kilde_score": gode[0].get("score", 0)}
+    # Substitutes Johan Manzambi and Ruben Vargas inspire...
+    m = re.search(
+        r"(?i:substitutes?)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        samlet,
+    )
+    if m:
+        detaljer["sub_names"] = [
+            rens_spillernavn(m.group(1), hjemme, borte),
+            rens_spillernavn(m.group(2), hjemme, borte),
+        ]
+        detaljer["sub_names"] = [n for n in detaljer["sub_names"] if n]
+
+    # Rydd dubletter i scorerlisten.
+    unike = []
+    for n in detaljer["scorere"]:
+        if n and n not in unike:
+            unike.append(n)
+    detaljer["scorere"] = unike[:3]
+    return detaljer
+
+
+def lag_detaljsetning(kamp, detaljer):
+    hjemme = kamp["hjemmelag"]
+    borte = kamp["bortelag"]
+    h = kamp["hjemme"]
+    b = kamp["borte"]
+    hnavn = visningsnavn_lag(hjemme)
+    bnavn = visningsnavn_lag(borte)
+    vinner = visningsnavn_lag(hjemme if h > b else borte) if h != b else ""
+    taper = visningsnavn_lag(borte if h > b else hjemme) if h != b else ""
+
+    scorere = detaljer.get("scorere", [])
+    scorer_tekst = " og ".join(scorere[:2]) if scorere else ""
+
+    # Uavgjort med sen straffe/utligning.
+    if h == b and detaljer.get("penalty"):
+        pnavn = detaljer.get("penalty_scorer") or (scorere[0] if scorere else "")
+        tid = detaljer.get("minute_text") or "mot slutten"
+        if pnavn:
+            return f"{visningsnavn_lag(borte)} reddet uavgjort med en straffescoring av {pnavn} {tid}."
+        return f"{visningsnavn_lag(borte)} reddet uavgjort med en sen straffescoring."
+
+    # Sen scoring/vinnermål.
+    if scorere and (detaljer.get("winner") or detaljer.get("stoppage") or detaljer.get("late")):
+        tid = detaljer.get("minute_text") or "sent i kampen"
+        if h != b:
+            return f"{scorer_tekst} avgjorde for {vinner} med en scoring {tid}."
+        return f"{scorer_tekst} sørget for en viktig scoring {tid}."
+
+    # Mål etter pause fra to navngitte spillere.
+    if detaljer.get("second_half_goals") and len(scorere) >= 2 and h != b:
+        return f"Etter pause sørget {scorer_tekst} for at {vinner} dro fra og sikret seieren."
+
+    # Innbyttere + målløs første omgang.
+    sub_names = detaljer.get("sub_names", [])
+    if sub_names and h != b:
+        navn = " og ".join(sub_names[:2])
+        if detaljer.get("goalless_first_half"):
+            return f"Etter en målløs første omgang ble innbytterne {navn} sentrale da {vinner} tok over kampen."
+        return f"Innbytterne {navn} ble viktige da {vinner} avgjorde kampen."
+
+    # Målløs første omgang og klar seier.
+    if detaljer.get("goalless_first_half") and h != b:
+        return f"Kampen var målløs til pause, før {vinner} tok over etter hvilen."
+
+    # Debutant-vinkel.
+    if detaljer.get("debutants") and h != b:
+        return f"{taper} fikk kjenne nivået i VM-debuten, mens {vinner} åpnet gruppespillet med tre poeng."
+
+    # En navngitt målscorer uten nok kontekst.
+    if scorere:
+        return f"{scorer_tekst} var blant spillerne som kom på scoringslisten."
+
+    return fallback_kamptekst(hjemme, borte, h, b)
 
 
 def bygg_norsk_kampavsnitt(kamp, kandidater):
-    hjemme = kamp["hjemmelag"]
-    borte  = kamp["bortelag"]
-    h      = kamp["hjemme"]
-    b      = kamp["borte"]
+    detaljer = utled_kampdetaljer(kamp, kandidater)
+    return " ".join([
+        resultatsetning(kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"]),
+        lag_detaljsetning(kamp, detaljer),
+    ])
 
-    linjer = [resultatsetning(hjemme, borte, h, b)]
-    fakta = finn_mulig_scorer_og_hendelse(kandidater)
 
-    if fakta:
-        spiller = fakta["spiller"]
-        hendelse = fakta["hendelse"]
-        if hendelse == "vinnermål":
-            linjer.append(f"{spiller} ble kampens avgjørende navn med vinnermålet.")
-        elif hendelse == "utligning":
-            linjer.append(f"{spiller} sørget for utligningen som sikret poengdeling.")
-        elif hendelse == "straffescoring":
-            linjer.append(f"{spiller} kom på scoringslisten fra straffemerket.")
-        elif hendelse == "sen scoring":
-            linjer.append(f"{spiller} kom på scoringslisten sent i kampen.")
-        else:
-            linjer.append(f"{spiller} var blant spillerne som kom på scoringslisten.")
-    else:
-        linjer.append(fallback_kamptekst(hjemme, borte, h, b))
+def tokeniser(s):
+    return {w for w in re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+", (s or "").lower()) if len(w) > 3}
 
-    return " ".join(linjer)
+
+def er_duplikat_fakta(faktatekst, eksisterende_tekst):
+    ft = tokeniser(faktatekst)
+    et = tokeniser(eksisterende_tekst)
+    if not ft or not et:
+        return False
+    overlap = len(ft & et) / max(1, min(len(ft), len(et)))
+    return overlap >= 0.65
+
+
+def bygg_historikkavsnitt(ref):
+    historikk = ref.get("historikk", "")
+    fakta = ref.get("fakta", []) or []
+    linjer = []
+    if historikk:
+        linjer.append(historikk.rstrip("."))
+    samlet = " ".join(linjer)
+    for f in fakta:
+        if not f:
+            continue
+        if er_duplikat_fakta(f, samlet):
+            continue
+        linjer.append(f.rstrip("."))
+        break  # Hold historikkdelen kort.
+    if not linjer:
+        return ""
+    return ". ".join(linjer) + "."
 
 
 def bygg_recap_tekst(kamp, kandidater, ref):
     """
     Bygger recap-tekst i separate avsnitt:
     1. Norsk kampavsnitt basert på resultat + trygt uthentede fakta/fallback
-    2. Historikk/fakta fra kamp-referanser.json
+    2. Kort historikk/fakta fra kamp-referanser.json, uten å gjenta samme fakta
 
     Tipping skal ikke inn i recap_tekst. Den ligger strukturert i kamp.tippinger.
     """
-    historikk = ref.get("historikk", "")
-    fakta     = ref.get("fakta", [])
-
     avsnitt = [bygg_norsk_kampavsnitt(kamp, kandidater)]
-
-    hist_linjer = []
-    if historikk:
-        hist_linjer.append(historikk)
-    if fakta:
-        hist_linjer.append(fakta[0])
-    if hist_linjer:
-        avsnitt.append(" ".join(hist_linjer))
-
+    hist = bygg_historikkavsnitt(ref)
+    if hist:
+        avsnitt.append(hist)
     return "\n\n".join(avsnitt)
 
 
@@ -661,11 +899,10 @@ def main():
     igaar_str = str(igaar)
     print(f"\nGårsdagens dato (norsk tid): {igaar_str}")
 
-    # Sjekk om allerede generert.
     eksisterende = les_eksisterende_kamppost()
-    if eksisterende and eksisterende.get("dato") == igaar_str:
-        print(f"  → kamppost.json allerede generert for {igaar_str}. Avslutter.")
-        return
+    eksisterende_for_dato = eksisterende if eksisterende and eksisterende.get("dato") == igaar_str else None
+    if eksisterende_for_dato:
+        print(f"  → kamppost.json finnes allerede for {igaar_str}. Regenererer rapporten; Serper styres av cache.")
 
     print("\nLeser data/data.js...")
     vm_data = les_data_js()
@@ -674,6 +911,10 @@ def main():
     referanser = les_referanser()
 
     cache = les_serper_cache()
+    seedet = seed_cache_fra_eksisterende_kamppost(eksisterende_for_dato, cache)
+    if seedet:
+        skriv_serper_cache(cache)
+        print(f"  → Seedet Serper-cache fra eksisterende kamppost: {seedet} kamper")
     serper_teller = 0
 
     print(f"\nFinner kamper fra {igaar_str} (norsk tid)...")
@@ -744,12 +985,20 @@ def main():
     }
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    if eksisterende_for_dato and uten_generert(eksisterende_for_dato) == uten_generert(kamppost):
+        # Unngå ny commit/diff hver halvtime bare fordi timestamp endrer seg.
+        kamppost["generert"] = eksisterende_for_dato.get("generert", kamppost["generert"])
+        print("\n✓ Kamppost regenerert, men innholdet er uendret. Beholder eksisterende generert-tidspunkt.")
+    else:
+        print(f"\n✓ Kamppost regenerert med endringer for {igaar_str}")
+
     KAMPPOST_JSON.write_text(
         json.dumps(kamppost, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
     skriv_serper_cache(cache)
-    print(f"\n✓ Skrev kamppost.json med {len(kamposter)} kamper for {igaar_str}")
+    print(f"✓ Skrev kamppost.json med {len(kamposter)} kamper for {igaar_str}")
     print(f"✓ Serper-søk brukt i denne kjøringen: {serper_teller}")
 
 
