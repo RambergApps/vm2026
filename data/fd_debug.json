@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-18T17:00:59Z",
+  "tidspunkt": "2026-06-18T17:30:56Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -35,7 +35,7 @@
       "fd_bortelag": "South Africa",
       "hjemmelag_normalisert": "Czech Republic",
       "bortelag_normalisert": "South Africa",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
       "borte": 0,
