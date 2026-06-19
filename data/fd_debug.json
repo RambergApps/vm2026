@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-19T22:32:38Z",
+  "tidspunkt": "2026-06-19T23:00:59Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -217,7 +217,7 @@
       "fd_bortelag": "Morocco",
       "hjemmelag_normalisert": "Scotland",
       "bortelag_normalisert": "Morocco",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 1,
