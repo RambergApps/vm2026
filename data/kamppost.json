@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-18",
   "dato_norsk": "Torsdag 18. juni 2026",
-  "generert": "2026-06-19T07:45:39Z",
+  "generert": "2026-06-19T07:51:00Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -15,9 +15,9 @@
       "snippets_raa": [
         "Expert recap and game analysis of the Ghana vs. Panama Fifa World Cup game from 18 June 2026 on ESPN.",
         "Caleb Yirenkyi scored deep into stoppage time to ​earn Ghana a 1-0 victory over ‌Panama in World Cup Group L on Wednesday, ...",
+        "José Córdoba completed 101 passes against Ghana, the most by a Panama player in a single FIFA World Cup match. Panama did not face a single shot ...",
         "Ghana's national team achieved a late victory with a 1-0 score against Panama in the 2026 World Cup match held in Toronto, amid a balanced performance from ...",
-        "Elijah Just scores his second goal of the match, 15 minutes ... Ghana's opening match against Panama on Wednesday in Toronto. 6 p.m..",
-        "Caleb Yirenkyi and Amad Diallo emerged as heroes, sealing a thrilling 1-0 victory ⏰⚽️ — #Ghana #IvoryCoast #WorldCup #America #zflixfootball ...."
+        "Elijah Just scores his second goal of the match, 15 minutes ... Ghana's opening match against Panama on Wednesday in Toronto. 6 p.m.."
       ],
       "serper_kandidater": [
         {
@@ -49,6 +49,22 @@
             "resultat nevnt",
             "avkortet snippet"
           ]
+        },
+        {
+          "title": "Panama opens World Cup campaign with tough defeat to Ghana",
+          "link": "https://www.concacaf.com/competitions/fifa-world-cup/news/panama-opens-world-cup-campaign-with-tough-defeat-to-ghana",
+          "source": "",
+          "date": "1 day ago",
+          "snippet": "José Córdoba completed 101 passes against Ghana, the most by a Panama player in a single FIFA World Cup match. Panama did not face a single shot ...",
+          "query": "CONCACAF concacaf.com Ghana Panama 1-0 World Cup 2026 match report recap goal scorer full time",
+          "score": 9,
+          "score_grunner": [
+            "god kilde",
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "avkortet snippet"
+          ],
+          "offisiell_kilde_sok": "concacaf.com"
         },
         {
           "title": "Ghana Wins 2026 World Cup Match - Jarayid",
@@ -100,12 +116,11 @@
         "antall_sok": 1,
         "fallback": false,
         "cache_key": "Ghana_Panama_2026_06_17|1-0",
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "concacaf.com",
+        "fulltekst_score": 12,
         "offisiell_kilde_sokt": [
-          "concacaf.com",
-          "fifa.com"
+          "concacaf.com"
         ]
       },
       "tippinger": {
@@ -298,13 +313,13 @@
       "hjemme_score": 1,
       "borte_score": 3,
       "gruppe": "K",
-      "recap_tekst": "Colombia slo Usbekistan 3–1. Etter pause sørget Luis Díaz og Jáminton Campaz for at Colombia dro fra og sikret seieren.\n\nUsbekistan debuterer i VM. Colombia er solide favoritter men Sentral-Asia har overrasket i andre turneringer. Colombia er tilbake i VM etter åtte år borte.",
+      "recap_tekst": "Colombia slo Usbekistan 3–1. Luis Diaz og Abbosbek Fayzullaev avgjorde for Colombia med en scoring sent i kampen.\n\nUsbekistan debuterer i VM. Colombia er solide favoritter men Sentral-Asia har overrasket i andre turneringer. Colombia er tilbake i VM etter åtte år borte.",
       "snippets_raa": [
         "Second-half goals from Luis Díaz and Jáminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan as the last two teams to begin ...",
         "Second-half goals from Luis Díaz and Jáminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan. Jun 17, 2026, 09:38 pm - PA. Match Timeline.",
+        "The South Americans took early control of Group K after the brilliant Luis Diaz scored one and set up another against the World Cup ...",
         "Daniel Muñoz scored the opening Goal for Colombia against Uzbekistan at Estadio Azteca in FIFA World Cup, Group K, Round 1... ⏰ 41' Daniel Muñoz ⚽️.",
-        "Second-half goals from Luis Diaz and Jaminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan as the last two teams began their ...",
-        "The Uzbekistan national football team made its debut at the 2026 World Cup, facing Colombia in the first round of the group stage."
+        "Second-half goals from Luis Diaz and Jaminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan as the last two teams began their ..."
       ],
       "serper_kandidater": [
         {
@@ -336,6 +351,25 @@
             "bortelag nevnt",
             "resultat nevnt"
           ]
+        },
+        {
+          "title": "Uzbekistan 1-3 Colombia | Match report and highlights",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uzbekistan-colombia-match-report-highlights",
+          "source": "",
+          "date": "1 day ago",
+          "snippet": "The South Americans took early control of Group K after the brilliant Luis Diaz scored one and set up another against the World Cup ...",
+          "query": "FIFA fifa.com Uzbekistan Colombia 1-3 World Cup 2026 match report recap goal scorer full time",
+          "score": 13,
+          "score_grunner": [
+            "god kilde",
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "resultat nevnt",
+            "kampreferat-tittel",
+            "negativt ord: highlights",
+            "avkortet snippet"
+          ],
+          "offisiell_kilde_sok": "fifa.com"
         },
         {
           "title": "Zflix Football (@zflixfootball) • Threads, Say more",
@@ -384,12 +418,11 @@
         "antall_sok": 1,
         "fallback": false,
         "cache_key": "Uzbekistan_Colombia_2026_06_17|1-3",
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 16,
         "offisiell_kilde_sokt": [
-          "fifa.com",
-          "apnews.com"
+          "fifa.com"
         ]
       },
       "tippinger": {
@@ -873,10 +906,10 @@
       "recap_tekst": "Sveits slo Bosnia-Hercegovina 4–1. Etter en målløs første omgang ble innbytterne Johan Manzambi og Ruben Vargas sentrale da Sveits tok over kampen.\n\nSveits er et solid VM-lag som jevnlig tar seg til utslagsrundene. Bosnia er tilbake etter 2014-debuten. Sveits tok seg til kvartfinalen i 2022.",
       "snippets_raa": [
         "Switzerland ran out 4-1 winners against Bosnia and Herzegovina after a goalless first half.",
+        "Switzerland goals: Manzambi (71, 90) Vargas (84), Xhaka pen (90+7) Bosnia and Herzgovina goal: Mahmic (90+3). Switzerland moved to the top ...",
         "Switzerland crush Bosnia 4-1 in World Cup Group B clash · FIFA World Cup 2026 - Group B - Switzerland v Bosnia and Herzegovina. 21 hours ago ...",
         "Switzerland vs Bosnia-Herzegovina LIVE: World Cup 2026 updates came out on top with a 3-1 win. d 4 goals in a major tournament match",
-        "Switzerland on June 24, with a top-two finish. Bosnians split on a score of parity (1-1) that draws a three-way fight for qualifying places.",
-        "Christian Pulisic explained why he was substituted at halftime during the United States men's national team's 4-1 win over Paraguay in its ..."
+        "Switzerland on June 24, with a top-two finish. Bosnians split on a score of parity (1-1) that draws a three-way fight for qualifying places."
       ],
       "serper_kandidater": [
         {
@@ -892,6 +925,25 @@
             "bortelag nevnt",
             "resultat nevnt"
           ]
+        },
+        {
+          "title": "Switzerland 4-1 Bosnia and Herzegovina | Match report and highlights",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
+          "source": "",
+          "date": "11 hours ago",
+          "snippet": "Switzerland goals: Manzambi (71, 90) Vargas (84), Xhaka pen (90+7) Bosnia and Herzgovina goal: Mahmic (90+3). Switzerland moved to the top ...",
+          "query": "FIFA fifa.com Switzerland Bosnia Herzegovina 4-1 World Cup 2026 match report recap goal scorer full time",
+          "score": 15,
+          "score_grunner": [
+            "god kilde",
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "resultat nevnt",
+            "kampreferat-tittel",
+            "negativt ord: highlights",
+            "avkortet snippet"
+          ],
+          "offisiell_kilde_sok": "fifa.com"
         },
         {
           "title": "Neymar World Cup call based on fitness and form, not ...",
@@ -955,12 +1007,11 @@
         "antall_sok": 1,
         "fallback": false,
         "cache_key": "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1",
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 16,
         "offisiell_kilde_sokt": [
-          "fifa.com",
-          "apnews.com"
+          "fifa.com"
         ]
       },
       "tippinger": {

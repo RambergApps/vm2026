@@ -39,6 +39,22 @@
         ]
       },
       {
+        "title": "Panama opens World Cup campaign with tough defeat to Ghana",
+        "link": "https://www.concacaf.com/competitions/fifa-world-cup/news/panama-opens-world-cup-campaign-with-tough-defeat-to-ghana",
+        "source": "",
+        "date": "1 day ago",
+        "snippet": "José Córdoba completed 101 passes against Ghana, the most by a Panama player in a single FIFA World Cup match. Panama did not face a single shot ...",
+        "query": "CONCACAF concacaf.com Ghana Panama 1-0 World Cup 2026 match report recap goal scorer full time",
+        "score": 9,
+        "score_grunner": [
+          "god kilde",
+          "hjemmelag nevnt",
+          "bortelag nevnt",
+          "avkortet snippet"
+        ],
+        "offisiell_kilde_sok": "concacaf.com"
+      },
+      {
         "title": "Ghana Wins 2026 World Cup Match - Jarayid",
         "link": "https://jarayid.com/en/world-news/1003252/ghana-wins-2026-world-cup-match",
         "source": "",
@@ -83,16 +99,32 @@
       }
     ],
     "fulltekst_fakta": {
-      "status": "ikke_funnet",
-      "versjon": "v8-official-source-discovery",
-      "hentet": "2026-06-19T07:45:37Z",
-      "score": -100
+      "status": "ok",
+      "versjon": "v9-no-site-operator",
+      "kilde_url": "https://www.concacaf.com/competitions/fifa-world-cup/news/panama-opens-world-cup-campaign-with-tough-defeat-to-ghana",
+      "domene": "concacaf.com",
+      "score": 12,
+      "hentet": "2026-06-19T07:50:55Z",
+      "late": true,
+      "stoppage": false,
+      "winner": false,
+      "penalty": false,
+      "equaliser": false,
+      "goalless_first_half": false,
+      "second_half_goals": false,
+      "substitutes": false,
+      "debutants": false,
+      "scorere": [],
+      "penalty_scorer": "",
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "sub_names": [],
+      "minute_text": ""
     },
-    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
-    "offisiell_kilde_sokt": "2026-06-19T07:45:37Z",
+    "offisiell_kilde_sok_versjon": "v9-no-site-operator",
+    "offisiell_kilde_sokt": "2026-06-19T07:50:49Z",
     "offisiell_kilde_domener": [
-      "concacaf.com",
-      "fifa.com"
+      "concacaf.com"
     ]
   },
   "Uzbekistan_Colombia_2026_06_17|1-3": {
@@ -133,6 +165,25 @@
           "bortelag nevnt",
           "resultat nevnt"
         ]
+      },
+      {
+        "title": "Uzbekistan 1-3 Colombia | Match report and highlights",
+        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uzbekistan-colombia-match-report-highlights",
+        "source": "",
+        "date": "1 day ago",
+        "snippet": "The South Americans took early control of Group K after the brilliant Luis Diaz scored one and set up another against the World Cup ...",
+        "query": "FIFA fifa.com Uzbekistan Colombia 1-3 World Cup 2026 match report recap goal scorer full time",
+        "score": 13,
+        "score_grunner": [
+          "god kilde",
+          "hjemmelag nevnt",
+          "bortelag nevnt",
+          "resultat nevnt",
+          "kampreferat-tittel",
+          "negativt ord: highlights",
+          "avkortet snippet"
+        ],
+        "offisiell_kilde_sok": "fifa.com"
       },
       {
         "title": "Zflix Football (@zflixfootball) • Threads, Say more",
@@ -176,16 +227,35 @@
       }
     ],
     "fulltekst_fakta": {
-      "status": "ikke_funnet",
-      "versjon": "v8-official-source-discovery",
-      "hentet": "2026-06-19T07:45:37Z",
-      "score": -100
+      "status": "ok",
+      "versjon": "v9-no-site-operator",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uzbekistan-colombia-match-report-highlights",
+      "domene": "fifa.com",
+      "score": 16,
+      "hentet": "2026-06-19T07:50:57Z",
+      "late": true,
+      "stoppage": true,
+      "winner": false,
+      "penalty": false,
+      "equaliser": false,
+      "goalless_first_half": false,
+      "second_half_goals": false,
+      "substitutes": true,
+      "debutants": true,
+      "scorere": [
+        "Luis Diaz",
+        "Abbosbek Fayzullaev"
+      ],
+      "penalty_scorer": "Luis Diaz",
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "sub_names": [],
+      "minute_text": ""
     },
-    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
-    "offisiell_kilde_sokt": "2026-06-19T07:45:37Z",
+    "offisiell_kilde_sok_versjon": "v9-no-site-operator",
+    "offisiell_kilde_sokt": "2026-06-19T07:50:57Z",
     "offisiell_kilde_domener": [
-      "fifa.com",
-      "apnews.com"
+      "fifa.com"
     ]
   },
   "Czech_Republic_South_Africa_2026_06_18|1-1": {
@@ -274,12 +344,12 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v8-official-source-discovery",
-      "hentet": "2026-06-19T07:45:38Z",
+      "versjon": "v9-no-site-operator",
+      "hentet": "2026-06-19T07:50:59Z",
       "score": -100
     },
-    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
-    "offisiell_kilde_sokt": "2026-06-19T07:45:38Z",
+    "offisiell_kilde_sok_versjon": "v9-no-site-operator",
+    "offisiell_kilde_sokt": "2026-06-19T07:50:59Z",
     "offisiell_kilde_domener": [
       "fifa.com",
       "apnews.com"
@@ -307,6 +377,25 @@
           "bortelag nevnt",
           "resultat nevnt"
         ]
+      },
+      {
+        "title": "Switzerland 4-1 Bosnia and Herzegovina | Match report and highlights",
+        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
+        "source": "",
+        "date": "11 hours ago",
+        "snippet": "Switzerland goals: Manzambi (71, 90) Vargas (84), Xhaka pen (90+7) Bosnia and Herzgovina goal: Mahmic (90+3). Switzerland moved to the top ...",
+        "query": "FIFA fifa.com Switzerland Bosnia Herzegovina 4-1 World Cup 2026 match report recap goal scorer full time",
+        "score": 15,
+        "score_grunner": [
+          "god kilde",
+          "hjemmelag nevnt",
+          "bortelag nevnt",
+          "resultat nevnt",
+          "kampreferat-tittel",
+          "negativt ord: highlights",
+          "avkortet snippet"
+        ],
+        "offisiell_kilde_sok": "fifa.com"
       },
       {
         "title": "Neymar World Cup call based on fitness and form, not ...",
@@ -365,16 +454,32 @@
       }
     ],
     "fulltekst_fakta": {
-      "status": "ikke_funnet",
-      "versjon": "v8-official-source-discovery",
-      "hentet": "2026-06-19T07:45:38Z",
-      "score": -100
+      "status": "ok",
+      "versjon": "v9-no-site-operator",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
+      "domene": "fifa.com",
+      "score": 16,
+      "hentet": "2026-06-19T07:51:00Z",
+      "late": true,
+      "stoppage": true,
+      "winner": false,
+      "penalty": true,
+      "equaliser": false,
+      "goalless_first_half": false,
+      "second_half_goals": false,
+      "substitutes": true,
+      "debutants": true,
+      "scorere": [],
+      "penalty_scorer": "",
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "sub_names": [],
+      "minute_text": ""
     },
-    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
-    "offisiell_kilde_sokt": "2026-06-19T07:45:38Z",
+    "offisiell_kilde_sok_versjon": "v9-no-site-operator",
+    "offisiell_kilde_sokt": "2026-06-19T07:51:00Z",
     "offisiell_kilde_domener": [
-      "fifa.com",
-      "apnews.com"
+      "fifa.com"
     ]
   }
 }
