@@ -1,15 +1,6 @@
 {
-  "sist_sjekket": "2026-06-19T00:04:04Z",
+  "sist_sjekket": "2026-06-19T00:30:48Z",
   "kamper": [
-    {
-      "kamp_id": "Canada_Qatar_2026_06_18",
-      "hjemmelag": "Canada",
-      "bortelag": "Qatar",
-      "dato": "2026-06-18",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "kamp_id": "Mexico_South_Korea_2026_06_18",
       "hjemmelag": "Mexico",
