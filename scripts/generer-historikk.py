@@ -7,7 +7,9 @@ Prinsipp:
 2. Hvis kamppost.json allerede finnes for datoen: regenerer rapporten, men seed Serper-cache fra eksisterende data
 3. Hent kampkandidater fra Serper med streng kvotekontroll og cache
 4. Score kandidater basert på kilde/tittel/snippet/resultat/kampord
-5. Forsøk å hente full kamptekst/fakta fra beste kilde funnet av Serper
+5. Forsøk å hente full kamptekst/fakta fra utvalgte kilder funnet av Serper
+   - Reuters og ESPN brukes ikke til fulltekst, men kan fortsatt brukes som snippet-kandidater
+   - Jina Reader kan brukes for kilder som tillater reader-henting, f.eks. CONCACAF
 6. Bruk snippets som fallback/debug — publisert recap_tekst skal være norsk
 7. Slå opp historikk og fakta fra data/kamp-referanser.json
 8. Ikke legg tipping-oppramsing inn i recap_tekst; tippinger lagres strukturert per kamp
@@ -51,6 +53,8 @@ MAX_FULLTEKST_PER_KJORING      = int(os.environ.get("MAX_FULLTEKST_PER_KJORING",
 FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
+JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
+FULLTEKST_CACHE_VERSION        = "v6-no-reuters-espn-jina"
 
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
 SERPER_HL                      = os.environ.get("SERPER_HL", "en")
@@ -80,14 +84,21 @@ GODE_DOMENER = [
 ]
 
 # Fulltekst-kilder prioriteres. Serper finner kandidatene; dette steget henter
-# kun fra selve kilden og teller ikke mot Serper-kvoten.
+# kun fra selve kilden/reader og teller ikke mot Serper-kvoten.
+# Reuters og ESPN er bevisst utelatt: de kan fortsatt gi gode snippets via Serper,
+# men er for ustabile/blokkerte som fulltekst-kilder i GitHub Actions.
 FULLTEKST_PRIORITET = [
-    ("reuters.com", 100),
-    ("concacaf.com", 90),
-    ("fifa.com", 85),
-    ("apnews.com", 80),
-    ("bbc.com", 75),
-    ("espn.", 55),   # ESPN er ofte god på scorere/minutter, men full recap kan være JS-beskyttet.
+    ("concacaf.com", 100),
+    ("fifa.com", 90),
+    ("apnews.com", 85),
+    ("bbc.com", 80),
+    ("skysports.com", 70),
+    ("theguardian.com", 65),
+]
+
+FULLTEKST_UTELUKKEDE_DOMENER = [
+    "reuters.com",
+    "espn.com", "espn.co.uk", "espn.com.sg", "espn.com.au", "espn.",
 ]
 
 # Kilder/innhold som typisk gir dårlig publiseringstekst.
@@ -698,14 +709,15 @@ def finn_navn_i_tekst(pattern, tekst, hjemme=None, borte=None):
 def fulltekst_kildeprioritet(k):
     """Ranger Serper-kandidater etter hvor nyttige de trolig er som fulltekst-kilde."""
     domene = domene_fra_url(k.get("link", ""))
-    if not domene or any(d in domene for d in BLOKKERTE_DOMENER):
+    if not domene:
+        return -999
+    if any(d in domene for d in BLOKKERTE_DOMENER):
+        return -999
+    if any(d in domene for d in FULLTEKST_UTELUKKEDE_DOMENER):
         return -999
     for needle, score in FULLTEKST_PRIORITET:
         if needle in domene:
             return score + min(20, int(k.get("score", 0)))
-    # Andre gode kilder kan fortsatt prøves hvis kandidaten ellers scorer høyt.
-    if any(d in domene for d in GODE_DOMENER):
-        return 40 + min(20, int(k.get("score", 0)))
     return -999
 
 
@@ -724,15 +736,15 @@ def fulltekst_egnet_kandidater(kandidater):
     return valgte[:5]
 
 
-def hent_url_tekst(url):
-    """Hent HTML fra en kilde. Returnerer tekstlig HTML, eller tom streng ved feil."""
+def hent_url_tekst_direkte(url):
+    """Hent HTML/tekst direkte fra en kilde. Returnerer tekst, eller tom streng ved feil."""
     if not url:
         return ""
     req = urllib.request.Request(
         url,
         headers={
             "User-Agent": "Mozilla/5.0 (compatible; RambergVMBot/1.0; +https://rambergapps.github.io/vm2026/)",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/markdown;q=0.8,*/*;q=0.7",
             "Accept-Language": "en-US,en;q=0.9,nb;q=0.7",
         },
     )
@@ -742,8 +754,37 @@ def hent_url_tekst(url):
             charset = resp.headers.get_content_charset() or "utf-8"
             return raw.decode(charset, errors="replace")
     except Exception as e:
-        print(f"    Fulltekst: klarte ikke hente {domene_fra_url(url)} ({e})")
+        print(f"    Fulltekst: klarte ikke hente {domene_fra_url(url)} direkte ({e})")
         return ""
+
+
+def jina_reader_url(url):
+    if not url:
+        return ""
+    if url.startswith("http://") or url.startswith("https://"):
+        return "https://r.jina.ai/" + url
+    return ""
+
+
+def hent_url_tekst(url):
+    """
+    Hent fulltekstgrunnlag. For tillatte kilder prøver vi Jina Reader først,
+    siden den ofte gir ren Markdown/tekst fra sider som ellers er tunge å parse.
+    Direkte henting brukes som fallback. Reuters/ESPN filtreres før denne funksjonen.
+    """
+    if not url:
+        return ""
+
+    if JINA_READER_AKTIVERT:
+        reader = jina_reader_url(url)
+        if reader:
+            tekst = hent_url_tekst_direkte(reader)
+            if tekst and len(tekst) > 250:
+                print(f"    Fulltekst: Jina Reader OK for {domene_fra_url(url)} ({len(tekst)} tegn)")
+                return tekst
+            print(f"    Fulltekst: Jina Reader ga ikke nok tekst for {domene_fra_url(url)}")
+
+    return hent_url_tekst_direkte(url)
 
 
 def hent_jsonld_verdier(obj):
@@ -763,9 +804,15 @@ def hent_jsonld_verdier(obj):
 
 
 def ekstraher_artikkeltekst_fra_html(html_text):
-    """Trekk ut mest mulig ren tekst fra HTML/JSON-LD/meta. Lagrer ikke råtekst permanent."""
+    """Trekk ut mest mulig ren tekst fra HTML/JSON-LD/meta/Markdown. Lagrer ikke råtekst permanent."""
     if not html_text:
         return ""
+
+    # Jina Reader returnerer ofte ren Markdown/tekst, ikke HTML. Da bruker vi den direkte.
+    if "<html" not in html_text.lower() and "<script" not in html_text.lower() and len(html_text) > 250:
+        plain = html.unescape(html_text)
+        plain = re.sub(r'\s+', ' ', plain).strip()
+        return plain[:50000]
 
     deler = []
 
@@ -842,6 +889,7 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
 
     fakta = {
         "status": "ok",
+        "versjon": FULLTEKST_CACHE_VERSION,
         "kilde_url": kilde_url,
         "domene": domene_fra_url(kilde_url),
         "score": score_fulltekst(tekst, kamp),
@@ -958,7 +1006,12 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
 
 def hent_fulltekst_fakta_for_kamp(kamp, kandidater):
     """Prøv prioriterte kilder og returner ekstraherte fakta, ikke rå artikkeltekst."""
-    for k in fulltekst_egnet_kandidater(kandidater):
+    egnet = fulltekst_egnet_kandidater(kandidater)
+    if not egnet:
+        print("  → Fulltekst: ingen egnede kilder etter blokkering av Reuters/ESPN")
+        return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100}
+
+    for k in egnet:
         url = k.get("link", "")
         domene = domene_fra_url(url)
         print(f"  → Fulltekst: prøver {domene}")
@@ -968,10 +1021,11 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater):
         if score >= FULLTEKST_MIN_SCORE:
             fakta = ekstraher_fakta_fra_fulltekst(tekst, kamp, url)
             fakta["score"] = score
+            fakta["versjon"] = FULLTEKST_CACHE_VERSION
             print(f"  → Fulltekst: {domene} OK, score {score}")
             return fakta
         print(f"    Fulltekst: {domene} lav score ({score})")
-    return {"status": "ikke_funnet", "hentet": iso_utc_na(), "score": -100}
+    return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100}
 
 
 def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller):
@@ -985,7 +1039,11 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
     key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
     entry = cache_entry or cache.get(key) or {}
     eksisterende = entry.get("fulltekst_fakta")
-    if isinstance(eksisterende, dict) and eksisterende.get("status") in ["ok", "ikke_funnet", "feilet"]:
+    if (
+        isinstance(eksisterende, dict)
+        and eksisterende.get("versjon") == FULLTEKST_CACHE_VERSION
+        and eksisterende.get("status") in ["ok", "ikke_funnet", "feilet"]
+    ):
         if eksisterende.get("status") == "ok":
             print(f"  → Fulltekst cache hit: {eksisterende.get('domene', 'ukjent')} score {eksisterende.get('score', -100)}")
         return entry, fulltekst_teller
@@ -998,7 +1056,7 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         fakta = hent_fulltekst_fakta_for_kamp(kamp, kandidater)
     except Exception as e:
         print(f"  ADVARSEL: Fulltekst-henting feilet: {e}")
-        fakta = {"status": "feilet", "hentet": iso_utc_na(), "score": -100, "feil": str(e)[:200]}
+        fakta = {"status": "feilet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "feil": str(e)[:200]}
 
     fulltekst_teller += 1
     entry["fulltekst_fakta"] = fakta
