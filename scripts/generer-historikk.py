@@ -54,10 +54,10 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v8-official-source-discovery"
+FULLTEKST_CACHE_VERSION        = "v9-no-site-operator"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
-OFFISIELL_KILDE_SOK_VERSION    = "v8-official-source-discovery"
+OFFISIELL_KILDE_SOK_VERSION    = "v9-no-site-operator"
 
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
 SERPER_HL                      = os.environ.get("SERPER_HL", "en")
@@ -814,14 +814,30 @@ def fulltekst_lookup_domener_for_kamp(kamp):
     return unike
 
 
+KILDE_QUERY_NAVN = {
+    "concacaf.com": "CONCACAF",
+    "fifa.com": "FIFA",
+    "apnews.com": "AP News",
+    "bbc.com": "BBC Sport",
+    "skysports.com": "Sky Sports",
+    "theguardian.com": "Guardian",
+}
+
+
 def bygg_offisiell_kilde_query(kamp, domene):
+    """
+    Serper free-kontoer kan avvise avanserte operatorer som site:.
+    Derfor brukes domenet/kilden som vanlig søkeord, og resultatene filtreres
+    etterpå på faktisk domene.
+    """
     hjemme = rens_soketerm_lag(kamp.get("hjemmelag", ""))
     borte = rens_soketerm_lag(kamp.get("bortelag", ""))
     h = kamp.get("hjemme")
     b = kamp.get("borte")
+    kilde = KILDE_QUERY_NAVN.get(domene, domene.replace(".com", ""))
     return (
-        f"site:{domene} {hjemme} {borte} {h}-{b} "
-        f"World Cup 2026 match report recap goals scorers full-time"
+        f"{kilde} {domene} {hjemme} {borte} {h}-{b} "
+        f"World Cup 2026 match report recap goal scorer full time"
     )
 
 
@@ -861,10 +877,22 @@ def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry
         funn = soek_serper_api(query)
         serper_teller += 1
         sokt.append(domene)
+        # Uten site:-operator må vi filtrere hardt på faktisk domene etterpå.
+        domene_funn = []
+        andre_funn = 0
         for k in funn:
+            faktisk_domene = domene_fra_url(k.get("link", ""))
+            if not domene_matcher(faktisk_domene, domene):
+                andre_funn += 1
+                continue
             score_kandidat(k, kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])
             k["offisiell_kilde_sok"] = domene
-        nye.extend(funn)
+            domene_funn.append(k)
+        if andre_funn:
+            print(f"    → Filtrerte bort {andre_funn} treff utenfor {domene}")
+        if domene_funn:
+            print(f"    → Beholder {len(domene_funn)} treff fra {domene}")
+        nye.extend(domene_funn)
 
         # Stopp tidlig hvis dette domenet faktisk ga fulltekst-egnet kandidat.
         kombi_tmp = dedupliser_kandidater((kandidater or []) + nye)
