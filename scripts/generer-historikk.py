@@ -7,10 +7,11 @@ Prinsipp:
 2. Hvis kamppost.json allerede finnes for datoen: regenerer rapporten, men seed Serper-cache fra eksisterende data
 3. Hent kampkandidater fra Serper med streng kvotekontroll og cache
 4. Score kandidater basert på kilde/tittel/snippet/resultat/kampord
-5. Bruk kun snippets som rågrunnlag/debug — publisert recap_tekst skal være norsk
-6. Slå opp historikk og fakta fra data/kamp-referanser.json
-7. Ikke legg tipping-oppramsing inn i recap_tekst; tippinger lagres strukturert per kamp
-8. Skriv data/kamppost.json
+5. Forsøk å hente full kamptekst/fakta fra beste kilde funnet av Serper
+6. Bruk snippets som fallback/debug — publisert recap_tekst skal være norsk
+7. Slå opp historikk og fakta fra data/kamp-referanser.json
+8. Ikke legg tipping-oppramsing inn i recap_tekst; tippinger lagres strukturert per kamp
+9. Skriv data/kamppost.json
 """
 
 import json
@@ -19,6 +20,7 @@ import re
 import time
 import urllib.request
 import urllib.error
+import html
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
@@ -40,6 +42,16 @@ MIN_MINUTTER_MELLOM_RETRY      = int(os.environ.get("MIN_MINUTTER_MELLOM_RETRY",
 MIN_KVALITETSSCORE             = int(os.environ.get("MIN_KVALITETSSCORE", "8"))
 SERPER_NUM_RESULTS             = int(os.environ.get("SERPER_NUM_RESULTS", "20"))
 MAX_SERPER_SOK_TOTALT_KJORING  = int(os.environ.get("MAX_SERPER_SOK_TOTALT_KJORING", "20"))
+
+# Fulltekst/faktahenting bruker ikke Serper-kvote, men caches slik at vi ikke
+# henter samme side hver halvtime. Vi lagrer bare ekstraherte fakta, ikke
+# artikkeltekst, for å unngå at repoet fylles med tredjepartsinnhold.
+FULLTEKST_AKTIVERT             = os.environ.get("FULLTEKST_AKTIVERT", "1") != "0"
+MAX_FULLTEKST_PER_KJORING      = int(os.environ.get("MAX_FULLTEKST_PER_KJORING", "8"))
+FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
+FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
+FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
+
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
 SERPER_HL                      = os.environ.get("SERPER_HL", "en")
 
@@ -64,7 +76,18 @@ ALIASES = {
 GODE_DOMENER = [
     "fifa.com", "espn.com", "bbc.com", "skysports.com", "reuters.com", "apnews.com",
     "theguardian.com", "nytimes.com", "cbssports.com", "foxsports.com", "sports.yahoo.com",
-    "nbcsports.com", "goal.com", "worldsoccertalk.com", "sportingnews.com",
+    "nbcsports.com", "goal.com", "worldsoccertalk.com", "sportingnews.com", "concacaf.com",
+]
+
+# Fulltekst-kilder prioriteres. Serper finner kandidatene; dette steget henter
+# kun fra selve kilden og teller ikke mot Serper-kvoten.
+FULLTEKST_PRIORITET = [
+    ("reuters.com", 100),
+    ("concacaf.com", 90),
+    ("fifa.com", 85),
+    ("apnews.com", 80),
+    ("bbc.com", 75),
+    ("espn.", 55),   # ESPN er ofte god på scorere/minutter, men full recap kan være JS-beskyttet.
 ]
 
 # Kilder/innhold som typisk gir dårlig publiseringstekst.
@@ -669,7 +692,345 @@ def finn_navn_i_tekst(pattern, tekst, hjemme=None, borte=None):
     return rens_spillernavn(m.group(1), hjemme, borte)
 
 
-def utled_kampdetaljer(kamp, kandidater):
+
+# ── FULLTEKST / KILDEFAKTA ───────────────────────────────────────────────────
+
+def fulltekst_kildeprioritet(k):
+    """Ranger Serper-kandidater etter hvor nyttige de trolig er som fulltekst-kilde."""
+    domene = domene_fra_url(k.get("link", ""))
+    if not domene or any(d in domene for d in BLOKKERTE_DOMENER):
+        return -999
+    for needle, score in FULLTEKST_PRIORITET:
+        if needle in domene:
+            return score + min(20, int(k.get("score", 0)))
+    # Andre gode kilder kan fortsatt prøves hvis kandidaten ellers scorer høyt.
+    if any(d in domene for d in GODE_DOMENER):
+        return 40 + min(20, int(k.get("score", 0)))
+    return -999
+
+
+def fulltekst_egnet_kandidater(kandidater):
+    valgte = []
+    for k in kandidater or []:
+        if k.get("score", -100) < MIN_KVALITETSSCORE:
+            continue
+        prio = fulltekst_kildeprioritet(k)
+        if prio <= 0:
+            continue
+        kk = dict(k)
+        kk["fulltekst_prioritet"] = prio
+        valgte.append(kk)
+    valgte.sort(key=lambda x: (x.get("fulltekst_prioritet", 0), x.get("score", 0)), reverse=True)
+    return valgte[:5]
+
+
+def hent_url_tekst(url):
+    """Hent HTML fra en kilde. Returnerer tekstlig HTML, eller tom streng ved feil."""
+    if not url:
+        return ""
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; RambergVMBot/1.0; +https://rambergapps.github.io/vm2026/)",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9,nb;q=0.7",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=FULLTEKST_TIMEOUT) as resp:
+            raw = resp.read(FULLTEKST_MAX_BYTES)
+            charset = resp.headers.get_content_charset() or "utf-8"
+            return raw.decode(charset, errors="replace")
+    except Exception as e:
+        print(f"    Fulltekst: klarte ikke hente {domene_fra_url(url)} ({e})")
+        return ""
+
+
+def hent_jsonld_verdier(obj):
+    """Finn headline/description/articleBody i JSON-LD uten å anta eksakt struktur."""
+    verdier = []
+    if isinstance(obj, dict):
+        for key in ["headline", "description", "articleBody"]:
+            val = obj.get(key)
+            if isinstance(val, str) and val.strip():
+                verdier.append(val.strip())
+        for val in obj.values():
+            verdier.extend(hent_jsonld_verdier(val))
+    elif isinstance(obj, list):
+        for item in obj:
+            verdier.extend(hent_jsonld_verdier(item))
+    return verdier
+
+
+def ekstraher_artikkeltekst_fra_html(html_text):
+    """Trekk ut mest mulig ren tekst fra HTML/JSON-LD/meta. Lagrer ikke råtekst permanent."""
+    if not html_text:
+        return ""
+
+    deler = []
+
+    # JSON-LD gir ofte ren artikkeltekst for Reuters/AP/BBC-lignende sider.
+    for block in re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html_text, flags=re.I | re.S):
+        try:
+            data = json.loads(html.unescape(block.strip()))
+            deler.extend(hent_jsonld_verdier(data))
+        except Exception:
+            continue
+
+    # Meta description er ofte en kort, presis oppsummering.
+    meta_patterns = [
+        r'<meta[^>]+(?:name|property)=["\']description["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+name=["\']twitter:description["\'][^>]+content=["\']([^"\']+)["\']',
+    ]
+    for pat in meta_patterns:
+        for m in re.findall(pat, html_text, flags=re.I | re.S):
+            deler.append(html.unescape(m.strip()))
+
+    # Grov HTML→tekst fallback. Vi bruker dette kun til faktaekstraksjon, ikke publisering.
+    cleaned = re.sub(r'<script\b[^>]*>.*?</script>', ' ', html_text, flags=re.I | re.S)
+    cleaned = re.sub(r'<style\b[^>]*>.*?</style>', ' ', cleaned, flags=re.I | re.S)
+    cleaned = re.sub(r'<noscript\b[^>]*>.*?</noscript>', ' ', cleaned, flags=re.I | re.S)
+    cleaned = re.sub(r'<[^>]+>', ' ', cleaned)
+    cleaned = html.unescape(cleaned)
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+    if cleaned:
+        deler.append(cleaned[:30000])
+
+    tekst = re.sub(r'\s+', ' ', ' '.join(deler)).strip()
+    return tekst[:50000]
+
+
+def resultat_i_tekst(tekst_lower, h, b):
+    varianter = [
+        f"{h}-{b}", f"{h}–{b}", f"{h} - {b}", f"{h} to {b}",
+        f"{b}-{h}", f"{b}–{h}", f"{b} - {h}", f"{b} to {h}",
+    ]
+    return any(v in tekst_lower for v in varianter)
+
+
+def score_fulltekst(tekst, kamp):
+    if not tekst or len(tekst) < 250:
+        return -100
+    lav = tekst.lower()
+    score = 0
+    if inneholder_alias(lav, kamp["hjemmelag"]):
+        score += 4
+    if inneholder_alias(lav, kamp["bortelag"]):
+        score += 4
+    if resultat_i_tekst(lav, kamp["hjemme"], kamp["borte"]):
+        score += 4
+    for ord_ in FAKTA_ORD:
+        if ord_ in lav:
+            score += 1
+    # Lange tekster som faktisk nevner kampen gir bedre grunnlag, men ikke la lengde dominere.
+    if len(tekst) > 1200:
+        score += 2
+    if len(tekst) > 2500:
+        score += 2
+    for ord_ in NEGATIVE_ORD:
+        if ord_ in lav:
+            score -= 1
+    return score
+
+
+def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
+    """Ekstraher korte, strukturerte fakta fra fullside. Ikke lagre full artikkeltekst."""
+    hjemme = kamp["hjemmelag"]
+    borte = kamp["bortelag"]
+    lav = tekst.lower()
+
+    fakta = {
+        "status": "ok",
+        "kilde_url": kilde_url,
+        "domene": domene_fra_url(kilde_url),
+        "score": score_fulltekst(tekst, kamp),
+        "hentet": iso_utc_na(),
+        "late": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "late", "90+", "90'+", "seven minutes from fulltime", "seven minutes from full-time"]),
+        "stoppage": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "90+", "90'+", "95th-minute", "90’+5", "90'+5"]),
+        "winner": "winner" in lav or "lone goal" in lav or "match's only goal" in lav or "match’s only goal" in lav,
+        "penalty": "penalty" in lav or "from the spot" in lav or "spot-kick" in lav,
+        "equaliser": any(x in lav for x in ["equaliser", "equalizer", "equalised", "equalized", "salvaged a point", "salvage draw", "rescues a draw", "fought back to draw"]),
+        "goalless_first_half": "goalless first half" in lav or "goalless at halftime" in lav or "goalless at half-time" in lav,
+        "second_half_goals": "second-half goals" in lav or "second half goals" in lav,
+        "substitutes": "substitutes" in lav or "substitute" in lav or "came off the bench" in lav,
+        "debutants": "debutants" in lav or "debutant" in lav,
+        "scorere": [],
+        "penalty_scorer": "",
+        "lead_scorer": "",
+        "brace_scorer": "",
+        "sub_names": [],
+        "minute_text": "",
+    }
+
+    # Minutt/tilleggstid.
+    if re.search(r"90\s*[’']?\s*\+\s*5|90\+5|95th-minute|fifth minute of second-half stoppage", lav):
+        fakta["minute_text"] = "på overtid"
+    elif "seven minutes from fulltime" in lav or "seven minutes from full-time" in lav:
+        fakta["minute_text"] = "sju minutter før slutt"
+    elif re.search(r"83(?:rd)? minute|83[’']", lav):
+        fakta["minute_text"] = "mot slutten av kampen"
+    elif re.search(r"sixth minute|6th minute|after six minutes|in the sixth", lav):
+        fakta.setdefault("lead_minute_text", "tidlig i kampen")
+
+    # Penalty scorer.
+    p_patterns = [
+        r"(?i:(?:penalty|spot-kick)\s+from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})",
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:converted|scored|netted|levelled|leveled).*?(?:penalty|spot))",
+    ]
+    for pat in p_patterns:
+        navn = finn_navn_i_tekst(pat, tekst, hjemme, borte)
+        if navn:
+            fakta["penalty_scorer"] = navn
+            break
+
+    # Ledelsesmål / tidlig mål.
+    lead_patterns = [
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:sent|fired|put|gave).*?(?:lead|ahead))",
+        r"(?i:(?:early lead through|lead through))\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})",
+    ]
+    for pat in lead_patterns:
+        navn = finn_navn_i_tekst(pat, tekst, hjemme, borte)
+        if navn:
+            fakta["lead_scorer"] = navn
+            break
+
+    # Scored twice / brace.
+    brace_patterns = [
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:scored twice|netted twice|bagged a brace|scored a brace))",
+        r"(?i:brace from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})",
+    ]
+    for pat in brace_patterns:
+        navn = finn_navn_i_tekst(pat, tekst, hjemme, borte)
+        if navn:
+            fakta["brace_scorer"] = navn
+            fakta["scorere"].append(navn)
+            break
+
+    # Second-half goals from A and B.
+    m = re.search(
+        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        tekst,
+    )
+    if m:
+        n1 = rens_spillernavn(m.group(1), hjemme, borte)
+        n2 = rens_spillernavn(m.group(2), hjemme, borte)
+        fakta["scorere"].extend([n for n in [n1, n2] if n])
+        fakta["second_half_goals"] = True
+
+    # Generelle scorer-mønstre.
+    score_patterns = [
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:scored|netted|struck).*?(?:winner|lone goal|only goal|goal))",
+        r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:levelled|leveled|equalised|equalized|converted|fired|headed))",
+    ]
+    for pat in score_patterns:
+        navn = finn_navn_i_tekst(pat, tekst, hjemme, borte)
+        if navn:
+            fakta["scorere"].append(navn)
+
+    # Substitutes A and B.
+    m = re.search(
+        r"(?i:substitutes?)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        tekst,
+    )
+    if m:
+        fakta["sub_names"] = [
+            rens_spillernavn(m.group(1), hjemme, borte),
+            rens_spillernavn(m.group(2), hjemme, borte),
+        ]
+        fakta["sub_names"] = [n for n in fakta["sub_names"] if n]
+
+    # Rydd navnelister.
+    for felt in ["scorere", "sub_names"]:
+        unike = []
+        for n in fakta.get(felt, []):
+            if n and n not in unike:
+                unike.append(n)
+        fakta[felt] = unike[:4]
+
+    if fakta["penalty_scorer"] and fakta["penalty_scorer"] not in fakta["scorere"]:
+        fakta["scorere"].insert(0, fakta["penalty_scorer"])
+    if fakta["lead_scorer"] and fakta["lead_scorer"] not in fakta["scorere"]:
+        fakta["scorere"].append(fakta["lead_scorer"])
+
+    return fakta
+
+
+def hent_fulltekst_fakta_for_kamp(kamp, kandidater):
+    """Prøv prioriterte kilder og returner ekstraherte fakta, ikke rå artikkeltekst."""
+    for k in fulltekst_egnet_kandidater(kandidater):
+        url = k.get("link", "")
+        domene = domene_fra_url(url)
+        print(f"  → Fulltekst: prøver {domene}")
+        html_text = hent_url_tekst(url)
+        tekst = ekstraher_artikkeltekst_fra_html(html_text)
+        score = score_fulltekst(tekst, kamp)
+        if score >= FULLTEKST_MIN_SCORE:
+            fakta = ekstraher_fakta_fra_fulltekst(tekst, kamp, url)
+            fakta["score"] = score
+            print(f"  → Fulltekst: {domene} OK, score {score}")
+            return fakta
+        print(f"    Fulltekst: {domene} lav score ({score})")
+    return {"status": "ikke_funnet", "hentet": iso_utc_na(), "score": -100}
+
+
+def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller):
+    """
+    Sørg for at cache har fulltekst_fakta hvis mulig. Henter bare én gang per kamp/resultat
+    og lagrer kun ekstraherte fakta, ikke artikkeltekst.
+    """
+    if not FULLTEKST_AKTIVERT:
+        return cache_entry, fulltekst_teller
+
+    key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
+    entry = cache_entry or cache.get(key) or {}
+    eksisterende = entry.get("fulltekst_fakta")
+    if isinstance(eksisterende, dict) and eksisterende.get("status") in ["ok", "ikke_funnet", "feilet"]:
+        if eksisterende.get("status") == "ok":
+            print(f"  → Fulltekst cache hit: {eksisterende.get('domene', 'ukjent')} score {eksisterende.get('score', -100)}")
+        return entry, fulltekst_teller
+
+    if fulltekst_teller >= MAX_FULLTEKST_PER_KJORING:
+        print(f"  → Fulltekst totalgrense nådd ({MAX_FULLTEKST_PER_KJORING}). Hopper over.")
+        return entry, fulltekst_teller
+
+    try:
+        fakta = hent_fulltekst_fakta_for_kamp(kamp, kandidater)
+    except Exception as e:
+        print(f"  ADVARSEL: Fulltekst-henting feilet: {e}")
+        fakta = {"status": "feilet", "hentet": iso_utc_na(), "score": -100, "feil": str(e)[:200]}
+
+    fulltekst_teller += 1
+    entry["fulltekst_fakta"] = fakta
+    cache[key] = entry
+    skriv_serper_cache(cache)
+    return entry, fulltekst_teller
+
+
+def merge_fulltekst_fakta(detaljer, fakta):
+    """La fulltekstfakta berike snippet-detaljene uten å overskrive gode verdier unødig."""
+    if not isinstance(fakta, dict) or fakta.get("status") != "ok":
+        return detaljer
+
+    for felt in ["late", "stoppage", "winner", "penalty", "equaliser", "goalless_first_half", "second_half_goals", "substitutes", "debutants"]:
+        detaljer[felt] = bool(detaljer.get(felt)) or bool(fakta.get(felt))
+
+    for felt in ["minute_text", "penalty_scorer", "lead_scorer", "brace_scorer"]:
+        if fakta.get(felt):
+            detaljer[felt] = fakta.get(felt)
+
+    for felt in ["scorere", "sub_names"]:
+        unike = []
+        for n in list(fakta.get(felt, []) or []) + list(detaljer.get(felt, []) or []):
+            if n and n not in unike:
+                unike.append(n)
+        detaljer[felt] = unike[:4]
+
+    detaljer["fulltekst_kilde"] = fakta.get("domene", "")
+    detaljer["fulltekst_score"] = fakta.get("score", -100)
+    return detaljer
+
+def utled_kampdetaljer(kamp, kandidater, fulltekst_fakta=None):
     """
     Trekker ut noen trygge kampdetaljer fra de beste kandidatene.
     Målet er ikke å forstå alt, men å få med mer av verdien i snippets uten å publisere rå engelsk tekst.
@@ -755,6 +1116,7 @@ def utled_kampdetaljer(kamp, kandidater):
         if n and n not in unike:
             unike.append(n)
     detaljer["scorere"] = unike[:3]
+    detaljer = merge_fulltekst_fakta(detaljer, fulltekst_fakta or {})
     return detaljer
 
 
@@ -771,13 +1133,23 @@ def lag_detaljsetning(kamp, detaljer):
     scorere = detaljer.get("scorere", [])
     scorer_tekst = " og ".join(scorere[:2]) if scorere else ""
 
+    # Spiller med to scoringer/brace fra fulltekst.
+    if detaljer.get("brace_scorer") and h != b:
+        navn = detaljer.get("brace_scorer")
+        if detaljer.get("substitutes"):
+            return f"{navn} ble den store profilen for {vinner} etter å ha kommet inn fra benken og scoret to ganger."
+        return f"{navn} ble den store profilen for {vinner} med to scoringer."
+
     # Uavgjort med sen straffe/utligning.
     if h == b and detaljer.get("penalty"):
         pnavn = detaljer.get("penalty_scorer") or (scorere[0] if scorere else "")
+        lead = detaljer.get("lead_scorer", "")
         tid = detaljer.get("minute_text") or "mot slutten"
+        if pnavn and lead and lead != pnavn:
+            return f"{lead} sendte {hnavn} i ledelsen, men {pnavn} reddet uavgjort for {bnavn} med en straffe {tid}."
         if pnavn:
-            return f"{visningsnavn_lag(borte)} reddet uavgjort med en straffescoring av {pnavn} {tid}."
-        return f"{visningsnavn_lag(borte)} reddet uavgjort med en sen straffescoring."
+            return f"{bnavn} reddet uavgjort med en straffescoring av {pnavn} {tid}."
+        return f"{bnavn} reddet uavgjort med en sen straffescoring."
 
     # Sen scoring/vinnermål.
     if scorere and (detaljer.get("winner") or detaljer.get("stoppage") or detaljer.get("late")):
@@ -813,8 +1185,8 @@ def lag_detaljsetning(kamp, detaljer):
     return fallback_kamptekst(hjemme, borte, h, b)
 
 
-def bygg_norsk_kampavsnitt(kamp, kandidater):
-    detaljer = utled_kampdetaljer(kamp, kandidater)
+def bygg_norsk_kampavsnitt(kamp, kandidater, fulltekst_fakta=None):
+    detaljer = utled_kampdetaljer(kamp, kandidater, fulltekst_fakta)
     return " ".join([
         resultatsetning(kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"]),
         lag_detaljsetning(kamp, detaljer),
@@ -853,7 +1225,7 @@ def bygg_historikkavsnitt(ref):
     return ". ".join(linjer) + "."
 
 
-def bygg_recap_tekst(kamp, kandidater, ref):
+def bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta=None):
     """
     Bygger recap-tekst i separate avsnitt:
     1. Norsk kampavsnitt basert på resultat + trygt uthentede fakta/fallback
@@ -861,7 +1233,7 @@ def bygg_recap_tekst(kamp, kandidater, ref):
 
     Tipping skal ikke inn i recap_tekst. Den ligger strukturert i kamp.tippinger.
     """
-    avsnitt = [bygg_norsk_kampavsnitt(kamp, kandidater)]
+    avsnitt = [bygg_norsk_kampavsnitt(kamp, kandidater, fulltekst_fakta)]
     hist = bygg_historikkavsnitt(ref)
     if hist:
         avsnitt.append(hist)
@@ -916,6 +1288,7 @@ def main():
         skriv_serper_cache(cache)
         print(f"  → Seedet Serper-cache fra eksisterende kamppost: {seedet} kamper")
     serper_teller = 0
+    fulltekst_teller = 0
 
     print(f"\nFinner kamper fra {igaar_str} (norsk tid)...")
     gaarsdagens = finn_gaarsdagens_kamper(vm_data)
@@ -940,7 +1313,9 @@ def main():
         tippinger = hent_tippinger_for_kamp(vm_data, kamp_id)
 
         kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
-        recap_tekst = bygg_recap_tekst(kamp, kandidater, ref)
+        cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
+        fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
+        recap_tekst = bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta)
 
         beste_score = cache_entry.get("beste_score", -100) if cache_entry else -100
         fallback = beste_score < MIN_KVALITETSSCORE
@@ -965,6 +1340,9 @@ def main():
                 "antall_sok":  cache_entry.get("antall_sok", 0) if cache_entry else 0,
                 "fallback":    fallback,
                 "cache_key":   cache_noekkel(kamp_id, h_score, b_score),
+                "fulltekst_status": fulltekst_fakta.get("status", "ikke_sokt") if isinstance(fulltekst_fakta, dict) else "ikke_sokt",
+                "fulltekst_kilde":  fulltekst_fakta.get("domene", "") if isinstance(fulltekst_fakta, dict) else "",
+                "fulltekst_score":  fulltekst_fakta.get("score", -100) if isinstance(fulltekst_fakta, dict) else -100,
             },
             "tippinger":     tippinger,
         })
@@ -1000,6 +1378,7 @@ def main():
     skriv_serper_cache(cache)
     print(f"✓ Skrev kamppost.json med {len(kamposter)} kamper for {igaar_str}")
     print(f"✓ Serper-søk brukt i denne kjøringen: {serper_teller}")
+    print(f"✓ Fulltekstforsøk brukt i denne kjøringen: {fulltekst_teller}")
 
 
 if __name__ == "__main__":
