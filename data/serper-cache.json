@@ -100,14 +100,14 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v11-second-half-scorers",
+      "versjon": "v13-lengre-kampreferater",
       "kilde_url": "https://www.concacaf.com/competitions/fifa-world-cup/news/panama-opens-world-cup-campaign-with-tough-defeat-to-ghana",
       "domene": "concacaf.com",
-      "score": 12,
-      "hentet": "2026-06-19T17:23:19Z",
+      "score": 19,
+      "hentet": "2026-06-19T18:14:52Z",
       "late": true,
-      "stoppage": false,
-      "winner": false,
+      "stoppage": true,
+      "winner": true,
       "penalty": false,
       "equaliser": false,
       "goalless_first_half": false,
@@ -121,7 +121,13 @@
       "lead_scorer": "",
       "brace_scorer": "",
       "sub_names": [],
-      "minute_text": ""
+      "minute_text": "på overtid",
+      "lead_minute_text": "",
+      "early_lead": false,
+      "record_pass_player": "José Córdoba",
+      "record_passes": "101",
+      "star_player": "",
+      "scored_and_assisted": false
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
     "offisiell_kilde_sokt": "2026-06-19T07:50:49Z",
@@ -230,68 +236,34 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v11-second-half-scorers",
+      "versjon": "v13-lengre-kampreferater",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uzbekistan-colombia-match-report-highlights",
       "domene": "fifa.com",
-      "score": 17,
-      "hentet": "2026-06-19T17:23:20Z",
+      "score": 15,
+      "hentet": "2026-06-19T18:15:00Z",
       "late": true,
-      "stoppage": true,
+      "stoppage": false,
       "winner": false,
       "penalty": false,
       "equaliser": false,
       "goalless_first_half": false,
       "second_half_goals": false,
       "second_half_scorers": [],
-      "substitutes": true,
+      "substitutes": false,
       "debutants": true,
-      "scorere": [
-        "Luis Diaz",
-        "Abbosbek Fayzullaev"
-      ],
-      "goal_events": [
-        {
-          "spiller": "Fayzullaev",
-          "lag": "Uzbekistan",
-          "minutt": "60",
-          "type": "goal"
-        },
-        {
-          "spiller": "Munoz",
-          "lag": "Colombia",
-          "minutt": "40",
-          "type": "goal"
-        },
-        {
-          "spiller": "Diaz",
-          "lag": "Colombia",
-          "minutt": "65",
-          "type": "goal"
-        },
-        {
-          "spiller": "Campaz",
-          "lag": "Colombia",
-          "minutt": "90+9",
-          "type": "goal"
-        },
-        {
-          "spiller": "Abbosbek Fayzullaev",
-          "lag": "Uzbekistan",
-          "minutt": "60",
-          "type": "goal"
-        },
-        {
-          "spiller": "Luis Diaz",
-          "lag": "Colombia",
-          "minutt": "65",
-          "type": "goal"
-        }
-      ],
-      "penalty_scorer": "Luis Diaz",
+      "scorere": [],
+      "goal_events": [],
+      "penalty_scorer": "",
       "lead_scorer": "",
       "brace_scorer": "",
       "sub_names": [],
-      "minute_text": ""
+      "minute_text": "",
+      "lead_minute_text": "",
+      "early_lead": false,
+      "record_pass_player": "",
+      "record_passes": "",
+      "star_player": "",
+      "scored_and_assisted": false
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
     "offisiell_kilde_sokt": "2026-06-19T07:50:57Z",
@@ -385,8 +357,8 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v11-second-half-scorers",
-      "hentet": "2026-06-19T17:23:20Z",
+      "versjon": "v13-lengre-kampreferater",
+      "hentet": "2026-06-19T18:15:00Z",
       "score": -100
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
@@ -496,11 +468,11 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v11-second-half-scorers",
+      "versjon": "v13-lengre-kampreferater",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
       "domene": "fifa.com",
       "score": 18,
-      "hentet": "2026-06-19T17:23:21Z",
+      "hentet": "2026-06-19T18:15:07Z",
       "late": true,
       "stoppage": true,
       "winner": false,
@@ -516,7 +488,13 @@
         {
           "spiller": "Manzambi",
           "lag": "Switzerland",
-          "minutt": "74, 90",
+          "minutt": "74",
+          "type": "goal"
+        },
+        {
+          "spiller": "Manzambi",
+          "lag": "Switzerland",
+          "minutt": "90",
           "type": "goal"
         },
         {
@@ -542,7 +520,13 @@
       "lead_scorer": "",
       "brace_scorer": "",
       "sub_names": [],
-      "minute_text": ""
+      "minute_text": "",
+      "lead_minute_text": "",
+      "early_lead": false,
+      "record_pass_player": "",
+      "record_passes": "",
+      "star_player": "",
+      "scored_and_assisted": false
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
     "offisiell_kilde_sokt": "2026-06-19T07:51:00Z",
