@@ -54,7 +54,10 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v7-concacaf-domain-debug"
+FULLTEKST_CACHE_VERSION        = "v8-official-source-discovery"
+OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
+MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
+OFFISIELL_KILDE_SOK_VERSION    = "v8-official-source-discovery"
 
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
 SERPER_HL                      = os.environ.get("SERPER_HL", "en")
@@ -226,7 +229,7 @@ def seed_cache_fra_eksisterende_kamppost(eksisterende, cache):
             "beste_score": int(kvalitet.get("score", -100) or -100),
             "status": kvalitet.get("status", "ok" if int(kvalitet.get("score", -100) or -100) >= MIN_KVALITETSSCORE else "lav_score"),
             "query": (kandidater[0].get("query", "") if kandidater else ""),
-            "kandidater": kandidater[:10],
+            "kandidater": kandidater[:15],
         }
         antall += 1
 
@@ -579,7 +582,7 @@ def hent_kandidater_med_cache(kamp, cache, serper_teller):
         "beste_score": beste_score,
         "status": status,
         "query": query,
-        "kandidater": kandidater[:10],
+        "kandidater": kandidater[:15],
     }
     cache[key] = ny_entry
     skriv_serper_cache(cache)
@@ -769,6 +772,120 @@ def fulltekst_egnet_kandidater(kandidater, kamp=None):
 
     valgte.sort(key=lambda x: (x.get("fulltekst_prioritet", 0), x.get("score", 0)), reverse=True)
     return valgte[:8], debug[:12]
+
+
+
+# ── OFFISIELL FULLTEKST-KILDEDISCOVERY ───────────────────────────────────────
+
+CONCACAF_LAG = {
+    "Panama", "USA", "United States", "Mexico", "Canada", "Haiti", "Curaçao", "Curacao",
+    "Qatar"  # beholdes ikke som CONCACAF, men skader ikke om FIFA/CONCACAF ikke treffer
+}
+
+
+def rens_soketerm_lag(lag):
+    """Gjør lagnavn trygge i Serper-query uten anførselstegn/OR."""
+    lag = (lag or "").replace("&", " ").replace("-", " ")
+    lag = re.sub(r"[^A-Za-z0-9À-ÖØ-öø-ÿ ]+", " ", lag)
+    return re.sub(r"\s+", " ", lag).strip()
+
+
+def fulltekst_lookup_domener_for_kamp(kamp):
+    """
+    Domener som kan være verdt et separat kildesøk når vanlig Serper-cache
+    ikke inneholder fulltekst-egnede kilder. CONCACAF prioriteres kun når ett
+    av lagene realistisk kan dekkes der.
+    """
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    domener = []
+    if hjemme in CONCACAF_LAG or borte in CONCACAF_LAG:
+        domener.append("concacaf.com")
+    # FIFA kan dekke alle kamper, men er ikke alltid like rask på referater.
+    domener.append("fifa.com")
+    # Noen kilder fungerer bedre som fulltekst enn Reuters/ESPN.
+    domener.extend(["apnews.com", "bbc.com", "skysports.com", "theguardian.com"])
+
+    # Behold rekkefølge, fjern dubletter.
+    unike = []
+    for d in domener:
+        if d not in unike:
+            unike.append(d)
+    return unike
+
+
+def bygg_offisiell_kilde_query(kamp, domene):
+    hjemme = rens_soketerm_lag(kamp.get("hjemmelag", ""))
+    borte = rens_soketerm_lag(kamp.get("bortelag", ""))
+    h = kamp.get("hjemme")
+    b = kamp.get("borte")
+    return (
+        f"site:{domene} {hjemme} {borte} {h}-{b} "
+        f"World Cup 2026 match report recap goals scorers full-time"
+    )
+
+
+def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller):
+    """
+    Hvis vanlig Serper-cache ikke inneholder en egnet fulltekst-kilde, gjør et
+    svært begrenset kildesøk mot prioriterte domener, f.eks. CONCACAF først
+    for kamper med CONCACAF-lag. Dette er eneste måten scriptet kan finne
+    CONCACAF når den ikke ligger i cached kandidatlisten.
+    """
+    if not OFFISIELL_KILDE_SOK_AKTIVERT:
+        return kandidater, cache_entry, serper_teller
+
+    egnet, _ = fulltekst_egnet_kandidater(kandidater, kamp=kamp)
+    if egnet:
+        return kandidater, cache_entry, serper_teller
+
+    key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
+    entry = cache_entry or cache.get(key) or {}
+    if entry.get("offisiell_kilde_sok_versjon") == OFFISIELL_KILDE_SOK_VERSION:
+        return kandidater, entry, serper_teller
+
+    if serper_teller >= MAX_SERPER_SOK_TOTALT_KJORING:
+        print(f"  → Offisiell kilde-søk hoppet over: Serper totalgrense nådd ({MAX_SERPER_SOK_TOTALT_KJORING}).")
+        return kandidater, entry, serper_teller
+
+    domener = fulltekst_lookup_domener_for_kamp(kamp)
+    print("  → Ingen fulltekst-egnet kilde i cache. Søker prioriterte kilder: " + ", ".join(domener[:MAX_OFFISIELLE_KILDESOK_KAMP]))
+
+    nye = []
+    sokt = []
+    for domene in domener[:max(0, MAX_OFFISIELLE_KILDESOK_KAMP)]:
+        if serper_teller >= MAX_SERPER_SOK_TOTALT_KJORING:
+            break
+        query = bygg_offisiell_kilde_query(kamp, domene)
+        print(f"    Offisiell kilde-query: {query}")
+        funn = soek_serper_api(query)
+        serper_teller += 1
+        sokt.append(domene)
+        for k in funn:
+            score_kandidat(k, kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])
+            k["offisiell_kilde_sok"] = domene
+        nye.extend(funn)
+
+        # Stopp tidlig hvis dette domenet faktisk ga fulltekst-egnet kandidat.
+        kombi_tmp = dedupliser_kandidater((kandidater or []) + nye)
+        egnet_tmp, _ = fulltekst_egnet_kandidater(kombi_tmp, kamp=kamp)
+        if egnet_tmp:
+            print(f"    → Fant fulltekst-egnet kilde via {domene}")
+            break
+
+    kombi = dedupliser_kandidater((kandidater or []) + nye)
+    for k in kombi:
+        if "score" not in k:
+            score_kandidat(k, kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])
+    kombi.sort(key=lambda x: x.get("score", -999), reverse=True)
+
+    entry["kandidater"] = kombi[:15]
+    entry["offisiell_kilde_sok_versjon"] = OFFISIELL_KILDE_SOK_VERSION
+    entry["offisiell_kilde_sokt"] = iso_utc_na()
+    entry["offisiell_kilde_domener"] = sokt
+    cache[key] = entry
+    skriv_serper_cache(cache)
+    return kombi, entry, serper_teller
 
 
 def hent_url_tekst_direkte(url):
@@ -1413,6 +1530,7 @@ def main():
         tippinger = hent_tippinger_for_kamp(vm_data, kamp_id)
 
         kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
+        kandidater, cache_entry, serper_teller = suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller)
         cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
         fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
         recap_tekst = bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta)
@@ -1433,7 +1551,7 @@ def main():
             "recap_tekst":   recap_tekst,
             # Beholder rådata for debugging, men frontend bør ikke publisere disse direkte.
             "snippets_raa":  [k.get("snippet", "") for k in kandidater[:5]],
-            "serper_kandidater": kandidater[:5],
+            "serper_kandidater": kandidater[:10],
             "recap_kvalitet": {
                 "score":       beste_score,
                 "status":      cache_entry.get("status", "ukjent") if cache_entry else "ukjent",
@@ -1443,6 +1561,7 @@ def main():
                 "fulltekst_status": fulltekst_fakta.get("status", "ikke_sokt") if isinstance(fulltekst_fakta, dict) else "ikke_sokt",
                 "fulltekst_kilde":  fulltekst_fakta.get("domene", "") if isinstance(fulltekst_fakta, dict) else "",
                 "fulltekst_score":  fulltekst_fakta.get("score", -100) if isinstance(fulltekst_fakta, dict) else -100,
+                "offisiell_kilde_sokt": cache_entry.get("offisiell_kilde_domener", []) if cache_entry else [],
             },
             "tippinger":     tippinger,
         })
