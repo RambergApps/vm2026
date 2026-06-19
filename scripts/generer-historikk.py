@@ -54,7 +54,7 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v10-goal-events"
+FULLTEKST_CACHE_VERSION        = "v11-second-half-scorers"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
 OFFISIELL_KILDE_SOK_VERSION    = "v9-no-site-operator"
@@ -1361,6 +1361,7 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
         "equaliser": any(x in lav for x in ["equaliser", "equalizer", "equalised", "equalized", "salvaged a point", "salvage draw", "rescues a draw", "fought back to draw"]),
         "goalless_first_half": "goalless first half" in lav or "goalless at halftime" in lav or "goalless at half-time" in lav,
         "second_half_goals": "second-half goals" in lav or "second half goals" in lav,
+        "second_half_scorers": [],
         "substitutes": "substitutes" in lav or "substitute" in lav or "came off the bench" in lav,
         "debutants": "debutants" in lav or "debutant" in lav,
         "scorere": [],
@@ -1421,15 +1422,31 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
             fakta["scorere"].append(navn)
             break
 
-    # Second-half goals from A and B.
+    # Second-half goals from A and B gave/sealed/helped TEAM...
+    # Lagre disse separat slik at vi ikke senere bruker åpningmålscorer
+    # (f.eks. Daniel Muñoz) som en av "etter pause"-målscorerne.
     m = re.search(
-        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+(?:gave|give|helped|secured|sealed)\s+([^.,;]{0,80})",
         tekst,
     )
     if m:
+        ctx_after = m.group(3).strip()
+        lag = ""
+        for kandidat_lag in [hjemme, borte]:
+            for alias in lag_aliaser_for_match(kandidat_lag):
+                if re.match(r"(?i)^" + re.escape(alias) + r"\b", ctx_after):
+                    lag = kandidat_lag
+                    break
+            if lag:
+                break
+        if not lag:
+            lag = finn_lag_i_kontekst(ctx_after, kamp)
         n1 = rens_spillernavn(m.group(1), hjemme, borte)
         n2 = rens_spillernavn(m.group(2), hjemme, borte)
-        fakta["scorere"].extend([n for n in [n1, n2] if n])
+        navnene = [n for n in [n1, n2] if n]
+        fakta["scorere"].extend(navnene)
+        if lag and (not (hjemme and borte) or lag in [hjemme, borte]):
+            fakta["second_half_scorers"] = navnene
         fakta["second_half_goals"] = True
 
     # Generelle scorer-mønstre.
@@ -1455,7 +1472,7 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
         fakta["sub_names"] = [n for n in fakta["sub_names"] if n]
 
     # Rydd navnelister.
-    for felt in ["scorere", "sub_names"]:
+    for felt in ["scorere", "sub_names", "second_half_scorers"]:
         unike = []
         for n in fakta.get(felt, []):
             if n and n not in unike:
@@ -1469,7 +1486,11 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
 
     # Kjør mål-event-ekstraksjon én gang til med kjente fulle navn, slik at
     # korte FIFA-linjer som "Manzambi (71, 90)" kan bli "Johan Manzambi".
-    kjente_navn = list(fakta.get("sub_names", []) or []) + list(fakta.get("scorere", []) or [])
+    kjente_navn = (
+        list(fakta.get("sub_names", []) or [])
+        + list(fakta.get("scorere", []) or [])
+        + list(fakta.get("second_half_scorers", []) or [])
+    )
     ekstra_events = ekstraher_goal_events_fra_tekst(tekst, kamp, kjente_navn=kjente_navn)
     for ev in ekstra_events:
         legg_til_goal_event(
@@ -1589,7 +1610,7 @@ def merge_fulltekst_fakta(detaljer, fakta):
             goal_events.append(dict(ev))
     detaljer["goal_events"] = goal_events[:8]
 
-    for felt in ["scorere", "sub_names"]:
+    for felt in ["scorere", "sub_names", "second_half_scorers"]:
         unike = []
         for n in list(fakta.get(felt, []) or []) + list(detaljer.get(felt, []) or []):
             if n and n not in unike:
@@ -1620,6 +1641,7 @@ def utled_kampdetaljer(kamp, kandidater, fulltekst_fakta=None):
         "equaliser": any(x in lav for x in ["equaliser", "equalizer", "equalised", "equalized", "salvaged a point", "salvage draw", "rescues a draw"]),
         "goalless_first_half": "goalless first half" in lav,
         "second_half_goals": "second-half goals" in lav or "second half goals" in lav,
+        "second_half_scorers": [],
         "substitutes": "substitutes" in lav or "substitute" in lav,
         "debutants": "debutants" in lav or "debutant" in lav,
         "scorere": [],
@@ -1658,15 +1680,17 @@ def utled_kampdetaljer(kamp, kandidater, fulltekst_fakta=None):
         if pnavn not in detaljer["scorere"]:
             detaljer["scorere"].append(pnavn)
 
-    # Second-half goals from Luis Díaz and Jáminton Campaz.
+    # Second-half goals from Luis Díaz and Jáminton Campaz gave Colombia...
     m = re.search(
-        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})",
+        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+(?:gave|give|helped|secured|sealed)\s+([^.,;]{0,80})",
         samlet,
-        )
+    )
     if m:
         n1 = rens_spillernavn(m.group(1), hjemme, borte)
         n2 = rens_spillernavn(m.group(2), hjemme, borte)
-        detaljer["scorere"] = [n for n in [n1, n2] if n]
+        navnene = [n for n in [n1, n2] if n]
+        detaljer["scorere"] = navnene
+        detaljer["second_half_scorers"] = navnene
         detaljer["second_half_goals"] = True
 
     # Substitutes Johan Manzambi and Ruben Vargas inspire...
@@ -1753,13 +1777,23 @@ def lag_detaljsetning(kamp, detaljer):
             return f"Etter en målløs første omgang ble innbytterne {navn} sentrale da {vinner} tok over kampen."
         return f"Innbytterne {navn} ble viktige da {vinner} avgjorde kampen."
 
-    # Mål etter pause fra vinnerlaget. Ikke bruk motstanderscorere her.
+    # Mål etter pause fra vinnerlaget. Bruk eksplisitte second_half_scorers først.
+    # Dette hindrer at åpningmålscorer (f.eks. Daniel Muñoz før pause) blir blandet
+    # inn i formuleringen "Etter pause sørget X og Y ...".
     if h != b and detaljer.get("second_half_goals"):
+        second_half_names = detaljer.get("second_half_scorers", []) or []
+        if len(second_half_names) >= 2:
+            navn = join_navn(second_half_names[:2])
+            other_winner_names = [n for n in spillere_for_lag(goal_events, vinner_lag) if n not in second_half_names]
+            if other_winner_names:
+                return f"{other_winner_names[0]} sendte {vinner} i ledelsen før pause, og etter hvilen sørget {navn} for at {vinner} dro fra."
+            return f"Etter pause sørget {navn} for at {vinner} dro fra og sikret seieren."
+
         winner_names = spillere_for_lag(goal_events, vinner_lag)
         # Unngå å telle samme spiller to ganger ved to scoringer.
         if len(winner_names) >= 2:
             navn = join_navn(winner_names[:2])
-            return f"Etter pause sørget {navn} for at {vinner} dro fra og sikret seieren."
+            return f"{navn} var blant spillerne som scoret for {vinner}."
         if len(winner_names) == 1 and not loser_events:
             return f"{winner_names[0]} var sentral da {vinner} dro fra etter pause."
 
