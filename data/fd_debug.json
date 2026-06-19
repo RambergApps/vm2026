@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-19T19:01:00Z",
+  "tidspunkt": "2026-06-19T19:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -301,10 +301,10 @@
       "fd_bortelag": "Australia",
       "hjemmelag_normalisert": "USA",
       "bortelag_normalisert": "Australia",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-19",
       "fd_utcDate": "2026-06-19T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "USA_Australia_2026_06_19"
