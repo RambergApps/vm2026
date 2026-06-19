@@ -1,14 +1,4 @@
 {
-  "sist_sjekket": "2026-06-19T03:00:59Z",
-  "kamper": [
-    {
-      "kamp_id": "Mexico_South_Korea_2026_06_18",
-      "hjemmelag": "Mexico",
-      "bortelag": "South Korea",
-      "dato": "2026-06-18",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-19T03:30:51Z",
+  "kamper": []
 }
