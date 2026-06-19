@@ -84,10 +84,16 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v7-concacaf-domain-debug",
-      "hentet": "2026-06-19T07:29:18Z",
+      "versjon": "v8-official-source-discovery",
+      "hentet": "2026-06-19T07:45:37Z",
       "score": -100
-    }
+    },
+    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
+    "offisiell_kilde_sokt": "2026-06-19T07:45:37Z",
+    "offisiell_kilde_domener": [
+      "concacaf.com",
+      "fifa.com"
+    ]
   },
   "Uzbekistan_Colombia_2026_06_17|1-3": {
     "kamp_id": "Uzbekistan_Colombia_2026_06_17",
@@ -171,10 +177,16 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v7-concacaf-domain-debug",
-      "hentet": "2026-06-19T07:29:18Z",
+      "versjon": "v8-official-source-discovery",
+      "hentet": "2026-06-19T07:45:37Z",
       "score": -100
-    }
+    },
+    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
+    "offisiell_kilde_sokt": "2026-06-19T07:45:37Z",
+    "offisiell_kilde_domener": [
+      "fifa.com",
+      "apnews.com"
+    ]
   },
   "Czech_Republic_South_Africa_2026_06_18|1-1": {
     "kamp_id": "Czech_Republic_South_Africa_2026_06_18",
@@ -262,10 +274,16 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v7-concacaf-domain-debug",
-      "hentet": "2026-06-19T07:29:18Z",
+      "versjon": "v8-official-source-discovery",
+      "hentet": "2026-06-19T07:45:38Z",
       "score": -100
-    }
+    },
+    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
+    "offisiell_kilde_sokt": "2026-06-19T07:45:38Z",
+    "offisiell_kilde_domener": [
+      "fifa.com",
+      "apnews.com"
+    ]
   },
   "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1": {
     "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -348,9 +366,15 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v7-concacaf-domain-debug",
-      "hentet": "2026-06-19T07:29:19Z",
+      "versjon": "v8-official-source-discovery",
+      "hentet": "2026-06-19T07:45:38Z",
       "score": -100
-    }
+    },
+    "offisiell_kilde_sok_versjon": "v8-official-source-discovery",
+    "offisiell_kilde_sokt": "2026-06-19T07:45:38Z",
+    "offisiell_kilde_domener": [
+      "fifa.com",
+      "apnews.com"
+    ]
   }
 }
