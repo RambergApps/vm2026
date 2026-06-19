@@ -54,7 +54,7 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v6-no-reuters-espn-jina"
+FULLTEKST_CACHE_VERSION        = "v7-concacaf-domain-debug"
 
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
 SERPER_HL                      = os.environ.get("SERPER_HL", "en")
@@ -706,34 +706,69 @@ def finn_navn_i_tekst(pattern, tekst, hjemme=None, borte=None):
 
 # ── FULLTEKST / KILDEFAKTA ───────────────────────────────────────────────────
 
+def domene_matcher(domene, needle):
+    """True for exact domain or subdomain, e.g. www.concacaf.com -> concacaf.com."""
+    domene = (domene or "").lower().strip()
+    needle = (needle or "").lower().strip()
+    return domene == needle or domene.endswith("." + needle)
+
+
+def domene_i_liste(domene, liste):
+    return any(domene_matcher(domene, d) or d in domene for d in liste)
+
+
 def fulltekst_kildeprioritet(k):
     """Ranger Serper-kandidater etter hvor nyttige de trolig er som fulltekst-kilde."""
     domene = domene_fra_url(k.get("link", ""))
     if not domene:
         return -999
-    if any(d in domene for d in BLOKKERTE_DOMENER):
+    if domene_i_liste(domene, BLOKKERTE_DOMENER):
         return -999
-    if any(d in domene for d in FULLTEKST_UTELUKKEDE_DOMENER):
+    if domene_i_liste(domene, FULLTEKST_UTELUKKEDE_DOMENER):
         return -999
     for needle, score in FULLTEKST_PRIORITET:
-        if needle in domene:
+        if domene_matcher(domene, needle):
             return score + min(20, int(k.get("score", 0)))
     return -999
 
 
-def fulltekst_egnet_kandidater(kandidater):
+def fulltekst_kandidat_matcher_kamp(k, kamp):
+    """Litt mildere sjekk for offisielle kilder: kandidaten må ligne aktuell kamp."""
+    tekst = normaliser_tekst(tekst_for_kandidat(k))
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    h = kamp.get("hjemme")
+    b = kamp.get("borte")
+    har_lag = inneholder_alias(tekst, hjemme) or inneholder_alias(tekst, borte)
+    har_resultat = f"{h}-{b}" in tekst or f"{h}–{b}" in tekst or f"{b}-{h}" in tekst or f"{b}–{h}" in tekst
+    return har_lag or har_resultat
+
+
+def fulltekst_egnet_kandidater(kandidater, kamp=None):
     valgte = []
+    debug = []
     for k in kandidater or []:
-        if k.get("score", -100) < MIN_KVALITETSSCORE:
-            continue
+        domene = domene_fra_url(k.get("link", "")) or "ukjent"
+        score = int(k.get("score", -100))
         prio = fulltekst_kildeprioritet(k)
         if prio <= 0:
+            debug.append(f"{domene}:{score}:droppet")
             continue
+
+        # Normalt kreves god kandidatscore. For prioriterte/offisielle fulltekst-domener
+        # som CONCACAF/FIFA kan vi være mildere, fordi fulltekst-score etterpå avgjør kvaliteten.
+        mild_offisiell = prio >= 90 and kamp is not None and fulltekst_kandidat_matcher_kamp(k, kamp)
+        if score < MIN_KVALITETSSCORE and not mild_offisiell:
+            debug.append(f"{domene}:{score}:lav_score")
+            continue
+
         kk = dict(k)
         kk["fulltekst_prioritet"] = prio
         valgte.append(kk)
+        debug.append(f"{domene}:{score}:egnet")
+
     valgte.sort(key=lambda x: (x.get("fulltekst_prioritet", 0), x.get("score", 0)), reverse=True)
-    return valgte[:5]
+    return valgte[:8], debug[:12]
 
 
 def hent_url_tekst_direkte(url):
@@ -1004,16 +1039,20 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
     return fakta
 
 
-def hent_fulltekst_fakta_for_kamp(kamp, kandidater):
+def hent_fulltekst_fakta_for_kamp(kamp, kandidater, maks_forsok=5):
     """Prøv prioriterte kilder og returner ekstraherte fakta, ikke rå artikkeltekst."""
-    egnet = fulltekst_egnet_kandidater(kandidater)
+    egnet, debug = fulltekst_egnet_kandidater(kandidater, kamp=kamp)
+    if debug:
+        print("  → Fulltekst-kandidater: " + "; ".join(debug))
     if not egnet:
         print("  → Fulltekst: ingen egnede kilder etter blokkering av Reuters/ESPN")
-        return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100}
+        return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "_forsok_url": 0}
 
-    for k in egnet:
+    forsok_url = 0
+    for k in egnet[:max(0, maks_forsok)]:
         url = k.get("link", "")
         domene = domene_fra_url(url)
+        forsok_url += 1
         print(f"  → Fulltekst: prøver {domene}")
         html_text = hent_url_tekst(url)
         tekst = ekstraher_artikkeltekst_fra_html(html_text)
@@ -1022,10 +1061,12 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater):
             fakta = ekstraher_fakta_fra_fulltekst(tekst, kamp, url)
             fakta["score"] = score
             fakta["versjon"] = FULLTEKST_CACHE_VERSION
+            fakta["_forsok_url"] = forsok_url
             print(f"  → Fulltekst: {domene} OK, score {score}")
             return fakta
         print(f"    Fulltekst: {domene} lav score ({score})")
-    return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100}
+
+    return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "_forsok_url": forsok_url}
 
 
 def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller):
@@ -1053,12 +1094,13 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         return entry, fulltekst_teller
 
     try:
-        fakta = hent_fulltekst_fakta_for_kamp(kamp, kandidater)
+        fakta = hent_fulltekst_fakta_for_kamp(kamp, kandidater, MAX_FULLTEKST_PER_KJORING - fulltekst_teller)
     except Exception as e:
         print(f"  ADVARSEL: Fulltekst-henting feilet: {e}")
         fakta = {"status": "feilet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "feil": str(e)[:200]}
 
-    fulltekst_teller += 1
+    forsok_url = int(fakta.pop("_forsok_url", 0)) if isinstance(fakta, dict) else 0
+    fulltekst_teller += forsok_url
     entry["fulltekst_fakta"] = fakta
     cache[key] = entry
     skriv_serper_cache(cache)
