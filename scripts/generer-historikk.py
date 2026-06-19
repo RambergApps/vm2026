@@ -54,7 +54,7 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v9-no-site-operator"
+FULLTEKST_CACHE_VERSION        = "v10-goal-events"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
 OFFISIELL_KILDE_SOK_VERSION    = "v9-no-site-operator"
@@ -706,6 +706,286 @@ def finn_navn_i_tekst(pattern, tekst, hjemme=None, borte=None):
     return rens_spillernavn(m.group(1), hjemme, borte)
 
 
+def lag_aliaser_for_match(lag):
+    """Aliasliste brukt ved enkel laggjenkjenning i kamptekst."""
+    aliaser = []
+    for a in aliases_for(lag):
+        if a:
+            aliaser.append(a)
+    norsk = visningsnavn_lag(lag)
+    if norsk and norsk not in aliaser:
+        aliaser.append(norsk)
+    # Noen vanlige skrivemåter i kilder.
+    ekstra = {
+        "Bosnia & Herzegovina": ["Bosnia and Herzegovina", "Bosnia-Herzegovina", "Bosnia", "Bosnia Herzegovina", "Bosnia and Herzgovina", "Bosnia Herzgovina"],
+        "Czech Republic": ["Czechia", "Czech Republic", "Czechs"],
+        "South Africa": ["South Africa", "Bafana Bafana"],
+        "Uzbekistan": ["Uzbekistan", "Uzbeks"],
+        "Colombia": ["Colombia", "Colombians", "South Americans"],
+        "Switzerland": ["Switzerland", "Swiss"],
+        "Ghana": ["Ghana", "Black Stars"],
+        "Panama": ["Panama", "Panamanians"],
+    }
+    aliaser.extend(ekstra.get(lag, []))
+    # Lengste først gjør regex-/kontekstsjekk mer presis.
+    return sorted({a for a in aliaser if a}, key=len, reverse=True)
+
+
+def lag_regex(lag):
+    aliaser = lag_aliaser_for_match(lag)
+    return r"(?:" + "|".join(re.escape(a) for a in aliaser) + r")"
+
+
+def finn_lag_i_kontekst(kontekst, kamp):
+    """Returner hjemme-/bortelag hvis konteksten tydelig peker på ett av dem."""
+    if not kontekst:
+        return ""
+    lav = kontekst.lower()
+    treff = []
+    for lag in [kamp.get("hjemmelag", ""), kamp.get("bortelag", "")]:
+        for alias in lag_aliaser_for_match(lag):
+            if alias and re.search(r"\b" + re.escape(alias.lower()) + r"\b", lav):
+                treff.append(lag)
+                break
+    if len(treff) == 1:
+        return treff[0]
+    return ""
+
+
+def gjett_scorer_lag_fra_kontekst(navn, kontekst, kamp, maaltype=""):
+    """
+    Forsøk å knytte målscorer til lag. Returnerer tom streng hvis vi ikke er trygge.
+    Dette er bevisst konservativt for å unngå feil som at en motspiller blir kreditert vinnerlaget.
+    """
+    if not navn:
+        return ""
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    h = int(kamp.get("hjemme", 0) or 0)
+    b = int(kamp.get("borte", 0) or 0)
+    vinner = hjemme if h > b else borte if b > h else ""
+    taper = borte if h > b else hjemme if b > h else ""
+    ctx = re.sub(r"\s+", " ", kontekst or " ").strip()
+    lav = ctx.lower()
+
+    # Direkte "for TEAM" / "TEAM goal" / "gave TEAM" / "earned TEAM"-mønstre.
+    for lag in [hjemme, borte]:
+        lr = lag_regex(lag)
+        safe_patterns = [
+            rf"(?i)\bfor\s+{lr}\b",
+            rf"(?i)\b{lr}\s+(?:goal|goals|scorer|scorers)\b",
+            rf"(?i)\b(?:gave|gives|give|earned|earns|earn|secured|secures|seal(?:ed)?|helped)\s+{lr}\b",
+            rf"(?i)\b{lr}\s+(?:a|an|the)?\s*(?:victory|win|draw|point)\b",
+        ]
+        if any(re.search(pat, ctx) for pat in safe_patterns):
+            return lag
+
+    # Hvis det står "X scored ... to earn Ghana a 1-0 victory", peker det på vinnerlaget.
+    if vinner:
+        vr = lag_regex(vinner)
+        if re.search(rf"(?i)\b(?:earn|earned|give|gave|secure|secured|seal|sealed)\s+{vr}\b", ctx):
+            return vinner
+
+    # Eneste mål / winner i en kamp med én scoring er normalt vinnerlaget.
+    if vinner and h + b == 1 and any(x in lav for x in ["winner", "only goal", "lone goal", "match's only goal", "match’s only goal", "last-gasp", "stoppage time"]):
+        return vinner
+
+    # Uavgjort: equaliser/penalty + tydelig team i samme setning.
+    if h == b and maaltype in {"penalty", "equaliser", "equalizer"}:
+        lag = finn_lag_i_kontekst(ctx, kamp)
+        if lag:
+            return lag
+
+    return ""
+
+
+def legg_til_goal_event(events, spiller, lag, minutt="", maaltype=""):
+    spiller = rens_spillernavn(spiller)
+    lag = lag or ""
+    if not spiller:
+        return
+    key = (spiller.lower(), lag.lower(), str(minutt).lower(), maaltype.lower())
+    for e in events:
+        if (e.get("spiller", "").lower(), e.get("lag", "").lower(), str(e.get("minutt", "")).lower(), e.get("type", "").lower()) == key:
+            return
+    events.append({
+        "spiller": spiller,
+        "lag": lag,
+        "minutt": str(minutt or "").strip(),
+        "type": maaltype or "goal",
+    })
+
+
+def fullfor_spillernavn(kortnavn, kjente_navn):
+    """Utvid f.eks. Manzambi -> Johan Manzambi hvis vi allerede kjenner fullt navn."""
+    if not kortnavn:
+        return kortnavn
+    lav = kortnavn.lower()
+    for kjent in kjente_navn or []:
+        if kjent and kjent.lower().endswith(" " + lav):
+            return kjent
+    return kortnavn
+
+
+def parse_goal_section(segment, lag, kamp, kjente_navn=None):
+    """Parse 'Switzerland goals: Manzambi (71, 90) Vargas (84), Xhaka pen (90+7)'."""
+    events = []
+    if not segment:
+        return events
+    # Begrens segmentet slik at Jina/FIFA-navigasjon ikke spiser enorme mengder tekst.
+    segment = re.split(r"(?i)\b(?:match facts|line-ups|standings|next match|fixtures|also read|related)\b", segment[:450])[0]
+    # Stopp ved setningsslutt hvis det kommer mye annet innhold.
+    segment = segment.split(". ")[0]
+    pat = re.compile(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})(?:\s+(pen|penalty|og|own goal))?\s*\(([^)]*?\d[^)]*)\)")
+    for m in pat.finditer(segment):
+        spiller = rens_spillernavn(m.group(1), kamp.get("hjemmelag"), kamp.get("bortelag"))
+        spiller = fullfor_spillernavn(spiller, kjente_navn or [])
+        typ = (m.group(2) or "goal").lower()
+        if typ == "pen":
+            typ = "penalty"
+        minutt = m.group(3).strip()
+        legg_til_goal_event(events, spiller, lag, minutt, typ)
+    return events
+
+
+def ekstraher_goal_events_fra_tekst(tekst, kamp, kjente_navn=None):
+    """
+    Trekk ut mål som strukturerte hendelser med spiller + lag når teksten gjør det trygt.
+    Returnerer kun hendelser hvor lag er kjent eller sterkt utledet.
+    """
+    events = []
+    if not tekst:
+        return events
+    tekst = re.sub(r"\s+", " ", tekst)
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+
+    # 1) Team-linjene fra FIFA/CONCACAF: "Switzerland goals: ... Bosnia goal: ..."
+    section_hits = []
+    for lag in [hjemme, borte]:
+        for alias in lag_aliaser_for_match(lag):
+            pattern = re.compile(rf"(?i)\b{re.escape(alias)}\s+goals?\s*:\s*")
+            for m in pattern.finditer(tekst):
+                section_hits.append((m.start(), m.end(), lag, alias))
+    section_hits.sort(key=lambda x: x[0])
+    for i, (start, end, lag, alias) in enumerate(section_hits):
+        neste = section_hits[i + 1][0] if i + 1 < len(section_hits) else min(len(tekst), end + 450)
+        segment = tekst[end:neste]
+        for ev in parse_goal_section(segment, lag, kamp, kjente_navn=kjente_navn):
+            legg_til_goal_event(events, ev["spiller"], ev["lag"], ev.get("minutt", ""), ev.get("type", "goal"))
+
+    # 2) "Second-half goals from A and B gave Colombia ..."
+    m = re.search(
+        r"(?i:second-half goals from)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+and\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,2})\s+(?:gave|give|helped|secured|sealed)\s+([^.,;]{0,80})",
+        tekst,
+    )
+    if m:
+        # I setninger som "goals from A and B gave Colombia a 3-1 victory over Uzbekistan"
+        # skal laget etter "gave" prioriteres, ikke begge lagene i konteksten.
+        ctx_after = m.group(3).strip()
+        lag = ""
+        for kandidat_lag in [hjemme, borte]:
+            for alias in lag_aliaser_for_match(kandidat_lag):
+                if re.match(r"(?i)^" + re.escape(alias) + r"\b", ctx_after):
+                    lag = kandidat_lag
+                    break
+            if lag:
+                break
+        if not lag:
+            lag = finn_lag_i_kontekst(ctx_after, kamp)
+        if lag:
+            for g in [m.group(1), m.group(2)]:
+                spiller = fullfor_spillernavn(rens_spillernavn(g, hjemme, borte), kjente_navn or [])
+                legg_til_goal_event(events, spiller, lag, "second half", "goal")
+
+    # 3) "A late penalty from Teboho Mokoena secured South Africa a 1-1 draw"
+    for m in re.finditer(r"(?i)(?:penalty|spot-kick)\s+from\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?:secured|gave|earned|rescued|helped)\s+([^.,;]{0,80})", tekst):
+        lag = finn_lag_i_kontekst(m.group(2), kamp)
+        spiller = fullfor_spillernavn(rens_spillernavn(m.group(1), hjemme, borte), kjente_navn or [])
+        if lag:
+            legg_til_goal_event(events, spiller, lag, "", "penalty")
+
+    # 4) "Daniel Muñoz scored the opening goal for Colombia ..."
+    for m in re.finditer(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:scored|netted|struck|headed|fired|converted))\s+([^.;]{0,160})", tekst):
+        spiller = fullfor_spillernavn(rens_spillernavn(m.group(1), hjemme, borte), kjente_navn or [])
+        ctx = m.group(0) + " " + m.group(2)
+        typ = "penalty" if re.search(r"(?i)penalty|spot-kick|from the spot", ctx) else "goal"
+        lag = gjett_scorer_lag_fra_kontekst(spiller, ctx, kamp, typ)
+        minutt = ""
+        mm = re.search(r"(90\s*[’']?\s*\+\s*\d+|\d{1,2}(?:st|nd|rd|th)?\s+minute|\d{1,2}[’'])", ctx, flags=re.I)
+        if mm:
+            minutt = mm.group(1)
+        if lag:
+            legg_til_goal_event(events, spiller, lag, minutt, typ)
+
+    # 5) "Luis Diaz scored one and set up another against..." + team i nærheten.
+    for m in re.finditer(r"(?:brilliant\s+)?([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:scored one and set up another)", tekst):
+        start = max(0, m.start() - 180)
+        end = min(len(tekst), m.end() + 180)
+        ctx = tekst[start:end]
+        lag = finn_lag_i_kontekst(ctx, kamp)
+        spiller = fullfor_spillernavn(rens_spillernavn(m.group(1), hjemme, borte), kjente_navn or [])
+        if lag:
+            legg_til_goal_event(events, spiller, lag, "", "goal")
+
+    # Rydd: behold bare hendelser med sikkert lag og unngå dubletter på spiller/lag/minutt.
+    ryddet = []
+    sett = set()
+    for ev in events:
+        spiller = ev.get("spiller", "")
+        lag = ev.get("lag", "")
+        if not spiller or not lag:
+            continue
+        key = (spiller.lower(), lag.lower(), ev.get("minutt", "").lower())
+        if key in sett:
+            continue
+        sett.add(key)
+        ryddet.append(ev)
+    return ryddet[:8]
+
+
+def spillere_for_lag(goal_events, lag):
+    navn = []
+    for ev in goal_events or []:
+        spiller = ev.get("spiller")
+        if ev.get("lag") != lag or not spiller:
+            continue
+        # Unngå både "Johan Manzambi" og "Manzambi" i samme liste.
+        if any(n.lower() == spiller.lower() or n.lower().endswith(" " + spiller.lower()) or spiller.lower().endswith(" " + n.lower()) for n in navn):
+            # Behold det lengste navnet.
+            for i, n in enumerate(list(navn)):
+                if spiller.lower().endswith(" " + n.lower()) and len(spiller) > len(n):
+                    navn[i] = spiller
+            continue
+        navn.append(spiller)
+    return navn
+
+
+def event_minutt_til_norsk(ev):
+    minutt = (ev or {}).get("minutt", "") or ""
+    ml = minutt.lower()
+    if "90" in ml and "+" in ml:
+        return "på overtid"
+    if "second half" in ml:
+        return "etter pause"
+    if re.search(r"\b(6|6th|sixth)\b", ml):
+        return "tidlig i kampen"
+    if minutt:
+        return f"i {minutt}" if "minute" not in ml else minutt
+    return ""
+
+
+def join_navn(navn):
+    navn = [n for n in navn if n]
+    if not navn:
+        return ""
+    if len(navn) == 1:
+        return navn[0]
+    if len(navn) == 2:
+        return f"{navn[0]} og {navn[1]}"
+    return f"{', '.join(navn[:-1])} og {navn[-1]}"
+
+
 
 # ── FULLTEKST / KILDEFAKTA ───────────────────────────────────────────────────
 
@@ -1084,12 +1364,18 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
         "substitutes": "substitutes" in lav or "substitute" in lav or "came off the bench" in lav,
         "debutants": "debutants" in lav or "debutant" in lav,
         "scorere": [],
+        "goal_events": [],
         "penalty_scorer": "",
         "lead_scorer": "",
         "brace_scorer": "",
         "sub_names": [],
         "minute_text": "",
     }
+
+    # Strukturerte mål med spiller + lag. Dette brukes primært i norsk recap,
+    # fordi rene scorerlister kan blande spillere fra begge lag.
+    fakta["goal_events"] = ekstraher_goal_events_fra_tekst(tekst, kamp)
+
 
     # Minutt/tilleggstid.
     if re.search(r"90\s*[’']?\s*\+\s*5|90\+5|95th-minute|fifth minute of second-half stoppage", lav):
@@ -1181,6 +1467,19 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
     if fakta["lead_scorer"] and fakta["lead_scorer"] not in fakta["scorere"]:
         fakta["scorere"].append(fakta["lead_scorer"])
 
+    # Kjør mål-event-ekstraksjon én gang til med kjente fulle navn, slik at
+    # korte FIFA-linjer som "Manzambi (71, 90)" kan bli "Johan Manzambi".
+    kjente_navn = list(fakta.get("sub_names", []) or []) + list(fakta.get("scorere", []) or [])
+    ekstra_events = ekstraher_goal_events_fra_tekst(tekst, kamp, kjente_navn=kjente_navn)
+    for ev in ekstra_events:
+        legg_til_goal_event(
+            fakta["goal_events"],
+            ev.get("spiller", ""),
+            ev.get("lag", ""),
+            ev.get("minutt", ""),
+            ev.get("type", "goal"),
+        )
+
     return fakta
 
 
@@ -1264,6 +1563,32 @@ def merge_fulltekst_fakta(detaljer, fakta):
         if fakta.get(felt):
             detaljer[felt] = fakta.get(felt)
 
+    # Strukturerte mål fra fulltekst skal ha høyere prioritet enn rå scorerlister.
+    goal_events = []
+    for ev in list(fakta.get("goal_events", []) or []) + list(detaljer.get("goal_events", []) or []):
+        if not isinstance(ev, dict):
+            continue
+        spiller = ev.get("spiller", "")
+        lag = ev.get("lag", "")
+        if not spiller or not lag:
+            continue
+        minutt = str(ev.get("minutt", "")).lower()
+        # Unngå både "Johan Manzambi" og "Manzambi" som separate events for samme lag/minutt.
+        duplikat = False
+        for existing in goal_events:
+            ex_spiller = existing.get("spiller", "")
+            ex_lag = existing.get("lag", "")
+            ex_minutt = str(existing.get("minutt", "")).lower()
+            if ex_lag.lower() == lag.lower() and ex_minutt == minutt:
+                if ex_spiller.lower() == spiller.lower() or ex_spiller.lower().endswith(" " + spiller.lower()) or spiller.lower().endswith(" " + ex_spiller.lower()):
+                    if len(spiller) > len(ex_spiller):
+                        existing["spiller"] = spiller
+                    duplikat = True
+                    break
+        if not duplikat:
+            goal_events.append(dict(ev))
+    detaljer["goal_events"] = goal_events[:8]
+
     for felt in ["scorere", "sub_names"]:
         unike = []
         for n in list(fakta.get(felt, []) or []) + list(detaljer.get(felt, []) or []):
@@ -1298,6 +1623,7 @@ def utled_kampdetaljer(kamp, kandidater, fulltekst_fakta=None):
         "substitutes": "substitutes" in lav or "substitute" in lav,
         "debutants": "debutants" in lav or "debutant" in lav,
         "scorere": [],
+        "goal_events": ekstraher_goal_events_fra_tekst(samlet, kamp),
         "penalty_scorer": "",
         "sub_names": [],
         "minute_text": "",
@@ -1372,11 +1698,19 @@ def lag_detaljsetning(kamp, detaljer):
     b = kamp["borte"]
     hnavn = visningsnavn_lag(hjemme)
     bnavn = visningsnavn_lag(borte)
-    vinner = visningsnavn_lag(hjemme if h > b else borte) if h != b else ""
-    taper = visningsnavn_lag(borte if h > b else hjemme) if h != b else ""
+    vinner_lag = hjemme if h > b else borte if b > h else ""
+    taper_lag = borte if h > b else hjemme if b > h else ""
+    vinner = visningsnavn_lag(vinner_lag) if vinner_lag else ""
+    taper = visningsnavn_lag(taper_lag) if taper_lag else ""
+
+    goal_events = detaljer.get("goal_events", []) or []
+    winner_events = [ev for ev in goal_events if ev.get("lag") == vinner_lag]
+    loser_events = [ev for ev in goal_events if ev.get("lag") == taper_lag]
+    hjemme_events = [ev for ev in goal_events if ev.get("lag") == hjemme]
+    borte_events = [ev for ev in goal_events if ev.get("lag") == borte]
 
     scorere = detaljer.get("scorere", [])
-    scorer_tekst = " og ".join(scorere[:2]) if scorere else ""
+    scorer_tekst = join_navn(scorere[:2]) if scorere else ""
 
     # Spiller med to scoringer/brace fra fulltekst.
     if detaljer.get("brace_scorer") and h != b:
@@ -1385,35 +1719,58 @@ def lag_detaljsetning(kamp, detaljer):
             return f"{navn} ble den store profilen for {vinner} etter å ha kommet inn fra benken og scoret to ganger."
         return f"{navn} ble den store profilen for {vinner} med to scoringer."
 
-    # Uavgjort med sen straffe/utligning.
+    # Uavgjort med sen straffe/utligning. Bruk kun lag-kontekst hvis den finnes.
     if h == b and detaljer.get("penalty"):
-        pnavn = detaljer.get("penalty_scorer") or (scorere[0] if scorere else "")
+        penalty_events = [ev for ev in goal_events if ev.get("type") == "penalty"]
+        pnavn = detaljer.get("penalty_scorer") or (penalty_events[0].get("spiller") if penalty_events else "")
+        plagg = penalty_events[0].get("lag") if penalty_events else ""
         lead = detaljer.get("lead_scorer", "")
         tid = detaljer.get("minute_text") or "mot slutten"
         if pnavn and lead and lead != pnavn:
-            return f"{lead} sendte {hnavn} i ledelsen, men {pnavn} reddet uavgjort for {bnavn} med en straffe {tid}."
+            # Hvis straffelaget er kjent, bruk det. Ellers behold tidligere trygge formulering.
+            redningslag = visningsnavn_lag(plagg) if plagg else bnavn
+            return f"{lead} sendte {hnavn} i ledelsen, men {pnavn} reddet uavgjort for {redningslag} med en straffe {tid}."
         if pnavn:
-            return f"{bnavn} reddet uavgjort med en straffescoring av {pnavn} {tid}."
+            redningslag = visningsnavn_lag(plagg) if plagg else bnavn
+            return f"{redningslag} reddet uavgjort med en straffescoring av {pnavn} {tid}."
         return f"{bnavn} reddet uavgjort med en sen straffescoring."
 
-    # Sen scoring/vinnermål.
-    if scorere and (detaljer.get("winner") or detaljer.get("stoppage") or detaljer.get("late")):
-        tid = detaljer.get("minute_text") or "sent i kampen"
-        if h != b:
-            return f"{scorer_tekst} avgjorde for {vinner} med en scoring {tid}."
-        return f"{scorer_tekst} sørget for en viktig scoring {tid}."
+    # Trygg sen scoring/vinnermål: krever mål-event knyttet til vinnerlaget.
+    # Brukes kun på tette kamper, ellers kan sene 4–1-scoringer feilaktig bli "matchvinner".
+    if h != b and winner_events and abs(h - b) <= 1 and (detaljer.get("winner") or detaljer.get("stoppage") or detaljer.get("late")):
+        ev = winner_events[-1]
+        navn = ev.get("spiller", "")
+        tid = event_minutt_til_norsk(ev) or detaljer.get("minute_text") or "sent i kampen"
+        if h + b == 1:
+            return f"{navn} avgjorde for {vinner} med kampens eneste scoring {tid}."
+        return f"{navn} ble matchvinner for {vinner} med en scoring {tid}."
 
-    # Mål etter pause fra to navngitte spillere.
-    if detaljer.get("second_half_goals") and len(scorere) >= 2 and h != b:
-        return f"Etter pause sørget {scorer_tekst} for at {vinner} dro fra og sikret seieren."
-
-    # Innbyttere + målløs første omgang.
+    # Innbyttere + målløs første omgang. Dette er ofte en bedre hovedvinkel enn full scorerliste.
     sub_names = detaljer.get("sub_names", [])
     if sub_names and h != b:
-        navn = " og ".join(sub_names[:2])
+        navn = join_navn(sub_names[:2])
         if detaljer.get("goalless_first_half"):
             return f"Etter en målløs første omgang ble innbytterne {navn} sentrale da {vinner} tok over kampen."
         return f"Innbytterne {navn} ble viktige da {vinner} avgjorde kampen."
+
+    # Mål etter pause fra vinnerlaget. Ikke bruk motstanderscorere her.
+    if h != b and detaljer.get("second_half_goals"):
+        winner_names = spillere_for_lag(goal_events, vinner_lag)
+        # Unngå å telle samme spiller to ganger ved to scoringer.
+        if len(winner_names) >= 2:
+            navn = join_navn(winner_names[:2])
+            return f"Etter pause sørget {navn} for at {vinner} dro fra og sikret seieren."
+        if len(winner_names) == 1 and not loser_events:
+            return f"{winner_names[0]} var sentral da {vinner} dro fra etter pause."
+
+    # Hvis vi har full måloversikt med lag, bruk en nøktern og trygg formulering.
+    if h != b and winner_events:
+        winner_names = spillere_for_lag(goal_events, vinner_lag)
+        loser_names = spillere_for_lag(goal_events, taper_lag)
+        if winner_names and loser_names:
+            return f"{join_navn(winner_names[:3])} scoret for {vinner}, mens {join_navn(loser_names[:2])} scoret for {taper}."
+        if winner_names:
+            return f"{join_navn(winner_names[:3])} var blant målscorerne for {vinner}."
 
     # Målløs første omgang og klar seier.
     if detaljer.get("goalless_first_half") and h != b:
@@ -1423,12 +1780,11 @@ def lag_detaljsetning(kamp, detaljer):
     if detaljer.get("debutants") and h != b:
         return f"{taper} fikk kjenne nivået i VM-debuten, mens {vinner} åpnet gruppespillet med tre poeng."
 
-    # En navngitt målscorer uten nok kontekst.
+    # En navngitt målscorer uten nok lag-kontekst: ikke koble spilleren til vinnerlaget.
     if scorere:
         return f"{scorer_tekst} var blant spillerne som kom på scoringslisten."
 
     return fallback_kamptekst(hjemme, borte, h, b)
-
 
 def bygg_norsk_kampavsnitt(kamp, kandidater, fulltekst_fakta=None):
     detaljer = utled_kampdetaljer(kamp, kandidater, fulltekst_fakta)
