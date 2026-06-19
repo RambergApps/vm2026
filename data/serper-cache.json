@@ -100,11 +100,11 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v9-no-site-operator",
+      "versjon": "v10-goal-events",
       "kilde_url": "https://www.concacaf.com/competitions/fifa-world-cup/news/panama-opens-world-cup-campaign-with-tough-defeat-to-ghana",
       "domene": "concacaf.com",
       "score": 12,
-      "hentet": "2026-06-19T07:50:55Z",
+      "hentet": "2026-06-19T17:07:36Z",
       "late": true,
       "stoppage": false,
       "winner": false,
@@ -115,6 +115,7 @@
       "substitutes": false,
       "debutants": false,
       "scorere": [],
+      "goal_events": [],
       "penalty_scorer": "",
       "lead_scorer": "",
       "brace_scorer": "",
@@ -228,11 +229,11 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v9-no-site-operator",
+      "versjon": "v10-goal-events",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uzbekistan-colombia-match-report-highlights",
       "domene": "fifa.com",
-      "score": 16,
-      "hentet": "2026-06-19T07:50:57Z",
+      "score": 17,
+      "hentet": "2026-06-19T17:07:44Z",
       "late": true,
       "stoppage": true,
       "winner": false,
@@ -245,6 +246,44 @@
       "scorere": [
         "Luis Diaz",
         "Abbosbek Fayzullaev"
+      ],
+      "goal_events": [
+        {
+          "spiller": "Fayzullaev",
+          "lag": "Uzbekistan",
+          "minutt": "60",
+          "type": "goal"
+        },
+        {
+          "spiller": "Munoz",
+          "lag": "Colombia",
+          "minutt": "40",
+          "type": "goal"
+        },
+        {
+          "spiller": "Diaz",
+          "lag": "Colombia",
+          "minutt": "65",
+          "type": "goal"
+        },
+        {
+          "spiller": "Campaz",
+          "lag": "Colombia",
+          "minutt": "90+9",
+          "type": "goal"
+        },
+        {
+          "spiller": "Abbosbek Fayzullaev",
+          "lag": "Uzbekistan",
+          "minutt": "60",
+          "type": "goal"
+        },
+        {
+          "spiller": "Luis Diaz",
+          "lag": "Colombia",
+          "minutt": "65",
+          "type": "goal"
+        }
       ],
       "penalty_scorer": "Luis Diaz",
       "lead_scorer": "",
@@ -344,8 +383,8 @@
     ],
     "fulltekst_fakta": {
       "status": "ikke_funnet",
-      "versjon": "v9-no-site-operator",
-      "hentet": "2026-06-19T07:50:59Z",
+      "versjon": "v10-goal-events",
+      "hentet": "2026-06-19T17:07:44Z",
       "score": -100
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
@@ -455,11 +494,11 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v9-no-site-operator",
+      "versjon": "v10-goal-events",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
       "domene": "fifa.com",
-      "score": 16,
-      "hentet": "2026-06-19T07:51:00Z",
+      "score": 18,
+      "hentet": "2026-06-19T17:07:53Z",
       "late": true,
       "stoppage": true,
       "winner": false,
@@ -470,6 +509,32 @@
       "substitutes": true,
       "debutants": true,
       "scorere": [],
+      "goal_events": [
+        {
+          "spiller": "Manzambi",
+          "lag": "Switzerland",
+          "minutt": "74, 90",
+          "type": "goal"
+        },
+        {
+          "spiller": "Vargas",
+          "lag": "Switzerland",
+          "minutt": "84",
+          "type": "goal"
+        },
+        {
+          "spiller": "Xhaka",
+          "lag": "Switzerland",
+          "minutt": "90+7",
+          "type": "penalty"
+        },
+        {
+          "spiller": "Mahmic",
+          "lag": "Bosnia & Herzegovina",
+          "minutt": "90+3",
+          "type": "goal"
+        }
+      ],
       "penalty_scorer": "",
       "lead_scorer": "",
       "brace_scorer": "",

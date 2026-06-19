@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-18",
   "dato_norsk": "Torsdag 18. juni 2026",
-  "generert": "2026-06-19T07:51:00Z",
+  "generert": "2026-06-19T17:07:53Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -11,7 +11,7 @@
       "hjemme_score": 1,
       "borte_score": 0,
       "gruppe": "L",
-      "recap_tekst": "Ghana slo Panama 1–0. Caleb Yirenkyi avgjorde for Ghana med en scoring sent i kampen.\n\nDisse to har aldri møttes i et VM. Ghana nådde kvartfinalen i 2010. Panama har aldri vunnet en VM-kamp. Ghana tapte på straffer mot Uruguay i VM 2010-kvartfinalen etter den beryktede Suárez-hendelsen.",
+      "recap_tekst": "Ghana slo Panama 1–0. Caleb Yirenkyi avgjorde for Ghana med kampens eneste scoring sent i kampen.\n\nDisse to har aldri møttes i et VM. Ghana nådde kvartfinalen i 2010. Panama har aldri vunnet en VM-kamp. Ghana tapte på straffer mot Uruguay i VM 2010-kvartfinalen etter den beryktede Suárez-hendelsen.",
       "snippets_raa": [
         "Expert recap and game analysis of the Ghana vs. Panama Fifa World Cup game from 18 June 2026 on ESPN.",
         "Caleb Yirenkyi scored deep into stoppage time to ​earn Ghana a 1-0 victory over ‌Panama in World Cup Group L on Wednesday, ...",
@@ -313,7 +313,7 @@
       "hjemme_score": 1,
       "borte_score": 3,
       "gruppe": "K",
-      "recap_tekst": "Colombia slo Usbekistan 3–1. Luis Diaz og Abbosbek Fayzullaev avgjorde for Colombia med en scoring sent i kampen.\n\nUsbekistan debuterer i VM. Colombia er solide favoritter men Sentral-Asia har overrasket i andre turneringer. Colombia er tilbake i VM etter åtte år borte.",
+      "recap_tekst": "Colombia slo Usbekistan 3–1. Etter pause sørget Munoz og Luis Diaz for at Colombia dro fra og sikret seieren.\n\nUsbekistan debuterer i VM. Colombia er solide favoritter men Sentral-Asia har overrasket i andre turneringer. Colombia er tilbake i VM etter åtte år borte.",
       "snippets_raa": [
         "Second-half goals from Luis Díaz and Jáminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan as the last two teams to begin ...",
         "Second-half goals from Luis Díaz and Jáminton Campaz gave Colombia a 3-1 victory over debutants Uzbekistan. Jun 17, 2026, 09:38 pm - PA. Match Timeline.",
@@ -420,7 +420,7 @@
         "cache_key": "Uzbekistan_Colombia_2026_06_17|1-3",
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 16,
+        "fulltekst_score": 17,
         "offisiell_kilde_sokt": [
           "fifa.com"
         ]
@@ -1009,7 +1009,7 @@
         "cache_key": "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1",
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 16,
+        "fulltekst_score": 18,
         "offisiell_kilde_sokt": [
           "fifa.com"
         ]
