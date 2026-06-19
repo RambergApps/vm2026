@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-19T01:01:04Z",
+  "tidspunkt": "2026-06-19T01:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -49,10 +49,10 @@
       "fd_bortelag": "South Korea",
       "hjemmelag_normalisert": "Mexico",
       "bortelag_normalisert": "South Korea",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-06-19",
       "fd_utcDate": "2026-06-19T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Mexico_South_Korea_2026_06_19"
