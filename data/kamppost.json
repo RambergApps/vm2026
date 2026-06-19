@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-18",
   "dato_norsk": "Torsdag 18. juni 2026",
-  "generert": "2026-06-18T23:39:30Z",
+  "generert": "2026-06-19T00:04:07Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -99,7 +99,10 @@
         "status": "ok",
         "antall_sok": 1,
         "fallback": false,
-        "cache_key": "Ghana_Panama_2026_06_17|1-0"
+        "cache_key": "Ghana_Panama_2026_06_17|1-0",
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100
       },
       "tippinger": {
         "eksakt": [
@@ -376,7 +379,10 @@
         "status": "ok",
         "antall_sok": 1,
         "fallback": false,
-        "cache_key": "Uzbekistan_Colombia_2026_06_17|1-3"
+        "cache_key": "Uzbekistan_Colombia_2026_06_17|1-3",
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100
       },
       "tippinger": {
         "eksakt": [
@@ -657,7 +663,10 @@
         "status": "ok",
         "antall_sok": 1,
         "fallback": false,
-        "cache_key": "Czech_Republic_South_Africa_2026_06_18|1-1"
+        "cache_key": "Czech_Republic_South_Africa_2026_06_18|1-1",
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100
       },
       "tippinger": {
         "eksakt": [
@@ -933,7 +942,10 @@
         "status": "ok",
         "antall_sok": 1,
         "fallback": false,
-        "cache_key": "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1"
+        "cache_key": "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1",
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100
       },
       "tippinger": {
         "eksakt": [],

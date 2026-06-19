@@ -81,7 +81,12 @@
           "avkortet snippet"
         ]
       }
-    ]
+    ],
+    "fulltekst_fakta": {
+      "status": "ikke_funnet",
+      "hentet": "2026-06-19T00:04:04Z",
+      "score": -100
+    }
   },
   "Uzbekistan_Colombia_2026_06_17|1-3": {
     "kamp_id": "Uzbekistan_Colombia_2026_06_17",
@@ -162,7 +167,12 @@
           "bortelag nevnt"
         ]
       }
-    ]
+    ],
+    "fulltekst_fakta": {
+      "status": "ikke_funnet",
+      "hentet": "2026-06-19T00:04:05Z",
+      "score": -100
+    }
   },
   "Czech_Republic_South_Africa_2026_06_18|1-1": {
     "kamp_id": "Czech_Republic_South_Africa_2026_06_18",
@@ -247,7 +257,12 @@
           "resultat nevnt"
         ]
       }
-    ]
+    ],
+    "fulltekst_fakta": {
+      "status": "ikke_funnet",
+      "hentet": "2026-06-19T00:04:06Z",
+      "score": -100
+    }
   },
   "Switzerland_Bosnia___Herzegovina_2026_06_18|4-1": {
     "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -327,6 +342,11 @@
           "avkortet snippet"
         ]
       }
-    ]
+    ],
+    "fulltekst_fakta": {
+      "status": "ikke_funnet",
+      "hentet": "2026-06-19T00:04:06Z",
+      "score": -100
+    }
   }
 }
