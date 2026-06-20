@@ -1,14 +1,4 @@
 {
-  "sist_sjekket": "2026-06-20T05:01:01Z",
-  "kamper": [
-    {
-      "kamp_id": "Turkey_Paraguay_2026_06_19",
-      "hjemmelag": "Turkey",
-      "bortelag": "Paraguay",
-      "dato": "2026-06-19",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-20T05:30:49Z",
+  "kamper": []
 }
