@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-19",
   "dato_norsk": "Fredag 19. juni 2026",
-  "generert": "2026-06-20T09:15:31Z",
+  "generert": "2026-06-20T09:43:48Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -11,7 +11,7 @@
       "hjemme_score": 6,
       "borte_score": 0,
       "gruppe": "B",
-      "recap_tekst": "Canada slo Qatar 6–0.\nJonathan David ble kampens store profil for Canada med hattrick.\nMålene til Canada kom ved Larin (16), David (29 og 45+3 og 90+2), Saliba (64) og Manai (75).\nJonathan David markerte seg med hattrick for Canada.\nQatar avsluttet kampen med ni mann etter to røde kort.\nFor Canada var dette en historisk første VM-seier.\nResultatet sender Canada opp i en sterk posisjon i gruppen.",
+      "recap_tekst": "Canada slo Qatar 6–0.\nDavid scoret to ganger, og Larin og Saliba kom også på scoringslisten for Canada.\nMålene til Canada kom ved Larin (16), David (29 og 45+3 og 90+2), Saliba (64) og Manai (75).\nQatar avsluttet kampen med ni mann etter to røde kort.\nVertsnasjonen fikk dermed en opptur foran eget publikum.\n\nCanada er vertsnasjon. Qatar gikk ut i gruppespillet som eneste vertsnasjon noensinne i 2022.",
       "snippets_raa": [
         "David hat-trick as Canada rout Qatar 6-0 · Qatar down to nine men after red cards for Ahmed and Madibo · Canada lead Group B on goal difference ...",
         "Canada won their first FIFA World Cup match in style as Jonathan David notched a hat-trick and Cyle Larin and Nathan Saliba added goals to ...",
@@ -172,14 +172,19 @@
         }
       ],
       "recap_kvalitet": {
-        "score": 19,
+        "score": 12,
         "status": "ok",
+        "grunnlag": "fulltekst",
+        "source_type": "article_report",
         "antall_sok": 2,
         "fallback": false,
         "cache_key": "Canada_Qatar_2026_06_18|6-0",
+        "serper_score": 19,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 14,
+        "referat_fakta_score": 12,
+        "mangler": [],
         "offisiell_kilde_sokt": [
           "concacaf.com",
           "fifa.com"
@@ -374,7 +379,7 @@
       "hjemme_score": 1,
       "borte_score": 0,
       "gruppe": "A",
-      "recap_tekst": "Mexico slo Sør-Korea 1–0.\nLuis Romo avgjorde for Mexico med kampens eneste scoring i 50.\nDermed ble kampen avgjort på små marginer, etter at Sør-Korea lenge hadde holdt unna.\nAvgjørelsen kom etter en keeperfeil som Mexico utnyttet.\nSeieren sikret samtidig Mexico plass i utslagsrunden.\nVertsnasjonen fikk dermed en opptur foran eget publikum.",
+      "recap_tekst": "Mexico slo Sør-Korea 1–0.\nRomo avgjorde for Mexico med kampens eneste scoring i 50.\nDermed ble kampen avgjort på små marginer, etter at Sør-Korea lenge hadde holdt unna.\nSeieren sikret samtidig Mexico plass i utslagsrunden.\nVertsnasjonen fikk dermed en opptur foran eget publikum.\n\nMexico slo Sør-Korea 3-1 i VM 2018 og 1-0 i VM 2014. Mexico er vertsnasjon og spiller foran hjemmepublikum.",
       "snippets_raa": [
         "Mexico defeated South Korea 1-0 at 2026 FIFA World Cup Group A match, with Luis Romo scoring the lone goal in the 50th minute.",
         "Luis Romo's goal off a keeper error beats South Korea 1-0, sending Mexico top of Group A and first into the World Cup 2026 knockouts.",
@@ -534,14 +539,19 @@
         }
       ],
       "recap_kvalitet": {
-        "score": 16,
+        "score": 11,
         "status": "ok",
+        "grunnlag": "fulltekst",
+        "source_type": "article_report",
         "antall_sok": 1,
         "fallback": false,
         "cache_key": "Mexico_South_Korea_2026_06_18|1-0",
+        "serper_score": 16,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 16,
+        "fulltekst_score": 11,
+        "referat_fakta_score": 11,
+        "mangler": [],
         "offisiell_kilde_sokt": [
           "concacaf.com",
           "fifa.com"
@@ -737,7 +747,7 @@
       "hjemme_score": 2,
       "borte_score": 0,
       "gruppe": "D",
-      "recap_tekst": "USA slo Australia 2–0.\nHaji Wright ble den store profilen for USA med to scoringer.\nUSA fikk dermed full uttelling i en kamp der marginene var viktige.",
+      "recap_tekst": "USA slo Australia 2–0.\nUSA fikk en sterk start på gruppespillet, mens Australia må jakte svar i neste runde.\nUSA fikk dermed full uttelling i en kamp der marginene var viktige.\n\nUSA er vertsnasjon og møter et australsk lag som har vist de kan overraske. I 2022 slo Australia Danmark i 16-delsfinalen. Folarin Balogun er USAs store stjerne.",
       "snippets_raa": [
         "Nestory Irankunda and Connor Metcalfe scored and Australia spoiled Türkiye's return to the World Cup for the first time in 24 years with a 2-0 victory on ...",
         "The Socceroos enjoyed a historic moment as Nestory Irankunda became the nation's youngest ever World Cup scorer at 20 years and 125 days.",
@@ -847,6 +857,23 @@
           ]
         },
         {
+          "title": "USA v Australia | Group D | FIFA World Cup 2026™ | Highlights",
+          "link": "https://www.fifa.com/en/watch/1uOCG5cpsR45kemo4IdCO3",
+          "source": "",
+          "date": "12 hours ago",
+          "snippet": "Watch highlights of the match between USA and Australia played at Seattle Stadium on Friday 19 June at 12:00 (local time).",
+          "query": "FIFA fifa.com USA Australia 2-0 World Cup 2026 match report recap goal scorer full time",
+          "score": 1,
+          "score_grunner": [
+            "god kilde",
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "negativt ord: highlights",
+            "negativt ord: watch"
+          ],
+          "offisiell_kilde_sok": "fifa.com"
+        },
+        {
           "title": "The Latest from the 2026 FIFA World Cup in Canada | northeastNOW",
           "link": "https://northeastnow.com/2026/06/15/the-latest-from-the-2026-fifa-world-cup-in-canada-4/",
           "source": "",
@@ -867,32 +894,28 @@
           "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": 0,
           "score_grunner": []
-        },
-        {
-          "title": "Group D game 1 , USA top the group with three points, Australia ...",
-          "link": "https://www.facebook.com/100063488273728/posts/group-d-game-1-usa-top-the-group-with-three-points-australia-behind-goal-differe/1679746750818251/",
-          "source": "",
-          "date": "",
-          "snippet": "Group D game 1 , USA top the group with three points, Australia behind ,goal difference separate them .",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -4,
-          "score_grunner": [
-            "blokkert domene",
-            "hjemmelag nevnt",
-            "bortelag nevnt"
-          ]
         }
       ],
       "recap_kvalitet": {
-        "score": 12,
-        "status": "ok",
+        "score": 2,
+        "status": "tynt_fulltekstgrunnlag",
+        "grunnlag": "fulltekst",
+        "source_type": "match_details",
         "antall_sok": 1,
-        "fallback": false,
+        "fallback": true,
         "cache_key": "USA_Australia_2026_06_19|2-0",
+        "serper_score": 12,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "concacaf.com",
-        "fulltekst_score": 18,
+        "fulltekst_score": 13,
+        "referat_fakta_score": 2,
+        "mangler": [
+          "article_report",
+          "goal_events",
+          "referat_fakta_score"
+        ],
         "offisiell_kilde_sokt": [
+          "fifa.com",
           "concacaf.com"
         ]
       },

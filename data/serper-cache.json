@@ -711,11 +711,14 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v13-lengre-kampreferater",
+      "versjon": "v14-fifa-artikkel-fulltekst",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
+      "kilde_tittel": "Canada 6-0 Qatar | Match report and highlights",
       "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
       "score": 14,
-      "hentet": "2026-06-20T09:15:30Z",
+      "hentet": "2026-06-20T09:43:25Z",
       "late": true,
       "stoppage": true,
       "winner": false,
@@ -783,7 +786,10 @@
       "knockout_secured": false,
       "group_top": false,
       "home_crowd": true,
-      "keeper_error": false
+      "keeper_error": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true
     },
     "offisiell_kilde_sok_versjon": "v9-no-site-operator",
     "offisiell_kilde_sokt": "2026-06-20T09:15:23Z",
@@ -975,11 +981,14 @@
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v13-lengre-kampreferater",
+      "versjon": "v14-fifa-artikkel-fulltekst",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-korea-republic-highlights-match-report",
+      "kilde_tittel": "Mexico 1-0 Korea Republic | Match report and highlights",
       "domene": "fifa.com",
-      "score": 16,
-      "hentet": "2026-06-19T22:01:15Z",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "score": 11,
+      "hentet": "2026-06-20T09:43:32Z",
       "late": true,
       "stoppage": false,
       "winner": false,
@@ -1011,7 +1020,18 @@
       "record_pass_player": "",
       "record_passes": "",
       "star_player": "",
-      "scored_and_assisted": false
+      "scored_and_assisted": false,
+      "hat_trick_player": "",
+      "red_cards": 0,
+      "nine_men": false,
+      "first_world_cup_win": false,
+      "knockout_secured": true,
+      "group_top": false,
+      "home_crowd": true,
+      "keeper_error": false,
+      "referat_fakta_score": 11,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true
     }
   },
   "USA_Australia_2026_06_19|2-0": {
@@ -1124,6 +1144,23 @@
         ]
       },
       {
+        "title": "USA v Australia | Group D | FIFA World Cup 2026™ | Highlights",
+        "link": "https://www.fifa.com/en/watch/1uOCG5cpsR45kemo4IdCO3",
+        "source": "",
+        "date": "12 hours ago",
+        "snippet": "Watch highlights of the match between USA and Australia played at Seattle Stadium on Friday 19 June at 12:00 (local time).",
+        "query": "FIFA fifa.com USA Australia 2-0 World Cup 2026 match report recap goal scorer full time",
+        "score": 1,
+        "score_grunner": [
+          "god kilde",
+          "hjemmelag nevnt",
+          "bortelag nevnt",
+          "negativt ord: highlights",
+          "negativt ord: watch"
+        ],
+        "offisiell_kilde_sok": "fifa.com"
+      },
+      {
         "title": "The Latest from the 2026 FIFA World Cup in Canada | northeastNOW",
         "link": "https://northeastnow.com/2026/06/15/the-latest-from-the-2026-fifa-world-cup-in-canada-4/",
         "source": "",
@@ -1189,21 +1226,25 @@
         ]
       }
     ],
-    "offisiell_kilde_sok_versjon": "v9-no-site-operator",
-    "offisiell_kilde_sokt": "2026-06-19T22:01:17Z",
+    "offisiell_kilde_sok_versjon": "v10-fifa-forst-artikkeltype",
+    "offisiell_kilde_sokt": "2026-06-20T09:43:34Z",
     "offisiell_kilde_domener": [
+      "fifa.com",
       "concacaf.com"
     ],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v13-lengre-kampreferater",
-      "kilde_url": "https://www.concacaf.com/competitions/fifa-world-cup/news/usa-seek-to-maintain-momentum-against-australia",
+      "versjon": "v14-fifa-artikkel-fulltekst",
+      "kilde_url": "https://www.concacaf.com/competitions/fifa-world-cup/matches/29987f1d382c4f93999eed36c06c7b68/united-states-vs-australia",
+      "kilde_tittel": "United States Vs Australia | Fifa World Cup - Concacaf",
       "domene": "concacaf.com",
-      "score": 18,
-      "hentet": "2026-06-19T22:01:20Z",
-      "late": false,
-      "stoppage": false,
-      "winner": true,
+      "source_type": "match_details",
+      "fulltekst_riktig_kamp": true,
+      "score": 13,
+      "hentet": "2026-06-20T09:43:47Z",
+      "late": true,
+      "stoppage": true,
+      "winner": false,
       "penalty": false,
       "equaliser": false,
       "goalless_first_half": false,
@@ -1211,13 +1252,11 @@
       "second_half_scorers": [],
       "substitutes": false,
       "debutants": false,
-      "scorere": [
-        "Haji Wright"
-      ],
+      "scorere": [],
       "goal_events": [],
       "penalty_scorer": "",
       "lead_scorer": "",
-      "brace_scorer": "Haji Wright",
+      "brace_scorer": "",
       "sub_names": [],
       "minute_text": "",
       "lead_minute_text": "",
@@ -1225,7 +1264,23 @@
       "record_pass_player": "",
       "record_passes": "",
       "star_player": "",
-      "scored_and_assisted": false
+      "scored_and_assisted": false,
+      "hat_trick_player": "",
+      "red_cards": 0,
+      "nine_men": false,
+      "first_world_cup_win": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "home_crowd": false,
+      "keeper_error": false,
+      "referat_fakta_score": 2,
+      "mangler": [
+        "article_report",
+        "goal_events",
+        "referat_fakta_score"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "retry_antall": 1
     }
   }
 }
