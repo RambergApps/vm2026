@@ -848,7 +848,7 @@
       "fifa.com"
     ],
     "fifa_direct_probe_versjon": "v3-fifa-slug-pattern",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T10:06:57Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T10:30:53Z"
   },
   "Mexico_South_Korea_2026_06_18|1-0": {
     "kamp_id": "Mexico_South_Korea_2026_06_18",
@@ -1200,7 +1200,7 @@
       "venter_pa_bedre_kilde": false
     },
     "fifa_direct_probe_versjon": "v3-fifa-slug-pattern",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T10:06:58Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T10:30:53Z"
   },
   "USA_Australia_2026_06_19|2-0": {
     "kamp_id": "USA_Australia_2026_06_19",
@@ -1547,7 +1547,7 @@
       "venter_pa_bedre_kilde": false
     },
     "fifa_direct_probe_versjon": "v3-fifa-slug-pattern",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T10:07:11Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T10:30:54Z"
   },
   "Scotland_Morocco_2026_06_19|0-1": {
     "kamp_id": "Scotland_Morocco_2026_06_19",
@@ -2356,7 +2356,7 @@
       }
     ],
     "fifa_direct_probe_versjon": "v3-fifa-slug-pattern",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T10:07:15Z",
+    "fifa_direct_probe_sist_bygget": "2026-06-20T10:30:54Z",
     "fulltekst_fakta": {
       "status": "ikke_funnet",
       "versjon": "v15-fifa-direct-retry",
