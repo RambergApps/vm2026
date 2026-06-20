@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-19",
   "dato_norsk": "Fredag 19. juni 2026",
-  "generert": "2026-06-20T09:43:48Z",
+  "generert": "2026-06-20T10:07:30Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -13,13 +13,77 @@
       "gruppe": "B",
       "recap_tekst": "Canada slo Qatar 6–0.\nDavid scoret to ganger, og Larin og Saliba kom også på scoringslisten for Canada.\nMålene til Canada kom ved Larin (16), David (29 og 45+3 og 90+2), Saliba (64) og Manai (75).\nQatar avsluttet kampen med ni mann etter to røde kort.\nVertsnasjonen fikk dermed en opptur foran eget publikum.\n\nCanada er vertsnasjon. Qatar gikk ut i gruppespillet som eneste vertsnasjon noensinne i 2022.",
       "snippets_raa": [
-        "David hat-trick as Canada rout Qatar 6-0 · Qatar down to nine men after red cards for Ahmed and Madibo · Canada lead Group B on goal difference ...",
-        "Canada won their first FIFA World Cup match in style as Jonathan David notched a hat-trick and Cyle Larin and Nathan Saliba added goals to ...",
-        "Jonathan David scored three goals and Canada won its first World Cup match while all but securing a spot in the knockout round with a 6-0 ...",
-        "Game summary of the Canada vs. Qatar Fifa World Cup game, final score 6-0, from 18 June 2026 on ESPN (UK).",
-        "Canada made 97 touches in the attacking box against Qatar, 26 more than any other team in a World Cup match on record. Mexico 1-0 South Korea. ( ..."
+        "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+        "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+        "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+        "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+        "David hat-trick as Canada rout Qatar 6-0 · Qatar down to nine men after red cards for Ahmed and Madibo · Canada lead Group B on goal difference ..."
       ],
       "serper_kandidater": [
+        {
+          "title": "Canada 6-0 Qatar | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Canada 6-0 Qatar | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Canada 6-0 Qatar | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-canada-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Canada 6-0 Qatar | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-canada-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Canada vs Qatar, final score 6-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
         {
           "title": "David hat-trick as Canada crush nine-man Qatar 6-0 to earn first ...",
           "link": "https://www.reuters.com/sports/soccer/david-hat-trick-canada-crush-nine-man-qatar-6-0-earn-first-world-cup-finals-win-2026-06-19/",
@@ -35,25 +99,6 @@
             "resultat nevnt",
             "avkortet snippet"
           ]
-        },
-        {
-          "title": "Canada 6-0 Qatar | Match report and highlights",
-          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
-          "source": "",
-          "date": "1 day ago",
-          "snippet": "Canada won their first FIFA World Cup match in style as Jonathan David notched a hat-trick and Cyle Larin and Nathan Saliba added goals to ...",
-          "query": "FIFA fifa.com Canada Qatar 6-0 World Cup 2026 match report recap goal scorer full time",
-          "score": 17,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "kampreferat-tittel",
-            "negativt ord: highlights",
-            "avkortet snippet"
-          ],
-          "offisiell_kilde_sok": "fifa.com"
         },
         {
           "title": "Jonathan David's hat trick propels Canada to its first World Cup win ...",
@@ -128,47 +173,6 @@
             "bortelag nevnt",
             "resultat nevnt"
           ]
-        },
-        {
-          "title": "Hoilett - Grokipedia",
-          "link": "https://grokipedia.com/page/hoilett",
-          "source": "",
-          "date": "",
-          "snippet": "David Wayne Junior Hoilett (born June 5, 1990) is a Canadian professional soccer player who plays as a left winger for Scottish Premiership club Hibernian ...",
-          "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -2,
-          "score_grunner": [
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Canada 6-0 Qatar Canada routs nine-man Qatar Co-hosts secure ...",
-          "link": "https://www.facebook.com/WIONews/posts/fifaworldcup2026-canada-6-0-qatarcanada-routs-nine-man-qatarco-hosts-secure-firs/1371441811761656/",
-          "source": "",
-          "date": "1 day ago",
-          "snippet": "#FIFAWorldCup2026 | Canada 6-0 Qatar Canada routs nine-man Qatar Co-hosts secure first-ever World Cup win Jyotsna Kumar and Diksha Bisla tell ...",
-          "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -4,
-          "score_grunner": [
-            "blokkert domene",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "SportsGully (@sportsgully) • Threads, Say more",
-          "link": "https://www.threads.com/@sportsgully",
-          "source": "",
-          "date": "",
-          "snippet": "73.6K Followers • 3.7K Threads • Where the game's heartbeat echoes through every Gully.Dive in! HD edits | Stats | Latest news🗞️ | videos . See the...",
-          "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -5,
-          "score_grunner": [
-            "negativt ord: follow",
-            "avkortet snippet"
-          ]
         }
       ],
       "recap_kvalitet": {
@@ -184,6 +188,11 @@
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 14,
         "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 0,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
         "mangler": [],
         "offisiell_kilde_sokt": [
           "concacaf.com",
@@ -381,13 +390,141 @@
       "gruppe": "A",
       "recap_tekst": "Mexico slo Sør-Korea 1–0.\nRomo avgjorde for Mexico med kampens eneste scoring i 50.\nDermed ble kampen avgjort på små marginer, etter at Sør-Korea lenge hadde holdt unna.\nSeieren sikret samtidig Mexico plass i utslagsrunden.\nVertsnasjonen fikk dermed en opptur foran eget publikum.\n\nMexico slo Sør-Korea 3-1 i VM 2018 og 1-0 i VM 2014. Mexico er vertsnasjon og spiller foran hjemmepublikum.",
       "snippets_raa": [
-        "Mexico defeated South Korea 1-0 at 2026 FIFA World Cup Group A match, with Luis Romo scoring the lone goal in the 50th minute.",
-        "Luis Romo's goal off a keeper error beats South Korea 1-0, sending Mexico top of Group A and first into the World Cup 2026 knockouts.",
-        "Mexico goal: Romo (50). Luis Romo was the hero for co-hosts Mexico as they defeated Korea Republic to secure the first spot in the Round of ...",
-        "Mexico beat South Korea 1-0 to confirm their qualification into the round-of-32, the first side to do so at the FIFA World Cup 2026.",
-        "Mexico became the first country to advance to the knockout stage of the World Cup with a 1–0 win over South Korea. Luis Romo scored the only ..."
+        "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+        "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+        "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+        "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+        "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0."
       ],
       "serper_kandidater": [
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-korea-republic-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-korea-republic-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-korea-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-korea-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-mexico-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-mexico-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-korea-mexico-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "Mexico 1-0 South Korea | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-korea-mexico-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for Mexico vs South Korea, final score 1-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
         {
           "title": "Korea Fall to Mexico for 1st Loss in Group A - Ground News",
           "link": "https://ground.news/article/luis-romo-overtakes-mexico-after-a-serious-korean-goalkeeper-error-1-0",
@@ -415,127 +552,6 @@
             "bortelag nevnt",
             "resultat nevnt"
           ]
-        },
-        {
-          "title": "Mexico 1-0 Korea Republic | Match report and highlights",
-          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-korea-republic-highlights-match-report",
-          "source": "",
-          "date": "21 hours ago",
-          "snippet": "Mexico goal: Romo (50). Luis Romo was the hero for co-hosts Mexico as they defeated Korea Republic to secure the first spot in the Round of ...",
-          "query": "FIFA fifa.com Mexico South Korea 1-0 World Cup 2026 match report recap goal scorer full time",
-          "score": 15,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "kampreferat-tittel",
-            "negativt ord: highlights",
-            "avkortet snippet"
-          ],
-          "offisiell_kilde_sok": "fifa.com"
-        },
-        {
-          "title": "Mexico 1-0 South Korea (19 Jun, 2026) Game Analysis - ESPN (PH)",
-          "link": "https://www.espn.ph/football/report/_/gameId/760441",
-          "source": "",
-          "date": "15 hours ago",
-          "snippet": "Mexico beat South Korea 1-0 to confirm their qualification into the round-of-32, the first side to do so at the FIFA World Cup 2026.",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 12,
-          "score_grunner": [
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt"
-          ]
-        },
-        {
-          "title": "Mexico first team to reach World Cup knockout stage after beating ...",
-          "link": "https://www.yorkpress.co.uk/sport/26208977.mexico-first-team-reach-world-cup-knockout-stage-beating-south-korea/",
-          "source": "",
-          "date": "18 hours ago",
-          "snippet": "Mexico became the first country to advance to the knockout stage of the World Cup with a 1–0 win over South Korea. Luis Romo scored the only ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 12,
-          "score_grunner": [
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Portugal eye fast start against DRC in bid for elusive World Cup glory",
-          "link": "https://www.reuters.com/sports/soccer/portugal-eye-fast-start-against-drc-bid-elusive-world-cup-glory-2026-06-15/",
-          "source": "",
-          "date": "4 days ago",
-          "snippet": "South Korea coach urges players to move on from Mexico defeat FIFA World Cup 2026. Mexico v South Korea ago. Mexico top World Cup group for ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 9,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Mexico Ends Opening Match Jinx With Convincing Win - Evrim Ağacı",
-          "link": "https://evrimagaci.org/gpt/mexico-ends-opening-match-jinx-with-convincing-win-541068?srsltid=AfmBOoofVOyuB61PMWdUtl85lmsbdIZ5Q7P7CJOEMMoJhWPuzEKJlJwn",
-          "source": "",
-          "date": "8 days ago",
-          "snippet": "Mexico scored early through Julian Quiñones and sealed the victory with Raul Jimenez's header after South Africa received two red cards. The ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 7,
-          "score_grunner": [
-            "hjemmelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "south korea 2-1 czechia - Threads",
-          "link": "https://www.threads.com/@wrldsoccershop/post/DZeLsxBliKw/south-korea-czechia-what-a-turnaround-in-guadalajara-after-falling-behind-to/",
-          "source": "",
-          "date": "Jun 11, 2026",
-          "snippet": "South Korea fought back from a goal down to defeat Czech Republic 2-1 in their first match of the 2026 World Cup. South Korea secured a ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 3,
-          "score_grunner": [
-            "bortelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Who showed more heart in Mexico vs South Korea match? - Facebook",
-          "link": "https://www.facebook.com/groups/1397068724499191/posts/2138665630339493/",
-          "source": "",
-          "date": "18 hours ago",
-          "snippet": "Mexico takes the 1-0 win thanks to Luis Romo's 50' golazo, Mexico defeated South Africa 2-0, with goals from Julián Quiñones and Raúl Jiménez. ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 2,
-          "score_grunner": [
-            "blokkert domene",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "F O R D ⏱️ MEXICO 1-0 SOUTH KOREA Romo 50' THIS ...",
-          "link": "https://www.facebook.com/groups/7132710333421100/posts/37697472813184784/",
-          "source": "",
-          "date": "18 hours ago",
-          "snippet": "Javier Hernandez scored a milestone goal as Mexico marched towards the World Cup knockout stages with a 2-1 win over South Korea in Rostov-on- ...",
-          "query": "Mexico South Korea 1-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 0,
-          "score_grunner": [
-            "blokkert domene",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "resultat nevnt",
-            "avkortet snippet"
-          ]
         }
       ],
       "recap_kvalitet": {
@@ -551,6 +567,11 @@
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 11,
         "referat_fakta_score": 11,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 0,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-korea-republic-highlights-match-report",
         "mangler": [],
         "offisiell_kilde_sokt": [
           "concacaf.com",
@@ -747,177 +768,194 @@
       "hjemme_score": 2,
       "borte_score": 0,
       "gruppe": "D",
-      "recap_tekst": "USA slo Australia 2–0.\nUSA fikk en sterk start på gruppespillet, mens Australia må jakte svar i neste runde.\nUSA fikk dermed full uttelling i en kamp der marginene var viktige.\n\nUSA er vertsnasjon og møter et australsk lag som har vist de kan overraske. I 2022 slo Australia Danmark i 16-delsfinalen. Folarin Balogun er USAs store stjerne.",
+      "recap_tekst": "USA slo Australia 2–0.\nBurgess og Freeman scoret for USA.\nMålene til USA kom ved Burgess (11) og Freeman (43).\nVertsnasjonen fikk dermed en opptur foran eget publikum.\n\nUSA er vertsnasjon og møter et australsk lag som har vist de kan overraske. I 2022 slo Australia Danmark i 16-delsfinalen. Folarin Balogun er USAs store stjerne.",
       "snippets_raa": [
-        "Nestory Irankunda and Connor Metcalfe scored and Australia spoiled Türkiye's return to the World Cup for the first time in 24 years with a 2-0 victory on ...",
-        "The Socceroos enjoyed a historic moment as Nestory Irankunda became the nation's youngest ever World Cup scorer at 20 years and 125 days.",
-        "The winner of Australia's Friday game in Seattle against the USA will clinch a spot in the knockout stage. Germany-Curaçao, Netherlands-Japan ...",
-        "Australia opened their 2026 FIFA World Cup campaign with a 2-0 victory over Türkiye at Vancouver's BC Place Stadium.",
-        "Full match details for United States Vs Australia in the Fifa World Cup — lineups, score and match updates on Concacaf."
+        "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+        "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+        "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+        "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+        "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0."
       ],
       "serper_kandidater": [
         {
-          "title": "Australia 2-0 Türkiye (14 Jun, 2026) Final Score - ESPN",
-          "link": "https://africa.espn.com/football/match/_/gameId/760421/turkiye-australia",
-          "source": "",
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-australia-match-report-highlights",
+          "source": "FIFA direct probe",
           "date": "",
-          "snippet": "Nestory Irankunda and Connor Metcalfe scored and Australia spoiled Türkiye's return to the World Cup for the first time in 24 years with a 2-0 victory on ...",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-australia-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-australia-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-australia-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-usa-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-usa-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-united-states-match-report-highlights",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "USA 2-0 Australia | FIFA direct match report probe",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-united-states-highlights-match-report",
+          "source": "FIFA direct probe",
+          "date": "",
+          "snippet": "FIFA World Cup 2026 match report and highlights for USA vs Australia, final score 2-0.",
+          "query": "direct_fifa_article_probe",
+          "score": 999,
+          "score_grunner": [
+            "direkte FIFA article-probe",
+            "kampartikkel-mønster"
+          ],
+          "source_type": "article_report",
+          "direct_fifa_probe": true,
+          "fifa_direct_probe_version": "v3-fifa-slug-pattern"
+        },
+        {
+          "title": "US advance to World Cup round of 32 with dominant 2-0 win over ...",
+          "link": "https://www.reuters.com/sports/soccer/us-reach-world-cup-knockout-round-with-dominant-2-0-win-over-australia-2026-06-19/",
+          "source": "",
+          "date": "13 hours ago",
+          "snippet": "US advance to World Cup round of 32 with dominant 2-0 win over Australia · US confirm passage to last-32 with comfortable win · Burgess own goal, ...",
+          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
+          "score": 14,
+          "score_grunner": [
+            "god kilde",
+            "bortelag nevnt",
+            "resultat nevnt",
+            "avkortet snippet"
+          ]
+        },
+        {
+          "title": "US beats Australia 2-0 to advance to World Cup knockout round",
+          "link": "https://www.readingeagle.com/2026/06/19/usa-australia-recap/",
+          "source": "",
+          "date": "13 hours ago",
+          "snippet": "The U.S. national soccer team advanced to the knockout round at the World Cup despite the absence of injured forward Christian Pulisic with ...",
           "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": 12,
           "score_grunner": [
-            "god kilde",
+            "hjemmelag nevnt",
             "bortelag nevnt",
             "resultat nevnt",
             "avkortet snippet"
           ]
-        },
-        {
-          "title": "USA seek to maintain momentum against Australia | Concacaf",
-          "link": "https://www.concacaf.com/competitions/fifa-world-cup/news/usa-seek-to-maintain-momentum-against-australia",
-          "source": "",
-          "date": "2 days ago",
-          "snippet": "The Socceroos enjoyed a historic moment as Nestory Irankunda became the nation's youngest ever World Cup scorer at 20 years and 125 days.",
-          "query": "CONCACAF concacaf.com USA Australia 2-0 World Cup 2026 match report recap goal scorer full time",
-          "score": 11,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt"
-          ],
-          "offisiell_kilde_sok": "concacaf.com"
-        },
-        {
-          "title": "World Cup 2026: Scotland, Australia get massive wins, Texas ...",
-          "link": "https://www.8newsnow.com/sports/world-cup-2026/world-cup-2026-scotland-australia-get-massive-wins-texas-doubleheader-starts-day-4/",
-          "source": "",
-          "date": "5 days ago",
-          "snippet": "The winner of Australia's Friday game in Seattle against the USA will clinch a spot in the knockout stage. Germany-Curaçao, Netherlands-Japan ...",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 8,
-          "score_grunner": [
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Australia Stun Türkiye With Bold World Cup Upset - Evrim Ağacı",
-          "link": "https://evrimagaci.org/gpt/australia-stun-turkiye-with-bold-world-cup-upset-541166?srsltid=AfmBOoopJYfHbaYlnnB_9rW7b4AvMB7mKN3SjOBsW99hBTuFDOWgpKW1",
-          "source": "",
-          "date": "6 days ago",
-          "snippet": "Australia opened their 2026 FIFA World Cup campaign with a 2-0 victory over Türkiye at Vancouver's BC Place Stadium.",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 7,
-          "score_grunner": [
-            "bortelag nevnt",
-            "resultat nevnt"
-          ]
-        },
-        {
-          "title": "United States Vs Australia | Fifa World Cup - Concacaf",
-          "link": "https://www.concacaf.com/competitions/fifa-world-cup/matches/29987f1d382c4f93999eed36c06c7b68/united-states-vs-australia",
-          "source": "",
-          "date": "",
-          "snippet": "Full match details for United States Vs Australia in the Fifa World Cup — lineups, score and match updates on Concacaf.",
-          "query": "CONCACAF concacaf.com USA Australia 2-0 World Cup 2026 match report recap goal scorer full time",
-          "score": 6,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "negativt ord: lineups"
-          ],
-          "offisiell_kilde_sok": "concacaf.com"
-        },
-        {
-          "title": "FIFA World Cup 2026, Day 3: Irankunda, Metcalfe give Australia a ...",
-          "link": "https://www.newindianexpress.com/sport/football/2026/Jun/13/live-fifa-world-cup-2026-day-3-qatar-vs-switzerland-before-brazil-morocco-clash-in-standout-group-stage-fixture",
-          "source": "",
-          "date": "6 days ago",
-          "snippet": "The final game of Day 3 saw Australia score a stunning 2-0 upset over Turkey in their World Cup Group D opener. Nestory Irankunda becomes the ...",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 5,
-          "score_grunner": [
-            "bortelag nevnt",
-            "resultat nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "WORLD CUP 2026 DAILY BRIEFING | Day 3 Report: Scotland ...",
-          "link": "https://minneapolimedia.town.news/g/coon-rapids-mn/n/378776/world-cup-2026-daily-briefing-day-3-report-scotland-returns-australia",
-          "source": "",
-          "date": "6 days ago",
-          "snippet": "WORLD CUP 2026 DAILY BRIEFING | Day 3 Report: Scotland Returns, Australia Shocks Türkiye, Brazil Meets Morocco's Resistance, and Qatar Steals a ...",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 1,
-          "score_grunner": [
-            "bortelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "USA v Australia | Group D | FIFA World Cup 2026™ | Highlights",
-          "link": "https://www.fifa.com/en/watch/1uOCG5cpsR45kemo4IdCO3",
-          "source": "",
-          "date": "12 hours ago",
-          "snippet": "Watch highlights of the match between USA and Australia played at Seattle Stadium on Friday 19 June at 12:00 (local time).",
-          "query": "FIFA fifa.com USA Australia 2-0 World Cup 2026 match report recap goal scorer full time",
-          "score": 1,
-          "score_grunner": [
-            "god kilde",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "negativt ord: highlights",
-            "negativt ord: watch"
-          ],
-          "offisiell_kilde_sok": "fifa.com"
-        },
-        {
-          "title": "The Latest from the 2026 FIFA World Cup in Canada | northeastNOW",
-          "link": "https://northeastnow.com/2026/06/15/the-latest-from-the-2026-fifa-world-cup-in-canada-4/",
-          "source": "",
-          "date": "4 days ago",
-          "snippet": "Here are the latest developments from the 2026 FIFA World Cup. All times Eastern: 11:0x p.m. Four games, four draws. That's the World Cup ...",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 0,
-          "score_grunner": [
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "World Cup scores today: Game schedule, results and group points ...",
-          "link": "https://www.theglobeandmail.com/sports/soccer/article-fifa-world-cup-scores-schedule-today/?date=20260616",
-          "source": "",
-          "date": "Jun 11, 2026",
-          "snippet": "From results to group-stage points tables, here's a daily recap to help you keep up with FIFA's 2026 tournament.",
-          "query": "United States Australia 2-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 0,
-          "score_grunner": []
         }
       ],
       "recap_kvalitet": {
-        "score": 2,
-        "status": "tynt_fulltekstgrunnlag",
+        "score": 10,
+        "status": "ok",
         "grunnlag": "fulltekst",
-        "source_type": "match_details",
-        "antall_sok": 1,
-        "fallback": true,
+        "source_type": "article_report",
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "USA_Australia_2026_06_19|2-0",
-        "serper_score": 12,
+        "serper_score": 14,
         "fulltekst_status": "ok",
-        "fulltekst_kilde": "concacaf.com",
+        "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 13,
-        "referat_fakta_score": 2,
-        "mangler": [
-          "article_report",
-          "goal_events",
-          "referat_fakta_score"
-        ],
-        "offisiell_kilde_sokt": [
-          "fifa.com",
-          "concacaf.com"
-        ]
+        "referat_fakta_score": 10,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-australia-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [
