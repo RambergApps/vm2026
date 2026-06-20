@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-19",
   "dato_norsk": "Fredag 19. juni 2026",
-  "generert": "2026-06-20T05:30:50Z",
+  "generert": "2026-06-20T09:15:31Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -11,20 +11,20 @@
       "hjemme_score": 6,
       "borte_score": 0,
       "gruppe": "B",
-      "recap_tekst": "Canada slo Qatar 6–0. Jonathan David var blant spillerne som kom på scoringslisten. Seieren ble etter hvert klar, selv om kampen ikke nødvendigvis var avgjort fra start.",
+      "recap_tekst": "Canada slo Qatar 6–0.\nJonathan David ble kampens store profil for Canada med hattrick.\nMålene til Canada kom ved Larin (16), David (29 og 45+3 og 90+2), Saliba (64) og Manai (75).\nJonathan David markerte seg med hattrick for Canada.\nQatar avsluttet kampen med ni mann etter to røde kort.\nFor Canada var dette en historisk første VM-seier.\nResultatet sender Canada opp i en sterk posisjon i gruppen.",
       "snippets_raa": [
         "David hat-trick as Canada rout Qatar 6-0 · Qatar down to nine men after red cards for Ahmed and Madibo · Canada lead Group B on goal difference ...",
+        "Canada won their first FIFA World Cup match in style as Jonathan David notched a hat-trick and Cyle Larin and Nathan Saliba added goals to ...",
         "Jonathan David scored three goals and Canada won its first World Cup match while all but securing a spot in the knockout round with a 6-0 ...",
         "Game summary of the Canada vs. Qatar Fifa World Cup game, final score 6-0, from 18 June 2026 on ESPN (UK).",
-        "Canada claimed their first World Cup win in style with a 6-0 thrashing of nine-man Qatar in front of a raucous home crowd in Vancouver ...",
-        "Canada scored six goals in this game, to double their World Cup goals tally, having scored three goals in their previous seven World Cup games."
+        "Canada made 97 touches in the attacking box against Qatar, 26 more than any other team in a World Cup match on record. Mexico 1-0 South Korea. ( ..."
       ],
       "serper_kandidater": [
         {
           "title": "David hat-trick as Canada crush nine-man Qatar 6-0 to earn first ...",
           "link": "https://www.reuters.com/sports/soccer/david-hat-trick-canada-crush-nine-man-qatar-6-0-earn-first-world-cup-finals-win-2026-06-19/",
           "source": "",
-          "date": "22 hours ago",
+          "date": "1 day ago",
           "snippet": "David hat-trick as Canada rout Qatar 6-0 · Qatar down to nine men after red cards for Ahmed and Madibo · Canada lead Group B on goal difference ...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": 19,
@@ -37,10 +37,29 @@
           ]
         },
         {
+          "title": "Canada 6-0 Qatar | Match report and highlights",
+          "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
+          "source": "",
+          "date": "1 day ago",
+          "snippet": "Canada won their first FIFA World Cup match in style as Jonathan David notched a hat-trick and Cyle Larin and Nathan Saliba added goals to ...",
+          "query": "FIFA fifa.com Canada Qatar 6-0 World Cup 2026 match report recap goal scorer full time",
+          "score": 17,
+          "score_grunner": [
+            "god kilde",
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "resultat nevnt",
+            "kampreferat-tittel",
+            "negativt ord: highlights",
+            "avkortet snippet"
+          ],
+          "offisiell_kilde_sok": "fifa.com"
+        },
+        {
           "title": "Jonathan David's hat trick propels Canada to its first World Cup win ...",
           "link": "https://ground.news/article/jonathan-davids-hat-trick-propels-canada-to-its-first-world-cup-win-6-0-over-qatar_7ea874",
           "source": "",
-          "date": "22 hours ago",
+          "date": "1 day ago",
           "snippet": "Jonathan David scored three goals and Canada won its first World Cup match while all but securing a spot in the knockout round with a 6-0 ...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": 16,
@@ -66,37 +85,40 @@
           ]
         },
         {
-          "title": "Jonathan David scores hat-trick as Canada thrash Qatar for first ...",
-          "link": "https://www.readingchronicle.co.uk/sport/national/26208880.jonathan-david-scores-hat-trick-canada-thrash-qatar-first-world-cup-win/",
+          "title": "FIFA World Cup 2026 stats: David first since 1930, Canada's record ...",
+          "link": "https://www.espn.com.sg/soccer/story/_/id/49113248/fifa-world-cup-2026-stats-jonathan-david-first-1930-canada-record-97-guadalajara-record-19",
           "source": "",
-          "date": "21 hours ago",
-          "snippet": "Canada claimed their first World Cup win in style with a 6-0 thrashing of nine-man Qatar in front of a raucous home crowd in Vancouver ...",
+          "date": "13 hours ago",
+          "snippet": "Canada made 97 touches in the attacking box against Qatar, 26 more than any other team in a World Cup match on record. Mexico 1-0 South Korea. ( ...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 10,
+          "score": 9,
           "score_grunner": [
+            "god kilde",
             "hjemmelag nevnt",
             "bortelag nevnt",
-            "resultat nevnt",
             "avkortet snippet"
           ]
         },
         {
-          "title": "FIFA World Cup 2026 stats: David first since 1930, Canada's record ...",
-          "link": "https://www.espn.co.uk/football/story/_/id/49113248/fifa-world-cup-2026-stats-jonathan-david-first-1930-canada-record-97-guadalajara-record-19",
+          "title": "Canada hit Qatar for six in history-making afternoon in Vancouver",
+          "link": "https://aftn.ca/report-and-reaction-canada-qatar-world-cup-2026/",
           "source": "",
-          "date": "18 hours ago",
-          "snippet": "Canada scored six goals in this game, to double their World Cup goals tally, having scored three goals in their previous seven World Cup games.",
+          "date": "1 day ago",
+          "snippet": "Jonathan David's hat-trick saw Canada secure their first ever win at the World Cup, and the biggest ever win by a CONCACAF nation at the ...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": 9,
+          "score": 1,
           "score_grunner": [
-            "hjemmelag nevnt"
+            "hjemmelag nevnt",
+            "bortelag nevnt",
+            "negativt ord: reaction",
+            "avkortet snippet"
           ]
         },
         {
           "title": "Canada defeated Qatar, dominating 6-0, but the historic first World ...",
-          "link": "https://www.facebook.com/TheBuffaloNews/posts/canada-defeated-qatar-dominating-6-0-but-the-historic-first-world-cup-win-for-ca/1401111248716662/",
+          "link": "https://www.facebook.com/PressofAC/posts/canada-defeated-qatar-dominating-6-0-but-the-historic-first-world-cup-win-for-ca/1460762786071298/",
           "source": "",
-          "date": "3 hours ago",
+          "date": "12 hours ago",
           "snippet": "Canada defeated Qatar, dominating 6-0, but the historic first World Cup win for Canada on Thursday was overshadowed by a gruesome injury.",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": 0,
@@ -123,7 +145,7 @@
           "title": "Canada 6-0 Qatar Canada routs nine-man Qatar Co-hosts secure ...",
           "link": "https://www.facebook.com/WIONews/posts/fifaworldcup2026-canada-6-0-qatarcanada-routs-nine-man-qatarco-hosts-secure-firs/1371441811761656/",
           "source": "",
-          "date": "18 hours ago",
+          "date": "1 day ago",
           "snippet": "#FIFAWorldCup2026 | Canada 6-0 Qatar Canada routs nine-man Qatar Co-hosts secure first-ever World Cup win Jyotsna Kumar and Diksha Bisla tell ...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
           "score": -4,
@@ -136,30 +158,15 @@
           ]
         },
         {
-          "title": "On a day when the Canadians had to win to keep their FIFA World ...",
-          "link": "https://www.facebook.com/sportsnet/posts/on-a-day-when-the-canadians-had-to-win-to-keep-their-fifa-world-cup-goals-within/1593780468781413/",
+          "title": "SportsGully (@sportsgully) • Threads, Say more",
+          "link": "https://www.threads.com/@sportsgully",
           "source": "",
-          "date": "20 hours ago",
-          "snippet": "Canada blanks Qatar for comfortable win to open series of pre-World Cup friendlies. RECAP: https://www.cbc.ca/1.6592778 · No photo description ...",
+          "date": "",
+          "snippet": "73.6K Followers • 3.7K Threads • Where the game's heartbeat echoes through every Gully.Dive in! HD edits | Stats | Latest news🗞️ | videos . See the...",
           "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -4,
+          "score": -5,
           "score_grunner": [
-            "blokkert domene",
-            "hjemmelag nevnt",
-            "bortelag nevnt",
-            "avkortet snippet"
-          ]
-        },
-        {
-          "title": "Halftime: South Africa 0 - 1 Czech Republic #WorldCup2026 ...",
-          "link": "https://www.facebook.com/kantipurtvhd/posts/halftime-south-africa-0-1-czech-republicworldcup2026-fifa2026-%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%95%E0%A4%AA-football/1438576678303925/",
-          "source": "",
-          "date": "1 day ago",
-          "snippet": "Game is over and the final score is Czech 0-0 Croatia. Here is the match report. 2026 World Cup qualification Europe 0 - 0 Match Report The ...",
-          "query": "Canada Qatar 6-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-          "score": -14,
-          "score_grunner": [
-            "blokkert domene",
+            "negativt ord: follow",
             "avkortet snippet"
           ]
         }
@@ -167,12 +174,12 @@
       "recap_kvalitet": {
         "score": 19,
         "status": "ok",
-        "antall_sok": 1,
+        "antall_sok": 2,
         "fallback": false,
         "cache_key": "Canada_Qatar_2026_06_18|6-0",
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 14,
         "offisiell_kilde_sokt": [
           "concacaf.com",
           "fifa.com"
@@ -367,7 +374,7 @@
       "hjemme_score": 1,
       "borte_score": 0,
       "gruppe": "A",
-      "recap_tekst": "Mexico slo Sør-Korea 1–0. Luis Romo avgjorde for Mexico med kampens eneste scoring i 50. Dermed ble kampen avgjort på små marginer, etter at Sør-Korea lenge hadde holdt unna.",
+      "recap_tekst": "Mexico slo Sør-Korea 1–0.\nLuis Romo avgjorde for Mexico med kampens eneste scoring i 50.\nDermed ble kampen avgjort på små marginer, etter at Sør-Korea lenge hadde holdt unna.\nAvgjørelsen kom etter en keeperfeil som Mexico utnyttet.\nSeieren sikret samtidig Mexico plass i utslagsrunden.\nVertsnasjonen fikk dermed en opptur foran eget publikum.",
       "snippets_raa": [
         "Mexico defeated South Korea 1-0 at 2026 FIFA World Cup Group A match, with Luis Romo scoring the lone goal in the 50th minute.",
         "Luis Romo's goal off a keeper error beats South Korea 1-0, sending Mexico top of Group A and first into the World Cup 2026 knockouts.",
@@ -730,7 +737,7 @@
       "hjemme_score": 2,
       "borte_score": 0,
       "gruppe": "D",
-      "recap_tekst": "USA slo Australia 2–0. Haji Wright ble den store profilen for USA med to scoringer. USA fikk dermed full uttelling i en kamp der marginene var viktige.",
+      "recap_tekst": "USA slo Australia 2–0.\nHaji Wright ble den store profilen for USA med to scoringer.\nUSA fikk dermed full uttelling i en kamp der marginene var viktige.",
       "snippets_raa": [
         "Nestory Irankunda and Connor Metcalfe scored and Australia spoiled Türkiye's return to the World Cup for the first time in 24 years with a 2-0 victory on ...",
         "The Socceroos enjoyed a historic moment as Nestory Irankunda became the nation's youngest ever World Cup scorer at 20 years and 125 days.",
