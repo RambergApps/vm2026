@@ -1,4 +1,32 @@
 {
-  "sist_sjekket": "2026-06-19T23:44:03Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-20T00:01:01Z",
+  "kamper": [
+    {
+      "kamp_id": "Brazil_Haiti_2026_06_19",
+      "hjemmelag": "Brazil",
+      "bortelag": "Haiti",
+      "dato": "2026-06-19",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "kamp_id": "Scotland_Morocco_2026_06_19",
+      "hjemmelag": "Scotland",
+      "bortelag": "Morocco",
+      "dato": "2026-06-19",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "kamp_id": "Turkey_Paraguay_2026_06_19",
+      "hjemmelag": "Turkey",
+      "bortelag": "Paraguay",
+      "dato": "2026-06-19",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
