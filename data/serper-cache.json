@@ -2173,7 +2173,7 @@
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
       "score": 9,
-      "hentet": "2026-06-20T22:31:12Z",
+      "hentet": "2026-06-20T23:01:23Z",
       "late": true,
       "stoppage": false,
       "winner": false,
@@ -2214,12 +2214,12 @@
       "direct_fifa_probe": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
       "fifa_direct_probe_version": "v4-home-first-compact",
-      "retry_antall": 33,
+      "retry_antall": 34,
       "venter_pa_bedre_kilde": true,
-      "next_retry_at": "2026-06-21T01:31:18Z"
+      "next_retry_at": "2026-06-21T02:01:31Z"
     },
     "fifa_direct_probe_versjon": "v4-home-first-compact",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T22:30:54Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T23:00:59Z"
   },
   "Netherlands_Sweden_2026_06_20|5-1": {
     "kandidater": [
