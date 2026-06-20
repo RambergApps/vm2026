@@ -3,17 +3,18 @@ VM 2026 — Kampreferat-generator
 Kjøres av GitHub Actions etter poengregning.py.
 
 Prinsipp:
-1. Finn gårsdagens ferdigspilte kamper (norsk tid) fra data/data.js
-2. Hvis kamppost.json allerede finnes for datoen: regenerer rapporten, men seed Serper-cache fra eksisterende data
-3. Hent kampkandidater fra Serper med streng kvotekontroll og cache
-4. Score kandidater basert på kilde/tittel/snippet/resultat/kampord
-5. Forsøk å hente full kamptekst/fakta fra utvalgte kilder funnet av Serper
-   - Reuters og ESPN brukes ikke til fulltekst, men kan fortsatt brukes som snippet-kandidater
-   - Jina Reader kan brukes for kilder som tillater reader-henting, f.eks. CONCACAF
-6. Bruk snippets som fallback/debug — publisert recap_tekst skal være norsk
-7. Slå opp historikk og fakta fra data/kamp-referanser.json
-8. Ikke legg tipping-oppramsing inn i recap_tekst; tippinger lagres strukturert per kamp
-9. Skriv data/kamppost.json
+1. Finn ferdigspilte kamper fra data/data.js, målt i norsk tid
+2. Når en kamp er ferdig: bygg forventede FIFA /articles/-URL-er fra lagene
+3. Hent fulltekst fra FIFA og trekk ut strukturerte kampfakta
+4. Sjekk enkle harde kriterier:
+   - riktig kamp
+   - FIFA-kampartikkel
+   - resultatet finnes i teksten
+   - antall strukturerte mål-events dekker sluttresultatet
+5. Hvis kriteriene ikke er møtt: bygg foreløpig norsk rapport, men prøv FIFA på nytt ved neste kjøring
+6. Serper/snippets brukes ikke som normalvei for publisert kampreferat
+7. Ikke legg tipping-oppramsing inn i recap_tekst; tippinger lagres strukturert per kamp
+8. Skriv data/kamppost.json
 """
 
 import json
@@ -50,12 +51,12 @@ MAX_SERPER_SOK_TOTALT_KJORING  = int(os.environ.get("MAX_SERPER_SOK_TOTALT_KJORI
 # henter samme side hver halvtime. Vi lagrer bare ekstraherte fakta, ikke
 # artikkeltekst, for å unngå at repoet fylles med tredjepartsinnhold.
 FULLTEKST_AKTIVERT             = os.environ.get("FULLTEKST_AKTIVERT", "1") != "0"
-MAX_FULLTEKST_PER_KJORING      = int(os.environ.get("MAX_FULLTEKST_PER_KJORING", "8"))
+MAX_FULLTEKST_PER_KJORING      = int(os.environ.get("MAX_FULLTEKST_PER_KJORING", "20"))
 FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v16-direct-fifa-before-serper"
+FULLTEKST_CACHE_VERSION        = "v17-fifa-kriterier-retry-hver-kjoring"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
 OFFISIELL_KILDE_SOK_VERSION    = "v12-direct-fifa-before-serper"
@@ -80,7 +81,7 @@ FIFA_ARTICLE_BASE              = os.environ.get(
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles"
 )
 FIFA_DIRECT_PROBE_MAX_URLS     = int(os.environ.get("FIFA_DIRECT_PROBE_MAX_URLS", "4"))
-FIFA_DIRECT_PROBE_VERSION      = "v4-home-first-compact"
+FIFA_DIRECT_PROBE_VERSION      = "v5-fifa-kriterier-home-first"
 
 # Retry styres av status/faktakvalitet. Direkte FIFA/Jina kan prøves oftere enn Serper.
 RETRY_SISTE_TIMER              = int(os.environ.get("RETRY_SISTE_TIMER", "36"))
@@ -338,7 +339,7 @@ def kamp_innenfor_siste_timer(kamp, timer):
 def kamp_har_ok_fulltekst_i_cache(kamp, cache):
     key = cache_noekkel(kamp.get("kamp_id"), kamp.get("hjemme"), kamp.get("borte"))
     fakta = (cache.get(key) or {}).get("fulltekst_fakta") or {}
-    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta)
+    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta, kamp=kamp)
 
 
 def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
@@ -680,24 +681,13 @@ def fulltekst_status_er_tynn(fakta):
 
 
 def fulltekst_retry_due(fakta):
-    """Skal tynn/manglende fulltekst prøves på nytt nå?"""
+    """Tynn/manglende FIFA-fulltekst prøves på nytt ved hver kjøring."""
     if not isinstance(fakta, dict):
         return True
-    if not fulltekst_status_er_tynn(fakta):
-        return False
-
-    if morgen_refresh_aktiv() and fakta.get("morgen_refresh_key") != morgen_refresh_key():
-        return True
-
-    next_retry = iso_til_dt(fakta.get("next_retry_at"))
-    if next_retry is None:
-        minutter = minutter_siden_iso(fakta.get("hentet"))
-        return minutter is None or minutter >= MIN_MINUTTER_MELLOM_OK_REFRESH
-    return datetime.now(timezone.utc) >= next_retry
-
+    return fulltekst_status_er_tynn(fakta)
 
 def berik_retry_metadata(fakta, tidligere=None):
-    """Legg inn next_retry_at/venter-status på tynne fulltekstresultater."""
+    """Marker tynne resultater som foreløpige. Ingen sperretid: neste kjøring prøver igjen."""
     if not isinstance(fakta, dict):
         return fakta
     prev_retry = 0
@@ -705,18 +695,14 @@ def berik_retry_metadata(fakta, tidligere=None):
         prev_retry = int(tidligere.get("retry_antall", 0) or 0)
 
     if fulltekst_status_er_tynn(fakta):
-        retry_antall = prev_retry + 1
-        fakta["retry_antall"] = retry_antall
+        fakta["retry_antall"] = prev_retry + 1
         fakta["venter_pa_bedre_kilde"] = True
-        fakta["next_retry_at"] = iso_om_minutter(retry_intervall_minutter(retry_antall))
-        if morgen_refresh_aktiv():
-            fakta["morgen_refresh_key"] = morgen_refresh_key()
+        fakta.pop("next_retry_at", None)
     else:
         fakta["retry_antall"] = int(fakta.get("retry_antall", prev_retry) or 0)
         fakta["venter_pa_bedre_kilde"] = False
         fakta.pop("next_retry_at", None)
     return fakta
-
 
 def offisiell_kilde_sok_due(entry):
     """Serper/offisielt søk kan gjentas for tynne kamper, men sjeldnere enn direkte FIFA/Jina."""
@@ -1131,16 +1117,18 @@ def fullfor_spillernavn(kortnavn, kjente_navn):
 
 
 def parse_goal_section(segment, lag, kamp, kjente_navn=None):
-    """Parse 'Switzerland goals: Manzambi (71, 90) Vargas (84), Xhaka pen (90+7)'."""
+    """Parse FIFA-linjer som 'Switzerland goals: Manzambi (71, 90)' eller 'Cunha 23, 36'."""
     events = []
     if not segment:
         return events
     # Begrens segmentet slik at Jina/FIFA-navigasjon ikke spiser enorme mengder tekst.
-    segment = re.split(r"(?i)\b(?:match facts|line-ups|standings|next match|fixtures|also read|related)\b", segment[:450])[0]
+    segment = re.split(r"(?i)\b(?:match facts|line-ups|standings|next match|fixtures|also read|related)\b", segment[:550])[0]
     # Stopp ved setningsslutt hvis det kommer mye annet innhold.
     segment = segment.split(". ")[0]
-    pat = re.compile(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})(?:\s+(pen|penalty|og|own goal))?\s*\(([^)]*?\d[^)]*)\)")
-    for m in pat.finditer(segment):
+
+    # Variant 1: Navn (71, 90) / Navn pen (90+7)
+    pat_parentes = re.compile(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})(?:\s+(pen|penalty|og|own goal))?\s*\(([^)]*?\d[^)]*)\)")
+    for m in pat_parentes.finditer(segment):
         spiller = rens_spillernavn(m.group(1), kamp.get("hjemmelag"), kamp.get("bortelag"))
         spiller = fullfor_spillernavn(spiller, kjente_navn or [])
         typ = (m.group(2) or "goal").lower()
@@ -1148,8 +1136,25 @@ def parse_goal_section(segment, lag, kamp, kjente_navn=None):
             typ = "penalty"
         for minutt in splitt_minutter(m.group(3).strip()):
             legg_til_goal_event(events, spiller, lag, minutt, typ)
-    return events
 
+    # Variant 2: Navn 71, 90 / Navn 90+7 uten parentes.
+    # Brukes bare når segmentet tydelig er en goal/scorer-linje for ett lag.
+    rester = segment
+    for m in pat_parentes.finditer(segment):
+        rester = rester.replace(m.group(0), " ")
+    pat_plain = re.compile(r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})(?:\s+(pen|penalty|og|own goal))?\s+(\d{1,2}(?:\+\d+)?(?:\s*,\s*\d{1,2}(?:\+\d+)?)*)")
+    for m in pat_plain.finditer(rester):
+        spiller = rens_spillernavn(m.group(1), kamp.get("hjemmelag"), kamp.get("bortelag"))
+        if not spiller:
+            continue
+        spiller = fullfor_spillernavn(spiller, kjente_navn or [])
+        typ = (m.group(2) or "goal").lower()
+        if typ == "pen":
+            typ = "penalty"
+        for minutt in splitt_minutter(m.group(3).strip()):
+            legg_til_goal_event(events, spiller, lag, minutt, typ)
+
+    return events
 
 def ekstraher_goal_events_fra_tekst(tekst, kamp, kjente_navn=None):
     """
@@ -1172,10 +1177,26 @@ def ekstraher_goal_events_fra_tekst(tekst, kamp, kjente_navn=None):
                 section_hits.append((m.start(), m.end(), lag, alias))
     section_hits.sort(key=lambda x: x[0])
     for i, (start, end, lag, alias) in enumerate(section_hits):
-        neste = section_hits[i + 1][0] if i + 1 < len(section_hits) else min(len(tekst), end + 450)
+        neste = section_hits[i + 1][0] if i + 1 < len(section_hits) else min(len(tekst), end + 550)
         segment = tekst[end:neste]
         for ev in parse_goal_section(segment, lag, kamp, kjente_navn=kjente_navn):
             legg_til_goal_event(events, ev["spiller"], ev["lag"], ev.get("minutt", ""), ev.get("type", "goal"))
+
+    # 1b) En-måls-kamper der FIFA/andre skriver "solitary/lone/only goal came courtesy of NAME"
+    # eller "NAME scored the only goal". Dette er generisk og bruker vinnerlaget fra resultatet.
+    if total_maal_i_kamp(kamp) == 1:
+        vinner_lag = vinner_lag_for_kamp(kamp)
+        single_goal_patterns = [
+            r"(?i)(?:solitary|lone|only|winning|winner|match(?:'|’)?s only)\s+goal\s+(?:came\s+courtesy\s+of|came\s+from|was\s+scored\s+by|from|by)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})",
+            r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+){0,3})\s+(?i:(?:scored|netted|struck|fired|headed).*?(?:solitary|lone|only|winning|winner|match(?:'|’)?s only)\s+goal)",
+        ]
+        for pat in single_goal_patterns:
+            for m in re.finditer(pat, tekst):
+                spiller = fullfor_spillernavn(rens_spillernavn(m.group(1), hjemme, borte), kjente_navn or [])
+                ctx = tekst[max(0, m.start() - 180):min(len(tekst), m.end() + 180)]
+                lag = gjett_scorer_lag_fra_kontekst(spiller, ctx, kamp, "goal") or vinner_lag
+                if lag:
+                    legg_til_goal_event(events, spiller, lag, finn_minutt_i_kontekst(ctx), "goal")
 
     # 2) "Second-half goals from A and B gave Colombia ..."
     m = re.search(
@@ -1355,7 +1376,7 @@ def referat_fakta_score(detaljer):
 
 
 def referat_fakta_mangler(detaljer):
-    """Kort debugliste for hvorfor fulltekstgrunnlaget ikke regnes som rikt nok."""
+    """Kort liste over harde kriterier som fortsatt mangler."""
     mangler = []
     if not isinstance(detaljer, dict):
         return ["fulltekst_fakta"]
@@ -1365,40 +1386,25 @@ def referat_fakta_mangler(detaljer):
         mangler.append("fulltekst_status")
     if source_type != "article_report":
         mangler.append("article_report")
-    if not detaljer.get("goal_events"):
+    if detaljer.get("fulltekst_riktig_kamp") is False:
+        mangler.append("riktig_kamp")
+    if not detaljer.get("resultat_i_fulltekst", False):
+        mangler.append("resultat_i_fulltekst")
+
+    total_maal = total_maal_i_kamp(fakta=detaljer)
+    goal_events = detaljer.get("goal_events") or []
+    if total_maal > 0 and len(goal_events) < total_maal:
         mangler.append("goal_events")
-    if not any(detaljer.get(f) for f in ["knockout_secured", "first_world_cup_win", "keeper_error", "group_top", "red_cards", "nine_men", "goalless_first_half", "second_half_goals", "late", "stoppage"]):
-        mangler.append("kampforlop")
-    if referat_fakta_score(detaljer) < 5:
-        mangler.append("referat_fakta_score")
+
     return mangler[:6]
 
 
-def har_rikt_fulltekstgrunnlag(detaljer):
+def har_rikt_fulltekstgrunnlag(detaljer, kamp=None):
     """
-    True bare når fulltekstfakta er bredt nok til et ordentlig kampreferat.
-    Brace/scorer alene skal ikke stoppe refresh.
+    True bare når de harde FIFA-kriteriene er møtt.
+    Scoring/faktapoeng brukes ikke lenger til å låse kampen som ferdig.
     """
-    if not isinstance(detaljer, dict) or detaljer.get("status") != "ok":
-        return False
-
-    if detaljer.get("fulltekst_riktig_kamp") is False:
-        return False
-
-    source_type = detaljer.get("source_type") or detaljer.get("fulltekst_source_type") or "unknown"
-    if source_type in {"preview", "wrong_match"}:
-        return False
-
-    score = referat_fakta_score(detaljer)
-
-    # Ekte kampartikkel trenger minst middels faktabredde.
-    if source_type == "article_report":
-        return score >= 5
-
-    # Match-details/andre sider kan brukes som nødløsning i teksten, men skal ikke
-    # regnes som ferdig beriket med mindre faktaene er klart rikere enn kun scorer/brace.
-    return bool(detaljer.get("goal_events")) and score >= 7
-
+    return fulltekst_kriterier_mott(detaljer, kamp=kamp)
 
 def har_kampnaere_detaljer(detaljer):
     """Bakoverkompatibel wrapper. Bruk den strammere fulltekstvurderingen."""
@@ -1696,9 +1702,9 @@ def suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry):
 
 
 
-def cache_fulltekst_er_rik(cache_entry):
+def cache_fulltekst_er_rik(cache_entry, kamp=None):
     fakta = (cache_entry or {}).get("fulltekst_fakta") or {}
-    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta)
+    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta, kamp=kamp)
 
 
 def serper_tillatt_for_kamp(retry_only, fulltekst_fakta):
@@ -1951,6 +1957,81 @@ def resultat_i_tekst(tekst_lower, h, b):
 
 
 
+def total_maal_i_kamp(kamp=None, fakta=None):
+    """Returner antall mål i kampen fra kampobjekt eller lagrede fakta."""
+    try:
+        if kamp is not None:
+            return int(kamp.get("hjemme", 0) or 0) + int(kamp.get("borte", 0) or 0)
+        if fakta is not None:
+            return int(fakta.get("kamp_hjemme_score", 0) or 0) + int(fakta.get("kamp_borte_score", 0) or 0)
+    except Exception:
+        return 0
+    return 0
+
+
+def vinner_lag_for_kamp(kamp):
+    if not kamp:
+        return ""
+    try:
+        h = int(kamp.get("hjemme", 0) or 0)
+        b = int(kamp.get("borte", 0) or 0)
+    except Exception:
+        return ""
+    if h > b:
+        return kamp.get("hjemmelag", "")
+    if b > h:
+        return kamp.get("bortelag", "")
+    return ""
+
+
+def er_vertsnasjon_lag(lag):
+    return lag in {"USA", "United States", "Canada", "Mexico"}
+
+
+def finn_minutt_i_kontekst(ctx):
+    """Finn et kort minutt-uttrykk fra nærliggende tekst, uten å kreve det."""
+    ctx = ctx or ""
+    m = re.search(r"(90\s*[’']?\s*\+\s*\d+|\d{1,2}\s*\+\s*\d+|\d{1,2})(?:st|nd|rd|th)?\s+minute", ctx, flags=re.I)
+    if m:
+        return re.sub(r"\s+", "", m.group(1).replace("’", "'")).replace("'", "")
+    m = re.search(r"(90\s*[’']?\s*\+\s*\d+|\d{1,2}\s*\+\s*\d+|\d{1,2})[’']", ctx, flags=re.I)
+    if m:
+        return re.sub(r"\s+", "", m.group(1).replace("’", "'")).replace("'", "")
+    m = re.search(r"after\s+(\d{1,3})\s+seconds", ctx, flags=re.I)
+    if m:
+        sek = int(m.group(1))
+        return str(max(1, (sek + 59) // 60))
+    return ""
+
+
+def fulltekst_kriterier_mott(detaljer, kamp=None):
+    """Harde kriterier for at et FIFA-fulltekstgrunnlag er ferdig nok."""
+    if not isinstance(detaljer, dict):
+        return False
+    if detaljer.get("status") != "ok":
+        return False
+    if detaljer.get("fulltekst_riktig_kamp") is False:
+        return False
+
+    source_type = detaljer.get("source_type") or detaljer.get("fulltekst_source_type") or "unknown"
+    if source_type != "article_report":
+        return False
+
+    if not detaljer.get("resultat_i_fulltekst", False):
+        return False
+
+    total_maal = total_maal_i_kamp(kamp, detaljer)
+    goal_events = detaljer.get("goal_events") or []
+
+    if total_maal > 0:
+        return len(goal_events) >= total_maal
+
+    # For 0-0 holder det at riktig FIFA-kampartikkel bekrefter resultatet.
+    return True
+
+
+
+
 def fulltekst_matcher_riktig_kamp(tekst, kamp):
     """Sjekk etter henting: fullteksten må faktisk omtale begge lagene."""
     lav = (tekst or "").lower()
@@ -1997,6 +2078,9 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url, source_type="unknown",
         "domene": domene_fra_url(kilde_url),
         "source_type": source_type,
         "fulltekst_riktig_kamp": fulltekst_matcher_riktig_kamp(tekst, kamp),
+        "resultat_i_fulltekst": resultat_i_tekst(lav, kamp["hjemme"], kamp["borte"]),
+        "kamp_hjemme_score": kamp["hjemme"],
+        "kamp_borte_score": kamp["borte"],
         "score": score_fulltekst(tekst, kamp),
         "hentet": iso_utc_na(),
         "late": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "late", "90+", "90'+", "seven minutes from fulltime", "seven minutes from full-time"]),
@@ -2192,7 +2276,7 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url, source_type="unknown",
 
     fakta["referat_fakta_score"] = referat_fakta_score(fakta)
     fakta["mangler"] = referat_fakta_mangler(fakta)
-    fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta)
+    fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta, kamp=kamp)
 
     return fakta
 
@@ -2235,8 +2319,8 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater, maks_forsok=5):
             fakta["_forsok_url"] = forsok_url
             fakta["referat_fakta_score"] = referat_fakta_score(fakta)
             fakta["mangler"] = referat_fakta_mangler(fakta)
-            fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta)
-            if har_rikt_fulltekstgrunnlag(fakta):
+            fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta, kamp=kamp)
+            if har_rikt_fulltekstgrunnlag(fakta, kamp=kamp):
                 print(f"  → Fulltekst: {domene} OK, score {score}, fakta_score {fakta['referat_fakta_score']}")
                 return fakta
             print(f"    Fulltekst: {domene} relevant, men tynt grunnlag (score {score}, fakta_score {fakta['referat_fakta_score']}, mangler: {', '.join(fakta.get('mangler', []))})")
@@ -2269,7 +2353,7 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         and eksisterende.get("versjon") == FULLTEKST_CACHE_VERSION
         and eksisterende.get("status") in ["ok", "ikke_funnet", "feilet"]
     ):
-        if eksisterende.get("status") == "ok" and har_rikt_fulltekstgrunnlag(eksisterende):
+        if eksisterende.get("status") == "ok" and har_rikt_fulltekstgrunnlag(eksisterende, kamp=kamp):
             print(f"  → Fulltekst cache hit: {eksisterende.get('domene', 'ukjent')} {eksisterende.get('source_type', 'ukjent')} score {eksisterende.get('score', -100)} fakta_score {eksisterende.get('referat_fakta_score', referat_fakta_score(eksisterende))}")
             return entry, fulltekst_teller
         elif eksisterende.get("status") == "ok":
@@ -2844,7 +2928,7 @@ def bygg_utdypende_setninger(kamp, detaljer):
     elif h != b and detaljer.get("group_top"):
         legg_til_setning(setninger, f"Resultatet sender {vinner} opp i en sterk posisjon i gruppen")
 
-    if h != b and detaljer.get("home_crowd") and not detaljer.get("first_world_cup_win"):
+    if h != b and detaljer.get("home_crowd") and er_vertsnasjon_lag(vinner_lag) and not detaljer.get("first_world_cup_win"):
         legg_til_setning(setninger, f"Vertsnasjonen fikk dermed en opptur foran eget publikum")
 
     if not setninger:
@@ -3014,37 +3098,29 @@ def main():
         cache_entry = cache.get(key) or {}
         kandidater = list(cache_entry.get("kandidater", []) or [])
 
-        # 1) Rikt fulltekstgrunnlag i cache er ferdig. Ikke bruk Serper eller nye fulltekstforsøk.
-        if cache_fulltekst_er_rik(cache_entry):
+        # 1) Rikt FIFA-fulltekstgrunnlag i cache er ferdig.
+        if cache_fulltekst_er_rik(cache_entry, kamp=kamp):
             fulltekst_fakta = cache_entry.get("fulltekst_fakta", {})
-            print(f"  → Fulltekst cache hit: {fulltekst_fakta.get('domene', 'ukjent')} {fulltekst_fakta.get('source_type', 'ukjent')} score {fulltekst_fakta.get('score', -100)} fakta_score {fulltekst_fakta.get('referat_fakta_score', referat_fakta_score(fulltekst_fakta))}")
+            print(f"  → FIFA/fulltekst cache hit: kriterier møtt ({fulltekst_fakta.get('domene', 'ukjent')})")
         else:
-            # 2) Prøv direkte FIFA article URL via Jina før Serper/API.
+            # 2) Normalvei: bygg FIFA-URL, hent fulltekst og sjekk harde kriterier.
+            # Hvis kriteriene ikke møtes, blir rapporten foreløpig, og neste kjøring prøver igjen.
             kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, [], cache, cache_entry)
-            cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
+            cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller, force=True)
             fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
-
-            # 3) Bare hvis direkte FIFA/Jina ikke gir OK, bruk Serper som fallback URL-discovery.
-            if not har_rikt_fulltekstgrunnlag(fulltekst_fakta):
-                if serper_tillatt_for_kamp(retry_only, fulltekst_fakta):
-                    kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
-                    kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry)
-                    kandidater, cache_entry, serper_teller = suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller)
-                    cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller, force=True)
-                    fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
-                else:
-                    print(f"  → Hopper over Serper for retry/cache: {serper_skip_grunn(retry_only, fulltekst_fakta)}")
 
         recap_tekst = bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta)
 
         beste_score = cache_entry.get("beste_score", -100) if cache_entry else -100
         referat_score = referat_fakta_score(fulltekst_fakta) if isinstance(fulltekst_fakta, dict) else 0
-        rikt_fulltekstgrunnlag = har_rikt_fulltekstgrunnlag(fulltekst_fakta) if isinstance(fulltekst_fakta, dict) else False
+        rikt_fulltekstgrunnlag = har_rikt_fulltekstgrunnlag(fulltekst_fakta, kamp=kamp) if isinstance(fulltekst_fakta, dict) else False
         fallback = not rikt_fulltekstgrunnlag
-        if isinstance(fulltekst_fakta, dict) and fulltekst_fakta.get("status") == "ok":
-            recap_status = "ok" if rikt_fulltekstgrunnlag else "tynt_fulltekstgrunnlag"
+        if rikt_fulltekstgrunnlag:
+            recap_status = "ok"
+        elif isinstance(fulltekst_fakta, dict) and fulltekst_fakta.get("status") == "ok":
+            recap_status = "forelopig_fifa_kriterier_ikke_mott"
         else:
-            recap_status = fulltekst_fakta.get("status", "ikke_sokt") if isinstance(fulltekst_fakta, dict) else "ikke_sokt"
+            recap_status = "forelopig_fifa_ikke_funnet"
 
         print(f"  Eksakt: {len(tippinger['eksakt'])} | Riktig: {len(tippinger['riktig'])} | Bom: {len(tippinger['bom'])}")
         print(f"  Recap-kvalitet: status={recap_status}, fakta_score={referat_score}, fallback={fallback}")
@@ -3063,13 +3139,13 @@ def main():
             "borte_score":   b_score,
             "gruppe":        ref.get("gruppe", kamp.get("gruppe", "")),
             "recap_tekst":   recap_tekst,
-            # Beholder rådata for debugging, men frontend bør ikke publisere disse direkte.
-            "snippets_raa":  [k.get("snippet", "") for k in kandidater[:5]],
-            "serper_kandidater": kandidater[:10],
+            # Ingen debug-/snippetgrunnlag i publisert kamppost.
+            "snippets_raa":  [],
+            "serper_kandidater": [],
             "recap_kvalitet": {
                 "score":       referat_score,
                 "status":      recap_status,
-                "grunnlag":    "fulltekst" if isinstance(fulltekst_fakta, dict) and fulltekst_fakta.get("status") == "ok" else "fallback",
+                "grunnlag":    "fifa_fulltekst" if rikt_fulltekstgrunnlag else "forelopig",
                 "source_type": fulltekst_fakta.get("source_type", "") if isinstance(fulltekst_fakta, dict) else "",
                 "antall_sok":  cache_entry.get("antall_sok", 0) if cache_entry else 0,
                 "fallback":    fallback,
@@ -3079,7 +3155,7 @@ def main():
                 "fulltekst_kilde":  fulltekst_fakta.get("domene", "") if isinstance(fulltekst_fakta, dict) else "",
                 "fulltekst_score":  fulltekst_fakta.get("score", -100) if isinstance(fulltekst_fakta, dict) else -100,
                 "referat_fakta_score": referat_score,
-                "venter_pa_bedre_kilde": bool(fulltekst_fakta.get("venter_pa_bedre_kilde", fallback)) if isinstance(fulltekst_fakta, dict) else True,
+                "venter_pa_bedre_kilde": bool(fallback),
                 "next_retry_at": fulltekst_fakta.get("next_retry_at", "") if isinstance(fulltekst_fakta, dict) else "",
                 "retry_antall": fulltekst_fakta.get("retry_antall", 0) if isinstance(fulltekst_fakta, dict) else 0,
                 "direct_fifa_probe": bool(fulltekst_fakta.get("direct_fifa_probe", False)) if isinstance(fulltekst_fakta, dict) else False,
