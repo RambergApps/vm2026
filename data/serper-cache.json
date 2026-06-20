@@ -2173,7 +2173,7 @@
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
       "score": 9,
-      "hentet": "2026-06-20T12:31:04Z",
+      "hentet": "2026-06-20T12:57:40Z",
       "late": true,
       "stoppage": false,
       "winner": false,
@@ -2214,11 +2214,11 @@
       "direct_fifa_probe": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
       "fifa_direct_probe_version": "v4-home-first-compact",
-      "retry_antall": 7,
+      "retry_antall": 8,
       "venter_pa_bedre_kilde": true,
-      "next_retry_at": "2026-06-20T13:31:11Z"
+      "next_retry_at": "2026-06-20T15:57:52Z"
     },
     "fifa_direct_probe_versjon": "v4-home-first-compact",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T12:30:51Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T12:57:16Z"
   }
 }
