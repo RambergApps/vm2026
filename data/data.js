@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-20T01:01:02Z
+// Sist oppdatert: 2026-06-20T01:30:53Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-20T01:01:02Z",
+  "sist_oppdatert": "2026-06-20T01:30:53Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -552,10 +552,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Brazil_Haiti_2026_06_19",
       "hjemmelag": "Brazil",
       "bortelag": "Haiti",
-      "hjemme": 0,
+      "hjemme": 3,
       "borte": 0,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-19",
       "kilde_score": "football_data_org",
@@ -2031,11 +2031,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -3041,11 +3041,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4051,11 +4051,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 5,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5061,11 +5061,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6071,11 +6071,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 6,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7081,11 +7081,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8091,11 +8091,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9101,11 +9101,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10111,11 +10111,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11121,11 +11121,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -12131,11 +12131,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13141,11 +13141,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -14151,11 +14151,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -15161,11 +15161,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16171,11 +16171,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 8,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17181,11 +17181,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18191,11 +18191,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19201,11 +19201,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 6,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20211,11 +20211,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21221,11 +21221,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22231,11 +22231,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23241,11 +23241,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24251,11 +24251,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -25261,11 +25261,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26271,11 +26271,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27281,11 +27281,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28291,11 +28291,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29301,11 +29301,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -30311,11 +30311,11 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {

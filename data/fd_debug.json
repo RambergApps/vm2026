@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-20T01:01:02Z",
+  "tidspunkt": "2026-06-20T01:30:53Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -203,9 +203,9 @@
       "fd_bortelag": "Haiti",
       "hjemmelag_normalisert": "Brazil",
       "bortelag_normalisert": "Haiti",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 3,
       "borte": 0,
       "fd_dato": "2026-06-20",
       "fd_utcDate": "2026-06-20T00:30:00Z",
