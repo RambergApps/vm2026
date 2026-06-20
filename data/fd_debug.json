@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-20T21:01:00Z",
+  "tidspunkt": "2026-06-20T21:30:54Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -371,7 +371,7 @@
       "fd_bortelag": "Ivory Coast",
       "hjemmelag_normalisert": "Germany",
       "bortelag_normalisert": "Ivory Coast",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 1,
