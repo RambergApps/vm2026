@@ -55,10 +55,10 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v15-fifa-direct-retry"
+FULLTEKST_CACHE_VERSION        = "v16-direct-fifa-before-serper"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
-OFFISIELL_KILDE_SOK_VERSION    = "v11-fifa-direct-retry"
+OFFISIELL_KILDE_SOK_VERSION    = "v12-direct-fifa-before-serper"
 
 # Historikk/referanser skal bare brukes som fallback når kampdataene er for tynne.
 # Poenget med kamppost er ferskt kampreferat, ikke daglig manuelt vedlikehold av referanser.
@@ -79,8 +79,8 @@ FIFA_ARTICLE_BASE              = os.environ.get(
     "FIFA_ARTICLE_BASE",
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles"
 )
-FIFA_DIRECT_PROBE_MAX_URLS     = int(os.environ.get("FIFA_DIRECT_PROBE_MAX_URLS", "12"))
-FIFA_DIRECT_PROBE_VERSION      = "v3-fifa-slug-pattern"
+FIFA_DIRECT_PROBE_MAX_URLS     = int(os.environ.get("FIFA_DIRECT_PROBE_MAX_URLS", "4"))
+FIFA_DIRECT_PROBE_VERSION      = "v4-home-first-compact"
 
 # Retry styres av status/faktakvalitet. Direkte FIFA/Jina kan prøves oftere enn Serper.
 RETRY_SISTE_TIMER              = int(os.environ.get("RETRY_SISTE_TIMER", "36"))
@@ -343,12 +343,14 @@ def kamp_har_ok_fulltekst_i_cache(kamp, cache):
 
 def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
     """
-    Rapporten viser primært gårsdagens kamper, men vi prosesserer også
-    ferdige kamper siste 36 timer med tynt/manglende referat slik at cache kan repareres.
+    Rapporten viser primært gårsdagens kamper.
+    I tillegg kan ferdige kamper siste 36 timer med tynt/manglende referat
+    prosesseres for cache/retry, men rapportkampene prioriteres alltid først
+    slik at fulltekstkvoten ikke brukes opp på fremtidige kampposter.
     """
     rapport = []
     retry = []
-    sett = set()
+    rapport_ids = set()
 
     for kid, kamp in vm_data.get("resultater", {}).items():
         hjemme = kamp.get("hjemmelag", "")
@@ -362,14 +364,18 @@ def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
         kamp_id = kamp.get("kamp_id", kid)
         if norsk_dato == rapport_dato_str:
             rapport.append(kamp)
-            sett.add(kamp_id)
+            rapport_ids.add(kamp_id)
             continue
 
         if kamp_innenfor_siste_timer(kamp, RETRY_SISTE_TIMER) and not kamp_har_ok_fulltekst_i_cache(kamp, cache):
             retry.append(kamp)
-            sett.add(kamp_id)
 
-    # Dedup + stabil sortering.
+    def sortkey(k):
+        return k.get("fd_utcDate", k.get("dato_openfootball", ""))
+
+    rapport = sorted(rapport, key=sortkey)
+    retry = sorted(retry, key=sortkey)
+
     alle = []
     seen = set()
     for kamp in rapport + retry:
@@ -379,10 +385,7 @@ def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
         seen.add(kid)
         alle.append(kamp)
 
-    alle.sort(key=lambda k: k.get("fd_utcDate", k.get("dato_openfootball", "")))
-    rapport_ids = {k.get("kamp_id") for k in rapport}
-    return alle, rapport_ids, len(retry)
-
+    return alle, rapport_ids, len([k for k in retry if k.get("kamp_id") not in rapport_ids])
 
 def hent_tippinger_for_kamp(vm_data, kamp_id):
     eksakt, riktig, bom = [], [], []
@@ -1692,6 +1695,36 @@ def suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry):
     return kombi, entry
 
 
+
+def cache_fulltekst_er_rik(cache_entry):
+    fakta = (cache_entry or {}).get("fulltekst_fakta") or {}
+    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta)
+
+
+def serper_tillatt_for_kamp(retry_only, fulltekst_fakta):
+    """
+    Serper er fallback URL-discovery. Rapportkamper kan bruke Serper når direkte
+    FIFA/Jina ikke gir OK. Cache-only retry-kamper skal normalt bare bruke direkte
+    FIFA først, og først bruke Serper ved morgen-refresh eller etter flere tynne forsøk.
+    """
+    if not retry_only:
+        return True
+    if morgen_refresh_aktiv():
+        return True
+    retry_antall = 0
+    if isinstance(fulltekst_fakta, dict):
+        retry_antall = int(fulltekst_fakta.get("retry_antall", 0) or 0)
+    return retry_antall >= 2
+
+
+def serper_skip_grunn(retry_only, fulltekst_fakta):
+    if not retry_only:
+        return ""
+    if morgen_refresh_aktiv():
+        return ""
+    retry_antall = int((fulltekst_fakta or {}).get("retry_antall", 0) or 0) if isinstance(fulltekst_fakta, dict) else 0
+    return f"cache-only kamp: direkte FIFA/Jina prøvd {retry_antall} gang(er); Serper venter til flere forsøk eller 06:00-refresh"
+
 def bygg_offisiell_kilde_query(kamp, domene):
     """
     Serper free-kontoer kan avvise avanserte operatorer som site:.
@@ -1712,8 +1745,8 @@ def bygg_offisiell_kilde_query(kamp, domene):
 def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller):
     """
     Hvis vanlig Serper-cache ikke inneholder en egnet fulltekst-kilde, gjør et
-    svært begrenset kildesøk mot prioriterte domener, f.eks. CONCACAF først
-    for kamper med CONCACAF-lag. Dette er eneste måten scriptet kan finne
+    svært begrenset kildesøk mot prioriterte domener, f.eks. FIFA først
+    med CONCACAF som fallback. Dette er eneste måten scriptet kan finne
     CONCACAF når den ikke ligger i cached kandidatlisten.
     """
     if not OFFISIELL_KILDE_SOK_AKTIVERT:
@@ -2220,7 +2253,7 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater, maks_forsok=5):
     return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "referat_fakta_score": 0, "mangler": ["fulltekst_kilde"], "_forsok_url": forsok_url}
 
 
-def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller):
+def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller, force=False):
     """
     Sørg for at cache har fulltekst_fakta hvis mulig. Henter bare én gang per kamp/resultat
     og lagrer kun ekstraherte fakta, ikke artikkeltekst.
@@ -2244,7 +2277,9 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
 
         # Ikke lås negative/tynne fulltekst-resultater. Retry styres av next_retry_at
         # og 06:00-refresh, ikke av Serper-score.
-        if fulltekst_retry_due(eksisterende):
+        if force:
+            print(f"  → Fulltekst var {eksisterende.get('status')}, men nye kandidater er lagt til. Prøver fulltekst på nytt i samme kjøring.")
+        elif fulltekst_retry_due(eksisterende):
             print(f"  → Fulltekst var {eksisterende.get('status')}, men referatgrunnlaget er ikke OK. Prøver fulltekst/FIFA-probe på nytt.")
         else:
             nr = eksisterende.get("next_retry_at")
@@ -2975,11 +3010,31 @@ def main():
         ref       = referanser.get(kampreferat_noekkel(hjemme, borte), {})
         tippinger = hent_tippinger_for_kamp(vm_data, kamp_id)
 
-        kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
-        kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry)
-        kandidater, cache_entry, serper_teller = suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller)
-        cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
-        fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
+        key = cache_noekkel(kamp_id, h_score, b_score)
+        cache_entry = cache.get(key) or {}
+        kandidater = list(cache_entry.get("kandidater", []) or [])
+
+        # 1) Rikt fulltekstgrunnlag i cache er ferdig. Ikke bruk Serper eller nye fulltekstforsøk.
+        if cache_fulltekst_er_rik(cache_entry):
+            fulltekst_fakta = cache_entry.get("fulltekst_fakta", {})
+            print(f"  → Fulltekst cache hit: {fulltekst_fakta.get('domene', 'ukjent')} {fulltekst_fakta.get('source_type', 'ukjent')} score {fulltekst_fakta.get('score', -100)} fakta_score {fulltekst_fakta.get('referat_fakta_score', referat_fakta_score(fulltekst_fakta))}")
+        else:
+            # 2) Prøv direkte FIFA article URL via Jina før Serper/API.
+            kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, [], cache, cache_entry)
+            cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
+            fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
+
+            # 3) Bare hvis direkte FIFA/Jina ikke gir OK, bruk Serper som fallback URL-discovery.
+            if not har_rikt_fulltekstgrunnlag(fulltekst_fakta):
+                if serper_tillatt_for_kamp(retry_only, fulltekst_fakta):
+                    kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
+                    kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry)
+                    kandidater, cache_entry, serper_teller = suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller)
+                    cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller, force=True)
+                    fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
+                else:
+                    print(f"  → Hopper over Serper for retry/cache: {serper_skip_grunn(retry_only, fulltekst_fakta)}")
+
         recap_tekst = bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta)
 
         beste_score = cache_entry.get("beste_score", -100) if cache_entry else -100
