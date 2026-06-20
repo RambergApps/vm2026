@@ -55,15 +55,16 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v13-lengre-kampreferater"
+FULLTEKST_CACHE_VERSION        = "v14-fifa-artikkel-fulltekst"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
-OFFISIELL_KILDE_SOK_VERSION    = "v9-no-site-operator"
+OFFISIELL_KILDE_SOK_VERSION    = "v10-fifa-forst-artikkeltype"
 
 # Historikk/referanser skal bare brukes som fallback når kampdataene er for tynne.
 # Poenget med kamppost er ferskt kampreferat, ikke daglig manuelt vedlikehold av referanser.
 HISTORIKK_SOM_FALLBACK         = os.environ.get("HISTORIKK_SOM_FALLBACK", "1") != "0"
 MIN_RECAP_SETNINGER            = int(os.environ.get("MIN_RECAP_SETNINGER", "3"))
+BRUK_SNIPPETS_I_RECAP          = os.environ.get("BRUK_SNIPPETS_I_RECAP", "0") == "1"
 
 # Ferske kamper kan få bedre kilder etter første kjøring.
 # Ikke la en tidlig OK-snippet låse kampen hvis fulltekst/fakta fortsatt er tynn.
@@ -104,8 +105,9 @@ GODE_DOMENER = [
 # Reuters og ESPN er bevisst utelatt: de kan fortsatt gi gode snippets via Serper,
 # men er for ustabile/blokkerte som fulltekst-kilder i GitHub Actions.
 FULLTEKST_PRIORITET = [
-    ("concacaf.com", 100),
-    ("fifa.com", 90),
+    # FIFA-artiklene har vist seg å gi best fulltekstgrunnlag for gode referater.
+    ("fifa.com", 120),
+    ("concacaf.com", 90),
     ("apnews.com", 85),
     ("bbc.com", 80),
     ("skysports.com", 70),
@@ -440,6 +442,10 @@ def score_kandidat(k, hjemme, borte, h_score, b_score):
 
     for ord_ in NEGATIVE_ORD:
         if ord_ in tekst:
+            # FIFA bruker ofte tittelen "Match report and highlights" for ordinære kampreferater.
+            # Det skal ikke straffes som video-/highlight-støy.
+            if ord_ == "highlights" and "match report" in title and "fifa.com" in domene:
+                continue
             score -= 5
             grunner.append(f"negativt ord: {ord_}")
 
@@ -562,7 +568,7 @@ def cache_trenger_ok_refresh(entry):
     fulltekst_ok = isinstance(fulltekst, dict) and fulltekst.get("status") == "ok"
 
     # Hvis vi allerede har god fulltekst og strukturerte fakta, trenger vi ikke nytt Serper-søk.
-    if fulltekst_ok and har_kampnaere_detaljer(fulltekst):
+    if fulltekst_ok and har_rikt_fulltekstgrunnlag(fulltekst):
         return False
 
     # Prøv igjen når fulltekst mangler/ikke ble funnet, eller når kandidatene bare har tynne snippets.
@@ -1116,20 +1122,92 @@ def antall_maal_per_spiller(goal_events, lag=""):
     return teller
 
 
-def har_kampnaere_detaljer(detaljer):
-    """True når vi har nok fersk kampinformasjon til at historikk ikke bør fylle referatet."""
+def referat_fakta_score(detaljer):
+    """
+    Poengscore for hvor rikt fulltekstgrunnlaget er.
+    Serper/snippets skal ikke avgjøre om referatet er OK; dette måles på ekstraherte fakta.
+    """
     if not isinstance(detaljer, dict):
-        return False
+        return 0
+
+    score = 0
+    source_type = detaljer.get("source_type") or detaljer.get("fulltekst_source_type") or "unknown"
+
+    if source_type == "article_report":
+        score += 2
+
     if detaljer.get("goal_events"):
-        return True
+        score += 4
+
     if detaljer.get("scorere"):
-        return True
-    if detaljer.get("penalty_scorer") or detaljer.get("lead_scorer") or detaljer.get("brace_scorer"):
-        return True
-    for felt in ["late", "stoppage", "winner", "penalty", "equaliser", "goalless_first_half", "second_half_goals", "substitutes", "debutants"]:
+        score += 2
+
+    if detaljer.get("hat_trick_player") or detaljer.get("brace_scorer"):
+        score += 2
+
+    if int(detaljer.get("red_cards", 0) or 0) >= 1:
+        score += 2
+
+    for felt in [
+        "first_world_cup_win", "knockout_secured", "keeper_error", "group_top",
+        "home_crowd", "goalless_first_half", "second_half_goals", "late", "stoppage",
+        "winner", "penalty", "equaliser", "nine_men", "early_lead",
+    ]:
         if detaljer.get(felt):
-            return True
-    return False
+            score += 1
+
+    return score
+
+
+def referat_fakta_mangler(detaljer):
+    """Kort debugliste for hvorfor fulltekstgrunnlaget ikke regnes som rikt nok."""
+    mangler = []
+    if not isinstance(detaljer, dict):
+        return ["fulltekst_fakta"]
+
+    source_type = detaljer.get("source_type") or detaljer.get("fulltekst_source_type") or "unknown"
+    if detaljer.get("status") != "ok" and not detaljer.get("fulltekst_status") == "ok":
+        mangler.append("fulltekst_status")
+    if source_type != "article_report":
+        mangler.append("article_report")
+    if not detaljer.get("goal_events"):
+        mangler.append("goal_events")
+    if not any(detaljer.get(f) for f in ["knockout_secured", "first_world_cup_win", "keeper_error", "group_top", "red_cards", "nine_men", "goalless_first_half", "second_half_goals", "late", "stoppage"]):
+        mangler.append("kampforlop")
+    if referat_fakta_score(detaljer) < 5:
+        mangler.append("referat_fakta_score")
+    return mangler[:6]
+
+
+def har_rikt_fulltekstgrunnlag(detaljer):
+    """
+    True bare når fulltekstfakta er bredt nok til et ordentlig kampreferat.
+    Brace/scorer alene skal ikke stoppe refresh.
+    """
+    if not isinstance(detaljer, dict) or detaljer.get("status") != "ok":
+        return False
+
+    if detaljer.get("fulltekst_riktig_kamp") is False:
+        return False
+
+    source_type = detaljer.get("source_type") or detaljer.get("fulltekst_source_type") or "unknown"
+    if source_type in {"preview", "wrong_match"}:
+        return False
+
+    score = referat_fakta_score(detaljer)
+
+    # Ekte kampartikkel trenger minst middels faktabredde.
+    if source_type == "article_report":
+        return score >= 5
+
+    # Match-details/andre sider kan brukes som nødløsning i teksten, men skal ikke
+    # regnes som ferdig beriket med mindre faktaene er klart rikere enn kun scorer/brace.
+    return bool(detaljer.get("goal_events")) and score >= 7
+
+
+def har_kampnaere_detaljer(detaljer):
+    """Bakoverkompatibel wrapper. Bruk den strammere fulltekstvurderingen."""
+    return har_rikt_fulltekstgrunnlag(detaljer)
 
 
 def skal_legge_til_historikk(ref, detaljer):
@@ -1154,8 +1232,54 @@ def domene_i_liste(domene, liste):
     return any(domene_matcher(domene, d) or d in domene for d in liste)
 
 
-def fulltekst_kildeprioritet(k):
-    """Ranger Serper-kandidater etter hvor nyttige de trolig er som fulltekst-kilde."""
+def fulltekst_kandidat_matcher_kamp(k, kamp):
+    """Fulltekst-kandidater må peke på riktig kamp: begge lag må være representert."""
+    tekst = normaliser_tekst(tekst_for_kandidat(k))
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    return inneholder_alias(tekst, hjemme) and inneholder_alias(tekst, borte)
+
+
+def klassifiser_fulltekst_kandidat(k, kamp=None):
+    """
+    Klassifiser URL-en før fulltekstforsøk.
+    Dette gjør at ekte kampartikler prioriteres over match-details og preview-stoff.
+    """
+    tekst = normaliser_tekst(tekst_for_kandidat(k))
+    link = (k.get("link", "") or "").lower()
+    domene = domene_fra_url(link)
+
+    if kamp is not None and not fulltekst_kandidat_matcher_kamp(k, kamp):
+        return "wrong_match"
+
+    preview_ord = [
+        "preview", "seek to", "will face", "set to", "ahead of", "how to watch",
+        "where to watch", "winner of", "will clinch", "will secure", "look to",
+        "bid to", "aim to", "kick-off", "kickoff",
+    ]
+    if any(x in tekst for x in preview_ord):
+        return "preview"
+
+    if "/matches/" in link or "full match details" in tekst or "lineups" in tekst or "match updates" in tekst:
+        return "match_details"
+
+    postmatch_ord = [
+        "match report", "game analysis", "report and highlights", "full-time",
+        "full time", "defeated", "beat", "beats", "won", "rout", "crush",
+        "secure", "secured", "confirm", "confirmed", "advanced", "advance",
+    ]
+    if "/articles/" in link and domene_matcher(domene, "fifa.com"):
+        return "article_report"
+    if "/news/" in link and any(x in tekst for x in postmatch_ord):
+        return "article_report"
+    if any(x in tekst for x in postmatch_ord):
+        return "article_report"
+
+    return "other"
+
+
+def fulltekst_kildeprioritet(k, kamp=None):
+    """Ranger kandidater etter domene + artikkeltype. FIFA-artikkel skal vinne."""
     domene = domene_fra_url(k.get("link", ""))
     if not domene:
         return -999
@@ -1163,22 +1287,26 @@ def fulltekst_kildeprioritet(k):
         return -999
     if domene_i_liste(domene, FULLTEKST_UTELUKKEDE_DOMENER):
         return -999
+
+    source_type = klassifiser_fulltekst_kandidat(k, kamp) if kamp is not None else "unknown"
+    if source_type in {"wrong_match", "preview"}:
+        return -999
+
+    domene_score = -999
     for needle, score in FULLTEKST_PRIORITET:
         if domene_matcher(domene, needle):
-            return score + min(20, int(k.get("score", 0)))
-    return -999
+            domene_score = score
+            break
+    if domene_score <= 0:
+        return -999
 
-
-def fulltekst_kandidat_matcher_kamp(k, kamp):
-    """Litt mildere sjekk for offisielle kilder: kandidaten må ligne aktuell kamp."""
-    tekst = normaliser_tekst(tekst_for_kandidat(k))
-    hjemme = kamp.get("hjemmelag", "")
-    borte = kamp.get("bortelag", "")
-    h = kamp.get("hjemme")
-    b = kamp.get("borte")
-    har_lag = inneholder_alias(tekst, hjemme) or inneholder_alias(tekst, borte)
-    har_resultat = f"{h}-{b}" in tekst or f"{h}–{b}" in tekst or f"{b}-{h}" in tekst or f"{b}–{h}" in tekst
-    return har_lag or har_resultat
+    type_bonus = {
+        "article_report": 60,
+        "other": 0,
+        "match_details": -35,
+    }.get(source_type, 0)
+    kandidat_score = max(-20, min(20, int(k.get("score", 0))))
+    return domene_score + type_bonus + kandidat_score
 
 
 def fulltekst_egnet_kandidater(kandidater, kamp=None):
@@ -1187,26 +1315,26 @@ def fulltekst_egnet_kandidater(kandidater, kamp=None):
     for k in kandidater or []:
         domene = domene_fra_url(k.get("link", "")) or "ukjent"
         score = int(k.get("score", -100))
-        prio = fulltekst_kildeprioritet(k)
+        source_type = klassifiser_fulltekst_kandidat(k, kamp) if kamp is not None else "unknown"
+        prio = fulltekst_kildeprioritet(k, kamp=kamp)
         if prio <= 0:
-            debug.append(f"{domene}:{score}:droppet")
+            debug.append(f"{domene}:{score}:{source_type}:droppet")
             continue
 
-        # Normalt kreves god kandidatscore. For prioriterte/offisielle fulltekst-domener
-        # som CONCACAF/FIFA kan vi være mildere, fordi fulltekst-score etterpå avgjør kvaliteten.
-        mild_offisiell = prio >= 90 and kamp is not None and fulltekst_kandidat_matcher_kamp(k, kamp)
+        # Fulltekst-score etter henting avgjør endelig kvalitet, men kandidat må være riktig kamp.
+        mild_offisiell = prio >= 50 and kamp is not None and fulltekst_kandidat_matcher_kamp(k, kamp)
         if score < MIN_KVALITETSSCORE and not mild_offisiell:
-            debug.append(f"{domene}:{score}:lav_score")
+            debug.append(f"{domene}:{score}:{source_type}:lav_score")
             continue
 
         kk = dict(k)
         kk["fulltekst_prioritet"] = prio
+        kk["source_type"] = source_type
         valgte.append(kk)
-        debug.append(f"{domene}:{score}:egnet")
+        debug.append(f"{domene}:{score}:{source_type}:egnet")
 
     valgte.sort(key=lambda x: (x.get("fulltekst_prioritet", 0), x.get("score", 0)), reverse=True)
     return valgte[:8], debug[:12]
-
 
 
 # ── OFFISIELL FULLTEKST-KILDEDISCOVERY ───────────────────────────────────────
@@ -1232,11 +1360,10 @@ def fulltekst_lookup_domener_for_kamp(kamp):
     """
     hjemme = kamp.get("hjemmelag", "")
     borte = kamp.get("bortelag", "")
-    domener = []
+    # FIFA først: de vellykkede referatene kom fra FIFA-artikler.
+    domener = ["fifa.com"]
     if hjemme in CONCACAF_LAG or borte in CONCACAF_LAG:
         domener.append("concacaf.com")
-    # FIFA kan dekke alle kamper, men er ikke alltid like rask på referater.
-    domener.append("fifa.com")
     # Noen kilder fungerer bedre som fulltekst enn Reuters/ESPN.
     domener.extend(["apnews.com", "bbc.com", "skysports.com", "theguardian.com"])
 
@@ -1286,8 +1413,10 @@ def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry
         return kandidater, cache_entry, serper_teller
 
     egnet, _ = fulltekst_egnet_kandidater(kandidater, kamp=kamp)
-    if egnet:
+    if any(k.get("source_type") == "article_report" for k in egnet):
         return kandidater, cache_entry, serper_teller
+    if egnet:
+        print("  → Fulltekst-egnet kilde finnes, men ingen kampartikkel. Søker prioritert artikkelkilde først.")
 
     key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
     entry = cache_entry or cache.get(key) or {}
@@ -1328,12 +1457,15 @@ def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry
             print(f"    → Beholder {len(domene_funn)} treff fra {domene}")
         nye.extend(domene_funn)
 
-        # Stopp tidlig hvis dette domenet faktisk ga fulltekst-egnet kandidat.
+        # Stopp tidlig bare hvis vi fant en ekte kampartikkel.
+        # Match-details er nyttig nødgrunnlag, men vi søker videre etter artikkel innenfor kvoten.
         kombi_tmp = dedupliser_kandidater((kandidater or []) + nye)
         egnet_tmp, _ = fulltekst_egnet_kandidater(kombi_tmp, kamp=kamp)
-        if egnet_tmp:
-            print(f"    → Fant fulltekst-egnet kilde via {domene}")
+        if any(k.get("source_type") == "article_report" for k in egnet_tmp):
+            print(f"    → Fant kampartikkel via {domene}")
             break
+        elif egnet_tmp:
+            print(f"    → Fant bare match/details-kilde via {domene}. Søker videre etter kampartikkel hvis kvoten tillater det.")
 
     kombi = dedupliser_kandidater((kandidater or []) + nye)
     for k in kombi:
@@ -1470,10 +1602,19 @@ def resultat_i_tekst(tekst_lower, h, b):
     return any(v in tekst_lower for v in varianter)
 
 
+
+
+def fulltekst_matcher_riktig_kamp(tekst, kamp):
+    """Sjekk etter henting: fullteksten må faktisk omtale begge lagene."""
+    lav = (tekst or "").lower()
+    return inneholder_alias(lav, kamp.get("hjemmelag", "")) and inneholder_alias(lav, kamp.get("bortelag", ""))
+
 def score_fulltekst(tekst, kamp):
     if not tekst or len(tekst) < 250:
         return -100
     lav = tekst.lower()
+    if not fulltekst_matcher_riktig_kamp(tekst, kamp):
+        return -100
     score = 0
     if inneholder_alias(lav, kamp["hjemmelag"]):
         score += 4
@@ -1495,7 +1636,7 @@ def score_fulltekst(tekst, kamp):
     return score
 
 
-def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
+def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url, source_type="unknown", kilde_tittel=""):
     """Ekstraher korte, strukturerte fakta fra fullside. Ikke lagre full artikkeltekst."""
     hjemme = kamp["hjemmelag"]
     borte = kamp["bortelag"]
@@ -1505,7 +1646,10 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
         "status": "ok",
         "versjon": FULLTEKST_CACHE_VERSION,
         "kilde_url": kilde_url,
+        "kilde_tittel": kilde_tittel,
         "domene": domene_fra_url(kilde_url),
+        "source_type": source_type,
+        "fulltekst_riktig_kamp": fulltekst_matcher_riktig_kamp(tekst, kamp),
         "score": score_fulltekst(tekst, kamp),
         "hentet": iso_utc_na(),
         "late": any(x in lav for x in ["stoppage time", "last-gasp", "deep into stoppage", "late", "90+", "90'+", "seven minutes from fulltime", "seven minutes from full-time"]),
@@ -1699,6 +1843,10 @@ def ekstraher_fakta_fra_fulltekst(tekst, kamp, kilde_url):
             ev.get("type", "goal"),
         )
 
+    fakta["referat_fakta_score"] = referat_fakta_score(fakta)
+    fakta["mangler"] = referat_fakta_mangler(fakta)
+    fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta)
+
     return fakta
 
 
@@ -1708,28 +1856,50 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater, maks_forsok=5):
     if debug:
         print("  → Fulltekst-kandidater: " + "; ".join(debug))
     if not egnet:
-        print("  → Fulltekst: ingen egnede kilder etter blokkering av Reuters/ESPN")
-        return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "_forsok_url": 0}
+        print("  → Fulltekst: ingen egnede kilder etter blokkering/klassifisering")
+        return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "referat_fakta_score": 0, "mangler": ["fulltekst_kilde"], "_forsok_url": 0}
 
     forsok_url = 0
+    beste_tynne_fakta = None
+
     for k in egnet[:max(0, maks_forsok)]:
         url = k.get("link", "")
         domene = domene_fra_url(url)
+        source_type = k.get("source_type") or klassifiser_fulltekst_kandidat(k, kamp)
         forsok_url += 1
-        print(f"  → Fulltekst: prøver {domene}")
+        print(f"  → Fulltekst: prøver {domene} ({source_type})")
         html_text = hent_url_tekst(url)
         tekst = ekstraher_artikkeltekst_fra_html(html_text)
         score = score_fulltekst(tekst, kamp)
         if score >= FULLTEKST_MIN_SCORE:
-            fakta = ekstraher_fakta_fra_fulltekst(tekst, kamp, url)
+            fakta = ekstraher_fakta_fra_fulltekst(
+                tekst,
+                kamp,
+                url,
+                source_type=source_type,
+                kilde_tittel=k.get("title", ""),
+            )
             fakta["score"] = score
             fakta["versjon"] = FULLTEKST_CACHE_VERSION
             fakta["_forsok_url"] = forsok_url
-            print(f"  → Fulltekst: {domene} OK, score {score}")
-            return fakta
-        print(f"    Fulltekst: {domene} lav score ({score})")
+            fakta["referat_fakta_score"] = referat_fakta_score(fakta)
+            fakta["mangler"] = referat_fakta_mangler(fakta)
+            fakta["rikt_fulltekstgrunnlag"] = har_rikt_fulltekstgrunnlag(fakta)
+            if har_rikt_fulltekstgrunnlag(fakta):
+                print(f"  → Fulltekst: {domene} OK, score {score}, fakta_score {fakta['referat_fakta_score']}")
+                return fakta
+            print(f"    Fulltekst: {domene} relevant, men tynt grunnlag (score {score}, fakta_score {fakta['referat_fakta_score']}, mangler: {', '.join(fakta.get('mangler', []))})")
+            if beste_tynne_fakta is None or referat_fakta_score(fakta) > referat_fakta_score(beste_tynne_fakta):
+                beste_tynne_fakta = fakta
+        else:
+            print(f"    Fulltekst: {domene} lav score ({score})")
 
-    return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "_forsok_url": forsok_url}
+    if beste_tynne_fakta:
+        beste_tynne_fakta["status"] = "ok"
+        beste_tynne_fakta["_forsok_url"] = forsok_url
+        return beste_tynne_fakta
+
+    return {"status": "ikke_funnet", "versjon": FULLTEKST_CACHE_VERSION, "hentet": iso_utc_na(), "score": -100, "referat_fakta_score": 0, "mangler": ["fulltekst_kilde"], "_forsok_url": forsok_url}
 
 
 def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller):
@@ -1748,11 +1918,13 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         and eksisterende.get("versjon") == FULLTEKST_CACHE_VERSION
         and eksisterende.get("status") in ["ok", "ikke_funnet", "feilet"]
     ):
-        if eksisterende.get("status") == "ok":
-            print(f"  → Fulltekst cache hit: {eksisterende.get('domene', 'ukjent')} score {eksisterende.get('score', -100)}")
+        if eksisterende.get("status") == "ok" and har_rikt_fulltekstgrunnlag(eksisterende):
+            print(f"  → Fulltekst cache hit: {eksisterende.get('domene', 'ukjent')} {eksisterende.get('source_type', 'ukjent')} score {eksisterende.get('score', -100)} fakta_score {eksisterende.get('referat_fakta_score', referat_fakta_score(eksisterende))}")
             return entry, fulltekst_teller
+        elif eksisterende.get("status") == "ok":
+            print(f"  → Fulltekst cache OK, men grunnlaget er tynt ({eksisterende.get('domene', 'ukjent')} {eksisterende.get('source_type', 'ukjent')}, fakta_score {eksisterende.get('referat_fakta_score', referat_fakta_score(eksisterende))}). Prøver bedre kilde.")
 
-        # Ikke lås negative fulltekst-resultater for ferske kamper.
+        # Ikke lås negative/tynne fulltekst-resultater for ferske kamper.
         minutter = minutter_siden_iso(eksisterende.get("hentet"))
         retry_antall = int(eksisterende.get("retry_antall", 0) or 0)
         if (
@@ -1781,7 +1953,7 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         prev_retry = 0
         if isinstance(eksisterende, dict):
             prev_retry = int(eksisterende.get("retry_antall", 0) or 0)
-        if fakta.get("status") != "ok":
+        if fakta.get("status") != "ok" or not har_rikt_fulltekstgrunnlag(fakta):
             fakta["retry_antall"] = prev_retry + 1
     entry["fulltekst_fakta"] = fakta
     cache[key] = entry
@@ -1793,6 +1965,12 @@ def merge_fulltekst_fakta(detaljer, fakta):
     """La fulltekstfakta berike snippet-detaljene uten å overskrive gode verdier unødig."""
     if not isinstance(fakta, dict) or fakta.get("status") != "ok":
         return detaljer
+
+    detaljer["fulltekst_source_type"] = fakta.get("source_type", "unknown")
+    detaljer["source_type"] = fakta.get("source_type", "unknown")
+    detaljer["fulltekst_riktig_kamp"] = fakta.get("fulltekst_riktig_kamp", True)
+    detaljer["referat_fakta_score"] = fakta.get("referat_fakta_score", referat_fakta_score(fakta))
+    detaljer["mangler"] = fakta.get("mangler", referat_fakta_mangler(fakta))
 
     for felt in ["late", "stoppage", "winner", "penalty", "equaliser", "goalless_first_half", "second_half_goals", "substitutes", "debutants", "nine_men", "first_world_cup_win", "knockout_secured", "group_top", "home_crowd", "keeper_error"]:
         detaljer[felt] = bool(detaljer.get(felt)) or bool(fakta.get(felt))
@@ -1848,7 +2026,7 @@ def utled_kampdetaljer(kamp, kandidater, fulltekst_fakta=None):
     """
     hjemme = kamp["hjemmelag"]
     borte = kamp["bortelag"]
-    tekster = kandidattekst_liste(kandidater, maks=5)
+    tekster = kandidattekst_liste(kandidater, maks=5) if BRUK_SNIPPETS_I_RECAP else []
     samlet = " ".join(tekster)
     lav = samlet.lower()
 
@@ -2489,10 +2667,16 @@ def main():
         recap_tekst = bygg_recap_tekst(kamp, kandidater, ref, fulltekst_fakta)
 
         beste_score = cache_entry.get("beste_score", -100) if cache_entry else -100
-        fallback = beste_score < MIN_KVALITETSSCORE
+        referat_score = referat_fakta_score(fulltekst_fakta) if isinstance(fulltekst_fakta, dict) else 0
+        rikt_fulltekstgrunnlag = har_rikt_fulltekstgrunnlag(fulltekst_fakta) if isinstance(fulltekst_fakta, dict) else False
+        fallback = not rikt_fulltekstgrunnlag
+        if isinstance(fulltekst_fakta, dict) and fulltekst_fakta.get("status") == "ok":
+            recap_status = "ok" if rikt_fulltekstgrunnlag else "tynt_fulltekstgrunnlag"
+        else:
+            recap_status = fulltekst_fakta.get("status", "ikke_sokt") if isinstance(fulltekst_fakta, dict) else "ikke_sokt"
 
         print(f"  Eksakt: {len(tippinger['eksakt'])} | Riktig: {len(tippinger['riktig'])} | Bom: {len(tippinger['bom'])}")
-        print(f"  Recap-kvalitet: score={beste_score}, fallback={fallback}")
+        print(f"  Recap-kvalitet: status={recap_status}, fakta_score={referat_score}, fallback={fallback}")
 
         kamposter.append({
             "kamp_id":       kamp_id,
@@ -2506,14 +2690,19 @@ def main():
             "snippets_raa":  [k.get("snippet", "") for k in kandidater[:5]],
             "serper_kandidater": kandidater[:10],
             "recap_kvalitet": {
-                "score":       beste_score,
-                "status":      cache_entry.get("status", "ukjent") if cache_entry else "ukjent",
+                "score":       referat_score,
+                "status":      recap_status,
+                "grunnlag":    "fulltekst" if isinstance(fulltekst_fakta, dict) and fulltekst_fakta.get("status") == "ok" else "fallback",
+                "source_type": fulltekst_fakta.get("source_type", "") if isinstance(fulltekst_fakta, dict) else "",
                 "antall_sok":  cache_entry.get("antall_sok", 0) if cache_entry else 0,
                 "fallback":    fallback,
                 "cache_key":   cache_noekkel(kamp_id, h_score, b_score),
+                "serper_score": beste_score,
                 "fulltekst_status": fulltekst_fakta.get("status", "ikke_sokt") if isinstance(fulltekst_fakta, dict) else "ikke_sokt",
                 "fulltekst_kilde":  fulltekst_fakta.get("domene", "") if isinstance(fulltekst_fakta, dict) else "",
                 "fulltekst_score":  fulltekst_fakta.get("score", -100) if isinstance(fulltekst_fakta, dict) else -100,
+                "referat_fakta_score": referat_score,
+                "mangler": fulltekst_fakta.get("mangler", referat_fakta_mangler(fulltekst_fakta)) if isinstance(fulltekst_fakta, dict) else ["fulltekst_fakta"],
                 "offisiell_kilde_sokt": cache_entry.get("offisiell_kilde_domener", []) if cache_entry else [],
             },
             "tippinger":     tippinger,
