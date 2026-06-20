@@ -55,10 +55,10 @@ FULLTEKST_TIMEOUT              = int(os.environ.get("FULLTEKST_TIMEOUT", "12"))
 FULLTEKST_MIN_SCORE            = int(os.environ.get("FULLTEKST_MIN_SCORE", "8"))
 FULLTEKST_MAX_BYTES            = int(os.environ.get("FULLTEKST_MAX_BYTES", "450000"))
 JINA_READER_AKTIVERT           = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION        = "v14-fifa-artikkel-fulltekst"
+FULLTEKST_CACHE_VERSION        = "v15-fifa-direct-retry"
 OFFISIELL_KILDE_SOK_AKTIVERT   = os.environ.get("OFFISIELL_KILDE_SOK_AKTIVERT", "1") != "0"
 MAX_OFFISIELLE_KILDESOK_KAMP   = int(os.environ.get("MAX_OFFISIELLE_KILDESOK_KAMP", "2"))
-OFFISIELL_KILDE_SOK_VERSION    = "v10-fifa-forst-artikkeltype"
+OFFISIELL_KILDE_SOK_VERSION    = "v11-fifa-direct-retry"
 
 # Historikk/referanser skal bare brukes som fallback når kampdataene er for tynne.
 # Poenget med kamppost er ferskt kampreferat, ikke daglig manuelt vedlikehold av referanser.
@@ -71,6 +71,22 @@ BRUK_SNIPPETS_I_RECAP          = os.environ.get("BRUK_SNIPPETS_I_RECAP", "0") ==
 FERSK_KAMP_REFRESH_TIMER       = int(os.environ.get("FERSK_KAMP_REFRESH_TIMER", "24"))
 MIN_MINUTTER_MELLOM_OK_REFRESH = int(os.environ.get("MIN_MINUTTER_MELLOM_OK_REFRESH", "30"))
 MAX_SERPER_REFRESH_PER_KAMP    = int(os.environ.get("MAX_SERPER_REFRESH_PER_KAMP", "3"))
+
+# Direkte FIFA artikkel-probing: bygg forutsigbar /articles/-URL selv, men hent
+# fortsatt via Jina Reader i hent_url_tekst(). Dette reduserer behovet for Serper.
+DIREKTE_FIFA_PROBE_AKTIVERT    = os.environ.get("DIREKTE_FIFA_PROBE_AKTIVERT", "1") != "0"
+FIFA_ARTICLE_BASE              = os.environ.get(
+    "FIFA_ARTICLE_BASE",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles"
+)
+FIFA_DIRECT_PROBE_MAX_URLS     = int(os.environ.get("FIFA_DIRECT_PROBE_MAX_URLS", "12"))
+FIFA_DIRECT_PROBE_VERSION      = "v3-fifa-slug-pattern"
+
+# Retry styres av status/faktakvalitet. Direkte FIFA/Jina kan prøves oftere enn Serper.
+RETRY_SISTE_TIMER              = int(os.environ.get("RETRY_SISTE_TIMER", "36"))
+MORGEN_REFRESH_TIME            = os.environ.get("MORGEN_REFRESH_TIME", "06:00")
+MORGEN_REFRESH_WINDOW_MIN      = int(os.environ.get("MORGEN_REFRESH_WINDOW_MIN", "75"))
+
 
 
 SERPER_GL                      = os.environ.get("SERPER_GL", "us")
@@ -241,8 +257,8 @@ def seed_cache_fra_eksisterende_kamppost(eksisterende, cache):
             "resultat": f"{kamp.get('hjemme_score', '')}-{kamp.get('borte_score', '')}",
             "sist_sokt": eksisterende.get("generert") or iso_utc_na(),
             "antall_sok": int(kvalitet.get("antall_sok", 0) or 0),
-            "beste_score": int(kvalitet.get("score", -100) or -100),
-            "status": kvalitet.get("status", "ok" if int(kvalitet.get("score", -100) or -100) >= MIN_KVALITETSSCORE else "lav_score"),
+            "beste_score": int(kvalitet.get("serper_score", kvalitet.get("score", -100)) or -100),
+            "status": "ok" if int(kvalitet.get("serper_score", kvalitet.get("score", -100)) or -100) >= MIN_KVALITETSSCORE else "lav_score",
             "query": (kandidater[0].get("query", "") if kandidater else ""),
             "kandidater": kandidater[:15],
         }
@@ -297,6 +313,75 @@ def finn_gaarsdagens_kamper(vm_data):
             kamper.append(kamp)
 
     return sorted(kamper, key=lambda k: k.get("fd_utcDate", k.get("dato_openfootball", "")))
+
+
+def kamp_norsk_dato(kamp):
+    fd_utc = kamp.get("fd_utcDate", "")
+    return utc_til_norsk_dato(fd_utc) if fd_utc else kamp.get("dato_openfootball", "")
+
+
+def kamp_utc_dt(kamp):
+    fd_utc = kamp.get("fd_utcDate", "")
+    if not fd_utc:
+        return None
+    return iso_til_dt(fd_utc)
+
+
+def kamp_innenfor_siste_timer(kamp, timer):
+    dt = kamp_utc_dt(kamp)
+    if dt is None:
+        return False
+    alder_timer = (datetime.now(timezone.utc) - dt).total_seconds() / 3600
+    return 0 <= alder_timer <= timer
+
+
+def kamp_har_ok_fulltekst_i_cache(kamp, cache):
+    key = cache_noekkel(kamp.get("kamp_id"), kamp.get("hjemme"), kamp.get("borte"))
+    fakta = (cache.get(key) or {}).get("fulltekst_fakta") or {}
+    return isinstance(fakta, dict) and fakta.get("status") == "ok" and har_rikt_fulltekstgrunnlag(fakta)
+
+
+def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
+    """
+    Rapporten viser primært gårsdagens kamper, men vi prosesserer også
+    ferdige kamper siste 36 timer med tynt/manglende referat slik at cache kan repareres.
+    """
+    rapport = []
+    retry = []
+    sett = set()
+
+    for kid, kamp in vm_data.get("resultater", {}).items():
+        hjemme = kamp.get("hjemmelag", "")
+        borte = kamp.get("bortelag", "")
+        if re.match(r"^[W1-9]", hjemme) or re.match(r"^[W1-9]", borte):
+            continue
+        if not kamp.get("ferdig"):
+            continue
+
+        norsk_dato = kamp_norsk_dato(kamp)
+        kamp_id = kamp.get("kamp_id", kid)
+        if norsk_dato == rapport_dato_str:
+            rapport.append(kamp)
+            sett.add(kamp_id)
+            continue
+
+        if kamp_innenfor_siste_timer(kamp, RETRY_SISTE_TIMER) and not kamp_har_ok_fulltekst_i_cache(kamp, cache):
+            retry.append(kamp)
+            sett.add(kamp_id)
+
+    # Dedup + stabil sortering.
+    alle = []
+    seen = set()
+    for kamp in rapport + retry:
+        kid = kamp.get("kamp_id")
+        if kid in seen:
+            continue
+        seen.add(kid)
+        alle.append(kamp)
+
+    alle.sort(key=lambda k: k.get("fd_utcDate", k.get("dato_openfootball", "")))
+    rapport_ids = {k.get("kamp_id") for k in rapport}
+    return alle, rapport_ids, len(retry)
 
 
 def hent_tippinger_for_kamp(vm_data, kamp_id):
@@ -544,6 +629,115 @@ def minutter_siden_iso(iso_str):
         return None
 
 
+def iso_til_dt(iso_str):
+    if not iso_str:
+        return None
+    try:
+        return datetime.fromisoformat(str(iso_str).replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def iso_om_minutter(minutter):
+    return (datetime.now(timezone.utc) + timedelta(minutes=int(minutter))).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def retry_intervall_minutter(retry_antall):
+    """Statusstyrt retry: ofte først, roligere utover dagen."""
+    n = int(retry_antall or 0)
+    if n < 4:
+        return 30
+    if n < 8:
+        return 60
+    return 180
+
+
+def morgen_refresh_aktiv():
+    """True i morgenvinduet, f.eks. ca. 06:00–07:15 norsk tid."""
+    try:
+        hh, mm = [int(x) for x in MORGEN_REFRESH_TIME.split(":", 1)]
+    except Exception:
+        hh, mm = 6, 0
+    now = datetime.now(NORSK_TZ)
+    start = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    slutt = start + timedelta(minutes=MORGEN_REFRESH_WINDOW_MIN)
+    return start <= now <= slutt
+
+
+def morgen_refresh_key():
+    return datetime.now(NORSK_TZ).strftime("%Y-%m-%d")
+
+
+def fulltekst_status_er_tynn(fakta):
+    if not isinstance(fakta, dict):
+        return True
+    if fakta.get("status") != "ok":
+        return True
+    return not har_rikt_fulltekstgrunnlag(fakta)
+
+
+def fulltekst_retry_due(fakta):
+    """Skal tynn/manglende fulltekst prøves på nytt nå?"""
+    if not isinstance(fakta, dict):
+        return True
+    if not fulltekst_status_er_tynn(fakta):
+        return False
+
+    if morgen_refresh_aktiv() and fakta.get("morgen_refresh_key") != morgen_refresh_key():
+        return True
+
+    next_retry = iso_til_dt(fakta.get("next_retry_at"))
+    if next_retry is None:
+        minutter = minutter_siden_iso(fakta.get("hentet"))
+        return minutter is None or minutter >= MIN_MINUTTER_MELLOM_OK_REFRESH
+    return datetime.now(timezone.utc) >= next_retry
+
+
+def berik_retry_metadata(fakta, tidligere=None):
+    """Legg inn next_retry_at/venter-status på tynne fulltekstresultater."""
+    if not isinstance(fakta, dict):
+        return fakta
+    prev_retry = 0
+    if isinstance(tidligere, dict):
+        prev_retry = int(tidligere.get("retry_antall", 0) or 0)
+
+    if fulltekst_status_er_tynn(fakta):
+        retry_antall = prev_retry + 1
+        fakta["retry_antall"] = retry_antall
+        fakta["venter_pa_bedre_kilde"] = True
+        fakta["next_retry_at"] = iso_om_minutter(retry_intervall_minutter(retry_antall))
+        if morgen_refresh_aktiv():
+            fakta["morgen_refresh_key"] = morgen_refresh_key()
+    else:
+        fakta["retry_antall"] = int(fakta.get("retry_antall", prev_retry) or 0)
+        fakta["venter_pa_bedre_kilde"] = False
+        fakta.pop("next_retry_at", None)
+    return fakta
+
+
+def offisiell_kilde_sok_due(entry):
+    """Serper/offisielt søk kan gjentas for tynne kamper, men sjeldnere enn direkte FIFA/Jina."""
+    if not isinstance(entry, dict):
+        return True
+    fakta = entry.get("fulltekst_fakta") or {}
+    if not fulltekst_status_er_tynn(fakta):
+        return False
+
+    # Ny versjon skal alltid få ett søk.
+    if entry.get("offisiell_kilde_sok_versjon") != OFFISIELL_KILDE_SOK_VERSION:
+        return True
+
+    if morgen_refresh_aktiv() and entry.get("offisiell_morgen_refresh_key") != morgen_refresh_key():
+        return True
+
+    retry_antall = int(entry.get("offisiell_kilde_retry_antall", 0) or 0)
+    if retry_antall >= MAX_SERPER_REFRESH_PER_KAMP + 1:
+        return False
+
+    minutter = minutter_siden_iso(entry.get("offisiell_kilde_sokt"))
+    return minutter is None or minutter >= MIN_MINUTTER_MELLOM_RETRY
+
+
 def cache_trenger_ok_refresh(entry):
     """
     True når Serper-cache er OK, men referatgrunnlaget fortsatt er svakt.
@@ -567,15 +761,13 @@ def cache_trenger_ok_refresh(entry):
     fulltekst = entry.get("fulltekst_fakta") or {}
     fulltekst_ok = isinstance(fulltekst, dict) and fulltekst.get("status") == "ok"
 
-    # Hvis vi allerede har god fulltekst og strukturerte fakta, trenger vi ikke nytt Serper-søk.
+    # Hvis fulltekstgrunnlaget er rikt, trenger vi ikke Serper-refresh.
     if fulltekst_ok and har_rikt_fulltekstgrunnlag(fulltekst):
         return False
 
-    # Prøv igjen når fulltekst mangler/ikke ble funnet, eller når kandidatene bare har tynne snippets.
-    if not fulltekst_ok:
-        return True
-
-    return False
+    # Serper brukes bare som URL-discovery og skal ikke styre referatkvalitet.
+    # Tynne kamper kan få nytt Serper-søk senere, men egen sperre styres i offisiell_kilde_sok_due().
+    return fulltekst_status_er_tynn(fulltekst)
 
 
 def hent_kandidater_med_cache(kamp, cache, serper_teller):
@@ -596,9 +788,9 @@ def hent_kandidater_med_cache(kamp, cache, serper_teller):
         if status == "ok" and beste_score >= MIN_KVALITETSSCORE:
             if cache_trenger_ok_refresh(entry):
                 minutter = minutter_siden_iso(entry.get("sist_sokt"))
-                print(f"  → Serper cache OK, men referatgrunnlag er tynt. Tillater refresh ({int(minutter or 0)} min siden sist).")
+                print(f"  → Serper cache hit: URL-grunnlag score {beste_score}, men referatgrunnlag er tynt ({int(minutter or 0)} min siden sist).")
             else:
-                print(f"  → Serper cache hit: score {beste_score} OK")
+                print(f"  → Serper cache hit: URL-grunnlag score {beste_score}")
                 return kandidater, entry, serper_teller
 
         maks_sok = MAX_SERPER_SOK_PER_KAMP
@@ -1385,6 +1577,121 @@ KILDE_QUERY_NAVN = {
 }
 
 
+FIFA_SLUG_ALIASES = {
+    "USA": ["usa", "united-states"],
+    "United States": ["usa", "united-states"],
+    "South Korea": ["korea-republic", "south-korea"],
+    "Czech Republic": ["czechia", "czech-republic"],
+    "Czechia": ["czechia", "czech-republic"],
+    "Turkey": ["turkiye", "turkey"],
+    "Türkiye": ["turkiye", "turkey"],
+    "DR Congo": ["congo-dr", "dr-congo"],
+    "Ivory Coast": ["cote-divoire", "ivory-coast"],
+    "Bosnia & Herzegovina": ["bosnia-and-herzegovina", "bosnia-herzegovina"],
+    "Cape Verde": ["cape-verde", "cabo-verde"],
+    "Netherlands": ["netherlands"],
+    "Qatar": ["qatar"],
+}
+
+
+def slugify_fifa_lag(lag):
+    """Lag en enkel FIFA-artikkel-slug for lagnavn uten spesialtegn."""
+    txt = (lag or "").strip().lower()
+    txt = txt.replace("&", " and ")
+    txt = unicodedata.normalize("NFKD", txt)
+    txt = "".join(c for c in txt if not unicodedata.combining(c))
+    txt = re.sub(r"[^a-z0-9]+", "-", txt)
+    return txt.strip("-")
+
+
+def fifa_slug_varianter(lag):
+    """Prioritert liste med FIFA-slugger for et lag."""
+    varianter = []
+    for v in FIFA_SLUG_ALIASES.get(lag, []):
+        if v and v not in varianter:
+            varianter.append(v)
+    standard = slugify_fifa_lag(lag)
+    if standard and standard not in varianter:
+        varianter.append(standard)
+    return varianter or [standard]
+
+
+def bygg_direkte_fifa_article_urls(kamp):
+    """Bygg sannsynlige FIFA /articles/-URL-er for kampen. Selve henting skjer via Jina."""
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    h_slugs = fifa_slug_varianter(hjemme)
+    b_slugs = fifa_slug_varianter(borte)
+    suffixer = ["match-report-highlights", "highlights-match-report"]
+    urls = []
+
+    # Først riktig kamprekkefølge slik FIFA-artiklene normalt publiseres.
+    for hs in h_slugs:
+        for bs in b_slugs:
+            for suffix in suffixer:
+                urls.append(f"{FIFA_ARTICLE_BASE.rstrip('/')}/{hs}-{bs}-{suffix}")
+
+    # Deretter motsatt rekkefølge som lavere prioritert fallback.
+    for bs in b_slugs:
+        for hs in h_slugs:
+            for suffix in suffixer:
+                urls.append(f"{FIFA_ARTICLE_BASE.rstrip('/')}/{bs}-{hs}-{suffix}")
+
+    # Behold rekkefølge og begrens antall Jina-forsøk.
+    unike = []
+    for url in urls:
+        if url not in unike:
+            unike.append(url)
+    return unike[:max(1, FIFA_DIRECT_PROBE_MAX_URLS)]
+
+
+def bygg_direkte_fifa_article_kandidater(kamp):
+    """Lag fulltekst-kandidater direkte fra FIFA-slugmønsteret uten Serper/API."""
+    if not DIREKTE_FIFA_PROBE_AKTIVERT:
+        return []
+    hjemme = kamp.get("hjemmelag", "")
+    borte = kamp.get("bortelag", "")
+    h = kamp.get("hjemme", "")
+    b = kamp.get("borte", "")
+    kandidater = []
+    for url in bygg_direkte_fifa_article_urls(kamp):
+        kandidater.append({
+            "title": f"{hjemme} {h}-{b} {borte} | FIFA direct match report probe",
+            "link": url,
+            "source": "FIFA direct probe",
+            "date": "",
+            "snippet": f"FIFA World Cup 2026 match report and highlights for {hjemme} vs {borte}, final score {h}-{b}.",
+            "query": "direct_fifa_article_probe",
+            "score": 999,
+            "score_grunner": ["direkte FIFA article-probe", "kampartikkel-mønster"],
+            "source_type": "article_report",
+            "direct_fifa_probe": True,
+            "fifa_direct_probe_version": FIFA_DIRECT_PROBE_VERSION,
+        })
+    return kandidater
+
+
+def suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry):
+    """Legg direkte FIFA article-prober først i kandidatlisten. Bruker ikke Serper."""
+    direkte = bygg_direkte_fifa_article_kandidater(kamp)
+    if not direkte:
+        return kandidater, cache_entry
+
+    kombi = dedupliser_kandidater(direkte + (kandidater or []))
+    for k in kombi:
+        if "score" not in k:
+            score_kandidat(k, kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])
+    kombi.sort(key=lambda x: fulltekst_kildeprioritet(x, kamp=kamp), reverse=True)
+
+    key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
+    entry = cache_entry or cache.get(key) or {}
+    entry["kandidater"] = kombi[:20]
+    entry["fifa_direct_probe_versjon"] = FIFA_DIRECT_PROBE_VERSION
+    entry["fifa_direct_probe_sist_bygget"] = iso_utc_na()
+    cache[key] = entry
+    return kombi, entry
+
+
 def bygg_offisiell_kilde_query(kamp, domene):
     """
     Serper free-kontoer kan avvise avanserte operatorer som site:.
@@ -1420,8 +1727,11 @@ def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry
 
     key = cache_noekkel(kamp["kamp_id"], kamp["hjemme"], kamp["borte"])
     entry = cache_entry or cache.get(key) or {}
-    if entry.get("offisiell_kilde_sok_versjon") == OFFISIELL_KILDE_SOK_VERSION:
+    if not offisiell_kilde_sok_due(entry):
         return kandidater, entry, serper_teller
+
+    if entry.get("offisiell_kilde_sok_versjon") == OFFISIELL_KILDE_SOK_VERSION:
+        print("  → Tynt fulltekstgrunnlag: tillater nytt offisielt kildesøk etter sperretid/morgen-refresh.")
 
     if serper_teller >= MAX_SERPER_SOK_TOTALT_KJORING:
         print(f"  → Offisiell kilde-søk hoppet over: Serper totalgrense nådd ({MAX_SERPER_SOK_TOTALT_KJORING}).")
@@ -1474,8 +1784,12 @@ def suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry
     kombi.sort(key=lambda x: x.get("score", -999), reverse=True)
 
     entry["kandidater"] = kombi[:15]
+    prev_off_retry = int(entry.get("offisiell_kilde_retry_antall", 0) or 0)
     entry["offisiell_kilde_sok_versjon"] = OFFISIELL_KILDE_SOK_VERSION
     entry["offisiell_kilde_sokt"] = iso_utc_na()
+    entry["offisiell_kilde_retry_antall"] = prev_off_retry + 1
+    if morgen_refresh_aktiv():
+        entry["offisiell_morgen_refresh_key"] = morgen_refresh_key()
     entry["offisiell_kilde_domener"] = sokt
     cache[key] = entry
     skriv_serper_cache(cache)
@@ -1881,6 +2195,10 @@ def hent_fulltekst_fakta_for_kamp(kamp, kandidater, maks_forsok=5):
             )
             fakta["score"] = score
             fakta["versjon"] = FULLTEKST_CACHE_VERSION
+            fakta["direct_fifa_probe"] = bool(k.get("direct_fifa_probe"))
+            if k.get("direct_fifa_probe"):
+                fakta["fifa_direct_probe_url"] = url
+                fakta["fifa_direct_probe_version"] = k.get("fifa_direct_probe_version", FIFA_DIRECT_PROBE_VERSION)
             fakta["_forsok_url"] = forsok_url
             fakta["referat_fakta_score"] = referat_fakta_score(fakta)
             fakta["mangler"] = referat_fakta_mangler(fakta)
@@ -1924,17 +2242,14 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
         elif eksisterende.get("status") == "ok":
             print(f"  → Fulltekst cache OK, men grunnlaget er tynt ({eksisterende.get('domene', 'ukjent')} {eksisterende.get('source_type', 'ukjent')}, fakta_score {eksisterende.get('referat_fakta_score', referat_fakta_score(eksisterende))}). Prøver bedre kilde.")
 
-        # Ikke lås negative/tynne fulltekst-resultater for ferske kamper.
-        minutter = minutter_siden_iso(eksisterende.get("hentet"))
-        retry_antall = int(eksisterende.get("retry_antall", 0) or 0)
-        if (
-            minutter is not None
-            and minutter <= FERSK_KAMP_REFRESH_TIMER * 60
-            and minutter >= MIN_MINUTTER_MELLOM_OK_REFRESH
-            and retry_antall < MAX_SERPER_REFRESH_PER_KAMP
-        ):
-            print(f"  → Fulltekst var {eksisterende.get('status')}, men kampen er fersk. Prøver fulltekst på nytt.")
+        # Ikke lås negative/tynne fulltekst-resultater. Retry styres av next_retry_at
+        # og 06:00-refresh, ikke av Serper-score.
+        if fulltekst_retry_due(eksisterende):
+            print(f"  → Fulltekst var {eksisterende.get('status')}, men referatgrunnlaget er ikke OK. Prøver fulltekst/FIFA-probe på nytt.")
         else:
+            nr = eksisterende.get("next_retry_at")
+            if nr:
+                print(f"  → Fulltekst fortsatt tynn, men retry er ikke due før {nr}. Hopper over.")
             return entry, fulltekst_teller
 
     if fulltekst_teller >= MAX_FULLTEKST_PER_KJORING:
@@ -1950,11 +2265,7 @@ def oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_t
     forsok_url = int(fakta.pop("_forsok_url", 0)) if isinstance(fakta, dict) else 0
     fulltekst_teller += forsok_url
     if isinstance(fakta, dict):
-        prev_retry = 0
-        if isinstance(eksisterende, dict):
-            prev_retry = int(eksisterende.get("retry_antall", 0) or 0)
-        if fakta.get("status") != "ok" or not har_rikt_fulltekstgrunnlag(fakta):
-            fakta["retry_antall"] = prev_retry + 1
+        fakta = berik_retry_metadata(fakta, eksisterende)
     entry["fulltekst_fakta"] = fakta
     cache[key] = entry
     skriv_serper_cache(cache)
@@ -2638,29 +2949,34 @@ def main():
     serper_teller = 0
     fulltekst_teller = 0
 
-    print(f"\nFinner kamper fra {igaar_str} (norsk tid)...")
-    gaarsdagens = finn_gaarsdagens_kamper(vm_data)
+    print(f"\nFinner kamper fra {igaar_str} (norsk tid) + ikke-OK retry-kamper siste {RETRY_SISTE_TIMER} timer...")
+    arbeidskamper, rapport_ids, retry_ekstra = finn_kamper_for_rapport_og_retry(vm_data, cache, igaar_str)
 
-    if not gaarsdagens:
-        print(f"  → Ingen ferdigspilte kamper for {igaar_str}. Avslutter.")
+    if not arbeidskamper:
+        print(f"  → Ingen ferdigspilte kamper for {igaar_str}, og ingen retry-kamper. Avslutter.")
         return
 
-    print(f"  → {len(gaarsdagens)} kamper funnet")
+    print(f"  → {len(rapport_ids)} rapportkamper funnet")
+    if retry_ekstra:
+        print(f"  → {retry_ekstra} ekstra ikke-OK kamp(er) prosesseres kun for cache/retry")
 
     kamposter = []
-    for i, kamp in enumerate(gaarsdagens, 1):
+    for i, kamp in enumerate(arbeidskamper, 1):
         hjemme  = kamp["hjemmelag"]
         borte   = kamp["bortelag"]
         h_score = kamp["hjemme"]
         b_score = kamp["borte"]
         kamp_id = kamp["kamp_id"]
 
-        print(f"\n[{i}/{len(gaarsdagens)}] {hjemme} {h_score}-{b_score} {borte}")
+        retry_only = kamp_id not in rapport_ids
+        suffix = " (kun retry/cache)" if retry_only else ""
+        print(f"\n[{i}/{len(arbeidskamper)}] {hjemme} {h_score}-{b_score} {borte}{suffix}")
 
         ref       = referanser.get(kampreferat_noekkel(hjemme, borte), {})
         tippinger = hent_tippinger_for_kamp(vm_data, kamp_id)
 
         kandidater, cache_entry, serper_teller = hent_kandidater_med_cache(kamp, cache, serper_teller)
+        kandidater, cache_entry = suppler_med_direkte_fifa_kilder(kamp, kandidater, cache, cache_entry)
         kandidater, cache_entry, serper_teller = suppler_med_offisielle_fulltekst_kilder(kamp, kandidater, cache, cache_entry, serper_teller)
         cache_entry, fulltekst_teller = oppdater_fulltekst_i_cache(kamp, kandidater, cache, cache_entry, fulltekst_teller)
         fulltekst_fakta = (cache_entry or {}).get("fulltekst_fakta", {})
@@ -2677,6 +2993,12 @@ def main():
 
         print(f"  Eksakt: {len(tippinger['eksakt'])} | Riktig: {len(tippinger['riktig'])} | Bom: {len(tippinger['bom'])}")
         print(f"  Recap-kvalitet: status={recap_status}, fakta_score={referat_score}, fallback={fallback}")
+
+        if retry_only:
+            # Denne kampen hører ikke til dagens kamppost-dato, men cache er oppdatert
+            # slik at senere publisering ikke låses av tynt referatgrunnlag.
+            time.sleep(0.25)
+            continue
 
         kamposter.append({
             "kamp_id":       kamp_id,
@@ -2702,6 +3024,11 @@ def main():
                 "fulltekst_kilde":  fulltekst_fakta.get("domene", "") if isinstance(fulltekst_fakta, dict) else "",
                 "fulltekst_score":  fulltekst_fakta.get("score", -100) if isinstance(fulltekst_fakta, dict) else -100,
                 "referat_fakta_score": referat_score,
+                "venter_pa_bedre_kilde": bool(fulltekst_fakta.get("venter_pa_bedre_kilde", fallback)) if isinstance(fulltekst_fakta, dict) else True,
+                "next_retry_at": fulltekst_fakta.get("next_retry_at", "") if isinstance(fulltekst_fakta, dict) else "",
+                "retry_antall": fulltekst_fakta.get("retry_antall", 0) if isinstance(fulltekst_fakta, dict) else 0,
+                "direct_fifa_probe": bool(fulltekst_fakta.get("direct_fifa_probe", False)) if isinstance(fulltekst_fakta, dict) else False,
+                "fifa_direct_probe_url": fulltekst_fakta.get("fifa_direct_probe_url", "") if isinstance(fulltekst_fakta, dict) else "",
                 "mangler": fulltekst_fakta.get("mangler", referat_fakta_mangler(fulltekst_fakta)) if isinstance(fulltekst_fakta, dict) else ["fulltekst_fakta"],
                 "offisiell_kilde_sokt": cache_entry.get("offisiell_kilde_domener", []) if cache_entry else [],
             },
@@ -2711,7 +3038,7 @@ def main():
         # Lite pusterom hvis flere nye Serper-søk skjer i samme kjøring.
         time.sleep(0.25)
 
-    alle_kamp_ids = {k["kamp_id"] for k in gaarsdagens}
+    alle_kamp_ids = set(rapport_ids)
     stilling      = bygg_stilling(vm_data, alle_kamp_ids)
 
     kamppost = {
