@@ -1742,6 +1742,27 @@ function byggRecapPopupHTML(data) {
   `;
 }
 
+const RECAP_POPUP_COOLDOWN_MS = 3 * 60 * 60 * 1000; // Vis igjen etter 3 timer
+
+function recapPopupStorageKey(dato) {
+  return `vm2026_kampreferat_popup_lukket_${dato}`;
+}
+
+function recapPopupErPaaCooldown(dato) {
+  const lagretVerdi = localStorage.getItem(recapPopupStorageKey(dato));
+  if (!lagretVerdi) return false;
+
+  // Bakoverkompatibilitet: gamle verdier var lagret som '1'.
+  // De skal ikke låse popupen permanent etter denne endringen.
+  const lukketTidspunkt = Number(lagretVerdi);
+  if (!Number.isFinite(lukketTidspunkt) || lukketTidspunkt <= 1) {
+    localStorage.removeItem(recapPopupStorageKey(dato));
+    return false;
+  }
+
+  return Date.now() - lukketTidspunkt < RECAP_POPUP_COOLDOWN_MS;
+}
+
 async function visGaarsdagensRecapPopup() {
   const overlay = document.getElementById('recapPopupOverlay');
   const innhold = document.getElementById('recapPopupInnhold');
@@ -1753,8 +1774,7 @@ async function visGaarsdagensRecapPopup() {
   // Sikrer at popupen kun gjelder gårsdagens kamper i norsk tid.
   if (data.dato !== norskDatoISOOffset(-1)) return;
 
-  const storageKey = `vm2026_kampreferat_popup_lukket_${data.dato}`;
-  if (localStorage.getItem(storageKey) === '1') return;
+  if (recapPopupErPaaCooldown(data.dato)) return;
 
   SISTE_KAMPPOST_POPUP_DATO = data.dato;
   innhold.innerHTML = byggRecapPopupHTML(data);
@@ -1768,7 +1788,7 @@ function lukkRecapPopup() {
   if (!overlay) return;
 
   if (SISTE_KAMPPOST_POPUP_DATO) {
-    localStorage.setItem(`vm2026_kampreferat_popup_lukket_${SISTE_KAMPPOST_POPUP_DATO}`, '1');
+    localStorage.setItem(recapPopupStorageKey(SISTE_KAMPPOST_POPUP_DATO), String(Date.now()));
   }
 
   overlay.classList.remove('vis');
