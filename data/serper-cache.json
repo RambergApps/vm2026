@@ -2167,13 +2167,13 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v16-direct-fifa-before-serper",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
       "kilde_tittel": "Turkey 0-1 Paraguay | FIFA direct match report probe",
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
       "score": 9,
-      "hentet": "2026-06-20T18:44:32Z",
+      "hentet": "2026-06-20T19:01:20Z",
       "late": true,
       "stoppage": false,
       "winner": false,
@@ -2212,13 +2212,13 @@
       ],
       "rikt_fulltekstgrunnlag": false,
       "direct_fifa_probe": true,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
       "fifa_direct_probe_version": "v4-home-first-compact",
-      "retry_antall": 23,
+      "retry_antall": 24,
       "venter_pa_bedre_kilde": true,
-      "next_retry_at": "2026-06-20T21:44:32Z"
+      "next_retry_at": "2026-06-20T22:01:27Z"
     },
     "fifa_direct_probe_versjon": "v4-home-first-compact",
-    "fifa_direct_probe_sist_bygget": "2026-06-20T18:44:13Z"
+    "fifa_direct_probe_sist_bygget": "2026-06-20T19:01:07Z"
   }
 }
