@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-20",
   "dato_norsk": "Lørdag 20. juni 2026",
-  "generert": "2026-06-21T00:00:34Z",
+  "generert": "2026-06-21T00:09:13Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -11,7 +11,7 @@
       "hjemme_score": 0,
       "borte_score": 1,
       "gruppe": "C",
-      "recap_tekst": "Marokko slo Skottland 1–0.\nIsmael Saibari scoret kampens eneste mål for Marokko.\nMarokko holdt unna og tok tre viktige poeng.",
+      "recap_tekst": "Marokko slo Skottland 1–0.\nIsmael Saibari scoret kampens eneste mål for Marokko.\nMarokko holdt unna og tok tre viktige poeng.\n\nMarokko er en av turneringens favoritter. Skottland er tilbake etter 28 år. Drømmematch for Tartan Army. Marokko nådde semifinalen i VM 2022.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -225,7 +225,7 @@
       "hjemme_score": 3,
       "borte_score": 0,
       "gruppe": "C",
-      "recap_tekst": "Brasil slo Haiti 3–0.\nMålene til Brasil kom ved Cunha (23 og 36) og Vinicius Jr. (45+3).\nFIFA-referatet beskriver også sjanser i treverket før kampen ble endelig avgjort.\nResultatet sender Brasil opp i en sterk posisjon i gruppen.\nFIFA trakk også fram Matheus Cunha's first was i kampens nøkkelstatistikk.",
+      "recap_tekst": "Brasil slo Haiti 3–0.\nMålene til Brasil kom ved Cunha (23 og 36) og Vinicius Jr. (45+3).\nCunha ble en av kampens store profiler med to scoringer før pause.\n\nFIFA-referatet peker også på flere store sjanser, blant annet avslutninger i treverket.\nResultatet sender Brasil opp i en sterk posisjon i gruppen.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -439,7 +439,7 @@
       "hjemme_score": 0,
       "borte_score": 1,
       "gruppe": "D",
-      "recap_tekst": "Paraguay slo Tyrkia 1–0.\nMatias Galarza scoret kampens eneste mål allerede i det 2. minutt for Paraguay.\nParaguay holdt unna og tok tre viktige poeng.\nFIFA trakk fram Matias Galarza's after just i nøkkelstatistikken etter scoringen.",
+      "recap_tekst": "Paraguay slo Tyrkia 1–0.\nMatias Galarza scoret kampens eneste mål allerede i det 2. minutt for Paraguay.\nParaguay holdt unna og tok tre viktige poeng.\n\nFIFA trakk fram den tidlige scoringen til Matias Galarza som en av kampens nøkkelstatistikker.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -653,7 +653,7 @@
       "hjemme_score": 5,
       "borte_score": 1,
       "gruppe": "F",
-      "recap_tekst": "Nederland slo Sverige 5–1.\nMålene til Nederland kom ved Brobbey (5 og 17), Gakpo (47 og 54) og Summerville (89), mens Elanga (59) scoret for Sverige.\nNederland kontrollerte etter hvert kampen og tok en klar seier.",
+      "recap_tekst": "Nederland slo Sverige 5–1.\nMålene til Nederland kom ved Brobbey (5 og 17), Gakpo (47 og 54) og Summerville (89), mens Elanga (59) scoret for Sverige.\nBrobbey ble en av kampens store profiler med to scoringer før pause.\n\nGakpo ble en av kampens store profiler med to scoringer etter pause.\nNederland kontrollerte etter hvert kampen og tok en klar seier.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -866,7 +866,7 @@
       "hjemme_score": 2,
       "borte_score": 1,
       "gruppe": "E",
-      "recap_tekst": "Tyskland slo Elfenbenskysten 2–1.\nMålene til Tyskland kom ved Undav (68 og 90+4), mens Kessie (30) scoret for Elfenbenskysten.\nFIFA-referatet beskriver også sjanser i treverket før kampen ble endelig avgjort.\nSeieren sikret samtidig Tyskland plass i utslagsrunden.",
+      "recap_tekst": "Tyskland slo Elfenbenskysten 2–1.\nMålene til Tyskland kom ved Undav (68 og 90+4), mens Kessie (30) scoret for Elfenbenskysten.\nUndav ble en av kampens store profiler med to scoringer etter pause.\n\nFIFA-referatet peker også på flere store sjanser, blant annet avslutninger i treverket.\nSeieren sikret samtidig Tyskland plass i utslagsrunden.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
