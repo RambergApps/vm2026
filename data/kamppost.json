@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-20",
   "dato_norsk": "Lørdag 20. juni 2026",
-  "generert": "2026-06-21T20:45:30Z",
+  "generert": "2026-06-21T21:10:52Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -162,6 +162,12 @@
             "poeng": 0
           },
           {
+            "navn": "Bror Ramberg",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -174,6 +180,12 @@
             "poeng": 0
           },
           {
+            "navn": "Chris Hortman",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Thomas Lindland",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -182,18 +194,6 @@
           {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -596,6 +596,12 @@
             "poeng": 0
           },
           {
+            "navn": "Bror Ramberg",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -614,20 +620,14 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Chris Hortman",
             "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -777,9 +777,21 @@
             "poeng": 2
           },
           {
+            "navn": "Bror Ramberg",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Jorgen Lindland",
             "tippa_h": 2,
             "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 1,
+            "tippa_b": 0,
             "poeng": 2
           },
           {
@@ -792,18 +804,6 @@
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 1,
-            "tippa_b": 0,
             "poeng": 2
           }
         ],
@@ -1003,6 +1003,12 @@
             "poeng": 2
           },
           {
+            "navn": "Chris Hortman",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Thomas Lindland",
             "tippa_h": 3,
             "tippa_b": 0,
@@ -1011,12 +1017,6 @@
           {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 4,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 2
           },
@@ -1047,6 +1047,12 @@
             "poeng": 0
           },
           {
+            "navn": "Bror Ramberg",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -1056,12 +1062,6 @@
             "navn": "Andreas Handelsby",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 0,
-            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -1084,7 +1084,7 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 2,
-      "poeng_totalt": 70,
+      "poeng_totalt": 72,
       "poeng_i_dag": 12
     },
     {
@@ -1190,46 +1190,46 @@
       "poeng_i_dag": 10
     },
     {
-      "navn": "Diyan K.",
+      "navn": "Bror Ramberg",
       "plass": 20,
-      "poeng_totalt": 38,
+      "poeng_totalt": 40,
+      "poeng_i_dag": 2
+    },
+    {
+      "navn": "Diyan K.",
+      "plass": 21,
+      "poeng_totalt": 40,
       "poeng_i_dag": 6
     },
     {
       "navn": "Jorgen Lindland",
-      "plass": 21,
+      "plass": 22,
       "poeng_totalt": 38,
       "poeng_i_dag": 6
     },
     {
       "navn": "Andreas Handelsby",
-      "plass": 22,
-      "poeng_totalt": 36,
-      "poeng_i_dag": 8
-    },
-    {
-      "navn": "Thomas Lindland",
       "plass": 23,
       "poeng_totalt": 36,
       "poeng_i_dag": 8
     },
     {
-      "navn": "Ulf-Morten Johansen",
+      "navn": "Chris Hortman",
       "plass": 24,
       "poeng_totalt": 36,
-      "poeng_i_dag": 10
-    },
-    {
-      "navn": "Bror Ramberg",
-      "plass": 25,
-      "poeng_totalt": 34,
-      "poeng_i_dag": 2
-    },
-    {
-      "navn": "Chris Hortman",
-      "plass": 26,
-      "poeng_totalt": 34,
       "poeng_i_dag": 4
+    },
+    {
+      "navn": "Thomas Lindland",
+      "plass": 25,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 8
+    },
+    {
+      "navn": "Ulf-Morten Johansen",
+      "plass": 26,
+      "poeng_totalt": 36,
+      "poeng_i_dag": 10
     },
     {
       "navn": "Marita Hauge Gjerde",
@@ -1246,7 +1246,7 @@
     {
       "navn": "Selina Marie Kortvedt",
       "plass": 29,
-      "poeng_totalt": 30,
+      "poeng_totalt": 32,
       "poeng_i_dag": 2
     }
   ]

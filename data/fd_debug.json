@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-21T21:00:59Z",
+  "tidspunkt": "2026-06-21T21:10:05Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -539,8 +539,8 @@
       "fd_bortelag": "Iran",
       "hjemmelag_normalisert": "Belgium",
       "bortelag_normalisert": "Iran",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 0,
       "borte": 0,
       "fd_dato": "2026-06-21",
