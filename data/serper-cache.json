@@ -555,35 +555,38 @@
   "Ecuador_Cura_ao_2026_06_20|0-0": {
     "kamp_id": "Ecuador_Cura_ao_2026_06_20",
     "resultat": "0-0",
-    "sist_sokt": "2026-06-21T02:31:32Z",
-    "antall_sok": 2,
-    "beste_score": 2,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-21T03:00:59Z",
+    "antall_sok": 3,
+    "beste_score": 7,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v22-fifa-english-summary",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
-      "fulltekst_riktig_kamp": false,
-      "resultat_i_fulltekst": false,
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-21T02:31:18Z",
+      "hentet": "2026-06-21T03:00:59Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-highlights-match-report?searchOverlay=1)"
+        "Ecuadortook the game to Curaçao in Kansas City but the evening turned out to be an Eloy Room masterpiece. The Blue Wave keeper made a number of incredible saves, helping the Concacaf side secure their first ever point at the FIFA World Cup™.",
+        "Early on, the Blue Wave were able to take advantage of the space Ecuador left as they pushed for an opener. Bacuna and Locadia made good runs into space and created chances for their midfielders, but they were also unable to find the back of the net.",
+        "As the half went on Ecuador attacked in waves, but no one could find a way past the imperious Room.",
+        "As time wound down, Ecuador pressed even harder for a goal and Valencia nearly scored a strong header from a whipped in cross, only to be denied by Room.",
+        "Ecuador hit the woodwork three times and had nearly 30 attempts, but were unable to find a way through the Caribbean side's defence. The draw means that Germany will qualify for the Round of 32 as Group E winners. The other three sides in the group enter the final matchday with the opportunity to progress to the knockout phase."
       ],
-      "key_stat": "",
+      "key_stat": "This is just the third goalless draw in 33 World Cup encounters between CONMEBOL and Concacaf nations. The other two were: Uruguay 0-0 Mexico-1966 group stage Brazil 0-0 Mexico-2014 group stage",
       "player_of_match": "",
       "early_lead": false,
       "came_from_behind": false,
@@ -600,15 +603,12 @@
       "fastest_stat": false,
       "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 2,
-      "mangler": [
-        "riktig_kamp",
-        "resultat_i_fulltekst"
-      ],
-      "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-highlights-match-report",
+      "referat_fakta_score": 7,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-curacao-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   }
 }
