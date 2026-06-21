@@ -610,5 +610,96 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Tunisia_Japan_2026_06_20|0-4": {
+    "kamp_id": "Tunisia_Japan_2026_06_20",
+    "resultat": "0-4",
+    "sist_sokt": "2026-06-21T06:31:03Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v22-fifa-english-summary",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-japan-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 4,
+      "score": 10,
+      "hentet": "2026-06-21T06:31:03Z",
+      "goal_events": [
+        {
+          "spiller": "Kamada",
+          "lag": "Japan",
+          "minutt": "4",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ueda",
+          "lag": "Japan",
+          "minutt": "31",
+          "type": "goal"
+        },
+        {
+          "spiller": "Junya Ito",
+          "lag": "Japan",
+          "minutt": "69",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ueda",
+          "lag": "Japan",
+          "minutt": "83",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Kamada",
+        "Ueda",
+        "Junya Ito"
+      ],
+      "lead_scorer": "Kamada",
+      "brace_scorer": "Ueda",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "A milestone fixture in Monterrey - the 1,000th FIFA World Cup™ match - saw Japan carve out their own slice of early history.",
+        "The impressive Keito Nakamura was the architect, dancing into the box and squaring across the face of goal where Daichi Kamada was on hand to prod home through a troupe of blue and white shirts. His opener was his second of the tournament and the fastest that Japan have scored at a World Cup.",
+        "Ayase Ueda doubled the lead on the half-hour, being allowed the space of the Sierra Madre to stride towards goal and lash home from the top of the box.",
+        "Parachuted into the job earlier in the week, new Tunisia coach Herve Renard was unable to orchestrate a response from the North African side and Japan went further ahead as Ueda turned provider, with Junya Ito slotting home a third midway through the second half. Ueda then grabbed a second late on to complete the comfortable victory.",
+        "Japan’s win - the largest by any nation in World Cup history - moves them level with the Netherlands at the top of Group F, while Tunisia are now eliminated."
+      ],
+      "key_stat": "Daichi Kamada's fourth-minute goal is the fastest scored by a Japanese player in FIFA World Cup history. The previous quickest was Shinji Kagawa in 2018 against Colombia when he scored in the sixth minute.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": true,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": true,
+      "record_stat": false,
+      "eliminated_loser": true,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-japan-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
