@@ -1034,6 +1034,191 @@ def spillergruppe_tekst_med_og(g):
     return f"{navn}{suffix}"
 
 
+def splitt_artikkelsetninger(avsnitt):
+    """Returner rensede setninger fra FIFA-brødtekst.
+
+    Målet er å bruke de konkrete avsnittene FIFA gjør tilgjengelig som
+    kampreferatgrunnlag, ikke bare som små signaler for scoring/fakta.
+    """
+    out = []
+    for p in avsnitt or []:
+        p = fjern_markdown(p)
+        p = re.sub(r"\s+", " ", p).strip()
+        if not p:
+            continue
+        for s in re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-Þ])", p):
+            s = s.strip()
+            if len(s) >= 45:
+                out.append(s)
+    return out
+
+
+def finn_setning_med(setninger, *patterns):
+    for s in setninger or []:
+        low = s.lower()
+        ok = True
+        for pat in patterns:
+            if not pat:
+                continue
+            if isinstance(pat, str):
+                if pat.lower() not in low:
+                    ok = False
+                    break
+            elif hasattr(pat, "search"):
+                if not pat.search(s):
+                    ok = False
+                    break
+            else:
+                if not re.search(pat, s, flags=re.I):
+                    ok = False
+                    break
+        if ok:
+            return s
+    return ""
+
+
+def finn_setning_med_spiller(setninger, spiller, ekstra_regex=""):
+    if not spiller:
+        return ""
+    navn_pat = re.escape(spiller.split()[0])
+    for s in setninger or []:
+        if not re.search(navn_pat, s, flags=re.I):
+            continue
+        if ekstra_regex and not re.search(ekstra_regex, s, flags=re.I):
+            continue
+        return s
+    return ""
+
+
+def navn_fra_regex(pattern, text):
+    m = re.search(pattern, text or "", flags=re.I)
+    if not m:
+        return ""
+    return rens_spillernavn(m.group(1)).rstrip(".")
+
+
+def keeper_fra_kontekst(text):
+    patterns = [
+        r"past\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+){0,3})",
+        r"beyond\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+){0,3})",
+        r"(?:goalkeeper|keeper)\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+){0,3})",
+        r"not\s+held\s+by\s+([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+){0,3})",
+    ]
+    for pat in patterns:
+        navn = navn_fra_regex(pat, text)
+        if navn:
+            return navn
+    return ""
+
+
+def norsk_forste_mal_detalj(kamp, fakta, setninger):
+    events = sorted(fakta.get("goal_events") or [], key=minutt_sort_key)
+    if not events:
+        return ""
+    first = events[0]
+    scorer = first.get("spiller", "")
+    lag = first.get("lag", "")
+    assist = fakta.get("first_goal_assist", "")
+    ctx = finn_setning_med_spiller(
+        setninger,
+        scorer,
+        r"goal|scor|lead|opener|courtesy|finish|finished|slammed|pounced|rebound|created|pass|cross|ball|header",
+    )
+    if not ctx and assist:
+        ctx = finn_setning_med_spiller(setninger, assist, r"created|set up|pass|cross|ball|rebound|not held")
+
+    tid = minutt_til_norsk(first.get("minutt", ""))
+    tid_txt = f" {tid}" if tid else ""
+    lag_txt = visningsnavn_lag(lag)
+    keeper = keeper_fra_kontekst(ctx)
+    low = (ctx or "").lower()
+
+    if "not held" in low or "rebound" in low or "pounced" in low:
+        if assist and assist != scorer:
+            return f"Åpningsmålet kom{tid_txt} etter at {assist} var involvert i forarbeidet, før {scorer} var først på returen."
+        return f"Åpningsmålet kom{tid_txt} da {scorer} var våken på en retur."
+
+    if assist and assist != scorer:
+        if "well-weighted" in low or "ball from" in low or "pass" in low or "cross" in low or "delivery" in low:
+            avslutning = f" og avsluttet forbi {keeper}" if keeper else " og avsluttet sikkert"
+            return f"Forarbeidet kom fra {assist}, før {scorer} tok vare på muligheten{tid_txt}{avslutning}."
+        return f"{scorer} sendte {lag_txt} i ledelsen{tid_txt} etter forarbeid fra {assist}."
+
+    if total_maal_i_kamp(kamp) == 1:
+        return f"{scorer} scoret kampens eneste mål{tid_txt} for {lag_txt}."
+    return f"{scorer} sendte {lag_txt} i ledelsen{tid_txt}."
+
+
+def bygg_artikkelbaserte_setninger(kamp, fakta):
+    """Bygg norske referatsetninger fra FIFA-brødteksten.
+
+    Dette er ikke en full maskinoversettelse. Det er en kontrollert komprimering
+    av kampavsnittene: forarbeid, returer, treverk, sluttpress og konsekvens.
+    """
+    setninger = splitt_artikkelsetninger(fakta.get("article_paragraphs") or [])
+    events = sorted(fakta.get("goal_events") or [], key=minutt_sort_key)
+    out = []
+    if not setninger or not events:
+        return out
+
+    vinner = vinner_lag_for_kamp(kamp)
+    taper = taper_lag_for_kamp(kamp)
+    vinner_txt = visningsnavn_lag(vinner) if vinner else ""
+    taper_txt = visningsnavn_lag(taper) if taper else ""
+
+    first_detail = norsk_forste_mal_detalj(kamp, fakta, setninger)
+    if first_detail:
+        out.append(first_detail)
+
+    brace = fakta.get("brace_scorer", "")
+    if brace:
+        gruppe = next((g for g in grupper_goal_events(events) if g.get("spiller") == brace), None)
+        fase = maal_fase_tekst((gruppe or {}).get("minutter") or [])
+        if fase == "før pause":
+            out.append(f"{brace} ble sentral i at kampen i praksis ble satt opp før pause, med to scoringer før hvilen.")
+        elif fase == "etter pause":
+            out.append(f"{brace} ble avgjørende etter pause, med to scoringer som endret kampbildet.")
+        else:
+            out.append(f"{brace} ble en av kampens store profiler med to scoringer.")
+
+    if any(str(e.get("minutt", "")).startswith("45+") for e in events):
+        ev = next(e for e in events if str(e.get("minutt", "")).startswith("45+"))
+        if taper_txt:
+            out.append(f"{ev.get('spiller')} økte ledelsen på overtid i første omgang og gjorde oppgaven enda tyngre for {taper_txt}.")
+
+    if fakta.get("winner_trailed_first") and vinner and taper:
+        out.append(f"{taper_txt} fikk kampen dit de ønsket med ledelse først, men {vinner_txt} slo tilbake og snudde oppgjøret.")
+
+    wood = finn_setning_med(setninger, re.compile(r"\b(?:woodwork|post|crossbar|upright)\b|\b(?:hit|struck|rattled)\s+the\s+bar\b", re.I))
+    if wood:
+        if vinner_txt:
+            out.append(f"FIFA-beskrivelsen peker på flere store sjanser underveis, blant annet avslutninger i treverket, før {vinner_txt} fikk kontroll på resultatet.")
+        else:
+            out.append("FIFA-beskrivelsen peker på flere store sjanser underveis, blant annet avslutninger i treverket.")
+
+    pressure = finn_setning_med(setninger, re.compile(r"final 15|late pressure|gained the ascendancy|pushed|pressed|search of an equaliser|seeking an equaliser", re.I))
+    if pressure and taper_txt and vinner_txt:
+        out.append(f"{taper_txt} løftet seg mot slutten og jaktet utligning, men {vinner_txt} holdt unna.")
+
+    close = finn_setning_med(setninger, re.compile(r"came close|almost|nearly|denied|saved", re.I))
+    if close and not wood:
+        scorer_names = [e.get("spiller", "") for e in events]
+        named = next((n for n in scorer_names if n and re.search(re.escape(n.split()[0]), close, flags=re.I)), "")
+        if named:
+            out.append(f"{named} var også involvert i flere farlige situasjoner etter scoringen.")
+        else:
+            out.append("Kampen inneholdt også flere store muligheter som kunne gitt flere scoringer.")
+
+    alltext = " ".join(setninger).lower()
+    if re.search(r"eliminat(?:ed|ion)|cannot reach|knocked out", alltext) and taper_txt:
+        out.append(f"Resultatet gjorde samtidig at {taper_txt} mistet muligheten til å gå videre.")
+    elif re.search(r"top of group|top spot|moved top|goal difference", alltext) and vinner_txt:
+        out.append(f"Med seieren styrket {vinner_txt} posisjonen i gruppen.")
+    elif re.search(r"knockout|round of 32|last 32|progress", alltext) and vinner_txt:
+        out.append(f"Seieren ga også {vinner_txt} et viktig steg mot utslagsrundene.")
+
+    return unike_setninger(out)
+
 def bygg_maalsetninger(kamp, fakta):
     events = fakta.get("goal_events") or []
     if not events:
@@ -1228,9 +1413,23 @@ def bygg_recap_tekst(kamp, ref, fakta):
         return bygg_forelopig_recap(kamp)
 
     setninger = [resultatsetning(kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])]
-    setninger.extend(bygg_maalsetninger(kamp, fakta))
-    setninger.extend(bygg_kampforlop_fra_events(kamp, fakta))
-    setninger.extend(bygg_kampbilde_setninger(kamp, fakta))
+
+    # Bruk FIFA-brødteksten som faktisk referatgrunnlag, ikke bare til kriteriesjekk.
+    artikkel_setninger = bygg_artikkelbaserte_setninger(kamp, fakta)
+
+    # For énmålskamper er den artikkelbaserte første-mål-setningen normalt mer
+    # presis enn den rene mållinjen, fordi den kan ta med forarbeid/keeper/sluttpress.
+    if total_maal_i_kamp(kamp) == 1 and artikkel_setninger:
+        setninger.extend(artikkel_setninger)
+    else:
+        setninger.extend(bygg_maalsetninger(kamp, fakta))
+        setninger.extend(artikkel_setninger)
+
+    # Bruk de mer generiske event-/kampbildesetningene bare når artikkelflyten
+    # ikke gir nok. Dette hindrer at rike FIFA-avsnitt erstattes av fylltekst.
+    if len(artikkel_setninger) < 3:
+        setninger.extend(bygg_kampforlop_fra_events(kamp, fakta))
+        setninger.extend(bygg_kampbilde_setninger(kamp, fakta))
 
     key_stat = oversett_key_stat_enkel(fakta.get("key_stat", ""), kamp, fakta)
     if key_stat:
@@ -1241,17 +1440,16 @@ def bygg_recap_tekst(kamp, ref, fakta):
 
     setninger = unike_setninger(setninger)
 
-    # Del opp slik at popup/rapport blir lesbar, men behold mer kampinnhold enn før.
+    # Når FIFA-artikkelen er rik, skal også referatet være rikere: 5–8 setninger.
     hoved = setninger[:3]
-    detaljer = setninger[3:7]
+    detaljer = setninger[3:8]
     avsnitt = []
     if hoved:
         avsnitt.append("\n".join(hoved))
     if detaljer:
         avsnitt.append("\n".join(detaljer))
 
-    # Historikk brukes kun hvis FIFA-delen fortsatt er tynn.
-    if len(setninger) < 4:
+    if len(setninger) < 5:
         hist = bygg_historikkavsnitt(ref)
         if hist:
             avsnitt.append(hist)
