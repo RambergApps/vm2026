@@ -1,15 +1,6 @@
 {
-  "sist_sjekket": "2026-06-21T01:30:52Z",
+  "sist_sjekket": "2026-06-21T02:00:58Z",
   "kamper": [
-    {
-      "kamp_id": "Ecuador_Curaçao_2026_06_20",
-      "hjemmelag": "Ecuador",
-      "bortelag": "Curaçao",
-      "dato": "2026-06-20",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "kamp_id": "Tunisia_Japan_2026_06_20",
       "hjemmelag": "Tunisia",
