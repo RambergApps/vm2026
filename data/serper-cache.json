@@ -1489,266 +1489,138 @@
   "Brazil_Haiti_2026_06_19|3-0": {
     "kamp_id": "Brazil_Haiti_2026_06_19",
     "resultat": "3-0",
-    "sist_sokt": "2026-06-20T10:07:14Z",
-    "antall_sok": 1,
+    "sist_sokt": "2026-06-21T00:00:08Z",
+    "antall_sok": 2,
     "ok_refresh_antall": 0,
-    "beste_score": 15,
+    "beste_score": 13,
     "status": "ok",
-    "query": "Brazil Haiti 3-0 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-    "kandidater": [
-      {
-        "title": "Brazil 3-0 Haiti | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Brazil vs Haiti, final score 3-0.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Brazil 3-0 Haiti | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Brazil vs Haiti, final score 3-0.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Brazil 3-0 Haiti | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/haiti-brazil-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Brazil vs Haiti, final score 3-0.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Brazil 3-0 Haiti | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/haiti-brazil-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Brazil vs Haiti, final score 3-0.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      }
-    ],
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
     "fifa_direct_probe_versjon": "v5-fifa-kriterier-home-first",
     "fifa_direct_probe_sist_bygget": "2026-06-20T23:32:11Z",
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v17-fifa-kriterier-retry-hver-kjoring",
+      "versjon": "v20-fifa-first-clean",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-match-report-highlights",
-      "kilde_tittel": "Brazil 3-0 Haiti | FIFA direct match report probe",
+      "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
       "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 0,
-      "score": 15,
-      "hentet": "2026-06-20T23:32:19Z",
-      "late": true,
-      "stoppage": true,
-      "winner": false,
-      "penalty": true,
-      "equaliser": false,
-      "goalless_first_half": false,
-      "second_half_goals": false,
-      "second_half_scorers": [],
-      "substitutes": false,
-      "debutants": false,
-      "scorere": [],
-      "goal_events": [],
-      "penalty_scorer": "",
-      "lead_scorer": "",
-      "brace_scorer": "",
-      "sub_names": [],
-      "minute_text": "",
-      "lead_minute_text": "",
-      "early_lead": false,
-      "record_pass_player": "",
-      "record_passes": "",
-      "star_player": "",
-      "scored_and_assisted": false,
+      "score": 10,
+      "hentet": "2026-06-21T00:00:08Z",
+      "goal_events": [
+        {
+          "spiller": "Cunha",
+          "lag": "Brazil",
+          "minutt": "23",
+          "type": "goal"
+        },
+        {
+          "spiller": "Cunha",
+          "lag": "Brazil",
+          "minutt": "36",
+          "type": "goal"
+        },
+        {
+          "spiller": "Vinicius Jr.",
+          "lag": "Brazil",
+          "minutt": "45+3",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Cunha",
+        "Vinicius Jr."
+      ],
+      "lead_scorer": "Cunha",
+      "brace_scorer": "Cunha",
       "hat_trick_player": "",
-      "red_cards": 0,
-      "nine_men": false,
-      "first_world_cup_win": false,
+      "article_paragraphs": [
+        "Braziledged ahead of Morocco on goal difference at the top of Group C after a comfortable victory that ends Haiti's hopes of progressing.",
+        "It took over 20 minutes, but once they got going there was not stopping the five-time champions. Vinicius Jr created the first goal by firing a shot that Johnny Placide couldn't hold on to. Matheus Cunha was in the right place at the right time and tapped in from close range.",
+        "Just thirteen minutes later, that combination paid dividends again for the Seleçao. After snatching possession in midfield, Vinicius Jr slid the ball through to Cunha. The Manchester United forward lashed the ball into the top corner to double Brazil's lead.",
+        "The South Americans added a third in first half stoppage time. Vini Jr switched from playmaker to goalscorer, controlling a pass from Lucas Paqueta before sliding it under an onrushing Placide."
+      ],
+      "key_stat": "Matheus Cunha's first goal was just his second senior international goal for Brazil and his first at the World Cup. His double helped Brazil overtake Germany as the highest scoring country in World Cup history with 240 goals.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
       "knockout_secured": false,
       "group_top": true,
-      "home_crowd": true,
-      "keeper_error": false,
-      "referat_fakta_score": 7,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
-      "direct_fifa_probe": true,
+      "hit_bar": true,
+      "late_pressure": false,
+      "stoppage": true,
+      "brace_text": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-match-report-highlights",
-      "fifa_direct_probe_version": "v5-fifa-kriterier-home-first",
-      "retry_antall": 1,
-      "venter_pa_bedre_kilde": true
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   },
   "Turkey_Paraguay_2026_06_19|0-1": {
     "kamp_id": "Turkey_Paraguay_2026_06_19",
     "resultat": "0-1",
-    "sist_sokt": "2026-06-20T12:01:01Z",
-    "antall_sok": 2,
+    "sist_sokt": "2026-06-21T00:00:31Z",
+    "antall_sok": 3,
     "ok_refresh_antall": 0,
-    "beste_score": 6,
-    "status": "lav_score",
-    "query": "Turkey Paraguay 0-1 World Cup 2026 match report recap goals scorers full-time -watch -highlights -stream -preview -prediction -odds -betting -youtube -tiktok -instagram -reddit -tickets -lineups -liveblog -liveupdates",
-    "kandidater": [
-      {
-        "title": "Turkey 0-1 Paraguay | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-paraguay-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Turkey vs Paraguay, final score 0-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Turkey 0-1 Paraguay | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-paraguay-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Turkey vs Paraguay, final score 0-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Turkey 0-1 Paraguay | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Turkey vs Paraguay, final score 0-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Turkey 0-1 Paraguay | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Turkey vs Paraguay, final score 0-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      }
-    ],
+    "beste_score": 9,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v17-fifa-kriterier-retry-hver-kjoring",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
-      "kilde_tittel": "Turkey 0-1 Paraguay | FIFA direct match report probe",
+      "versjon": "v20-fifa-first-clean",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-paraguay-match-report-highlights",
+      "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
-      "resultat_i_fulltekst": false,
+      "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 1,
-      "score": 9,
-      "hentet": "2026-06-20T23:32:53Z",
-      "late": true,
-      "stoppage": false,
-      "winner": false,
-      "penalty": false,
-      "equaliser": false,
-      "goalless_first_half": false,
-      "second_half_goals": false,
-      "second_half_scorers": [],
-      "substitutes": false,
-      "debutants": false,
-      "scorere": [],
-      "goal_events": [],
-      "penalty_scorer": "",
-      "lead_scorer": "",
+      "score": 10,
+      "hentet": "2026-06-21T00:00:31Z",
+      "goal_events": [
+        {
+          "spiller": "Matias Galarza",
+          "lag": "Paraguay",
+          "minutt": "2",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Matias Galarza"
+      ],
+      "lead_scorer": "Matias Galarza",
       "brace_scorer": "",
-      "sub_names": [],
-      "minute_text": "",
-      "lead_minute_text": "",
-      "early_lead": false,
-      "record_pass_player": "",
-      "record_passes": "",
-      "star_player": "",
-      "scored_and_assisted": false,
       "hat_trick_player": "",
-      "red_cards": 0,
-      "nine_men": false,
-      "first_world_cup_win": false,
+      "article_paragraphs": [
+        "With both nations coming off first-up defeats, a response was needed in this San Francisco showdown and it took Paraguay just 64 seconds to find one. Andres Cubas pinched possession and passed to Julio Enciso, who then released Matias Galarza to unleash a left-footed effort through the legs of Merih Demiral and past a diving Ugurcan Cakir.",
+        "Mert Muldur smacked a header off bar and post as Türkiye pushed forward in search of a leveller before tensions boiled over in additional time. That saw Paraguay’s Miguel Almiron become the first player sent off at the tournament under new laws that prohibit players from covering their mouth during a confrontational situation.",
+        "With Gustavo Alfaro’s side a goal up but a man down, the second half dynamic was very much Türkiye attack against Paraguay defence. Wave after wave of Turkish forays came and went; Hakan Calhanoglu sending a volley wide, Deniz Gul likewise with a close-range header and even the usually reliable radar of Kenan Yildiz was off.",
+        "The win re-ignites Paraguay’s campaign ahead of a group-closing showdown with Australia on 25 June, while Türkiye are now eliminated."
+      ],
+      "key_stat": "* Matias Galarza's goal after just 64 seconds was the fastest so far at the FIFA World Cup 2026",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
       "knockout_secured": false,
       "group_top": false,
-      "home_crowd": false,
-      "keeper_error": false,
-      "referat_fakta_score": 3,
-      "mangler": [
-        "resultat_i_fulltekst",
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "referat_fakta_score": 9,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-paraguay-match-report-highlights",
       "direct_fifa_probe": true,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-paraguay-match-report-highlights",
-      "fifa_direct_probe_version": "v5-fifa-kriterier-home-first",
-      "retry_antall": 36,
-      "venter_pa_bedre_kilde": true
+      "_forsok_url": 3
     },
     "fifa_direct_probe_versjon": "v5-fifa-kriterier-home-first",
     "fifa_direct_probe_sist_bygget": "2026-06-20T23:32:38Z"
@@ -1916,138 +1788,78 @@
     }
   },
   "Germany_Ivory_Coast_2026_06_20|2-1": {
-    "kandidater": [
-      {
-        "title": "Germany 2-1 Ivory Coast | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-cote-divoire-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Germany vs Ivory Coast, final score 2-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Germany 2-1 Ivory Coast | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-cote-divoire-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Germany vs Ivory Coast, final score 2-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Germany 2-1 Ivory Coast | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-ivory-coast-match-report-highlights",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Germany vs Ivory Coast, final score 2-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      },
-      {
-        "title": "Germany 2-1 Ivory Coast | FIFA direct match report probe",
-        "link": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-ivory-coast-highlights-match-report",
-        "source": "FIFA direct probe",
-        "date": "",
-        "snippet": "FIFA World Cup 2026 match report and highlights for Germany vs Ivory Coast, final score 2-1.",
-        "query": "direct_fifa_article_probe",
-        "score": 999,
-        "score_grunner": [
-          "direkte FIFA article-probe",
-          "kampartikkel-mønster"
-        ],
-        "source_type": "article_report",
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_version": "v5-fifa-kriterier-home-first"
-      }
-    ],
+    "kandidater": [],
     "fifa_direct_probe_versjon": "v5-fifa-kriterier-home-first",
     "fifa_direct_probe_sist_bygget": "2026-06-20T23:33:15Z",
     "fulltekst_fakta": {
       "status": "ok",
-      "versjon": "v17-fifa-kriterier-retry-hver-kjoring",
+      "versjon": "v20-fifa-first-clean",
       "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-cote-divoire-match-report-highlights",
-      "kilde_tittel": "Germany 2-1 Ivory Coast | FIFA direct match report probe",
+      "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
       "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
-      "score": 18,
-      "hentet": "2026-06-20T23:33:25Z",
-      "late": true,
-      "stoppage": true,
-      "winner": true,
-      "penalty": true,
-      "equaliser": false,
-      "goalless_first_half": false,
-      "second_half_goals": false,
-      "second_half_scorers": [],
-      "substitutes": true,
-      "debutants": false,
-      "scorere": [
-        "Deniz Undav",
-        "Aleksandar Pavlovic"
-      ],
+      "score": 10,
+      "hentet": "2026-06-21T00:00:34Z",
       "goal_events": [
         {
           "spiller": "Kessie",
           "lag": "Ivory Coast",
           "minutt": "30",
           "type": "goal"
+        },
+        {
+          "spiller": "Undav",
+          "lag": "Germany",
+          "minutt": "68",
+          "type": "goal"
+        },
+        {
+          "spiller": "Undav",
+          "lag": "Germany",
+          "minutt": "90+4",
+          "type": "goal"
         }
       ],
-      "penalty_scorer": "Deniz Undav",
-      "lead_scorer": "",
-      "brace_scorer": "Deniz Undav",
-      "sub_names": [],
-      "minute_text": "",
-      "lead_minute_text": "",
-      "early_lead": false,
-      "record_pass_player": "",
-      "record_passes": "",
-      "star_player": "",
-      "scored_and_assisted": false,
+      "scorere": [
+        "Kessie",
+        "Undav"
+      ],
+      "lead_scorer": "Kessie",
+      "brace_scorer": "Undav",
       "hat_trick_player": "",
-      "red_cards": 0,
-      "nine_men": false,
-      "first_world_cup_win": false,
+      "article_paragraphs": [
+        "Deniz Undav emerged from the bench to score twice and send Germany through to the FIFA World Cup 2026™ Round of 32.",
+        "Emerse Fae's Côte d'Ivoire were on course to qualify after Franck Kessie's goal on the half hour, but Undav's close-range header and added-time goal proved enough to see the Germans advance at Toronto Stadium.",
+        "Germany almost carved out the perfect start when Kai Havertz won a header from kick-off and fired the loose ball just over the crossbar. Joshua Kimmich then found the frontman with a pinpoint cross, but his low header was beaten away by Yahia Fofana.",
+        "Les Éléphants hung in though, and sucker-punched the four-time champions down the other end. The ever-dangerous Yan Diomande burst down the left and put in a low cross which fell to the feet of Amad Diallo. While Nathaniel Brown made a block, he couldn't prevent Kessie from tucking home the rebound."
+      ],
+      "key_stat": "Deniz Undav now has nine goals from his last eight Germany caps.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
       "knockout_secured": true,
       "group_top": false,
-      "home_crowd": true,
-      "keeper_error": false,
-      "referat_fakta_score": 16,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
-      "direct_fifa_probe": true,
+      "hit_bar": true,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-cote-divoire-match-report-highlights",
-      "fifa_direct_probe_version": "v5-fifa-kriterier-home-first",
-      "retry_antall": 1,
-      "venter_pa_bedre_kilde": true
-    }
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    },
+    "kamp_id": "Germany_Ivory_Coast_2026_06_20",
+    "resultat": "2-1",
+    "sist_sokt": "2026-06-21T00:00:34Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe"
   }
 }
