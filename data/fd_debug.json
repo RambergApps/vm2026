@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-21T01:00:59Z",
+  "tidspunkt": "2026-06-21T01:30:52Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -385,7 +385,7 @@
       "fd_bortelag": "Curaçao",
       "hjemmelag_normalisert": "Ecuador",
       "bortelag_normalisert": "Curaçao",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
