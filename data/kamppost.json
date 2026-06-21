@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-20",
   "dato_norsk": "Lørdag 20. juni 2026",
-  "generert": "2026-06-21T00:46:56Z",
+  "generert": "2026-06-21T01:01:01Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -225,31 +225,28 @@
       "hjemme_score": 3,
       "borte_score": 0,
       "gruppe": "C",
-      "recap_tekst": "Brazil beat Haiti 3-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "Brazil beat Haiti 3-0.\nGoals: Cunha (23, 36) and Vinicius Jr. (45+3).\n\nBraziledged ahead of Morocco on goal difference at the top of Group C after a comfortable victory that ends Haiti's hopes of progressing.\nThe Manchester United forward lashed the ball into the top corner to double Brazil's lead.\nIt took over 20 minutes, but once they got going there was not stopping the five-time champions.\nVinicius Jr created the first goal by firing a shot that Johnny Placide couldn't hold on to.\nKey stat: Matheus Cunha's first goal was just his second senior international goal for Brazil and his first at the World Cup. His double helped Brazil overtake Germany as the highest scoring country in World Cup history with 240 goals.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 13,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "Brazil_Haiti_2026_06_19|3-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 13,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-highlights-match-report",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-haiti-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
