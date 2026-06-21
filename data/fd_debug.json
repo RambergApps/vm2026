@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-21T20:30:50Z",
+  "tidspunkt": "2026-06-21T20:45:04Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -625,7 +625,7 @@
       "bortelag_normalisert": "Saudi Arabia",
       "status": "FINISHED",
       "ferdig": true,
-      "hjemme": 5,
+      "hjemme": 4,
       "borte": 0,
       "fd_dato": "2026-06-21",
       "fd_utcDate": "2026-06-21T16:00:00Z",

@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-20",
   "dato_norsk": "Lørdag 20. juni 2026",
-  "generert": "2026-06-21T18:31:29Z",
+  "generert": "2026-06-21T20:45:30Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -64,6 +64,12 @@
             "poeng": 2
           },
           {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
             "navn": "Kjetil bjerke",
             "tippa_h": 1,
             "tippa_b": 2,
@@ -83,12 +89,6 @@
           },
           {
             "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Alex Myrvokd",
             "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 2
@@ -308,6 +308,12 @@
             "poeng": 2
           },
           {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Anders Rikheim",
             "tippa_h": 4,
             "tippa_b": 0,
@@ -332,12 +338,6 @@
             "poeng": 2
           },
           {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
             "navn": "Ken Arne Hansen",
             "tippa_h": 4,
             "tippa_b": 0,
@@ -356,6 +356,12 @@
             "poeng": 2
           },
           {
+            "navn": "Magnus Børrud",
+            "tippa_h": 4,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Atle Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
@@ -370,12 +376,6 @@
           {
             "navn": "Geir Magne Evensen",
             "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Magnus Børrud",
-            "tippa_h": 4,
             "tippa_b": 0,
             "poeng": 2
           },
@@ -492,13 +492,13 @@
             "poeng": 2
           },
           {
-            "navn": "Sebastian Luranc",
+            "navn": "Magnus Børrud",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 2
           },
           {
-            "navn": "Magnus Børrud",
+            "navn": "Sebastian Luranc",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 2
@@ -699,6 +699,12 @@
             "poeng": 2
           },
           {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -729,12 +735,6 @@
             "poeng": 2
           },
           {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
             "navn": "Ken Arne Hansen",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -759,6 +759,12 @@
             "poeng": 2
           },
           {
+            "navn": "Magnus Børrud",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
             "navn": "Sebastian Luranc",
             "tippa_h": 3,
             "tippa_b": 0,
@@ -766,12 +772,6 @@
           },
           {
             "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Magnus Børrud",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 2
@@ -931,6 +931,12 @@
             "poeng": 2
           },
           {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Kjetil bjerke",
             "tippa_h": 3,
             "tippa_b": 1,
@@ -951,12 +957,6 @@
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 2
           },
@@ -1094,40 +1094,40 @@
       "poeng_i_dag": 6
     },
     {
-      "navn": "Kjetil bjerke",
+      "navn": "Alex Myrvokd",
       "plass": 4,
+      "poeng_totalt": 58,
+      "poeng_i_dag": 14
+    },
+    {
+      "navn": "Kjetil bjerke",
+      "plass": 5,
       "poeng_totalt": 58,
       "poeng_i_dag": 12
     },
     {
       "navn": "Anders Rikheim",
-      "plass": 5,
+      "plass": 6,
       "poeng_totalt": 56,
       "poeng_i_dag": 12
     },
     {
       "navn": "Bjørnar Tallaksrud",
-      "plass": 6,
+      "plass": 7,
       "poeng_totalt": 56,
       "poeng_i_dag": 6
     },
     {
       "navn": "Olympus fc",
-      "plass": 7,
+      "plass": 8,
       "poeng_totalt": 56,
       "poeng_i_dag": 8
     },
     {
       "navn": "Vegard Hammervold Midtbø",
-      "plass": 8,
+      "plass": 9,
       "poeng_totalt": 56,
       "poeng_i_dag": 10
-    },
-    {
-      "navn": "Alex Myrvokd",
-      "plass": 9,
-      "poeng_totalt": 54,
-      "poeng_i_dag": 14
     },
     {
       "navn": "Ken Arne Hansen",
@@ -1154,28 +1154,28 @@
       "poeng_i_dag": 12
     },
     {
-      "navn": "Atle Johansen",
+      "navn": "Magnus Børrud",
       "plass": 14,
+      "poeng_totalt": 46,
+      "poeng_i_dag": 14
+    },
+    {
+      "navn": "Atle Johansen",
+      "plass": 15,
       "poeng_totalt": 44,
       "poeng_i_dag": 4
     },
     {
       "navn": "Sebastian Luranc",
-      "plass": 15,
+      "plass": 16,
       "poeng_totalt": 44,
       "poeng_i_dag": 8
     },
     {
       "navn": "Geir Magne Evensen",
-      "plass": 16,
-      "poeng_totalt": 42,
-      "poeng_i_dag": 10
-    },
-    {
-      "navn": "Magnus Børrud",
       "plass": 17,
       "poeng_totalt": 42,
-      "poeng_i_dag": 14
+      "poeng_i_dag": 10
     },
     {
       "navn": "Rickard Jacobsson",
