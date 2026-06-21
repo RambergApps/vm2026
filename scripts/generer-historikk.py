@@ -1189,25 +1189,11 @@ def bygg_artikkelbaserte_setninger(kamp, fakta):
     if fakta.get("winner_trailed_first") and vinner and taper:
         out.append(f"{taper_txt} fikk kampen dit de ønsket med ledelse først, men {vinner_txt} slo tilbake og snudde oppgjøret.")
 
-    wood = finn_setning_med(setninger, re.compile(r"\b(?:woodwork|post|crossbar|upright)\b|\b(?:hit|struck|rattled)\s+the\s+bar\b", re.I))
-    if wood:
-        if vinner_txt:
-            out.append(f"FIFA-beskrivelsen peker på flere store sjanser underveis, blant annet avslutninger i treverket, før {vinner_txt} fikk kontroll på resultatet.")
-        else:
-            out.append("FIFA-beskrivelsen peker på flere store sjanser underveis, blant annet avslutninger i treverket.")
-
-    pressure = finn_setning_med(setninger, re.compile(r"final 15|late pressure|gained the ascendancy|pushed|pressed|search of an equaliser|seeking an equaliser", re.I))
-    if pressure and taper_txt and vinner_txt:
-        out.append(f"{taper_txt} løftet seg mot slutten og jaktet utligning, men {vinner_txt} holdt unna.")
-
-    close = finn_setning_med(setninger, re.compile(r"came close|almost|nearly|denied|saved", re.I))
-    if close and not wood:
-        scorer_names = [e.get("spiller", "") for e in events]
-        named = next((n for n in scorer_names if n and re.search(re.escape(n.split()[0]), close, flags=re.I)), "")
-        if named:
-            out.append(f"{named} var også involvert i flere farlige situasjoner etter scoringen.")
-        else:
-            out.append("Kampen inneholdt også flere store muligheter som kunne gitt flere scoringer.")
+    # Ikke skriv om store sjanser, treverk eller sluttpress basert på generiske
+    # engelske nøkkelord alene. Slike hendelser skal bare inn i referatet hvis
+    # parseren senere kan knytte dem til konkret spiller, lag, handling og fase.
+    # Dette hindrer at scriptet publiserer antakelser som ikke er sikkert forankret
+    # i kampen, f.eks. samme treverk-/sluttpress-setning på flere ulike kamper.
 
     alltext = " ".join(setninger).lower()
     if re.search(r"eliminat(?:ed|ion)|cannot reach|knocked out", alltext) and taper_txt:
@@ -1321,10 +1307,9 @@ def bygg_kampbilde_setninger(kamp, fakta):
     vinner = vinner_lag_for_kamp(kamp)
     taper = taper_lag_for_kamp(kamp)
 
-    if fakta.get("hit_bar"):
-        setninger.append("FIFA-referatet peker også på flere store sjanser, blant annet avslutninger i treverket.")
-    if fakta.get("late_pressure") and taper:
-        setninger.append(f"{visningsnavn_lag(taper)} presset mer mot slutten, men {visningsnavn_lag(vinner)} holdt unna.")
+    # Ikke publiser generiske treverk-/sjanse-/sluttpress-setninger fra boolean-flagg.
+    # Disse flaggene er for svake alene og kan gi hendelser som ikke faktisk skjedde
+    # i den konkrete kampen.
     if fakta.get("eliminated_loser") and taper:
         setninger.append(f"Resultatet gjorde samtidig veien videre svært vanskelig for {visningsnavn_lag(taper)}.")
     if fakta.get("knockout_secured") and vinner:
