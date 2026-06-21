@@ -40,7 +40,7 @@ FULLTEKST_TIMEOUT = int(os.environ.get("FULLTEKST_TIMEOUT", "15"))
 FULLTEKST_MAX_BYTES = int(os.environ.get("FULLTEKST_MAX_BYTES", "500000"))
 MAX_FULLTEKST_PER_KJORING = int(os.environ.get("MAX_FULLTEKST_PER_KJORING", "24"))
 JINA_READER_AKTIVERT = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION = "v21-fifa-rich-recap"
+FULLTEKST_CACHE_VERSION = "v22-fifa-english-summary"
 FIFA_ARTICLE_BASE = os.environ.get(
     "FIFA_ARTICLE_BASE",
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles",
@@ -238,7 +238,11 @@ def er_placeholder_kamp(kamp):
 
 def cache_har_ferdig_fifa(cache_entry, kamp):
     fakta = (cache_entry or {}).get("fulltekst_fakta") or {}
-    return fulltekst_kriterier_mott(fakta, kamp)
+    # English-summary version needs the cleaned FIFA article paragraphs.
+    # Old OK-cache without article_paragraphs should be refreshed.
+    if not fulltekst_kriterier_mott(fakta, kamp):
+        return False
+    return bool(fakta.get("article_paragraphs"))
 
 
 def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
@@ -1386,10 +1390,161 @@ def bygg_historikkavsnitt(ref):
     return ". ".join([l for l in linjer if l]) + "." if linjer else ""
 
 
+
+def english_team_name(team):
+    """Use original English team names in published English recap."""
+    return str(team or "").strip()
+
+
+def english_result_sentence(kamp):
+    home = english_team_name(kamp.get("hjemmelag"))
+    away = english_team_name(kamp.get("bortelag"))
+    h = int(kamp.get("hjemme", 0) or 0)
+    b = int(kamp.get("borte", 0) or 0)
+    if h > b:
+        return f"{home} beat {away} {h}-{b}."
+    if b > h:
+        return f"{away} beat {home} {b}-{h}."
+    return f"{home} and {away} drew {h}-{b}."
+
+
+def minute_en(minutt):
+    if minutt is None or minutt == "":
+        return ""
+    return str(minutt).replace("'", "")
+
+
+def join_en(items):
+    items = [str(i).strip() for i in items if str(i).strip()]
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    return ", ".join(items[:-1]) + " and " + items[-1]
+
+
+def player_goal_text_en(group):
+    player = str(group.get("spiller", "")).strip()
+    mins = [minute_en(m) for m in (group.get("minutter") or []) if minute_en(m)]
+    types = group.get("typer") or []
+    suffix = " own goal" if "own goal" in types else " penalty" if "penalty" in types else ""
+    if mins:
+        return f"{player}{suffix} ({', '.join(mins)})"
+    return f"{player}{suffix}"
+
+
+def goal_summary_en(kamp, fakta):
+    events = sorted(fakta.get("goal_events") or [], key=minutt_sort_key)
+    if not events:
+        return ""
+
+    h = int(kamp.get("hjemme", 0) or 0)
+    b = int(kamp.get("borte", 0) or 0)
+    home = kamp.get("hjemmelag")
+    away = kamp.get("bortelag")
+
+    groups = grupper_goal_events(events)
+    home_txt = join_en([player_goal_text_en(g) for g in groups if g.get("lag") == home])
+    away_txt = join_en([player_goal_text_en(g) for g in groups if g.get("lag") == away])
+
+    if h and b and home_txt and away_txt:
+        return f"Goals: {home} — {home_txt}; {away} — {away_txt}."
+    if h and home_txt and not b:
+        return f"Goals: {home_txt}."
+    if b and away_txt and not h:
+        return f"Goals: {away_txt}."
+    all_txt = join_en([player_goal_text_en(g) for g in groups])
+    return f"Goals: {all_txt}." if all_txt else ""
+
+
+def sentence_noise_en(sentence):
+    s = str(sentence or "").strip()
+    low = s.lower()
+    if not s:
+        return True
+    noise = [
+        "watch highlights", "related content", "share video", "play video", "close share",
+        "close related", "photo by", "getty images", "fifa.com", "api.fifa.com",
+        "group |", "| pts |", "michelob ultra", "what they said", "published",
+    ]
+    return any(n in low for n in noise)
+
+
+def shorten_sentence_en(sentence, max_len=380):
+    s = re.sub(r"\s+", " ", fjern_markdown(sentence)).strip()
+    if len(s) <= max_len:
+        return s
+    # Prefer a clean first clause rather than cutting mid-word.
+    cut_points = []
+    for sep in [". ", "; ", ", but ", ", while ", ", and "]:
+        idx = s.find(sep)
+        if idx >= 120:
+            cut_points.append(idx + (1 if sep.startswith(".") else 0))
+    if cut_points:
+        s = s[:min(cut_points)].strip()
+        if not s.endswith((".", "!", "?")):
+            s += "."
+        return s
+    return s[:max_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
+
+
+def english_article_summary_sentences(kamp, fakta, max_sentences=4):
+    """Use FIFA article paragraphs directly as an English extractive summary.
+
+    No Norwegian translation and no invented event templates. The function only
+    selects clean, relevant sentences from the already extracted match article.
+    """
+    raw_sentences = splitt_artikkelsetninger(fakta.get("article_paragraphs") or [])
+    if not raw_sentences:
+        return []
+
+    home = str(kamp.get("hjemmelag", "")).lower()
+    away = str(kamp.get("bortelag", "")).lower()
+    scorers = [str(ev.get("spiller", "")).split()[-1].lower() for ev in (fakta.get("goal_events") or []) if ev.get("spiller")]
+
+    selected = []
+
+    # 1) Prefer lead/overview sentence from the article.
+    for s in raw_sentences:
+        low = s.lower()
+        if sentence_noise_en(s):
+            continue
+        if any(x in low for x in ["beat", "defeated", "victory", "win", "drew", "moved", "advanced", "through", "top of group", "hopes"]):
+            selected.append(s)
+            break
+
+    # 2) Then concrete match-flow sentences: goals, creators, chances, consequences.
+    priority_terms = [
+        "goal", "scor", "lead", "opener", "created", "cross", "pass", "header",
+        "second", "third", "stoppage", "restart", "equalis", "winner", "bar", "post",
+        "crossbar", "denied", "pressure", "secured", "knockout", "round of 32",
+    ]
+    for s in raw_sentences:
+        if len(selected) >= max_sentences:
+            break
+        if sentence_noise_en(s) or s in selected:
+            continue
+        low = s.lower()
+        has_team_or_scorer = home in low or away in low or any(sc and sc in low for sc in scorers)
+        has_priority = any(t in low for t in priority_terms)
+        if has_team_or_scorer and has_priority:
+            selected.append(s)
+
+    # 3) Fill with first clean article sentences if still short.
+    for s in raw_sentences:
+        if len(selected) >= max_sentences:
+            break
+        if sentence_noise_en(s) or s in selected:
+            continue
+        selected.append(s)
+
+    return unike_setninger([shorten_sentence_en(s) for s in selected])[:max_sentences]
+
+
 def bygg_forelopig_recap(kamp):
     return "\n".join([
-        resultatsetning(kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"]),
-        "Utfyllende kampreferat oppdateres automatisk når full måloversikt er tilgjengelig fra FIFA.",
+        english_result_sentence(kamp),
+        "A fuller match summary will be updated automatically when FIFA's match report is complete.",
     ])
 
 
@@ -1397,47 +1552,34 @@ def bygg_recap_tekst(kamp, ref, fakta):
     if not fulltekst_kriterier_mott(fakta, kamp):
         return bygg_forelopig_recap(kamp)
 
-    setninger = [resultatsetning(kamp["hjemmelag"], kamp["bortelag"], kamp["hjemme"], kamp["borte"])]
+    setninger = [english_result_sentence(kamp)]
 
-    # Bruk FIFA-brødteksten som faktisk referatgrunnlag, ikke bare til kriteriesjekk.
-    artikkel_setninger = bygg_artikkelbaserte_setninger(kamp, fakta)
+    goals = goal_summary_en(kamp, fakta)
+    if goals:
+        setninger.append(goals)
 
-    # For énmålskamper er den artikkelbaserte første-mål-setningen normalt mer
-    # presis enn den rene mållinjen, fordi den kan ta med forarbeid/keeper/sluttpress.
-    if total_maal_i_kamp(kamp) == 1 and artikkel_setninger:
-        setninger.extend(artikkel_setninger)
-    else:
-        setninger.extend(bygg_maalsetninger(kamp, fakta))
-        setninger.extend(artikkel_setninger)
+    # Main change: publish English summary from FIFA article paragraphs directly.
+    # Do not translate, and do not invent generic event templates.
+    setninger.extend(english_article_summary_sentences(kamp, fakta, max_sentences=4))
 
-    # Bruk de mer generiske event-/kampbildesetningene bare når artikkelflyten
-    # ikke gir nok. Dette hindrer at rike FIFA-avsnitt erstattes av fylltekst.
-    if len(artikkel_setninger) < 3:
-        setninger.extend(bygg_kampforlop_fra_events(kamp, fakta))
-        setninger.extend(bygg_kampbilde_setninger(kamp, fakta))
-
-    key_stat = oversett_key_stat_enkel(fakta.get("key_stat", ""), kamp, fakta)
+    key_stat = str(fakta.get("key_stat") or "").strip()
     if key_stat:
-        setninger.append(key_stat)
+        setninger.append("Key stat: " + shorten_sentence_en(key_stat, max_len=300))
 
-    if fakta.get("player_of_match"):
-        setninger.append(f"{fakta['player_of_match']} ble kåret til kampens spiller hos FIFA.")
+    potm = str(fakta.get("player_of_match") or "").strip()
+    if potm:
+        setninger.append(f"Player of the Match: {potm}.")
 
     setninger = unike_setninger(setninger)
 
-    # Når FIFA-artikkelen er rik, skal også referatet være rikere: 5–8 setninger.
-    hoved = setninger[:3]
-    detaljer = setninger[3:8]
+    # Keep match cards compact: result/goals first, then article summary.
+    hoved = setninger[:2]
+    detaljer = setninger[2:7]
     avsnitt = []
     if hoved:
         avsnitt.append("\n".join(hoved))
     if detaljer:
         avsnitt.append("\n".join(detaljer))
-
-    if len(setninger) < 5:
-        hist = bygg_historikkavsnitt(ref)
-        if hist:
-            avsnitt.append(hist)
     return "\n\n".join(avsnitt)
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
