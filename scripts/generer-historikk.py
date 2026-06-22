@@ -30,6 +30,7 @@ REPO_ROOT = Path(__file__).parent.parent
 DATA_DIR = REPO_ROOT / "data"
 DATA_JS = DATA_DIR / "data.js"
 KAMPPOST_JSON = DATA_DIR / "kamppost.json"
+KAMPREFERATER_JSON = DATA_DIR / "kampreferater.json"
 REFERANSER_JSON = DATA_DIR / "kamp-referanser.json"
 # Behold filnavn for kompatibilitet med eksisterende repo/workflow, selv om Serper ikke brukes.
 SERPER_CACHE_JSON = DATA_DIR / "serper-cache.json"
@@ -1665,6 +1666,157 @@ def bygg_recap_tekst(kamp, ref, fakta):
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
+def les_kampreferatarkiv():
+    data = les_json(KAMPREFERATER_JSON, {})
+    if not isinstance(data, dict):
+        data = {}
+    kamper = data.get("kamper")
+    if isinstance(kamper, list):
+        kamper = {str(k.get("canonical_kamp_id") or k.get("kamp_id") or i): k for i, k in enumerate(kamper)}
+    if not isinstance(kamper, dict):
+        kamper = {}
+    return {
+        "sist_oppdatert": data.get("sist_oppdatert", ""),
+        "antall_kamper": len(kamper),
+        "kamper": kamper,
+    }
+
+
+def referatstatus_rank(status):
+    return {"midlertidig": 0, "forelopig": 1, "endelig": 2}.get(str(status or ""), -1)
+
+
+def merge_arkivoppforing(arkiv, entry):
+    """Oppdater én kamp uten å nedgradere et allerede endelig referat."""
+    key = str(entry.get("canonical_kamp_id") or entry.get("kamp_id") or entry.get("fd_match_id") or "")
+    if not key:
+        return False
+    existing = arkiv["kamper"].get(key)
+    candidate = dict(entry)
+
+    if isinstance(existing, dict) and referatstatus_rank(existing.get("referatstatus")) > referatstatus_rank(candidate.get("referatstatus")):
+        # Behold den beste teksten/kvaliteten, men tillat ferskere score og kampstatus.
+        for field in ("referatstatus", "recap_tekst", "recap_kvalitet", "kilde"):
+            candidate[field] = existing.get(field)
+
+    def comparable(value):
+        if not isinstance(value, dict):
+            return value
+        copy = dict(value)
+        copy.pop("oppdatert", None)
+        return copy
+
+    if isinstance(existing, dict) and comparable(existing) == comparable(candidate):
+        candidate["oppdatert"] = existing.get("oppdatert", candidate.get("oppdatert"))
+        arkiv["kamper"][key] = candidate
+        return False
+
+    arkiv["kamper"][key] = candidate
+    return True
+
+
+def kampost_til_arkivoppforing(kampost, vm_data=None, kampdata=None):
+    kampdata = kampdata or {}
+    canonical = canonical_kamp_id_for(kampdata, kampost.get("canonical_kamp_id") or kampost.get("kamp_id", ""))
+    kvalitet = kampost.get("recap_kvalitet") or {}
+    endelig = kvalitet.get("status") == "ok" and not kvalitet.get("fallback", False)
+    status = kampdata.get("status") or ("FINISHED" if kampdata.get("ferdig", True) else "TIMED")
+    return {
+        "kamp_id": kampost.get("kamp_id") or canonical,
+        "canonical_kamp_id": canonical,
+        "fd_match_id": kampdata.get("fd_match_id") or kampost.get("fd_match_id"),
+        "fd_utcDate": kampdata.get("fd_utcDate") or kampost.get("fd_utcDate", ""),
+        "hjemmelag": kampost.get("hjemmelag", kampdata.get("hjemmelag", "")),
+        "bortelag": kampost.get("bortelag", kampdata.get("bortelag", "")),
+        "hjemme_score": kampost.get("hjemme_score", kampdata.get("hjemme")),
+        "borte_score": kampost.get("borte_score", kampdata.get("borte")),
+        "gruppe": kampost.get("gruppe", kampdata.get("gruppe", "")),
+        "runde": kampdata.get("runde", kampost.get("runde", "gruppe")),
+        "kampstatus": status,
+        "referatstatus": "endelig" if endelig else "forelopig",
+        "recap_tekst": kampost.get("recap_tekst", ""),
+        "recap_kvalitet": kvalitet,
+        "tippinger": kampost.get("tippinger", {}),
+        "kilde": kvalitet.get("fulltekst_kilde") or kvalitet.get("grunnlag") or "",
+        "oppdatert": iso_utc_na(),
+    }
+
+
+def seed_arkiv_fra_kamppost(arkiv, kamppost, vm_data):
+    if not isinstance(kamppost, dict):
+        return False
+    resultater = vm_data.get("resultater", {})
+    id_map = bygg_kamp_id_map(vm_data)
+    by_canonical = {}
+    for key, kamp in resultater.items():
+        canonical = id_map.get(key, canonical_kamp_id_for(kamp, key))
+        by_canonical[canonical] = kamp
+    changed = False
+    for post in kamppost.get("kamper", []) if isinstance(kamppost.get("kamper"), list) else []:
+        canonical = id_map.get(post.get("kamp_id"), post.get("kamp_id"))
+        changed |= merge_arkivoppforing(arkiv, kampost_til_arkivoppforing(post, vm_data, by_canonical.get(canonical, {})))
+    return changed
+
+
+def finn_live_kamper(vm_data):
+    unike = {}
+    for key, kamp in vm_data.get("resultater", {}).items():
+        status = str(kamp.get("status") or "").upper()
+        if status not in {"IN_PLAY", "PAUSED"} or er_placeholder_kamp(kamp):
+            continue
+        canonical = canonical_kamp_id_for(kamp, key)
+        kandidat = dict(kamp)
+        kandidat["kamp_id"] = canonical
+        kandidat["canonical_kamp_id"] = canonical
+        eksisterende = unike.get(canonical)
+        if eksisterende is None or (not kamp.get("alias_for") and key == canonical):
+            unike[canonical] = kandidat
+    return sorted(unike.values(), key=lambda kamp: kamp.get("fd_utcDate", ""))
+
+
+def bygg_live_recap(kamp):
+    hjemme = kamp.get("hjemmelag", "Home team")
+    borte = kamp.get("bortelag", "away team")
+    h = kamp.get("hjemme")
+    b = kamp.get("borte")
+    status = str(kamp.get("status") or "IN_PLAY").upper()
+    if h is None or b is None:
+        first = f"{hjemme} against {borte} is in progress."
+    elif h > b:
+        first = f"{hjemme} lead {borte} {h}-{b}."
+    elif b > h:
+        first = f"{borte} lead {hjemme} {b}-{h}."
+    else:
+        first = f"{hjemme} and {borte} are level at {h}-{b}."
+    second = "The match is paused. This temporary report will be updated when play resumes." if status == "PAUSED" else "The match is in progress. This temporary report will be updated as confirmed information becomes available."
+    return first + "\n\n" + second
+
+
+def live_arkivoppforing(kamp, tippinger):
+    canonical = canonical_kamp_id_for(kamp, kamp.get("kamp_id", ""))
+    return {
+        "kamp_id": canonical,
+        "canonical_kamp_id": canonical,
+        "fd_match_id": kamp.get("fd_match_id"),
+        "fd_utcDate": kamp.get("fd_utcDate", ""),
+        "hjemmelag": kamp.get("hjemmelag", ""),
+        "bortelag": kamp.get("bortelag", ""),
+        "hjemme_score": kamp.get("hjemme"),
+        "borte_score": kamp.get("borte"),
+        "gruppe": kamp.get("gruppe", ""),
+        "runde": kamp.get("runde", "gruppe"),
+        "kampstatus": kamp.get("status", "IN_PLAY"),
+        "referatstatus": "midlertidig",
+        "recap_tekst": bygg_live_recap(kamp),
+        "recap_kvalitet": {"status": "live", "grunnlag": "bekreftet_score_og_status"},
+        "tippinger": tippinger,
+        "kilde": "football-data.org / data.js",
+        "oppdatert": iso_utc_na(),
+    }
+
+
+# ── MAIN ──────────────────────────────────────────────────────────────────────
+
 def main():
     print("=" * 60)
     print("VM 2026 Kampreferat-generator")
@@ -1682,18 +1834,26 @@ def main():
     print("Leser data/kamp-referanser.json...")
     referanser = les_referanser()
     cache = les_cache()
+    arkiv = les_kampreferatarkiv()
+    arkiv_endret = seed_arkiv_fra_kamppost(arkiv, eksisterende, vm_data)
 
-    print(f"\nFinner kamper fra {igaar_str} (norsk tid) + ikke-OK retry-kamper siste {RETRY_SISTE_TIMER} timer...")
+    print(f"\nFinner kamper fra {igaar_str} + retry-kamper og pågående kamper...")
     arbeidskamper, rapport_ids, retry_ekstra = finn_kamper_for_rapport_og_retry(vm_data, cache, igaar_str)
-    if not arbeidskamper:
-        print(f"  → Ingen ferdigspilte kamper for {igaar_str}, og ingen retry-kamper. Avslutter.")
-        return
+    live_kamper = finn_live_kamper(vm_data)
     print(f"  → {len(rapport_ids)} rapportkamper funnet")
     if retry_ekstra:
-        print(f"  → {retry_ekstra} ekstra ikke-OK kamp(er) prosesseres kun for cache/retry")
+        print(f"  → {retry_ekstra} ekstra ikke-OK kamp(er) prosesseres for retry og arkiv")
+    if live_kamper:
+        print(f"  → {len(live_kamper)} pågående kamp(er) får midlertidig referat")
 
     kamposter = []
     fulltekst_teller = 0
+
+    for kamp in live_kamper:
+        canonical = kamp["kamp_id"]
+        print(f"\n[LIVE] {kamp.get('hjemmelag')} {kamp.get('hjemme')}–{kamp.get('borte')} {kamp.get('bortelag')}")
+        tippinger = hent_tippinger_for_kamp(vm_data, canonical)
+        arkiv_endret |= merge_arkivoppforing(arkiv, live_arkivoppforing(kamp, tippinger))
 
     for i, kamp in enumerate(arbeidskamper, 1):
         hjemme = kamp["hjemmelag"]
@@ -1702,7 +1862,7 @@ def main():
         b_score = kamp["borte"]
         kamp_id = kamp["kamp_id"]
         retry_only = kamp_id not in rapport_ids
-        suffix = " (kun retry/cache)" if retry_only else ""
+        suffix = " (retry/arkiv)" if retry_only else ""
         print(f"\n[{i}/{len(arbeidskamper)}] {hjemme} {h_score}-{b_score} {borte}{suffix}")
 
         ref = referanser.get(kampreferat_noekkel(hjemme, borte), {})
@@ -1716,11 +1876,7 @@ def main():
         print(f"  Eksakt: {len(tippinger['eksakt'])} | Riktig: {len(tippinger['riktig'])} | Bom: {len(tippinger['bom'])}")
         print(f"  Recap-kvalitet: status={recap_status}, fakta_score={referat_score}, fallback={not kriterier_ok}")
 
-        if retry_only:
-            time.sleep(0.15)
-            continue
-
-        kamposter.append({
+        post = {
             "kamp_id": kamp_id,
             "hjemmelag": hjemme,
             "bortelag": borte,
@@ -1752,27 +1908,38 @@ def main():
                 "offisiell_kilde_sokt": [],
             },
             "tippinger": tippinger,
-        })
+        }
+
+        arkiv_endret |= merge_arkivoppforing(arkiv, kampost_til_arkivoppforing(post, vm_data, kamp))
+        if not retry_only:
+            kamposter.append(post)
         time.sleep(0.15)
 
-    kamppost = {
-        "dato": igaar_str,
-        "dato_norsk": formater_norsk_dato(igaar_str),
-        "generert": iso_utc_na(),
-        "antall_kamper": len(kamposter),
-        "kamper": kamposter,
-        "stilling": bygg_stilling(vm_data, set(rapport_ids)),
-    }
-
-    if eksisterende_for_dato and uten_generert(eksisterende_for_dato) == uten_generert(kamppost):
-        kamppost["generert"] = eksisterende_for_dato.get("generert", kamppost["generert"])
-        print("\n✓ Kamppost regenerert, men innholdet er uendret. Beholder eksisterende generert-tidspunkt.")
+    if rapport_ids:
+        kamppost = {
+            "dato": igaar_str,
+            "dato_norsk": formater_norsk_dato(igaar_str),
+            "generert": iso_utc_na(),
+            "antall_kamper": len(kamposter),
+            "kamper": kamposter,
+            "stilling": bygg_stilling(vm_data, set(rapport_ids)),
+        }
+        if eksisterende_for_dato and uten_generert(eksisterende_for_dato) == uten_generert(kamppost):
+            kamppost["generert"] = eksisterende_for_dato.get("generert", kamppost["generert"])
+            print("\n✓ Kamppost er innholdsmessig uendret.")
+        else:
+            print(f"\n✓ Kamppost oppdatert for {igaar_str}")
+        skriv_json(KAMPPOST_JSON, kamppost)
+        print(f"✓ Skrev kamppost.json med {len(kamposter)} kamper")
     else:
-        print(f"\n✓ Kamppost regenerert med endringer for {igaar_str}")
+        print("\n✓ Ingen nye gårsdagskamper; eksisterende kamppost.json beholdes.")
 
-    skriv_json(KAMPPOST_JSON, kamppost)
+    if arkiv_endret or not KAMPREFERATER_JSON.exists():
+        arkiv["sist_oppdatert"] = iso_utc_na()
+    arkiv["antall_kamper"] = len(arkiv["kamper"])
+    skriv_json(KAMPREFERATER_JSON, arkiv)
     skriv_json(SERPER_CACHE_JSON, cache)
-    print(f"✓ Skrev kamppost.json med {len(kamposter)} kamper for {igaar_str}")
+    print(f"✓ Skrev kampreferater.json med {arkiv['antall_kamper']} historiske/live kamper")
     print("✓ Serper-søk brukt i denne kjøringen: 0")
     print(f"✓ Fulltekstforsøk brukt i denne kjøringen: {fulltekst_teller}")
 
