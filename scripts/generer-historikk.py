@@ -245,63 +245,144 @@ def cache_har_ferdig_fifa(cache_entry, kamp):
     return bool(fakta.get("article_paragraphs"))
 
 
+def canonical_kamp_id_for(kamp, fallback=""):
+    """Returner én stabil kamp-ID for både canonical- og aliasoppføringer."""
+    if not isinstance(kamp, dict):
+        return fallback
+    return (
+        kamp.get("canonical_kamp_id")
+        or kamp.get("alias_for")
+        or kamp.get("kamp_id")
+        or fallback
+    )
+
+
+def bygg_kamp_id_map(vm_data):
+    """Map alle kjente kamp-ID-er/aliaser til canonical_kamp_id."""
+    mapping = {}
+    for key, kamp in vm_data.get("resultater", {}).items():
+        canonical = canonical_kamp_id_for(kamp, key)
+        for kandidat in (
+            key,
+            kamp.get("kamp_id"),
+            kamp.get("canonical_kamp_id"),
+            kamp.get("alias_for"),
+        ):
+            if kandidat:
+                mapping[kandidat] = canonical
+
+    # Sikrer at eventuelle alias-kjeder også ender på den endelige ID-en.
+    for _ in range(3):
+        endret = False
+        for key, value in list(mapping.items()):
+            resolved = mapping.get(value, value)
+            if resolved != value:
+                mapping[key] = resolved
+                endret = True
+        if not endret:
+            break
+    return mapping
+
+
 def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
+    """Finn unike kamper, deduplisert på canonical_kamp_id."""
+    unike_kamper = {}
+
+    for key, kamp in vm_data.get("resultater", {}).items():
+        if er_placeholder_kamp(kamp) or not kamp.get("ferdig"):
+            continue
+
+        canonical = canonical_kamp_id_for(kamp, key)
+        raw_id = kamp.get("kamp_id", key)
+
+        # Standardiser objektet som sendes videre, slik at cache, rapport og
+        # kamppost alltid bruker samme kamp-ID.
+        kandidat = dict(kamp)
+        kandidat["kamp_id"] = canonical
+        kandidat["canonical_kamp_id"] = canonical
+        kandidat.pop("alias_for", None)
+
+        eksisterende = unike_kamper.get(canonical)
+        eksisterende_raw_id = (eksisterende or {}).get("_opprinnelig_kamp_id", "")
+        kandidat["_opprinnelig_kamp_id"] = raw_id
+
+        # Foretrekk den ekte canonical-oppføringen dersom både den og et alias finnes.
+        kandidat_er_canonical = raw_id == canonical and not kamp.get("alias_for")
+        eksisterende_er_canonical = eksisterende_raw_id == canonical
+        if eksisterende is None or (kandidat_er_canonical and not eksisterende_er_canonical):
+            unike_kamper[canonical] = kandidat
+
     rapport = []
     retry = []
     rapport_ids = set()
-    for kid, kamp in vm_data.get("resultater", {}).items():
-        if er_placeholder_kamp(kamp) or not kamp.get("ferdig"):
-            continue
-        kamp_id = kamp.get("kamp_id", kid)
+
+    for canonical, kamp in unike_kamper.items():
+        kamp.pop("_opprinnelig_kamp_id", None)
         if kamp_norsk_dato(kamp) == rapport_dato_str:
             rapport.append(kamp)
-            rapport_ids.add(kamp_id)
+            rapport_ids.add(canonical)
             continue
-        key = cache_noekkel(kamp_id, kamp.get("hjemme"), kamp.get("borte"))
+
+        key = cache_noekkel(canonical, kamp.get("hjemme"), kamp.get("borte"))
         if kamp_innenfor_siste_timer(kamp, RETRY_SISTE_TIMER) and not cache_har_ferdig_fifa(cache.get(key), kamp):
             retry.append(kamp)
 
     def sortkey(k):
         return k.get("fd_utcDate", k.get("dato_openfootball", ""))
 
-    alle = []
-    seen = set()
-    for kamp in sorted(rapport, key=sortkey) + sorted(retry, key=sortkey):
-        kid = kamp.get("kamp_id")
-        if kid not in seen:
-            seen.add(kid)
-            alle.append(kamp)
-    return alle, rapport_ids, len([k for k in retry if k.get("kamp_id") not in rapport_ids])
+    alle = sorted(rapport, key=sortkey) + sorted(retry, key=sortkey)
+    return alle, rapport_ids, len(retry)
 
 
 def hent_tippinger_for_kamp(vm_data, kamp_id):
+    """Hent tips for både canonical-ID og eventuelle alias-ID-er, én gang per deltaker."""
     eksakt, riktig, bom = [], [], []
+    id_map = bygg_kamp_id_map(vm_data)
+    canonical = id_map.get(kamp_id, kamp_id)
+
     for deltaker in vm_data.get("stilling", []):
+        matchende_tips = None
         for tips in deltaker.get("tippinger", []):
-            if tips.get("kamp_id") != kamp_id:
-                continue
-            info = {
-                "navn": deltaker.get("navn", ""),
-                "tippa_h": tips.get("tippa_h"),
-                "tippa_b": tips.get("tippa_b"),
-                "poeng": tips.get("poeng", 0),
-            }
-            if tips.get("eksakt"):
-                eksakt.append(info)
-            elif tips.get("riktig_utfall"):
-                riktig.append(info)
-            else:
-                bom.append(info)
+            tips_id = tips.get("kamp_id")
+            if id_map.get(tips_id, tips_id) == canonical:
+                matchende_tips = tips
+                break
+
+        if matchende_tips is None:
+            continue
+
+        info = {
+            "navn": deltaker.get("navn", ""),
+            "tippa_h": matchende_tips.get("tippa_h"),
+            "tippa_b": matchende_tips.get("tippa_b"),
+            "poeng": matchende_tips.get("poeng", 0),
+        }
+        if matchende_tips.get("eksakt"):
+            eksakt.append(info)
+        elif matchende_tips.get("riktig_utfall"):
+            riktig.append(info)
+        else:
+            bom.append(info)
+
     return {"eksakt": eksakt, "riktig": riktig, "bom": bom}
 
 
 def bygg_stilling(vm_data, alle_kamp_ids):
+    """Summer dagens poeng én gang per canonical kamp, også når tips bruker alias-ID."""
     stilling = []
+    id_map = bygg_kamp_id_map(vm_data)
+    canonical_ids = {id_map.get(kid, kid) for kid in alle_kamp_ids}
+
     for d in vm_data.get("stilling", []):
         dag_poeng = 0
+        telt = set()
         for t in d.get("tippinger", []):
-            if t.get("kamp_id") in alle_kamp_ids:
+            tips_id = t.get("kamp_id")
+            canonical = id_map.get(tips_id, tips_id)
+            if canonical in canonical_ids and canonical not in telt:
                 dag_poeng += int(t.get("poeng", 0) or 0)
+                telt.add(canonical)
+
         stilling.append({
             "navn": d.get("navn", ""),
             "plass": d.get("plass"),
