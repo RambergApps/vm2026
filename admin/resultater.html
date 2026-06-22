@@ -7,64 +7,139 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#070b16;--surface:#101827;--card:#172238;--card2:#1c2a43;--border:#2b3a59;--text:#eef4ff;--muted:#8190ad;--accent:#00e676;--gold:#ffd600;--red:#ff5a5a;--blue:#67b7ff}
-body{font-family:Barlow,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-.hero{padding:32px 20px;background:linear-gradient(135deg,#08101f,#0e2140 55%,#091525);border-bottom:1px solid var(--border);text-align:center}.badge{display:inline-block;background:rgba(255,214,0,.12);border:1px solid rgba(255,214,0,.32);color:var(--gold);font-family:'Barlow Condensed';font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:11px;padding:5px 12px;border-radius:999px;margin-bottom:12px}h1{font-family:'Barlow Condensed';font-size:clamp(34px,7vw,64px);line-height:.95;text-transform:uppercase;font-weight:900}h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:14px;margin-top:10px}.wrap{max-width:1240px;margin:0 auto;padding:24px 14px 80px}.grid{display:grid;grid-template-columns:330px 1fr;gap:16px}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}.card h2{font-family:'Barlow Condensed';font-size:22px;text-transform:uppercase;margin-bottom:12px}.card h3{font-family:'Barlow Condensed';font-size:16px;text-transform:uppercase;color:var(--muted);letter-spacing:.08em;margin:18px 0 8px}.field{margin-bottom:12px}label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;margin-bottom:5px}input,select,textarea{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:7px;color:var(--text);font-family:Barlow,sans-serif;font-size:14px;padding:10px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent)}input[type=checkbox]{width:auto}textarea{min-height:100px;resize:vertical}.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.btn{border:0;border-radius:7px;padding:10px 14px;font-family:'Barlow Condensed';font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.primary{background:var(--accent);color:#00140a}.secondary{background:transparent;color:var(--text);border:1.5px solid var(--border)}.danger{background:var(--red);color:#fff}.warning{background:var(--gold);color:#111}.status{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.4}.ok{color:var(--accent)}.err{color:var(--red)}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.tab{background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;cursor:pointer}.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(0,230,118,.08)}.toolbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-bottom:12px}.small{font-size:12px;color:var(--muted);line-height:1.4}.help{font-size:13px;color:var(--muted);line-height:1.45;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:10px;margin-top:10px}code{background:rgba(255,255,255,.06);padding:1px 4px;border-radius:4px}.hidden{display:none!important}.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:10px}.result-table{width:100%;border-collapse:collapse;min-width:760px}.result-table th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;background:var(--surface);padding:9px;border-bottom:1px solid var(--border)}.result-table td{padding:8px;border-bottom:1px solid rgba(43,58,89,.7);vertical-align:middle}.result-table tr:last-child td{border-bottom:0}.date{font-size:12px;color:var(--muted);white-space:nowrap}.teams{font-family:'Barlow Condensed';font-size:17px;font-weight:800;text-transform:uppercase}.score-input{width:58px;text-align:center;font-family:'Barlow Condensed';font-size:18px;font-weight:800;padding:8px}.team-select{min-width:170px}.row-actions{white-space:nowrap}.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);font-size:11px;color:var(--muted);text-transform:uppercase}.tag.green{color:var(--accent);border-color:rgba(0,230,118,.35);background:rgba(0,230,118,.08)}.tag.yellow{color:var(--gold);border-color:rgba(255,214,0,.35);background:rgba(255,214,0,.08)}.tag.blue{color:var(--blue);border-color:rgba(103,183,255,.35);background:rgba(103,183,255,.08)}.list{display:grid;gap:8px}.match{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px}.match-head{display:flex;justify-content:space-between;gap:12px}.score{font-family:'Barlow Condensed';font-size:24px;font-weight:900;color:var(--gold);white-space:nowrap}.meta{font-size:12px;color:var(--muted);margin-top:3px}.bulk-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.summary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 12px}
-.runde-status-grid{display:grid;gap:8px;margin-top:8px}
-.runde-rad{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.runde-rad.aapen{border-color:rgba(0,230,118,.4)}
-.runde-rad.venter{border-color:rgba(43,58,89,.7);opacity:.7}
-.runde-navn{font-family:'Barlow Condensed';font-weight:800;font-size:15px;text-transform:uppercase;min-width:110px}
-.runde-aapen{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}
-.runde-aapen.ja{background:rgba(0,230,118,.15);color:var(--accent);border:1px solid rgba(0,230,118,.3)}
-.runde-aapen.nei{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border)}
-.runde-lag{font-size:12px;color:var(--muted);flex:1}
-.runde-mangler{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;width:100%}
-.lag-chip{font-size:11px;padding:2px 7px;border-radius:4px;background:rgba(255,90,90,.1);border:1px solid rgba(255,90,90,.3);color:var(--red)}
-.lag-chip.ok{background:rgba(0,230,118,.08);border-color:rgba(0,230,118,.25);color:var(--accent)}@media(max-width:900px){.grid{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.bulk-row{grid-template-columns:1fr}}
+:root{
+  --bg:#070b16;--surface:#101827;--card:#172238;--card2:#1c2a43;
+  --border:#2b3a59;--text:#eef4ff;--muted:#8190ad;
+  --accent:#00e676;--gold:#ffd600;--red:#ff5a5a;--blue:#67b7ff
+}
+body{font-family:Barlow,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(103,183,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(103,183,255,.025) 1px,transparent 1px);background-size:48px 48px}
+.hero{position:relative;padding:34px 20px;background:linear-gradient(135deg,#08101f,#0e2140 55%,#091525);border-bottom:1px solid var(--border);text-align:center}
+.badge{display:inline-block;background:rgba(255,214,0,.12);border:1px solid rgba(255,214,0,.32);color:var(--gold);font-family:'Barlow Condensed';font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:11px;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+h1{font-family:'Barlow Condensed';font-size:clamp(34px,7vw,64px);line-height:.95;text-transform:uppercase;font-weight:900}
+h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:14px;margin-top:10px}
+.wrap{position:relative;max-width:1240px;margin:0 auto;padding:24px 14px 80px;display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:18px;box-shadow:0 12px 36px rgba(0,0,0,.10)}
+.card h2{font-family:'Barlow Condensed';font-size:22px;text-transform:uppercase;margin:0}
+.card h3{font-family:'Barlow Condensed';font-size:16px;text-transform:uppercase;color:var(--muted);letter-spacing:.08em;margin:18px 0 8px}
+.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.section-head p{font-size:12px;color:var(--muted);line-height:1.45;margin-top:4px;max-width:700px}
+.control-card{padding:18px}
+.control-grid{display:grid;grid-template-columns:minmax(220px,1.2fr) minmax(150px,.7fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}
+.control-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;padding-bottom:12px}
+.field{margin-bottom:12px}.control-grid .field{margin-bottom:0}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;margin-bottom:5px}
+input,select,textarea{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:7px;color:var(--text);font-family:Barlow,sans-serif;font-size:14px;padding:10px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}input[type=checkbox]{width:auto}textarea{min-height:116px;resize:vertical}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.btn{border:0;border-radius:7px;padding:10px 14px;font-family:'Barlow Condensed';font-weight:800;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.primary{background:var(--accent);color:#00140a}.secondary{background:transparent;color:var(--text);border:1.5px solid var(--border)}.secondary:hover{border-color:#526482}.danger{background:rgba(255,90,90,.10);border:1px solid rgba(255,90,90,.35);color:var(--red)}.warning{background:var(--gold);color:#111}
+.status{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.4}.ok{color:var(--accent)}.err{color:var(--red)}
+.small{font-size:12px;color:var(--muted);line-height:1.4}.help{font-size:13px;color:var(--muted);line-height:1.45;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:10px;margin-top:12px}code{background:rgba(255,255,255,.06);padding:1px 4px;border-radius:4px}.hidden{display:none!important}
+.round-status-card{overflow:hidden}.runde-status-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:10px}
+.runde-rad{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.runde-rad.aapen{border-color:rgba(0,230,118,.4);box-shadow:inset 0 0 0 1px rgba(0,230,118,.04)}.runde-rad.venter{border-color:rgba(43,58,89,.82)}
+.runde-navn{font-family:'Barlow Condensed';font-weight:900;font-size:15px;text-transform:uppercase;min-width:0}.runde-aapen{font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px}.runde-aapen.ja{background:rgba(0,230,118,.15);color:var(--accent);border:1px solid rgba(0,230,118,.3)}.runde-aapen.nei{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border)}.runde-lag{font-size:12px;color:var(--muted)}
+.runde-mangler{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px;width:100%;max-height:82px;overflow:auto}.lag-chip{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(255,90,90,.1);border:1px solid rgba(255,90,90,.3);color:var(--red)}.lag-chip.ok{background:rgba(0,230,118,.08);border-color:rgba(0,230,118,.25);color:var(--accent)}
+.results-card{padding:0;overflow:hidden}.results-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:18px 18px 12px}.summary{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) minmax(220px,.7fr) auto;gap:10px;align-items:end;padding:0 18px 14px}.toolbar .field{margin-bottom:0}.toolbar .btns{margin:0;justify-content:flex-end}
+.table-wrap{overflow:auto;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.result-table{width:100%;border-collapse:collapse;min-width:900px}.result-table th{position:sticky;top:0;z-index:2;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;background:var(--surface);padding:10px;border-bottom:1px solid var(--border)}.result-table td{padding:9px 10px;border-bottom:1px solid rgba(43,58,89,.7);vertical-align:middle}.result-table tbody tr:hover{background:rgba(255,255,255,.018)}.result-table tr:last-child td{border-bottom:0}
+.date{font-size:12px;color:var(--muted);white-space:nowrap}.teams{font-family:'Barlow Condensed';font-size:17px;font-weight:800;text-transform:uppercase}.score-input{width:58px;text-align:center;font-family:'Barlow Condensed';font-size:18px;font-weight:800;padding:8px}.team-select{min-width:170px}.row-actions{white-space:nowrap}
+.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);font-size:11px;color:var(--muted);text-transform:uppercase}.tag.green{color:var(--accent);border-color:rgba(0,230,118,.35);background:rgba(0,230,118,.08)}.tag.yellow{color:var(--gold);border-color:rgba(255,214,0,.35);background:rgba(255,214,0,.08)}.tag.blue{color:var(--blue);border-color:rgba(103,183,255,.35);background:rgba(103,183,255,.08)}
+.results-bottom{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 18px}.results-bottom .small{max-width:700px}.results-bottom .btns{margin:0}
+.followup-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.list{display:grid;gap:8px;margin-top:12px}.match{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px}.match-head{display:flex;justify-content:space-between;gap:12px}.score{font-family:'Barlow Condensed';font-size:24px;font-weight:900;color:var(--gold);white-space:nowrap}.meta{font-size:12px;color:var(--muted);margin-top:3px}
+.advanced-card{padding:0;overflow:hidden}.advanced-card summary{cursor:pointer;list-style:none;padding:17px 18px;font-family:'Barlow Condensed';font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}.advanced-card summary::-webkit-details-marker{display:none}.advanced-card summary:after{content:'+';font-size:24px;color:var(--gold)}.advanced-card[open] summary:after{content:'–'}.advanced-body{border-top:1px solid var(--border);padding:16px 18px}.bulk-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}.bulk-row .btns{margin:0}
+@media(max-width:1050px){.control-grid{grid-template-columns:1fr 1fr}.control-actions{grid-column:1/-1;justify-content:flex-start;padding-bottom:0}.runde-status-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.wrap{padding-left:10px;padding-right:10px}.section-head,.results-head,.results-bottom{display:block}.summary{justify-content:flex-start;margin-top:10px}.control-grid,.toolbar,.followup-grid,.bulk-row{grid-template-columns:1fr}.toolbar .btns{justify-content:flex-start}.results-bottom .btns{margin-top:12px}.runde-status-grid{grid-template-columns:1fr 1fr}.card{padding:14px}.results-card{padding:0}.results-head{padding:15px 14px 10px}.toolbar{padding:0 14px 12px}.results-bottom{padding:13px 14px}}
+@media(max-width:480px){.runde-status-grid{grid-template-columns:1fr}.control-actions .btn{flex:1}.hero{padding:26px 14px}.result-table{min-width:820px}}
 </style>
 </head>
 <body>
-<div class="hero"><div class="badge">Admin · batch fallback</div><h1>VM 2026 <span>resultater</span></h1><p>OpenFootball er master. Her fyller du raskt inn manuelle fallback-resultater per gruppe eller utslagsrunde.</p></div>
-<div class="wrap">
-  <div class="grid">
-    <div>
-      <div class="card">
-        <h2>Kontroll</h2>
-        <div class="field"><label>Admin-kode</label><input id="adminToken" type="password" placeholder="ADMIN_TOKEN fra Vercel" oninput="localStorage.setItem('vm2026_admin_token', this.value)"></div>
-        <div class="field"><label>Modus</label><select id="modus" onchange="modusChanged()"><option value="gruppe">Gruppespill</option><option value="utslag">Utslagsrunder</option></select></div>
-        <div class="field" id="gruppeVelger"><label>Gruppe</label><select id="gruppeSelect" onchange="renderBatch()"></select></div>
-        <div class="field hidden" id="rundeVelger"><label>Utslagsrunde</label><select id="rundeSelect" onchange="renderBatch()"><option value="r32">Runde av 32</option><option value="r16">Runde av 16</option><option value="qf">Kvartfinale</option><option value="sf">Semifinale</option><option value="final">Finale</option></select></div>
-        <div class="btns"><button class="btn secondary" onclick="loadAll()">Last på nytt</button><button class="btn primary" onclick="saveChecked()">Lagre valgte</button><button class="btn danger" onclick="deleteChecked()">Slett valgte fallback</button></div>
-        <div class="btns" style="margin-top:8px"><button class="btn secondary" onclick="triggByggR32()" title="Henter r32-oppsett fra football-data.org og lagrer til manuelle-kamper.json">⚡ Bygg r32 fra fd.org</button></div>
-        <div id="formStatus" class="status"></div>
-        <div class="help">Gruppespill: kampene kommer fra samme OpenFootball-oppsett som tippe-siden bruker. Utslag: kampene kommer fra <code>status.json</code>, og lag kan velges fra kontrollert lagliste.</div>
+<div class="hero">
+  <div class="badge">Admin · batch fallback</div>
+  <h1>VM 2026 <span>resultater</span></h1>
+  <p>Kontroller kampstatus, registrer fallback-resultater og håndter avvik fra én samlet arbeidsflate.</p>
+</div>
+
+<main class="wrap">
+  <section class="card control-card">
+    <div class="section-head">
+      <div>
+        <h2>Kontrollpanel</h2>
+        <p>Velg område og runde først. Deretter arbeider du i den fullbrede resultattabellen under.</p>
       </div>
-      <div class="card" style="margin-top:16px">
-        <h2>Hurtig-import resultater</h2>
-        <div class="small">Valgfritt. Lim inn linjer som <code>kamp_id,hjemme,borte</code> eller <code>hjemmelag,bortelag,dato,hjemme,borte</code>. Brukes mest hvis du kopierer fra et eksternt ark.</div>
+    </div>
+    <div class="control-grid">
+      <div class="field"><label>Admin-kode</label><input id="adminToken" type="password" placeholder="ADMIN_TOKEN fra Vercel" oninput="localStorage.setItem('vm2026_admin_token', this.value)"></div>
+      <div class="field"><label>Modus</label><select id="modus" onchange="modusChanged()"><option value="gruppe">Gruppespill</option><option value="utslag">Utslagsrunder</option></select></div>
+      <div class="field" id="gruppeVelger"><label>Gruppe</label><select id="gruppeSelect" onchange="renderBatch()"></select></div>
+      <div class="field hidden" id="rundeVelger"><label>Utslagsrunde</label><select id="rundeSelect" onchange="renderBatch()"><option value="r32">Runde av 32</option><option value="r16">Runde av 16</option><option value="qf">Kvartfinale</option><option value="sf">Semifinale</option><option value="final">Finale</option></select></div>
+      <div class="control-actions">
+        <button class="btn secondary" onclick="loadAll()">Last på nytt</button>
+        <button class="btn primary" onclick="saveChecked()">Lagre valgte</button>
+        <button class="btn danger" onclick="deleteChecked()">Slett fallback</button>
+        <button class="btn secondary" onclick="triggByggR32()" title="Henter r32-oppsett fra football-data.org og lagrer til manuelle-kamper.json">⚡ Bygg R32</button>
+      </div>
+    </div>
+    <div id="formStatus" class="status"></div>
+    <div class="help">Gruppespill hentes fra samme OpenFootball-oppsett som tippe-siden. Utslagskamper hentes fra <code>status.json</code>, og lag kan velges fra den kontrollerte laglisten.</div>
+  </section>
+
+  <section class="card round-status-card">
+    <div class="section-head">
+      <div>
+        <h2>Utslagsrunde-status</h2>
+        <p>Rask oversikt over hvilke runder som er åpnet, og hvor mange kampoppgjør som har kjente lag.</p>
+      </div>
+    </div>
+    <div id="rundeStatusGrid" class="runde-status-grid"></div>
+  </section>
+
+  <section class="card results-card">
+    <div class="results-head">
+      <div>
+        <h2 id="batchTitle">Resultater</h2>
+        <div class="small">Velg bare radene som skal lagres eller slettes.</div>
+      </div>
+      <div class="summary" id="summary"></div>
+    </div>
+    <div class="toolbar">
+      <div class="field"><label>Søk</label><input id="search" placeholder="Søk lag / kamp-id" oninput="renderBatch()"></div>
+      <div class="field"><label>Vis</label><select id="visFilter" onchange="renderBatch()"><option value="alle">Alle kamper</option><option value="mangler">Mangler resultat</option><option value="regulartime">Mangler 90-minuttersresultat</option><option value="manuell">Har manuell fallback</option><option value="utfylt">Utfylt i skjema</option></select></div>
+      <div class="btns"><button class="btn secondary" onclick="checkAllVisible(true)">Velg alle</button><button class="btn secondary" onclick="checkAllVisible(false)">Fjern valg</button></div>
+    </div>
+    <div id="batchTable"></div>
+    <div class="results-bottom">
+      <div class="small">Utslagsresultater registreres etter de første 90 minuttene. Feltet «Går videre» brukes bare til å fylle neste runde.</div>
+      <div class="btns"><button class="btn primary" onclick="saveChecked()">Lagre valgte</button></div>
+    </div>
+  </section>
+
+  <section class="followup-grid">
+    <div class="card">
+      <h2>Krever oppfølging</h2>
+      <div class="small">Manglende resultater og varsler som bør kontrolleres.</div>
+      <div id="missingList" class="list"></div>
+    </div>
+    <div class="card">
+      <h2>Aktive manuelle fallbacks</h2>
+      <div class="small">Resultater som allerede overstyrer den automatiske kilden.</div>
+      <div id="manualList" class="list"></div>
+    </div>
+  </section>
+
+  <details class="card advanced-card">
+    <summary>Avanserte verktøy · hurtigimport</summary>
+    <div class="advanced-body">
+      <div class="small">Lim inn linjer som <code>kamp_id,hjemme,borte</code> eller <code>hjemmelag,bortelag,dato,hjemme,borte</code>. Verdiene legges inn i den synlige tabellen og må deretter lagres.</div>
+      <div class="bulk-row" style="margin-top:12px">
         <textarea id="bulk" placeholder="Mexico_South_Africa_2026_06_11,2,1"></textarea>
         <div class="btns"><button class="btn warning" onclick="bulkScores()">Importer til tabell</button></div>
-        <div id="bulkStatus" class="status"></div>
       </div>
+      <div id="bulkStatus" class="status"></div>
     </div>
+  </details>
+</main>
 
-    <div class="card" style="grid-column:1/-1">
-      <h2>Utslagsrunde-status</h2>
-      <div class="small" style="margin-bottom:8px">Viser om runden er åpnet og om alle lag er kjent i <code>status.json</code>.</div>
-      <div id="rundeStatusGrid" class="runde-status-grid"></div>
-    </div>
-
-    <div class="card">
-      <h2 id="batchTitle">Resultater</h2>
-      <div class="summary" id="summary"></div>
-      <div class="toolbar"><div class="field"><label>Søk</label><input id="search" placeholder="Søk lag / kamp-id" oninput="renderBatch()"></div><div class="field"><label>Vis</label><select id="visFilter" onchange="renderBatch()"><option value="alle">Alle kamper</option><option value="mangler">Mangler resultat</option><option value="manuell">Har manuell fallback</option><option value="utfylt">Utfylt i skjema</option></select></div><div class="btns"><button class="btn secondary" onclick="checkAllVisible(true)">Velg alle</button><button class="btn secondary" onclick="checkAllVisible(false)">Fjern valg</button></div></div>
-      <div id="batchTable"></div>
-      <h3>Mangler resultat</h3><div id="missingList" class="list"></div>
-      <h3>Manuelle fallback-kamper</h3><div id="manualList" class="list"></div>
-    </div>
-  </div>
-</div>
 <script>
 const API_URL='https://vm2026-submit-api.vercel.app/api/submit-resultat';
 const GITHUB_OWNER='RambergApps';
@@ -130,7 +205,7 @@ function renderRundeStatus(){
     const antallKjente=kjente.length;
     const cls=aapen?'aapen':'venter';
     const aapenTxt=aapen?'<span class="runde-aapen ja">✓ Åpen</span>':'<span class="runde-aapen nei">Ikke åpnet</span>';
-    const lagTxt=`<span class="runde-lag">${antallKjente} / ${forventet} lag kjent</span>`;
+    const lagTxt=`<span class="runde-lag">${antallKjente} / ${forventet} kamper klare</span>`;
     const manglerChips=manglerLag.map(k=>{
       const h=er_kjent_lag(k.hjemme)?`<span class="lag-chip ok">${safe(k.hjemme)}</span>`:`<span class="lag-chip">${safe(k.hjemme||'?')}</span>`;
       const b=er_kjent_lag(k.borte)?`<span class="lag-chip ok">${safe(k.borte)}</span>`:`<span class="lag-chip">${safe(k.borte||'?')}</span>`;
@@ -164,6 +239,7 @@ function modusChanged(){
   renderBatch();
 }
 function manualMap(){return new Map(manuelle.map(k=>[k.kamp_id,k]))}
+function missingMap(){return new Map(mangler.map(k=>[k.kamp_id,k]))}
 function missingSet(){return new Set(mangler.map(k=>k.kamp_id))}
 function matchNoForRound(runde,index,k){
   if(k&&k.match_no)return Number(k.match_no);
@@ -191,9 +267,12 @@ function getBaseRows(){
 }
 function enrichRows(rows){
   const mm=manualMap();
+  const miss=missingMap();
   return rows.map(base=>{
     const man=mm.get(base.kamp_id);
-    return man?{...base,...man,base_kamp_id:base.kamp_id,harManuell:true}:{...base,base_kamp_id:base.kamp_id,harManuell:false};
+    const warning=miss.get(base.kamp_id);
+    const merged=man?{...base,...man,base_kamp_id:base.kamp_id,harManuell:true}:{...base,base_kamp_id:base.kamp_id,harManuell:false};
+    return warning?{...merged,varsel:warning,varselType:warning.type||warning.status||'mangler_resultat'}:merged;
   });
 }
 function rowMatchesFilter(k){
@@ -201,6 +280,7 @@ function rowMatchesFilter(k){
   if(q && ![k.kamp_id,k.hjemmelag,k.bortelag,k.gruppe,k.runde].join(' ').toLowerCase().includes(q))return false;
   const f=val('visFilter');
   if(f==='mangler')return missingSet().has(k.kamp_id)||!k.ferdig;
+  if(f==='regulartime')return k.varselType==='mangler_regulartime';
   if(f==='manuell')return !!k.harManuell;
   if(f==='utfylt')return k.hjemme!=null&&k.borte!=null;
   return true;
@@ -247,9 +327,11 @@ function renderBatch(){
     const awayForSelect=isGroup?k.bortelag:(isPlaceholder(k.bortelag)?'':k.bortelag);
     const teamCell=isGroup?`<div class="teams">${safe(k.hjemmelag)} – ${safe(k.bortelag)}</div>`:`<div style="display:flex;gap:8px;align-items:center"><select class="team-select" id="hjemmelag_${i}" onchange="updateAdvOptions(${i});markRow(${i})">${teamOptions(homeForSelect)}</select><span>–</span><select class="team-select" id="bortelag_${i}" onchange="updateAdvOptions(${i});markRow(${i})">${teamOptions(awayForSelect)}</select></div><div class="small">Slot: ${safe(k.slot_hjemme||'')} – ${safe(k.slot_borte||'')} · Kamp ${safe(k.match_no||'')}</div>`;
     const advCell=isGroup?'–':`<select id="adv_${i}" onchange="markRow(${i})">${avansererOptions(homeForSelect,awayForSelect,k.avanserer||'')}</select><div class="small">Brukes kun til å fylle neste runde, ikke poeng.</div>`;
-    return `<tr data-i="${i}"><td><input type="checkbox" class="row-check" id="chk_${i}" ${checked}></td><td class="date">${norskDato(k.dato)}<div class="small">${safe(k.runde)} ${k.gruppe?`· ${safe(k.gruppe)}`:''}</div></td><td>${teamCell}<div class="small">${safe(k.kamp_id)}</div></td><td><input class="score-input" id="h_${i}" type="number" min="0" value="${hVal}" oninput="scoreChanged(${i})"></td><td><input class="score-input" id="b_${i}" type="number" min="0" value="${bVal}" oninput="scoreChanged(${i})"></td><td><input type="checkbox" id="f_${i}" ${k.ferdig?'checked':''} onchange="markRow(${i})"></td><td>${advCell}</td><td>${k.harManuell?'<span class="tag green">manuell</span>':''}${missingSet().has(k.kamp_id)?'<span class="tag yellow">mangler</span>':''}</td></tr>`;
+    return `<tr data-i="${i}"><td><input type="checkbox" class="row-check" id="chk_${i}" ${checked}></td><td class="date">${norskDato(k.dato)}<div class="small">${safe(k.runde)} ${k.gruppe?`· ${safe(k.gruppe)}`:''}</div></td><td>${teamCell}<div class="small">${safe(k.kamp_id)}</div></td><td><input class="score-input" id="h_${i}" type="number" min="0" value="${hVal}" oninput="scoreChanged(${i})"></td><td><input class="score-input" id="b_${i}" type="number" min="0" value="${bVal}" oninput="scoreChanged(${i})"></td><td><input type="checkbox" id="f_${i}" ${k.ferdig?'checked':''} onchange="markRow(${i})"></td><td>${advCell}</td><td>${k.harManuell?'<span class="tag green">manuell</span>':''}${k.varselType==='mangler_regulartime'?'<span class="tag yellow">mangler 90 min</span>':missingSet().has(k.kamp_id)?'<span class="tag yellow">mangler</span>':''}${k.varsel?.fulltime_hjemme!=null&&k.varsel?.fulltime_borte!=null?`<div class="small">API slutt: ${k.varsel.fulltime_hjemme}–${k.varsel.fulltime_borte}${k.varsel.duration?` · ${safe(k.varsel.duration)}`:''}</div>`:''}</td></tr>`;
   }).join('');
-  el('batchTable').innerHTML=`<div class="table-wrap"><table class="result-table"><thead><tr><th>Velg</th><th>Dato</th><th>Kamp</th><th>H</th><th>B</th><th>Ferdig</th><th>Går videre</th><th>Status</th></tr></thead><tbody>${body}</tbody></table></div>`;
+  const scoreHomeLabel=isGroup?'H':'90 min H';
+  const scoreAwayLabel=isGroup?'B':'90 min B';
+  el('batchTable').innerHTML=`<div class="table-wrap"><table class="result-table"><thead><tr><th>Velg</th><th>Dato</th><th>Kamp</th><th>${scoreHomeLabel}</th><th>${scoreAwayLabel}</th><th>Ferdig</th><th>Går videre</th><th>Status</th></tr></thead><tbody>${body}</tbody></table></div>`;
 }
 function markRow(i){const c=el(`chk_${i}`);if(c)c.checked=true}
 function scoreChanged(i){markRow(i);const h=scoreFrom(`h_${i}`),b=scoreFrom(`b_${i}`);if(h!==null&&b!==null)el(`f_${i}`).checked=true;autoSetAvanserer(i)}
@@ -291,7 +373,14 @@ function bulkScores(){
   }
   setStatus('bulkStatus',`${count} resultat(er) lagt inn i tabellen. Husk å trykke Lagre valgte.`, count?'ok':'err');
 }
-function card(k,source){const ferdig=k.ferdig&&k.hjemme!==null&&k.borte!==null;return `<div class="match"><div class="match-head"><div><div class="teams">${safe(k.hjemmelag||'?')} – ${safe(k.bortelag||'?')}</div><div class="meta">${safe(k.dato||'')} · ${safe(k.runde||'gruppe')} ${k.gruppe?`· Gruppe ${safe(k.gruppe)}`:''}</div><div><span class="tag ${source==='missing'?'yellow':'green'}">${source==='missing'?'mangler':'manuell'}</span>${ferdig?'<span class="tag green">ferdig</span>':'<span class="tag yellow">uten resultat</span>'}</div><div class="small">${safe(k.kamp_id||'')}${k.avanserer?` · Går videre: ${safe(k.avanserer)}`:''}</div></div><div class="score">${ferdig?`${k.hjemme}–${k.borte}`:'–'}</div></div></div>`}
+function card(k,source){
+  const ferdig=k.ferdig&&k.hjemme!==null&&k.borte!==null;
+  const er90=(k.type||k.status)==='mangler_regulartime';
+  const apiScore=k.fulltime_hjemme!=null&&k.fulltime_borte!=null?`${k.fulltime_hjemme}–${k.fulltime_borte}`:'–';
+  const label=source==='missing'?(er90?'mangler 90 min':'mangler'):'manuell';
+  const info=er90?`<div class="small" style="color:var(--gold);margin-top:5px">${safe(k.melding||'Resultatet etter 90 minutter mangler.')} API sluttresultat: ${safe(apiScore)}${k.duration?` · ${safe(k.duration)}`:''}</div>`:'';
+  return `<div class="match"><div class="match-head"><div><div class="teams">${safe(k.hjemmelag||'?')} – ${safe(k.bortelag||'?')}</div><div class="meta">${safe(k.dato||'')} · ${safe(k.runde||'gruppe')} ${k.gruppe?`· Gruppe ${safe(k.gruppe)}`:''}</div><div><span class="tag ${source==='missing'?'yellow':'green'}">${label}</span>${ferdig?'<span class="tag green">ferdig</span>':'<span class="tag yellow">uten 90-min-resultat</span>'}</div><div class="small">${safe(k.kamp_id||'')}${k.avanserer?` · Går videre: ${safe(k.avanserer)}`:''}</div>${info}</div><div class="score">${ferdig?`${k.hjemme}–${k.borte}`:er90?apiScore:'–'}</div></div></div>`
+}
 function renderSideLists(){
   el('missingList').innerHTML=(mangler.slice(0,8).map(k=>card(k,'missing')).join('')||'<div class="small">Ingen manglende resultater.</div>');
   el('manualList').innerHTML=(manuelle.slice(0,8).map(k=>card(k,'manual')).join('')||'<div class="small">Ingen manuelle kamper/resultater.</div>');
