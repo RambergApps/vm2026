@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-22T19:31:03Z
+// Sist oppdatert: 2026-06-22T19:56:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-22T19:31:03Z",
+  "sist_oppdatert": "2026-06-22T19:56:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1857,9 +1857,9 @@ const VM_DATA = {
       "golden_boot": {
         "status": "forelopig",
         "spiller": "Lionel Messi",
-        "maal": 4,
+        "maal": 5,
         "assists": 0,
-        "minutter": 149,
+        "minutter": 187,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -1912,9 +1912,9 @@ const VM_DATA = {
     {
       "rank": 1,
       "spiller": "Lionel Messi",
-      "maal": 4,
+      "maal": 5,
       "assists": 0,
-      "minutter": 149
+      "minutter": 187
     },
     {
       "rank": 2,
@@ -2247,17 +2247,17 @@ const VM_DATA = {
     },
     {
       "rank": 49,
-      "spiller": "Marko Arnautovic",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 57
-    },
-    {
-      "rank": 50,
       "spiller": "Oh Hyeongyu",
       "maal": 1,
       "assists": 0,
       "minutter": 67
+    },
+    {
+      "rank": 50,
+      "spiller": "Petar Musa",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 71
     }
   ],
   "stilling": [
