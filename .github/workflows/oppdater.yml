@@ -49,6 +49,9 @@ jobs:
           GITHUB_ACTIONS: 'true'
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
 
+      - name: Generer FIFA-tabeller og komplett utslagsoppsett
+        run: python scripts/generer-tabell.py
+
       - name: Generer kampreferat
         run: python scripts/generer-historikk.py
         env:
