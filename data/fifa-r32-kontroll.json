@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-22T07:39:46Z",
+  "generert": "2026-06-22T08:41:27Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -10,7 +10,7 @@
       "count": 500,
       "language": "en"
     },
-    "fifa_jina": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+    "fifa_jina": null,
     "football_data": "https://api.football-data.org/v4/competitions/WC/matches"
   },
   "kamp_id_regel": "rens(hjemmelag)_rens(bortelag)_rens(football-data utcDate[:10])",
@@ -18,7 +18,7 @@
     "forventet_antall_r32": 16,
     "fifa_api_r32_funnet": 16,
     "fifa_api_match_no_mangler": [],
-    "fifa_jina_r32_funnet": 8,
+    "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
     "matched": 0,
@@ -32,56 +32,7 @@
   "fifa_api_merknader": [],
   "jina_kontroll": {
     "feil": "",
-    "sammenligning": [
-      {
-        "match_no": 74,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 77,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 79,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 80,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 81,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 82,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 85,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      },
-      {
-        "match_no": 87,
-        "event_id_samsvar": true,
-        "dato_samsvar": true,
-        "tid_samsvar": true
-      }
-    ]
+    "sammenligning": []
   },
   "kamper": [
     {
