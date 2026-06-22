@@ -1,33 +1,21 @@
 #!/usr/bin/env python3
 """
-Kontrollerer FIFAs R32-brakett mot football-data.org uten å endre produksjonsdata.
+Kontrollerer FIFA sin R32-brakett mot football-data.org uten å endre produksjonsdata.
 
-Formål
-------
-1. Hent R32-plasseringene fra FIFA via Jina Reader.
-2. Hent R32-kampene fra football-data.org.
-3. Match kampene forsiktig.
-4. Lag kamp-ID med nøyaktig samme regel som dagens bygg-r32.yml:
-      rens(hjemmelag) + "_" + rens(bortelag) + "_" + rens(utcDate[:10])
-5. Skriv kun data/fifa-r32-kontroll.json.
+Hovedprinsipp
+-------------
+- FIFA sitt kalenderendepunkt brukes som primærkilde for kampnummer M73-M88,
+  FIFA event-ID, plassholdere og avspark.
+- Jina-uttrekket brukes bare som tilleggskontroll. Det er ikke komplett nok til å
+  være primærkilde for hele R32.
+- football-data.org brukes for eksisterende fd_match_id, UTC-avspark og den
+  kamp-ID-regelen som dagens bygg-r32-flyt bruker.
+- Endelig kamp-ID godkjennes først når begge faktiske lag er kjent.
 
-Scriptet endrer IKKE:
-- data/manuelle-kamper.json
-- data/status.json
-- data/data.js
-- tippinger eller HTML-filer
+Scriptet skriver kun:
+    data/fifa-r32-kontroll.json
 
-Normal bruk i repo:
-    python scripts/kontroller-fifa-r32.py
-
-Miljøvariabel:
-    FOOTBALL_DATA_TOKEN  Påkrevd ved live-kjøring.
-
-Lokal test med lagrede svar:
-    python scripts/kontroller-fifa-r32.py \
-      --jina-file fifa-standings-jina.txt \
-      --football-data-file football-data.json \
-      --output fifa-r32-kontroll.json
+Det endrer ikke manuelle-kamper.json, status.json, data.js, tippinger eller HTML.
 """
 
 from __future__ import annotations
@@ -42,7 +30,7 @@ import unicodedata
 from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 import requests
 
@@ -54,6 +42,13 @@ DEFAULT_OUTPUT = DATA_DIR / "fifa-r32-kontroll.json"
 MANUELLE_KAMPER_JSON = DATA_DIR / "manuelle-kamper.json"
 STATUS_JSON = DATA_DIR / "status.json"
 
+FIFA_API_URL = "https://api.fifa.com/api/v3/calendar/matches"
+FIFA_API_PARAMS = {
+    "idCompetition": 17,
+    "idSeason": 285023,
+    "count": 500,
+    "language": "en",
+}
 JINA_URL = (
     "https://r.jina.ai/https://www.fifa.com/en/tournaments/"
     "mens/worldcup/canadamexicousa2026/standings"
@@ -61,10 +56,9 @@ JINA_URL = (
 FOOTBALL_DATA_URL = "https://api.football-data.org/v4/competitions/WC/matches"
 
 R32_MATCH_NUMBERS = set(range(73, 89))
-HTTP_TIMEOUT = 25
+HTTP_TIMEOUT = 30
 
-# Dette er med vilje samme mapping som i nåværende bygg-r32.yml.
-# Den påvirker selve kamp-ID-en og skal derfor ikke utvides i dette kontrollsteget.
+# Samme mapping som dagens bygg-r32-flyt skal bruke ved bygging av kamp-ID.
 FD_NAVN_TIL_OF_FOR_ID = {
     "Bosnia-Herzegovina": "Bosnia & Herzegovina",
     "Cape Verde Islands": "Cape Verde",
@@ -72,8 +66,7 @@ FD_NAVN_TIL_OF_FOR_ID = {
     "Czechia": "Czech Republic",
 }
 
-# Bredere mapping brukes KUN for sammenligning mellom kildene.
-# Den endrer aldri kamp-ID-en som dagens bygg-r32.yml ville ha laget.
+# Bredere mapping brukes kun til kontroll på tvers av kilder.
 SAMMENLIGNINGSNAVN = {
     "Bosnia-Herzegovina": "Bosnia & Herzegovina",
     "Bosnia and Herzegovina": "Bosnia & Herzegovina",
@@ -99,6 +92,7 @@ GENERIC_PLACEHOLDERS = (
     "place",
     "runner",
     "qualified",
+    "best third",
 )
 
 
@@ -107,13 +101,12 @@ def iso_utc_now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def rens(s: Any) -> str:
-    """Identisk prinsipp som dagens bygg-r32.yml."""
-    return "".join(c if c.isalnum() else "_" for c in str(s or ""))
+def rens(value: Any) -> str:
+    """Samme prinsipp som dagens bygg-r32.yml."""
+    return "".join(char if char.isalnum() else "_" for char in str(value or ""))
 
 
 def kamp_id(hjemme: str, borte: str, dato: str) -> str:
-    """Kamp-ID etter nøyaktig samme regel som dagens bygg-r32.yml."""
     return f"{rens(hjemme)}_{rens(borte)}_{rens(dato)}"
 
 
@@ -123,9 +116,33 @@ def sammenligningsnoekkel(navn: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", ascii_navn.lower())
 
 
+def samme_lag(a: str, b: str) -> bool:
+    return bool(a and b and sammenligningsnoekkel(a) == sammenligningsnoekkel(b))
+
+
+def parse_iso_datetime(value: Any) -> datetime | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        # FIFA-feltet er normalt ISO med offset/Z. Dersom offset mangler, antar vi
+        # UTC kun for kontrollrapporten og merker dette på kampen.
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def normaliser_utc(value: Any) -> str:
+    parsed = parse_iso_datetime(value)
+    return parsed.strftime("%Y-%m-%dT%H:%M:%SZ") if parsed else ""
+
+
 def parse_iso_date(value: str) -> date | None:
     try:
-        return datetime.strptime(value[:10], "%Y-%m-%d").date()
+        return datetime.strptime((value or "")[:10], "%Y-%m-%d").date()
     except (TypeError, ValueError):
         return None
 
@@ -152,9 +169,9 @@ def skriv_json_atomisk(path: Path, data: dict[str, Any]) -> None:
     fd, tmp_name = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=path.parent)
     tmp_path = Path(tmp_name)
     try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-            f.write("\n")
+        with os.fdopen(fd, "w", encoding="utf-8") as stream:
+            json.dump(data, stream, ensure_ascii=False, indent=2)
+            stream.write("\n")
         tmp_path.replace(path)
     finally:
         if tmp_path.exists():
@@ -162,26 +179,69 @@ def skriv_json_atomisk(path: Path, data: dict[str, Any]) -> None:
 
 
 def hent_tekst(url: str, headers: dict[str, str] | None = None) -> str:
-    r = requests.get(url, headers=headers or {}, timeout=HTTP_TIMEOUT)
-    r.raise_for_status()
-    r.encoding = r.encoding or "utf-8"
-    return r.text
+    response = requests.get(url, headers=headers or {}, timeout=HTTP_TIMEOUT)
+    response.raise_for_status()
+    response.encoding = response.encoding or "utf-8"
+    return response.text
 
 
-def hent_json(url: str, headers: dict[str, str] | None = None) -> dict[str, Any]:
-    r = requests.get(url, headers=headers or {}, timeout=HTTP_TIMEOUT)
-    r.raise_for_status()
-    data = r.json()
+def hent_json(
+    url: str,
+    *,
+    params: dict[str, Any] | None = None,
+    headers: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    response = requests.get(url, params=params, headers=headers or {}, timeout=HTTP_TIMEOUT)
+    response.raise_for_status()
+    data = response.json()
     if not isinstance(data, dict):
         raise ValueError(f"Forventet JSON-objekt fra {url}")
     return data
 
 
-# ── FIFA/JINA-PARSER ──────────────────────────────────────────────────────────
-MATCH_HEADING_RE = re.compile(r"^\[M(\d+)\]\((https?://[^)]+)\)\s*$")
-IMAGE_RE = re.compile(r"^!\[[^\]]*\]\((https?://[^)]+)\)\s*$")
-DATE_RE = re.compile(r"^(\d{2})/(\d{2})/(\d{4})$")
-TIME_RE = re.compile(r"^\d{2}:\d{2}$")
+def first_nonempty(*values: Any) -> Any:
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, str) and not value.strip():
+            continue
+        return value
+    return None
+
+
+def dict_get(data: Any, *path: str) -> Any:
+    current = data
+    for key in path:
+        if not isinstance(current, dict):
+            return None
+        current = current.get(key)
+    return current
+
+
+def localized_text(value: Any) -> str:
+    """Henter tekst fra FIFA sine lokaliserte tekstobjekter/lister."""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, (int, float)):
+        return str(value)
+    if isinstance(value, list):
+        for item in value:
+            text = localized_text(item)
+            if text:
+                return text
+        return ""
+    if isinstance(value, dict):
+        for key in ("Description", "Text", "Name", "Value", "Label"):
+            text = localized_text(value.get(key))
+            if text:
+                return text
+        for nested in value.values():
+            text = localized_text(nested)
+            if text:
+                return text
+    return ""
 
 
 def er_placeholder(value: str) -> bool:
@@ -194,204 +254,240 @@ def er_placeholder(value: str) -> bool:
     patterns = (
         r"^[123][A-L]$",       # 1A, 2B, 3C
         r"^3[A-L]{2,}$",      # 3ABCDF
-        r"^W\d+$",            # W95
-        r"^L\d+$",            # L95
+        r"^[WL]\d+$",         # W95 / L95
         r"^RU\d+$",           # RU101
+        r"^M\d+$",            # M73
     )
     return any(re.fullmatch(pattern, value, flags=re.I) for pattern in patterns)
 
 
-def fifa_dato_til_iso(value: str) -> str:
-    m = DATE_RE.fullmatch((value or "").strip())
-    if not m:
-        return ""
-    mm, dd, yyyy = m.groups()
-    return f"{yyyy}-{mm}-{dd}"
+def recursive_strings(value: Any) -> Iterable[str]:
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, dict):
+        for nested in value.values():
+            yield from recursive_strings(nested)
+    elif isinstance(value, list):
+        for nested in value:
+            yield from recursive_strings(nested)
 
 
-def rens_blokklinjer(lines: list[str]) -> list[str]:
-    return [line.strip() for line in lines if line.strip()]
+# ── FIFA KALENDER-API ─────────────────────────────────────────────────────────
+def extract_match_number(item: dict[str, Any]) -> int | None:
+    direct_candidates = [
+        item.get("MatchNumber"),
+        item.get("MatchNo"),
+        item.get("MatchNumberDisplay"),
+        item.get("MatchNumberText"),
+        dict_get(item, "Properties", "MatchNumber"),
+        dict_get(item, "Properties", "MatchNo"),
+    ]
+    for candidate in direct_candidates:
+        if isinstance(candidate, int) and candidate > 0:
+            return candidate
+        match = re.search(r"(?:^|\b)M?(\d{1,3})(?:\b|$)", str(candidate or ""), flags=re.I)
+        if match:
+            number = int(match.group(1))
+            if 1 <= number <= 104:
+                return number
+
+    # Robust reserve dersom feltet er flyttet i FIFA-responsen.
+    for text in recursive_strings(item):
+        match = re.fullmatch(r"\s*M(\d{1,3})\s*", text, flags=re.I)
+        if match:
+            number = int(match.group(1))
+            if 1 <= number <= 104:
+                return number
+    return None
 
 
-def parse_fifa_sider(rest_lines: list[str]) -> tuple[dict[str, Any], dict[str, Any], list[str]]:
-    """
-    Tolker de to sidene i én FIFA-kampblokk.
+def extract_fifa_side(item: dict[str, Any], side: str) -> dict[str, Any]:
+    side_obj = item.get(side)
+    side_obj = side_obj if isinstance(side_obj, dict) else {}
+    is_home = side.lower() == "home"
+    letter = "A" if is_home else "B"
 
-    Faktisk lag presenteres vanligvis slik i Jina:
-        Germany
-        ![Image ...](...)
-        GER
-
-    Placeholders presenteres som én linje, for eksempel 1I eller 3ABCDF.
-    """
-    lines = rens_blokklinjer(rest_lines)
-    elements: list[tuple[int, dict[str, Any]]] = []
-    consumed: set[int] = set()
-    warnings: list[str] = []
-
-    # Finn faktiske lag ved å bruke flaggbildet som et sikkert anker.
-    for i, line in enumerate(lines):
-        image_match = IMAGE_RE.fullmatch(line)
-        if not image_match:
-            continue
-
-        prev_i = i - 1
-        while prev_i >= 0 and prev_i in consumed:
-            prev_i -= 1
-        next_i = i + 1
-        while next_i < len(lines) and next_i in consumed:
-            next_i += 1
-
-        if prev_i < 0 or next_i >= len(lines):
-            warnings.append("Ufullstendig FIFA-lagblokk rundt flaggbilde")
-            continue
-
-        navn = lines[prev_i]
-        kode = lines[next_i]
-        if er_placeholder(navn) or not re.fullmatch(r"[A-Z0-9]{3}", kode):
-            warnings.append(f"Kunne ikke tolke faktisk lag rundt flagg: navn='{navn}', kode='{kode}'")
-            continue
-
-        elements.append(
-            (
-                prev_i,
-                {
-                    "verdi": navn,
-                    "fifa_kode": kode,
-                    "flagg_url": image_match.group(1),
-                    "kjent_lag": True,
-                },
-            )
+    team_name = localized_text(
+        first_nonempty(
+            side_obj.get("ShortClubName"),
+            side_obj.get("ClubName"),
+            side_obj.get("TeamName"),
+            side_obj.get("Name"),
+            side_obj.get("ShortName"),
         )
-        consumed.update({prev_i, i, next_i})
-
-    # Ubrukte linjer er normalt placeholders. Rundeetiketter ignoreres.
-    ignored_labels = {"final", "play-off for third place", "third place play-off"}
-    for i, line in enumerate(lines):
-        if i in consumed or IMAGE_RE.fullmatch(line):
-            continue
-        if line.lower() in ignored_labels:
-            continue
-        elements.append(
-            (
-                i,
-                {
-                    "verdi": line,
-                    "fifa_kode": "",
-                    "flagg_url": "",
-                    "kjent_lag": not er_placeholder(line),
-                },
-            )
+    )
+    code = localized_text(
+        first_nonempty(
+            side_obj.get("Abbreviation"),
+            side_obj.get("IdCountry"),
+            side_obj.get("CountryCode"),
         )
+    )
 
-    elements.sort(key=lambda item: item[0])
-    sides = [item[1] for item in elements]
+    placeholder = localized_text(
+        first_nonempty(
+            item.get(f"PlaceHolder{letter}"),
+            item.get(f"Placeholder{letter}"),
+            item.get(f"Team{letter}Placeholder"),
+            dict_get(item, "Properties", f"PlaceHolder{letter}"),
+            dict_get(item, "Properties", f"Placeholder{letter}"),
+            side_obj.get("PlaceHolder"),
+            side_obj.get("Placeholder"),
+        )
+    )
 
-    if len(sides) < 2:
-        warnings.append(f"Fant bare {len(sides)} side(r) i FIFA-blokken")
-        while len(sides) < 2:
-            sides.append({"verdi": "", "fifa_kode": "", "flagg_url": "", "kjent_lag": False})
-    elif len(sides) > 2:
-        warnings.append(f"Fant {len(sides)} mulige sider; bruker de to første")
+    # Enkelte FIFA-svar kan legge placeholderen i ShortClubName.
+    if team_name and er_placeholder(team_name):
+        placeholder = placeholder or team_name
+        team_name = ""
+        code = ""
 
-    return sides[0], sides[1], warnings
+    value = team_name or placeholder
+    known = bool(team_name and not er_placeholder(team_name))
+    return {
+        "verdi": value,
+        "fifa_kode": code if known else "",
+        "kjent_lag": known,
+        "placeholder": "" if known else value,
+    }
 
 
-def parse_fifa_r32(markdown: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    if not markdown or "Knockout bracket" not in markdown:
-        raise ValueError("Jina-svaret inneholder ikke 'Knockout bracket'")
+def extract_fifa_kickoff(item: dict[str, Any]) -> tuple[str, bool]:
+    candidates = [
+        item.get("UtcDate"),
+        item.get("UTCDate"),
+        item.get("Date"),
+        item.get("MatchDate"),
+        item.get("LocalDate"),
+        dict_get(item, "Properties", "UtcDate"),
+        dict_get(item, "Properties", "LocalDate"),
+    ]
+    raw = first_nonempty(*candidates)
+    raw_text = str(raw or "").strip()
+    had_timezone = bool(re.search(r"(?:Z|[+-]\d{2}:?\d{2})$", raw_text))
+    return normaliser_utc(raw_text), had_timezone
 
-    lines = markdown.splitlines()
+
+def parse_fifa_api_r32(data: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    raw_results = first_nonempty(data.get("Results"), data.get("results"), data.get("Matches"), data.get("matches"))
+    if not isinstance(raw_results, list):
+        raise ValueError("FIFA API-svaret mangler en gyldig Results-liste")
+
     parsed: list[dict[str, Any]] = []
-    parser_warnings: list[dict[str, Any]] = []
+    notes: list[dict[str, Any]] = []
 
-    i = 0
-    while i < len(lines):
-        heading = MATCH_HEADING_RE.fullmatch(lines[i].strip())
-        if not heading:
-            i += 1
+    for index, raw_item in enumerate(raw_results):
+        if not isinstance(raw_item, dict):
             continue
-
-        match_no = int(heading.group(1))
-        url = heading.group(2)
-        i += 1
-        block: list[str] = []
-        while i < len(lines) and not MATCH_HEADING_RE.fullmatch(lines[i].strip()):
-            # Ny seksjon avslutter også blokken.
-            if lines[i].strip().startswith("###") or lines[i].strip().startswith("####"):
-                break
-            block.append(lines[i])
-            i += 1
-
+        match_no = extract_match_number(raw_item)
         if match_no not in R32_MATCH_NUMBERS:
             continue
 
-        clean = rens_blokklinjer(block)
-        if len(clean) < 4:
-            parser_warnings.append({"match_no": match_no, "advarsel": "For kort FIFA-kampblokk"})
-            continue
+        kickoff_utc, kickoff_had_timezone = extract_fifa_kickoff(raw_item)
+        home = extract_fifa_side(raw_item, "Home")
+        away = extract_fifa_side(raw_item, "Away")
+        event_id = first_nonempty(raw_item.get("IdMatch"), raw_item.get("MatchId"), raw_item.get("id"))
 
-        # Finn dato og tid, ikke anta at de alltid er på nøyaktig samme indeks.
-        date_idx = next((idx for idx, line in enumerate(clean) if DATE_RE.fullmatch(line)), None)
-        if date_idx is None:
-            parser_warnings.append({"match_no": match_no, "advarsel": "Mangler FIFA-dato"})
-            continue
-        time_idx = next(
-            (idx for idx in range(date_idx + 1, len(clean)) if TIME_RE.fullmatch(clean[idx])),
-            None,
-        )
-        if time_idx is None:
-            parser_warnings.append({"match_no": match_no, "advarsel": "Mangler FIFA-tid"})
-            continue
+        if not kickoff_utc:
+            notes.append({"match_no": match_no, "advarsel": "FIFA API-kampen mangler gyldig avsparkstid"})
+        if not home["verdi"]:
+            notes.append({"match_no": match_no, "advarsel": "FIFA API-kampen mangler hjemmeplass"})
+        if not away["verdi"]:
+            notes.append({"match_no": match_no, "advarsel": "FIFA API-kampen mangler borteplass"})
 
-        hjemme, borte, side_warnings = parse_fifa_sider(clean[time_idx + 1 :])
-        for warning in side_warnings:
-            parser_warnings.append({"match_no": match_no, "advarsel": warning})
-
-        fifa_event_id_match = re.search(r"/(\d+)(?:\?.*)?$", url)
         parsed.append(
             {
                 "fifa_match_no": match_no,
-                "fifa_event_id": int(fifa_event_id_match.group(1)) if fifa_event_id_match else None,
-                "fifa_url": url,
-                "fifa_dato": fifa_dato_til_iso(clean[date_idx]),
-                "fifa_tid": clean[time_idx],
-                "fifa_hjemme": hjemme["verdi"],
-                "fifa_borte": borte["verdi"],
-                "fifa_hjemme_kode": hjemme["fifa_kode"],
-                "fifa_borte_kode": borte["fifa_kode"],
-                "fifa_hjemme_kjent": bool(hjemme["kjent_lag"]),
-                "fifa_borte_kjent": bool(borte["kjent_lag"]),
+                "fifa_event_id": event_id,
+                "fifa_utcDate": kickoff_utc,
+                "fifa_dato": kickoff_utc[:10] if kickoff_utc else "",
+                "fifa_tid": kickoff_utc[11:16] if kickoff_utc else "",
+                "fifa_tid_hadde_tidssone": kickoff_had_timezone,
+                "fifa_hjemme": home["verdi"],
+                "fifa_borte": away["verdi"],
+                "fifa_hjemme_kode": home["fifa_kode"],
+                "fifa_borte_kode": away["fifa_kode"],
+                "fifa_hjemme_kjent": home["kjent_lag"],
+                "fifa_borte_kjent": away["kjent_lag"],
+                "fifa_hjemme_placeholder": home["placeholder"],
+                "fifa_borte_placeholder": away["placeholder"],
+                "fifa_api_result_index": index,
             }
         )
 
-    # FIFA-siden inneholder for tiden samme brakett flere ganger. Dedupliser på M-nummer.
-    by_no: dict[int, dict[str, Any]] = {}
-    duplicates: list[dict[str, Any]] = []
+    by_number: dict[int, dict[str, Any]] = {}
     for item in parsed:
-        no = item["fifa_match_no"]
-        if no not in by_no:
-            by_no[no] = item
+        number = item["fifa_match_no"]
+        if number not in by_number:
+            by_number[number] = item
             continue
-        previous = by_no[no]
-        comparable_fields = (
-            "fifa_event_id",
-            "fifa_dato",
-            "fifa_tid",
-            "fifa_hjemme",
-            "fifa_borte",
-        )
-        differs = any(previous.get(field) != item.get(field) for field in comparable_fields)
-        duplicates.append(
+        previous = by_number[number]
+        fields = ("fifa_event_id", "fifa_utcDate", "fifa_hjemme", "fifa_borte")
+        identical = all(previous.get(field) == item.get(field) for field in fields)
+        notes.append(
             {
-                "match_no": no,
-                "identisk": not differs,
-                "forste": {field: previous.get(field) for field in comparable_fields},
-                "duplikat": {field: item.get(field) for field in comparable_fields},
+                "match_no": number,
+                "type": "fifa_api_duplikat",
+                "identisk": identical,
+                "forste": {field: previous.get(field) for field in fields},
+                "duplikat": {field: item.get(field) for field in fields},
             }
         )
 
-    return [by_no[no] for no in sorted(by_no)], parser_warnings + duplicates
+    return [by_number[number] for number in sorted(by_number)], notes
+
+
+# ── JINA-TILLEGGSKONTROLL ─────────────────────────────────────────────────────
+MATCH_HEADING_RE = re.compile(r"^\[M(\d+)\]\((https?://[^)]+)\)\s*$")
+DATE_RE = re.compile(r"^(\d{2})/(\d{2})/(\d{4})$")
+TIME_RE = re.compile(r"^\d{2}:\d{2}$")
+
+
+def fifa_dato_til_iso(value: str) -> str:
+    match = DATE_RE.fullmatch((value or "").strip())
+    if not match:
+        return ""
+    mm, dd, yyyy = match.groups()
+    return f"{yyyy}-{mm}-{dd}"
+
+
+def parse_jina_r32(markdown: str) -> list[dict[str, Any]]:
+    if not markdown:
+        return []
+    lines = markdown.splitlines()
+    out: list[dict[str, Any]] = []
+    index = 0
+    while index < len(lines):
+        heading = MATCH_HEADING_RE.fullmatch(lines[index].strip())
+        if not heading:
+            index += 1
+            continue
+        match_no = int(heading.group(1))
+        url = heading.group(2)
+        index += 1
+        block: list[str] = []
+        while index < len(lines) and not MATCH_HEADING_RE.fullmatch(lines[index].strip()):
+            if lines[index].strip().startswith("###") or lines[index].strip().startswith("####"):
+                break
+            if lines[index].strip():
+                block.append(lines[index].strip())
+            index += 1
+        if match_no not in R32_MATCH_NUMBERS:
+            continue
+        date_value = next((line for line in block if DATE_RE.fullmatch(line)), "")
+        date_index = block.index(date_value) if date_value else -1
+        time_value = next((line for line in block[date_index + 1 :] if TIME_RE.fullmatch(line)), "") if date_index >= 0 else ""
+        event_match = re.search(r"/(\d+)(?:\?.*)?$", url)
+        out.append(
+            {
+                "fifa_match_no": match_no,
+                "fifa_event_id": int(event_match.group(1)) if event_match else None,
+                "fifa_dato": fifa_dato_til_iso(date_value),
+                "fifa_tid": time_value,
+            }
+        )
+    deduped = {item["fifa_match_no"]: item for item in out}
+    return [deduped[number] for number in sorted(deduped)]
 
 
 # ── FOOTBALL-DATA ─────────────────────────────────────────────────────────────
@@ -404,55 +500,42 @@ def er_kjent_fd_lag(navn: str) -> bool:
     if not navn:
         return False
     low = navn.lower()
-    return not any(p in low for p in GENERIC_PLACEHOLDERS + ("w7", "w8", "w9"))
+    return not any(word in low for word in GENERIC_PLACEHOLDERS + ("w7", "w8", "w9"))
 
 
 def parse_football_data_r32(data: dict[str, Any]) -> list[dict[str, Any]]:
     matches = data.get("matches", [])
     if not isinstance(matches, list):
-        raise ValueError("football-data.org-svaret mangler en gyldig 'matches'-liste")
+        raise ValueError("football-data.org-svaret mangler en gyldig matches-liste")
 
     out: list[dict[str, Any]] = []
     for match in matches:
-        if not er_r32_stage(str(match.get("stage", ""))):
+        if not isinstance(match, dict) or not er_r32_stage(str(match.get("stage", ""))):
             continue
-
-        home_raw = str(((match.get("homeTeam") or {}).get("name") or "")).strip()
-        away_raw = str(((match.get("awayTeam") or {}).get("name") or "")).strip()
+        home_raw = str(dict_get(match, "homeTeam", "name") or "").strip()
+        away_raw = str(dict_get(match, "awayTeam", "name") or "").strip()
         home_for_id = FD_NAVN_TIL_OF_FOR_ID.get(home_raw, home_raw)
         away_for_id = FD_NAVN_TIL_OF_FOR_ID.get(away_raw, away_raw)
-        utc_date = str(match.get("utcDate") or "").strip()
-        dato = utc_date[:10]
-        known = er_kjent_fd_lag(home_for_id) and er_kjent_fd_lag(away_for_id) and bool(dato)
-
+        utc_date = normaliser_utc(match.get("utcDate"))
+        date_part = utc_date[:10] if utc_date else ""
+        known = er_kjent_fd_lag(home_for_id) and er_kjent_fd_lag(away_for_id) and bool(date_part)
         out.append(
             {
                 "fd_match_id": match.get("id"),
                 "fd_stage": match.get("stage", ""),
                 "fd_status": match.get("status", ""),
                 "fd_utcDate": utc_date,
-                "fd_dato": dato,
+                "fd_dato": date_part,
                 "fd_hjemmelag_raw": home_raw,
                 "fd_bortelag_raw": away_raw,
                 "fd_hjemmelag_for_id": home_for_id,
                 "fd_bortelag_for_id": away_for_id,
                 "fd_hjemmelag_kjent": er_kjent_fd_lag(home_for_id),
                 "fd_bortelag_kjent": er_kjent_fd_lag(away_for_id),
-                "kamp_id": kamp_id(home_for_id, away_for_id, dato) if known else None,
+                "kamp_id": kamp_id(home_for_id, away_for_id, date_part) if known else None,
             }
         )
-
-    return out
-
-
-# ── MATCHING ──────────────────────────────────────────────────────────────────
-def samme_lag(a: str, b: str) -> bool:
-    return bool(a and b and sammenligningsnoekkel(a) == sammenligningsnoekkel(b))
-
-
-def dato_kompatibel(fifa_dato: str, fd_dato: str) -> bool:
-    avvik = datoavvik_dager(fifa_dato, fd_dato)
-    return avvik is not None and avvik <= 1
+    return sorted(out, key=lambda item: item.get("fd_utcDate", ""))
 
 
 def kompakt_fd(fd: dict[str, Any]) -> dict[str, Any]:
@@ -466,135 +549,85 @@ def kompakt_fd(fd: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def finn_delvise_kandidater(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    candidates: list[dict[str, Any]] = []
-    for fd in fd_matches:
-        if not dato_kompatibel(fifa.get("fifa_dato", ""), fd.get("fd_dato", "")):
-            continue
-        if fifa.get("fifa_hjemme_kjent") and not samme_lag(
-            fifa.get("fifa_hjemme", ""), fd.get("fd_hjemmelag_for_id", "")
-        ):
-            continue
-        if fifa.get("fifa_borte_kjent") and not samme_lag(
-            fifa.get("fifa_borte", ""), fd.get("fd_bortelag_for_id", "")
-        ):
-            continue
-        candidates.append(fd)
-    return candidates
-
-
+# ── FIFA ↔ FOOTBALL-DATA MATCHING ─────────────────────────────────────────────
 def match_fifa_mot_fd(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) -> dict[str, Any]:
     result = dict(fifa)
-    home_known = bool(fifa.get("fifa_hjemme_kjent"))
-    away_known = bool(fifa.get("fifa_borte_kjent"))
+    exact_time = [fd for fd in fd_matches if fifa.get("fifa_utcDate") and fd.get("fd_utcDate") == fifa.get("fifa_utcDate")]
 
-    if not (home_known and away_known):
-        candidates = finn_delvise_kandidater(fifa, fd_matches)
+    if len(exact_time) == 0:
         result.update(
             {
-                "status": "pending",
-                "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+                "status": "conflict",
+                "forklaring": "Fant ingen football-data.org-kamp med identisk UTC-avspark.",
                 "kamp_id": None,
-                "delvise_fd_kandidater": [kompakt_fd(fd) for fd in candidates],
+                "fd_kandidater": [],
             }
         )
-        if len(candidates) == 1:
-            # Kun et forslag til kontroll. Status forblir pending og brukes ikke i produksjon.
-            result["foreslaatt_fd_kandidat"] = kompakt_fd(candidates[0])
+        return result
+    if len(exact_time) > 1:
+        result.update(
+            {
+                "status": "conflict",
+                "forklaring": "Flere football-data.org-kamper har samme UTC-avspark.",
+                "kamp_id": None,
+                "fd_kandidater": [kompakt_fd(fd) for fd in exact_time],
+            }
+        )
         return result
 
-    oriented = [
-        fd
-        for fd in fd_matches
-        if samme_lag(fifa["fifa_hjemme"], fd.get("fd_hjemmelag_for_id", ""))
-        and samme_lag(fifa["fifa_borte"], fd.get("fd_bortelag_for_id", ""))
-    ]
-    compatible = [fd for fd in oriented if dato_kompatibel(fifa["fifa_dato"], fd.get("fd_dato", ""))]
+    fd = exact_time[0]
+    result.update(kompakt_fd(fd))
+    result["koblet_pa"] = "eksakt_utc_avspark"
 
-    if len(compatible) == 1:
-        fd = compatible[0]
+    fifa_home_known = bool(fifa.get("fifa_hjemme_kjent"))
+    fifa_away_known = bool(fifa.get("fifa_borte_kjent"))
+    fd_home_known = bool(fd.get("fd_hjemmelag_kjent"))
+    fd_away_known = bool(fd.get("fd_bortelag_kjent"))
+
+    # Kontroller faktiske lag straks begge kilder kjenner dem.
+    if fifa_home_known and fd_home_known and not samme_lag(fifa.get("fifa_hjemme", ""), fd.get("fd_hjemmelag_for_id", "")):
+        result.update({"status": "conflict", "forklaring": "Hjemmelaget avviker mellom FIFA og football-data.org.", "kamp_id": None})
+        return result
+    if fifa_away_known and fd_away_known and not samme_lag(fifa.get("fifa_borte", ""), fd.get("fd_bortelag_for_id", "")):
+        result.update({"status": "conflict", "forklaring": "Bortelaget avviker mellom FIFA og football-data.org.", "kamp_id": None})
+        return result
+
+    if fifa_home_known and fifa_away_known and fd_home_known and fd_away_known:
         result.update(
             {
                 "status": "matched",
-                "forklaring": "Samme hjemme-/bortelag og kompatibel dato i FIFA og football-data.org.",
-                **kompakt_fd(fd),
-                "dato_avvik_dager": datoavvik_dager(fifa["fifa_dato"], fd.get("fd_dato", "")),
+                "forklaring": "FIFA-kampnummer, identisk UTC-avspark og begge lag er entydig koblet.",
             }
         )
         return result
 
-    if len(compatible) > 1:
-        result.update(
-            {
-                "status": "conflict",
-                "forklaring": "Flere football-data.org-kamper matcher samme FIFA-oppgjør.",
-                "kamp_id": None,
-                "fd_kandidater": [kompakt_fd(fd) for fd in compatible],
-            }
-        )
-        return result
-
-    reversed_candidates = [
-        fd
-        for fd in fd_matches
-        if samme_lag(fifa["fifa_hjemme"], fd.get("fd_bortelag_for_id", ""))
-        and samme_lag(fifa["fifa_borte"], fd.get("fd_hjemmelag_for_id", ""))
-        and dato_kompatibel(fifa["fifa_dato"], fd.get("fd_dato", ""))
-    ]
-    if reversed_candidates:
-        result.update(
-            {
-                "status": "conflict",
-                "forklaring": "Lagene finnes i football-data.org, men hjemme- og bortelag er motsatt av FIFA.",
-                "kamp_id": None,
-                "fd_kandidater": [kompakt_fd(fd) for fd in reversed_candidates],
-            }
-        )
-        return result
-
-    if len(oriented) == 1:
-        fd = oriented[0]
-        result.update(
-            {
-                "status": "conflict",
-                "forklaring": "Lagene matcher, men FIFA-dato og football-data.org-dato avviker med mer enn ett døgn.",
-                "kamp_id": None,
-                "fd_kandidater": [kompakt_fd(fd)],
-                "dato_avvik_dager": datoavvik_dager(fifa["fifa_dato"], fd.get("fd_dato", "")),
-            }
-        )
-        return result
-
+    # Matchnummer og fd_match_id kan kobles nå, men kamp-ID må vente på faktiske lag.
     result.update(
         {
-            "status": "conflict",
-            "forklaring": "Fant ingen entydig football-data.org-kamp for det kjente FIFA-oppgjøret.",
+            "status": "pending",
+            "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
             "kamp_id": None,
-            "fd_kandidater": [kompakt_fd(fd) for fd in oriented],
         }
     )
     return result
 
 
-# ── SAMMENLIGNING MOT EKSISTERENDE PRODUKSJONSDATA ───────────────────────────
+# ── KONTROLL MOT EKSISTERENDE PRODUKSJONSDATA ─────────────────────────────────
 def les_eksisterende_r32() -> list[dict[str, Any]]:
     entries: list[dict[str, Any]] = []
-
     manual = les_json(MANUELLE_KAMPER_JSON, {})
     for item in manual.get("kamper", []) if isinstance(manual, dict) else []:
-        if item.get("runde") != "r32":
-            continue
-        entries.append(
-            {
-                "kilde": "manuelle-kamper.json",
-                "match_no": item.get("match_no"),
-                "kamp_id": item.get("kamp_id"),
-                "hjemme": item.get("hjemmelag", ""),
-                "borte": item.get("bortelag", ""),
-                "dato": item.get("dato", ""),
-            }
-        )
-
+        if item.get("runde") == "r32":
+            entries.append(
+                {
+                    "kilde": "manuelle-kamper.json",
+                    "match_no": item.get("match_no"),
+                    "kamp_id": item.get("kamp_id"),
+                    "hjemme": item.get("hjemmelag", ""),
+                    "borte": item.get("bortelag", ""),
+                    "dato": item.get("dato", ""),
+                }
+            )
     status = les_json(STATUS_JSON, {})
     r32_status = status.get("r32", {}) if isinstance(status, dict) else {}
     for item in r32_status.get("kamper", []) if isinstance(r32_status, dict) else []:
@@ -608,68 +641,78 @@ def les_eksisterende_r32() -> list[dict[str, Any]]:
                 "dato": item.get("dato", ""),
             }
         )
-
     return entries
 
 
 def legg_til_eksisterende_kontroll(item: dict[str, Any], existing: list[dict[str, Any]]) -> None:
-    if item.get("status") != "matched" or not item.get("kamp_id"):
-        return
-
-    same_no = [
-        e for e in existing
-        if e.get("match_no") is not None and int(e["match_no"]) == int(item["fifa_match_no"])
-    ]
-    same_teams = [
-        e for e in existing
-        if samme_lag(e.get("hjemme", ""), item.get("fd_hjemmelag", ""))
-        and samme_lag(e.get("borte", ""), item.get("fd_bortelag", ""))
-    ]
-    candidates = same_no or same_teams
-    item["eksisterende_koblinger"] = candidates
-    if candidates:
-        item["kamp_id_samsvarer_med_eksisterende"] = all(
-            not e.get("kamp_id") or e.get("kamp_id") == item.get("kamp_id") for e in candidates
-        )
-    else:
-        item["kamp_id_samsvarer_med_eksisterende"] = None
+    same_number = []
+    for entry in existing:
+        try:
+            if entry.get("match_no") is not None and int(entry["match_no"]) == int(item["fifa_match_no"]):
+                same_number.append(entry)
+        except (TypeError, ValueError):
+            continue
+    if same_number:
+        item["eksisterende_koblinger"] = same_number
+        if item.get("kamp_id"):
+            item["kamp_id_samsvarer_med_eksisterende"] = all(
+                not entry.get("kamp_id") or entry.get("kamp_id") == item.get("kamp_id")
+                for entry in same_number
+            )
 
 
 # ── HOVEDPROGRAM ──────────────────────────────────────────────────────────────
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Kontroller FIFA R32 mot dagens kamp-ID-regel.")
+    parser.add_argument("--fifa-api-file", type=Path, help="Les lagret FIFA API-JSON i stedet for nett.")
     parser.add_argument("--jina-file", type=Path, help="Les lagret Jina-markdown i stedet for nett.")
-    parser.add_argument(
-        "--football-data-file",
-        type=Path,
-        help="Les lagret football-data.org JSON i stedet for API.",
-    )
+    parser.add_argument("--skip-jina", action="store_true", help="Ikke hent Jina-tilleggskontrollen.")
+    parser.add_argument("--football-data-file", type=Path, help="Les lagret football-data JSON i stedet for API.")
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Målfil for kontrollrapport.")
     parser.add_argument(
         "--strict",
         action="store_true",
         default=os.environ.get("STRICT", "0") == "1",
-        help="Returner exit code 2 ved konflikt eller kamp-ID-avvik.",
+        help="Returner exit code 2 dersom 16 entydige matchnummerkoblinger ikke oppnås.",
     )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    print("=" * 68)
+    print("=" * 72)
     print("FIFA R32-kontroll — ingen produksjonsdata endres")
-    print("=" * 68)
+    print("=" * 72)
 
     try:
-        if args.jina_file:
-            print(f"Leser FIFA/Jina fra {args.jina_file}")
-            fifa_markdown = args.jina_file.read_text(encoding="utf-8")
+        if args.fifa_api_file:
+            print(f"Leser FIFA kalender-API fra {args.fifa_api_file}")
+            fifa_api_data = json.loads(args.fifa_api_file.read_text(encoding="utf-8"))
         else:
-            print("Henter FIFA-brakett via Jina Reader...")
-            fifa_markdown = hent_tekst(JINA_URL, headers={"User-Agent": "RambergVMBot/1.0"})
+            print("Henter FIFA kalender-API...")
+            fifa_api_data = hent_json(
+                FIFA_API_URL,
+                params=FIFA_API_PARAMS,
+                headers={"User-Agent": "Mozilla/5.0 (compatible; RambergVMBot/2.0)", "Accept": "application/json"},
+            )
+        fifa_matches, fifa_api_notes = parse_fifa_api_r32(fifa_api_data)
+        print(f"  → Fant {len(fifa_matches)} unike R32-kamper i FIFA API")
 
-        fifa_matches, parser_notes = parse_fifa_r32(fifa_markdown)
-        print(f"  → Fant {len(fifa_matches)} unike R32-kamper hos FIFA")
+        jina_matches: list[dict[str, Any]] = []
+        jina_error = ""
+        if not args.skip_jina:
+            try:
+                if args.jina_file:
+                    print(f"Leser Jina-kontroll fra {args.jina_file}")
+                    jina_text = args.jina_file.read_text(encoding="utf-8")
+                else:
+                    print("Henter Jina som tilleggskontroll...")
+                    jina_text = hent_tekst(JINA_URL, headers={"User-Agent": "RambergVMBot/2.0"})
+                jina_matches = parse_jina_r32(jina_text)
+                print(f"  → Fant {len(jina_matches)} R32-kamper i Jina-uttrekket")
+            except Exception as exc:
+                jina_error = str(exc)
+                print(f"  → Jina-kontroll feilet, fortsetter med FIFA API: {exc}")
 
         if args.football_data_file:
             print(f"Leser football-data.org fra {args.football_data_file}")
@@ -680,7 +723,6 @@ def main() -> int:
                 raise RuntimeError("FOOTBALL_DATA_TOKEN er ikke satt")
             print("Henter R32-kamper fra football-data.org...")
             fd_data = hent_json(FOOTBALL_DATA_URL, headers={"X-Auth-Token": token})
-
         fd_matches = parse_football_data_r32(fd_data)
         print(f"  → Fant {len(fd_matches)} R32-kamper hos football-data.org")
 
@@ -692,45 +734,81 @@ def main() -> int:
             mapped.append(item)
 
         counts = Counter(item.get("status", "ukjent") for item in mapped)
-        missing_match_nos = sorted(R32_MATCH_NUMBERS - {m["fifa_match_no"] for m in fifa_matches})
+        fifa_numbers = {item["fifa_match_no"] for item in fifa_matches}
+        missing_numbers = sorted(R32_MATCH_NUMBERS - fifa_numbers)
+        exact_utc_links = sum(1 for item in mapped if item.get("koblet_pa") == "eksakt_utc_avspark")
         id_mismatches = [
             item["fifa_match_no"]
             for item in mapped
             if item.get("kamp_id_samsvarer_med_eksisterende") is False
         ]
-        nonidentical_duplicates = [
-            note for note in parser_notes
-            if isinstance(note, dict) and note.get("identisk") is False
+        nonidentical_api_duplicates = [
+            note for note in fifa_api_notes
+            if note.get("type") == "fifa_api_duplikat" and note.get("identisk") is False
         ]
+
+        # Sammenlign event-ID/dato for de kampene Jina faktisk eksponerer.
+        api_by_no = {item["fifa_match_no"]: item for item in fifa_matches}
+        jina_comparison: list[dict[str, Any]] = []
+        for jina in jina_matches:
+            api_item = api_by_no.get(jina["fifa_match_no"])
+            if not api_item:
+                jina_comparison.append({"match_no": jina["fifa_match_no"], "status": "mangler_i_api"})
+                continue
+            jina_comparison.append(
+                {
+                    "match_no": jina["fifa_match_no"],
+                    "event_id_samsvar": not jina.get("fifa_event_id") or str(jina.get("fifa_event_id")) == str(api_item.get("fifa_event_id")),
+                    "dato_samsvar": not jina.get("fifa_dato") or jina.get("fifa_dato") == api_item.get("fifa_dato"),
+                    "tid_samsvar": not jina.get("fifa_tid") or jina.get("fifa_tid") == api_item.get("fifa_tid"),
+                }
+            )
+
+        ready_for_mapping = bool(
+            len(fifa_matches) == 16
+            and len(fd_matches) == 16
+            and exact_utc_links == 16
+            and counts.get("conflict", 0) == 0
+            and not missing_numbers
+            and not nonidentical_api_duplicates
+        )
+        ready_for_production = bool(
+            ready_for_mapping
+            and counts.get("matched", 0) == 16
+            and not id_mismatches
+        )
 
         report = {
             "generert": iso_utc_now(),
             "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
             "produksjonsdata_endret": False,
             "kilder": {
-                "fifa_jina": str(args.jina_file) if args.jina_file else JINA_URL,
+                "fifa_api": str(args.fifa_api_file) if args.fifa_api_file else FIFA_API_URL,
+                "fifa_api_params": FIFA_API_PARAMS,
+                "fifa_jina": None if args.skip_jina else (str(args.jina_file) if args.jina_file else JINA_URL),
                 "football_data": str(args.football_data_file) if args.football_data_file else FOOTBALL_DATA_URL,
             },
             "kamp_id_regel": "rens(hjemmelag)_rens(bortelag)_rens(football-data utcDate[:10])",
             "oppsummering": {
                 "forventet_antall_r32": 16,
-                "fifa_r32_funnet": len(fifa_matches),
-                "fifa_match_no_mangler": missing_match_nos,
+                "fifa_api_r32_funnet": len(fifa_matches),
+                "fifa_api_match_no_mangler": missing_numbers,
+                "fifa_jina_r32_funnet": len(jina_matches),
                 "football_data_r32_funnet": len(fd_matches),
+                "koblet_entydig_pa_utc_avspark": exact_utc_links,
                 "matched": counts.get("matched", 0),
                 "pending": counts.get("pending", 0),
                 "conflict": counts.get("conflict", 0),
                 "kamp_id_avvik_mot_eksisterende": id_mismatches,
-                "motstridende_fifa_duplikater": [n.get("match_no") for n in nonidentical_duplicates],
-                "klar_for_produksjonsbruk": bool(
-                    len(fifa_matches) == 16
-                    and counts.get("matched", 0) == 16
-                    and counts.get("conflict", 0) == 0
-                    and not id_mismatches
-                    and not nonidentical_duplicates
-                ),
+                "motstridende_fifa_api_duplikater": [note.get("match_no") for note in nonidentical_api_duplicates],
+                "klar_for_matchnummer_mapping": ready_for_mapping,
+                "klar_for_produksjonsbruk": ready_for_production,
             },
-            "parser_merknader": parser_notes,
+            "fifa_api_merknader": fifa_api_notes,
+            "jina_kontroll": {
+                "feil": jina_error,
+                "sammenligning": jina_comparison,
+            },
             "kamper": mapped,
         }
 
@@ -738,16 +816,14 @@ def main() -> int:
         print(f"\nSkrev kontrollrapport: {args.output}")
         print(
             "Status: "
+            f"api={len(fifa_matches)}/16, "
+            f"utc-koblet={exact_utc_links}/16, "
             f"matched={counts.get('matched', 0)}, "
             f"pending={counts.get('pending', 0)}, "
             f"conflict={counts.get('conflict', 0)}"
         )
-        if missing_match_nos:
-            print(f"FIFA mangler foreløpig disse R32-numrene i Jina-uttrekket: {missing_match_nos}")
-        if id_mismatches:
-            print(f"ADVARSEL: Kamp-ID-avvik mot eksisterende data for: {id_mismatches}")
 
-        if args.strict and (counts.get("conflict", 0) or id_mismatches or nonidentical_duplicates):
+        if args.strict and not ready_for_mapping:
             return 2
         return 0
 
