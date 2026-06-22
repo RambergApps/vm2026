@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-22T17:31:02Z",
-  "sist_oppdatert_grupper": "2026-06-22T17:31:02Z",
-  "sist_oppdatert_utslag": "2026-06-22T17:31:02Z",
+  "sist_oppdatert": "2026-06-22T18:01:12Z",
+  "sist_oppdatert_grupper": "2026-06-22T18:01:12Z",
+  "sist_oppdatert_utslag": "2026-06-22T18:01:12Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -623,15 +623,15 @@
         "fifa_navn": "Argentina",
         "kode": "ARG",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/ARG%201x",
-        "spilt": 1,
-        "seier": 1,
+        "spilt": 2,
+        "seier": 2,
         "uavgjort": 0,
         "tap": 0,
-        "maal_for": 3,
+        "maal_for": 4,
         "maal_mot": 0,
-        "maal_forskjell": 3,
+        "maal_forskjell": 4,
         "lagdisiplin": 0,
-        "poeng": 3
+        "poeng": 6
       },
       {
         "plass": 2,
@@ -639,14 +639,14 @@
         "fifa_navn": "Austria",
         "kode": "AUT",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/AUT%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 1,
         "uavgjort": 0,
-        "tap": 0,
+        "tap": 1,
         "maal_for": 3,
-        "maal_mot": 1,
-        "maal_forskjell": 2,
-        "lagdisiplin": -1,
+        "maal_mot": 2,
+        "maal_forskjell": 1,
+        "lagdisiplin": -2,
         "poeng": 3
       },
       {

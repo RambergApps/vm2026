@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-22T17:31:23Z",
+  "sist_oppdatert": "2026-06-22T18:01:30Z",
   "antall_kamper": 41,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -2209,7 +2209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 52,
+        "antall_sok": 53,
         "fallback": true,
         "cache_key": "Spain_Saudi_Arabia_2026_06_21|4-0",
         "serper_score": -100,
@@ -2219,7 +2219,7 @@
         "referat_fakta_score": 7,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 52,
+        "retry_antall": 53,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-saudi-arabia-highlights-match-report",
         "mangler": [
@@ -2410,7 +2410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T17:31:23Z"
+      "oppdatert": "2026-06-22T18:01:29Z"
     },
     "Switzerland_Bosnia___Herzegovina_2026_06_18": {
       "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -8793,13 +8793,13 @@
       "fd_utcDate": "2026-06-22T17:00:00Z",
       "hjemmelag": "Argentina",
       "bortelag": "Austria",
-      "hjemme_score": 0,
+      "hjemme_score": 1,
       "borte_score": 0,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Argentina and Austria are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Argentina lead Austria 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -8985,7 +8985,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-22T17:31:03Z"
+      "oppdatert": "2026-06-22T18:01:13Z"
     }
   }
 }
