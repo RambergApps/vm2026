@@ -4,23 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VM 2026 — Utslagsrunder</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after {
   box-sizing: border-box; margin: 0; padding: 0;
   print-color-adjust: exact; -webkit-print-color-adjust: exact;
 }
 :root {
-  --bg:      #0a0f1e;
-  --surface: #111827;
-  --card:    #1a2235;
-  --border:  #2a3650;
-  --accent:  #00e676;
+  --bg:      #060912;
+  --surface: #0d1320;
+  --card:    #111a2e;
+  --card2:   #152035;
+  --border:  #1e2d4a;
+  --accent:  #ef2b2d;
   --accent2: #ffd600;
-  --red:     #ff4444;
-  --text:    #f0f4ff;
-  --muted:   #7a8aaa;
-  --locked:  #1a1f2e;
+  --red:     #ff5a5a;
+  --success: #00e676;
+  --text:    #e8f0ff;
+  --muted:   #6b7fa8;
+  --locked:  #0b101c;
 }
 body {
   font-family: 'Barlow', sans-serif;
@@ -379,6 +381,23 @@ body {
 }
 
 
+/* ── BONUSSPØRSMÅL ── */
+.bonus-panel{background:linear-gradient(135deg,rgba(255,214,0,.08),rgba(0,230,118,.04));border:1.5px solid rgba(255,214,0,.28);border-radius:12px;padding:16px;margin:0 0 18px}
+.bonus-panel.helhet{border-color:rgba(0,230,118,.32);background:linear-gradient(135deg,rgba(0,230,118,.08),rgba(255,214,0,.04))}
+.bonus-heading{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
+.bonus-heading h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase}
+.bonus-heading span{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;color:var(--accent2);white-space:nowrap}
+.bonus-intro{font-size:12px;color:var(--muted);line-height:1.45;margin-top:3px}
+.bonus-grid{display:grid;gap:12px}
+.bonus-field label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;line-height:1.3;margin-bottom:6px}
+.bonus-field select,.bonus-field input{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:7px;color:var(--text);padding:10px 11px;font-family:'Barlow',sans-serif;font-size:14px;outline:none}
+.bonus-field select:focus,.bonus-field input:focus{border-color:var(--accent2)}
+.bonus-field select:disabled,.bonus-field input:disabled{opacity:.55;cursor:not-allowed}
+.bonus-status{font-size:11px;color:var(--muted);margin-top:7px}
+.bonus-status.open{color:var(--accent)}
+.bonus-status.locked{color:var(--red)}
+@media(max-width:640px){.bonus-heading{display:block}.bonus-heading span{display:block;margin-top:5px}.bonus-panel{padding:14px}}
+
 /* ── FORTLØPENDE KAMPÅPNING ── */
 .runde-oppsummering {
   margin: -8px 0 14px;
@@ -425,6 +444,86 @@ body {
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
+
+
+/* ── FARGETEMA SAMKJØRT MED INDEX ── */
+body {
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 50% -180px, rgba(239,43,45,.09) 0%, transparent 58%),
+    var(--bg);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(239,43,45,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239,43,45,.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.hero,
+.runde-tabs,
+.progress-bar-wrap,
+.container { position: relative; z-index: 1; }
+.hero {
+  background:
+    linear-gradient(180deg, rgba(6,9,18,.18), rgba(6,9,18,.84)),
+    linear-gradient(135deg, #080d18 0%, #121528 52%, #090d18 100%);
+}
+.hero .badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(239,43,45,.10);
+  border: 1px solid rgba(239,43,45,.28);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.hero h1 span { color: var(--accent); }
+.runde-tabs { background: rgba(13,19,32,.96); }
+.runde-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.runde-tab.done { color: var(--success); }
+.runde-tab .dot { background: var(--success); }
+.runde-tab.locked { color: #40506d; }
+.progress-fill { background: var(--accent); }
+.progress-count { color: var(--accent); }
+.runde-tag { background: var(--accent); color: #fff; }
+.kamp-kort:hover { border-color: #344766; }
+.lag-rad.valgt { background: rgba(239,43,45,.09); }
+.score-input-felt:focus,
+.navn-wrap input:focus,
+.navn-wrap select:focus,
+.bonus-field select:focus,
+.bonus-field input:focus { border-color: var(--accent); }
+.score-input-felt.filled { border-color: rgba(239,43,45,.50); }
+.btn-lever { background: var(--accent); color: #fff; }
+.btn-lever:hover { background: #ff3b3d; }
+.btn-autofill {
+  background: rgba(255,214,0,.10);
+  color: var(--accent2);
+  border-color: rgba(255,214,0,.32);
+}
+.btn-autofill:hover { background: rgba(255,214,0,.16); }
+.bonus-panel {
+  background: linear-gradient(135deg, rgba(255,214,0,.07), rgba(239,43,45,.035));
+  border-color: rgba(255,214,0,.25);
+}
+.bonus-panel.helhet {
+  border-color: rgba(239,43,45,.32);
+  background: linear-gradient(135deg, rgba(239,43,45,.085), rgba(255,214,0,.035));
+}
+.bonus-status.open { color: var(--accent); }
+.kamp-status.open { color: var(--accent); background: rgba(239,43,45,.06); }
+.kamp-status.saved { color: var(--accent2); background: rgba(255,214,0,.055); }
+.kamp-kort.deep-link-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(239,43,45,.13), 0 12px 36px rgba(0,0,0,.30);
+}
+
 </style>
 </head>
 <body>
@@ -432,7 +531,7 @@ body {
 <div class="hero">
   <div class="badge">⚽ VM 2026 · Utslagsrunder</div>
   <h1>Tipp <span>utslagsrundene</span></h1>
-  <p>Tipp resultat etter ordinær tid / 90 min. Ekstraomganger og straffer teller ikke.</p>
+  <p>Tipp resultatet i løpet av de første 90 minuttene, inkludert tilleggstid. Ekstraomganger og straffer teller ikke.</p>
 </div>
 
 <!-- TABS -->
@@ -470,6 +569,7 @@ body {
 
 </div><!-- /container -->
 
+<script>document.write('<script src="../data/data.js?v=' + Date.now() + '"><\/script>');</script>
 <script>
 // ── KONFIG ─────────────────────────────────────────────────
 const SUBMIT_URL    = "https://vm2026-submit-api.vercel.app/api/submit";
@@ -486,10 +586,24 @@ const RUNDE_NAVN = {
   final: "Finale"
 };
 const RUNDE_REKKEFØLGE = ["r32", "r16", "qf", "sf", "final"];
+const BONUS_SPORSMAL = {
+  r32: { id:"antall_uavgjort", tekst:"Hvor mange kamper ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid?", min:0, max:16 },
+  r16: { id:"antall_nullen", tekst:"Hvor mange lag holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid?", min:0, max:16 },
+  qf: { id:"antall_ettmaalsseier", tekst:"Hvor mange kamper avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid?", min:0, max:4 },
+  sf: { id:"totale_maal", tekst:"Hvor mange mål scores totalt i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid?", min:0, max:40 },
+  final: { id:"begge_lag_scorer", tekst:"Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?", type:"ja_nei" }
+};
+const HELHETSBONUS_TEKST = {
+  flest_maal_lag:"Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+  totale_maal_utslag:"Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+  golden_boot:"Hvem vinner FIFA Golden Boot?"
+};
 
 // ── STATE ──────────────────────────────────────────────────
 let status = null;
 let tippinger = {};
+let bonusSvar = {};
+let helhetsbonus = {};
 let aktivRunde = null;
 let deltakerId = null;
 
@@ -669,6 +783,114 @@ function harNyeTippebareKamper(runde) {
   return (status?.[runde]?.kamper || []).some(kamp => erKampTippebar(kamp) && !erKampLevert(kamp.id));
 }
 
+function bonusFrist(runde) {
+  const tider = (status?.[runde]?.kamper || [])
+    .map(parseKickoff)
+    .filter(value => Number.isFinite(value));
+  if (tider.length) return Math.min(...tider);
+  const fallback = Date.parse(status?.[runde]?.neste_frist || status?.[runde]?.frist || "");
+  return Number.isFinite(fallback) ? fallback : null;
+}
+
+function bonusErAapen(runde) {
+  const frist = bonusFrist(runde);
+  return rundeErSynlig(runde) && frist !== null && Date.now() < frist;
+}
+
+function formaterBonusFrist(runde) {
+  const frist = bonusFrist(runde);
+  if (frist === null) return "Avventer bekreftet avsparkstid";
+  return "Stenger " + new Date(frist).toLocaleString("no-NO", {day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+}
+
+function kjenteR32Lag() {
+  const lag = new Set();
+  (status?.r32?.kamper || []).forEach(kamp => {
+    [kamp.hjemme, kamp.borte].forEach(navn => {
+      const n = String(navn || "").trim();
+      if (n && !/^(W\d+|[123][A-L]|TBD|Winner|Runner)/i.test(n) && !n.includes("/")) lag.add(n);
+    });
+  });
+  return [...lag].sort((a,b) => a.localeCompare(b,"no"));
+}
+
+function fifaSpillere() {
+  if (typeof VM_DATA === "undefined" || !Array.isArray(VM_DATA.spillerstatistikk)) return [];
+  return VM_DATA.spillerstatistikk.map(x => x.spiller).filter(Boolean);
+}
+
+function byggHelhetsbonusHTML() {
+  const open = bonusErAapen("r32");
+  const disabled = open ? "" : "disabled";
+  const lagOptions = kjenteR32Lag().map(lag => `<option value="${escapeHtml(lag)}" ${helhetsbonus.flest_maal_lag===lag?"selected":""}>${escapeHtml(lag)}</option>`).join("");
+  const spillerOptions = fifaSpillere().map(navn => `<option value="${escapeHtml(navn)}"></option>`).join("");
+  return `
+    <div class="bonus-panel helhet">
+      <div class="bonus-heading">
+        <div><h3>Bonus · hele utslagsfasen</h3><div class="bonus-intro">Tre spørsmål som gjelder fra 32-delsfinalene til og med finalen. Riktig svar gir 20 poeng.</div></div>
+        <span>20 poeng per spørsmål</span>
+      </div>
+      <div class="bonus-grid">
+        <div class="bonus-field"><label>${escapeHtml(HELHETSBONUS_TEKST.flest_maal_lag)}</label>
+          <select id="helhet-flest_maal_lag" ${disabled} onchange="oppdaterHelhetsbonus('flest_maal_lag',this.value)">
+            <option value="">— Velg lag —</option>${lagOptions}
+          </select>
+        </div>
+        <div class="bonus-field"><label>${escapeHtml(HELHETSBONUS_TEKST.totale_maal_utslag)}</label>
+          <select id="helhet-totale_maal_utslag" ${disabled} onchange="oppdaterHelhetsbonus('totale_maal_utslag',this.value)">
+            <option value="">— Velg intervall —</option>
+            <option value="0_46" ${helhetsbonus.totale_maal_utslag==='0_46'?"selected":""}>0–46 mål</option>
+            <option value="47_77" ${helhetsbonus.totale_maal_utslag==='47_77'?"selected":""}>47–77 mål</option>
+            <option value="78_pluss" ${helhetsbonus.totale_maal_utslag==='78_pluss'?"selected":""}>78 mål eller flere</option>
+          </select>
+        </div>
+        <div class="bonus-field"><label>${escapeHtml(HELHETSBONUS_TEKST.golden_boot)}</label>
+          <input id="helhet-golden_boot" list="fifa-spillere" value="${escapeHtml(helhetsbonus.golden_boot || '')}" placeholder="Skriv eller velg spiller" ${disabled} oninput="oppdaterHelhetsbonus('golden_boot',this.value)">
+          <datalist id="fifa-spillere">${spillerOptions}</datalist>
+        </div>
+      </div>
+      <div class="bonus-status ${open?'open':'locked'}">${open?formaterBonusFrist('r32'):'Tippingen er stengt'}</div>
+    </div>`;
+}
+
+function byggRundebonusHTML(runde) {
+  const config = BONUS_SPORSMAL[runde];
+  const open = bonusErAapen(runde);
+  const disabled = open ? "" : "disabled";
+  const svar = bonusSvar[runde]?.svar ?? "";
+  const input = config.type === "ja_nei"
+    ? `<select id="bonus-${runde}" ${disabled} onchange="oppdaterBonusSvar('${runde}',this.value)"><option value="">— Velg —</option><option value="ja" ${svar==='ja'?"selected":""}>Ja</option><option value="nei" ${svar==='nei'?"selected":""}>Nei</option></select>`
+    : `<input id="bonus-${runde}" type="number" min="${config.min}" max="${config.max}" value="${escapeHtml(svar)}" placeholder="Svar" ${disabled} oninput="oppdaterBonusSvar('${runde}',this.value)">`;
+  return `
+    <div class="bonus-panel">
+      <div class="bonus-heading"><div><h3>Rundebonus</h3><div class="bonus-intro">${escapeHtml(config.tekst)}</div></div><span>10 poeng</span></div>
+      <div class="bonus-field">${input}</div>
+      <div class="bonus-status ${open?'open':'locked'}">${open?formaterBonusFrist(runde):'Tippingen er stengt'}</div>
+    </div>`;
+}
+
+function oppdaterBonusSvar(runde, value) {
+  if (!bonusSvar[runde]) bonusSvar[runde] = { id: BONUS_SPORSMAL[runde].id };
+  bonusSvar[runde].svar = value === "" ? "" : (BONUS_SPORSMAL[runde].type === "ja_nei" ? value : Number(value));
+  lagreTilStorage();
+  oppdaterLeverKnapp(runde);
+}
+
+function oppdaterHelhetsbonus(id, value) {
+  helhetsbonus[id] = value;
+  lagreTilStorage();
+  oppdaterLeverKnapp("r32");
+}
+
+function harBonusSvar(runde) {
+  const svar = bonusSvar[runde]?.svar;
+  return svar !== undefined && svar !== null && svar !== "";
+}
+
+function antallHelhetsbonusSvar() {
+  return Object.values(helhetsbonus).filter(v => v !== undefined && v !== null && String(v).trim() !== "").length;
+}
+
 // ── BYGG UI ────────────────────────────────────────────────
 function byggUI() {
   if (!status) return;
@@ -744,6 +966,8 @@ function byggRundeHTML(runde, kampListe) {
     <div class="runde-oppsummering">
       <strong>${tippebare.length}</strong> åpne · <strong>${venter}</strong> venter eller stengt
     </div>
+    ${runde === "r32" ? byggHelhetsbonusHTML() : ""}
+    ${byggRundebonusHTML(runde)}
     <div class="autofill-wrap">
       <button class="btn-autofill" type="button" onclick="autofyllTommeIRunde('${runde}')" ${tippebare.length ? "" : "disabled"}>🎲 Autofyll tomme kamper</button>
       <div class="autofill-note">Fyller bare tomme kamper som er åpne akkurat nå.</div>
@@ -787,8 +1011,8 @@ function byggRundeHTML(runde, kampListe) {
   html += `
     <div id="advarsel-${runde}"></div>
     <div class="lever-wrap">
-      <button class="btn-lever" id="leverBtn-${runde}" onclick="leverRunde('${runde}')" ${tippebare.length ? "" : "disabled"}>
-        💾 Lagre utfylte tips (${utfylte})
+      <button class="btn-lever" id="leverBtn-${runde}" onclick="leverRunde('${runde}')">
+        💾 Lagre tips og bonus
       </button>
     </div>`;
   return html;
@@ -895,8 +1119,12 @@ function oppdaterProgress() {
 function oppdaterLeverKnapp(runde) {
   const button = document.getElementById("leverBtn-" + runde);
   if (!button) return;
-  const antall = (status?.[runde]?.kamper || []).filter(kamp => erKampTippebar(kamp) && harFulltResultat(kamp.id)).length;
-  button.textContent = `💾 Lagre utfylte tips (${antall})`;
+  const kamptips = (status?.[runde]?.kamper || []).filter(kamp => erKampTippebar(kamp) && harFulltResultat(kamp.id)).length;
+  const rundebonus = bonusErAapen(runde) && harBonusSvar(runde) ? 1 : 0;
+  const helhet = runde === "r32" && bonusErAapen("r32") ? antallHelhetsbonusSvar() : 0;
+  const antall = kamptips + rundebonus + helhet;
+  button.disabled = antall === 0;
+  button.textContent = `💾 Lagre tips og bonus (${antall})`;
 }
 
 // ── LEVERING ───────────────────────────────────────────────
@@ -910,8 +1138,13 @@ async function leverRunde(runde) {
 
   const åpne = (status?.[runde]?.kamper || []).filter(erKampTippebar);
   const utfylte = åpne.filter(kamp => harFulltResultat(kamp.id));
-  if (!utfylte.length) {
-    warning.innerHTML = '<div class="error-box">Fyll ut minst én åpen kamp før du lagrer.</div>';
+  const rundebonus = bonusErAapen(runde) && harBonusSvar(runde) ? bonusSvar[runde] : null;
+  const helhet = runde === "r32" && bonusErAapen("r32")
+    ? Object.fromEntries(Object.entries(helhetsbonus).filter(([,v]) => v !== undefined && v !== null && String(v).trim() !== ""))
+    : {};
+
+  if (!utfylte.length && !rundebonus && !Object.keys(helhet).length) {
+    warning.innerHTML = '<div class="error-box">Fyll ut minst ett kamptips eller bonusspørsmål før du lagrer.</div>';
     return;
   }
 
@@ -941,6 +1174,8 @@ async function leverRunde(runde) {
       borte: tippinger[kamp.id].borte
     }))
   };
+  if (rundebonus) payload.bonus = rundebonus;
+  if (Object.keys(helhet).length) payload.helhetsbonus = helhet;
 
   try {
     const response = await fetch(SUBMIT_URL, {
@@ -952,7 +1187,7 @@ async function leverRunde(runde) {
       const error = await response.json().catch(() => null);
       throw new Error(error?.details || error?.error || "Submit-feil: " + response.status);
     }
-    visSucces(navn, runde, utfylte.map(kamp => kamp.id));
+    visSucces(navn, runde, utfylte.map(kamp => kamp.id), Boolean(rundebonus), Object.keys(helhet).length);
   } catch (error) {
     button.disabled = false;
     oppdaterLeverKnapp(runde);
@@ -960,7 +1195,7 @@ async function leverRunde(runde) {
   }
 }
 
-function visSucces(navn, runde, kampIds) {
+function visSucces(navn, runde, kampIds, harRundebonus=false, antallHelhet=0) {
   markerKamperLevert(kampIds);
   byggTabs();
   byggSeksjoner();
@@ -968,8 +1203,12 @@ function visSucces(navn, runde, kampIds) {
 
   const success = document.getElementById("suksess");
   success.classList.add("vis");
+  const deler = [];
+  if (kampIds.length) deler.push(`${kampIds.length} kamptips`);
+  if (harRundebonus) deler.push("1 rundebonus");
+  if (antallHelhet) deler.push(`${antallHelhet} helhetsbonus${antallHelhet === 1 ? "" : "er"}`);
   document.getElementById("suksessNavn").textContent =
-    `${navn} — ${kampIds.length} tips lagret. Nye kamper kan leveres senere.`;
+    `${navn} — ${deler.join(", ")} lagret. Nye åpne kamper kan leveres senere.`;
   success.scrollIntoView({ behavior: "smooth", block: "center" });
   window.setTimeout(() => success.classList.remove("vis"), 7000);
 }
@@ -979,7 +1218,9 @@ function lagreTilStorage() {
   localStorage.setItem("vm2026_utslagsrunder", JSON.stringify({
     navn: document.getElementById("navnInput").value,
     deltaker_id: deltakerId,
-    tippinger
+    tippinger,
+    bonusSvar,
+    helhetsbonus
   }));
 }
 
@@ -991,6 +1232,8 @@ function lastFraStorage() {
     if (data.navn) document.getElementById("navnInput").value = data.navn;
     if (data.deltaker_id) deltakerId = data.deltaker_id;
     if (data.tippinger) tippinger = data.tippinger;
+    if (data.bonusSvar) bonusSvar = data.bonusSvar;
+    if (data.helhetsbonus) helhetsbonus = data.helhetsbonus;
   } catch (error) {
     // Ignorer ødelagt lokal lagring.
   }
