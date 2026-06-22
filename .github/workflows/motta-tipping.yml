@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
 
+
 jobs:
   lagre-tipping:
     runs-on: ubuntu-latest
@@ -14,24 +15,100 @@ jobs:
     steps:
       - name: Sjekk ut repo
         uses: actions/checkout@v4
-
-      - name: Lagre tipping som JSON
-        run: |
-          RUNDE='${{ github.event.client_payload.runde }}'
-          NAVN='${{ github.event.client_payload.navn }}'
-          DATA='${{ toJson(github.event.client_payload.data) }}'
-
-          SAFE_NAVN=$(echo "$NAVN" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9æøå]/_/g')
-          TIMESTAMP=$(date -u +"%Y%m%d_%H%M%S")
-
-          mkdir -p "tippinger/$RUNDE"
-
-          echo "$DATA" > "tippinger/$RUNDE/${SAFE_NAVN}_${TIMESTAMP}.json"
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Sett opp Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Valider og lagre åpne kamper
+        env:
+          RUNDE: ${{ github.event.client_payload.runde }}
+          NAVN: ${{ github.event.client_payload.navn }}
+          DATA_JSON: ${{ toJson(github.event.client_payload.data) }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import unicodedata
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          runde = os.environ.get("RUNDE", "").strip()
+          navn = os.environ.get("NAVN", "").strip()
+          data = json.loads(os.environ.get("DATA_JSON", "{}"))
+
+          if runde not in {"r32", "r16", "qf", "sf", "final"}:
+              raise SystemExit(f"Ugyldig runde: {runde}")
+          if not navn:
+              raise SystemExit("Mangler navn")
+
+          status = json.loads(Path("data/status.json").read_text(encoding="utf-8"))
+          round_matches = (status.get(runde) or {}).get("kamper") or []
+          by_id = {str(match.get("id")): match for match in round_matches if match.get("id")}
+          now = datetime.now(timezone.utc)
+
+          def parse_utc(value):
+              if not value:
+                  return None
+              try:
+                  dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+                  if dt.tzinfo is None:
+                      dt = dt.replace(tzinfo=timezone.utc)
+                  return dt.astimezone(timezone.utc)
+              except Exception:
+                  return None
+
+          submitted = parse_utc((data.get("meta") or {}).get("innlevert"))
+          if submitted is None:
+              raise SystemExit("Mangler gyldig innleveringstidspunkt")
+          if submitted > now and (submitted - now).total_seconds() > 300:
+              raise SystemExit("Innleveringstidspunktet ligger for langt frem i tid")
+
+          valid = []
+          rejected = []
+          for tip in data.get("tippinger", []) or []:
+              if not isinstance(tip, dict):
+                  continue
+              kamp_id = str(tip.get("kamp_id", "")).strip()
+              match = by_id.get(kamp_id)
+              kickoff = parse_utc((match or {}).get("utcDate"))
+              home = tip.get("hjemme")
+              away = tip.get("borte")
+              scores_ok = (
+                  isinstance(home, int) and not isinstance(home, bool) and home >= 0
+                  and isinstance(away, int) and not isinstance(away, bool) and away >= 0
+              )
+              open_at_submission = bool(match and kickoff and submitted < kickoff)
+              if open_at_submission and scores_ok:
+                  valid.append(tip)
+              else:
+                  rejected.append(kamp_id or "<mangler kamp_id>")
+
+          if not valid:
+              raise SystemExit("Ingen gyldige, åpne tips i innleveringen")
+
+          data["tippinger"] = valid
+          data.setdefault("meta", {})["server_mottatt"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+          data["meta"]["navn"] = navn
+          data["meta"]["runde"] = runde
+
+          safe = unicodedata.normalize("NFKD", navn).encode("ascii", "ignore").decode("ascii").lower()
+          safe = re.sub(r"[^a-z0-9]+", "_", safe).strip("_") or "ukjent"
+          timestamp = now.strftime("%Y%m%d_%H%M%S")
+          run_id = os.environ.get("GITHUB_RUN_ID", "local")
+          target_dir = Path("tippinger") / runde
+          target_dir.mkdir(parents=True, exist_ok=True)
+          target = target_dir / f"{safe}_{timestamp}_{run_id}.json"
+          target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          print(f"Lagret {len(valid)} tips i {target}")
+          if rejected:
+              print("Avviste tips: " + ", ".join(rejected))
+          PY
 
       - name: Installer avhengigheter
         run: pip install requests
@@ -39,14 +116,13 @@ jobs:
       - name: Kjør poengregning
         run: python scripts/poengregning.py
         env:
-          GITHUB_ACTIONS: true
+          GITHUB_ACTIONS: 'true'
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
 
       - name: Commit tipping og oppdatert leaderboard-data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
           git add tippinger/ data/data.js data/status.json data/deltakere.json data/mangler-resultater.json data/fd_debug.json data/kamp-mapping.json
 
           if git diff --cached --quiet; then
