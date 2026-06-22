@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-22T05:01:03Z
+// Sist oppdatert: 2026-06-22T05:25:05Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-22T05:01:03Z",
+  "sist_oppdatert": "2026-06-22T05:25:05Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",

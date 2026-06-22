@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-21",
   "dato_norsk": "Søndag 21. juni 2026",
-  "generert": "2026-06-22T05:02:41Z",
+  "generert": "2026-06-22T05:26:31Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -482,7 +482,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 21,
+        "antall_sok": 22,
         "fallback": true,
         "cache_key": "Spain_Saudi_Arabia_2026_06_21|4-0",
         "serper_score": -100,
@@ -492,7 +492,7 @@
         "referat_fakta_score": 7,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 21,
+        "retry_antall": 22,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-saudi-arabia-highlights-match-report",
         "mangler": [
@@ -698,7 +698,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 19,
+        "antall_sok": 20,
         "fallback": true,
         "cache_key": "Belgium_Iran_2026_06_21|0-0",
         "serper_score": -100,
@@ -708,7 +708,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 19,
+        "retry_antall": 20,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
         "mangler": [
