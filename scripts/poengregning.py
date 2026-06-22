@@ -31,6 +31,7 @@ from datetime import datetime, timezone, timedelta
 API_URL               = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
 FOOTBALL_DATA_API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
 FOOTBALL_DATA_TOKEN   = os.environ.get("FOOTBALL_DATA_TOKEN", "")
+FIFA_PLAYER_STATS_URL = "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/statistics/player-statistics"
 
 # Lagnavn-mapping: football-data.org → OpenFootball
 # OpenFootball-navn er master siden tipping-appen og kamp-ID-er er basert på disse.
@@ -68,13 +69,26 @@ POENG = {
 }
 POENG_TURNERINGSVINNER = 70
 POENG_BONUS = 10
+POENG_HELHETSBONUS = 20
 BONUS_SPORSMAL = {
-    "r32":   {"id": "antall_uavgjort",      "tekst": "Antall kamper som ender uavgjort etter 90 min"},
-    "r16":   {"id": "antall_nullen",        "tekst": "Antall lag som holder nullen etter 90 min"},
-    "qf":    {"id": "antall_ettmaalsseier", "tekst": "Antall kamper avgjort med ett mål etter 90 min"},
-    "sf":    {"id": "totale_maal",          "tekst": "Totalt antall mål i semifinalene etter 90 min"},
-    "final": {"id": "begge_lag_scorer",     "tekst": "Scorer begge lag i finalen etter 90 min"},
+    "r32":   {"id": "antall_uavgjort",      "tekst": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid"},
+    "r16":   {"id": "antall_nullen",        "tekst": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid"},
+    "qf":    {"id": "antall_ettmaalsseier", "tekst": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid"},
+    "sf":    {"id": "totale_maal",          "tekst": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid"},
+    "final": {"id": "begge_lag_scorer",     "tekst": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"},
 }
+HELHETSBONUS_SPORSMAL = {
+    "flest_maal_lag": {
+        "tekst": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
+    },
+    "totale_maal_utslag": {
+        "tekst": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
+    },
+    "golden_boot": {
+        "tekst": "Hvem vinner FIFA Golden Boot?"
+    },
+}
+UTSLAGSRUNDER = ("r32", "r16", "qf", "sf", "final")
 
 # ── TESTMODUS ─────────────────────────────────────────────────────────────────
 TEST_MODE = not os.environ.get("GITHUB_ACTIONS")
@@ -272,6 +286,91 @@ def runde_fra_openfootball_kamp(kamp):
     return "ukjent"
 
 
+def fd_runde_fra_stage(stage):
+    """Mapper football-data.org sitt stage-felt til intern runde."""
+    stage = str(stage or "").strip().upper()
+    mapping = {
+        "GROUP_STAGE": "gruppe",
+        "LAST_32": "r32",
+        "ROUND_OF_32": "r32",
+        "LAST_16": "r16",
+        "ROUND_OF_16": "r16",
+        "QUARTER_FINALS": "qf",
+        "SEMI_FINALS": "sf",
+        "FINAL": "final",
+    }
+    return mapping.get(stage, "ukjent")
+
+
+def les_tidligere_spillerstatistikk():
+    """Leser siste gyldige FIFA-uttrekk fra eksisterende data.js."""
+    if not DATA_JS.exists():
+        return []
+    try:
+        tekst = DATA_JS.read_text(encoding="utf-8")
+        match = re.search(r"const\s+VM_DATA\s*=\s*(\{.*\})\s*;\s*$", tekst, re.S)
+        if not match:
+            return []
+        data = json.loads(match.group(1))
+        spillere = data.get("spillerstatistikk", [])
+        return spillere if isinstance(spillere, list) else []
+    except Exception:
+        return []
+
+
+def hent_fifa_spillerstatistikk():
+    """
+    Henter FIFAs rangerte spillerstatistikk via Jina.
+
+    Returnerer en liste med rank, spiller, mål, assists og minutter. Førsteplass
+    brukes som Golden Boot-fasit først når hele utslagsfasen er ferdig. Ved en
+    midlertidig feil beholdes siste gyldige uttrekk fra data.js.
+    """
+    print("Henter FIFA spillerstatistikk...")
+    tidligere = les_tidligere_spillerstatistikk()
+    try:
+        response = requests.get(FIFA_PLAYER_STATS_URL, timeout=20)
+        response.raise_for_status()
+        tekst = response.text
+    except Exception as e:
+        print(f"  ADVARSEL: Kunne ikke hente FIFA spillerstatistikk: {e}")
+        if tidligere:
+            print(f"  → Bruker siste gyldige FIFA-uttrekk med {len(tidligere)} spillere")
+        return tidligere
+
+    spillere = []
+    rad_pattern = re.compile(
+        r"\|\s*(\d+)\s*\|\s*(.*?)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|"
+    )
+    for match in rad_pattern.finditer(tekst):
+        rank = int(match.group(1))
+        player_cell = match.group(2)
+        spiller = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", player_cell).strip()
+        spiller = re.sub(r"\s+", " ", spiller)
+        if not spiller:
+            continue
+        spillere.append({
+            "rank": rank,
+            "spiller": spiller,
+            "maal": int(match.group(3)),
+            "assists": int(match.group(4)),
+            "minutter": int(match.group(5)),
+        })
+
+    # Unngå duplikater dersom Jina-svaret inneholder samme tabell flere ganger.
+    unike = {}
+    for spiller in spillere:
+        unike[(spiller["rank"], spiller["spiller"])] = spiller
+    spillere = sorted(unike.values(), key=lambda x: (x["rank"], x["spiller"]))
+    if not spillere:
+        print("  ADVARSEL: FIFA-siden ble hentet, men ingen spillerrader kunne parses")
+        if tidligere:
+            print(f"  → Bruker siste gyldige FIFA-uttrekk med {len(tidligere)} spillere")
+        return tidligere
+    print(f"  → {len(spillere)} rangerte spillere hentet fra FIFA")
+    return spillere
+
+
 def les_kamp_mapping():
     """
     Leser data/kamp-mapping.json.
@@ -379,16 +478,41 @@ def hent_football_data_org():
         score = kamp.get("score", {}) or {}
         ft = score.get("fullTime") or {}
         rt = score.get("regularTime") or {}
+        et = score.get("extraTime") or {}
+        pens = score.get("penalties") or {}
 
-        hjemme = ft.get("home")
-        borte = ft.get("away")
-        if hjemme is None or borte is None:
-            hjemme = rt.get("home")
-            borte = rt.get("away")
-
-        # Hent winner og duration for utslagskamper
+        # Hent winner og duration for utslagskamper.
         winner   = score.get("winner")    # HOME_TEAM / AWAY_TEAM / DRAW
-        duration = score.get("duration")  # REGULAR / EXTRA_TIME / PENALTY_SHOOTOUT
+        duration = score.get("duration") or "REGULAR"
+        fd_runde = fd_runde_fra_stage(kamp.get("stage", ""))
+        er_utslag = fd_runde in UTSLAGSRUNDER
+
+        rt_hjemme = rt.get("home")
+        rt_borte = rt.get("away")
+        ft_hjemme = ft.get("home")
+        ft_borte = ft.get("away")
+
+        mangler_regulartime = False
+        if er_utslag:
+            # Alle tips og bonusspørsmål bruker de første 90 minuttene.
+            # For kamper avgjort innen 90 minutter kan fullTime brukes som trygg fallback.
+            hjemme = rt_hjemme
+            borte = rt_borte
+            if hjemme is None or borte is None:
+                if duration == "REGULAR":
+                    hjemme = ft_hjemme
+                    borte = ft_borte
+                elif status_fd == "FINISHED":
+                    mangler_regulartime = True
+                    hjemme = None
+                    borte = None
+        else:
+            # Gruppespill har ikke ekstraomganger; fullTime og regularTime er samme grunnlag.
+            hjemme = ft_hjemme
+            borte = ft_borte
+            if hjemme is None or borte is None:
+                hjemme = rt_hjemme
+                borte = rt_borte
 
         fd_match_id = kamp.get("id")
         fd_key = str(fd_match_id or kamp_id(team1, team2, dato))
@@ -402,7 +526,16 @@ def hent_football_data_org():
             "hjemme": hjemme,
             "borte": borte,
             "har_score": hjemme is not None and borte is not None,
-            "ferdig": status_fd == "FINISHED",
+            # ferdig betyr her at et gyldig 90-minuttersresultat kan poengberegnes.
+            "ferdig": status_fd == "FINISHED" and hjemme is not None and borte is not None,
+            "kamp_ferdig_api": status_fd == "FINISHED",
+            "mangler_regulartime": mangler_regulartime,
+            "fulltime_hjemme": ft_hjemme,
+            "fulltime_borte": ft_borte,
+            "extratime_hjemme": et.get("home"),
+            "extratime_borte": et.get("away"),
+            "straffer_hjemme": pens.get("home"),
+            "straffer_borte": pens.get("away"),
             "kilde": "football_data_org",
             "winner": winner,
             "duration": duration,
@@ -410,6 +543,7 @@ def hent_football_data_org():
             "fd_dato": dato,
             "fd_utcDate": utc_date,
             "fd_stage": kamp.get("stage", ""),
+            "fd_runde": fd_runde,
             "fd_group": kamp.get("group", ""),
             "fd_kamp_id_basert_paa_dato": kamp_id(team1, team2, dato),
         }
@@ -525,7 +659,7 @@ def finn_fd_match_for_of(kid, team1, team2, dato, runde, fd_lookup, mapping_data
 
 
 def bruk_fd_paa_base(base, fd, team1, team2):
-    """Legger fd.org-status/score inn på en OpenFootball-basert kampoppføring."""
+    """Legger fd.org-status og 90-minuttersresultat inn på en OpenFootball-kamp."""
     if not fd:
         return base
 
@@ -535,6 +669,15 @@ def bruk_fd_paa_base(base, fd, team1, team2):
     base["fd_utcDate"] = fd.get("fd_utcDate")
     base["fd_hjemmelag"] = fd.get("fd_hjemmelag")
     base["fd_bortelag"] = fd.get("fd_bortelag")
+    base["duration"] = fd.get("duration")
+    base["kamp_ferdig_api"] = bool(fd.get("kamp_ferdig_api"))
+    base["fd_mangler_regulartime"] = bool(fd.get("mangler_regulartime"))
+    for felt in (
+        "fulltime_hjemme", "fulltime_borte", "extratime_hjemme", "extratime_borte",
+        "straffer_hjemme", "straffer_borte"
+    ):
+        if fd.get(felt) is not None:
+            base[felt] = fd.get(felt)
 
     if fd.get("har_score"):
         base["hjemme"] = fd.get("hjemme")
@@ -542,12 +685,25 @@ def bruk_fd_paa_base(base, fd, team1, team2):
         base["ferdig"] = fd.get("ferdig", False)
         base["kilde"] = "football_data_org"
         base["kilde_score"] = "football_data_org"
+    elif fd.get("mangler_regulartime"):
+        # OpenFootball score.ft er resultatet etter 90 minutter og kan brukes
+        # som trygg fallback. Varsle bare dersom heller ikke den kilden har score.
+        if base.get("ferdig") and base.get("hjemme") is not None and base.get("borte") is not None:
+            base["mangler_regulartime"] = False
+        else:
+            base["hjemme"] = None
+            base["borte"] = None
+            base["ferdig"] = False
+            base["kilde_score"] = None
+            base["mangler_regulartime"] = True
+    else:
+        base["mangler_regulartime"] = False
 
-        # Sett avanserer automatisk fra fd.org winner-felt (gjelder utslagskamper)
-        if fd.get("ferdig") and fd.get("winner") == "HOME_TEAM":
-            base["avanserer"] = team1
-        elif fd.get("ferdig") and fd.get("winner") == "AWAY_TEAM":
-            base["avanserer"] = team2
+    # Avansement kan brukes selv om 90-minuttersresultatet mangler.
+    if fd.get("kamp_ferdig_api") and fd.get("winner") == "HOME_TEAM":
+        base["avanserer"] = team1
+    elif fd.get("kamp_ferdig_api") and fd.get("winner") == "AWAY_TEAM":
+        base["avanserer"] = team2
 
     return base
 
@@ -582,7 +738,7 @@ def bygg_resultat_lookup(api_data, fd_lookup):
         team1 = kamp.get("team1", "")
         team2 = kamp.get("team2", "")
         score = kamp.get("score", {}) or {}
-        ht    = score.get("ft", [None, None])  # full time score
+        ht    = score.get("ft", [None, None])  # OpenFootball: resultat etter 90 minutter
         runde = runde_fra_openfootball_kamp(kamp)
 
         kid = kamp_id(team1, team2, dato)
@@ -744,15 +900,28 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup=None):
             manuell["status"] = fd_match.get("status", "TIMED")
             manuell["fd_utcDate"] = fd_match.get("fd_utcDate") or manuell.get("fd_utcDate")
             manuell["dato_fd_org"] = fd_match.get("fd_dato") or manuell.get("dato")
+            manuell["duration"] = fd_match.get("duration")
+            manuell["kamp_ferdig_api"] = bool(fd_match.get("kamp_ferdig_api"))
+            manuell["mangler_regulartime"] = bool(fd_match.get("mangler_regulartime"))
+            for felt in (
+                "fulltime_hjemme", "fulltime_borte", "extratime_hjemme", "extratime_borte",
+                "straffer_hjemme", "straffer_borte"
+            ):
+                if fd_match.get(felt) is not None:
+                    manuell[felt] = fd_match.get(felt)
             if fd_match.get("har_score"):
                 manuell["hjemme"] = fd_match.get("hjemme")
                 manuell["borte"] = fd_match.get("borte")
                 manuell["ferdig"] = bool(fd_match.get("ferdig"))
                 manuell["kilde_score"] = "football_data_org"
-                if fd_match.get("ferdig") and fd_match.get("winner") == "HOME_TEAM":
-                    manuell["avanserer"] = manuell.get("hjemmelag")
-                elif fd_match.get("ferdig") and fd_match.get("winner") == "AWAY_TEAM":
-                    manuell["avanserer"] = manuell.get("bortelag")
+            if fd_match.get("kamp_ferdig_api") and fd_match.get("winner") == "HOME_TEAM":
+                manuell["avanserer"] = manuell.get("hjemmelag")
+            elif fd_match.get("kamp_ferdig_api") and fd_match.get("winner") == "AWAY_TEAM":
+                manuell["avanserer"] = manuell.get("bortelag")
+
+        # Et gyldig manuelt 90-minuttersresultat løser API-varselet.
+        if manuell.get("ferdig") and manuell.get("hjemme") is not None and manuell.get("borte") is not None:
+            manuell["mangler_regulartime"] = False
 
         # Den publiserte FD-baserte kamp-ID-en er canonical for genererte R32-kamper.
         # Fjern en eventuell OpenFootball-dublett med samme fd_match_id og annen dato-ID.
@@ -786,10 +955,14 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup=None):
                 "status": manuell.get("status", "FINISHED"),
                 "kilde": "manuell_fallback",
                 "kilde_score": manuell.get("kilde_score", "manuell_fallback"),
+                # Et manuelt, ferdig 90-minuttersresultat løser API-avviket.
+                "mangler_regulartime": False,
             }
             for felt in (
                 "avanserer", "match_no", "slot_hjemme", "slot_borte",
-                "fd_match_id", "fd_utcDate", "fifa_event_id"
+                "fd_match_id", "fd_utcDate", "fifa_event_id", "duration",
+                "fulltime_hjemme", "fulltime_borte", "extratime_hjemme",
+                "extratime_borte", "straffer_hjemme", "straffer_borte"
             ):
                 if manuell.get(felt) is not None:
                     resultat_lookup[kid][felt] = manuell.get(felt)
@@ -806,8 +979,11 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup=None):
 
 def skriv_mangler_resultater(resultat_lookup):
     """
-    Skriver data/mangler-resultater.json med kamper som er datert før i dag,
-    men fortsatt mangler resultat etter 90 minutter.
+    Skriver data/mangler-resultater.json.
+
+    Filen brukes av admin-siden og inneholder både kamper som mangler et vanlig
+    resultat, og ferdige utslagskamper der API-et mangler resultatet etter de
+    første 90 minuttene.
     """
     today = datetime.now(timezone.utc).date()
     mangler = []
@@ -817,10 +993,32 @@ def skriv_mangler_resultater(resultat_lookup):
         try:
             kamp_dato = datetime.fromisoformat(dato_txt[:10]).date()
         except Exception:
+            kamp_dato = None
+
+        if kamp.get("mangler_regulartime"):
+            mangler.append({
+                "type": "mangler_regulartime",
+                "kamp_id": kid,
+                "hjemmelag": kamp.get("hjemmelag", ""),
+                "bortelag": kamp.get("bortelag", ""),
+                "dato": dato_txt,
+                "runde": kamp.get("runde", "ukjent"),
+                "gruppe": kamp.get("gruppe", ""),
+                "status": "mangler_regulartime",
+                "status_api": kamp.get("status", "FINISHED"),
+                "duration": kamp.get("duration"),
+                "fulltime_hjemme": kamp.get("fulltime_hjemme"),
+                "fulltime_borte": kamp.get("fulltime_borte"),
+                "straffer_hjemme": kamp.get("straffer_hjemme"),
+                "straffer_borte": kamp.get("straffer_borte"),
+                "avanserer": kamp.get("avanserer", ""),
+                "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler.",
+            })
             continue
 
-        if kamp_dato < today and not kamp.get("ferdig"):
+        if kamp_dato and kamp_dato < today and not kamp.get("ferdig"):
             mangler.append({
+                "type": "mangler_resultat",
                 "kamp_id": kid,
                 "hjemmelag": kamp.get("hjemmelag", ""),
                 "bortelag": kamp.get("bortelag", ""),
@@ -836,7 +1034,58 @@ def skriv_mangler_resultater(resultat_lookup):
     }
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     MANGLER_RESULTATER_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  → Skrev mangler-resultater.json med {len(mangler)} kamper")
+    print(f"  → Skrev mangler-resultater.json med {len(mangler)} varsler")
+
+# ── BONUSFRISTER ──────────────────────────────────────────────────────────────
+def parse_iso_utc(value):
+    try:
+        text = str(value or "").strip()
+        if not text:
+            return None
+        if text.endswith("Z"):
+            text = text[:-1] + "+00:00"
+        dt = datetime.fromisoformat(text)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def les_bonusfrister():
+    """Henter første bekreftede avspark per utslagsrunde fra status.json.
+
+    Bonus skal aldri baseres på bare kalenderdato. Vi bruker tidligste utcDate på
+    kampene. Rundens lagrede ``frist`` brukes bare som reserve dersom kampene
+    midlertidig mangler tider.
+    """
+    try:
+        status = json.loads(STATUS_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    frister = {}
+    for runde in UTSLAGSRUNDER:
+        round_data = status.get(runde, {}) or {}
+        tider = []
+        for kamp in round_data.get("kamper", []) or []:
+            dt = parse_iso_utc(kamp.get("utcDate") or kamp.get("avspark") or kamp.get("kickoff"))
+            if dt:
+                tider.append(dt)
+        if tider:
+            frister[runde] = min(tider)
+            continue
+        fallback = parse_iso_utc(round_data.get("frist"))
+        if fallback:
+            frister[runde] = fallback
+    return frister
+
+
+def innlevering_foer_bonusfrist(innlevert, runde, frister):
+    """Godtar bonus bare når både innleveringstid og bekreftet frist finnes."""
+    frist = frister.get(runde)
+    tidspunkt = parse_iso_utc(innlevert)
+    return bool(frist and tidspunkt and tidspunkt < frist)
+
 
 # ── LES TIPPINGER ─────────────────────────────────────────────────────────────
 def les_alle_tippinger():
@@ -849,6 +1098,7 @@ def les_alle_tippinger():
     etter hvert som nye kamper åpnes, og også oppdatere et tidligere tips før avspark.
     """
     deltakere = {}
+    bonusfrister = les_bonusfrister()
     runder = ["gruppespill", "r32", "r16", "qf", "sf", "final"]
 
     for runde in runder:
@@ -886,8 +1136,10 @@ def les_alle_tippinger():
                         "gruppespill": [],
                         "utslagsrunder": [],
                         "bonus": {},
+                        "helhetsbonus": {},
                         "_nyeste_utslag": {},
                         "_nyeste_bonus": {},
+                        "_nyeste_helhetsbonus": {},
                         "_gruppespill_sort": ("", ""),
                     }
 
@@ -916,10 +1168,25 @@ def les_alle_tippinger():
                         latest[dedupe_key] = {"sort": sort_key, "tip": tip, "fil": fil.name}
 
                 if data.get("bonus"):
-                    bonus_latest = deltakere[did].setdefault("_nyeste_bonus", {})
-                    current = bonus_latest.get(runde)
-                    if current is None or sort_key >= current["sort"]:
-                        bonus_latest[runde] = {"sort": sort_key, "bonus": data.get("bonus")}
+                    if innlevering_foer_bonusfrist(innlevert, runde, bonusfrister):
+                        bonus_latest = deltakere[did].setdefault("_nyeste_bonus", {})
+                        current = bonus_latest.get(runde)
+                        if current is None or sort_key >= current["sort"]:
+                            bonus_latest[runde] = {"sort": sort_key, "bonus": data.get("bonus")}
+                    else:
+                        print(f"  ADVARSEL: Sen bonusinnlevering ignorert i {fil.name} ({runde})")
+
+                if runde == "r32" and isinstance(data.get("helhetsbonus"), dict):
+                    if innlevering_foer_bonusfrist(innlevert, "r32", bonusfrister):
+                        helhet_latest = deltakere[did].setdefault("_nyeste_helhetsbonus", {})
+                        for bonus_id, svar in data.get("helhetsbonus", {}).items():
+                            if bonus_id not in HELHETSBONUS_SPORSMAL or svar in (None, ""):
+                                continue
+                            current = helhet_latest.get(bonus_id)
+                            if current is None or sort_key >= current["sort"]:
+                                helhet_latest[bonus_id] = {"sort": sort_key, "svar": svar}
+                    else:
+                        print(f"  ADVARSEL: Sen helhetsbonus ignorert i {fil.name}")
 
             except Exception as e:
                 print(f"  FEIL ved lesing av {fil}: {e}")
@@ -938,6 +1205,8 @@ def les_alle_tippinger():
         ]
         bonus_latest = deltaker.pop("_nyeste_bonus", {})
         deltaker["bonus"] = {runde: entry["bonus"] for runde, entry in bonus_latest.items()}
+        helhet_latest = deltaker.pop("_nyeste_helhetsbonus", {})
+        deltaker["helhetsbonus"] = {bonus_id: entry["svar"] for bonus_id, entry in helhet_latest.items()}
         deltaker.pop("_gruppespill_sort", None)
 
     print(f"  → {len(deltakere)} deltakere funnet")
@@ -1044,13 +1313,209 @@ def normaliser_bonus_svar(svar):
     return svar
 
 
-def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None, ascii_lookup=None):
+def normaliser_tekst_svar(value):
+    text = str(value or "").strip().lower()
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", " ", text).strip()
+
+
+def kategoriser_totale_maal(totale_maal):
+    if totale_maal <= 46:
+        return "0_46"
+    if totale_maal <= 77:
+        return "47_77"
+    return "78_pluss"
+
+
+def visningsverdi_maalintervall(value):
+    return {
+        "0_46": "0–46 mål",
+        "47_77": "47–77 mål",
+        "78_pluss": "78 mål eller flere",
+    }.get(value, value)
+
+
+def unike_utslagskamper(resultat_lookup):
+    """Returnerer én canonical kamp per utslagskamp, uten alias-/kildedubletter."""
+    valgte = {}
+    for kid, kamp in resultat_lookup.items():
+        runde = kamp.get("runde")
+        if runde not in UTSLAGSRUNDER:
+            continue
+        if kamp.get("match_no") is not None:
+            nokkel = (runde, "match_no", str(kamp.get("match_no")))
+        elif kamp.get("fd_match_id") is not None:
+            nokkel = (runde, "fd", str(kamp.get("fd_match_id")))
+        else:
+            nokkel = (runde, "kamp", kid)
+        eksisterende = valgte.get(nokkel)
+        if not eksisterende:
+            valgte[nokkel] = kamp
+            continue
+        # Foretrekk oppføringen som har gyldig 90-minuttersresultat.
+        score_ny = kamp.get("ferdig") and kamp.get("hjemme") is not None and kamp.get("borte") is not None
+        score_gammel = eksisterende.get("ferdig") and eksisterende.get("hjemme") is not None and eksisterende.get("borte") is not None
+        if score_ny and not score_gammel:
+            valgte[nokkel] = kamp
+    return list(valgte.values())
+
+
+def bygg_bonusstatus(resultat_lookup, spillerstatistikk):
+    """Bygger offentlig status og fasitgrunnlag for alle bonusspørsmål."""
+    utslagskamper = unike_utslagskamper(resultat_lookup)
+    ferdige = [
+        kamp for kamp in utslagskamper
+        if kamp.get("ferdig") and kamp.get("hjemme") is not None and kamp.get("borte") is not None
+    ]
+    totalt_forventet = sum(FORVENTET_ANTALL.values())
+    alle_ferdige = len(ferdige) >= totalt_forventet
+
+    maal_per_lag = {}
+    totale_maal = 0
+    for kamp in ferdige:
+        h = int(kamp.get("hjemme", 0))
+        b = int(kamp.get("borte", 0))
+        totale_maal += h + b
+        hjemmelag = kamp.get("hjemmelag", "")
+        bortelag = kamp.get("bortelag", "")
+        if hjemmelag:
+            maal_per_lag[hjemmelag] = maal_per_lag.get(hjemmelag, 0) + h
+        if bortelag:
+            maal_per_lag[bortelag] = maal_per_lag.get(bortelag, 0) + b
+
+    maks_maal = max(maal_per_lag.values(), default=0)
+    ledere = sorted([lag for lag, antall in maal_per_lag.items() if antall == maks_maal and antall > 0])
+    maal_kategori = kategoriser_totale_maal(totale_maal)
+    toppscorer = spillerstatistikk[0] if spillerstatistikk else None
+
+    runder = {}
+    for runde in UTSLAGSRUNDER:
+        r_kamper = [k for k in ferdige if k.get("runde") == runde]
+        forventet = FORVENTET_ANTALL.get(runde, 0)
+        ferdig_runde = forventet > 0 and len(r_kamper) >= forventet
+        if runde == "r32":
+            verdi = sum(1 for k in r_kamper if k["hjemme"] == k["borte"])
+        elif runde == "r16":
+            verdi = sum((1 if k["hjemme"] == 0 else 0) + (1 if k["borte"] == 0 else 0) for k in r_kamper)
+        elif runde == "qf":
+            verdi = sum(1 for k in r_kamper if abs(k["hjemme"] - k["borte"]) == 1)
+        elif runde == "sf":
+            verdi = sum(k["hjemme"] + k["borte"] for k in r_kamper)
+        elif runde == "final":
+            verdi = None if not r_kamper else ("ja" if r_kamper[0]["hjemme"] > 0 and r_kamper[0]["borte"] > 0 else "nei")
+        else:
+            verdi = None
+        runder[runde] = {
+            "status": "ferdig" if ferdig_runde else ("paagaar" if r_kamper else "ikke_startet"),
+            "ferdige_kamper": len(r_kamper),
+            "totalt_kamper": forventet,
+            "verdi": verdi,
+            "fasit": verdi if ferdig_runde else None,
+            "sporsmal": BONUS_SPORSMAL[runde]["tekst"],
+        }
+
+    return {
+        "helhet": {
+            "flest_maal_lag": {
+                "status": "ferdig" if alle_ferdige else ("paagaar" if ferdige else "ikke_startet"),
+                "ledere": ledere,
+                "antall_maal": maks_maal,
+                "ferdige_kamper": len(ferdige),
+                "totalt_kamper": totalt_forventet,
+                "fasit": ledere if alle_ferdige else None,
+                "sporsmal": HELHETSBONUS_SPORSMAL["flest_maal_lag"]["tekst"],
+            },
+            "totale_maal_utslag": {
+                "status": "ferdig" if alle_ferdige else ("paagaar" if ferdige else "ikke_startet"),
+                "antall": totale_maal,
+                "forelopig_kategori": maal_kategori,
+                "forelopig_kategori_tekst": visningsverdi_maalintervall(maal_kategori),
+                "ferdige_kamper": len(ferdige),
+                "totalt_kamper": totalt_forventet,
+                "fasit": maal_kategori if alle_ferdige else None,
+                "fasit_tekst": visningsverdi_maalintervall(maal_kategori) if alle_ferdige else None,
+                "sporsmal": HELHETSBONUS_SPORSMAL["totale_maal_utslag"]["tekst"],
+            },
+            "golden_boot": {
+                "status": "ferdig" if alle_ferdige and toppscorer else ("forelopig" if toppscorer else "avventer_fifa"),
+                "spiller": toppscorer.get("spiller") if toppscorer else None,
+                "maal": toppscorer.get("maal") if toppscorer else None,
+                "assists": toppscorer.get("assists") if toppscorer else None,
+                "minutter": toppscorer.get("minutter") if toppscorer else None,
+                "fasit": toppscorer.get("spiller") if alle_ferdige and toppscorer else None,
+                "kilde": "FIFA",
+                "sporsmal": HELHETSBONUS_SPORSMAL["golden_boot"]["tekst"],
+            },
+        },
+        "runder": runder,
+    }
+
+
+def bonus_svar_er_offentlig(runde, bonusfrister, bonusstatus):
+    """Svar blir offentlige når fristen er passert, aldri mens spørsmålet er åpent."""
+    now = datetime.now(timezone.utc)
+    frist = (bonusfrister or {}).get("r32" if runde == "helhet" else runde)
+    if frist:
+        return now >= frist
+    # Fallback hvis status.json mangler frist: vis først når minst én relevant kamp er ferdig.
+    if runde == "helhet":
+        return ((bonusstatus or {}).get("helhet", {}).get("totale_maal_utslag", {}).get("ferdige_kamper", 0) or 0) > 0
+    return ((bonusstatus or {}).get("runder", {}).get(runde, {}).get("ferdige_kamper", 0) or 0) > 0
+
+
+def regn_poeng_helhetsbonus(deltaker, bonusstatus, vis_svar=False):
+    svarene = deltaker.get("helhetsbonus", {}) or {}
+    detaljer = []
+    poeng = 0
+    helhet = (bonusstatus or {}).get("helhet", {})
+
+    for bonus_id, config in HELHETSBONUS_SPORSMAL.items():
+        svar = svarene.get(bonus_id)
+        status = helhet.get(bonus_id, {})
+        fasit = status.get("fasit")
+        ferdig = status.get("status") == "ferdig" and fasit is not None
+        riktig = False
+        fasit_visning = fasit
+
+        if bonus_id == "flest_maal_lag":
+            riktige_lag = fasit if isinstance(fasit, list) else []
+            riktig = ferdig and any(normaliser_tekst_svar(svar) == normaliser_tekst_svar(lag) for lag in riktige_lag)
+            fasit_visning = ", ".join(riktige_lag) if riktige_lag else None
+        elif bonus_id == "totale_maal_utslag":
+            riktig = ferdig and str(svar or "") == str(fasit or "")
+            fasit_visning = visningsverdi_maalintervall(fasit) if fasit else None
+            svar = visningsverdi_maalintervall(svar) if svar else svar
+        elif bonus_id == "golden_boot":
+            riktig = ferdig and normaliser_tekst_svar(svar) == normaliser_tekst_svar(fasit)
+
+        p = POENG_HELHETSBONUS if riktig else 0
+        poeng += p
+        if svar not in (None, "") and (vis_svar or ferdig):
+            detaljer.append({
+                "type": "helhetsbonus",
+                "id": bonus_id,
+                "runde": "helhet",
+                "sporsmal": config["tekst"],
+                "svar": svar,
+                "fasit": fasit_visning,
+                "poeng": p,
+                "riktig": riktig,
+                "ferdig": ferdig,
+            })
+    return poeng, detaljer
+
+
+def regn_poeng_deltaker(
+    deltaker, resultat_lookup, faktisk_turneringsvinner=None, ascii_lookup=None,
+    bonusstatus=None, bonusfrister=None
+):
     """Regner totale poeng for én deltaker."""
     navn                 = deltaker["navn"]
     poeng_totalt         = 0
     poeng_gruppespill    = 0
     poeng_utslagsrunder  = 0
     poeng_bonus          = 0
+    poeng_helhetsbonus   = 0
     poeng_turneringsvinner = 0
     tipping_detaljer     = []
 
@@ -1141,23 +1606,31 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
         riktig_bonus = ferdig_bonus and svar is not None and fasit_norm is not None and svar == fasit_norm
         p_bonus = POENG_BONUS if riktig_bonus else 0
         poeng_bonus += p_bonus
-        tipping_detaljer.append({
-            "type": "bonus",
-            "runde": runde,
-            "sporsmal": BONUS_SPORSMAL[runde]["tekst"],
-            "svar": svar,
-            "fasit": fasit,
-            "poeng": p_bonus,
-            "riktig": riktig_bonus,
-            "ferdig": ferdig_bonus,
-        })
+        if bonus_svar_er_offentlig(runde, bonusfrister, bonusstatus) or ferdig_bonus:
+            tipping_detaljer.append({
+                "type": "bonus",
+                "runde": runde,
+                "sporsmal": BONUS_SPORSMAL[runde]["tekst"],
+                "svar": svar,
+                "fasit": fasit,
+                "poeng": p_bonus,
+                "riktig": riktig_bonus,
+                "ferdig": ferdig_bonus,
+            })
+
+    # ── Bonusspørsmål for hele utslagsfasen ──
+    vis_helhet = bonus_svar_er_offentlig("helhet", bonusfrister, bonusstatus)
+    poeng_helhetsbonus, helhetsdetaljer = regn_poeng_helhetsbonus(
+        deltaker, bonusstatus or {}, vis_svar=vis_helhet
+    )
+    tipping_detaljer.extend(helhetsdetaljer)
 
     # ── Turneringsvinner ──
     if faktisk_turneringsvinner and deltaker.get("turneringsvinner"):
         if deltaker["turneringsvinner"] == faktisk_turneringsvinner:
             poeng_turneringsvinner = POENG_TURNERINGSVINNER
 
-    poeng_totalt = poeng_gruppespill + poeng_utslagsrunder + poeng_bonus + poeng_turneringsvinner
+    poeng_totalt = poeng_gruppespill + poeng_utslagsrunder + poeng_bonus + poeng_helhetsbonus + poeng_turneringsvinner
 
     return {
         "navn":                    navn,
@@ -1166,6 +1639,7 @@ def regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner=None
         "poeng_gruppespill":       poeng_gruppespill,
         "poeng_utslagsrunder":     poeng_utslagsrunder,
         "poeng_bonus":            poeng_bonus,
+        "poeng_helhetsbonus":     poeng_helhetsbonus,
         "poeng_turneringsvinner":  poeng_turneringsvinner,
         "turneringsvinner":        deltaker.get("turneringsvinner", ""),
         "turneringsvinner_riktig": poeng_turneringsvinner > 0,
@@ -1216,7 +1690,7 @@ def bygg_public_resultater(resultat_lookup):
     return resultater
 
 
-def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None):
+def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None, bonusstatus=None, spillerstatistikk=None):
     """Skriver ferdig data.js som leaderboard-siden leser."""
 
     # Sorter etter poeng totalt
@@ -1229,6 +1703,8 @@ def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None):
     payload = {
         "sist_oppdatert": sist_oppdatert,
         "resultater": bygg_public_resultater(resultat_lookup or {}),
+        "bonusstatus": bonusstatus or {"helhet": {}, "runder": {}},
+        "spillerstatistikk": spillerstatistikk or [],
         "stilling": stilling_sortert,
     }
 
@@ -1506,6 +1982,19 @@ def oppdater_tippebar_status(status):
             min(upcoming_deadlines).strftime("%Y-%m-%dT%H:%M:%SZ")
             if upcoming_deadlines else None
         )
+
+        # Felles bonusfrist er første bekreftede avspark i runden. Alle kampene
+        # tas med, også de som allerede er startet, slik at fristen ikke flyttes.
+        alle_tider = [
+            parse_utc_datetime(kamp.get("utcDate"))
+            for kamp in round_data.get("kamper", [])
+        ]
+        alle_tider = [dt for dt in alle_tider if dt]
+        if alle_tider:
+            round_data["frist"] = min(alle_tider).strftime("%Y-%m-%dT%H:%M:%SZ")
+        else:
+            # Behold sist bekreftede frist ved en midlertidig kildefeil.
+            round_data.setdefault("frist", None)
         print(
             f"  → {runde}: synlig={round_data['aapen']}, "
             f"tippebare={open_count}/{len(round_data.get('kamper', []))}"
@@ -1557,6 +2046,8 @@ def main():
         fd_lookup = hent_football_data_org()
         resultat_lookup = bygg_resultat_lookup(api_data, fd_lookup)
 
+    spillerstatistikk = [] if TEST_MODE else hent_fifa_spillerstatistikk()
+
     # Les manuelle kamper/resultater som midlertidig fallback
     print("\nLeser manuelle kamp-/resultat-fallbacks...")
     manuelle_kamper = les_manuelle_kamper()
@@ -1564,6 +2055,15 @@ def main():
         resultat_lookup = flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup if not TEST_MODE else {})
     else:
         print("  → Ingen manuelle kamper/resultater funnet")
+
+    # Oppdater status før bonusfrister leses, slik at samme kjøring bruker de
+    # nyeste bekreftede avsparkstidene.
+    if not TEST_MODE:
+        print("\nOppdaterer status.json...")
+        oppdater_status(resultat_lookup)
+
+    bonusstatus = bygg_bonusstatus(resultat_lookup, spillerstatistikk)
+    bonusfrister = les_bonusfrister()
 
     faktisk_turneringsvinner = None
     final_kamper = [v for v in resultat_lookup.values() if v["runde"] == "final" and v["ferdig"]]
@@ -1589,6 +2089,7 @@ def main():
                 "gruppespill":      d.get("gruppespill", []),
                 "utslagsrunder":    [],
                 "bonus":            {},
+                "helhetsbonus":     {},
             }
         print(f"  → {len(deltakere)} test-deltakere")
     else:
@@ -1608,23 +2109,22 @@ def main():
     print("\nRegner poeng...")
     stilling = []
     for did, deltaker in deltakere.items():
-        resultat = regn_poeng_deltaker(deltaker, resultat_lookup, faktisk_turneringsvinner, ascii_lookup)
+        resultat = regn_poeng_deltaker(
+            deltaker, resultat_lookup, faktisk_turneringsvinner, ascii_lookup,
+            bonusstatus, bonusfrister
+        )
         stilling.append(resultat)
         print(f"  {deltaker['navn']} ({did}): {resultat['poeng_totalt']}p "
               f"(gruppe: {resultat['poeng_gruppespill']}p, "
               f"utslagsrunder: {resultat['poeng_utslagsrunder']}p, "
-              f"bonus: {resultat.get('poeng_bonus', 0)}p, "
+              f"rundebonus: {resultat.get('poeng_bonus', 0)}p, "
+              f"helhetsbonus: {resultat.get('poeng_helhetsbonus', 0)}p, "
               f"turneringsvinner: {resultat['poeng_turneringsvinner']}p)")
 
     # Skriv data.js
     print("\nSkriver data.js...")
     sist_oppdatert = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    skriv_data_js(stilling, sist_oppdatert, resultat_lookup)
-
-    # Oppdater status.json (kun produksjon)
-    if not TEST_MODE:
-        print("\nOppdaterer status.json...")
-        oppdater_status(resultat_lookup)
+    skriv_data_js(stilling, sist_oppdatert, resultat_lookup, bonusstatus, spillerstatistikk)
 
     print("\n" + "=" * 60)
     print("Ferdig!")
