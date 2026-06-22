@@ -408,6 +408,16 @@ body {
 .kamp-kort.locked-kamp .score-input-felt { cursor: not-allowed; opacity: .55; }
 .btn-autofill:disabled { opacity: .45; cursor: not-allowed; }
 
+.kamp-kort.deep-link-target {
+  border-color: var(--accent2);
+  box-shadow: 0 0 0 3px rgba(255,214,0,.14), 0 12px 36px rgba(0,0,0,.28);
+  animation: deepLinkPulse 1.3s ease 2;
+}
+@keyframes deepLinkPulse {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
 @media (max-width: 480px) {
   .lag-navn { font-size: 15px; }
   .runde-tab { padding: 12px 10px; font-size: 11px; }
@@ -482,6 +492,11 @@ let status = null;
 let tippinger = {};
 let aktivRunde = null;
 let deltakerId = null;
+
+const deepLinkParams = new URLSearchParams(window.location.search);
+const deepLinkRunde = deepLinkParams.get("runde");
+const deepLinkKamp = Number(deepLinkParams.get("kamp"));
+let deepLinkFokusert = false;
 
 window.addEventListener("DOMContentLoaded", async () => {
   lastFraStorage();
@@ -660,9 +675,11 @@ function byggUI() {
   byggTabs();
   byggSeksjoner();
 
+  const fraLenke = RUNDE_REKKEFØLGE.includes(deepLinkRunde) && rundeErSynlig(deepLinkRunde) ? deepLinkRunde : null;
   const ønsket = aktivRunde && rundeErSynlig(aktivRunde) ? aktivRunde : null;
-  const første = ønsket || RUNDE_REKKEFØLGE.find(runde => rundeErSynlig(runde)) || "r32";
+  const første = fraLenke || ønsket || RUNDE_REKKEFØLGE.find(runde => rundeErSynlig(runde)) || "r32";
   byttRunde(første);
+  requestAnimationFrame(fokuserLenketKamp);
 }
 
 function byggTabs() {
@@ -740,6 +757,7 @@ function byggRundeHTML(runde, kampListe) {
 
     html += `
       <div class="kamp-kort ${tippebar ? "" : "locked-kamp"} ${erNorge ? "norge-kamp" : ""}" id="kort-${escapeHtml(kamp.id)}"
+           data-match-no="${escapeHtml(kamp.match_no ?? "")}"
            style="${erNorge ? "border-color:rgba(239,43,45,.4);background:rgba(239,43,45,.04)" : ""}">
         <div class="kamp-status ${kampStatusKlasse(kamp)}">${escapeHtml(kampStatusTekst(kamp))}</div>
         <div class="lag-rad">
@@ -853,6 +871,16 @@ function byttRunde(runde) {
   document.getElementById("tab-" + runde)?.classList.add("active");
   oppdaterProgress();
   oppdaterLeverKnapp(runde);
+}
+
+function fokuserLenketKamp() {
+  if (deepLinkFokusert || !Number.isFinite(deepLinkKamp) || deepLinkKamp <= 0) return;
+  const card = document.querySelector(`[data-match-no="${deepLinkKamp}"]`);
+  if (!card) return;
+  deepLinkFokusert = true;
+  card.scrollIntoView({ behavior: "smooth", block: "center" });
+  card.classList.add("deep-link-target");
+  setTimeout(() => card.classList.remove("deep-link-target"), 3200);
 }
 
 function oppdaterProgress() {
