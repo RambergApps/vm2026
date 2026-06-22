@@ -1,0 +1,45 @@
+name: Kontroller FIFA R32-mapping
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  kontroller-r32:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer avhengigheter
+        run: pip install requests
+
+      - name: Kontroller FIFA mot football-data.org
+        run: python scripts/kontroller-fifa-r32.py
+        env:
+          GITHUB_ACTIONS: "true"
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
+      - name: Lagre kontrollresultatet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/fifa-r32-kontroll.json
+
+          if git diff --cached --quiet; then
+            echo "Ingen endringer i kontrollresultatet"
+          else
+            git commit -m "Kontroll: oppdater FIFA R32-mapping"
+            git push
+          fi
