@@ -766,8 +766,8 @@
   "Spain_Saudi_Arabia_2026_06_21|4-0": {
     "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
     "resultat": "4-0",
-    "sist_sokt": "2026-06-22T08:31:22Z",
-    "antall_sok": 29,
+    "sist_sokt": "2026-06-22T09:01:30Z",
+    "antall_sok": 30,
     "beste_score": 7,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -784,7 +784,7 @@
       "kamp_hjemme_score": 4,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-22T08:31:10Z",
+      "hentet": "2026-06-22T09:01:15Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -827,8 +827,8 @@
   "Belgium_Iran_2026_06_21|0-0": {
     "kamp_id": "Belgium_Iran_2026_06_21",
     "resultat": "0-0",
-    "sist_sokt": "2026-06-22T08:31:50Z",
-    "antall_sok": 27,
+    "sist_sokt": "2026-06-22T09:02:19Z",
+    "antall_sok": 28,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -836,7 +836,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v22-fifa-english-summary",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -845,15 +845,15 @@
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-22T08:31:29Z",
+      "hentet": "2026-06-22T09:01:52Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -877,16 +877,16 @@
         "resultat_i_fulltekst"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 2
     }
   },
   "Uruguay_Cape_Verde_2026_06_21|2-2": {
     "kamp_id": "Uruguay_Cape_Verde_2026_06_21",
     "resultat": "2-2",
-    "sist_sokt": "2026-06-22T08:32:17Z",
-    "antall_sok": 18,
+    "sist_sokt": "2026-06-22T09:02:47Z",
+    "antall_sok": 19,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -903,7 +903,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-06-22T08:31:58Z",
+      "hentet": "2026-06-22T09:02:27Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
