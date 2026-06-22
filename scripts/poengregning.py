@@ -656,7 +656,7 @@ def les_manuelle_kamper():
 
 
 def normaliser_manuell_kamp(kamp):
-    """Normaliserer én manuell kamp til samme format som resultat_lookup."""
+    """Normaliserer én manuell/generert kamp til samme format som resultat_lookup."""
     hjemmelag = (kamp.get("hjemmelag") or kamp.get("hjemme_lag") or kamp.get("hjemmeNavn") or "").strip()
     bortelag = (kamp.get("bortelag") or kamp.get("borte_lag") or kamp.get("borteNavn") or "").strip()
     dato = (kamp.get("dato") or kamp.get("date") or "").strip()
@@ -686,6 +686,7 @@ def normaliser_manuell_kamp(kamp):
         "gruppe": kamp.get("gruppe", ""),
         "dato": dato,
         "kilde": "manuell_fallback",
+        "kilde_opprinnelig": kamp.get("kilde", "manuell"),
     }
     match_no = parse_int(kamp.get("match_no"))
     if match_no is not None:
@@ -696,21 +697,28 @@ def normaliser_manuell_kamp(kamp):
         item["slot_borte"] = str(kamp.get("slot_borte"))
     if kamp.get("avanserer"):
         item["avanserer"] = str(kamp.get("avanserer")).strip()
+    if kamp.get("utcDate"):
+        item["utcDate"] = str(kamp.get("utcDate")).strip()
+        item["fd_utcDate"] = str(kamp.get("utcDate")).strip()
+    if kamp.get("fd_match_id") is not None:
+        item["fd_match_id"] = kamp.get("fd_match_id")
+    if kamp.get("fifa_event_id") is not None:
+        item["fifa_event_id"] = kamp.get("fifa_event_id")
     return kid, item
 
-
-def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
+def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup=None):
     """
-    Fletter manuelle kamper/resultater inn i OpenFootball-lookup.
+    Fletter manuelle/genererte kamper inn i resultat_lookup.
 
-    Regel:
-      1. OpenFootball-resultat vinner hvis OpenFootball har ferdig score.
-      2. Manuelt resultat brukes hvis OpenFootball mangler score.
-      3. Manuell kamp brukes hvis OpenFootball mangler hele kampen.
+    Genererte utslagskamper kan ha en annen kamp-ID-dato enn OpenFootball fordi
+    den endelige ID-en bruker football-data.org sin utcDate. Derfor kobles de
+    også direkte på fd_match_id, slik at tips på den publiserte kamp-ID-en får
+    score selv ved datoavvik mellom kildene.
     """
     brukt = 0
     lagt_til = 0
     ignorert = 0
+    fd_lookup = fd_lookup or {}
 
     for raw in manuelle_kamper:
         kid, manuell = normaliser_manuell_kamp(raw)
@@ -718,47 +726,83 @@ def flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper):
             print(f"  ADVARSEL: Hopper over manuell kamp uten kamp_id/lag/dato: {raw}")
             continue
 
+        fd_match = None
+        duplicate_fd_keys = []
+        if manuell.get("fd_match_id") is not None:
+            fd_id = str(manuell.get("fd_match_id"))
+            fd_match = fd_lookup.get(fd_id)
+            duplicate_fd_keys = [
+                other_kid
+                for other_kid, other in resultat_lookup.items()
+                if other_kid != kid
+                and str(other.get("fd_match_id") or "") == fd_id
+                and other.get("runde") == manuell.get("runde")
+            ]
+
+        # Berik den publiserte kamp-ID-en direkte fra football-data.org.
+        if fd_match:
+            manuell["status"] = fd_match.get("status", "TIMED")
+            manuell["fd_utcDate"] = fd_match.get("fd_utcDate") or manuell.get("fd_utcDate")
+            manuell["dato_fd_org"] = fd_match.get("fd_dato") or manuell.get("dato")
+            if fd_match.get("har_score"):
+                manuell["hjemme"] = fd_match.get("hjemme")
+                manuell["borte"] = fd_match.get("borte")
+                manuell["ferdig"] = bool(fd_match.get("ferdig"))
+                manuell["kilde_score"] = "football_data_org"
+                if fd_match.get("ferdig") and fd_match.get("winner") == "HOME_TEAM":
+                    manuell["avanserer"] = manuell.get("hjemmelag")
+                elif fd_match.get("ferdig") and fd_match.get("winner") == "AWAY_TEAM":
+                    manuell["avanserer"] = manuell.get("bortelag")
+
+        # Den publiserte FD-baserte kamp-ID-en er canonical for genererte R32-kamper.
+        # Fjern en eventuell OpenFootball-dublett med samme fd_match_id og annen dato-ID.
+        if manuell.get("kilde_opprinnelig") == "football_data_org_r32":
+            for duplicate_key in duplicate_fd_keys:
+                resultat_lookup.pop(duplicate_key, None)
+
         eksisterende = resultat_lookup.get(kid)
         if not eksisterende:
             resultat_lookup[kid] = manuell
             lagt_til += 1
             continue
 
-        # OpenFootball er master når den har ferdig resultat.
-        # Men manuell "avanserer" kan fortsatt brukes til å bygge neste runde
-        # hvis kampen står uavgjort etter 90 minutter.
         if eksisterende.get("ferdig"):
             if manuell.get("avanserer") and not eksisterende.get("avanserer"):
                 eksisterende["avanserer"] = manuell.get("avanserer")
             if manuell.get("match_no") and not eksisterende.get("match_no"):
                 eksisterende["match_no"] = manuell.get("match_no")
+            for felt in ("fd_match_id", "fd_utcDate", "fifa_event_id"):
+                if manuell.get(felt) is not None and eksisterende.get(felt) is None:
+                    eksisterende[felt] = manuell.get(felt)
             ignorert += 1
             continue
 
-        # Hvis OpenFootball har kamp, men ikke resultat, kan manuell fallback brukes.
         if manuell.get("ferdig"):
             resultat_lookup[kid] = {
                 **eksisterende,
                 "hjemme": manuell["hjemme"],
                 "borte": manuell["borte"],
                 "ferdig": True,
+                "status": manuell.get("status", "FINISHED"),
                 "kilde": "manuell_fallback",
+                "kilde_score": manuell.get("kilde_score", "manuell_fallback"),
             }
-            for felt in ("avanserer", "match_no", "slot_hjemme", "slot_borte"):
+            for felt in (
+                "avanserer", "match_no", "slot_hjemme", "slot_borte",
+                "fd_match_id", "fd_utcDate", "fifa_event_id"
+            ):
                 if manuell.get(felt) is not None:
                     resultat_lookup[kid][felt] = manuell.get(felt)
             brukt += 1
         else:
-            # Behold OpenFootball-kampen, men fyll eventuelt inn manglende metadata fra manuell kamp.
             resultat_lookup[kid] = {
                 **manuell,
                 **eksisterende,
                 "kilde": eksisterende.get("kilde", "openfootball"),
             }
 
-    print(f"  → Manuell fallback: {lagt_til} kamper lagt til, {brukt} resultater brukt, {ignorert} ignorert fordi OpenFootball har resultat")
+    print(f"  → Manuell fallback: {lagt_til} kamper lagt til, {brukt} resultater brukt, {ignorert} ignorert fordi API har resultat")
     return resultat_lookup
-
 
 def skriv_mangler_resultater(resultat_lookup):
     """
@@ -798,15 +842,13 @@ def skriv_mangler_resultater(resultat_lookup):
 def les_alle_tippinger():
     """
     Leser alle JSON-filer fra tippinger/-mappene.
-    Returnerer dict med deltaker_id → samlet tipping-data.
 
-    Kobling på tvers av runder:
-    - Gruppespill: deltaker_id genereres fra navn (slug)
-    - Utslagsrunder: bruker meta.deltaker_id hvis tilgjengelig,
-      faller tilbake på navn-slug for bakoverkompatibilitet.
+    For utslagsrunder dedupliseres tips på:
+        deltaker_id + runde + kamp_id
+    Nyeste meta.innlevert vinner. Dermed kan samme deltaker levere flere ganger
+    etter hvert som nye kamper åpnes, og også oppdatere et tidligere tips før avspark.
     """
-    deltakere = {}  # { deltaker_id: { navn, deltaker_id, tippinger, ... } }
-
+    deltakere = {}
     runder = ["gruppespill", "r32", "r16", "qf", "sf", "final"]
 
     for runde in runder:
@@ -814,62 +856,93 @@ def les_alle_tippinger():
         if not mappe.exists():
             continue
 
-        for fil in sorted(mappe.glob("*.json")):  # sorter for deterministisk rekkefølge
+        for fil in sorted(mappe.glob("*.json")):
             try:
                 with open(fil, encoding="utf-8") as f:
                     data = json.load(f)
 
-                navn = data.get("meta", {}).get("navn", "").strip()
+                meta = data.get("meta", {}) or {}
+                navn = str(meta.get("navn", "")).strip()
                 if not navn:
                     print(f"  ADVARSEL: Ingen navn i {fil.name} — hopper over")
                     continue
 
-                # ── Finn riktig deltaker_id ──────────────────────────────────
                 if runde == "gruppespill":
-                    # Gruppespill etablerer deltaker_id fra navn
                     did = lag_deltaker_id(navn)
                 else:
-                    # Utslagsrunder: bruk meta.deltaker_id hvis det finnes og er kjent
-                    did_fra_meta = data.get("meta", {}).get("deltaker_id", "").strip()
+                    did_fra_meta = str(meta.get("deltaker_id", "") or "").strip()
                     if did_fra_meta and did_fra_meta in deltakere:
                         did = did_fra_meta
                     else:
-                        # Bakoverkompatibilitet: slug av navn
                         did = lag_deltaker_id(navn)
                         if did_fra_meta and did_fra_meta not in deltakere:
-                            # Logg avvik for enklere feilsøking
                             print(f"  ADVARSEL: Ukjent deltaker_id '{did_fra_meta}' i {fil.name} — bruker navn-slug '{did}'")
 
-                # ── Opprett deltaker hvis ny ─────────────────────────────────
                 if did not in deltakere:
                     deltakere[did] = {
-                        "navn":             navn,
-                        "deltaker_id":      did,
+                        "navn": navn,
+                        "deltaker_id": did,
                         "turneringsvinner": "",
-                        "gruppespill":      [],
-                        "utslagsrunder":    [],
-                        "bonus":            {},
+                        "gruppespill": [],
+                        "utslagsrunder": [],
+                        "bonus": {},
+                        "_nyeste_utslag": {},
+                        "_nyeste_bonus": {},
+                        "_gruppespill_sort": ("", ""),
                     }
 
-                # ── Legg til tippinger ───────────────────────────────────────
+                innlevert = str(meta.get("innlevert", "") or "")
+                sort_key = (innlevert, fil.name)
+
                 if runde == "gruppespill":
-                    # Nyeste fil vinner (siste innlevering gjelder)
-                    deltakere[did]["turneringsvinner"] = data.get("turneringsvinner", "")
-                    deltakere[did]["gruppespill"]      = data.get("gruppespill", [])
-                else:
-                    for t in data.get("tippinger", []):
-                        t["runde"] = runde
-                        deltakere[did]["utslagsrunder"].append(t)
-                    if data.get("bonus"):
-                        deltakere[did].setdefault("bonus", {})[runde] = data.get("bonus")
+                    if sort_key >= deltakere[did].get("_gruppespill_sort", ("", "")):
+                        deltakere[did]["turneringsvinner"] = data.get("turneringsvinner", "")
+                        deltakere[did]["gruppespill"] = data.get("gruppespill", [])
+                        deltakere[did]["_gruppespill_sort"] = sort_key
+                    continue
+
+                latest = deltakere[did].setdefault("_nyeste_utslag", {})
+                for raw_tip in data.get("tippinger", []) or []:
+                    if not isinstance(raw_tip, dict):
+                        continue
+                    kid = str(raw_tip.get("kamp_id", "") or "").strip()
+                    if not kid:
+                        continue
+                    dedupe_key = f"{runde}:{kid}"
+                    current = latest.get(dedupe_key)
+                    if current is None or sort_key >= current["sort"]:
+                        tip = dict(raw_tip)
+                        tip["runde"] = runde
+                        latest[dedupe_key] = {"sort": sort_key, "tip": tip, "fil": fil.name}
+
+                if data.get("bonus"):
+                    bonus_latest = deltakere[did].setdefault("_nyeste_bonus", {})
+                    current = bonus_latest.get(runde)
+                    if current is None or sort_key >= current["sort"]:
+                        bonus_latest[runde] = {"sort": sort_key, "bonus": data.get("bonus")}
 
             except Exception as e:
                 print(f"  FEIL ved lesing av {fil}: {e}")
 
+    for deltaker in deltakere.values():
+        latest = deltaker.pop("_nyeste_utslag", {})
+        deltaker["utslagsrunder"] = [
+            entry["tip"]
+            for _, entry in sorted(
+                latest.items(),
+                key=lambda item: (
+                    item[1]["tip"].get("runde", ""),
+                    item[1]["tip"].get("kamp_id", ""),
+                ),
+            )
+        ]
+        bonus_latest = deltaker.pop("_nyeste_bonus", {})
+        deltaker["bonus"] = {runde: entry["bonus"] for runde, entry in bonus_latest.items()}
+        deltaker.pop("_gruppespill_sort", None)
+
     print(f"  → {len(deltakere)} deltakere funnet")
     return deltakere
 
-# ── SKRIV DELTAKERE.JSON ──────────────────────────────────────────────────────
 def skriv_deltakere_json(deltakere):
     """
     Skriver data/deltakere.json — en liste over alle kjente deltakere.
@@ -1275,64 +1348,65 @@ def slot_vinner(slot, avanserer_by_no):
 
 def oppdater_status_med_api_kamper(status, resultat_lookup):
     """
-    OpenFootball er master når den har komplett sett med kjente kamper for en runde.
-    Hvis ikke bevares eksisterende status, og manuelle fallback-kamper kan fylle hull.
+    Oppdaterer hver utslagskamp på stabilt match_no.
+
+    Dette er bevisst per kamp, ikke per komplett runde. Dermed kan M74 bli
+    tippebar straks begge lag er kjent, selv om andre R32-kamper fortsatt har
+    placeholders.
     """
-    for runde in RUNDE_REKKEFOLGE:
-        forventet = FORVENTET_ANTALL[runde]
-        api_kjente = [
-            (kid, v) for kid, v in resultat_lookup.items()
-            if v.get("runde") == runde
-            and v.get("kilde") in ("openfootball", "football_data_org")
-            and er_kjent_lag(v.get("hjemmelag"))
-            and er_kjent_lag(v.get("bortelag"))
-        ]
-        if len(api_kjente) >= forventet:
-            status[runde]["kamper"] = [
-                {
-                    "id": kid,
-                    "hjemme": v.get("hjemmelag", ""),
-                    "borte": v.get("bortelag", ""),
-                    "dato": v.get("dato", ""),
-                    "info": "OpenFootball",
-                    "match_no": match_no_for(runde, i),
-                    "slot_hjemme": v.get("hjemmelag", ""),
-                    "slot_borte": v.get("bortelag", ""),
-                }
-                for i, (kid, v) in enumerate(sorted(api_kjente, key=lambda x: x[1].get("dato", "")))
-            ]
-            print(f"  → {runde}: OpenFootball har komplett kampoppsett ({len(api_kjente)})")
+    source_priority = {
+        "manuell_fallback": 1,
+        "openfootball": 2,
+        "football_data_org": 3,
+    }
+
+    by_round_and_no = {}
+    for kid, value in resultat_lookup.items():
+        runde = value.get("runde")
+        if runde not in RUNDE_REKKEFOLGE:
+            continue
+        match_no = parse_int(value.get("match_no"))
+        if match_no is None:
+            continue
+        if not (er_kjent_lag(value.get("hjemmelag")) and er_kjent_lag(value.get("bortelag"))):
             continue
 
-        # Manuelle utslagskamper kan fylle kjent lag på korrekt match_no uten å miste øvrige placeholders.
-        manual_by_no = {
-            int(v["match_no"]): (kid, v)
-            for kid, v in resultat_lookup.items()
-            if v.get("runde") == runde
-            and v.get("kilde") == "manuell_fallback"
-            and v.get("match_no") is not None
-            and er_kjent_lag(v.get("hjemmelag"))
-            and er_kjent_lag(v.get("bortelag"))
-        }
-        for kamp in status.get(runde, {}).get("kamper", []):
-            mn = kamp.get("match_no")
-            if mn in manual_by_no:
-                kid, v = manual_by_no[mn]
-                kamp.update({
-                    "id": kid,
-                    "hjemme": v.get("hjemmelag", ""),
-                    "borte": v.get("bortelag", ""),
-                    "dato": v.get("dato", kamp.get("dato", "")),
-                    "info": "Manuell fallback",
-                    "avanserer": v.get("avanserer", kamp.get("avanserer", "")),
-                })
+        key = (runde, match_no)
+        current = by_round_and_no.get(key)
+        priority = source_priority.get(value.get("kilde"), 0)
+        if current is None or priority >= current[2]:
+            by_round_and_no[key] = (kid, value, priority)
+
+    for runde in RUNDE_REKKEFOLGE:
+        for index, kamp in enumerate(status.get(runde, {}).get("kamper", [])):
+            match_no = match_no_for(runde, index, kamp)
+            selected = by_round_and_no.get((runde, match_no))
+            if not selected:
+                continue
+            kid, value, _ = selected
+            dato = value.get("dato_fd_org") or value.get("dato") or kamp.get("dato", "")
+            utc_date = value.get("fd_utcDate") or value.get("utcDate") or ""
+            kamp.update({
+                "id": kid,
+                "hjemme": value.get("hjemmelag", ""),
+                "borte": value.get("bortelag", ""),
+                "dato": dato,
+                "info": "Kampoppsett bekreftet",
+                "match_no": match_no,
+            })
+            if utc_date:
+                kamp["utcDate"] = utc_date
+            if value.get("fd_match_id") is not None:
+                kamp["fd_match_id"] = value.get("fd_match_id")
+            if value.get("fifa_event_id") is not None:
+                kamp["fifa_event_id"] = value.get("fifa_event_id")
+            if value.get("avanserer"):
+                kamp["avanserer"] = value.get("avanserer")
 
 def reset_status_til_originale_slots(status):
     """
-    Bygger statusvisningen opp igjen fra opprinnelige bracket-slots før API/manuell fallback legges på.
-
-    Dette hindrer at gamle manuelle testdata blir liggende igjen i status.json etter at
-    fallback-kampen er slettet fra data/manuelle-kamper.json.
+    Bygger statusvisningen opp igjen fra opprinnelige bracket-slots før
+    bekreftede kampdata legges på. Dynamiske felter beregnes på nytt hver kjøring.
     """
     for runde in RUNDE_REKKEFOLGE:
         for index, kamp in enumerate(status.get(runde, {}).get("kamper", [])):
@@ -1348,7 +1422,11 @@ def reset_status_til_originale_slots(status):
             kamp["borte"] = slot_b
             kamp["id"] = kamp_id(slot_h, slot_b, dato)
             kamp["info"] = ""
-            kamp.pop("avanserer", None)
+            for felt in (
+                "avanserer", "utcDate", "fd_match_id", "fifa_event_id",
+                "tippebar", "tippe_status"
+            ):
+                kamp.pop(felt, None)
 
 def autofyll_neste_runder(status, resultat_lookup):
     """
@@ -1378,13 +1456,68 @@ def autofyll_neste_runder(status, resultat_lookup):
                 kamp["id"] = kamp_id(kamp.get("hjemme", slot_h), kamp.get("borte", slot_b), kamp.get("dato", ""))
                 kamp["info"] = "Autofyll fra avansement"
 
+def parse_utc_datetime(value):
+    if not value:
+        return None
+    try:
+        text = str(value).strip().replace("Z", "+00:00")
+        dt = datetime.fromisoformat(text)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def oppdater_tippebar_status(status):
+    """Setter tippebar per kamp og holder runden synlig etter første åpning."""
+    now = datetime.now(timezone.utc)
+
+    for runde in RUNDE_REKKEFOLGE:
+        round_data = status.setdefault(runde, {"aapen": False, "frist": None, "kamper": []})
+        any_known_pair = False
+        upcoming_deadlines = []
+        open_count = 0
+
+        for kamp in round_data.get("kamper", []):
+            known_pair = er_kjent_lag(kamp.get("hjemme")) and er_kjent_lag(kamp.get("borte"))
+            kickoff = parse_utc_datetime(kamp.get("utcDate"))
+            any_known_pair = any_known_pair or known_pair
+
+            if not known_pair:
+                kamp["tippebar"] = False
+                kamp["tippe_status"] = "venter_pa_lag"
+            elif kickoff is None:
+                kamp["tippebar"] = False
+                kamp["tippe_status"] = "mangler_avsparkstid"
+            elif now >= kickoff:
+                kamp["tippebar"] = False
+                kamp["tippe_status"] = "startet"
+            else:
+                kamp["tippebar"] = True
+                kamp["tippe_status"] = "aapen"
+                upcoming_deadlines.append(kickoff)
+                open_count += 1
+
+        # Når runden først har fått en ferdig definert kamp, skal fanen forbli synlig.
+        round_data["aapen"] = bool(round_data.get("aapen") or any_known_pair)
+        round_data["antall_tippebare"] = open_count
+        round_data["neste_frist"] = (
+            min(upcoming_deadlines).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if upcoming_deadlines else None
+        )
+        print(
+            f"  → {runde}: synlig={round_data['aapen']}, "
+            f"tippebare={open_count}/{len(round_data.get('kamper', []))}"
+        )
+
+
 def oppdater_status(resultat_lookup):
     """
-    Oppdaterer status.json.
+    Oppdaterer status.json per kamp.
 
-    OpenFootball er master for kampoppsett når datakilden har komplett runde.
-    Manuelle fallback-kamper/resultater brukes midlertidig når OpenFootball mangler data.
-    Feltet `avanserer` brukes bare til å fylle neste utslagsrunde, ikke til poeng.
+    Runder blir synlige så snart minst én kamp har begge lag klare. Selve
+    innleveringen styres av kampfeltet tippebar, som lukkes ved UTC-avspark.
     """
     try:
         with open(STATUS_JSON, encoding="utf-8") as f:
@@ -1399,22 +1532,14 @@ def oppdater_status(resultat_lookup):
     oppdater_status_med_api_kamper(status, resultat_lookup)
     sikre_status_metadata(status)
     legg_match_no_fra_status(resultat_lookup, status)
+    # Kjør én gang til slik at API-oppføringer som nå fikk match_no kan berike metadata.
+    oppdater_status_med_api_kamper(status, resultat_lookup)
     autofyll_neste_runder(status, resultat_lookup)
-
-    for runde in RUNDE_REKKEFOLGE:
-        if status[runde].get("aapen"):
-            continue
-        forrige = FORRIGE_RUNDE[runde]
-        forrige_ferdig = runde_ferdig_i_status(status, resultat_lookup, forrige)
-        alle_kjente = alle_lag_kjente_i_status(status, runde)
-        if forrige_ferdig and alle_kjente:
-            status[runde]["aapen"] = True
-            print(f"  → ÅPNER {runde.upper()}! Forrige runde ferdig og alle lag kjente.")
-        else:
-            print(f"  → {runde}: venter (forrige ferdig={forrige_ferdig}, alle lag kjente={alle_kjente})")
+    oppdater_tippebar_status(status)
 
     with open(STATUS_JSON, "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
 # ── HOVEDFUNKSJON ─────────────────────────────────────────────────────────────
 def main():
@@ -1436,7 +1561,7 @@ def main():
     print("\nLeser manuelle kamp-/resultat-fallbacks...")
     manuelle_kamper = les_manuelle_kamper()
     if manuelle_kamper:
-        resultat_lookup = flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper)
+        resultat_lookup = flett_inn_manuelle_kamper(resultat_lookup, manuelle_kamper, fd_lookup if not TEST_MODE else {})
     else:
         print("  → Ingen manuelle kamper/resultater funnet")
 
