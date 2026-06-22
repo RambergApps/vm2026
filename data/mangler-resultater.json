@@ -1,19 +1,10 @@
 {
-  "sist_sjekket": "2026-06-22T00:01:04Z",
+  "sist_sjekket": "2026-06-22T00:30:51Z",
   "kamper": [
     {
       "kamp_id": "New_Zealand_Egypt_2026_06_21",
       "hjemmelag": "New Zealand",
       "bortelag": "Egypt",
-      "dato": "2026-06-21",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "kamp_id": "Uruguay_Cape_Verde_2026_06_21",
-      "hjemmelag": "Uruguay",
-      "bortelag": "Cape Verde",
       "dato": "2026-06-21",
       "runde": "gruppe",
       "gruppe": "",
