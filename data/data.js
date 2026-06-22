@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-22T11:31:00Z
+// Sist oppdatert: 2026-06-22T12:01:12Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-22T11:31:00Z",
+  "sist_oppdatert": "2026-06-22T12:01:12Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1412,19 +1412,6 @@ const VM_DATA = {
       "dato_openfootball": "2026-06-29",
       "kilde_score": "openfootball"
     },
-    "1E_3A_B_C_D_F_2026_06_29": {
-      "kamp_id": "1E_3A_B_C_D_F_2026_06_29",
-      "canonical_kamp_id": "1E_3A_B_C_D_F_2026_06_29",
-      "hjemmelag": "1E",
-      "bortelag": "3A/B/C/D/F",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
-    },
     "1F_2C_2026_06_29": {
       "kamp_id": "1F_2C_2026_06_29",
       "canonical_kamp_id": "1F_2C_2026_06_29",
@@ -1438,17 +1425,17 @@ const VM_DATA = {
       "dato_openfootball": "2026-06-29",
       "kilde_score": "openfootball"
     },
-    "1A_3C_E_F_H_I_2026_06_30": {
-      "kamp_id": "1A_3C_E_F_H_I_2026_06_30",
-      "canonical_kamp_id": "1A_3C_E_F_H_I_2026_06_30",
-      "hjemmelag": "1A",
-      "bortelag": "3C/E/F/H/I",
+    "Germany_3A_B_C_D_F_2026_06_29": {
+      "kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
+      "canonical_kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
+      "hjemmelag": "Germany",
+      "bortelag": "3A/B/C/D/F",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
       "status": "TIMED",
       "runde": "r32",
-      "dato_openfootball": "2026-06-30",
+      "dato_openfootball": "2026-06-29",
       "kilde_score": "openfootball"
     },
     "1I_3C_D_F_G_H_2026_06_30": {
@@ -1477,17 +1464,17 @@ const VM_DATA = {
       "dato_openfootball": "2026-06-30",
       "kilde_score": "openfootball"
     },
-    "1D_3B_E_F_I_J_2026_07_01": {
-      "kamp_id": "1D_3B_E_F_I_J_2026_07_01",
-      "canonical_kamp_id": "1D_3B_E_F_I_J_2026_07_01",
-      "hjemmelag": "1D",
-      "bortelag": "3B/E/F/I/J",
+    "Mexico_3C_E_F_H_I_2026_06_30": {
+      "kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
+      "canonical_kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
+      "hjemmelag": "Mexico",
+      "bortelag": "3C/E/F/H/I",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
       "status": "TIMED",
       "runde": "r32",
-      "dato_openfootball": "2026-07-01",
+      "dato_openfootball": "2026-06-30",
       "kilde_score": "openfootball"
     },
     "1G_3A_E_H_I_J_2026_07_01": {
@@ -1508,6 +1495,19 @@ const VM_DATA = {
       "canonical_kamp_id": "1L_3E_H_I_J_K_2026_07_01",
       "hjemmelag": "1L",
       "bortelag": "3E/H/I/J/K",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "r32",
+      "dato_openfootball": "2026-07-01",
+      "kilde_score": "openfootball"
+    },
+    "USA_3B_E_F_I_J_2026_07_01": {
+      "kamp_id": "USA_3B_E_F_I_J_2026_07_01",
+      "canonical_kamp_id": "USA_3B_E_F_I_J_2026_07_01",
+      "hjemmelag": "USA",
+      "bortelag": "3B/E/F/I/J",
       "hjemme": null,
       "borte": null,
       "ferdig": false,

@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-22T11:32:23Z",
+  "sist_oppdatert": "2026-06-22T12:02:26Z",
   "antall_kamper": 40,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -21,7 +21,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 36,
+        "antall_sok": 37,
         "fallback": true,
         "cache_key": "Belgium_Iran_2026_06_21|0-0",
         "serper_score": -100,
@@ -31,7 +31,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 36,
+        "retry_antall": 37,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
         "mangler": [
@@ -222,7 +222,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T11:31:54Z"
+      "oppdatert": "2026-06-22T12:02:01Z"
     },
     "Brazil_Haiti_2026_06_19": {
       "kamp_id": "Brazil_Haiti_2026_06_19",
@@ -2211,7 +2211,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 38,
+        "antall_sok": 39,
         "fallback": true,
         "cache_key": "Spain_Saudi_Arabia_2026_06_21|4-0",
         "serper_score": -100,
@@ -2221,7 +2221,7 @@
         "referat_fakta_score": 7,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 38,
+        "retry_antall": 39,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-saudi-arabia-highlights-match-report",
         "mangler": [
@@ -2412,7 +2412,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T11:31:24Z"
+      "oppdatert": "2026-06-22T12:01:30Z"
     },
     "Switzerland_Bosnia___Herzegovina_2026_06_18": {
       "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -3303,7 +3303,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 27,
+        "antall_sok": 28,
         "fallback": true,
         "cache_key": "Uruguay_Cape_Verde_2026_06_21|2-2",
         "serper_score": -100,
@@ -3313,7 +3313,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 27,
+        "retry_antall": 28,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-cape-verde-match-report-highlights",
         "mangler": [
@@ -3506,7 +3506,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T11:32:23Z"
+      "oppdatert": "2026-06-22T12:02:26Z"
     },
     "Uzbekistan_Colombia_2026_06_17": {
       "kamp_id": "Uzbekistan_Colombia_2026_06_17",
