@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-22T01:01:03Z",
+  "tidspunkt": "2026-06-22T01:30:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -553,10 +553,10 @@
       "fd_bortelag": "Egypt",
       "hjemmelag_normalisert": "New Zealand",
       "bortelag_normalisert": "Egypt",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "fd_dato": "2026-06-22",
       "fd_utcDate": "2026-06-22T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "New_Zealand_Egypt_2026_06_22"
