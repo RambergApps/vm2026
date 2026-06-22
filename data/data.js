@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-22T12:01:12Z
+// Sist oppdatert: 2026-06-22T12:24:27Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-22T12:01:12Z",
+  "sist_oppdatert": "2026-06-22T12:24:27Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1397,7 +1397,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-28",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 73
     },
     "1C_2F_2026_06_29": {
       "kamp_id": "1C_2F_2026_06_29",
@@ -1410,7 +1411,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 76
     },
     "1F_2C_2026_06_29": {
       "kamp_id": "1F_2C_2026_06_29",
@@ -1423,7 +1425,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 75
     },
     "Germany_3A_B_C_D_F_2026_06_29": {
       "kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
@@ -1449,7 +1452,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 77
     },
     "2E_2I_2026_06_30": {
       "kamp_id": "2E_2I_2026_06_30",
@@ -1462,7 +1466,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 78
     },
     "Mexico_3C_E_F_H_I_2026_06_30": {
       "kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
@@ -1488,7 +1493,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 82
     },
     "1L_3E_H_I_J_K_2026_07_01": {
       "kamp_id": "1L_3E_H_I_J_K_2026_07_01",
@@ -1501,7 +1507,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 80
     },
     "USA_3B_E_F_I_J_2026_07_01": {
       "kamp_id": "USA_3B_E_F_I_J_2026_07_01",
@@ -1527,7 +1534,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 85
     },
     "1H_2J_2026_07_02": {
       "kamp_id": "1H_2J_2026_07_02",
@@ -1540,7 +1548,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 84
     },
     "2K_2L_2026_07_02": {
       "kamp_id": "2K_2L_2026_07_02",
@@ -1553,7 +1562,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 83
     },
     "1J_2H_2026_07_03": {
       "kamp_id": "1J_2H_2026_07_03",
@@ -1566,7 +1576,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 86
     },
     "1K_3D_E_I_J_L_2026_07_03": {
       "kamp_id": "1K_3D_E_I_J_L_2026_07_03",
@@ -1579,7 +1590,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 87
     },
     "2D_2G_2026_07_03": {
       "kamp_id": "2D_2G_2026_07_03",
@@ -1592,7 +1604,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 88
     },
     "W73_W75_2026_07_04": {
       "kamp_id": "W73_W75_2026_07_04",
@@ -1605,7 +1618,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-04",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 90
     },
     "W74_W77_2026_07_04": {
       "kamp_id": "W74_W77_2026_07_04",
@@ -1618,7 +1632,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-04",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 89
     },
     "W76_W78_2026_07_05": {
       "kamp_id": "W76_W78_2026_07_05",
@@ -1631,7 +1646,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 91
     },
     "W79_W80_2026_07_05": {
       "kamp_id": "W79_W80_2026_07_05",
@@ -1644,7 +1660,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 92
     },
     "W81_W82_2026_07_06": {
       "kamp_id": "W81_W82_2026_07_06",
@@ -1657,7 +1674,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 94
     },
     "W83_W84_2026_07_06": {
       "kamp_id": "W83_W84_2026_07_06",
@@ -1670,7 +1688,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 93
     },
     "W85_W87_2026_07_07": {
       "kamp_id": "W85_W87_2026_07_07",
@@ -1683,7 +1702,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-07",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 96
     },
     "W86_W88_2026_07_07": {
       "kamp_id": "W86_W88_2026_07_07",
@@ -1696,7 +1716,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-07",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 95
     },
     "W89_W90_2026_07_09": {
       "kamp_id": "W89_W90_2026_07_09",
@@ -1709,7 +1730,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "qf",
       "dato_openfootball": "2026-07-09",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 97
     },
     "W93_W94_2026_07_10": {
       "kamp_id": "W93_W94_2026_07_10",
@@ -1722,7 +1744,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "qf",
       "dato_openfootball": "2026-07-10",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 98
     },
     "W91_W92_2026_07_11": {
       "kamp_id": "W91_W92_2026_07_11",
@@ -1735,7 +1758,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "qf",
       "dato_openfootball": "2026-07-11",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 99
     },
     "W95_W96_2026_07_11": {
       "kamp_id": "W95_W96_2026_07_11",
@@ -1748,7 +1772,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "qf",
       "dato_openfootball": "2026-07-11",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 100
     },
     "W97_W98_2026_07_14": {
       "kamp_id": "W97_W98_2026_07_14",
@@ -1761,7 +1786,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "sf",
       "dato_openfootball": "2026-07-14",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 101
     },
     "W99_W100_2026_07_15": {
       "kamp_id": "W99_W100_2026_07_15",
@@ -1774,7 +1800,8 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "sf",
       "dato_openfootball": "2026-07-15",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 102
     },
     "L101_L102_2026_07_18": {
       "kamp_id": "L101_L102_2026_07_18",
@@ -1800,9 +1827,438 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "final",
       "dato_openfootball": "2026-07-19",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "match_no": 104
     }
   },
+  "bonusstatus": {
+    "helhet": {
+      "flest_maal_lag": {
+        "status": "ikke_startet",
+        "ledere": [],
+        "antall_maal": 0,
+        "ferdige_kamper": 0,
+        "totalt_kamper": 31,
+        "fasit": null,
+        "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
+      },
+      "totale_maal_utslag": {
+        "status": "ikke_startet",
+        "antall": 0,
+        "forelopig_kategori": "0_46",
+        "forelopig_kategori_tekst": "0–46 mål",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 31,
+        "fasit": null,
+        "fasit_tekst": null,
+        "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
+      },
+      "golden_boot": {
+        "status": "forelopig",
+        "spiller": "Deniz Undav",
+        "maal": 3,
+        "assists": 2,
+        "minutter": 69,
+        "fasit": null,
+        "kilde": "FIFA",
+        "sporsmal": "Hvem vinner FIFA Golden Boot?"
+      }
+    },
+    "runder": {
+      "r32": {
+        "status": "ikke_startet",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 16,
+        "verdi": 0,
+        "fasit": null,
+        "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid"
+      },
+      "r16": {
+        "status": "ikke_startet",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 8,
+        "verdi": 0,
+        "fasit": null,
+        "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid"
+      },
+      "qf": {
+        "status": "ikke_startet",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 4,
+        "verdi": 0,
+        "fasit": null,
+        "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid"
+      },
+      "sf": {
+        "status": "ikke_startet",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 2,
+        "verdi": 0,
+        "fasit": null,
+        "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid"
+      },
+      "final": {
+        "status": "ikke_startet",
+        "ferdige_kamper": 0,
+        "totalt_kamper": 1,
+        "verdi": null,
+        "fasit": null,
+        "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
+      }
+    }
+  },
+  "spillerstatistikk": [
+    {
+      "rank": 1,
+      "spiller": "Deniz Undav",
+      "maal": 3,
+      "assists": 2,
+      "minutter": 69
+    },
+    {
+      "rank": 2,
+      "spiller": "Lionel Messi",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 83
+    },
+    {
+      "rank": 3,
+      "spiller": "Jonathan David",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 170
+    },
+    {
+      "rank": 4,
+      "spiller": "Crysencio Summerville",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 123
+    },
+    {
+      "rank": 5,
+      "spiller": "Mikel Oyarzabal",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 149
+    },
+    {
+      "rank": 6,
+      "spiller": "Maxi Araujo",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 173
+    },
+    {
+      "rank": 7,
+      "spiller": "Ayase Ueda",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 174
+    },
+    {
+      "rank": 8,
+      "spiller": "Cody Gakpo",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 181
+    },
+    {
+      "rank": 9,
+      "spiller": "Vinicius Junior",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 190
+    },
+    {
+      "rank": 10,
+      "spiller": "Johan Manzambi",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 58
+    },
+    {
+      "rank": 11,
+      "spiller": "Brian Brobbey",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 88
+    },
+    {
+      "rank": 12,
+      "spiller": "Harry Kane",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 102
+    },
+    {
+      "rank": 13,
+      "spiller": "Erling Haaland",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 103
+    },
+    {
+      "rank": 14,
+      "spiller": "Kylian Mbappe",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 105
+    },
+    {
+      "rank": 15,
+      "spiller": "Matheus Cunha",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 108
+    },
+    {
+      "rank": 16,
+      "spiller": "Cyle Larin",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 125
+    },
+    {
+      "rank": 17,
+      "spiller": "Daichi Kamada",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 176
+    },
+    {
+      "rank": 18,
+      "spiller": "Folarin Balogun",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 179
+    },
+    {
+      "rank": 19,
+      "spiller": "Ismael Saibari",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 180
+    },
+    {
+      "rank": 20,
+      "spiller": "Yasin Ayari",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 183
+    },
+    {
+      "rank": 21,
+      "spiller": "Elijah Just",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 190
+    },
+    {
+      "rank": 22,
+      "spiller": "Kai Havertz",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 192
+    },
+    {
+      "rank": 23,
+      "spiller": "Alexander Isak",
+      "maal": 1,
+      "assists": 3,
+      "minutter": 194
+    },
+    {
+      "rank": 24,
+      "spiller": "Mohamed Salah",
+      "maal": 1,
+      "assists": 2,
+      "minutter": 168
+    },
+    {
+      "rank": 25,
+      "spiller": "Nathan Saliba",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 44
+    },
+    {
+      "rank": 26,
+      "spiller": "Luis Diaz",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 97
+    },
+    {
+      "rank": 27,
+      "spiller": "Ruben Vargas",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 110
+    },
+    {
+      "rank": 28,
+      "spiller": "Mostafa Zico",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 159
+    },
+    {
+      "rank": 29,
+      "spiller": "Keito Nakamura",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 181
+    },
+    {
+      "rank": 30,
+      "spiller": "Felix Nmecha",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 181
+    },
+    {
+      "rank": 31,
+      "spiller": "Nathaniel Brown",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 181
+    },
+    {
+      "rank": 32,
+      "spiller": "Hwang Inbeom",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 186
+    },
+    {
+      "rank": 33,
+      "spiller": "Breel Embolo",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 194
+    },
+    {
+      "rank": 34,
+      "spiller": "Viktor Gyokeres",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 200
+    },
+    {
+      "rank": 35,
+      "spiller": "Ramin Rezaeian",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 204
+    },
+    {
+      "rank": 36,
+      "spiller": "Alex Freeman",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 209
+    },
+    {
+      "rank": 37,
+      "spiller": "Ermin Mahmic",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 6
+    },
+    {
+      "rank": 38,
+      "spiller": "Mattias Svanberg",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 13
+    },
+    {
+      "rank": 39,
+      "spiller": "Giovanni Reyna",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 19
+    },
+    {
+      "rank": 40,
+      "spiller": "Bradley Barcola",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 20
+    },
+    {
+      "rank": 41,
+      "spiller": "Marcus Rashford",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 24
+    },
+    {
+      "rank": 42,
+      "spiller": "Trezeguet",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 24
+    },
+    {
+      "rank": 43,
+      "spiller": "Ibrahim Mbaye",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 24
+    },
+    {
+      "rank": 44,
+      "spiller": "Leo Ostigard",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 25
+    },
+    {
+      "rank": 45,
+      "spiller": "Jaminton Campaz",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 28
+    },
+    {
+      "rank": 46,
+      "spiller": "Helio Varela",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 40
+    },
+    {
+      "rank": 47,
+      "spiller": "Anthony Elanga",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 47
+    },
+    {
+      "rank": 48,
+      "spiller": "Mauricio",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 53
+    },
+    {
+      "rank": 49,
+      "spiller": "Marko Arnautovic",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 57
+    },
+    {
+      "rank": 50,
+      "spiller": "Oh Hyeongyu",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 67
+    }
+  ],
   "stilling": [
     {
       "navn": "Alexander",
@@ -1811,6 +2267,7 @@ const VM_DATA = {
       "poeng_gruppespill": 74,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -2841,6 +3298,7 @@ const VM_DATA = {
       "poeng_gruppespill": 74,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -3871,6 +4329,7 @@ const VM_DATA = {
       "poeng_gruppespill": 64,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -4901,6 +5360,7 @@ const VM_DATA = {
       "poeng_gruppespill": 60,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -5931,6 +6391,7 @@ const VM_DATA = {
       "poeng_gruppespill": 58,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Argentina",
       "turneringsvinner_riktig": false,
@@ -6961,6 +7422,7 @@ const VM_DATA = {
       "poeng_gruppespill": 58,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -7991,6 +8453,7 @@ const VM_DATA = {
       "poeng_gruppespill": 58,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Argentina",
       "turneringsvinner_riktig": false,
@@ -9021,6 +9484,7 @@ const VM_DATA = {
       "poeng_gruppespill": 58,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -10051,6 +10515,7 @@ const VM_DATA = {
       "poeng_gruppespill": 56,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "England",
       "turneringsvinner_riktig": false,
@@ -11081,6 +11546,7 @@ const VM_DATA = {
       "poeng_gruppespill": 52,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Argentina",
       "turneringsvinner_riktig": false,
@@ -12111,6 +12577,7 @@ const VM_DATA = {
       "poeng_gruppespill": 50,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Portugal",
       "turneringsvinner_riktig": false,
@@ -13141,6 +13608,7 @@ const VM_DATA = {
       "poeng_gruppespill": 50,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -14171,6 +14639,7 @@ const VM_DATA = {
       "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -15201,6 +15670,7 @@ const VM_DATA = {
       "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Norway",
       "turneringsvinner_riktig": false,
@@ -16231,6 +16701,7 @@ const VM_DATA = {
       "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -17261,6 +17732,7 @@ const VM_DATA = {
       "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -18291,6 +18763,7 @@ const VM_DATA = {
       "poeng_gruppespill": 46,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -19321,6 +19794,7 @@ const VM_DATA = {
       "poeng_gruppespill": 44,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -20351,6 +20825,7 @@ const VM_DATA = {
       "poeng_gruppespill": 44,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -21381,6 +21856,7 @@ const VM_DATA = {
       "poeng_gruppespill": 44,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -22411,6 +22887,7 @@ const VM_DATA = {
       "poeng_gruppespill": 42,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
@@ -23441,6 +23918,7 @@ const VM_DATA = {
       "poeng_gruppespill": 40,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -24471,6 +24949,7 @@ const VM_DATA = {
       "poeng_gruppespill": 36,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -25501,6 +25980,7 @@ const VM_DATA = {
       "poeng_gruppespill": 36,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -26531,6 +27011,7 @@ const VM_DATA = {
       "poeng_gruppespill": 36,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "France",
       "turneringsvinner_riktig": false,
@@ -27561,6 +28042,7 @@ const VM_DATA = {
       "poeng_gruppespill": 36,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Germany",
       "turneringsvinner_riktig": false,
@@ -28591,6 +29073,7 @@ const VM_DATA = {
       "poeng_gruppespill": 34,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Germany",
       "turneringsvinner_riktig": false,
@@ -29621,6 +30104,7 @@ const VM_DATA = {
       "poeng_gruppespill": 34,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Norway",
       "turneringsvinner_riktig": false,
@@ -30651,6 +31135,7 @@ const VM_DATA = {
       "poeng_gruppespill": 32,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
+      "poeng_helhetsbonus": 0,
       "poeng_turneringsvinner": 0,
       "turneringsvinner": "Spain",
       "turneringsvinner_riktig": false,
