@@ -7,12 +7,15 @@ Enkel regel:
 3. Parse FIFA sin kampblokk, mål-linjer og noen faste seksjoner.
 4. Godkjenn først når harde kriterier er møtt.
 5. Hvis kriterier ikke er møtt, publiser kort foreløpig rapport og prøv igjen neste kjøring.
+6. Med --backfill-all kontrolleres alle ferdigspilte kamper og manglende/foreløpige
+   referater søkes opp ved å bygge forventede FIFA-artikkel-URL-er.
 
 Ingen Serper i normalflyten. Ingen snippet-basert publisering.
 """
 
 from __future__ import annotations
 
+import argparse
 import html
 import json
 import os
@@ -333,6 +336,129 @@ def finn_kamper_for_rapport_og_retry(vm_data, cache, rapport_dato_str):
 
     alle = sorted(rapport, key=sortkey) + sorted(retry, key=sortkey)
     return alle, rapport_ids, len(retry)
+
+
+
+def finn_alle_ferdige_kamper(vm_data):
+    """Returner alle unike, ferdigspilte kamper fra data.js.
+
+    Aliasoppføringer dedupliseres på canonical_kamp_id. Den ekte canonical-
+    oppføringen foretrekkes når både canonical og alias finnes.
+    """
+    unike = {}
+
+    for key, kamp in vm_data.get("resultater", {}).items():
+        status = str(kamp.get("status") or "").upper()
+        ferdig = bool(kamp.get("ferdig")) or status == "FINISHED"
+        if not ferdig or er_placeholder_kamp(kamp):
+            continue
+
+        canonical = canonical_kamp_id_for(kamp, key)
+        raw_id = kamp.get("kamp_id", key)
+        kandidat = dict(kamp)
+        kandidat["kamp_id"] = canonical
+        kandidat["canonical_kamp_id"] = canonical
+        kandidat.pop("alias_for", None)
+        kandidat["_opprinnelig_kamp_id"] = raw_id
+
+        eksisterende = unike.get(canonical)
+        kandidat_er_canonical = raw_id == canonical and not kamp.get("alias_for")
+        eksisterende_er_canonical = (
+            (eksisterende or {}).get("_opprinnelig_kamp_id") == canonical
+        )
+        if eksisterende is None or (kandidat_er_canonical and not eksisterende_er_canonical):
+            unike[canonical] = kandidat
+
+    for kamp in unike.values():
+        kamp.pop("_opprinnelig_kamp_id", None)
+
+    return sorted(
+        unike.values(),
+        key=lambda kamp: kamp.get("fd_utcDate", kamp.get("dato_openfootball", "")),
+    )
+
+
+def bygg_arkivoppslag(arkiv):
+    """Bygg robuste oppslag for eksisterende kampreferater."""
+    by_canonical = {}
+    by_fd = {}
+    for key, entry in (arkiv.get("kamper") or {}).items():
+        if not isinstance(entry, dict):
+            continue
+        canonical = str(
+            entry.get("canonical_kamp_id")
+            or entry.get("kamp_id")
+            or key
+            or ""
+        )
+        if canonical:
+            by_canonical[canonical] = entry
+        fd_match_id = entry.get("fd_match_id")
+        if fd_match_id not in (None, ""):
+            by_fd[str(fd_match_id)] = entry
+    return by_canonical, by_fd
+
+
+def arkivoppforing_for_kamp(kamp, arkiv):
+    by_canonical, by_fd = bygg_arkivoppslag(arkiv)
+    canonical = canonical_kamp_id_for(kamp, kamp.get("kamp_id", ""))
+    existing = by_canonical.get(canonical)
+    if existing:
+        return existing
+    fd_match_id = kamp.get("fd_match_id")
+    if fd_match_id not in (None, ""):
+        return by_fd.get(str(fd_match_id))
+    return None
+
+
+def arkivoppforing_trenger_backfill(entry):
+    """Manglende eller foreløpige referater skal søkes opp hos FIFA."""
+    if not isinstance(entry, dict):
+        return True
+    if not str(entry.get("recap_tekst") or "").strip():
+        return True
+    return str(entry.get("referatstatus") or "").lower() != "endelig"
+
+
+def finn_kamper_for_backfill(vm_data, arkiv):
+    """Finn alle ferdige kamper som mangler et endelig kampreferat."""
+    alle = finn_alle_ferdige_kamper(vm_data)
+    mangler = []
+    forelopige = []
+    ferdige_i_arkiv = 0
+
+    for kamp in alle:
+        existing = arkivoppforing_for_kamp(kamp, arkiv)
+        if not isinstance(existing, dict):
+            mangler.append(kamp)
+        elif arkivoppforing_trenger_backfill(existing):
+            forelopige.append(kamp)
+        else:
+            ferdige_i_arkiv += 1
+
+    return mangler + forelopige, {
+        "alle_ferdige": len(alle),
+        "endelige_i_arkiv": ferdige_i_arkiv,
+        "mangler_helt": len(mangler),
+        "forelopige": len(forelopige),
+        "til_backfill": len(mangler) + len(forelopige),
+    }
+
+
+def legg_til_unike_arbeidskamper(arbeidskamper, ekstra_kamper):
+    """Slå sammen arbeidslister uten å behandle samme canonical kamp to ganger."""
+    out = []
+    sett = set()
+    for kamp in list(arbeidskamper) + list(ekstra_kamper):
+        canonical = canonical_kamp_id_for(kamp, kamp.get("kamp_id", ""))
+        if not canonical or canonical in sett:
+            continue
+        kandidat = dict(kamp)
+        kandidat["kamp_id"] = canonical
+        kandidat["canonical_kamp_id"] = canonical
+        sett.add(canonical)
+        out.append(kandidat)
+    return out
 
 
 def hent_tippinger_for_kamp(vm_data, kamp_id):
@@ -1815,9 +1941,35 @@ def live_arkivoppforing(kamp, tippinger):
     }
 
 
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Generer og vedlikehold kampreferater fra FIFA."
+    )
+    parser.add_argument(
+        "--backfill-all",
+        action="store_true",
+        help=(
+            "Kontroller alle ferdigspilte kamper i data.js. Kamper som mangler "
+            "et endelig referat bygges opp ved å prøve forventede FIFA-artikkel-URL-er."
+        ),
+    )
+    parser.add_argument(
+        "--archive-only",
+        action="store_true",
+        help=(
+            "Oppdater bare data/kampreferater.json og cache. Ikke skriv kamppost.json "
+            "og ikke opprett midlertidige live-referater."
+        ),
+    )
+    return parser.parse_args()
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
 def main():
+    args = parse_args()
     print("=" * 60)
     print("VM 2026 Kampreferat-generator")
     print("=" * 60)
@@ -1838,13 +1990,41 @@ def main():
     arkiv_endret = seed_arkiv_fra_kamppost(arkiv, eksisterende, vm_data)
 
     print(f"\nFinner kamper fra {igaar_str} + retry-kamper og pågående kamper...")
-    arbeidskamper, rapport_ids, retry_ekstra = finn_kamper_for_rapport_og_retry(vm_data, cache, igaar_str)
-    live_kamper = finn_live_kamper(vm_data)
+    arbeidskamper, rapport_ids, retry_ekstra = finn_kamper_for_rapport_og_retry(
+        vm_data, cache, igaar_str
+    )
+    live_kamper = [] if args.archive_only else finn_live_kamper(vm_data)
+
     print(f"  → {len(rapport_ids)} rapportkamper funnet")
     if retry_ekstra:
-        print(f"  → {retry_ekstra} ekstra ikke-OK kamp(er) prosesseres for retry og arkiv")
+        print(
+            f"  → {retry_ekstra} ekstra ikke-OK kamp(er) prosesseres "
+            "for retry og arkiv"
+        )
     if live_kamper:
         print(f"  → {len(live_kamper)} pågående kamp(er) får midlertidig referat")
+
+    if args.backfill_all:
+        backfill_kamper, backfill_status = finn_kamper_for_backfill(vm_data, arkiv)
+        arbeidskamper = legg_til_unike_arbeidskamper(
+            arbeidskamper, backfill_kamper
+        )
+        print("\nBackfill-kontroll av alle ferdigspilte kamper:")
+        print(f"  → Ferdige kamper i data.js: {backfill_status['alle_ferdige']}")
+        print(
+            "  → Har allerede endelig referat: "
+            f"{backfill_status['endelige_i_arkiv']}"
+        )
+        print(
+            f"  → Mangler helt i arkivet: {backfill_status['mangler_helt']}"
+        )
+        print(
+            f"  → Har foreløpig referat: {backfill_status['forelopige']}"
+        )
+        print(
+            "  → Kamper som skal søkes opp hos FIFA: "
+            f"{backfill_status['til_backfill']}"
+        )
 
     kamposter = []
     fulltekst_teller = 0
@@ -1862,7 +2042,10 @@ def main():
         b_score = kamp["borte"]
         kamp_id = kamp["kamp_id"]
         retry_only = kamp_id not in rapport_ids
-        suffix = " (retry/arkiv)" if retry_only else ""
+        if args.backfill_all and retry_only:
+            suffix = " (backfill/FIFA-søk)"
+        else:
+            suffix = " (retry/arkiv)" if retry_only else ""
         print(f"\n[{i}/{len(arbeidskamper)}] {hjemme} {h_score}-{b_score} {borte}{suffix}")
 
         ref = referanser.get(kampreferat_noekkel(hjemme, borte), {})
@@ -1915,7 +2098,7 @@ def main():
             kamposter.append(post)
         time.sleep(0.15)
 
-    if rapport_ids:
+    if rapport_ids and not args.archive_only:
         kamppost = {
             "dato": igaar_str,
             "dato_norsk": formater_norsk_dato(igaar_str),
@@ -1932,7 +2115,10 @@ def main():
         skriv_json(KAMPPOST_JSON, kamppost)
         print(f"✓ Skrev kamppost.json med {len(kamposter)} kamper")
     else:
-        print("\n✓ Ingen nye gårsdagskamper; eksisterende kamppost.json beholdes.")
+        if args.archive_only:
+            print("\n✓ Archive-only: kamppost.json ble ikke endret.")
+        else:
+            print("\n✓ Ingen nye gårsdagskamper; eksisterende kamppost.json beholdes.")
 
     if arkiv_endret or not KAMPREFERATER_JSON.exists():
         arkiv["sist_oppdatert"] = iso_utc_na()
