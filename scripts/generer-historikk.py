@@ -44,7 +44,7 @@ FULLTEKST_TIMEOUT = int(os.environ.get("FULLTEKST_TIMEOUT", "15"))
 FULLTEKST_MAX_BYTES = int(os.environ.get("FULLTEKST_MAX_BYTES", "500000"))
 MAX_FULLTEKST_PER_KJORING = int(os.environ.get("MAX_FULLTEKST_PER_KJORING", "24"))
 JINA_READER_AKTIVERT = os.environ.get("JINA_READER_AKTIVERT", "1") != "0"
-FULLTEKST_CACHE_VERSION = "v22-fifa-english-summary"
+FULLTEKST_CACHE_VERSION = "v23-fifa-slugs-multiline-goals"
 FIFA_ARTICLE_BASE = os.environ.get(
     "FIFA_ARTICLE_BASE",
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles",
@@ -88,6 +88,10 @@ LAG_VISNING = {
     "Panama": "Panama",
     "Uzbekistan": "Usbekistan",
     "Colombia": "Colombia",
+    "Iran": "Iran",
+    "IR Iran": "Iran",
+    "Cape Verde": "Kapp Verde",
+    "Cabo Verde": "Kapp Verde",
 }
 
 ALIASES = {
@@ -118,6 +122,10 @@ ALIASES = {
     "Panama": ["Panama"],
     "Uzbekistan": ["Uzbekistan"],
     "Colombia": ["Colombia"],
+    "Iran": ["Iran", "IR Iran"],
+    "IR Iran": ["IR Iran", "Iran"],
+    "Cape Verde": ["Cape Verde", "Cabo Verde"],
+    "Cabo Verde": ["Cabo Verde", "Cape Verde"],
 }
 
 SLUG_OVERRIDES = {
@@ -131,6 +139,10 @@ SLUG_OVERRIDES = {
     "Czech Republic": ["czechia", "czech-republic"],
     "South Korea": ["south-korea", "korea-republic"],
     "Turkey": ["turkey", "turkiye"],
+    "Iran": ["ir-iran", "iran"],
+    "IR Iran": ["ir-iran", "iran"],
+    "Cape Verde": ["cabo-verde", "cape-verde"],
+    "Cabo Verde": ["cabo-verde", "cape-verde"],
 }
 
 # ── DATO/FIL ──────────────────────────────────────────────────────────────────
@@ -780,19 +792,55 @@ def parse_goal_segment(segment, lag, kamp):
     events = []
     segment = fjern_markdown(segment)
     # Stopp ved tydelig overgang til brødtekst hvis segmentet ble for langt.
-    segment = re.split(r"(?i)\b(?:The|A|An|After|In|Group|Key stat|Superior Player)\b", segment[:350])[0]
-    # Navn (23, 36) / Navn pen (90+4)
+    segment = re.split(r"(?i)\b(?:The|A|An|After|In|Group|Key stat|Superior Player)\b", segment[:500])[0]
+    # Navn (23, 36) / Navn pen (90+4) / Navn (49 OG)
     pat = re.compile(
         r"([A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+(?:\s+[A-ZÀ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+){0,4})"
         r"(?:\s+(pen|penalty|og|own goal))?\s*\(([^)]*\d[^)]*)\)"
     )
     for m in pat.finditer(segment):
+        innhold = m.group(3) or ""
         typ = (m.group(2) or "goal").lower()
-        if typ in {"pen"}:
+        if re.search(r"(?i)\b(?:og|own goal)\b", innhold):
+            typ = "own_goal"
+        elif typ == "pen":
             typ = "penalty"
-        for minute in splitt_minutter(m.group(3)):
+        elif typ == "own goal":
+            typ = "own_goal"
+        for minute in splitt_minutter(innhold):
             legg_til_goal_event(events, m.group(1), lag, minute, typ)
     return events
+
+
+def hent_maalsegment_etter_header(text, start, stop):
+    """Hent scorerlisten også når FIFA legger den på linjen etter 'X goals:'.
+
+    Bare linjer som inneholder eksplisitte minuttparenteser tas med. Dermed
+    unngår vi å tolke vanlig brødtekst eller alder/statistikk som scoringer.
+    """
+    kandidat = text[start:stop]
+    deler = []
+    for raw in kandidat.splitlines()[:6]:
+        clean = fjern_markdown(strip_quote(raw))
+        if not clean:
+            if deler:
+                break
+            continue
+        if not re.search(r"\([^)]*\d{1,2}(?:\+\d+)?[^)]*\)", clean):
+            break
+        deler.append(clean)
+        if sum(len(x) for x in deler) >= 500:
+            break
+    return " ".join(deler)[:500]
+
+
+def goal_events_matcher_resultat(events, kamp):
+    """Godkjenn bare scorerlisten når målene matcher begge lags sluttresultat."""
+    hjemme = kamp.get("hjemmelag")
+    borte = kamp.get("bortelag")
+    hjemme_antall = sum(1 for ev in events or [] if ev.get("lag") == hjemme)
+    borte_antall = sum(1 for ev in events or [] if ev.get("lag") == borte)
+    return hjemme_antall == int(kamp.get("hjemme", 0) or 0) and borte_antall == int(kamp.get("borte", 0) or 0)
 
 
 def ekstraher_goal_events_fra_fifa(blokk, kamp):
@@ -810,12 +858,8 @@ def ekstraher_goal_events_fra_fifa(blokk, kamp):
             hits.append((m.start(), m.end(), lag))
     hits.sort(key=lambda x: x[0])
     for i, (start, end, lag) in enumerate(hits):
-        next_hit = hits[i + 1][0] if i + 1 < len(hits) else len(text)
-        line_end = text.find("\n", end)
-        if line_end == -1:
-            line_end = end + 350
-        segment_end = min(next_hit, line_end, end + 350)
-        segment = text[end:segment_end]
+        next_hit = hits[i + 1][0] if i + 1 < len(hits) else min(len(text), end + 1200)
+        segment = hent_maalsegment_etter_header(text, end, next_hit)
         for ev in parse_goal_segment(segment, lag, kamp):
             legg_til_goal_event(events, ev["spiller"], ev["lag"], ev.get("minutt", ""), ev.get("type", "goal"))
 
@@ -1082,7 +1126,7 @@ def referat_fakta_mangler(fakta, kamp):
     if not fakta.get("resultat_i_fulltekst"):
         mangler.append("resultat_i_fulltekst")
     total = total_maal_i_kamp(kamp)
-    if total > 0 and len(fakta.get("goal_events") or []) < total:
+    if total > 0 and not goal_events_matcher_resultat(fakta.get("goal_events") or [], kamp):
         mangler.append("goal_events")
     if total == 0 and not fakta.get("article_paragraphs"):
         mangler.append("kampavsnitt")
