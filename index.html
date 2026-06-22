@@ -810,6 +810,29 @@ body {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   .stilling-rad { page-break-inside: avoid; }
 }
+
+/* ── BONUSSTATUS ── */
+.bonusstatus-wrap{margin-bottom:24px}
+.bonusstatus-title{font-family:'Bebas Neue',sans-serif;font-size:36px;line-height:1;color:var(--accent);margin-bottom:6px}
+.bonusstatus-sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.bonusstatus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.bonusstatus-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.bonusstatus-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.bonusstatus-value{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1.15}
+.bonusstatus-meta{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.35}
+.bonusstatus-rounds{display:grid;gap:7px}
+.bonusstatus-round{display:grid;grid-template-columns:100px 1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:10px 12px}
+.bonusstatus-round-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase}
+.bonusstatus-round-text{font-size:12px;color:var(--muted)}
+.bonusstatus-pill{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;border:1px solid var(--border);border-radius:999px;padding:4px 8px;color:var(--muted);white-space:nowrap}
+.bonusstatus-pill.ferdig{color:var(--accent);border-color:rgba(0,230,118,.35);background:rgba(0,230,118,.08)}
+.bonusstatus-pill.paagaar,.bonusstatus-pill.forelopig{color:var(--gold);border-color:rgba(255,214,0,.35);background:rgba(255,214,0,.08)}
+.modal-bonus{border:1px solid var(--border);border-radius:9px;padding:11px 12px;margin-bottom:8px;background:var(--surface)}
+.modal-bonus-top{display:flex;justify-content:space-between;gap:12px}
+.modal-bonus-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px}
+.modal-bonus-answer{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
+.modal-bonus-poeng{font-family:'Bebas Neue',sans-serif;font-size:20px;white-space:nowrap}
+@media(max-width:640px){.bonusstatus-grid{grid-template-columns:1fr}.bonusstatus-round{grid-template-columns:78px 1fr}.bonusstatus-pill{grid-column:2;width:max-content}.bonusstatus-title{font-size:32px}}
 </style>
 </head>
 <body>
@@ -894,6 +917,7 @@ body {
 
   <!-- DETALJER -->
   <div class="seksjon" id="detaljer-seksjon">
+    <div id="bonusstatus"></div>
     <div class="runde-filter" id="rundeFilter"></div>
     <div id="detaljertabell"></div>
   </div>
@@ -918,11 +942,16 @@ body {
         <div style="font-size:13px;color:var(--muted);margin-top:4px">Tippa ved registrering — kan ikke endres</div>
       </div>
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px;font-size:13px;color:var(--muted);line-height:1.5">
-        Alle kamper poengberegnes på resultat etter ordinær tid / 90 minutter. Ekstraomganger, straffer og hvilket lag som går videre påvirker ikke kamp-poengene.
+        Alle kamper poengberegnes på resultatet i løpet av de første 90 minuttene, inkludert tilleggstid. Ekstraomganger, straffer og hvilket lag som går videre påvirker ikke kamp-poengene.
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Bonusspørsmål</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold)">10 + 20 poeng</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5">Rundebonus gir 10 poeng. De tre spørsmålene for hele utslagsfasen gir 20 poeng hver. Målbaserte spørsmål bruker de første 90 minuttene, inkludert tilleggstid.</div>
       </div>
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Maks poeng totalt</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent)">601</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent)">855</div>
       </div>
       <div style="margin-top:24px;text-align:center">
         <a href="tippe/" style="display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:14px 40px;border-radius:6px;background:var(--accent);color:#000;text-decoration:none">
@@ -1097,24 +1126,97 @@ function byggDagensKamper() {
 }
 
 
-const RUNDE_NAVN = { gruppe:"Gruppespill", r32:"Runde av 32", r16:"Runde av 16", qf:"Kvartfinale", sf:"Semifinale", final:"Finale" };
+const RUNDE_NAVN = { gruppe:"Gruppespill", r32:"Runde av 32", r16:"Runde av 16", qf:"Kvartfinale", sf:"Semifinale", final:"Finale", helhet:"Hele utslagsfasen" };
+
+function samletUtslagspoeng(d) {
+  return (d.poeng_utslagsrunder || 0) + (d.poeng_bonus || 0) + (d.poeng_helhetsbonus || 0);
+}
+
+function bonusStatusLabel(status) {
+  return {
+    ferdig:"Fasit klar",
+    paagaar:"Pågår",
+    forelopig:"Foreløpig",
+    ikke_startet:"Ikke startet",
+    avventer_fifa:"Avventer FIFA"
+  }[status] || "Avventer";
+}
+
+function byggBonusstatus() {
+  const container = document.getElementById("bonusstatus");
+  if (!container) return;
+  const data = typeof VM_DATA !== "undefined" ? VM_DATA.bonusstatus : null;
+  if (!data?.helhet) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const flest = data.helhet.flest_maal_lag || {};
+  const totalt = data.helhet.totale_maal_utslag || {};
+  const golden = data.helhet.golden_boot || {};
+  const lederTekst = (flest.ledere || []).length ? `${(flest.ledere || []).join(', ')} · ${flest.antall_maal || 0} mål` : 'Ingen mål registrert ennå';
+  const totalTekst = `${totalt.antall || 0} mål`;
+  const totalMeta = totalt.status === 'ferdig'
+    ? `Fasit: ${totalt.fasit_tekst || totalt.forelopig_kategori_tekst || '—'}`
+    : totalt.status === 'ikke_startet'
+      ? 'Utslagsfasen er ikke startet'
+      : `Foreløpig kategori: ${totalt.forelopig_kategori_tekst || '—'}`;
+  const goldenTekst = golden.spiller ? `${golden.spiller} · ${golden.maal ?? 0} mål` : 'Ikke tilgjengelig';
+
+  const roundOrder = ['r32','r16','qf','sf','final'];
+  const rounds = roundOrder.map(runde => {
+    const item = data.runder?.[runde] || {};
+    const verdi = item.verdi === null || item.verdi === undefined ? '—' : (item.verdi === 'ja' ? 'Ja' : item.verdi === 'nei' ? 'Nei' : item.verdi);
+    const korteSporsmal = {r32:'Uavgjorte kamper',r16:'Lag som holder nullen',qf:'Ettmålsseiere',sf:'Totalt antall mål',final:'Begge lag scorer'};
+    const statusTekst = item.status === 'ferdig'
+      ? `Fasit: ${verdi}`
+      : `${verdi === '—' ? 'Ingen foreløpig verdi' : `Foreløpig: ${verdi}`} · ${item.ferdige_kamper || 0} av ${item.totalt_kamper || 0} kamper`;
+    const tekst = `${korteSporsmal[runde]} · ${statusTekst}`;
+    return `<div class="bonusstatus-round">
+      <div class="bonusstatus-round-name">${escHTML(RUNDE_NAVN[runde])}</div>
+      <div class="bonusstatus-round-text">${escHTML(tekst)}</div>
+      <div class="bonusstatus-pill ${escHTML(item.status || '')}">${escHTML(bonusStatusLabel(item.status))}</div>
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `<div class="bonusstatus-wrap">
+    <div class="bonusstatus-title">Bonusstatus</div>
+    <div class="bonusstatus-sub">Status og foreløpige verdier. Deltakernes svar vises i detaljene for hver deltaker.</div>
+    <div class="bonusstatus-grid">
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Flest mål · utslagsfasen</div><div class="bonusstatus-value">${escHTML(lederTekst)}</div><div class="bonusstatus-meta">${flest.ferdige_kamper || 0} av ${flest.totalt_kamper || 31} kamper ferdig</div></div>
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Totalt antall mål</div><div class="bonusstatus-value">${escHTML(totalTekst)}</div><div class="bonusstatus-meta">${escHTML(totalMeta)} · ${totalt.ferdige_kamper || 0} av ${totalt.totalt_kamper || 31} kamper</div></div>
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Golden Boot</div><div class="bonusstatus-value">${escHTML(goldenTekst)}</div><div class="bonusstatus-meta">${escHTML(bonusStatusLabel(golden.status))} · Kilde: FIFA</div></div>
+    </div>
+    <div class="bonusstatus-rounds">${rounds}</div>
+  </div>`;
+}
+
+function byggBonusModalHTML(d) {
+  const bonuser = (d.tippinger || []).filter(t => t.type === 'bonus' || t.type === 'helhetsbonus');
+  if (!bonuser.length) return '';
+  return `<div class="modal-runde-tittel">Bonusspørsmål</div>` + bonuser.map(t => {
+    const status = t.ferdig ? `Fasit: ${t.fasit ?? '—'}` : 'Avventer fasit';
+    const poengCls = t.poeng > 0 ? 'color:var(--accent)' : 'color:var(--muted)';
+    return `<div class="modal-bonus">
+      <div class="modal-bonus-top"><div class="modal-bonus-title">${escHTML(t.sporsmal || '')}</div><div class="modal-bonus-poeng" style="${poengCls}">${t.ferdig ? `${t.poeng || 0}p` : '–'}</div></div>
+      <div class="modal-bonus-answer">Valgt: ${escHTML(t.svar ?? '—')}<br>${escHTML(status)}</div>
+    </div>`;
+  }).join('');
+}
 
 function aapneModal(event, i) {
   event.stopPropagation();
   const d = VM_DATA.stilling[i];
   if (!d) return;
 
-  const ferdigeKamper  = (d.tippinger || []).filter(t => t.ferdig);
-  const ventende       = (d.tippinger || []).filter(t => !t.ferdig);
-  const poengGruppe    = d.poeng_gruppespill || 0;
-  const poengUtsl      = d.poeng_utslagsrunder || 0;
-  const poengVinner    = d.poeng_turneringsvinner || 0;
-  const vinnerCls      = d.turneringsvinner_riktig ? 'color:var(--accent)' : 'color:var(--muted)';
+  const kampTippinger = (d.tippinger || []).filter(t => !t.type || t.type === 'kamp');
+  const ferdigeKamper = kampTippinger.filter(t => t.ferdig);
+  const poengUtsl = samletUtslagspoeng(d);
+  const vinnerCls = d.turneringsvinner_riktig ? 'color:var(--accent)' : 'color:var(--muted)';
 
-  // Gruppér tippinger per runde
   const rundeRekkefølge = ['gruppe','r32','r16','qf','sf','final'];
   const perRunde = {};
-  (d.tippinger || []).forEach(t => {
+  kampTippinger.forEach(t => {
     const r = t.runde || 'gruppe';
     if (!perRunde[r]) perRunde[r] = [];
     perRunde[r].push(t);
@@ -1124,66 +1226,37 @@ function aapneModal(event, i) {
   rundeRekkefølge.forEach(runde => {
     const kamper = perRunde[runde];
     if (!kamper?.length) return;
-
     kampHTML += `<div class="modal-runde-tittel">${RUNDE_NAVN[runde] || runde}</div>`;
     kamper.forEach(t => {
       if (t.ferdig) {
-        const eksakt = t.eksakt;
-        const riktig = t.riktig_utfall;
-        const scoreCls = eksakt ? 'riktig' : riktig ? 'delvis' : '';
+        const scoreCls = t.eksakt ? 'riktig' : t.riktig_utfall ? 'delvis' : '';
         const poengCls = t.poeng === 0 ? 'p0' : t.poeng >= 6 ? 'phigh' : 'pp';
-        kampHTML += `
-          <div class="modal-kamp">
-            <div class="modal-kamp-lag">
-              ${escHTML(t.hjemmelag || '')} – ${escHTML(t.bortelag || '')}
-            </div>
-            <div class="modal-kamp-score">
-              <div class="modal-score-tippa ${scoreCls}">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div>
-              <div class="modal-score-actual">Fasit: ${t.faktisk_h}–${t.faktisk_b}</div>
-            </div>
-            <div class="modal-kamp-poeng ${poengCls}">${t.poeng}p</div>
-          </div>`;
+        kampHTML += `<div class="modal-kamp">
+          <div class="modal-kamp-lag">${escHTML(t.hjemmelag || '')} – ${escHTML(t.bortelag || '')}</div>
+          <div class="modal-kamp-score"><div class="modal-score-tippa ${scoreCls}">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div><div class="modal-score-actual">Fasit: ${t.faktisk_h}–${t.faktisk_b}</div></div>
+          <div class="modal-kamp-poeng ${poengCls}">${t.poeng}p</div>
+        </div>`;
       } else {
-        kampHTML += `
-          <div class="modal-kamp">
-            <div class="modal-kamp-lag">
-              ${escHTML(t.hjemmelag || '?')} – ${escHTML(t.bortelag || '?')}
-            </div>
-            <div class="modal-kamp-score">
-              <div class="modal-score-tippa">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div>
-              <div class="modal-score-actual">Ikke spilt</div>
-            </div>
-            <div class="modal-kamp-pending">–</div>
-          </div>`;
+        kampHTML += `<div class="modal-kamp">
+          <div class="modal-kamp-lag">${escHTML(t.hjemmelag || '?')} – ${escHTML(t.bortelag || '?')}</div>
+          <div class="modal-kamp-score"><div class="modal-score-tippa">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div><div class="modal-score-actual">Ikke spilt</div></div>
+          <div class="modal-kamp-pending">–</div>
+        </div>`;
       }
     });
   });
+  const bonusHTML = byggBonusModalHTML(d);
 
-  document.getElementById("modalInnhold").innerHTML = `
-    <div class="modal-header">
-      <div>
-        <div class="modal-navn">${escHTML(d.navn)}</div>
-        <div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div>
-      </div>
-      <button class="modal-lukk" onclick="lukkModal()">✕</button>
-    </div>
-    <div class="modal-stats">
-      <div class="modal-stat">
-        <div class="modal-stat-val">${d.poeng_totalt}</div>
-        <div class="modal-stat-lbl">Totalt</div>
-      </div>
-      <div class="modal-stat">
-        <div class="modal-stat-val">${poengUtsl}</div>
-        <div class="modal-stat-lbl">Utslag</div>
-      </div>
-      <div class="modal-stat">
-        <div class="modal-stat-val">${ferdigeKamper.length}</div>
-        <div class="modal-stat-lbl">Ferdig</div>
-      </div>
-    </div>
-    <div class="modal-body">
-      ${kampHTML || '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>'}
-    </div>`;
+  document.getElementById("modalInnhold").innerHTML = `<div class="modal-header">
+    <div><div class="modal-navn">${escHTML(d.navn)}</div><div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div></div>
+    <button class="modal-lukk" onclick="lukkModal()">✕</button>
+  </div>
+  <div class="modal-stats">
+    <div class="modal-stat"><div class="modal-stat-val">${d.poeng_totalt}</div><div class="modal-stat-lbl">Totalt</div></div>
+    <div class="modal-stat"><div class="modal-stat-val">${poengUtsl}</div><div class="modal-stat-lbl">Utslag inkl. bonus</div></div>
+    <div class="modal-stat"><div class="modal-stat-val">${ferdigeKamper.length}</div><div class="modal-stat-lbl">Kamper ferdig</div></div>
+  </div>
+  <div class="modal-body">${bonusHTML}${kampHTML || (!bonusHTML ? '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>' : '')}</div>`;
 
   document.getElementById("modalOverlay").classList.add("vis");
   document.body.style.overflow = "hidden";
@@ -1805,7 +1878,7 @@ function byggStilling() {
           <div class="rad-vinner ${vinnerCls}">🏆 ${escHTML(d.turneringsvinner || "—")}</div>
         </div>
         <div class="rad-tall col-gruppe">${d.poeng_gruppespill}</div>
-        <div class="rad-tall">${d.poeng_utslagsrunder}</div>
+        <div class="rad-tall">${samletUtslagspoeng(d)}</div>
         <div class="rad-tall">${d.poeng_turneringsvinner}</div>
         <div class="rad-totalt">${d.poeng_totalt}</div>
       </div>
@@ -1828,27 +1901,38 @@ function byggStilling() {
 
 function byggDetaljer(d) {
   if (!d.tippinger?.length) return '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
-  const ferdigeKamper = d.tippinger.filter(t => t.ferdig);
-  if (!ferdigeKamper.length) return '<p style="color:var(--muted);font-size:13px">Ingen kamper ferdigspilt ennå</p>';
-  const rundeNavn = { gruppe:"Gruppespill", r32:"R32", r16:"R16", qf:"QF", sf:"SF", final:"Finale" };
-  let html = '<div class="detaljer-tittel">Tippinger</div>';
-  ferdigeKamper.forEach(t => {
-    const eksakt = t.eksakt;
-    const scoreCls = eksakt ? "riktig" : "";
-    const poengCls = t.poeng === 0 ? "p0" : t.poeng <= 2 ? "p2" : "p4";
-    const runde = rundeNavn[t.runde] || t.runde || "";
-    html += `
-      <div class="kamp-rad">
+  const bonuser = d.tippinger.filter(t => t.type === 'bonus' || t.type === 'helhetsbonus');
+  const ferdigeKamper = d.tippinger.filter(t => (!t.type || t.type === 'kamp') && t.ferdig);
+  let html = '';
+  if (bonuser.length) {
+    html += '<div class="detaljer-tittel">Bonusspørsmål</div>';
+    bonuser.forEach(t => {
+      const fasit = t.ferdig ? `Fasit: ${t.fasit ?? '—'}` : 'Avventer fasit';
+      const poengCls = t.poeng === 0 ? 'p0' : 'p4';
+      html += `<div class="kamp-rad">
+        <div class="kamp-lag">${escHTML(t.sporsmal || '')}</div>
+        <div class="kamp-score">${escHTML(t.svar ?? '—')}<span style="display:block;color:var(--muted);font-size:11px">${escHTML(fasit)}</span></div>
+        <div style="font-size:10px;color:var(--muted);white-space:nowrap">${escHTML(t.type === 'helhetsbonus' ? 'Hele utslag' : (RUNDE_NAVN[t.runde] || t.runde || ''))}</div>
+        <div class="kamp-poeng ${poengCls}">${t.ferdig ? `${t.poeng || 0}p` : '–'}</div>
+      </div>`;
+    });
+  }
+  if (ferdigeKamper.length) {
+    html += '<div class="detaljer-tittel" style="margin-top:14px">Kamptips</div>';
+    const rundeNavn = { gruppe:"Gruppespill", r32:"R32", r16:"R16", qf:"QF", sf:"SF", final:"Finale" };
+    ferdigeKamper.forEach(t => {
+      const scoreCls = t.eksakt ? "riktig" : "";
+      const poengCls = t.poeng === 0 ? "p0" : t.poeng <= 2 ? "p2" : "p4";
+      const runde = rundeNavn[t.runde] || t.runde || "";
+      html += `<div class="kamp-rad">
         <div class="kamp-lag">${escHTML(t.hjemmelag || "")} – ${escHTML(t.bortelag || "")}</div>
-        <div class="kamp-score ${scoreCls}">
-          ${t.tippa_h ?? "–"}–${t.tippa_b ?? "–"}
-          <span style="color:var(--muted);font-size:11px"> (${t.faktisk_h}–${t.faktisk_b})</span>
-        </div>
+        <div class="kamp-score ${scoreCls}">${t.tippa_h ?? "–"}–${t.tippa_b ?? "–"}<span style="color:var(--muted);font-size:11px"> (${t.faktisk_h}–${t.faktisk_b})</span></div>
         <div style="font-size:10px;color:var(--muted);white-space:nowrap">${runde}</div>
         <div class="kamp-poeng ${poengCls}">${t.poeng}p</div>
       </div>`;
-  });
-  return html;
+    });
+  }
+  return html || '<p style="color:var(--muted);font-size:13px">Ingen avgjorte tips ennå</p>';
 }
 
 function toggleDetaljer(i) {
@@ -1884,8 +1968,8 @@ function byggDetaljertTabell() {
   VM_DATA.stilling.forEach((d, i) => {
     const poengGruppe = aktivRunde === "alle" ? d.poeng_gruppespill :
       aktivRunde === "gruppe" ? d.poeng_gruppespill : 0;
-    const poengUtsl = aktivRunde === "alle" ? d.poeng_utslagsrunder :
-      aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((s,t) => s+t.poeng, 0) || 0) : 0;
+    const poengUtsl = aktivRunde === "alle" ? samletUtslagspoeng(d) :
+      aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((sum,t) => sum + (t.poeng || 0), 0) || 0) : 0;
     const poengTurn = aktivRunde === "alle" ? d.poeng_turneringsvinner : 0;
     const totalt = aktivRunde === "alle" ? d.poeng_totalt : poengGruppe + poengUtsl;
     html += `
@@ -1913,6 +1997,7 @@ function byttSeksjon(id, el) {
   el.classList.add("active");
   if (id === 'tabell-seksjon') byggTabellFane();
   if (id === 'kamper-seksjon') byggKamperFane();
+  if (id === 'detaljer-seksjon') byggBonusstatus();
 }
 
 function escHTML(str) {
@@ -1926,6 +2011,7 @@ async function init() {
   byggStilling();
   byggTabellFane();
   byggKamperFane();
+  byggBonusstatus();
 }
 init();
 </script>
