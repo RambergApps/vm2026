@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-22T22:01:03Z
+// Sist oppdatert: 2026-06-22T22:12:20Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-22T22:01:03Z",
+  "sist_oppdatert": "2026-06-22T22:12:20Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1925,87 +1925,87 @@ const VM_DATA = {
     },
     {
       "rank": 3,
+      "spiller": "Kylian Mbappe",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 153
+    },
+    {
+      "rank": 4,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 170
     },
     {
-      "rank": 4,
+      "rank": 5,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
       "minutter": 123
     },
     {
-      "rank": 5,
+      "rank": 6,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 149
     },
     {
-      "rank": 6,
+      "rank": 7,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 173
     },
     {
-      "rank": 7,
+      "rank": 8,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 174
     },
     {
-      "rank": 8,
+      "rank": 9,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 9,
+      "rank": 10,
       "spiller": "Vinicius Junior",
       "maal": 2,
       "assists": 1,
       "minutter": 190
     },
     {
-      "rank": 10,
+      "rank": 11,
       "spiller": "Johan Manzambi",
       "maal": 2,
       "assists": 0,
       "minutter": 58
     },
     {
-      "rank": 11,
+      "rank": 12,
       "spiller": "Brian Brobbey",
       "maal": 2,
       "assists": 0,
       "minutter": 88
     },
     {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Harry Kane",
       "maal": 2,
       "assists": 0,
       "minutter": 102
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Erling Haaland",
       "maal": 2,
       "assists": 0,
       "minutter": 103
-    },
-    {
-      "rank": 14,
-      "spiller": "Kylian Mbappe",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 105
     },
     {
       "rank": 15,
@@ -2184,73 +2184,73 @@ const VM_DATA = {
     },
     {
       "rank": 40,
-      "spiller": "Bradley Barcola",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 20
-    },
-    {
-      "rank": 41,
       "spiller": "Marcus Rashford",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 42,
+      "rank": 41,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 43,
+      "rank": 42,
       "spiller": "Ibrahim Mbaye",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 44,
+      "rank": 43,
       "spiller": "Leo Ostigard",
       "maal": 1,
       "assists": 0,
       "minutter": 25
     },
     {
-      "rank": 45,
+      "rank": 44,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 46,
+      "rank": 45,
       "spiller": "Helio Varela",
       "maal": 1,
       "assists": 0,
       "minutter": 40
     },
     {
-      "rank": 47,
+      "rank": 46,
       "spiller": "Anthony Elanga",
       "maal": 1,
       "assists": 0,
       "minutter": 47
     },
     {
-      "rank": 48,
+      "rank": 47,
       "spiller": "Mauricio",
       "maal": 1,
       "assists": 0,
       "minutter": 53
     },
     {
-      "rank": 49,
+      "rank": 48,
       "spiller": "Oh Hyeongyu",
       "maal": 1,
       "assists": 0,
       "minutter": 67
+    },
+    {
+      "rank": 49,
+      "spiller": "Bradley Barcola",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 68
     },
     {
       "rank": 50,
