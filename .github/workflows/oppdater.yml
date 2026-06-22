@@ -1,4 +1,5 @@
 name: Oppdater VM 2026 Leaderboard
+
 on:
   schedule:
     - cron: '7,37 * * * *'
@@ -7,39 +8,63 @@ on:
       - 'tippinger/**'
       - 'data/manuelle-kamper.json'
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vm2026-data-update
+  cancel-in-progress: false
+
 jobs:
   oppdater:
     runs-on: ubuntu-latest
+
     steps:
       - name: Sjekk ut repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Sett opp Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Installer avhengigheter
         run: pip install requests
-      - name: Kjør poengregning
+
+      - name: Oppdater FIFA-kontroll for R32
+        run: python scripts/kontroller-fifa-r32.py --strict --skip-jina
+        env:
+          GITHUB_ACTIONS: 'true'
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
+      - name: Bygg nye R32-kamper fortløpende
+        run: python scripts/bygg-r32.py
+
+      - name: Kjør poengregning og oppdater kampstatus
         run: python scripts/poengregning.py
         env:
-          GITHUB_ACTIONS: true
+          GITHUB_ACTIONS: 'true'
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
       - name: Generer kampreferat
         run: python scripts/generer-historikk.py
         env:
-          GITHUB_ACTIONS: true
+          GITHUB_ACTIONS: 'true'
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+
       - name: Commit og push oppdatert data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           printf '{"sjekket":"%s"}\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > data/last-checked.json
           git add data/*.js data/*.json
+
           if git diff --cached --quiet; then
             echo "Ingen endringer å committe"
           else
-            git commit -m "Auto: oppdater leaderboard $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "Auto: oppdater VM-data $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push
           fi
