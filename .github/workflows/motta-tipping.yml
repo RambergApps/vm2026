@@ -7,7 +7,6 @@ on:
 permissions:
   contents: write
 
-
 jobs:
   lagre-tipping:
     runs-on: ubuntu-latest
@@ -23,7 +22,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Valider og lagre åpne kamper
+      - name: Valider og lagre åpne tips og bonus
         env:
           RUNDE: ${{ github.event.client_payload.runde }}
           NAVN: ${{ github.event.client_payload.navn }}
@@ -37,17 +36,31 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
+          RUNDER = {"r32", "r16", "qf", "sf", "final"}
+          BONUS = {
+              "r32":   {"id": "antall_uavgjort",      "type": "int", "min": 0, "max": 16},
+              "r16":   {"id": "antall_nullen",        "type": "int", "min": 0, "max": 16},
+              "qf":    {"id": "antall_ettmaalsseier", "type": "int", "min": 0, "max": 4},
+              "sf":    {"id": "totale_maal",          "type": "int", "min": 0, "max": 40},
+              "final": {"id": "begge_lag_scorer",     "type": "choice", "values": {"ja", "nei"}},
+          }
+          HELHET_IDS = {"flest_maal_lag", "totale_maal_utslag", "golden_boot"}
+          MAALINTERVALLER = {"0_46", "47_77", "78_pluss"}
+
           runde = os.environ.get("RUNDE", "").strip()
           navn = os.environ.get("NAVN", "").strip()
           data = json.loads(os.environ.get("DATA_JSON", "{}"))
 
-          if runde not in {"r32", "r16", "qf", "sf", "final"}:
+          if runde not in RUNDER:
               raise SystemExit(f"Ugyldig runde: {runde}")
           if not navn:
               raise SystemExit("Mangler navn")
+          if not isinstance(data, dict):
+              raise SystemExit("Ugyldig dataformat")
 
           status = json.loads(Path("data/status.json").read_text(encoding="utf-8"))
-          round_matches = (status.get(runde) or {}).get("kamper") or []
+          round_data = status.get(runde) or {}
+          round_matches = round_data.get("kamper") or []
           by_id = {str(match.get("id")): match for match in round_matches if match.get("id")}
           now = datetime.now(timezone.utc)
 
@@ -62,14 +75,29 @@ jobs:
               except Exception:
                   return None
 
+          def known_team(value):
+              text = str(value or "").strip()
+              low = text.lower()
+              if not text or "/" in text:
+                  return False
+              if re.fullmatch(r"[123][A-L]", text, re.I) or re.fullmatch(r"W\d+", text, re.I):
+                  return False
+              return not any(word in low for word in ("winner", "loser", "path", "tbd", "place", "runner"))
+
           submitted = parse_utc((data.get("meta") or {}).get("innlevert"))
           if submitted is None:
               raise SystemExit("Mangler gyldig innleveringstidspunkt")
           if submitted > now and (submitted - now).total_seconds() > 300:
               raise SystemExit("Innleveringstidspunktet ligger for langt frem i tid")
 
-          valid = []
-          rejected = []
+          # Første bekreftede UTC-avspark er felles frist for rundebonus.
+          bonus_times = [parse_utc(match.get("utcDate")) for match in round_matches]
+          bonus_times = [value for value in bonus_times if value]
+          bonus_deadline = min(bonus_times) if bonus_times else parse_utc(round_data.get("frist"))
+          bonus_open = bool(bonus_deadline and submitted < bonus_deadline)
+
+          valid_tips = []
+          rejected_tips = []
           for tip in data.get("tippinger", []) or []:
               if not isinstance(tip, dict):
                   continue
@@ -84,14 +112,72 @@ jobs:
               )
               open_at_submission = bool(match and kickoff and submitted < kickoff)
               if open_at_submission and scores_ok:
-                  valid.append(tip)
+                  valid_tips.append(tip)
               else:
-                  rejected.append(kamp_id or "<mangler kamp_id>")
+                  rejected_tips.append(kamp_id or "<mangler kamp_id>")
 
-          if not valid:
-              raise SystemExit("Ingen gyldige, åpne tips i innleveringen")
+          valid_bonus = None
+          raw_bonus = data.get("bonus")
+          if isinstance(raw_bonus, dict) and raw_bonus:
+              config = BONUS[runde]
+              bonus_id = str(raw_bonus.get("id", "")).strip()
+              answer = raw_bonus.get("svar")
+              answer_ok = False
+              if config["type"] == "int":
+                  answer_ok = (
+                      isinstance(answer, int) and not isinstance(answer, bool)
+                      and config["min"] <= answer <= config["max"]
+                  )
+              else:
+                  answer_ok = str(answer or "").strip().lower() in config["values"]
+                  if answer_ok:
+                      answer = str(answer).strip().lower()
+              if bonus_open and bonus_id == config["id"] and answer_ok:
+                  valid_bonus = {"id": bonus_id, "svar": answer}
+              else:
+                  print(f"Avviser rundebonus for {runde}: frist/id/svar er ikke gyldig")
 
-          data["tippinger"] = valid
+          valid_helhet = {}
+          raw_helhet = data.get("helhetsbonus")
+          if isinstance(raw_helhet, dict) and raw_helhet:
+              if runde != "r32" or not bonus_open:
+                  print("Avviser helhetsbonus: R32-fristen er passert eller mangler")
+              else:
+                  r32_teams = {
+                      str(team).strip()
+                      for match in (status.get("r32") or {}).get("kamper", []) or []
+                      for team in (match.get("hjemme"), match.get("borte"))
+                      if known_team(team)
+                  }
+                  for bonus_id, answer in raw_helhet.items():
+                      if bonus_id not in HELHET_IDS or answer in (None, ""):
+                          continue
+                      if bonus_id == "totale_maal_utslag":
+                          answer = str(answer).strip()
+                          if answer in MAALINTERVALLER:
+                              valid_helhet[bonus_id] = answer
+                      elif bonus_id == "flest_maal_lag":
+                          answer = str(answer).strip()
+                          if answer in r32_teams:
+                              valid_helhet[bonus_id] = answer
+                      elif bonus_id == "golden_boot":
+                          answer = re.sub(r"\s+", " ", str(answer)).strip()
+                          if 1 <= len(answer) <= 100:
+                              valid_helhet[bonus_id] = answer
+
+          if not valid_tips and not valid_bonus and not valid_helhet:
+              raise SystemExit("Ingen gyldige, åpne kamptips eller bonusbesvarelser i innleveringen")
+
+          data["tippinger"] = valid_tips
+          if valid_bonus:
+              data["bonus"] = valid_bonus
+          else:
+              data.pop("bonus", None)
+          if valid_helhet:
+              data["helhetsbonus"] = valid_helhet
+          else:
+              data.pop("helhetsbonus", None)
+
           data.setdefault("meta", {})["server_mottatt"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
           data["meta"]["navn"] = navn
           data["meta"]["runde"] = runde
@@ -105,9 +191,13 @@ jobs:
           target = target_dir / f"{safe}_{timestamp}_{run_id}.json"
           target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-          print(f"Lagret {len(valid)} tips i {target}")
-          if rejected:
-              print("Avviste tips: " + ", ".join(rejected))
+          print(
+              f"Lagret {len(valid_tips)} kamptips, "
+              f"{1 if valid_bonus else 0} rundebonus og "
+              f"{len(valid_helhet)} helhetsbonus i {target}"
+          )
+          if rejected_tips:
+              print("Avviste kamptips: " + ", ".join(rejected_tips))
           PY
 
       - name: Installer avhengigheter
