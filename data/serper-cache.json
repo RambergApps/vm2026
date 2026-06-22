@@ -766,8 +766,8 @@
   "Spain_Saudi_Arabia_2026_06_21|4-0": {
     "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
     "resultat": "4-0",
-    "sist_sokt": "2026-06-22T03:31:15Z",
-    "antall_sok": 18,
+    "sist_sokt": "2026-06-22T04:01:21Z",
+    "antall_sok": 19,
     "beste_score": 7,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -784,7 +784,7 @@
       "kamp_hjemme_score": 4,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-22T03:31:01Z",
+      "hentet": "2026-06-22T04:01:10Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -827,8 +827,8 @@
   "Belgium_Iran_2026_06_21|0-0": {
     "kamp_id": "Belgium_Iran_2026_06_21",
     "resultat": "0-0",
-    "sist_sokt": "2026-06-22T03:31:38Z",
-    "antall_sok": 16,
+    "sist_sokt": "2026-06-22T04:01:44Z",
+    "antall_sok": 17,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -836,7 +836,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v22-fifa-english-summary",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -845,15 +845,15 @@
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-22T03:31:21Z",
+      "hentet": "2026-06-22T04:01:32Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -877,16 +877,16 @@
         "resultat_i_fulltekst"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 2
     }
   },
   "Uruguay_Cape_Verde_2026_06_21|2-2": {
     "kamp_id": "Uruguay_Cape_Verde_2026_06_21",
     "resultat": "2-2",
-    "sist_sokt": "2026-06-22T03:32:03Z",
-    "antall_sok": 7,
+    "sist_sokt": "2026-06-22T04:02:08Z",
+    "antall_sok": 8,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -903,7 +903,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-06-22T03:31:44Z",
+      "hentet": "2026-06-22T04:01:49Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -945,10 +945,10 @@
   "New_Zealand_Egypt_2026_06_21|1-3": {
     "kamp_id": "New_Zealand_Egypt_2026_06_21",
     "resultat": "1-3",
-    "sist_sokt": "2026-06-22T03:32:32Z",
-    "antall_sok": 1,
-    "beste_score": 6,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-22T04:02:09Z",
+    "antall_sok": 2,
+    "beste_score": 13,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -963,20 +963,53 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 3,
       "score": 10,
-      "hentet": "2026-06-22T03:32:07Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-06-22T04:02:09Z",
+      "goal_events": [
+        {
+          "spiller": "Surman",
+          "lag": "New Zealand",
+          "minutt": "15",
+          "type": "goal"
+        },
+        {
+          "spiller": "Zico",
+          "lag": "Egypt",
+          "minutt": "58",
+          "type": "goal"
+        },
+        {
+          "spiller": "Salah",
+          "lag": "Egypt",
+          "minutt": "67",
+          "type": "goal"
+        },
+        {
+          "spiller": "Trezeguet",
+          "lag": "Egypt",
+          "minutt": "82",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Surman",
+        "Zico",
+        "Salah",
+        "Trezeguet"
+      ],
+      "lead_scorer": "Surman",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/new-zealand-egypt-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/new-zealand-egypt-match-report-highlights?searchOverlay=1)"
+        "Goals from Mostafa Zico, Mohamed Salah and Trezeguet saw Egypt create history as they came from behind to beat New Zealand 3-1 and claim their first FIFA World Cup™ victory since making their debut 92 years and 25 days ago.",
+        "New Zealand started aggressively at BC Place Vancouver, and after Sarpreet Singh and Elijah Just had already threatened, Finn Surman gave the All Whites a deserved lead with a bullet of a header from a corner in the 15th minute.",
+        "Salah and Emam Ashour both went close before half time as Egypt went in search of an equaliser, and Salah was denied again by Max Crocombe in the first minute of the second period.",
+        "Egypt goalkeeper Mostafa Shobeir prevented New Zealand from doubling their lead shortly afterwards with a terrific save from Callum McCowatt’s flicked header, and Zico then pulled Hossam Hassan’s side back into the game with a free header in the 58th minute.",
+        "Nine minutes later Salah struck the decisive blow, guiding a crisp low finish into the net after a fine team move to spark wild celebrations for his side, and Trezeguet added the gloss with Egypt’s third with eight minutes remaining."
       ],
-      "key_stat": "",
+      "key_stat": "This was the first time Egypt had ever gone in behind at half-time in a FIFA World Cup fixture",
       "player_of_match": "",
-      "early_lead": false,
-      "came_from_behind": false,
+      "early_lead": true,
+      "came_from_behind": true,
       "knockout_secured": false,
       "group_top": false,
       "hit_bar": false,
@@ -987,14 +1020,15 @@
       "all_goals_first_half": false,
       "lead_goal_early": false,
       "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": false,
+      "deciding_last_goal": false,
       "fastest_stat": false,
       "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 6,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/new-zealand-egypt-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
