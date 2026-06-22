@@ -1,614 +1,662 @@
 {
-  "generert": "2026-06-22T07:23:53Z",
+  "generert": "2026-06-22T07:39:46Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
+    "fifa_api": "https://api.fifa.com/api/v3/calendar/matches",
+    "fifa_api_params": {
+      "idCompetition": 17,
+      "idSeason": 285023,
+      "count": 500,
+      "language": "en"
+    },
     "fifa_jina": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
     "football_data": "https://api.football-data.org/v4/competitions/WC/matches"
   },
   "kamp_id_regel": "rens(hjemmelag)_rens(bortelag)_rens(football-data utcDate[:10])",
   "oppsummering": {
     "forventet_antall_r32": 16,
-    "fifa_r32_funnet": 8,
-    "fifa_match_no_mangler": [
-      73,
-      75,
-      76,
-      78,
-      83,
-      84,
-      86,
-      88
-    ],
+    "fifa_api_r32_funnet": 16,
+    "fifa_api_match_no_mangler": [],
+    "fifa_jina_r32_funnet": 8,
     "football_data_r32_funnet": 16,
+    "koblet_entydig_pa_utc_avspark": 16,
     "matched": 0,
-    "pending": 8,
+    "pending": 16,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
-    "motstridende_fifa_duplikater": [],
+    "motstridende_fifa_api_duplikater": [],
+    "klar_for_matchnummer_mapping": true,
     "klar_for_produksjonsbruk": false
   },
-  "parser_merknader": [
-    {
-      "match_no": 74,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021513,
-        "fifa_dato": "2026-06-29",
-        "fifa_tid": "20:30",
-        "fifa_hjemme": "Germany",
-        "fifa_borte": "3ABCDF"
+  "fifa_api_merknader": [],
+  "jina_kontroll": {
+    "feil": "",
+    "sammenligning": [
+      {
+        "match_no": 74,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021513,
-        "fifa_dato": "2026-06-29",
-        "fifa_tid": "20:30",
-        "fifa_hjemme": "Germany",
-        "fifa_borte": "3ABCDF"
-      }
-    },
-    {
-      "match_no": 77,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021523,
-        "fifa_dato": "2026-06-30",
-        "fifa_tid": "21:00",
-        "fifa_hjemme": "1I",
-        "fifa_borte": "3CDFGH"
+      {
+        "match_no": 77,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021523,
-        "fifa_dato": "2026-06-30",
-        "fifa_tid": "21:00",
-        "fifa_hjemme": "1I",
-        "fifa_borte": "3CDFGH"
-      }
-    },
-    {
-      "match_no": 81,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021524,
-        "fifa_dato": "2026-07-02",
-        "fifa_tid": "00:00",
-        "fifa_hjemme": "USA",
-        "fifa_borte": "3BEFIJ"
+      {
+        "match_no": 79,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021524,
-        "fifa_dato": "2026-07-02",
-        "fifa_tid": "00:00",
-        "fifa_hjemme": "USA",
-        "fifa_borte": "3BEFIJ"
-      }
-    },
-    {
-      "match_no": 82,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021525,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "20:00",
-        "fifa_hjemme": "1G",
-        "fifa_borte": "3AEHIJ"
+      {
+        "match_no": 80,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021525,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "20:00",
-        "fifa_hjemme": "1G",
-        "fifa_borte": "3AEHIJ"
-      }
-    },
-    {
-      "match_no": 79,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021520,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "01:00",
-        "fifa_hjemme": "Mexico",
-        "fifa_borte": "3CEFHI"
+      {
+        "match_no": 81,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021520,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "01:00",
-        "fifa_hjemme": "Mexico",
-        "fifa_borte": "3CEFHI"
-      }
-    },
-    {
-      "match_no": 80,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021512,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "16:00",
-        "fifa_hjemme": "1L",
-        "fifa_borte": "3EHIJK"
+      {
+        "match_no": 82,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021512,
-        "fifa_dato": "2026-07-01",
-        "fifa_tid": "16:00",
-        "fifa_hjemme": "1L",
-        "fifa_borte": "3EHIJK"
-      }
-    },
-    {
-      "match_no": 85,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021527,
-        "fifa_dato": "2026-07-03",
-        "fifa_tid": "03:00",
-        "fifa_hjemme": "1B",
-        "fifa_borte": "3EFGIJ"
+      {
+        "match_no": 85,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       },
-      "duplikat": {
-        "fifa_event_id": 400021527,
-        "fifa_dato": "2026-07-03",
-        "fifa_tid": "03:00",
-        "fifa_hjemme": "1B",
-        "fifa_borte": "3EFGIJ"
+      {
+        "match_no": 87,
+        "event_id_samsvar": true,
+        "dato_samsvar": true,
+        "tid_samsvar": true
       }
-    },
-    {
-      "match_no": 87,
-      "identisk": true,
-      "forste": {
-        "fifa_event_id": 400021517,
-        "fifa_dato": "2026-07-04",
-        "fifa_tid": "01:30",
-        "fifa_hjemme": "1K",
-        "fifa_borte": "3DEIJL"
-      },
-      "duplikat": {
-        "fifa_event_id": 400021517,
-        "fifa_dato": "2026-07-04",
-        "fifa_tid": "01:30",
-        "fifa_hjemme": "1K",
-        "fifa_borte": "3DEIJL"
-      }
-    }
-  ],
+    ]
+  },
   "kamper": [
     {
+      "fifa_match_no": 73,
+      "fifa_event_id": "400021518",
+      "fifa_utcDate": "2026-06-28T19:00:00Z",
+      "fifa_dato": "2026-06-28",
+      "fifa_tid": "19:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "2A",
+      "fifa_borte": "2B",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "2A",
+      "fifa_borte_placeholder": "2B",
+      "fifa_api_result_index": 72,
+      "fd_match_id": 537417,
+      "fd_utcDate": "2026-06-28T19:00:00Z",
+      "fd_dato": "2026-06-28",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 73,
+          "kamp_id": "2A_2B_2026_06_28",
+          "hjemme": "2A",
+          "borte": "2B",
+          "dato": "2026-06-28"
+        }
+      ]
+    },
+    {
       "fifa_match_no": 74,
-      "fifa_event_id": 400021513,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513",
+      "fifa_event_id": "400021513",
+      "fifa_utcDate": "2026-06-29T20:30:00Z",
       "fifa_dato": "2026-06-29",
       "fifa_tid": "20:30",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Germany",
       "fifa_borte": "3ABCDF",
       "fifa_hjemme_kode": "GER",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": true,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "",
+      "fifa_borte_placeholder": "3ABCDF",
+      "fifa_api_result_index": 74,
+      "fd_match_id": 537415,
+      "fd_utcDate": "2026-06-29T20:30:00Z",
+      "fd_dato": "2026-06-29",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": []
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 74,
+          "kamp_id": "1E_3A_B_C_D_F_2026_06_29",
+          "hjemme": "1E",
+          "borte": "3A/B/C/D/F",
+          "dato": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 75,
+      "fifa_event_id": "400021522",
+      "fifa_utcDate": "2026-06-30T01:00:00Z",
+      "fifa_dato": "2026-06-30",
+      "fifa_tid": "01:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "1F",
+      "fifa_borte": "2C",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "1F",
+      "fifa_borte_placeholder": "2C",
+      "fifa_api_result_index": 75,
+      "fd_match_id": 537418,
+      "fd_utcDate": "2026-06-30T01:00:00Z",
+      "fd_dato": "2026-06-30",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 75,
+          "kamp_id": "1F_2C_2026_06_29",
+          "hjemme": "1F",
+          "borte": "2C",
+          "dato": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 76,
+      "fifa_event_id": "400021516",
+      "fifa_utcDate": "2026-06-29T17:00:00Z",
+      "fifa_dato": "2026-06-29",
+      "fifa_tid": "17:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "1C",
+      "fifa_borte": "2F",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "1C",
+      "fifa_borte_placeholder": "2F",
+      "fifa_api_result_index": 73,
+      "fd_match_id": 537423,
+      "fd_utcDate": "2026-06-29T17:00:00Z",
+      "fd_dato": "2026-06-29",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 76,
+          "kamp_id": "1C_2F_2026_06_29",
+          "hjemme": "1C",
+          "borte": "2F",
+          "dato": "2026-06-29"
+        }
+      ]
     },
     {
       "fifa_match_no": 77,
-      "fifa_event_id": 400021523,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523",
+      "fifa_event_id": "400021523",
+      "fifa_utcDate": "2026-06-30T21:00:00Z",
       "fifa_dato": "2026-06-30",
       "fifa_tid": "21:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "1I",
       "fifa_borte": "3CDFGH",
       "fifa_hjemme_kode": "",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": false,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "1I",
+      "fifa_borte_placeholder": "3CDFGH",
+      "fifa_api_result_index": 77,
+      "fd_match_id": 537416,
+      "fd_utcDate": "2026-06-30T21:00:00Z",
+      "fd_dato": "2026-06-30",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": [
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537423,
-          "fd_utcDate": "2026-06-29T17:00:00Z",
-          "fd_dato": "2026-06-29",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
+          "kilde": "status.json",
+          "match_no": 77,
+          "kamp_id": "1I_3C_D_F_G_H_2026_06_30",
+          "hjemme": "1I",
+          "borte": "3C/D/F/G/H",
+          "dato": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 78,
+      "fifa_event_id": "400021514",
+      "fifa_utcDate": "2026-06-30T17:00:00Z",
+      "fifa_dato": "2026-06-30",
+      "fifa_tid": "17:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "2E",
+      "fifa_borte": "2I",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "2E",
+      "fifa_borte_placeholder": "2I",
+      "fifa_api_result_index": 76,
+      "fd_match_id": 537424,
+      "fd_utcDate": "2026-06-30T17:00:00Z",
+      "fd_dato": "2026-06-30",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537415,
-          "fd_utcDate": "2026-06-29T20:30:00Z",
-          "fd_dato": "2026-06-29",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537418,
-          "fd_utcDate": "2026-06-30T01:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537424,
-          "fd_utcDate": "2026-06-30T17:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537416,
-          "fd_utcDate": "2026-06-30T21:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537425,
-          "fd_utcDate": "2026-07-01T01:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537426,
-          "fd_utcDate": "2026-07-01T16:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537422,
-          "fd_utcDate": "2026-07-01T20:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
+          "kilde": "status.json",
+          "match_no": 78,
+          "kamp_id": "2E_2I_2026_06_30",
+          "hjemme": "2E",
+          "borte": "2I",
+          "dato": "2026-06-30"
         }
       ]
     },
     {
       "fifa_match_no": 79,
-      "fifa_event_id": 400021520,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520",
+      "fifa_event_id": "400021520",
+      "fifa_utcDate": "2026-07-01T01:00:00Z",
       "fifa_dato": "2026-07-01",
       "fifa_tid": "01:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Mexico",
       "fifa_borte": "3CEFHI",
       "fifa_hjemme_kode": "MEX",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": true,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "",
+      "fifa_borte_placeholder": "3CEFHI",
+      "fifa_api_result_index": 78,
+      "fd_match_id": 537425,
+      "fd_utcDate": "2026-07-01T01:00:00Z",
+      "fd_dato": "2026-07-01",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": []
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 79,
+          "kamp_id": "1A_3C_E_F_H_I_2026_06_30",
+          "hjemme": "1A",
+          "borte": "3C/E/F/H/I",
+          "dato": "2026-06-30"
+        }
+      ]
     },
     {
       "fifa_match_no": 80,
-      "fifa_event_id": 400021512,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021512",
+      "fifa_event_id": "400021512",
+      "fifa_utcDate": "2026-07-01T16:00:00Z",
       "fifa_dato": "2026-07-01",
       "fifa_tid": "16:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "1L",
       "fifa_borte": "3EHIJK",
       "fifa_hjemme_kode": "",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": false,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "1L",
+      "fifa_borte_placeholder": "3EHIJK",
+      "fifa_api_result_index": 79,
+      "fd_match_id": 537426,
+      "fd_utcDate": "2026-07-01T16:00:00Z",
+      "fd_dato": "2026-07-01",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": [
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537418,
-          "fd_utcDate": "2026-06-30T01:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537424,
-          "fd_utcDate": "2026-06-30T17:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537416,
-          "fd_utcDate": "2026-06-30T21:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537425,
-          "fd_utcDate": "2026-07-01T01:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537426,
-          "fd_utcDate": "2026-07-01T16:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537422,
-          "fd_utcDate": "2026-07-01T20:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537421,
-          "fd_utcDate": "2026-07-02T00:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537420,
-          "fd_utcDate": "2026-07-02T19:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537419,
-          "fd_utcDate": "2026-07-02T23:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
+          "kilde": "status.json",
+          "match_no": 80,
+          "kamp_id": "1L_3E_H_I_J_K_2026_07_01",
+          "hjemme": "1L",
+          "borte": "3E/H/I/J/K",
+          "dato": "2026-07-01"
         }
       ]
     },
     {
       "fifa_match_no": 81,
-      "fifa_event_id": 400021524,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524",
+      "fifa_event_id": "400021524",
+      "fifa_utcDate": "2026-07-02T00:00:00Z",
       "fifa_dato": "2026-07-02",
       "fifa_tid": "00:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "USA",
       "fifa_borte": "3BEFIJ",
       "fifa_hjemme_kode": "USA",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": true,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "",
+      "fifa_borte_placeholder": "3BEFIJ",
+      "fifa_api_result_index": 81,
+      "fd_match_id": 537421,
+      "fd_utcDate": "2026-07-02T00:00:00Z",
+      "fd_dato": "2026-07-02",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": []
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
+        {
+          "kilde": "status.json",
+          "match_no": 81,
+          "kamp_id": "1D_3B_E_F_I_J_2026_07_01",
+          "hjemme": "1D",
+          "borte": "3B/E/F/I/J",
+          "dato": "2026-07-01"
+        }
+      ]
     },
     {
       "fifa_match_no": 82,
-      "fifa_event_id": 400021525,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021525",
+      "fifa_event_id": "400021525",
+      "fifa_utcDate": "2026-07-01T20:00:00Z",
       "fifa_dato": "2026-07-01",
       "fifa_tid": "20:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "1G",
       "fifa_borte": "3AEHIJ",
       "fifa_hjemme_kode": "",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": false,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "1G",
+      "fifa_borte_placeholder": "3AEHIJ",
+      "fifa_api_result_index": 80,
+      "fd_match_id": 537422,
+      "fd_utcDate": "2026-07-01T20:00:00Z",
+      "fd_dato": "2026-07-01",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": [
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537418,
-          "fd_utcDate": "2026-06-30T01:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
+          "kilde": "status.json",
+          "match_no": 82,
+          "kamp_id": "1G_3A_E_H_I_J_2026_07_01",
+          "hjemme": "1G",
+          "borte": "3A/E/H/I/J",
+          "dato": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 83,
+      "fifa_event_id": "400021526",
+      "fifa_utcDate": "2026-07-02T23:00:00Z",
+      "fifa_dato": "2026-07-02",
+      "fifa_tid": "23:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "2K",
+      "fifa_borte": "2L",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "2K",
+      "fifa_borte_placeholder": "2L",
+      "fifa_api_result_index": 83,
+      "fd_match_id": 537419,
+      "fd_utcDate": "2026-07-02T23:00:00Z",
+      "fd_dato": "2026-07-02",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537424,
-          "fd_utcDate": "2026-06-30T17:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
+          "kilde": "status.json",
+          "match_no": 83,
+          "kamp_id": "2K_2L_2026_07_02",
+          "hjemme": "2K",
+          "borte": "2L",
+          "dato": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 84,
+      "fifa_event_id": "400021519",
+      "fifa_utcDate": "2026-07-02T19:00:00Z",
+      "fifa_dato": "2026-07-02",
+      "fifa_tid": "19:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "1H",
+      "fifa_borte": "2J",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "1H",
+      "fifa_borte_placeholder": "2J",
+      "fifa_api_result_index": 82,
+      "fd_match_id": 537420,
+      "fd_utcDate": "2026-07-02T19:00:00Z",
+      "fd_dato": "2026-07-02",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537416,
-          "fd_utcDate": "2026-06-30T21:00:00Z",
-          "fd_dato": "2026-06-30",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537425,
-          "fd_utcDate": "2026-07-01T01:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537426,
-          "fd_utcDate": "2026-07-01T16:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537422,
-          "fd_utcDate": "2026-07-01T20:00:00Z",
-          "fd_dato": "2026-07-01",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537421,
-          "fd_utcDate": "2026-07-02T00:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537420,
-          "fd_utcDate": "2026-07-02T19:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537419,
-          "fd_utcDate": "2026-07-02T23:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
+          "kilde": "status.json",
+          "match_no": 84,
+          "kamp_id": "1H_2J_2026_07_02",
+          "hjemme": "1H",
+          "borte": "2J",
+          "dato": "2026-07-02"
         }
       ]
     },
     {
       "fifa_match_no": 85,
-      "fifa_event_id": 400021527,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527",
+      "fifa_event_id": "400021527",
+      "fifa_utcDate": "2026-07-03T03:00:00Z",
       "fifa_dato": "2026-07-03",
       "fifa_tid": "03:00",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "1B",
       "fifa_borte": "3EFGIJ",
       "fifa_hjemme_kode": "",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": false,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "1B",
+      "fifa_borte_placeholder": "3EFGIJ",
+      "fifa_api_result_index": 84,
+      "fd_match_id": 537429,
+      "fd_utcDate": "2026-07-03T03:00:00Z",
+      "fd_dato": "2026-07-03",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": [
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537421,
-          "fd_utcDate": "2026-07-02T00:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
+          "kilde": "status.json",
+          "match_no": 85,
+          "kamp_id": "1B_3E_F_G_I_J_2026_07_02",
+          "hjemme": "1B",
+          "borte": "3E/F/G/I/J",
+          "dato": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 86,
+      "fifa_event_id": "400021521",
+      "fifa_utcDate": "2026-07-03T22:00:00Z",
+      "fifa_dato": "2026-07-03",
+      "fifa_tid": "22:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "1J",
+      "fifa_borte": "2H",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "1J",
+      "fifa_borte_placeholder": "2H",
+      "fifa_api_result_index": 86,
+      "fd_match_id": 537427,
+      "fd_utcDate": "2026-07-03T22:00:00Z",
+      "fd_dato": "2026-07-03",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537420,
-          "fd_utcDate": "2026-07-02T19:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537419,
-          "fd_utcDate": "2026-07-02T23:00:00Z",
-          "fd_dato": "2026-07-02",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537429,
-          "fd_utcDate": "2026-07-03T03:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537428,
-          "fd_utcDate": "2026-07-03T18:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537427,
-          "fd_utcDate": "2026-07-03T22:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537430,
-          "fd_utcDate": "2026-07-04T01:30:00Z",
-          "fd_dato": "2026-07-04",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
+          "kilde": "status.json",
+          "match_no": 86,
+          "kamp_id": "1J_2H_2026_07_03",
+          "hjemme": "1J",
+          "borte": "2H",
+          "dato": "2026-07-03"
         }
       ]
     },
     {
       "fifa_match_no": 87,
-      "fifa_event_id": 400021517,
-      "fifa_url": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021517",
+      "fifa_event_id": "400021517",
+      "fifa_utcDate": "2026-07-04T01:30:00Z",
       "fifa_dato": "2026-07-04",
       "fifa_tid": "01:30",
+      "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "1K",
       "fifa_borte": "3DEIJL",
       "fifa_hjemme_kode": "",
       "fifa_borte_kode": "",
       "fifa_hjemme_kjent": false,
       "fifa_borte_kjent": false,
-      "status": "pending",
-      "forklaring": "FIFA har fortsatt minst én plassholder; endelig kamp-ID godkjennes ikke ennå.",
+      "fifa_hjemme_placeholder": "1K",
+      "fifa_borte_placeholder": "3DEIJL",
+      "fifa_api_result_index": 87,
+      "fd_match_id": 537430,
+      "fd_utcDate": "2026-07-04T01:30:00Z",
+      "fd_dato": "2026-07-04",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
       "kamp_id": null,
-      "delvise_fd_kandidater": [
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537429,
-          "fd_utcDate": "2026-07-03T03:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
+          "kilde": "status.json",
+          "match_no": 87,
+          "kamp_id": "1K_3D_E_I_J_L_2026_07_03",
+          "hjemme": "1K",
+          "borte": "3D/E/I/J/L",
+          "dato": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "fifa_match_no": 88,
+      "fifa_event_id": "400021515",
+      "fifa_utcDate": "2026-07-03T18:00:00Z",
+      "fifa_dato": "2026-07-03",
+      "fifa_tid": "18:00",
+      "fifa_tid_hadde_tidssone": true,
+      "fifa_hjemme": "2D",
+      "fifa_borte": "2G",
+      "fifa_hjemme_kode": "",
+      "fifa_borte_kode": "",
+      "fifa_hjemme_kjent": false,
+      "fifa_borte_kjent": false,
+      "fifa_hjemme_placeholder": "2D",
+      "fifa_borte_placeholder": "2G",
+      "fifa_api_result_index": 85,
+      "fd_match_id": 537428,
+      "fd_utcDate": "2026-07-03T18:00:00Z",
+      "fd_dato": "2026-07-03",
+      "fd_hjemmelag": "",
+      "fd_bortelag": "",
+      "kamp_id": null,
+      "koblet_pa": "eksakt_utc_avspark",
+      "status": "pending",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "eksisterende_koblinger": [
         {
-          "fd_match_id": 537428,
-          "fd_utcDate": "2026-07-03T18:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537427,
-          "fd_utcDate": "2026-07-03T22:00:00Z",
-          "fd_dato": "2026-07-03",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
-        },
-        {
-          "fd_match_id": 537430,
-          "fd_utcDate": "2026-07-04T01:30:00Z",
-          "fd_dato": "2026-07-04",
-          "fd_hjemmelag": "",
-          "fd_bortelag": "",
-          "kamp_id": null
+          "kilde": "status.json",
+          "match_no": 88,
+          "kamp_id": "2D_2G_2026_07_03",
+          "hjemme": "2D",
+          "borte": "2G",
+          "dato": "2026-07-03"
         }
       ]
     }
