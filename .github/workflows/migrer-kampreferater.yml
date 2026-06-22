@@ -1,4 +1,4 @@
-name: Migrer historiske kampreferater
+name: Migrer og backfill historiske kampreferater
 
 on:
   workflow_dispatch:
@@ -9,6 +9,8 @@ permissions:
 jobs:
   migrer:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+
     steps:
       - name: Sjekk ut hele Git-historikken
         uses: actions/checkout@v4
@@ -21,17 +23,54 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Samle tidligere kampposter
+      - name: Samle tidligere kampposter fra Git-historikken
         run: python scripts/migrer-kampreferater.py
 
-      - name: Lagre kampreferatarkivet
+      - name: Finn alle ferdige kamper og backfill fra FIFA
+        env:
+          JINA_READER_AKTIVERT: '1'
+          FULLTEKST_TIMEOUT: '20'
+          FULLTEKST_MAX_BYTES: '500000'
+          MAX_FULLTEKST_PER_KJORING: '400'
+        run: |
+          python scripts/generer-historikk.py --backfill-all --archive-only
+
+      - name: Vis backfill-resultat
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/kampreferater.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          kamper = data.get("kamper", {})
+          endelige = sum(
+              1 for kamp in kamper.values()
+              if kamp.get("referatstatus") == "endelig"
+          )
+          forelopige = sum(
+              1 for kamp in kamper.values()
+              if kamp.get("referatstatus") == "forelopig"
+          )
+          midlertidige = sum(
+              1 for kamp in kamper.values()
+              if kamp.get("referatstatus") == "midlertidig"
+          )
+
+          print(f"Totalt i arkivet: {len(kamper)}")
+          print(f"Endelige referater: {endelige}")
+          print(f"Foreløpige referater: {forelopige}")
+          print(f"Midlertidige/live-referater: {midlertidige}")
+          PY
+
+      - name: Lagre komplett kampreferatarkiv
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/kampreferater.json
+          git add data/kampreferater.json data/serper-cache.json
           if git diff --cached --quiet; then
-            echo "Ingen nye historiske kampreferater"
+            echo "Ingen nye eller forbedrede kampreferater"
           else
-            git commit -m "Migrer historiske kampreferater"
+            git commit -m "Backfill historiske kampreferater fra FIFA"
             git push
           fi
