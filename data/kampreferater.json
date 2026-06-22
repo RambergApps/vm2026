@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-22T12:32:23Z",
+  "sist_oppdatert": "2026-06-22T13:01:42Z",
   "antall_kamper": 40,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -14,29 +14,27 @@
       "gruppe": "G",
       "runde": "gruppe",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Belgium and Iran drew 0-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Belgium and Iran drew 0-0.\nBelgium and IR Iran are still both seeking their first win of this FIFA World Cup™ following a goalless draw in Los Angeles.\n\nIt was a match marked by some terrific saves from Iran goalkeeper Alireza Beiranvand and his Belgium counterpart Thibaut Courtois, with Rudi Garcia’s Red Devils dominating possession but ending up with ten men after the dismissal of centre-back Nathan Ngoy.\nYet for all their possession and crosses and cutbacks, the closest they got to an early goal was a strong near-post drive by Youri Tielemans beaten away by goalkeeper Beiranvand.\nIn the second half, Alireza Jahanbakhsh came on for his 100th cap and Iran called Courtois into action again with a powerful Taremi volley following another long throw.\nKey stat: Goalkeeper Thibaut Courtois equalled Enzo Scifo's Belgian record of 17 World Cup appearances.\nPlayer of the Match: Alireza Beiranvand (Iran).",
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 8,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 39,
-        "fallback": true,
+        "antall_sok": 40,
+        "fallback": false,
         "cache_key": "Belgium_Iran_2026_06_21|0-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 8,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 39,
+        "retry_antall": 40,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-iran-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-ir-iran-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -222,7 +220,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T12:31:59Z"
+      "oppdatert": "2026-06-22T13:01:41Z"
     },
     "Brazil_Haiti_2026_06_19": {
       "kamp_id": "Brazil_Haiti_2026_06_19",
@@ -2211,7 +2209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 41,
+        "antall_sok": 42,
         "fallback": true,
         "cache_key": "Spain_Saudi_Arabia_2026_06_21|4-0",
         "serper_score": -100,
@@ -2221,7 +2219,7 @@
         "referat_fakta_score": 7,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 41,
+        "retry_antall": 42,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-saudi-arabia-highlights-match-report",
         "mangler": [
@@ -2412,7 +2410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T12:31:31Z"
+      "oppdatert": "2026-06-22T13:01:40Z"
     },
     "Switzerland_Bosnia___Herzegovina_2026_06_18": {
       "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -3296,31 +3294,27 @@
       "gruppe": "H",
       "runde": "gruppe",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Uruguay and Cape Verde drew 2-2.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Uruguay and Cape Verde drew 2-2.\nGoals: Uruguay — Araujo (44) and Canobbio (45+6); Cape Verde — Pina (21) and Varela (61).\n\nLittle Cabo Verde registered another giant draw with a former FIFA World Cup™ winner.\nAfter finishing goalless with Spain, Bubista’s team recovered a half-time deficit to hold Uruguay at Miami Stadium.\nCabo Verde took a shock lead when Telmo Arcanjo earned a free-kick and, from 34 yards, Kevin Pina fired it through a gap in the wall and into the bottom corner.\nUruguay nevertheless swung the contest in their favour with quick-fire goals before the break.\nKey stat: Uruguay’s Fernando Muslera and Vozinha of Cabo Verde ensured that two goalkeepers in their 40s started a World Cup game for the first time ever.",
       "recap_kvalitet": {
-        "score": 2,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 13,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 30,
-        "fallback": true,
+        "antall_sok": 31,
+        "fallback": false,
         "cache_key": "Uruguay_Cape_Verde_2026_06_21|2-2",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 2,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 13,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 30,
+        "retry_antall": 31,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-cape-verde-match-report-highlights",
-        "mangler": [
-          "riktig_kamp",
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-cabo-verde-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -3506,7 +3500,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-22T12:32:23Z"
+      "oppdatert": "2026-06-22T13:01:42Z"
     },
     "Uzbekistan_Colombia_2026_06_17": {
       "kamp_id": "Uzbekistan_Colombia_2026_06_17",
