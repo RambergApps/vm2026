@@ -766,8 +766,8 @@
   "Spain_Saudi_Arabia_2026_06_21|4-0": {
     "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
     "resultat": "4-0",
-    "sist_sokt": "2026-06-22T19:01:50Z",
-    "antall_sok": 55,
+    "sist_sokt": "2026-06-22T19:27:05Z",
+    "antall_sok": 56,
     "beste_score": 7,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -784,7 +784,7 @@
       "kamp_hjemme_score": 4,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-22T19:01:26Z",
+      "hentet": "2026-06-22T19:26:53Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -2770,6 +2770,83 @@
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-croatia-highlights-match-report",
       "direct_fifa_probe": true,
       "_forsok_url": 2
+    }
+  },
+  "Argentina_Austria_2026_06_22|2-0": {
+    "kamp_id": "Argentina_Austria_2026_06_22",
+    "resultat": "2-0",
+    "sist_sokt": "2026-06-22T19:27:13Z",
+    "antall_sok": 1,
+    "beste_score": 11,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 2,
+      "kamp_borte_score": 0,
+      "score": 10,
+      "hentet": "2026-06-22T19:27:13Z",
+      "goal_events": [
+        {
+          "spiller": "Messi",
+          "lag": "Argentina",
+          "minutt": "38",
+          "type": "goal"
+        },
+        {
+          "spiller": "Messi",
+          "lag": "Argentina",
+          "minutt": "90+5",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Messi"
+      ],
+      "lead_scorer": "Messi",
+      "brace_scorer": "Messi",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights?searchOverlay=1)",
+        "Lionel Messi bounced back from missing an early penalty to become the World Cup's all-time leading scorer as Argentina downed Austria.",
+        "Lionel Messi further cemented his legacy as one of football's all-time greats by scoring a brilliant brace against Austria to become the FIFA World Cup™ all-time leading scorer.",
+        "The Argentina legend now has 18 goals at the global showpiece - following his hat-trick in the opener against Algeria - to eclipse Miroslav Klose's 16 strikes."
+      ],
+      "key_stat": "Lionel Messi joins France's Just Fontaine(1958)and Brazil's Jairzinho(1970)as the only three players to score in six consecutive World Cup matches.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": true,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 11,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   }
 }
