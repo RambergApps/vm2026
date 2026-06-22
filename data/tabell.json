@@ -1,8 +1,26 @@
 {
-  "sist_oppdatert": "2026-06-22T09:56:59Z",
+  "sist_oppdatert": "2026-06-22T10:29:03Z",
+  "sist_oppdatert_grupper": "2026-06-22T10:29:03Z",
+  "sist_oppdatert_utslag": "2026-06-22T10:29:03Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+  "kilder": {
+    "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+    "utslag": "https://api.fifa.com/api/v3/calendar/matches",
+    "utslag_parametre": {
+      "idCompetition": 17,
+      "idSeason": 285023,
+      "count": 500,
+      "language": "en"
+    }
+  },
+  "oppdatert_i_denne_kjoringen": {
+    "grupper": true,
+    "utslag": true
+  },
+  "advarsler": [],
   "antall_grupper": 12,
   "antall_lag": 48,
+  "antall_utslagskamper": 32,
   "grupper": {
     "A": [
       {
@@ -797,26 +815,6 @@
       }
     ]
   },
-  "sist_oppdatert_grupper": "2026-06-22T09:56:59Z",
-  "sist_oppdatert_utslag": "2026-06-22T08:41:27Z",
-  "kilder": {
-    "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
-    "utslag": "https://api.fifa.com/api/v3/calendar/matches",
-    "utslag_parametre": {
-      "idCompetition": 17,
-      "idSeason": 285023,
-      "count": 500,
-      "language": "en"
-    }
-  },
-  "oppdatert_i_denne_kjoringen": {
-    "grupper": false,
-    "utslag": false
-  },
-  "advarsler": [
-    "Startfil: R32 er hentet fra siste FIFA-kontroll, mens senere runder er bracket-placeholders. Neste workflow-kjøring erstatter hele M73–M104 fra FIFA Calendar API."
-  ],
-  "antall_utslagskamper": 32,
   "utslagskamper": [
     {
       "match_no": 73,
@@ -832,7 +830,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "2A",
       "borte_placeholder": "2B",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -850,7 +848,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "",
       "borte_placeholder": "3ABCDF",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -868,7 +866,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1F",
       "borte_placeholder": "2C",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -886,7 +884,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1C",
       "borte_placeholder": "2F",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -904,7 +902,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1I",
       "borte_placeholder": "3CDFGH",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -922,7 +920,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "2E",
       "borte_placeholder": "2I",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -940,7 +938,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "",
       "borte_placeholder": "3CEFHI",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -958,7 +956,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1L",
       "borte_placeholder": "3EHIJK",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -976,7 +974,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "",
       "borte_placeholder": "3BEFIJ",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -994,7 +992,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1G",
       "borte_placeholder": "3AEHIJ",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1012,7 +1010,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "2K",
       "borte_placeholder": "2L",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1030,7 +1028,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1H",
       "borte_placeholder": "2J",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1048,7 +1046,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1B",
       "borte_placeholder": "3EFGIJ",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1066,7 +1064,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1J",
       "borte_placeholder": "2H",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1084,7 +1082,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "1K",
       "borte_placeholder": "3DEIJL",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
@@ -1102,15 +1100,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "2D",
       "borte_placeholder": "2G",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 89,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021533",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-04T21:00:00Z",
       "dato": "2026-07-04",
       "hjemme": "W74",
       "borte": "W77",
@@ -1120,15 +1118,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W74",
       "borte_placeholder": "W77",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 90,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021530",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-04T17:00:00Z",
       "dato": "2026-07-04",
       "hjemme": "W73",
       "borte": "W75",
@@ -1138,15 +1136,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W73",
       "borte_placeholder": "W75",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 91,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021532",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-05T20:00:00Z",
       "dato": "2026-07-05",
       "hjemme": "W76",
       "borte": "W78",
@@ -1156,16 +1154,16 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W76",
       "borte_placeholder": "W78",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 92,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021531",
       "runde": "r16",
-      "utcDate": "",
-      "dato": "2026-07-05",
+      "utcDate": "2026-07-06T00:00:00Z",
+      "dato": "2026-07-06",
       "hjemme": "W79",
       "borte": "W80",
       "hjemme_kode": "",
@@ -1174,15 +1172,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W79",
       "borte_placeholder": "W80",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 93,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021529",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-06T19:00:00Z",
       "dato": "2026-07-06",
       "hjemme": "W83",
       "borte": "W84",
@@ -1192,16 +1190,16 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W83",
       "borte_placeholder": "W84",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 94,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021534",
       "runde": "r16",
-      "utcDate": "",
-      "dato": "2026-07-06",
+      "utcDate": "2026-07-07T00:00:00Z",
+      "dato": "2026-07-07",
       "hjemme": "W81",
       "borte": "W82",
       "hjemme_kode": "",
@@ -1210,15 +1208,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W81",
       "borte_placeholder": "W82",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 95,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021528",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-07T16:00:00Z",
       "dato": "2026-07-07",
       "hjemme": "W86",
       "borte": "W88",
@@ -1228,15 +1226,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W86",
       "borte_placeholder": "W88",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 96,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021535",
       "runde": "r16",
-      "utcDate": "",
+      "utcDate": "2026-07-07T20:00:00Z",
       "dato": "2026-07-07",
       "hjemme": "W85",
       "borte": "W87",
@@ -1246,15 +1244,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W85",
       "borte_placeholder": "W87",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 97,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021536",
       "runde": "qf",
-      "utcDate": "",
+      "utcDate": "2026-07-09T20:00:00Z",
       "dato": "2026-07-09",
       "hjemme": "W89",
       "borte": "W90",
@@ -1264,15 +1262,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W89",
       "borte_placeholder": "W90",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 98,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021538",
       "runde": "qf",
-      "utcDate": "",
+      "utcDate": "2026-07-10T19:00:00Z",
       "dato": "2026-07-10",
       "hjemme": "W93",
       "borte": "W94",
@@ -1282,15 +1280,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W93",
       "borte_placeholder": "W94",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 99,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021539",
       "runde": "qf",
-      "utcDate": "",
+      "utcDate": "2026-07-11T21:00:00Z",
       "dato": "2026-07-11",
       "hjemme": "W91",
       "borte": "W92",
@@ -1300,16 +1298,16 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W91",
       "borte_placeholder": "W92",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 100,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021537",
       "runde": "qf",
-      "utcDate": "",
-      "dato": "2026-07-11",
+      "utcDate": "2026-07-12T01:00:00Z",
+      "dato": "2026-07-12",
       "hjemme": "W95",
       "borte": "W96",
       "hjemme_kode": "",
@@ -1318,15 +1316,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W95",
       "borte_placeholder": "W96",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 101,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021541",
       "runde": "sf",
-      "utcDate": "",
+      "utcDate": "2026-07-14T19:00:00Z",
       "dato": "2026-07-14",
       "hjemme": "W97",
       "borte": "W98",
@@ -1336,15 +1334,15 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W97",
       "borte_placeholder": "W98",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 102,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021540",
       "runde": "sf",
-      "utcDate": "",
+      "utcDate": "2026-07-15T19:00:00Z",
       "dato": "2026-07-15",
       "hjemme": "W99",
       "borte": "W100",
@@ -1354,33 +1352,33 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W99",
       "borte_placeholder": "W100",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 103,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021542",
       "runde": "bronze",
-      "utcDate": "",
-      "dato": "",
-      "hjemme": "L101",
-      "borte": "L102",
+      "utcDate": "2026-07-18T21:00:00Z",
+      "dato": "2026-07-18",
+      "hjemme": "RU101",
+      "borte": "RU102",
       "hjemme_kode": "",
       "borte_kode": "",
       "hjemme_kjent": false,
       "borte_kjent": false,
-      "hjemme_placeholder": "L101",
-      "borte_placeholder": "L102",
-      "status": "",
+      "hjemme_placeholder": "RU101",
+      "borte_placeholder": "RU102",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     },
     {
       "match_no": 104,
-      "fifa_event_id": "",
+      "fifa_event_id": "400021543",
       "runde": "final",
-      "utcDate": "",
+      "utcDate": "2026-07-19T19:00:00Z",
       "dato": "2026-07-19",
       "hjemme": "W101",
       "borte": "W102",
@@ -1390,7 +1388,7 @@
       "borte_kjent": false,
       "hjemme_placeholder": "W101",
       "borte_placeholder": "W102",
-      "status": "",
+      "status": "1",
       "hjemme_score": null,
       "borte_score": null
     }
