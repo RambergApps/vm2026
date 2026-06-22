@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-22T21:30:56Z",
-  "sist_oppdatert_grupper": "2026-06-22T21:30:56Z",
-  "sist_oppdatert_utslag": "2026-06-22T21:30:56Z",
+  "sist_oppdatert": "2026-06-22T22:01:03Z",
+  "sist_oppdatert_grupper": "2026-06-22T22:01:03Z",
+  "sist_oppdatert_utslag": "2026-06-22T22:01:03Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -553,6 +553,22 @@
     "I": [
       {
         "plass": 1,
+        "lag": "France",
+        "fifa_navn": "France",
+        "kode": "FRA",
+        "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/FRA%201x",
+        "spilt": 2,
+        "seier": 2,
+        "uavgjort": 0,
+        "tap": 0,
+        "maal_for": 4,
+        "maal_mot": 1,
+        "maal_forskjell": 3,
+        "lagdisiplin": 0,
+        "poeng": 6
+      },
+      {
+        "plass": 2,
         "lag": "Norway",
         "fifa_navn": "Norway",
         "kode": "NOR",
@@ -564,22 +580,6 @@
         "maal_for": 4,
         "maal_mot": 1,
         "maal_forskjell": 3,
-        "lagdisiplin": 0,
-        "poeng": 3
-      },
-      {
-        "plass": 2,
-        "lag": "France",
-        "fifa_navn": "France",
-        "kode": "FRA",
-        "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/FRA%201x",
-        "spilt": 1,
-        "seier": 1,
-        "uavgjort": 0,
-        "tap": 0,
-        "maal_for": 3,
-        "maal_mot": 1,
-        "maal_forskjell": 2,
         "lagdisiplin": 0,
         "poeng": 3
       },
@@ -605,14 +605,14 @@
         "fifa_navn": "Iraq",
         "kode": "IRQ",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/IRQ%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
         "uavgjort": 0,
-        "tap": 1,
+        "tap": 2,
         "maal_for": 1,
-        "maal_mot": 4,
-        "maal_forskjell": -3,
-        "lagdisiplin": -1,
+        "maal_mot": 5,
+        "maal_forskjell": -4,
+        "lagdisiplin": -2,
         "poeng": 0
       }
     ],
