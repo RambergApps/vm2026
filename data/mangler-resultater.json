@@ -1,16 +1,6 @@
 {
-  "sist_sjekket": "2026-06-23T00:30:53Z",
+  "sist_sjekket": "2026-06-23T01:01:13Z",
   "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "France_Iraq_2026_06_22",
-      "hjemmelag": "France",
-      "bortelag": "Iraq",
-      "dato": "2026-06-22",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "type": "mangler_resultat",
       "kamp_id": "Jordan_Algeria_2026_06_22",
