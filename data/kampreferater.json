@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-23T04:01:08Z",
+  "sist_oppdatert": "2026-06-23T04:16:49Z",
   "antall_kamper": 44,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -9457,9 +9457,9 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Jordan lead Algeria 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Jordan lead Algeria 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -9645,7 +9645,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-23T04:01:07Z"
+      "oppdatert": "2026-06-23T04:16:49Z"
     }
   }
 }
