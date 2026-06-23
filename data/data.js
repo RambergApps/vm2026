@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T19:01:11Z
+// Sist oppdatert: 2026-06-23T19:31:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T19:01:11Z",
+  "sist_oppdatert": "2026-06-23T19:31:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -928,8 +928,8 @@ const VM_DATA = {
       "bortelag": "Uzbekistan",
       "hjemme": 5,
       "borte": 0,
-      "ferdig": false,
-      "status": "IN_PLAY",
+      "ferdig": true,
+      "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
       "kilde_score": "football_data_org",
@@ -937,7 +937,8 @@ const VM_DATA = {
       "fd_match_id": 537405,
       "fd_utcDate": "2026-06-23T17:00:00Z",
       "fd_hjemmelag": "Portugal",
-      "fd_bortelag": "Uzbekistan"
+      "fd_bortelag": "Uzbekistan",
+      "avanserer": "Portugal"
     },
     "Bosnia___Herzegovina_Qatar_2026_06_24": {
       "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
@@ -2026,59 +2027,59 @@ const VM_DATA = {
     },
     {
       "rank": 17,
-      "spiller": "Cristiano Ronaldo",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 151
-    },
-    {
-      "rank": 18,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 176
     },
     {
-      "rank": 19,
+      "rank": 18,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 20,
+      "rank": 19,
       "spiller": "Ismael Saibari",
       "maal": 2,
       "assists": 0,
       "minutter": 180
     },
     {
-      "rank": 21,
+      "rank": 20,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 22,
+      "rank": 21,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 23,
+      "rank": 22,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 24,
+      "rank": 23,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 192
+    },
+    {
+      "rank": 24,
+      "spiller": "Cristiano Ronaldo",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 201
     },
     {
       "rank": 25,
@@ -2229,46 +2230,46 @@ const VM_DATA = {
     },
     {
       "rank": 46,
+      "spiller": "Rafael Leao",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 36
+    },
+    {
+      "rank": 47,
       "spiller": "Helio Varela",
       "maal": 1,
       "assists": 0,
       "minutter": 40
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Leo Ostigard",
       "maal": 1,
       "assists": 0,
       "minutter": 41
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Anthony Elanga",
       "maal": 1,
       "assists": 0,
       "minutter": 47
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Nadhir Benbouali",
       "maal": 1,
       "assists": 0,
       "minutter": 52
-    },
-    {
-      "rank": 50,
-      "spiller": "Mauricio",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 53
     }
   ],
   "stilling": [
     {
       "navn": "Pål André Nilsen",
       "deltaker_id": "paal_andr_nilsen",
-      "poeng_totalt": 82,
-      "poeng_gruppespill": 82,
+      "poeng_totalt": 84,
+      "poeng_gruppespill": 84,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -3174,9 +3175,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -3306,8 +3309,8 @@ const VM_DATA = {
     {
       "navn": "Alexander",
       "deltaker_id": "alexander",
-      "poeng_totalt": 76,
-      "poeng_gruppespill": 76,
+      "poeng_totalt": 78,
+      "poeng_gruppespill": 78,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -4213,9 +4216,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -4345,8 +4350,8 @@ const VM_DATA = {
     {
       "navn": "Kjetil bjerke",
       "deltaker_id": "kjetil_bjerke",
-      "poeng_totalt": 76,
-      "poeng_gruppespill": 76,
+      "poeng_totalt": 78,
+      "poeng_gruppespill": 78,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -5252,9 +5257,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -5384,8 +5391,8 @@ const VM_DATA = {
     {
       "navn": "Arne Kristian Johansen",
       "deltaker_id": "arne_kristian_johansen",
-      "poeng_totalt": 72,
-      "poeng_gruppespill": 72,
+      "poeng_totalt": 74,
+      "poeng_gruppespill": 74,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -6291,9 +6298,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -6423,8 +6432,8 @@ const VM_DATA = {
     {
       "navn": "Olympus fc",
       "deltaker_id": "olympus_fc",
-      "poeng_totalt": 70,
-      "poeng_gruppespill": 70,
+      "poeng_totalt": 72,
+      "poeng_gruppespill": 72,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -7330,9 +7339,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -7462,8 +7473,8 @@ const VM_DATA = {
     {
       "navn": "Vegard Hammervold Midtbø",
       "deltaker_id": "vegard_hammervold_midtboe",
-      "poeng_totalt": 70,
-      "poeng_gruppespill": 70,
+      "poeng_totalt": 72,
+      "poeng_gruppespill": 72,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -8369,9 +8380,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -8501,8 +8514,8 @@ const VM_DATA = {
     {
       "navn": "Bjørnar Tallaksrud",
       "deltaker_id": "bjoernar_tallaksrud",
-      "poeng_totalt": 68,
-      "poeng_gruppespill": 68,
+      "poeng_totalt": 70,
+      "poeng_gruppespill": 70,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -9408,9 +9421,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -9540,8 +9555,8 @@ const VM_DATA = {
     {
       "navn": "Alex Myrvokd",
       "deltaker_id": "alex_myrvokd",
-      "poeng_totalt": 64,
-      "poeng_gruppespill": 64,
+      "poeng_totalt": 66,
+      "poeng_gruppespill": 66,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -10447,9 +10462,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -10579,8 +10596,8 @@ const VM_DATA = {
     {
       "navn": "Anders Rikheim",
       "deltaker_id": "anders_rikheim",
-      "poeng_totalt": 64,
-      "poeng_gruppespill": 64,
+      "poeng_totalt": 66,
+      "poeng_gruppespill": 66,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -11486,9 +11503,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -11618,8 +11637,8 @@ const VM_DATA = {
     {
       "navn": "Magnus Børrud",
       "deltaker_id": "magnus_boerrud",
-      "poeng_totalt": 60,
-      "poeng_gruppespill": 60,
+      "poeng_totalt": 62,
+      "poeng_gruppespill": 62,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -12525,9 +12544,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -12657,8 +12678,8 @@ const VM_DATA = {
     {
       "navn": "Sjur Revheim",
       "deltaker_id": "sjur_revheim",
-      "poeng_totalt": 60,
-      "poeng_gruppespill": 60,
+      "poeng_totalt": 62,
+      "poeng_gruppespill": 62,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -13564,9 +13585,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -13696,8 +13719,8 @@ const VM_DATA = {
     {
       "navn": "Ken Arne Hansen",
       "deltaker_id": "ken_arne_hansen",
-      "poeng_totalt": 58,
-      "poeng_gruppespill": 58,
+      "poeng_totalt": 60,
+      "poeng_gruppespill": 60,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -14603,9 +14626,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -14735,8 +14760,8 @@ const VM_DATA = {
     {
       "navn": "Sondre Garstad",
       "deltaker_id": "sondre_garstad",
-      "poeng_totalt": 58,
-      "poeng_gruppespill": 58,
+      "poeng_totalt": 60,
+      "poeng_gruppespill": 60,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -15642,9 +15667,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -15774,8 +15801,8 @@ const VM_DATA = {
     {
       "navn": "Rickard Jacobsson",
       "deltaker_id": "rickard_jacobsson",
-      "poeng_totalt": 56,
-      "poeng_gruppespill": 56,
+      "poeng_totalt": 58,
+      "poeng_gruppespill": 58,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -16681,9 +16708,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -16813,8 +16842,8 @@ const VM_DATA = {
     {
       "navn": "Anders Sundero",
       "deltaker_id": "anders_sundero",
-      "poeng_totalt": 54,
-      "poeng_gruppespill": 54,
+      "poeng_totalt": 56,
+      "poeng_gruppespill": 56,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -17720,9 +17749,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -17852,8 +17883,8 @@ const VM_DATA = {
     {
       "navn": "Geir Magne Evensen",
       "deltaker_id": "geir_magne_evensen",
-      "poeng_totalt": 54,
-      "poeng_gruppespill": 54,
+      "poeng_totalt": 56,
+      "poeng_gruppespill": 56,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -18759,9 +18790,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -18891,8 +18924,8 @@ const VM_DATA = {
     {
       "navn": "sergio gomes",
       "deltaker_id": "sergio_gomes",
-      "poeng_totalt": 54,
-      "poeng_gruppespill": 54,
+      "poeng_totalt": 56,
+      "poeng_gruppespill": 56,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -19798,9 +19831,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -19930,8 +19965,8 @@ const VM_DATA = {
     {
       "navn": "Atle Johansen",
       "deltaker_id": "atle_johansen",
-      "poeng_totalt": 52,
-      "poeng_gruppespill": 52,
+      "poeng_totalt": 54,
+      "poeng_gruppespill": 54,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -20837,9 +20872,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -20969,8 +21006,8 @@ const VM_DATA = {
     {
       "navn": "Bror Ramberg",
       "deltaker_id": "bror_ramberg",
-      "poeng_totalt": 52,
-      "poeng_gruppespill": 52,
+      "poeng_totalt": 54,
+      "poeng_gruppespill": 54,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -21876,9 +21913,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -22008,8 +22047,8 @@ const VM_DATA = {
     {
       "navn": "Diyan K.",
       "deltaker_id": "diyan_k",
-      "poeng_totalt": 52,
-      "poeng_gruppespill": 52,
+      "poeng_totalt": 54,
+      "poeng_gruppespill": 54,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -22915,9 +22954,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -23047,8 +23088,8 @@ const VM_DATA = {
     {
       "navn": "Sebastian Luranc",
       "deltaker_id": "sebastian_luranc",
-      "poeng_totalt": 48,
-      "poeng_gruppespill": 48,
+      "poeng_totalt": 54,
+      "poeng_gruppespill": 54,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -23954,9 +23995,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 6,
+          "riktig_utfall": true,
+          "eksakt": true,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -24086,8 +24129,8 @@ const VM_DATA = {
     {
       "navn": "Jorgen Lindland",
       "deltaker_id": "jorgen_lindland",
-      "poeng_totalt": 46,
-      "poeng_gruppespill": 46,
+      "poeng_totalt": 52,
+      "poeng_gruppespill": 52,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -24993,9 +25036,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 6,
+          "riktig_utfall": true,
+          "eksakt": true,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -25125,8 +25170,8 @@ const VM_DATA = {
     {
       "navn": "Thomas Lindland",
       "deltaker_id": "thomas_lindland",
-      "poeng_totalt": 46,
-      "poeng_gruppespill": 46,
+      "poeng_totalt": 48,
+      "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -26032,9 +26077,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -26164,8 +26211,8 @@ const VM_DATA = {
     {
       "navn": "Ulf-Morten Johansen",
       "deltaker_id": "ulf_morten_johansen",
-      "poeng_totalt": 46,
-      "poeng_gruppespill": 46,
+      "poeng_totalt": 48,
+      "poeng_gruppespill": 48,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -27071,9 +27118,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -27203,8 +27252,8 @@ const VM_DATA = {
     {
       "navn": "Andreas Handelsby",
       "deltaker_id": "andreas_handelsby",
-      "poeng_totalt": 44,
-      "poeng_gruppespill": 44,
+      "poeng_totalt": 46,
+      "poeng_gruppespill": 46,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -28110,9 +28159,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -28242,8 +28293,8 @@ const VM_DATA = {
     {
       "navn": "Marita Hauge Gjerde",
       "deltaker_id": "marita_hauge_gjerde",
-      "poeng_totalt": 44,
-      "poeng_gruppespill": 44,
+      "poeng_totalt": 46,
+      "poeng_gruppespill": 46,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -29149,9 +29200,11 @@ const VM_DATA = {
           "tippa_b": 0,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -29281,8 +29334,8 @@ const VM_DATA = {
     {
       "navn": "Chris Hortman",
       "deltaker_id": "chris_hortman",
-      "poeng_totalt": 40,
-      "poeng_gruppespill": 40,
+      "poeng_totalt": 42,
+      "poeng_gruppespill": 42,
       "poeng_utslagsrunder": 0,
       "poeng_bonus": 0,
       "poeng_helhetsbonus": 0,
@@ -30188,9 +30241,11 @@ const VM_DATA = {
           "tippa_b": 1,
           "faktisk_h": 5,
           "faktisk_b": 0,
-          "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "poeng": 2,
+          "riktig_utfall": true,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -31228,8 +31283,10 @@ const VM_DATA = {
           "faktisk_h": 5,
           "faktisk_b": 0,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {
@@ -32267,8 +32324,10 @@ const VM_DATA = {
           "faktisk_h": 5,
           "faktisk_b": 0,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
+          "status": "FINISHED",
           "runde": "gruppe"
         },
         {

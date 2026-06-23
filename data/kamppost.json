@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-22",
   "dato_norsk": "Mandag 22. juni 2026",
-  "generert": "2026-06-23T05:31:03Z",
+  "generert": "2026-06-23T19:31:18Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -864,163 +864,163 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 82,
+      "poeng_totalt": 84,
       "poeng_i_dag": 4
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 76,
+      "poeng_totalt": 78,
       "poeng_i_dag": 4
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 3,
-      "poeng_totalt": 76,
+      "poeng_totalt": 78,
       "poeng_i_dag": 10
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 4,
-      "poeng_totalt": 72,
+      "poeng_totalt": 74,
       "poeng_i_dag": 6
     },
     {
       "navn": "Olympus fc",
       "plass": 5,
-      "poeng_totalt": 70,
+      "poeng_totalt": 72,
       "poeng_i_dag": 10
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 6,
-      "poeng_totalt": 70,
+      "poeng_totalt": 72,
       "poeng_i_dag": 10
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 7,
-      "poeng_totalt": 68,
+      "poeng_totalt": 70,
       "poeng_i_dag": 8
     },
     {
       "navn": "Alex Myrvokd",
       "plass": 8,
-      "poeng_totalt": 64,
+      "poeng_totalt": 66,
       "poeng_i_dag": 4
     },
     {
       "navn": "Anders Rikheim",
       "plass": 9,
-      "poeng_totalt": 64,
+      "poeng_totalt": 66,
       "poeng_i_dag": 6
     },
     {
       "navn": "Magnus Børrud",
       "plass": 10,
-      "poeng_totalt": 60,
+      "poeng_totalt": 62,
       "poeng_i_dag": 10
     },
     {
       "navn": "Sjur Revheim",
       "plass": 11,
-      "poeng_totalt": 60,
+      "poeng_totalt": 62,
       "poeng_i_dag": 8
     },
     {
       "navn": "Ken Arne Hansen",
       "plass": 12,
-      "poeng_totalt": 58,
+      "poeng_totalt": 60,
       "poeng_i_dag": 4
     },
     {
       "navn": "Sondre Garstad",
       "plass": 13,
-      "poeng_totalt": 58,
+      "poeng_totalt": 60,
       "poeng_i_dag": 6
     },
     {
       "navn": "Rickard Jacobsson",
       "plass": 14,
-      "poeng_totalt": 56,
+      "poeng_totalt": 58,
       "poeng_i_dag": 6
     },
     {
       "navn": "Anders Sundero",
       "plass": 15,
-      "poeng_totalt": 54,
+      "poeng_totalt": 56,
       "poeng_i_dag": 6
     },
     {
       "navn": "Geir Magne Evensen",
       "plass": 16,
-      "poeng_totalt": 54,
+      "poeng_totalt": 56,
       "poeng_i_dag": 4
     },
     {
       "navn": "sergio gomes",
       "plass": 17,
-      "poeng_totalt": 54,
+      "poeng_totalt": 56,
       "poeng_i_dag": 12
     },
     {
       "navn": "Atle Johansen",
       "plass": 18,
-      "poeng_totalt": 52,
+      "poeng_totalt": 54,
       "poeng_i_dag": 6
     },
     {
       "navn": "Bror Ramberg",
       "plass": 19,
-      "poeng_totalt": 52,
+      "poeng_totalt": 54,
       "poeng_i_dag": 10
     },
     {
       "navn": "Diyan K.",
       "plass": 20,
-      "poeng_totalt": 52,
+      "poeng_totalt": 54,
       "poeng_i_dag": 10
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 21,
-      "poeng_totalt": 48,
+      "poeng_totalt": 54,
       "poeng_i_dag": 4
     },
     {
       "navn": "Jorgen Lindland",
       "plass": 22,
-      "poeng_totalt": 46,
+      "poeng_totalt": 52,
       "poeng_i_dag": 6
     },
     {
       "navn": "Thomas Lindland",
       "plass": 23,
-      "poeng_totalt": 46,
+      "poeng_totalt": 48,
       "poeng_i_dag": 4
     },
     {
       "navn": "Ulf-Morten Johansen",
       "plass": 24,
-      "poeng_totalt": 46,
+      "poeng_totalt": 48,
       "poeng_i_dag": 8
     },
     {
       "navn": "Andreas Handelsby",
       "plass": 25,
-      "poeng_totalt": 44,
+      "poeng_totalt": 46,
       "poeng_i_dag": 8
     },
     {
       "navn": "Marita Hauge Gjerde",
       "plass": 26,
-      "poeng_totalt": 44,
+      "poeng_totalt": 46,
       "poeng_i_dag": 8
     },
     {
       "navn": "Chris Hortman",
       "plass": 27,
-      "poeng_totalt": 40,
+      "poeng_totalt": 42,
       "poeng_i_dag": 2
     },
     {

@@ -3116,5 +3116,103 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Portugal_Uzbekistan_2026_06_23|5-0": {
+    "kamp_id": "Portugal_Uzbekistan_2026_06_23",
+    "resultat": "5-0",
+    "sist_sokt": "2026-06-23T19:31:18Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-uzbekistan-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 5,
+      "kamp_borte_score": 0,
+      "score": 10,
+      "hentet": "2026-06-23T19:31:18Z",
+      "goal_events": [
+        {
+          "spiller": "Ronaldo",
+          "lag": "Portugal",
+          "minutt": "6",
+          "type": "goal"
+        },
+        {
+          "spiller": "Mendes",
+          "lag": "Portugal",
+          "minutt": "17",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ronaldo",
+          "lag": "Portugal",
+          "minutt": "39",
+          "type": "goal"
+        },
+        {
+          "spiller": "Nematov",
+          "lag": "Portugal",
+          "minutt": "60",
+          "type": "own_goal"
+        },
+        {
+          "spiller": "Leao",
+          "lag": "Portugal",
+          "minutt": "87",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Ronaldo",
+        "Mendes",
+        "Nematov",
+        "Leao"
+      ],
+      "lead_scorer": "Ronaldo",
+      "brace_scorer": "Ronaldo",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Cristiano Ronaldo scored a brilliant brace to set a number of FIFA World Cup records and get Portugal's campaign up and running.",
+        "After seeing the likes of Lionel Messi, Kylian Mbappe and Erling Haaland hit the headlines at the FIFA World Cup 2026™, Portugal legend Cristiano Ronaldo reached lift-off in Houston in fine fashion.",
+        "Playing in his sixth World Cup finals, the 41-year-old got the ball up and running against Uzbekistan with a brilliant close-range effort following Joao Cancelo's cross.",
+        "It was a history-making goal - Ronaldo became the first player to score in six World Cups and he also became the second-oldest scorer in tournament history behind Cameroon's Roger Milla. The relief on Ronaldo's face after he struggled in the opener against Congo DR was palpable.",
+        "Inspired, the veteran netted his second with a well-taken strike into the corner just before half-time for his 10th World Cup goal to become Portugal's leading scorer in the global finals, ahead of the legendary Eusebio with nine."
+      ],
+      "key_stat": "Cristiano Ronaldo has become the second oldest player to score in a FIFA World Cup at the age of 41 years and 138 days, second only to Roger Milla who was 42 years and 39 days when he scored for Cameroon against Russia in 1994.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": true,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-uzbekistan-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
