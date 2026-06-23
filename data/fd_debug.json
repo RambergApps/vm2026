@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-23T20:01:13Z",
+  "tidspunkt": "2026-06-23T20:30:59Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -952,20 +952,6 @@
       "fd_dato": "2026-06-17",
       "fd_utcDate": "2026-06-17T23:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Ghana_Panama_2026_06_17"
-    },
-    "537411": {
-      "fd_match_id": 537411,
-      "fd_hjemmelag": "England",
-      "fd_bortelag": "Ghana",
-      "hjemmelag_normalisert": "England",
-      "bortelag_normalisert": "Ghana",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-23",
-      "fd_utcDate": "2026-06-23T20:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "England_Ghana_2026_06_23"
     },
     "537412": {
       "fd_match_id": 537412,
