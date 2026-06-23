@@ -643,6 +643,102 @@ body {
 }
 
 
+
+/* ── LOKAL BRUKERPROFIL OG DAGLIG OPPSUMMERING ── */
+.profil-linje {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 10px 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(13,19,32,.84);
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.profil-linje.vis { display: flex; }
+.profil-linje strong { color: var(--text); font-size: 14px; }
+.profil-bytte-btn,
+.recap-bytte-btn,
+.profil-bekreft-btn,
+.recap-lukk-btn {
+  border: 1px solid rgba(239,43,45,.38);
+  background: rgba(239,43,45,.08);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 11px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.profil-bytte-btn:hover,
+.recap-bytte-btn:hover,
+.profil-bekreft-btn:hover,
+.recap-lukk-btn:hover { background: var(--accent); color: #fff; }
+.profil-velger-intro { color: var(--muted); font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+.profil-feil { margin-top: 12px; padding: 10px 12px; border: 1px solid rgba(255,90,90,.35); border-radius: 8px; background: rgba(255,90,90,.08); color: #ff9090; font-size: 13px; }
+.profil-velger-select {
+  width: 100%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 11px 12px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  outline: none;
+}
+.profil-velger-select:focus { border-color: var(--accent); }
+.profil-velger-actions,
+.recap-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 16px; }
+.profil-bekreft-btn,
+.recap-lukk-btn { background: var(--accent); color: #fff; padding: 10px 16px; }
+.recap-topplinje {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 20px; border-bottom: 1px solid var(--border);
+  color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
+}
+.recap-topplinje strong { color: var(--text); }
+.recap-seksjon + .recap-seksjon { margin-top: 20px; }
+.recap-seksjon-tittel {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-bottom: 7px; border-bottom: 1px solid var(--border);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 900;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+}
+.recap-total { color: var(--accent); font-size: 14px; }
+.recap-rad {
+  display: grid; grid-template-columns: minmax(0,1fr) auto auto;
+  gap: 10px; align-items: center; padding: 10px 2px;
+  border-bottom: 1px solid rgba(30,45,74,.45);
+}
+.recap-rad:last-child { border-bottom: none; }
+.recap-kampnavn {
+  min-width: 0; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 800; text-transform: uppercase;
+}
+.recap-kampmeta { color: var(--muted); font-size: 10px; font-weight: 500; text-transform: none; margin-top: 2px; }
+.recap-tips { text-align: right; color: var(--text); font-family: 'Bebas Neue', sans-serif; font-size: 19px; white-space: nowrap; }
+.recap-tips small { display: block; color: var(--muted); font-family: 'Barlow', sans-serif; font-size: 10px; }
+.recap-poeng { min-width: 42px; text-align: right; font-family: 'Bebas Neue', sans-serif; font-size: 21px; }
+.recap-poeng.positiv { color: var(--gold); }
+.recap-poeng.null { color: var(--muted); }
+.recap-tomt { color: var(--muted); font-size: 13px; padding: 13px 2px 2px; }
+@media (max-width: 560px) {
+  .profil-linje { align-items: flex-start; }
+  .recap-rad { grid-template-columns: minmax(0,1fr) auto; }
+  .recap-poeng { grid-column: 2; }
+  .recap-topplinje { align-items: flex-start; }
+}
+
 /* ── MODAL ── */
 .modal-overlay {
   display: none;
@@ -866,6 +962,8 @@ body {
 
 <div class="container">
 
+  <div class="profil-linje" id="profilLinje"></div>
+
   <!-- STILLING -->
   <div class="seksjon active" id="stilling">
     <div id="stillingsinnhold">
@@ -985,6 +1083,227 @@ document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
 `).join("");
 
 
+
+
+// ── LOKAL BRUKERPROFIL OG FEMTIMERSOPPSUMMERING ───────────
+const VIEWER_KEY = "vm2026_viewer_id";
+const RECAP_KEY_PREFIX = "vm2026_recap_last_shown_";
+const RECAP_INTERVAL_MS = 5 * 60 * 60 * 1000;
+let modalKanLukkes = true;
+let modalOnClose = null;
+
+function finnProfilDeltaker(id = localStorage.getItem(VIEWER_KEY)) {
+  if (!id || typeof VM_DATA === "undefined") return null;
+  return (VM_DATA.stilling || []).find(d => d.deltaker_id === id) || null;
+}
+
+function oppdaterProfilLinje() {
+  const linje = document.getElementById("profilLinje");
+  if (!linje) return;
+  const deltaker = finnProfilDeltaker();
+  if (!deltaker) {
+    linje.classList.remove("vis");
+    linje.innerHTML = "";
+    return;
+  }
+  linje.innerHTML = `
+    <div>Personlig visning: <strong>${escHTML(deltaker.navn)}</strong></div>
+    <button type="button" class="profil-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>`;
+  linje.classList.add("vis");
+}
+
+function visProfilvelger(paakrevd = false) {
+  const deltakere = [...(VM_DATA?.stilling || [])].sort((a,b) => String(a.navn).localeCompare(String(b.navn), "nb"));
+  if (!deltakere.length) return;
+  const valgt = localStorage.getItem(VIEWER_KEY) || "";
+  modalKanLukkes = !paakrevd;
+  modalOnClose = null;
+
+  document.getElementById("modalInnhold").innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">Hvem er du?</div>
+        <div class="modal-meta">Valget lagres bare i denne nettleseren</div>
+      </div>
+      ${paakrevd ? "" : '<button class="modal-lukk" onclick="lukkModal()">✕</button>'}
+    </div>
+    <div class="modal-body">
+      <div class="profil-velger-intro">Velg navnet ditt for å se din poengfangst og dine tips. Velger du feil, kan du når som helst bruke «Bytt bruker».</div>
+      <select class="profil-velger-select" id="profilVelgerSelect">
+        <option value="">— Velg deg selv —</option>
+        ${deltakere.map(d => `<option value="${escHTML(d.deltaker_id)}" ${d.deltaker_id === valgt ? "selected" : ""}>${escHTML(d.navn)}</option>`).join("")}
+      </select>
+      <div id="profilVelgerFeil"></div>
+      <div class="profil-velger-actions">
+        <button type="button" class="profil-bekreft-btn" onclick="bekreftProfilvalg()">Bruk denne profilen</button>
+      </div>
+    </div>`;
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function bekreftProfilvalg() {
+  const select = document.getElementById("profilVelgerSelect");
+  const id = select?.value || "";
+  const deltaker = finnProfilDeltaker(id);
+  if (!deltaker) {
+    document.getElementById("profilVelgerFeil").innerHTML = '<div class="profil-feil">Velg navnet ditt før du fortsetter.</div>';
+    return;
+  }
+  localStorage.setItem(VIEWER_KEY, id);
+  // Samme profil brukes som forhåndsvalg på utslagstippingen.
+  localStorage.setItem("vm2026_deltaker_id", id);
+  oppdaterProfilLinje();
+  lukkModal(true);
+  window.setTimeout(() => visRecapModal(true), 0);
+}
+
+function norskDatoMedOffset(offset = 0) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(new Date());
+  const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  const base = new Date(Date.UTC(Number(map.year), Number(map.month) - 1, Number(map.day) + offset, 12));
+  return base.toISOString().slice(0, 10);
+}
+
+function resultatDatoNorsk(resultat) {
+  if (resultat?.fd_utcDate) {
+    const dato = new Date(resultat.fd_utcDate);
+    if (!Number.isNaN(dato.getTime())) {
+      return dato.toLocaleDateString("sv-SE", { timeZone: "Europe/Oslo" });
+    }
+  }
+  return String(resultat?.dato_openfootball || resultat?.dato || "").slice(0, 10);
+}
+
+function formatKickoffKort(resultat) {
+  if (!resultat?.fd_utcDate) return resultatDatoNorsk(resultat);
+  const dato = new Date(resultat.fd_utcDate);
+  if (Number.isNaN(dato.getTime())) return resultatDatoNorsk(resultat);
+  return dato.toLocaleTimeString("nb-NO", { timeZone: "Europe/Oslo", hour: "2-digit", minute: "2-digit" });
+}
+
+function unikeProfilResultater() {
+  const map = new Map();
+  Object.entries(VM_DATA?.resultater || {}).forEach(([key, resultat]) => {
+    if (!resultat) return;
+    const canonical = resultat.canonical_kamp_id || resultat.alias_for || key;
+    const finnes = map.get(canonical);
+    if (!finnes || (finnes.alias_for && !resultat.alias_for)) {
+      map.set(canonical, { ...resultat, _key: key, _canonical: canonical });
+    }
+  });
+  return [...map.values()];
+}
+
+function tipsLookupForDeltaker(deltaker) {
+  const lookup = new Map();
+  (deltaker?.tippinger || []).forEach(tips => {
+    if (tips.type && tips.type !== "kamp") return;
+    const resultat = VM_DATA?.resultater?.[tips.kamp_id];
+    const canonical = resultat?.canonical_kamp_id || resultat?.alias_for || tips.kamp_id;
+    lookup.set(canonical, tips);
+    lookup.set(tips.kamp_id, tips);
+  });
+  return lookup;
+}
+
+function recapData(deltaker) {
+  const idag = norskDatoMedOffset(0);
+  const igaar = norskDatoMedOffset(-1);
+  const tipsLookup = tipsLookupForDeltaker(deltaker);
+  const resultater = unikeProfilResultater().sort((a,b) => String(a.fd_utcDate || a.dato_openfootball || "").localeCompare(String(b.fd_utcDate || b.dato_openfootball || "")));
+
+  const finnTips = resultat => tipsLookup.get(resultat._canonical) || tipsLookup.get(resultat._key) || null;
+  const gaarsdagens = resultater
+    .filter(r => resultatDatoNorsk(r) === igaar && r.ferdig)
+    .map(r => ({ resultat: r, tips: finnTips(r) }))
+    .filter(x => x.tips);
+  const dagens = resultater
+    .filter(r => resultatDatoNorsk(r) === idag)
+    .map(r => ({ resultat: r, tips: finnTips(r) }));
+  return { idag, igaar, gaarsdagens, dagens };
+}
+
+function recapKampRad(item, visPoeng) {
+  const r = item.resultat;
+  const t = item.tips;
+  const faktisk = r.hjemme !== null && r.hjemme !== undefined && r.borte !== null && r.borte !== undefined
+    ? `${r.hjemme}–${r.borte}` : "–";
+  const tips = t && Number.isInteger(t.tippa_h) && Number.isInteger(t.tippa_b)
+    ? `${t.tippa_h}–${t.tippa_b}` : "Ikke tippet";
+  const poeng = Number(t?.poeng || 0);
+  return `<div class="recap-rad">
+    <div class="recap-kampnavn">${escHTML(r.hjemmelag || "?")} – ${escHTML(r.bortelag || "?")}
+      <div class="recap-kampmeta">${escHTML(formatKickoffKort(r))}${r.ferdig ? ` · Resultat ${escHTML(faktisk)}` : ""}</div>
+    </div>
+    <div class="recap-tips">${escHTML(tips)}<small>Ditt tips</small></div>
+    ${visPoeng ? `<div class="recap-poeng ${poeng > 0 ? "positiv" : "null"}">${poeng > 0 ? "+" : ""}${poeng}p</div>` : ""}
+  </div>`;
+}
+
+function visRecapModal(force = false) {
+  const deltaker = finnProfilDeltaker();
+  if (!deltaker) {
+    visProfilvelger(true);
+    return;
+  }
+  const data = recapData(deltaker);
+  if (!data.gaarsdagens.length && !data.dagens.length) return;
+
+  const key = RECAP_KEY_PREFIX + deltaker.deltaker_id;
+  const sistVist = Number(localStorage.getItem(key) || 0);
+  if (!force && Date.now() - sistVist < RECAP_INTERVAL_MS) return;
+
+  const gaarsPoeng = data.gaarsdagens.reduce((sum, x) => sum + Number(x.tips?.poeng || 0), 0);
+  const gaarsHTML = data.gaarsdagens.length
+    ? data.gaarsdagens.map(x => recapKampRad(x, true)).join("")
+    : '<div class="recap-tomt">Ingen ferdige kamper fra i går.</div>';
+  const dagensHTML = data.dagens.length
+    ? data.dagens.map(x => recapKampRad(x, false)).join("")
+    : '<div class="recap-tomt">Ingen kamper i dag.</div>';
+
+  modalKanLukkes = true;
+  modalOnClose = () => localStorage.setItem(key, String(Date.now()));
+  document.getElementById("modalInnhold").innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">Din VM-oppdatering</div>
+        <div class="modal-meta">Gårsdagens poeng og dagens tips</div>
+      </div>
+      <button class="modal-lukk" onclick="lukkModal()">✕</button>
+    </div>
+    <div class="recap-topplinje">
+      <div>Viser: <strong>${escHTML(deltaker.navn)}</strong></div>
+      <button type="button" class="recap-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>
+    </div>
+    <div class="modal-body">
+      <div class="recap-seksjon">
+        <div class="recap-seksjon-tittel"><span>Gårsdagens poengfangst</span><span class="recap-total">+${gaarsPoeng} poeng</span></div>
+        ${gaarsHTML}
+      </div>
+      <div class="recap-seksjon">
+        <div class="recap-seksjon-tittel"><span>Dagens kamper</span><span>${data.dagens.length} kamper</span></div>
+        ${dagensHTML}
+      </div>
+      <div class="recap-actions"><button type="button" class="recap-lukk-btn" onclick="lukkModal()">Lukk</button></div>
+    </div>`;
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function initProfilOgRecap() {
+  if (!VM_DATA?.stilling?.length) return;
+  const lagret = finnProfilDeltaker();
+  if (!lagret) {
+    localStorage.removeItem(VIEWER_KEY);
+    visProfilvelger(true);
+    return;
+  }
+  oppdaterProfilLinje();
+  visRecapModal(false);
+}
 
 // ── MODAL ─────────────────────────────────────────────────
 // ── KAMPDATA ──────────────────────────────────────────────
@@ -1262,9 +1581,14 @@ function aapneModal(event, i) {
   document.body.style.overflow = "hidden";
 }
 
-function lukkModal() {
+function lukkModal(force = false) {
+  if (!force && !modalKanLukkes) return;
   document.getElementById("modalOverlay").classList.remove("vis");
   document.body.style.overflow = "";
+  const callback = modalOnClose;
+  modalOnClose = null;
+  modalKanLukkes = true;
+  if (typeof callback === "function") callback();
 }
 
 function lukkModalKlikk(e) {
@@ -2012,6 +2336,7 @@ async function init() {
   byggTabellFane();
   byggKamperFane();
   byggBonusstatus();
+  initProfilOgRecap();
 }
 init();
 </script>
