@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T23:01:15Z
+// Sist oppdatert: 2026-06-23T23:18:19Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T23:01:15Z",
+  "sist_oppdatert": "2026-06-23T23:18:19Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -914,12 +914,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-23",
-      "fd_match_id": 537412,
-      "fd_utcDate": "2026-06-23T23:00:00Z",
-      "fd_hjemmelag": "Panama",
-      "fd_bortelag": "Croatia"
+      "kilde_score": "openfootball"
     },
     "Portugal_Uzbekistan_2026_06_23": {
       "kamp_id": "Portugal_Uzbekistan_2026_06_23",
@@ -2069,17 +2064,17 @@ const VM_DATA = {
     },
     {
       "rank": 23,
-      "spiller": "Harry Kane",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 196
-    },
-    {
-      "rank": 24,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 201
+    },
+    {
+      "rank": 24,
+      "spiller": "Harry Kane",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 204
     },
     {
       "rank": 25,
@@ -2223,17 +2218,17 @@ const VM_DATA = {
     },
     {
       "rank": 45,
-      "spiller": "Marcus Rashford",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 29
-    },
-    {
-      "rank": 46,
       "spiller": "Rafael Leao",
       "maal": 1,
       "assists": 0,
       "minutter": 36
+    },
+    {
+      "rank": 46,
+      "spiller": "Marcus Rashford",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 37
     },
     {
       "rank": 47,
