@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-23T03:01:03Z",
-  "sist_oppdatert_grupper": "2026-06-23T03:01:03Z",
-  "sist_oppdatert_utslag": "2026-06-23T03:01:03Z",
+  "sist_oppdatert": "2026-06-23T03:31:05Z",
+  "sist_oppdatert_grupper": "2026-06-23T03:31:05Z",
+  "sist_oppdatert_utslag": "2026-06-23T03:31:05Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -655,15 +655,15 @@
         "fifa_navn": "Jordan",
         "kode": "JOR",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/JOR%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
-        "uavgjort": 0,
+        "uavgjort": 1,
         "tap": 1,
         "maal_for": 1,
         "maal_mot": 3,
         "maal_forskjell": -2,
         "lagdisiplin": 0,
-        "poeng": 0
+        "poeng": 1
       },
       {
         "plass": 4,
@@ -671,15 +671,15 @@
         "fifa_navn": "Algeria",
         "kode": "ALG",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/ALG%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
-        "uavgjort": 0,
+        "uavgjort": 1,
         "tap": 1,
         "maal_for": 0,
         "maal_mot": 3,
         "maal_forskjell": -3,
         "lagdisiplin": 0,
-        "poeng": 0
+        "poeng": 1
       }
     ],
     "K": [
