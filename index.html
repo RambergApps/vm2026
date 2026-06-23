@@ -647,22 +647,42 @@ body {
 /* ── LOKAL BRUKERPROFIL OG DAGLIG OPPSUMMERING ── */
 .profil-linje {
   display: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 4;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 0 0 18px;
-  padding: 10px 13px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: rgba(13,19,32,.84);
-  color: var(--muted);
+  justify-content: flex-end;
+  gap: 10px;
+  color: rgba(232,240,255,.68);
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: .05em;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 4px rgba(0,0,0,.75);
 }
 .profil-linje.vis { display: flex; }
-.profil-linje strong { color: var(--text); font-size: 14px; }
+.profil-linje strong { color: var(--text); font-size: 12px; font-weight: 900; }
+.profil-linje .profil-bytte-btn {
+  padding: 4px 8px;
+  background: rgba(6,9,18,.28);
+  font-size: 9px;
+  line-height: 1.2;
+  text-shadow: none;
+}
+@media (max-width: 640px) {
+  .profil-linje {
+    top: 11px;
+    right: 11px;
+    gap: 7px;
+    font-size: 9px;
+    letter-spacing: .035em;
+  }
+  .profil-linje strong { font-size: 10px; }
+  .profil-linje .profil-bytte-btn { padding: 3px 6px; font-size: 8px; }
+}
 .profil-bytte-btn,
 .recap-bytte-btn,
 .profil-bekreft-btn,
@@ -733,7 +753,6 @@ body {
 .recap-poeng.null { color: var(--muted); }
 .recap-tomt { color: var(--muted); font-size: 13px; padding: 13px 2px 2px; }
 @media (max-width: 560px) {
-  .profil-linje { align-items: flex-start; }
   .recap-rad { grid-template-columns: minmax(0,1fr) auto; }
   .recap-poeng { grid-column: 2; }
   .recap-topplinje { align-items: flex-start; }
@@ -944,6 +963,7 @@ body {
 
 <!-- HERO -->
 <div class="hero">
+  <div class="profil-linje" id="profilLinje"></div>
   <h1>VM <span class="year">2026</span></h1>
   <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
 
@@ -961,8 +981,6 @@ body {
 </div>
 
 <div class="container">
-
-  <div class="profil-linje" id="profilLinje"></div>
 
   <!-- STILLING -->
   <div class="seksjon active" id="stilling">
@@ -1107,7 +1125,7 @@ function oppdaterProfilLinje() {
     return;
   }
   linje.innerHTML = `
-    <div>Personlig visning: <strong>${escHTML(deltaker.navn)}</strong></div>
+    <div>Innlogget: <strong>${escHTML(deltaker.navn)}</strong></div>
     <button type="button" class="profil-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>`;
   linje.classList.add("vis");
 }
