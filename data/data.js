@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T21:01:07Z
+// Sist oppdatert: 2026-06-23T21:30:59Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T21:01:07Z",
+  "sist_oppdatert": "2026-06-23T21:30:59Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -54,7 +54,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-12",
       "fd_match_id": 537333,
       "fd_utcDate": "2026-06-12T19:00:00Z",
@@ -890,18 +890,13 @@ const VM_DATA = {
       "canonical_kamp_id": "England_Ghana_2026_06_23",
       "hjemmelag": "England",
       "bortelag": "Ghana",
-      "hjemme": 0,
-      "borte": 0,
+      "hjemme": null,
+      "borte": null,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "football_data_org",
-      "dato_fd_org": "2026-06-23",
-      "fd_match_id": 537411,
-      "fd_utcDate": "2026-06-23T20:00:00Z",
-      "fd_hjemmelag": "England",
-      "fd_bortelag": "Ghana"
+      "kilde_score": "openfootball"
     },
     "Panama_Croatia_2026_06_23": {
       "kamp_id": "Panama_Croatia_2026_06_23",
@@ -3257,11 +3252,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4298,11 +4293,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5339,11 +5334,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6380,11 +6375,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7421,11 +7416,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8462,11 +8457,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9503,11 +9498,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10544,11 +10539,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11585,11 +11580,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12626,11 +12621,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13667,11 +13662,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14708,11 +14703,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15749,11 +15744,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16790,11 +16785,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17831,11 +17826,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18872,11 +18867,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19913,11 +19908,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20954,11 +20949,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21995,11 +21990,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23036,11 +23031,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24077,11 +24072,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25118,11 +25113,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -26159,11 +26154,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -27200,11 +27195,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -28241,11 +28236,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -29282,11 +29277,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -30323,11 +30318,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -31364,11 +31359,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -32405,11 +32400,11 @@ const VM_DATA = {
           "bortelag": "Ghana",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
