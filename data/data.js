@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T20:30:59Z
+// Sist oppdatert: 2026-06-23T20:37:03Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T20:30:59Z",
+  "sist_oppdatert": "2026-06-23T20:37:03Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2001,24 +2001,24 @@ const VM_DATA = {
     },
     {
       "rank": 14,
-      "spiller": "Harry Kane",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 102
-    },
-    {
-      "rank": 15,
       "spiller": "Matheus Cunha",
       "maal": 2,
       "assists": 0,
       "minutter": 108
     },
     {
-      "rank": 16,
+      "rank": 15,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 125
+    },
+    {
+      "rank": 16,
+      "spiller": "Harry Kane",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 131
     },
     {
       "rank": 17,
