@@ -644,6 +644,56 @@ body {
 
 
 
+
+/* ── BAKGRUNNSMUSIKK ── */
+.musikk-kontroll {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(232,240,255,.22);
+  background: rgba(6,9,18,.28);
+  color: rgba(232,240,255,.76);
+  border-radius: 999px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 4px rgba(0,0,0,.75);
+  transition: color .15s, border-color .15s, background .15s;
+}
+.musikk-kontroll:hover,
+.musikk-kontroll.aktiv {
+  color: var(--text);
+  border-color: rgba(239,43,45,.46);
+  background: rgba(239,43,45,.11);
+}
+.musikk-kontroll .musikk-ikon {
+  font-size: 12px;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .musikk-kontroll {
+    top: 11px;
+    left: 11px;
+    padding: 4px 7px;
+    font-size: 8px;
+    gap: 4px;
+  }
+  .musikk-kontroll .musikk-ikon { font-size: 10px; }
+}
+@media print {
+  .musikk-kontroll { display: none !important; }
+}
+
 /* ── LOKAL BRUKERPROFIL OG DAGLIG OPPSUMMERING ── */
 .profil-linje {
   display: none;
@@ -955,6 +1005,10 @@ body {
 <div class="bg-grid"></div>
 <div class="bg-glow"></div>
 
+<audio id="backgroundMusic" loop preload="metadata">
+  <source src="vm-theme.mp3" type="audio/mpeg">
+</audio>
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="lukkModalKlikk(event)">
   <div class="modal" id="modalInnhold"></div>
@@ -963,6 +1017,10 @@ body {
 
 <!-- HERO -->
 <div class="hero">
+  <button type="button" class="musikk-kontroll" id="musikkKnapp" onclick="toggleBakgrunnsmusikk(event)" aria-pressed="false" title="Slå bakgrunnsmusikk av eller på">
+    <span class="musikk-ikon" id="musikkIkon">🔊</span>
+    <span id="musikkTekst">Musikk</span>
+  </button>
   <div class="profil-linje" id="profilLinje"></div>
   <h1>VM <span class="year">2026</span></h1>
   <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
@@ -1102,6 +1160,74 @@ document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
 
 
 
+
+
+// ── BAKGRUNNSMUSIKK ───────────────────────────────────────
+const MUSIC_KEY = "vm2026_music_enabled";
+const MUSIC_VOLUME = 0.12;
+let musikkStartforsokGjort = false;
+
+function bakgrunnsmusikk() {
+  return document.getElementById("backgroundMusic");
+}
+
+function musikkErOnsket() {
+  return localStorage.getItem(MUSIC_KEY) !== "false";
+}
+
+function oppdaterMusikkKnapp() {
+  const knapp = document.getElementById("musikkKnapp");
+  const ikon = document.getElementById("musikkIkon");
+  const tekst = document.getElementById("musikkTekst");
+  if (!knapp || !ikon || !tekst) return;
+  const aktiv = musikkErOnsket();
+  knapp.classList.toggle("aktiv", aktiv);
+  knapp.setAttribute("aria-pressed", aktiv ? "true" : "false");
+  ikon.textContent = aktiv ? "🔊" : "🔇";
+  tekst.textContent = aktiv ? "Musikk" : "Musikk av";
+}
+
+function forsokStartBakgrunnsmusikk() {
+  const lyd = bakgrunnsmusikk();
+  if (!lyd || !musikkErOnsket()) return;
+  lyd.volume = MUSIC_VOLUME;
+  const promise = lyd.play();
+  if (promise && typeof promise.catch === "function") {
+    promise.catch(() => {
+      // Nettleseren krever en brukerhandling. Neste klikk prøver igjen.
+    });
+  }
+}
+
+function toggleBakgrunnsmusikk(event) {
+  event?.stopPropagation();
+  const lyd = bakgrunnsmusikk();
+  const nyVerdi = !musikkErOnsket();
+  localStorage.setItem(MUSIC_KEY, nyVerdi ? "true" : "false");
+  if (lyd) {
+    lyd.volume = MUSIC_VOLUME;
+    if (nyVerdi) {
+      forsokStartBakgrunnsmusikk();
+    } else {
+      lyd.pause();
+    }
+  }
+  oppdaterMusikkKnapp();
+}
+
+function initBakgrunnsmusikk() {
+  const lyd = bakgrunnsmusikk();
+  if (!lyd) return;
+  lyd.volume = MUSIC_VOLUME;
+  oppdaterMusikkKnapp();
+
+  const startVedBrukerhandling = () => {
+    if (!musikkStartforsokGjort) musikkStartforsokGjort = true;
+    forsokStartBakgrunnsmusikk();
+  };
+  document.addEventListener("pointerdown", startVedBrukerhandling, { once: true, passive: true });
+  document.addEventListener("keydown", startVedBrukerhandling, { once: true });
+}
 
 // ── LOKAL BRUKERPROFIL OG FEMTIMERSOPPSUMMERING ───────────
 const VIEWER_KEY = "vm2026_viewer_id";
@@ -1607,6 +1733,8 @@ function lukkModal(force = false) {
   modalOnClose = null;
   modalKanLukkes = true;
   if (typeof callback === "function") callback();
+  // Et klikk på lukkeknappen er en gyldig brukerhandling for lydavspilling.
+  forsokStartBakgrunnsmusikk();
 }
 
 function lukkModalKlikk(e) {
@@ -2349,6 +2477,7 @@ function escHTML(str) {
 }
 
 async function init() {
+  initBakgrunnsmusikk();
   await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastKampreferater()]);
   byggStilling();
   byggTabellFane();
