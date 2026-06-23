@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-23T01:31:23Z",
+  "sist_oppdatert": "2026-06-23T02:01:32Z",
   "antall_kamper": 43,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -2209,7 +2209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 72,
+        "antall_sok": 73,
         "fallback": true,
         "cache_key": "Spain_Saudi_Arabia_2026_06_21|4-0",
         "serper_score": -100,
@@ -2219,7 +2219,7 @@
         "referat_fakta_score": 7,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 72,
+        "retry_antall": 73,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-saudi-arabia-highlights-match-report",
         "mangler": [
@@ -2410,7 +2410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-23T01:31:23Z"
+      "oppdatert": "2026-06-23T02:01:32Z"
     },
     "Switzerland_Bosnia___Herzegovina_2026_06_18": {
       "kamp_id": "Switzerland_Bosnia___Herzegovina_2026_06_18",
@@ -9234,12 +9234,12 @@
       "hjemmelag": "Norway",
       "bortelag": "Senegal",
       "hjemme_score": 3,
-      "borte_score": 1,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Norway lead Senegal 3-1.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Norway lead Senegal 3-2.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -9425,7 +9425,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-23T01:30:54Z"
+      "oppdatert": "2026-06-23T02:01:07Z"
     }
   }
 }
