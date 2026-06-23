@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-23T01:01:13Z",
-  "sist_oppdatert_grupper": "2026-06-23T01:01:13Z",
-  "sist_oppdatert_utslag": "2026-06-23T01:01:13Z",
+  "sist_oppdatert": "2026-06-23T01:30:53Z",
+  "sist_oppdatert_grupper": "2026-06-23T01:30:53Z",
+  "sist_oppdatert_utslag": "2026-06-23T01:30:53Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -561,9 +561,9 @@
         "seier": 2,
         "uavgjort": 0,
         "tap": 0,
-        "maal_for": 4,
+        "maal_for": 6,
         "maal_mot": 1,
-        "maal_forskjell": 3,
+        "maal_forskjell": 5,
         "lagdisiplin": 0,
         "poeng": 6
       },
@@ -573,15 +573,15 @@
         "fifa_navn": "Norway",
         "kode": "NOR",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/NOR%201x",
-        "spilt": 1,
-        "seier": 1,
+        "spilt": 2,
+        "seier": 2,
         "uavgjort": 0,
         "tap": 0,
-        "maal_for": 4,
+        "maal_for": 5,
         "maal_mot": 1,
-        "maal_forskjell": 3,
+        "maal_forskjell": 4,
         "lagdisiplin": 0,
-        "poeng": 3
+        "poeng": 6
       },
       {
         "plass": 3,
@@ -589,13 +589,13 @@
         "fifa_navn": "Senegal",
         "kode": "SEN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/SEN%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
         "uavgjort": 0,
-        "tap": 1,
+        "tap": 2,
         "maal_for": 1,
-        "maal_mot": 3,
-        "maal_forskjell": -2,
+        "maal_mot": 4,
+        "maal_forskjell": -3,
         "lagdisiplin": 0,
         "poeng": 0
       },
@@ -610,8 +610,8 @@
         "uavgjort": 0,
         "tap": 2,
         "maal_for": 1,
-        "maal_mot": 5,
-        "maal_forskjell": -4,
+        "maal_mot": 7,
+        "maal_forskjell": -6,
         "lagdisiplin": -2,
         "poeng": 0
       }

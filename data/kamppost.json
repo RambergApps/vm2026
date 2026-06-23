@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-22",
   "dato_norsk": "Mandag 22. juni 2026",
-  "generert": "2026-06-23T01:02:06Z",
+  "generert": "2026-06-23T01:31:23Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -652,31 +652,28 @@
       "hjemme_score": 3,
       "borte_score": 0,
       "gruppe": "I",
-      "recap_tekst": "France beat Iraq 3-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "France beat Iraq 3-0.\nGoals: Mbappe (14, 54) and Dembele (66).\n\nOusmane Dembele later added a third for the 2018 winners and 2022 finalists, who were rarely troubled in this thunderstorm-delayed match in Philadelphia.\nLionel Messi has a rival at the top of the FIFA World Cup scoring charts after another Kylian Mbappe brace sent France into the knockout stage.\nKylian Mbappe celebrated his 100th France appearance by scoring a double that secures Les Bleus' place in the FIFA World Cup 2026™ Round of 32.\nThe outcome was never in doubt from the moment Mbappe rifled them into a 14th-minute lead, crashing home a ferocious left-foot shot from 20 yards after being teed up by Michael Olise.\nKey stat: Mbappe has now scored two or more goals in six FIFA World Cup matches - more multiple-goal games than any other player in the tournament's history.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 14,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "France_Iraq_2026_06_22|3-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 14,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-iraq-highlights-match-report",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-iraq-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
