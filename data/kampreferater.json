@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-23T18:01:19Z",
+  "sist_oppdatert": "2026-06-23T18:21:22Z",
   "antall_kamper": 45,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -9677,9 +9677,9 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Portugal lead Uzbekistan 3-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Portugal lead Uzbekistan 3-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -9865,7 +9865,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-23T18:01:18Z"
+      "oppdatert": "2026-06-23T18:21:21Z"
     }
   }
 }
