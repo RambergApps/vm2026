@@ -1,4 +1,35 @@
 {
-  "sist_sjekket": "2026-06-22T23:52:52Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-23T00:01:06Z",
+  "kamper": [
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "France_Iraq_2026_06_22",
+      "hjemmelag": "France",
+      "bortelag": "Iraq",
+      "dato": "2026-06-22",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Jordan_Algeria_2026_06_22",
+      "hjemmelag": "Jordan",
+      "bortelag": "Algeria",
+      "dato": "2026-06-22",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Norway_Senegal_2026_06_22",
+      "hjemmelag": "Norway",
+      "bortelag": "Senegal",
+      "dato": "2026-06-22",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
