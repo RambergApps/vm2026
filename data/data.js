@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T05:30:56Z
+// Sist oppdatert: 2026-06-23T06:01:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T05:30:56Z",
+  "sist_oppdatert": "2026-06-23T06:01:04Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -54,7 +54,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-12",
       "fd_match_id": 537333,
       "fd_utcDate": "2026-06-12T19:00:00Z",
@@ -2243,24 +2243,24 @@ const VM_DATA = {
     },
     {
       "rank": 48,
+      "spiller": "Nadhir Benbouali",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 52
+    },
+    {
+      "rank": 49,
       "spiller": "Mauricio",
       "maal": 1,
       "assists": 0,
       "minutter": 53
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Oh Hyeongyu",
       "maal": 1,
       "assists": 0,
       "minutter": 67
-    },
-    {
-      "rank": 50,
-      "spiller": "Ibrahim Mbaye",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 71
     }
   ],
   "stilling": [
