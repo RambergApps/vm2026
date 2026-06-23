@@ -576,6 +576,7 @@ const SUBMIT_URL    = "https://vm2026-submit-api.vercel.app/api/submit";
 const TOKEN         = "vm2026-ramberg";
 const STATUS_URL    = "../data/status.json";
 const DELTAKERE_URL = "../data/deltakere.json";
+const VIEWER_KEY    = "vm2026_viewer_id";
 
 const POENG = { r32: 3, r16: 4, qf: 5, sf: 6, final: 7 };
 const RUNDE_NAVN = {
@@ -659,13 +660,15 @@ function byggDeltakerDropdown(deltakere) {
     select.appendChild(option);
   });
 
-  const lagretId = localStorage.getItem("vm2026_deltaker_id");
+  const lagretId = localStorage.getItem("vm2026_deltaker_id") || localStorage.getItem(VIEWER_KEY);
   if (lagretId) {
     const funnet = deltakere.find(d => d.id === lagretId);
     if (funnet) {
       select.value = lagretId;
       deltakerId = lagretId;
       input.value = funnet.navn;
+      localStorage.setItem("vm2026_deltaker_id", lagretId);
+      localStorage.setItem(VIEWER_KEY, lagretId);
     }
   }
 
@@ -675,10 +678,12 @@ function byggDeltakerDropdown(deltakere) {
       deltakerId = funnet.id;
       input.value = funnet.navn;
       localStorage.setItem("vm2026_deltaker_id", deltakerId);
+      localStorage.setItem(VIEWER_KEY, deltakerId);
     } else {
       deltakerId = null;
       input.value = "";
       localStorage.removeItem("vm2026_deltaker_id");
+      localStorage.removeItem(VIEWER_KEY);
     }
     lagreTilStorage();
     if (status) byggUI();
@@ -1134,6 +1139,22 @@ async function leverRunde(runde) {
   if (!navn) {
     warning.innerHTML = '<div class="error-box">Du må velge hvem du er.</div>';
     return;
+  }
+
+  const identitet = deltakerId || navn.toLowerCase().replace(/[^a-z0-9æøå]+/gi, "_");
+  const bekreftelsesKey = "vm2026_identitet_bekreftet_" + identitet;
+  if (sessionStorage.getItem(bekreftelsesKey) !== "1") {
+    const riktig = window.confirm(`Du sender inn tips som ${navn}. Er dette riktig?`);
+    if (!riktig) {
+      warning.innerHTML = '<div class="advarsel-box">Velg riktig navn før du sender inn.</div>';
+      document.getElementById("deltakerSelect")?.focus();
+      return;
+    }
+    sessionStorage.setItem(bekreftelsesKey, "1");
+  }
+  if (deltakerId) {
+    localStorage.setItem("vm2026_deltaker_id", deltakerId);
+    localStorage.setItem(VIEWER_KEY, deltakerId);
   }
 
   const åpne = (status?.[runde]?.kamper || []).filter(erKampTippebar);
