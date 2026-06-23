@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-23T21:01:09Z",
+  "sist_oppdatert": "2026-06-23T22:01:22Z",
   "antall_kamper": 46,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -9272,15 +9272,15 @@
         ],
         "riktig": [
           {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
             "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
             "poeng": 2
           },
           {
@@ -9308,12 +9308,6 @@
             "poeng": 2
           },
           {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
             "navn": "Magnus Børrud",
             "tippa_h": 2,
             "tippa_b": 0,
@@ -9322,6 +9316,18 @@
           {
             "navn": "Sjur Revheim",
             "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 2
           },
@@ -9339,12 +9345,6 @@
           },
           {
             "navn": "Bror Ramberg",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Rickard Jacobsson",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 2
@@ -9376,13 +9376,13 @@
         ],
         "bom": [
           {
-            "navn": "Alexander",
+            "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Alexander",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -9418,12 +9418,6 @@
             "poeng": 0
           },
           {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Jorgen Lindland",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -9436,6 +9430,12 @@
             "poeng": 0
           },
           {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
             "navn": "Jakob Rødahl Thingnes",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -9444,7 +9444,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-23T03:01:43Z"
+      "oppdatert": "2026-06-23T22:01:21Z"
     },
     "Jordan_Algeria_2026_06_22": {
       "kamp_id": "Jordan_Algeria_2026_06_22",

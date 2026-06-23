@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T21:30:59Z
+// Sist oppdatert: 2026-06-23T22:01:20Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T21:30:59Z",
+  "sist_oppdatert": "2026-06-23T22:01:20Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2015,59 +2015,59 @@ const VM_DATA = {
     },
     {
       "rank": 16,
-      "spiller": "Harry Kane",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 131
-    },
-    {
-      "rank": 17,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 176
     },
     {
-      "rank": 18,
+      "rank": 17,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 19,
+      "rank": 18,
       "spiller": "Ismael Saibari",
       "maal": 2,
       "assists": 0,
       "minutter": 180
     },
     {
-      "rank": 20,
+      "rank": 19,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 21,
+      "rank": 20,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 22,
+      "rank": 21,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 23,
+      "rank": 22,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 192
+    },
+    {
+      "rank": 23,
+      "spiller": "Harry Kane",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 196
     },
     {
       "rank": 24,
@@ -2204,24 +2204,24 @@ const VM_DATA = {
     },
     {
       "rank": 43,
-      "spiller": "Marcus Rashford",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 24
-    },
-    {
-      "rank": 44,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 45,
+      "rank": 44,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
+    },
+    {
+      "rank": 45,
+      "spiller": "Marcus Rashford",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 29
     },
     {
       "rank": 46,
