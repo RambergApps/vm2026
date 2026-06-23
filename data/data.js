@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T11:01:16Z
+// Sist oppdatert: 2026-06-23T11:28:36Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T11:01:16Z",
+  "sist_oppdatert": "2026-06-23T11:28:36Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -54,7 +54,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "football_data_org",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-06-12",
       "fd_match_id": 537333,
       "fd_utcDate": "2026-06-12T19:00:00Z",
