@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-23T17:30:59Z
+// Sist oppdatert: 2026-06-23T18:01:17Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-23T17:30:59Z",
+  "sist_oppdatert": "2026-06-23T18:01:17Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -926,10 +926,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Portugal_Uzbekistan_2026_06_23",
       "hjemmelag": "Portugal",
       "bortelag": "Uzbekistan",
-      "hjemme": 2,
+      "hjemme": 3,
       "borte": 0,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
       "kilde_score": "football_data_org",
@@ -2026,241 +2026,241 @@ const VM_DATA = {
     },
     {
       "rank": 17,
+      "spiller": "Cristiano Ronaldo",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 151
+    },
+    {
+      "rank": 18,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 176
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Ismael Saibari",
       "maal": 2,
       "assists": 0,
       "minutter": 180
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 192
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 194
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 168
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 1,
       "minutter": 44
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 97
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Ruben Vargas",
       "maal": 1,
       "assists": 1,
       "minutter": 110
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Mostafa Zico",
       "maal": 1,
       "assists": 1,
       "minutter": 159
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Felix Nmecha",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Hwang Inbeom",
       "maal": 1,
       "assists": 1,
       "minutter": 186
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 1,
       "minutter": 194
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Alex Freeman",
       "maal": 1,
       "assists": 1,
       "minutter": 209
     },
     {
-      "rank": 39,
+      "rank": 40,
       "spiller": "Ermin Mahmic",
       "maal": 1,
       "assists": 0,
       "minutter": 6
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Mattias Svanberg",
       "maal": 1,
       "assists": 0,
       "minutter": 13
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Marcus Rashford",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Helio Varela",
       "maal": 1,
       "assists": 0,
       "minutter": 40
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Leo Ostigard",
       "maal": 1,
       "assists": 0,
       "minutter": 41
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Anthony Elanga",
       "maal": 1,
       "assists": 0,
       "minutter": 47
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Nadhir Benbouali",
       "maal": 1,
       "assists": 0,
       "minutter": 52
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Mauricio",
       "maal": 1,
       "assists": 0,
       "minutter": 53
-    },
-    {
-      "rank": 50,
-      "spiller": "Oh Hyeongyu",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 67
     }
   ],
   "stilling": [
@@ -3172,11 +3172,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4211,11 +4211,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5250,11 +5250,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6289,11 +6289,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7328,11 +7328,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8367,11 +8367,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9406,11 +9406,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10445,11 +10445,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11484,11 +11484,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -12523,11 +12523,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13562,11 +13562,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -14601,11 +14601,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -15640,11 +15640,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16679,11 +16679,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17718,11 +17718,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18757,11 +18757,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19796,11 +19796,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20835,11 +20835,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21874,11 +21874,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22913,11 +22913,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23952,11 +23952,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24991,11 +24991,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26030,11 +26030,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27069,11 +27069,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 5,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28108,11 +28108,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29147,11 +29147,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -30186,11 +30186,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -31225,11 +31225,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -32264,11 +32264,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 2,
+          "faktisk_h": 3,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
