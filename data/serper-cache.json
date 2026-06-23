@@ -3030,5 +3030,91 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Jordan_Algeria_2026_06_22|1-2": {
+    "kamp_id": "Jordan_Algeria_2026_06_22",
+    "resultat": "1-2",
+    "sist_sokt": "2026-06-23T05:31:03Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-algeria-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-06-23T05:31:03Z",
+      "goal_events": [
+        {
+          "spiller": "Al Rashdan",
+          "lag": "Jordan",
+          "minutt": "36",
+          "type": "goal"
+        },
+        {
+          "spiller": "Benbouali",
+          "lag": "Algeria",
+          "minutt": "69",
+          "type": "goal"
+        },
+        {
+          "spiller": "Gouiri",
+          "lag": "Algeria",
+          "minutt": "82",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Al Rashdan",
+        "Benbouali",
+        "Gouiri"
+      ],
+      "lead_scorer": "Al Rashdan",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-algeria-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-algeria-match-report-highlights?searchOverlay=1)",
+        "Goals from Nadhir Benbouali and Amine Gouiri secured a comeback win for Algeria, in the process eliminating Jordan.",
+        "Algeria came from behind to defeat Jordan 2-1 and keep alive their hopes of a place in the next round at the FIFA World Cup 2026™, in the process ending debutant Jordan's campaign after two games.",
+        "Both teams were desperate for a positive result at San Francisco Bay Area Stadium after tasting defeat in their opening matches, and while neither was able to carve out any clear opportunities in the opening exchanges it was Algeria who were the more proactive side."
+      ],
+      "key_stat": "Algeria have now kept only one clean sheet in 15 FIFA World Cup matches. That came in the 0-0 draw against England in 2010.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": true,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_assist": "the",
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-algeria-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

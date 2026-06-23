@@ -1,15 +1,4 @@
 {
-  "sist_sjekket": "2026-06-23T05:01:06Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Jordan_Algeria_2026_06_22",
-      "hjemmelag": "Jordan",
-      "bortelag": "Algeria",
-      "dato": "2026-06-22",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-23T05:30:56Z",
+  "kamper": []
 }
