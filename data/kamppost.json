@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-22",
   "dato_norsk": "Mandag 22. juni 2026",
-  "generert": "2026-06-23T01:31:23Z",
+  "generert": "2026-06-23T03:01:43Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -144,6 +144,12 @@
             "poeng": 0
           },
           {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -162,7 +168,7 @@
             "poeng": 0
           },
           {
-            "navn": "Geir Magne Evensen",
+            "navn": "Ulf-Morten Johansen",
             "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 0
@@ -180,20 +186,8 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 0
           },
@@ -201,6 +195,12 @@
             "navn": "Chris Hortman",
             "tippa_h": 3,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 3,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -313,6 +313,12 @@
             "poeng": 2
           },
           {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 0,
             "tippa_b": 2,
@@ -322,12 +328,6 @@
             "navn": "Rickard Jacobsson",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 0,
-            "tippa_b": 1,
             "poeng": 2
           },
           {
@@ -393,14 +393,14 @@
             "poeng": 0
           },
           {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 0,
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 3,
+            "navn": "Andreas Handelsby",
+            "tippa_h": 0,
             "tippa_b": 0,
             "poeng": 0
           },
@@ -411,15 +411,15 @@
             "poeng": 0
           },
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Chris Hortman",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 1,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -533,13 +533,13 @@
             "poeng": 2
           },
           {
-            "navn": "sergio gomes",
+            "navn": "Anders Sundero",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 2
           },
           {
-            "navn": "Anders Sundero",
+            "navn": "sergio gomes",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 2
@@ -569,6 +569,12 @@
             "poeng": 2
           },
           {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
             "navn": "Andreas Handelsby",
             "tippa_h": 3,
             "tippa_b": 0,
@@ -578,12 +584,6 @@
             "navn": "Jorgen Lindland",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 3,
-            "tippa_b": 2,
             "poeng": 2
           },
           {
@@ -703,13 +703,13 @@
             "poeng": 6
           },
           {
-            "navn": "Andreas Handelsby",
+            "navn": "Ulf-Morten Johansen",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 6
           },
           {
-            "navn": "Ulf-Morten Johansen",
+            "navn": "Andreas Handelsby",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 6
@@ -777,21 +777,27 @@
             "poeng": 2
           },
           {
-            "navn": "sergio gomes",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 2
           },
           {
+            "navn": "sergio gomes",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Atle Johansen",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 2
           },
           {
@@ -813,25 +819,19 @@
             "poeng": 2
           },
           {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
             "navn": "Jorgen Lindland",
             "tippa_h": 4,
             "tippa_b": 0,
             "poeng": 2
           },
           {
-            "navn": "Thomas Lindland",
+            "navn": "Chris Hortman",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 2
           },
           {
-            "navn": "Chris Hortman",
+            "navn": "Thomas Lindland",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 2
@@ -876,37 +876,37 @@
     {
       "navn": "Arne Kristian Johansen",
       "plass": 3,
-      "poeng_totalt": 68,
+      "poeng_totalt": 70,
       "poeng_i_dag": 6
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 68,
+      "poeng_totalt": 70,
       "poeng_i_dag": 10
     },
     {
       "navn": "Olympus fc",
       "plass": 5,
-      "poeng_totalt": 66,
+      "poeng_totalt": 68,
       "poeng_i_dag": 10
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 6,
-      "poeng_totalt": 66,
+      "poeng_totalt": 68,
       "poeng_i_dag": 10
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 7,
-      "poeng_totalt": 64,
+      "poeng_totalt": 66,
       "poeng_i_dag": 8
     },
     {
       "navn": "Alex Myrvokd",
       "plass": 8,
-      "poeng_totalt": 62,
+      "poeng_totalt": 64,
       "poeng_i_dag": 4
     },
     {
@@ -918,19 +918,19 @@
     {
       "navn": "Ken Arne Hansen",
       "plass": 10,
-      "poeng_totalt": 56,
+      "poeng_totalt": 58,
       "poeng_i_dag": 4
     },
     {
       "navn": "Magnus Børrud",
       "plass": 11,
-      "poeng_totalt": 56,
+      "poeng_totalt": 58,
       "poeng_i_dag": 10
     },
     {
       "navn": "Sjur Revheim",
       "plass": 12,
-      "poeng_totalt": 56,
+      "poeng_totalt": 58,
       "poeng_i_dag": 8
     },
     {
@@ -940,88 +940,88 @@
       "poeng_i_dag": 6
     },
     {
-      "navn": "sergio gomes",
+      "navn": "Anders Sundero",
       "plass": 14,
+      "poeng_totalt": 54,
+      "poeng_i_dag": 6
+    },
+    {
+      "navn": "sergio gomes",
+      "plass": 15,
       "poeng_totalt": 54,
       "poeng_i_dag": 12
     },
     {
-      "navn": "Anders Sundero",
-      "plass": 15,
-      "poeng_totalt": 52,
-      "poeng_i_dag": 6
-    },
-    {
       "navn": "Atle Johansen",
       "plass": 16,
-      "poeng_totalt": 50,
+      "poeng_totalt": 52,
       "poeng_i_dag": 6
     },
     {
       "navn": "Bror Ramberg",
       "plass": 17,
-      "poeng_totalt": 50,
+      "poeng_totalt": 52,
       "poeng_i_dag": 10
     },
     {
-      "navn": "Diyan K.",
+      "navn": "Geir Magne Evensen",
       "plass": 18,
+      "poeng_totalt": 52,
+      "poeng_i_dag": 4
+    },
+    {
+      "navn": "Diyan K.",
+      "plass": 19,
       "poeng_totalt": 50,
       "poeng_i_dag": 10
     },
     {
       "navn": "Rickard Jacobsson",
-      "plass": 19,
-      "poeng_totalt": 48,
+      "plass": 20,
+      "poeng_totalt": 50,
       "poeng_i_dag": 6
     },
     {
       "navn": "Sebastian Luranc",
-      "plass": 20,
+      "plass": 21,
       "poeng_totalt": 48,
       "poeng_i_dag": 4
     },
     {
-      "navn": "Geir Magne Evensen",
-      "plass": 21,
+      "navn": "Ulf-Morten Johansen",
+      "plass": 22,
       "poeng_totalt": 46,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 8
     },
     {
       "navn": "Andreas Handelsby",
-      "plass": 22,
+      "plass": 23,
       "poeng_totalt": 44,
       "poeng_i_dag": 8
     },
     {
       "navn": "Jorgen Lindland",
-      "plass": 23,
+      "plass": 24,
       "poeng_totalt": 44,
       "poeng_i_dag": 6
     },
     {
-      "navn": "Ulf-Morten Johansen",
-      "plass": 24,
+      "navn": "Marita Hauge Gjerde",
+      "plass": 25,
       "poeng_totalt": 44,
       "poeng_i_dag": 8
     },
     {
-      "navn": "Marita Hauge Gjerde",
-      "plass": 25,
-      "poeng_totalt": 42,
-      "poeng_i_dag": 8
+      "navn": "Chris Hortman",
+      "plass": 26,
+      "poeng_totalt": 40,
+      "poeng_i_dag": 2
     },
     {
       "navn": "Thomas Lindland",
-      "plass": 26,
+      "plass": 27,
       "poeng_totalt": 40,
       "poeng_i_dag": 4
-    },
-    {
-      "navn": "Chris Hortman",
-      "plass": 27,
-      "poeng_totalt": 38,
-      "poeng_i_dag": 2
     },
     {
       "navn": "Jakob Rødahl Thingnes",
@@ -1032,7 +1032,7 @@
     {
       "navn": "Selina Marie Kortvedt",
       "plass": 29,
-      "poeng_totalt": 34,
+      "poeng_totalt": 36,
       "poeng_i_dag": 2
     }
   ]

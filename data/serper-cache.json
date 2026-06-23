@@ -766,8 +766,8 @@
   "Spain_Saudi_Arabia_2026_06_21|4-0": {
     "kamp_id": "Spain_Saudi_Arabia_2026_06_21",
     "resultat": "4-0",
-    "sist_sokt": "2026-06-23T02:01:32Z",
-    "antall_sok": 73,
+    "sist_sokt": "2026-06-23T03:01:34Z",
+    "antall_sok": 74,
     "beste_score": 7,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -784,7 +784,7 @@
       "kamp_hjemme_score": 4,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-23T02:01:14Z",
+      "hentet": "2026-06-23T03:01:22Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -2929,6 +2929,104 @@
       "mangler": [],
       "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-iraq-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Norway_Senegal_2026_06_22|3-2": {
+    "kamp_id": "Norway_Senegal_2026_06_22",
+    "resultat": "3-2",
+    "sist_sokt": "2026-06-23T03:01:43Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-senegal-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 3,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-06-23T03:01:43Z",
+      "goal_events": [
+        {
+          "spiller": "Holmgren Pedersen",
+          "lag": "Norway",
+          "minutt": "43",
+          "type": "goal"
+        },
+        {
+          "spiller": "Haaland",
+          "lag": "Norway",
+          "minutt": "48",
+          "type": "goal"
+        },
+        {
+          "spiller": "Sarr",
+          "lag": "Senegal",
+          "minutt": "53",
+          "type": "goal"
+        },
+        {
+          "spiller": "Haaland",
+          "lag": "Norway",
+          "minutt": "58",
+          "type": "goal"
+        },
+        {
+          "spiller": "Sarr",
+          "lag": "Senegal",
+          "minutt": "90+3",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Holmgren Pedersen",
+        "Haaland",
+        "Sarr"
+      ],
+      "lead_scorer": "Holmgren Pedersen",
+      "brace_scorer": "Haaland",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "A brace from Erling Haaland secured Norway a spot in the Round of 32, as well as keeping the striker in the adidas Golden Boot race.",
+        "Erling Haaland was once again among the goals as Norway ensured progression to the Round of 32 at the FIFA World Cup 2026™ with a 3-2 win over Senegal.",
+        "The prolific marksman made it four goals in two World Cup games and an astonishing 59 in 52 for his country, with Marcus Holmgren Pedersen also on the scoresheet for Norway.",
+        "Chances were at a premium in a tight first half at New York/New Jersey Stadium, but Norway started to click as the interval approached and took the lead in the 43rd minute when Holmgren Pedersen capitalised upon a Kalidou Koulibaly error and gleefully lashed home.",
+        "Haaland then got his customary goal three minutes after the restart, calmly slotting in after an inch-perfect pass from Martin Odegaard to ensure he has now scored in each of his last 12 competitive appearances for Norway."
+      ],
+      "key_stat": "This win means Norway’s four FIFA World Cup victories have come against teams from four different confederations: 1-0 against Mexico (Concacaf) in 1994, 2-1 against Brazil (CONMEBOL) in 1998, 4-1 against Iraq (AFC) in 2026 and now a triumph against CAF representative Senegal.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": true,
+      "first_goal_assist": "an inch-perfect",
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-senegal-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
