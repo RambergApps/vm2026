@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T19:30:56Z
+// Sist oppdatert: 2026-06-24T20:01:16Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T19:30:56Z",
+  "sist_oppdatert": "2026-06-24T20:01:16Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -54,7 +54,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-12",
       "fd_match_id": 537333,
       "fd_utcDate": "2026-06-12T19:00:00Z",
@@ -947,10 +947,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
       "hjemmelag": "Bosnia & Herzegovina",
       "bortelag": "Qatar",
-      "hjemme": 0,
-      "borte": 0,
+      "hjemme": 2,
+      "borte": 1,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1040,7 +1040,7 @@ const VM_DATA = {
       "hjemme": 0,
       "borte": 0,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1948,7 +1948,7 @@ const VM_DATA = {
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
-      "minutter": 170
+      "minutter": 219
     },
     {
       "rank": 6,
@@ -1994,17 +1994,17 @@ const VM_DATA = {
     },
     {
       "rank": 12,
-      "spiller": "Johan Manzambi",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 58
-    },
-    {
-      "rank": 13,
       "spiller": "Brian Brobbey",
       "maal": 2,
       "assists": 0,
       "minutter": 88
+    },
+    {
+      "rank": 13,
+      "spiller": "Johan Manzambi",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 107
     },
     {
       "rank": 14,
@@ -2018,7 +2018,7 @@ const VM_DATA = {
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
-      "minutter": 125
+      "minutter": 174
     },
     {
       "rank": 16,
@@ -2109,25 +2109,25 @@ const VM_DATA = {
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 1,
-      "minutter": 44
+      "minutter": 93
     },
     {
       "rank": 29,
-      "spiller": "Ruben Vargas",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 110
-    },
-    {
-      "rank": 30,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 31,
+      "rank": 30,
       "spiller": "Mostafa Zico",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 159
+    },
+    {
+      "rank": 31,
+      "spiller": "Ruben Vargas",
       "maal": 1,
       "assists": 1,
       "minutter": 159
@@ -2162,38 +2162,38 @@ const VM_DATA = {
     },
     {
       "rank": 36,
-      "spiller": "Breel Embolo",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 194
-    },
-    {
-      "rank": 37,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 38,
+      "rank": 37,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 39,
+      "rank": 38,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
     },
     {
-      "rank": 40,
+      "rank": 39,
       "spiller": "Alex Freeman",
       "maal": 1,
       "assists": 1,
       "minutter": 209
+    },
+    {
+      "rank": 40,
+      "spiller": "Breel Embolo",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 243
     },
     {
       "rank": 41,
@@ -2435,7 +2435,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -2444,11 +2444,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -3482,7 +3482,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -3491,11 +3491,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4529,7 +4529,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4538,11 +4538,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5576,7 +5576,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5585,11 +5585,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6623,7 +6623,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6632,11 +6632,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7670,7 +7670,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7679,11 +7679,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8717,7 +8717,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8726,11 +8726,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9764,7 +9764,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9773,11 +9773,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10811,7 +10811,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10820,11 +10820,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11858,7 +11858,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11867,11 +11867,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -12905,7 +12905,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -12914,11 +12914,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13952,7 +13952,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13961,11 +13961,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -14999,7 +14999,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -15008,11 +15008,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16046,7 +16046,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16055,11 +16055,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17093,7 +17093,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17102,11 +17102,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18140,7 +18140,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18149,11 +18149,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19187,7 +19187,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19196,11 +19196,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20234,7 +20234,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20243,11 +20243,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 4,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21281,7 +21281,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21290,11 +21290,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22328,7 +22328,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22337,11 +22337,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23375,7 +23375,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23384,11 +23384,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24422,7 +24422,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24431,11 +24431,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -25469,7 +25469,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -25478,11 +25478,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26516,7 +26516,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26525,11 +26525,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27563,7 +27563,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27572,11 +27572,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28610,7 +28610,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28619,11 +28619,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29657,7 +29657,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29666,11 +29666,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -30704,7 +30704,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -30713,11 +30713,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -31751,7 +31751,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -31760,11 +31760,11 @@ const VM_DATA = {
           "bortelag": "Qatar",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": 2,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {

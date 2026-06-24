@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-24T19:30:56Z",
+  "tidspunkt": "2026-06-24T20:01:08Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -92,9 +92,9 @@
       "hjemmelag_normalisert": "Canada",
       "bortelag_normalisert": "Bosnia & Herzegovina",
       "status": "FINISHED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-06-12",
       "fd_utcDate": "2026-06-12T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Bosnia___Herzegovina_2026_06_12"
@@ -147,7 +147,7 @@
       "fd_bortelag": "Canada",
       "hjemmelag_normalisert": "Switzerland",
       "bortelag_normalisert": "Canada",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
@@ -161,10 +161,10 @@
       "fd_bortelag": "Qatar",
       "hjemmelag_normalisert": "Bosnia & Herzegovina",
       "bortelag_normalisert": "Qatar",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
-      "hjemme": 0,
-      "borte": 0,
+      "hjemme": 2,
+      "borte": 1,
       "fd_dato": "2026-06-24",
       "fd_utcDate": "2026-06-24T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Bosnia___Herzegovina_Qatar_2026_06_24"
