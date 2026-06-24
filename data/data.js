@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T00:01:06Z
+// Sist oppdatert: 2026-06-24T00:31:09Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T00:01:06Z",
+  "sist_oppdatert": "2026-06-24T00:31:09Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -908,18 +908,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Panama_Croatia_2026_06_23",
       "hjemmelag": "Panama",
       "bortelag": "Croatia",
-      "hjemme": 0,
-      "borte": 0,
+      "hjemme": null,
+      "borte": null,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "football_data_org",
-      "dato_fd_org": "2026-06-23",
-      "fd_match_id": 537412,
-      "fd_utcDate": "2026-06-23T23:00:00Z",
-      "fd_hjemmelag": "Panama",
-      "fd_bortelag": "Croatia"
+      "kilde_score": "openfootball"
     },
     "Portugal_Uzbekistan_2026_06_23": {
       "kamp_id": "Portugal_Uzbekistan_2026_06_23",
@@ -2202,66 +2197,66 @@ const VM_DATA = {
     },
     {
       "rank": 42,
+      "spiller": "Ante Budimir",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 17
+    },
+    {
+      "rank": 43,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Rafael Leao",
       "maal": 1,
       "assists": 0,
       "minutter": 36
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Marcus Rashford",
       "maal": 1,
       "assists": 0,
       "minutter": 37
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Helio Varela",
       "maal": 1,
       "assists": 0,
       "minutter": 40
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Leo Ostigard",
       "maal": 1,
       "assists": 0,
       "minutter": 41
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Anthony Elanga",
       "maal": 1,
       "assists": 0,
       "minutter": 47
-    },
-    {
-      "rank": 50,
-      "spiller": "Nadhir Benbouali",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 52
     }
   ],
   "stilling": [
@@ -3272,11 +3267,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4315,11 +4310,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5358,11 +5353,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6401,11 +6396,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7444,11 +7439,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8487,11 +8482,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9530,11 +9525,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10573,11 +10568,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11616,11 +11611,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12659,11 +12654,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13702,11 +13697,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14745,11 +14740,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15788,11 +15783,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16831,11 +16826,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17874,11 +17869,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18917,11 +18912,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19960,11 +19955,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21003,11 +20998,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22046,11 +22041,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23089,11 +23084,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24132,11 +24127,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25175,11 +25170,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -26218,11 +26213,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -27261,11 +27256,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -28304,11 +28299,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -29347,11 +29342,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -30390,11 +30385,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -31433,11 +31428,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -32476,11 +32471,11 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {

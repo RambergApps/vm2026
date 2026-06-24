@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-24T00:01:06Z",
-  "sist_oppdatert_grupper": "2026-06-24T00:01:06Z",
-  "sist_oppdatert_utslag": "2026-06-24T00:01:06Z",
+  "sist_oppdatert": "2026-06-24T00:31:09Z",
+  "sist_oppdatert_grupper": "2026-06-24T00:31:09Z",
+  "sist_oppdatert_utslag": "2026-06-24T00:31:09Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -787,15 +787,15 @@
         "fifa_navn": "Panama",
         "kode": "PAN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/PAN%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
-        "uavgjort": 0,
+        "uavgjort": 1,
         "tap": 1,
         "maal_for": 0,
         "maal_mot": 1,
         "maal_forskjell": -1,
         "lagdisiplin": -2,
-        "poeng": 0
+        "poeng": 1
       },
       {
         "plass": 4,
@@ -803,15 +803,15 @@
         "fifa_navn": "Croatia",
         "kode": "CRO",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/CRO%201x",
-        "spilt": 1,
+        "spilt": 2,
         "seier": 0,
-        "uavgjort": 0,
+        "uavgjort": 1,
         "tap": 1,
         "maal_for": 2,
         "maal_mot": 4,
         "maal_forskjell": -2,
         "lagdisiplin": 0,
-        "poeng": 0
+        "poeng": 1
       }
     ]
   },
