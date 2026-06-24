@@ -1,15 +1,4 @@
 {
-  "sist_sjekket": "2026-06-24T04:01:04Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Colombia_DR_Congo_2026_06_23",
-      "hjemmelag": "Colombia",
-      "bortelag": "DR Congo",
-      "dato": "2026-06-23",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-24T04:30:55Z",
+  "kamper": []
 }
