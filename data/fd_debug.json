@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-24T20:01:08Z",
+  "tidspunkt": "2026-06-24T20:30:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -147,9 +147,9 @@
       "fd_bortelag": "Canada",
       "hjemmelag_normalisert": "Switzerland",
       "bortelag_normalisert": "Canada",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 2,
       "borte": 0,
       "fd_dato": "2026-06-24",
       "fd_utcDate": "2026-06-24T19:00:00Z",
@@ -161,7 +161,7 @@
       "fd_bortelag": "Qatar",
       "hjemmelag_normalisert": "Bosnia & Herzegovina",
       "bortelag_normalisert": "Qatar",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 2,
       "borte": 1,
