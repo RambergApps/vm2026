@@ -3273,5 +3273,77 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Panama_Croatia_2026_06_23|0-1": {
+    "kamp_id": "Panama_Croatia_2026_06_23",
+    "resultat": "0-1",
+    "sist_sokt": "2026-06-24T01:01:10Z",
+    "antall_sok": 1,
+    "beste_score": 9,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-croatia-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-06-24T01:01:10Z",
+      "goal_events": [
+        {
+          "spiller": "Budimir",
+          "lag": "Croatia",
+          "minutt": "54",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Budimir"
+      ],
+      "lead_scorer": "Budimir",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-croatia-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-croatia-match-report-highlights?searchOverlay=1)",
+        "Panama put up an impressive showing and went close on several occasions, but it was ultimately a day of celebration for Croatia as Luka Modric made his 200th appearance.",
+        "Croatia kick-started their FIFA World Cup 2026™ campaign with a hard-fought 1-0 victory over Panama, a result that also confirmed Los Canaleros' elimination from the competition with one game remaining.",
+        "Panama were the better side in the first half at Toronto Stadium, and very nearly opened the scoring in the 23rd minute when Croatia goalkeeper Dominik Livakovic did superbly to tip Jose Luis Rodriguez’s powerful header on to the crossbar."
+      ],
+      "key_stat": "Luka Modric has featured in each of Croatia’s last 21 matches at the FIFA World Cup™, a sequence stretching back to their second group-stage game against Japan in 2006",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": true,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_assist": "Josip Stanisic’s delicious low",
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": true,
+      "referat_fakta_score": 9,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-croatia-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
