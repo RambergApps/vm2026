@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-24T19:15:52Z",
-  "sist_oppdatert_grupper": "2026-06-24T19:15:52Z",
-  "sist_oppdatert_utslag": "2026-06-24T19:15:52Z",
+  "sist_oppdatert": "2026-06-24T19:30:57Z",
+  "sist_oppdatert_grupper": "2026-06-24T19:30:57Z",
+  "sist_oppdatert_utslag": "2026-06-24T19:30:57Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -95,15 +95,15 @@
         "fifa_navn": "Canada",
         "kode": "CAN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/CAN%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 1,
-        "uavgjort": 1,
+        "uavgjort": 2,
         "tap": 0,
         "maal_for": 7,
         "maal_mot": 1,
         "maal_forskjell": 6,
         "lagdisiplin": -3,
-        "poeng": 4
+        "poeng": 5
       },
       {
         "plass": 2,
@@ -111,15 +111,15 @@
         "fifa_navn": "Switzerland",
         "kode": "SUI",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/SUI%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 1,
-        "uavgjort": 1,
+        "uavgjort": 2,
         "tap": 0,
         "maal_for": 5,
         "maal_mot": 2,
         "maal_forskjell": 3,
         "lagdisiplin": -2,
-        "poeng": 4
+        "poeng": 5
       },
       {
         "plass": 3,
@@ -127,15 +127,15 @@
         "fifa_navn": "Bosnia and Herzegovina",
         "kode": "BIH",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/BIH%201x",
-        "spilt": 2,
-        "seier": 0,
+        "spilt": 3,
+        "seier": 1,
         "uavgjort": 1,
         "tap": 1,
-        "maal_for": 2,
+        "maal_for": 3,
         "maal_mot": 5,
-        "maal_forskjell": -3,
+        "maal_forskjell": -2,
         "lagdisiplin": -9,
-        "poeng": 1
+        "poeng": 4
       },
       {
         "plass": 4,
@@ -143,13 +143,13 @@
         "fifa_navn": "Qatar",
         "kode": "QAT",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/QAT%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 0,
         "uavgjort": 1,
-        "tap": 1,
+        "tap": 2,
         "maal_for": 1,
-        "maal_mot": 7,
-        "maal_forskjell": -6,
+        "maal_mot": 8,
+        "maal_forskjell": -7,
         "lagdisiplin": -11,
         "poeng": 1
       }
