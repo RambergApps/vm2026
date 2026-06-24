@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-24T21:01:31Z",
-    "antall_sok": 40,
+    "sist_sokt": "2026-06-24T21:12:20Z",
+    "antall_sok": 41,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3367,7 +3367,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-24T21:01:11Z",
+      "hentet": "2026-06-24T21:12:01Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -3409,10 +3409,10 @@
   "Switzerland_Canada_2026_06_24|2-1": {
     "kamp_id": "Switzerland_Canada_2026_06_24",
     "resultat": "2-1",
-    "sist_sokt": "2026-06-24T21:02:28Z",
-    "antall_sok": 1,
-    "beste_score": 4,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-24T21:13:24Z",
+    "antall_sok": 2,
+    "beste_score": 13,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -3423,19 +3423,107 @@
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
-      "resultat_i_fulltekst": false,
+      "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-24T21:01:40Z",
+      "hentet": "2026-06-24T21:13:24Z",
+      "goal_events": [
+        {
+          "spiller": "Vargas",
+          "lag": "Switzerland",
+          "minutt": "46",
+          "type": "goal"
+        },
+        {
+          "spiller": "Manzambi",
+          "lag": "Switzerland",
+          "minutt": "57",
+          "type": "goal"
+        },
+        {
+          "spiller": "Promise David",
+          "lag": "Canada",
+          "minutt": "76",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Vargas",
+        "Manzambi",
+        "Promise David"
+      ],
+      "lead_scorer": "Vargas",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights?searchOverlay=1)",
+        "Switzerland advance to the Round of 32 after Juan Vargas and Johan Manzambi earned victory over co-hosts Canada, who also punched their ticket.",
+        "Co-hosts Canada’s party at the FIFA World Cup 2026™ will continue through the knockout stages - though it was Switzerland celebrating the loudest in Vancouver after a hard-fought victory secured first place in Group B for Murat Yakin’s men.",
+        "While both teams march on - Canada for the first time in their history - Switzerland’s success, achieved through second-half strikes by Juan Vargas and Johan Manzambi, means they will be back at BC Place Vancouver on 2 July to take on the third-placed team from Group E, F, G, I or J in the Round of 32."
+      ],
+      "key_stat": "Switzerland have qualified from the group stage for the sixth time in their last seven World Cup campaigns.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Bosnia___Herzegovina_Qatar_2026_06_24|3-1": {
+    "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
+    "resultat": "3-1",
+    "sist_sokt": "2026-06-24T21:13:18Z",
+    "antall_sok": 1,
+    "beste_score": 6,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/bosnia-and-herzegovina-qatar-highlights-match-report",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 3,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-06-24T21:12:52Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights?searchOverlay=1)"
+        "Highlights Colombia v Congo DR | Group K | FIFA World Cup 2026™ | Highlights Colombia v Congo DR | Group K | FIFA World Cup 2026™ | Highlights",
+        "Highlights Panama v Croatia | Group L | FIFA World Cup 2026™ | Highlights Panama v Croatia | Group L | FIFA World Cup 2026™ | Highlights",
+        "Highlights England v Ghana | Group L | FIFA World Cup 2026™ | Highlights England v Ghana | Group L | FIFA World Cup 2026™ | Highlights",
+        "Highlights Portugal v Uzbekistan | Group K | FIFA World Cup 2026™ | Highlights Portugal v Uzbekistan | Group K | FIFA World Cup 2026™ | Highlights",
+        "Highlights Jordan v Algeria | Group J | FIFA World Cup 2026™ | Highlights Jordan v Algeria | Group J | FIFA World Cup 2026™ | Highlights"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -3454,15 +3542,14 @@
       "fastest_stat": false,
       "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 4,
+      "referat_fakta_score": 6,
       "mangler": [
-        "resultat_i_fulltekst",
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-canada-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/bosnia-and-herzegovina-qatar-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 4
     }
   }
 }
