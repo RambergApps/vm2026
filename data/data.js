@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T02:01:14Z
+// Sist oppdatert: 2026-06-24T02:30:53Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T02:01:14Z",
+  "sist_oppdatert": "2026-06-24T02:30:53Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -875,15 +875,10 @@ const VM_DATA = {
       "hjemme": null,
       "borte": null,
       "ferdig": false,
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-24",
-      "fd_match_id": 537406,
-      "fd_utcDate": "2026-06-24T02:00:00Z",
-      "fd_hjemmelag": "Colombia",
-      "fd_bortelag": "Congo DR"
+      "kilde_score": "openfootball"
     },
     "England_Ghana_2026_06_23": {
       "kamp_id": "England_Ghana_2026_06_23",
@@ -2203,66 +2198,66 @@ const VM_DATA = {
     },
     {
       "rank": 42,
-      "spiller": "Ante Budimir",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 17
-    },
-    {
-      "rank": 43,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 44,
+      "rank": 43,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 45,
+      "rank": 44,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 46,
+      "rank": 45,
       "spiller": "Rafael Leao",
       "maal": 1,
       "assists": 0,
       "minutter": 36
     },
     {
-      "rank": 47,
+      "rank": 46,
       "spiller": "Marcus Rashford",
       "maal": 1,
       "assists": 0,
       "minutter": 37
     },
     {
-      "rank": 48,
+      "rank": 47,
       "spiller": "Helio Varela",
       "maal": 1,
       "assists": 0,
       "minutter": 40
     },
     {
-      "rank": 49,
+      "rank": 48,
       "spiller": "Leo Ostigard",
       "maal": 1,
       "assists": 0,
       "minutter": 41
     },
     {
-      "rank": 50,
+      "rank": 49,
       "spiller": "Anthony Elanga",
       "maal": 1,
       "assists": 0,
       "minutter": 47
+    },
+    {
+      "rank": 50,
+      "spiller": "Ante Budimir",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 50
     }
   ],
   "stilling": [
@@ -3193,7 +3188,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4238,7 +4233,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5283,7 +5278,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6328,7 +6323,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7373,7 +7368,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8418,7 +8413,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9463,7 +9458,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10508,7 +10503,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11553,7 +11548,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12598,7 +12593,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13643,7 +13638,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14688,7 +14683,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15733,7 +15728,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16778,7 +16773,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17823,7 +17818,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18868,7 +18863,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19913,7 +19908,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20958,7 +20953,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -22003,7 +21998,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23048,7 +23043,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24093,7 +24088,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25138,7 +25133,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -26183,7 +26178,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -27228,7 +27223,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -28273,7 +28268,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -29318,7 +29313,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -30363,7 +30358,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -31408,7 +31403,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -32453,7 +32448,7 @@ const VM_DATA = {
           "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "SCHEDULED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
