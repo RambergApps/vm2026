@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-24T01:28:01Z",
+  "tidspunkt": "2026-06-24T01:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -889,7 +889,7 @@
       "fd_bortelag": "Congo DR",
       "hjemmelag_normalisert": "Colombia",
       "bortelag_normalisert": "DR Congo",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "ferdig": false,
       "hjemme": null,
       "borte": null,
