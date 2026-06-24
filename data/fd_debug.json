@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-24T23:01:07Z",
+  "tidspunkt": "2026-06-24T23:30:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -231,10 +231,10 @@
       "fd_bortelag": "Brazil",
       "hjemmelag_normalisert": "Scotland",
       "bortelag_normalisert": "Brazil",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
-      "borte": 2,
+      "borte": 3,
       "fd_dato": "2026-06-24",
       "fd_utcDate": "2026-06-24T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Scotland_Brazil_2026_06_24"
@@ -245,7 +245,7 @@
       "fd_bortelag": "Haiti",
       "hjemmelag_normalisert": "Morocco",
       "bortelag_normalisert": "Haiti",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 2,
       "borte": 2,

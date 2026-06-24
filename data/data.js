@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T23:01:07Z
+// Sist oppdatert: 2026-06-24T23:30:58Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T23:01:07Z",
+  "sist_oppdatert": "2026-06-24T23:30:58Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -987,7 +987,7 @@ const VM_DATA = {
       "hjemme": 2,
       "borte": 2,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1003,9 +1003,9 @@ const VM_DATA = {
       "hjemmelag": "Scotland",
       "bortelag": "Brazil",
       "hjemme": 0,
-      "borte": 2,
+      "borte": 3,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -2524,10 +2524,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -2540,7 +2540,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3575,10 +3575,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3591,7 +3591,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4626,10 +4626,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4642,7 +4642,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5677,10 +5677,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5693,7 +5693,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6728,10 +6728,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6744,7 +6744,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7779,10 +7779,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7795,7 +7795,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8830,10 +8830,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8846,7 +8846,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9881,10 +9881,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9897,7 +9897,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10932,10 +10932,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10948,7 +10948,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11983,10 +11983,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11999,7 +11999,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13034,10 +13034,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13050,7 +13050,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14085,10 +14085,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14101,7 +14101,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15136,10 +15136,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15152,7 +15152,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16187,10 +16187,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16203,7 +16203,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17238,10 +17238,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17254,7 +17254,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18289,10 +18289,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18305,7 +18305,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19340,10 +19340,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19356,7 +19356,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20391,10 +20391,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20407,7 +20407,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21442,10 +21442,10 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21458,7 +21458,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22493,10 +22493,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22509,7 +22509,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23544,10 +23544,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23560,7 +23560,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24595,10 +24595,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24611,7 +24611,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25646,10 +25646,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25662,7 +25662,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26697,10 +26697,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26713,7 +26713,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27748,10 +27748,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27764,7 +27764,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28799,10 +28799,10 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28815,7 +28815,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29850,10 +29850,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 5,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29866,7 +29866,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30901,10 +30901,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30917,7 +30917,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31952,10 +31952,10 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 2,
+          "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31968,7 +31968,7 @@ const VM_DATA = {
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
