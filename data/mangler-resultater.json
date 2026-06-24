@@ -1,4 +1,25 @@
 {
-  "sist_sjekket": "2026-06-23T23:30:55Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-24T00:01:06Z",
+  "kamper": [
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Colombia_DR_Congo_2026_06_23",
+      "hjemmelag": "Colombia",
+      "bortelag": "DR Congo",
+      "dato": "2026-06-23",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Panama_Croatia_2026_06_23",
+      "hjemmelag": "Panama",
+      "bortelag": "Croatia",
+      "dato": "2026-06-23",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
