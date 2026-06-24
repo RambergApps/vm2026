@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-24T19:01:36Z",
-    "antall_sok": 35,
+    "sist_sokt": "2026-06-24T19:16:18Z",
+    "antall_sok": 36,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3358,7 +3358,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -3367,15 +3367,15 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-24T19:01:23Z",
+      "hentet": "2026-06-24T19:16:00Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -3401,9 +3401,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   }
 }
