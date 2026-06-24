@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T03:01:03Z
+// Sist oppdatert: 2026-06-24T03:30:56Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T03:01:03Z",
+  "sist_oppdatert": "2026-06-24T03:30:56Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -872,18 +872,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Colombia_DR_Congo_2026_06_23",
       "hjemmelag": "Colombia",
       "bortelag": "DR Congo",
-      "hjemme": 0,
-      "borte": 0,
+      "hjemme": null,
+      "borte": null,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-23",
-      "kilde_score": "football_data_org",
-      "dato_fd_org": "2026-06-24",
-      "fd_match_id": 537406,
-      "fd_utcDate": "2026-06-24T02:00:00Z",
-      "fd_hjemmelag": "Colombia",
-      "fd_bortelag": "Congo DR"
+      "kilde_score": "openfootball"
     },
     "England_Ghana_2026_06_23": {
       "kamp_id": "England_Ghana_2026_06_23",
@@ -2105,17 +2100,17 @@ const VM_DATA = {
     },
     {
       "rank": 28,
-      "spiller": "Luis Diaz",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 97
-    },
-    {
-      "rank": 29,
       "spiller": "Ruben Vargas",
       "maal": 1,
       "assists": 1,
       "minutter": 110
+    },
+    {
+      "rank": 29,
+      "spiller": "Luis Diaz",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 153
     },
     {
       "rank": 30,
@@ -3189,11 +3184,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -4234,11 +4229,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -5279,11 +5274,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -6324,11 +6319,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -7369,11 +7364,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -8414,11 +8409,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -9459,11 +9454,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -10504,11 +10499,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -11549,11 +11544,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -12594,11 +12589,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -13639,11 +13634,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -14684,11 +14679,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -15729,11 +15724,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -16774,11 +16769,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -17819,11 +17814,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -18864,11 +18859,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -19909,11 +19904,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -20954,11 +20949,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -21999,11 +21994,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -23044,11 +23039,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -24089,11 +24084,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -25134,11 +25129,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -26179,11 +26174,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -27224,11 +27219,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -28269,11 +28264,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -29314,11 +29309,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -30359,11 +30354,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -31404,11 +31399,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
@@ -32449,11 +32444,11 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "TIMED",
           "runde": "gruppe"
         },
         {
