@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-24T22:01:04Z",
+  "tidspunkt": "2026-06-24T22:31:03Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -224,34 +224,6 @@
       "fd_dato": "2026-06-19",
       "fd_utcDate": "2026-06-19T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Scotland_Morocco_2026_06_19"
-    },
-    "537343": {
-      "fd_match_id": 537343,
-      "fd_hjemmelag": "Scotland",
-      "fd_bortelag": "Brazil",
-      "hjemmelag_normalisert": "Scotland",
-      "bortelag_normalisert": "Brazil",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-24",
-      "fd_utcDate": "2026-06-24T22:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Scotland_Brazil_2026_06_24"
-    },
-    "537344": {
-      "fd_match_id": 537344,
-      "fd_hjemmelag": "Morocco",
-      "fd_bortelag": "Haiti",
-      "hjemmelag_normalisert": "Morocco",
-      "bortelag_normalisert": "Haiti",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-24",
-      "fd_utcDate": "2026-06-24T22:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Morocco_Haiti_2026_06_24"
     },
     "537345": {
       "fd_match_id": 537345,

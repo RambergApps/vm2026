@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T22:01:05Z
+// Sist oppdatert: 2026-06-24T22:31:10Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T22:01:05Z",
+  "sist_oppdatert": "2026-06-24T22:31:10Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -990,12 +990,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-24",
-      "fd_match_id": 537344,
-      "fd_utcDate": "2026-06-24T22:00:00Z",
-      "fd_hjemmelag": "Morocco",
-      "fd_bortelag": "Haiti"
+      "kilde_score": "openfootball"
     },
     "Scotland_Brazil_2026_06_24": {
       "kamp_id": "Scotland_Brazil_2026_06_24",
@@ -1008,12 +1003,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-24",
-      "fd_match_id": 537343,
-      "fd_utcDate": "2026-06-24T22:00:00Z",
-      "fd_hjemmelag": "Scotland",
-      "fd_bortelag": "Brazil"
+      "kilde_score": "openfootball"
     },
     "South_Africa_South_Korea_2026_06_24": {
       "kamp_id": "South_Africa_South_Korea_2026_06_24",
@@ -1954,52 +1944,52 @@ const VM_DATA = {
     },
     {
       "rank": 6,
+      "spiller": "Vinicius Junior",
+      "maal": 3,
+      "assists": 1,
+      "minutter": 215
+    },
+    {
+      "rank": 7,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 270
     },
     {
-      "rank": 7,
+      "rank": 8,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
       "minutter": 123
     },
     {
-      "rank": 8,
+      "rank": 9,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 149
     },
     {
-      "rank": 9,
+      "rank": 10,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 173
     },
     {
-      "rank": 10,
+      "rank": 11,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 174
     },
     {
-      "rank": 11,
+      "rank": 12,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 181
-    },
-    {
-      "rank": 12,
-      "spiller": "Vinicius Junior",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 190
     },
     {
       "rank": 13,
@@ -2027,7 +2017,7 @@ const VM_DATA = {
       "spiller": "Matheus Cunha",
       "maal": 2,
       "assists": 0,
-      "minutter": 108
+      "minutter": 133
     },
     {
       "rank": 17,
@@ -2045,52 +2035,52 @@ const VM_DATA = {
     },
     {
       "rank": 19,
-      "spiller": "Ismael Saibari",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 180
-    },
-    {
-      "rank": 20,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 21,
+      "rank": 20,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 22,
+      "rank": 21,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 186
     },
     {
-      "rank": 23,
+      "rank": 22,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 24,
+      "rank": 23,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 192
     },
     {
-      "rank": 25,
+      "rank": 24,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 201
+    },
+    {
+      "rank": 25,
+      "spiller": "Ismael Saibari",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 203
     },
     {
       "rank": 26,

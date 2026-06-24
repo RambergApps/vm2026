@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-24T22:01:35Z",
-    "antall_sok": 43,
+    "sist_sokt": "2026-06-24T22:31:35Z",
+    "antall_sok": 44,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3367,7 +3367,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-24T22:01:13Z",
+      "hentet": "2026-06-24T22:31:17Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -3494,10 +3494,10 @@
   "Bosnia___Herzegovina_Qatar_2026_06_24|3-1": {
     "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
     "resultat": "3-1",
-    "sist_sokt": "2026-06-24T22:02:28Z",
-    "antall_sok": 3,
-    "beste_score": 6,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-24T22:32:00Z",
+    "antall_sok": 4,
+    "beste_score": 12,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -3512,18 +3512,48 @@
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-24T22:01:56Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-06-24T22:32:00Z",
+      "goal_events": [
+        {
+          "spiller": "Alajbegovic",
+          "lag": "Bosnia & Herzegovina",
+          "minutt": "29",
+          "type": "goal"
+        },
+        {
+          "spiller": "Abunada",
+          "lag": "Bosnia & Herzegovina",
+          "minutt": "34",
+          "type": "own_goal"
+        },
+        {
+          "spiller": "Al-Haydos",
+          "lag": "Qatar",
+          "minutt": "42",
+          "type": "goal"
+        },
+        {
+          "spiller": "Mahmic",
+          "lag": "Bosnia & Herzegovina",
+          "minutt": "82",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Alajbegovic",
+        "Abunada",
+        "Al-Haydos",
+        "Mahmic"
+      ],
+      "lead_scorer": "Alajbegovic",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "Highlights Colombia v Congo DR | Group K | FIFA World Cup 2026™ | Highlights Colombia v Congo DR | Group K | FIFA World Cup 2026™ | Highlights",
-        "Highlights Panama v Croatia | Group L | FIFA World Cup 2026™ | Highlights Panama v Croatia | Group L | FIFA World Cup 2026™ | Highlights",
-        "Highlights England v Ghana | Group L | FIFA World Cup 2026™ | Highlights England v Ghana | Group L | FIFA World Cup 2026™ | Highlights",
-        "Highlights Portugal v Uzbekistan | Group K | FIFA World Cup 2026™ | Highlights Portugal v Uzbekistan | Group K | FIFA World Cup 2026™ | Highlights",
-        "Highlights Jordan v Algeria | Group J | FIFA World Cup 2026™ | Highlights Jordan v Algeria | Group J | FIFA World Cup 2026™ | Highlights"
+        "Teenager Kerim Alajbegovic lit up Seattle as Bosnia and Herzegovina run out 3-1 winners over Qatar",
+        "Bosnia and Herzegovina have strengthened their case for a place in the last 32 of the FIFA World Cup 2026™with a 3-1 win over Qatar in Seattle. Sergej Barbarez's team finished third in Group B behind section winners Switzerland and Canada, with confirmation of the next stage to come at the end of Matchday three.",
+        "It was a dominant start from the Bosnians with Qatar goalkeeper Mahmud Abunada called into action on several occasions in the opening stages. The pressure paid off for the Dragons when 18-year-old Kerim Alajbegovic lit up Seattle with a solo goal fitting of a World Cup. The teenager, who is his nation's youngest-ever World Cup player, cut inside, beat two Qatar players and fired a right-footed shot into the top corner.",
+        "Bosnia and Herzegovina, captained by Edin Dzeko on his 150th appearance, then doubled their lead through an own goal from Abunada. Dzeko's half volley struck left-back Sultan Al-Brake on the thigh, with the ball subsequently spinning in off the helpless goalkeeper.",
+        "It was a commanding lead, but Qatar did strike to halve the scoreline before the break with Edmilson Junior pulling a ball back from the left for captain Hassan Al-Haydos to slam home from close range."
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -3539,14 +3569,15 @@
       "all_goals_first_half": false,
       "lead_goal_early": false,
       "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
       "fastest_stat": false,
-      "record_stat": false,
+      "record_stat": true,
       "eliminated_loser": false,
-      "referat_fakta_score": 6,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/bosnia-and-herzegovina-qatar-highlights-match-report",
       "direct_fifa_probe": true,
       "_forsok_url": 4
