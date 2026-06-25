@@ -344,6 +344,21 @@ body {
 .ny-deltaker-info.vis { display: block; }
 .ny-deltaker-info strong { color: var(--success); }
 
+.navn-duplikat-varsel {
+  display: none;
+  flex-basis: 100%;
+  background: rgba(255,90,90,.09);
+  border: 1px solid rgba(255,90,90,.38);
+  border-radius: 8px;
+  padding: 10px 13px;
+  color: #ff9a9a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.navn-duplikat-varsel.vis { display: block; }
+.navn-wrap input.navn-opptatt { border-color: var(--red); }
+
 /* ── LEVER-KNAPP ── */
 .lever-wrap { margin-top: 24px; }
 .btn-lever {
@@ -616,6 +631,9 @@ body::before {
       <button type="button" class="btn-ny-deltaker" id="nyDeltakerKnapp" onclick="visNyDeltakerModus(true)">＋ Ny deltaker</button>
       <button type="button" class="btn-avbryt-ny-deltaker" id="avbrytNyDeltakerKnapp" onclick="visNyDeltakerModus(false)">Avbryt</button>
     </div>
+    <div class="navn-duplikat-varsel" id="navnDuplikatVarsel" role="alert" aria-live="polite">
+      Dette brukernavnet er allerede i bruk. Velg et annet.
+    </div>
     <div class="ny-deltaker-info" id="nyDeltakerInfo">
       <strong>Ny deltaker:</strong> Du kan tippe åpne utslagskamper med en gang.
       Når gruppespillet er ferdig, får du gjennomsnittlig gruppespillscore som startpoeng.
@@ -720,6 +738,25 @@ function navnNoekkel(navn) {
   return String(navn || "").trim().replace(/\s+/g, " ").toLocaleLowerCase("no");
 }
 
+function validerNyttDeltakernavn() {
+  const input = document.getElementById("navnInput");
+  const varsel = document.getElementById("navnDuplikatVarsel");
+  if (!input || !varsel) return false;
+
+  const navn = input.value.trim();
+  const navnId = lagDeltakerId(navn);
+  const opptatt = Boolean(
+    oppretterNyDeltaker && navn && kjenteDeltakere.some(d =>
+      navnNoekkel(d.navn) === navnNoekkel(navn) || d.id === navnId
+    )
+  );
+
+  varsel.classList.toggle("vis", opptatt);
+  input.classList.toggle("navn-opptatt", opptatt);
+  input.setAttribute("aria-invalid", opptatt ? "true" : "false");
+  return opptatt;
+}
+
 function lagreIdentitetLokalt(navn, id, type) {
   if (id) {
     localStorage.setItem("vm2026_deltaker_id", id);
@@ -750,6 +787,7 @@ function visNyDeltakerModus(aktiv) {
     deltakerType = "sen_pamelding";
     input.value = "";
     if (select) select.value = "";
+    validerNyttDeltakernavn();
     input.focus();
   } else {
     const valgt = kjenteDeltakere.find(d => d.id === select?.value);
@@ -763,6 +801,7 @@ function visNyDeltakerModus(aktiv) {
       deltakerType = null;
       input.value = "";
     }
+    validerNyttDeltakernavn();
   }
   lagreTilStorage();
   if (status) byggUI();
@@ -786,6 +825,12 @@ function byggDeltakerDropdown(deltakere) {
   const select = document.getElementById("deltakerSelect");
   const input = document.getElementById("navnInput");
   const label = document.getElementById("navnLabel");
+
+  if (!input.dataset.duplikatValidering) {
+    input.addEventListener("input", validerNyttDeltakernavn);
+    input.addEventListener("blur", validerNyttDeltakernavn);
+    input.dataset.duplikatValidering = "1";
+  }
 
   kjenteDeltakere = deltakere
     .filter(d => d && d.id && d.navn)
@@ -860,6 +905,7 @@ function byggDeltakerDropdown(deltakere) {
   document.getElementById("nyDeltakerKnapp").style.display = "";
   document.getElementById("avbrytNyDeltakerKnapp").style.display = "none";
   label.textContent = "Hvem er du?";
+  validerNyttDeltakernavn();
 }
 
 function registrerNyDeltakerLokalt(navn, id) {
@@ -1335,9 +1381,9 @@ async function leverRunde(runde) {
   }
 
   if (oppretterNyDeltaker) {
-    const navnFinnes = kjenteDeltakere.some(d => navnNoekkel(d.navn) === navnNoekkel(navn));
-    if (navnFinnes) {
-      warning.innerHTML = '<div class="error-box">Navnet finnes allerede. Velg det fra listen i stedet.</div>';
+    if (validerNyttDeltakernavn()) {
+      warning.innerHTML = '<div class="error-box">Dette brukernavnet er allerede i bruk. Velg et annet.</div>';
+      document.getElementById("navnInput")?.focus();
       return;
     }
     deltakerId = lagDeltakerId(navn);
