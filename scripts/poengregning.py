@@ -34,17 +34,34 @@ API_URL               = "https://raw.githubusercontent.com/openfootball/worldcup
 FOOTBALL_DATA_API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
 FOOTBALL_DATA_TOKEN   = os.environ.get("FOOTBALL_DATA_TOKEN", "")
 FIFA_PLAYER_STATS_URL = "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/statistics/player-statistics"
+FIFA_CALENDAR_API_URL = "https://api.fifa.com/api/v3/calendar/matches"
+FIFA_CALENDAR_PARAMS = {
+    "idCompetition": 17,
+    "idSeason": 285023,
+    "count": 500,
+    "language": "en",
+}
+FIFA_STATUS_MAP = {
+    0: "FINISHED",
+    1: "TIMED",
+    3: "IN_PLAY",
+}
 
 # Lagnavn-mapping: football-data.org → OpenFootball
 # OpenFootball-navn er master siden tipping-appen og kamp-ID-er er basert på disse.
 FD_NAVN_TIL_OF = {
-    "Bosnia-Herzegovina": "Bosnia & Herzegovina",
-    "Cape Verde Islands":  "Cape Verde",
-    "Congo DR":            "DR Congo",
-    "Czechia":             "Czech Republic",
-    "Türkiye":             "Turkey",
-    "United States":       "USA",
-    "Curacao":             "Curaçao",
+    "Bosnia-Herzegovina":      "Bosnia & Herzegovina",
+    "Bosnia and Herzegovina":  "Bosnia & Herzegovina",
+    "Cape Verde Islands":      "Cape Verde",
+    "Cabo Verde":              "Cape Verde",
+    "Congo DR":                "DR Congo",
+    "Czechia":                 "Czech Republic",
+    "Korea Republic":          "South Korea",
+    "Côte d'Ivoire":           "Ivory Coast",
+    "Türkiye":                 "Turkey",
+    "United States":           "USA",
+    "IR Iran":                 "Iran",
+    "Curacao":                 "Curaçao",
 }
 
 REPO_ROOT      = Path(__file__).parent.parent
@@ -55,6 +72,7 @@ STATUS_JSON    = DATA_DIR / "status.json"
 DELTAKERE_JSON = DATA_DIR / "deltakere.json"          # ← NY
 MANUELLE_KAMPER_JSON = DATA_DIR / "manuelle-kamper.json"
 DEBUG_JSON           = DATA_DIR / "fd_debug.json"
+FIFA_DEBUG_JSON      = DATA_DIR / "fifa_debug.json"
 MANGLER_RESULTATER_JSON = DATA_DIR / "mangler-resultater.json"
 KAMP_MAPPING_JSON       = DATA_DIR / "kamp-mapping.json"
 
@@ -372,6 +390,238 @@ def hent_fifa_spillerstatistikk():
     print(f"  → {len(spillere)} rangerte spillere hentet fra FIFA")
     return spillere
 
+
+
+def lokaliser_fifa_tekst(value):
+    """Henter tekst fra FIFAs lokaliserte tekststrukturer."""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, (int, float)):
+        return str(value)
+    if isinstance(value, list):
+        for item in value:
+            text = lokaliser_fifa_tekst(item)
+            if text:
+                return text
+        return ""
+    if isinstance(value, dict):
+        for key in ("Description", "Text", "Name", "Value", "Label"):
+            text = lokaliser_fifa_tekst(value.get(key))
+            if text:
+                return text
+        for nested in value.values():
+            text = lokaliser_fifa_tekst(nested)
+            if text:
+                return text
+    return ""
+
+
+def fifa_lagnavn(side_obj):
+    """Normaliserer FIFA-lagnavn til OpenFootball-navnene appen bruker."""
+    side_obj = side_obj if isinstance(side_obj, dict) else {}
+    raw = lokaliser_fifa_tekst(
+        side_obj.get("ShortClubName")
+        or side_obj.get("ClubName")
+        or side_obj.get("TeamName")
+        or side_obj.get("Name")
+        or side_obj.get("ShortName")
+    )
+    return FD_NAVN_TIL_OF.get(raw, raw)
+
+
+def fifa_parse_score(*values):
+    """Parser score fra FIFA. 0 er gyldig score og må ikke tolkes som False."""
+    for value in values:
+        if value is None or isinstance(value, bool):
+            continue
+        if isinstance(value, int):
+            return value
+        if isinstance(value, float) and value.is_integer():
+            return int(value)
+        match = re.fullmatch(r"\s*(\d+)\s*", str(value))
+        if match:
+            return int(match.group(1))
+    return None
+
+
+def fifa_status_til_fd_status(match_status):
+    try:
+        status_int = int(match_status)
+    except Exception:
+        return "TIMED"
+    return FIFA_STATUS_MAP.get(status_int, f"FIFA_STATUS_{status_int}")
+
+
+def fifa_kamp_til_resultat(kamp):
+    """Konverterer én FIFA Calendar-kamp til samme basisformat som resultat_lookup."""
+    home_obj = kamp.get("Home") if isinstance(kamp.get("Home"), dict) else {}
+    away_obj = kamp.get("Away") if isinstance(kamp.get("Away"), dict) else {}
+    team1 = fifa_lagnavn(home_obj)
+    team2 = fifa_lagnavn(away_obj)
+    utc_date = str(kamp.get("Date") or kamp.get("UtcDate") or kamp.get("UTCDate") or "").strip()
+    dato = utc_date[:10]
+    hjemme = fifa_parse_score(kamp.get("HomeTeamScore"), home_obj.get("Score"))
+    borte = fifa_parse_score(kamp.get("AwayTeamScore"), away_obj.get("Score"))
+    har_score = hjemme is not None and borte is not None
+    raw_status = kamp.get("MatchStatus")
+    status = fifa_status_til_fd_status(raw_status)
+    try:
+        status_int = int(raw_status)
+    except Exception:
+        status_int = None
+
+    return {
+        "fifa_event_id": str(kamp.get("IdMatch") or kamp.get("MatchId") or ""),
+        "fifa_match_no": parse_int(kamp.get("MatchNumber")),
+        "hjemmelag": team1,
+        "bortelag": team2,
+        "fifa_hjemmelag": fifa_lagnavn(home_obj),
+        "fifa_bortelag": fifa_lagnavn(away_obj),
+        "hjemme": hjemme,
+        "borte": borte,
+        "har_score": har_score,
+        "ferdig": status_int == 0 and har_score,
+        "kamp_ferdig_api": status_int == 0,
+        "kilde": "fifa_calendar",
+        "status": status,
+        "fifa_status_raw": raw_status,
+        "fifa_match_time": kamp.get("MatchTime"),
+        "fifa_dato": dato,
+        "fifa_utcDate": utc_date,
+        "winner": kamp.get("Winner"),
+        "fifa_kamp_id_basert_paa_dato": kamp_id(team1, team2, dato) if team1 and team2 and dato else "",
+    }
+
+
+def hent_fifa_calendar():
+    """
+    Henter resultater/status fra FIFA Calendar API.
+
+    Brukes som sekundær resultatkilde etter football-data bulk. FIFA-kallet er
+    åpent og gir live/final score, men OpenFootball eier fortsatt kamp-ID-ene.
+    """
+    print("Henter kampresultater fra FIFA Calendar API...")
+    try:
+        r = requests.get(
+            FIFA_CALENDAR_API_URL,
+            params=FIFA_CALENDAR_PARAMS,
+            headers={"User-Agent": "RambergVMBot/1.0", "Accept": "application/json"},
+            timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  ADVARSEL: Kunne ikke hente FIFA Calendar API: {e}")
+        return {}
+
+    raw_results = data.get("Results") if isinstance(data, dict) else None
+    if not isinstance(raw_results, list):
+        print("  ADVARSEL: FIFA Calendar API mangler Results-liste")
+        return {}
+
+    fifa_lookup = {}
+    for raw in raw_results:
+        if not isinstance(raw, dict):
+            continue
+        item = fifa_kamp_til_resultat(raw)
+        if not item.get("hjemmelag") or not item.get("bortelag") or not item.get("fifa_dato"):
+            continue
+        key = item.get("fifa_event_id") or item.get("fifa_kamp_id_basert_paa_dato")
+        fifa_lookup[str(key)] = item
+
+    ferdig_antall = sum(1 for v in fifa_lookup.values() if v.get("ferdig"))
+    paagaar_antall = sum(1 for v in fifa_lookup.values() if v.get("status") in ("IN_PLAY", "PAUSED"))
+    med_score = sum(1 for v in fifa_lookup.values() if v.get("har_score"))
+    print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående, {med_score} med score fra FIFA Calendar")
+
+    debug_data = {
+        "tidspunkt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "kamper": {
+            key: {
+                "fifa_event_id": v.get("fifa_event_id"),
+                "hjemmelag": v.get("hjemmelag"),
+                "bortelag": v.get("bortelag"),
+                "status": v.get("status"),
+                "fifa_status_raw": v.get("fifa_status_raw"),
+                "ferdig": v.get("ferdig"),
+                "hjemme": v.get("hjemme"),
+                "borte": v.get("borte"),
+                "fifa_dato": v.get("fifa_dato"),
+                "fifa_utcDate": v.get("fifa_utcDate"),
+                "fifa_match_time": v.get("fifa_match_time"),
+            }
+            for key, v in sorted(fifa_lookup.items(), key=lambda x: x[0])
+        }
+    }
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    FIFA_DEBUG_JSON.write_text(json.dumps(debug_data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  -> Skrev fifa_debug.json med {len(fifa_lookup)} kamper")
+
+    return fifa_lookup
+
+
+def finn_fifa_match_for_of(kid, team1, team2, dato, fifa_lookup):
+    """Finner FIFA Calendar-kamp for én OpenFootball-kamp basert på lag og dato."""
+    if not fifa_lookup:
+        return None
+    of_home_key = normaliser_lagnavn_for_match(team1)
+    of_away_key = normaliser_lagnavn_for_match(team2)
+    kandidater = []
+
+    for fifa_key, fifa in fifa_lookup.items():
+        if normaliser_lagnavn_for_match(fifa.get("hjemmelag")) != of_home_key:
+            continue
+        if normaliser_lagnavn_for_match(fifa.get("bortelag")) != of_away_key:
+            continue
+        avvik = dato_avvik_dager(dato, fifa.get("fifa_dato"))
+        if avvik is None or avvik > 1:
+            continue
+        kandidater.append((avvik, 0 if fifa.get("har_score") else 1, fifa_key, fifa))
+
+    if not kandidater:
+        return None
+    kandidater.sort(key=lambda x: (x[0], x[1], x[2]))
+    beste_avvik = kandidater[0][0]
+    beste = [k for k in kandidater if k[0] == beste_avvik]
+    if len(beste) > 1:
+        print(f"    ADVARSEL: Flere mulige FIFA-treff for {kid}: {[x[2] for x in beste]} — hopper over FIFA-match")
+        return None
+    return beste[0][3]
+
+
+def bruk_fifa_paa_base(base, fifa, team1, team2):
+    """Legger FIFA Calendar-status og score inn på en OpenFootball-kamp."""
+    if not fifa:
+        return base
+
+    base["status"] = fifa.get("status", base.get("status", "TIMED"))
+    base["fifa_event_id"] = fifa.get("fifa_event_id")
+    base["fifa_match_no"] = fifa.get("fifa_match_no")
+    base["fifa_utcDate"] = fifa.get("fifa_utcDate")
+    base["fifa_dato"] = fifa.get("fifa_dato")
+    base["fifa_status_raw"] = fifa.get("fifa_status_raw")
+    base["fifa_match_time"] = fifa.get("fifa_match_time")
+    base["kamp_ferdig_api"] = bool(fifa.get("kamp_ferdig_api"))
+
+    if fifa.get("har_score"):
+        base["hjemme"] = fifa.get("hjemme")
+        base["borte"] = fifa.get("borte")
+        base["ferdig"] = bool(fifa.get("ferdig"))
+        base["kilde"] = "fifa_calendar"
+        base["kilde_score"] = "fifa_calendar"
+
+    # FIFA Winner er IdTeam, så vi bruker ikke dette til avansement her.
+    return base
+
+
+def kamp_burde_ha_status_na(base, margin_minutter=15):
+    """True bare for kamper som har eller snart har avspark. Hindrer enkeltkall på fremtidige kamper."""
+    tidspunkt = parse_iso_utc(base.get("fd_utcDate") or base.get("utcDate") or base.get("dato"))
+    if not tidspunkt:
+        return False
+    return tidspunkt <= datetime.now(timezone.utc) + timedelta(minutes=margin_minutter)
 
 def les_kamp_mapping():
     """
@@ -710,7 +960,7 @@ def bruk_fd_paa_base(base, fd, team1, team2):
     return base
 
 
-def bygg_resultat_lookup(api_data, fd_lookup):
+def bygg_resultat_lookup(api_data, fd_lookup, fifa_lookup=None):
     """
     Bygger en dict med OpenFootball kamp_id -> resultat for alle kamper.
 
@@ -731,6 +981,7 @@ def bygg_resultat_lookup(api_data, fd_lookup):
       }
     """
     lookup = {}
+    fifa_lookup = fifa_lookup or {}
     mapping_data = les_kamp_mapping()
     mapping_endret = False
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -745,21 +996,20 @@ def bygg_resultat_lookup(api_data, fd_lookup):
 
         kid = kamp_id(team1, team2, dato)
 
-        # OpenFootball-score brukes kun hvis fd.org ikke har score/status med mål.
-        of_ferdig = bool(ht and ht[0] is not None and ht[1] is not None)
-
+        # OpenFootball brukes kun som kampoppsett/canonical kamp-ID.
+        # Resultater skal komme fra football-data.org, FIFA Calendar eller manuell fallback.
         base = {
             "hjemmelag": team1,
             "bortelag":  team2,
-            "hjemme":    ht[0] if of_ferdig else None,
-            "borte":     ht[1] if of_ferdig else None,
-            "ferdig":    of_ferdig,
+            "hjemme":    None,
+            "borte":     None,
+            "ferdig":    False,
             "runde":     runde,
             "dato":      dato,
             "dato_openfootball": dato,
-            "status":    "FINISHED" if of_ferdig else "TIMED",
+            "status":    "TIMED",
             "kilde":     "openfootball",
-            "kilde_score": "openfootball" if of_ferdig else None,
+            "kilde_score": None,
         }
 
         fd, endret = finn_fd_match_for_of(kid, team1, team2, dato, runde, fd_lookup, mapping_data, now_iso)
@@ -775,15 +1025,27 @@ def bygg_resultat_lookup(api_data, fd_lookup):
             else:
                 print(f"    fd.org status: {team1}–{team2} (OF {dato}, fd {fd.get('fd_dato')}) [{fd.get('status')}]")
 
+        # FIFA Calendar er sekundær resultatkilde når football-data bulk ikke har score.
+        # 0–0 håndteres korrekt via is not None i fifa_kamp_til_resultat().
+        if not base.get("kilde_score"):
+            fifa = finn_fifa_match_for_of(kid, team1, team2, dato, fifa_lookup)
+            if fifa and fifa.get("har_score"):
+                base = bruk_fifa_paa_base(base, fifa, team1, team2)
+                if fifa.get("ferdig"):
+                    print(f"    FIFA score: {team1} {fifa['hjemme']}-{fifa['borte']} {team2} (OF {dato}, FIFA {fifa.get('fifa_dato')}) [FINISHED]")
+                else:
+                    print(f"    FIFA pågående: {team1} {fifa['hjemme']}-{fifa['borte']} {team2} (OF {dato}, FIFA {fifa.get('fifa_dato')}) [{fifa.get('status')}, {fifa.get('fifa_match_time')}]")
+
         lookup[kid] = base
 
     if fd_lookup:
         skriv_kamp_mapping(mapping_data, force=mapping_endret or not KAMP_MAPPING_JSON.exists())
 
-    of_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde_score") == "openfootball")
     fd_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde_score") == "football_data_org")
     fd_paagaar_antall = sum(1 for v in lookup.values() if not v["ferdig"] and v.get("kilde_score") == "football_data_org")
-    print(f"  -> {len(lookup)} kamper totalt | OpenFootball-score: {of_ferdig_antall} | football-data.org ferdig: {fd_ferdig_antall} | football-data.org pågående: {fd_paagaar_antall}")
+    fifa_ferdig_antall = sum(1 for v in lookup.values() if v["ferdig"] and v.get("kilde_score") == "fifa_calendar")
+    fifa_paagaar_antall = sum(1 for v in lookup.values() if not v["ferdig"] and v.get("kilde_score") == "fifa_calendar")
+    print(f"  -> {len(lookup)} kamper totalt | football-data.org ferdig: {fd_ferdig_antall} | football-data.org pågående: {fd_paagaar_antall} | FIFA ferdig: {fifa_ferdig_antall} | FIFA pågående: {fifa_paagaar_antall}")
     return lookup
 
 
@@ -2080,7 +2342,8 @@ def main():
     else:
         api_data = hent_api_data()
         fd_lookup = hent_football_data_org()
-        resultat_lookup = bygg_resultat_lookup(api_data, fd_lookup)
+        fifa_lookup = hent_fifa_calendar()
+        resultat_lookup = bygg_resultat_lookup(api_data, fd_lookup, fifa_lookup)
 
     spillerstatistikk = [] if TEST_MODE else hent_fifa_spillerstatistikk()
 
