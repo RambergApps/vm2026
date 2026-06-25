@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-25T22:09:45Z",
+  "sist_oppdatert": "2026-06-25T22:31:33Z",
   "antall_kamper": 56,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -12108,7 +12108,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 1,
+        "antall_sok": 2,
         "fallback": true,
         "cache_key": "Ecuador_Germany_2026_06_25|2-1",
         "serper_score": -100,
@@ -12118,7 +12118,7 @@
         "referat_fakta_score": 6,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-germany-highlights-match-report",
         "mangler": [
@@ -12308,7 +12308,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T22:09:45Z"
+      "oppdatert": "2026-06-25T22:31:33Z"
     }
   }
 }
