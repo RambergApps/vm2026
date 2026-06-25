@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-25T07:15:18Z",
+  "generert": "2026-06-25T07:30:54Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -67,11 +67,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 73,
+          "kamp_id": "South_Africa_Canada_2026_06_28",
+          "hjemme": "South Africa",
+          "borte": "Canada",
+          "dato": "2026-06-28"
+        },
+        {
           "kilde": "status.json",
           "match_no": 73,
-          "kamp_id": "2A_2B_2026_06_28",
-          "hjemme": "2A",
-          "borte": "2B",
+          "kamp_id": "South_Africa_Canada_2026_06_28",
+          "hjemme": "South Africa",
+          "borte": "Canada",
           "dato": "2026-06-28"
         }
       ],
