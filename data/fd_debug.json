@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T23:30:51Z",
+  "tidspunkt": "2026-06-25T23:55:23Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -483,7 +483,7 @@
       "fd_bortelag": "Netherlands",
       "hjemmelag_normalisert": "Tunisia",
       "bortelag_normalisert": "Netherlands",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 2,
@@ -497,7 +497,7 @@
       "fd_bortelag": "Sweden",
       "hjemmelag_normalisert": "Japan",
       "bortelag_normalisert": "Sweden",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
