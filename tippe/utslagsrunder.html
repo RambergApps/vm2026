@@ -261,6 +261,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .navn-wrap label {
   font-family: 'Barlow Condensed', sans-serif;
@@ -286,6 +287,19 @@ body {
 .navn-wrap input:focus,
 .navn-wrap select:focus { border-color: var(--accent2); }
 .navn-wrap select option { background: var(--surface); color: var(--text); }
+.ny-deltaker-info {
+  display: none;
+  flex-basis: 100%;
+  background: rgba(0,230,118,.07);
+  border: 1px solid rgba(0,230,118,.24);
+  border-radius: 8px;
+  padding: 11px 13px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.ny-deltaker-info.vis { display: block; }
+.ny-deltaker-info strong { color: var(--success); }
 
 /* ── LEVER-KNAPP ── */
 .lever-wrap { margin-top: 24px; }
@@ -553,8 +567,13 @@ body::before {
     <select id="deltakerSelect" style="display:none" aria-label="Velg deg selv">
       <option value="">— Velg deg selv —</option>
     </select>
-    <!-- Tekstfelt: fallback og skjult kilde for navn-verdi ved levering -->
+    <!-- Tekstfelt: vises ved ny deltaker eller som fallback dersom listen ikke kan lastes. -->
     <input type="text" id="navnInput" placeholder="Kari Nordmann" autocomplete="name">
+    <div class="ny-deltaker-info" id="nyDeltakerInfo">
+      <strong>Ny deltaker:</strong> Du kan tippe åpne utslagskamper med en gang.
+      Når gruppespillet er ferdig, får du gjennomsnittlig gruppespillscore som startpoeng.
+      Navnet må være unikt.
+    </div>
   </div>
 
   <!-- RUNDE-SEKSJONER genereres dynamisk -->
@@ -607,6 +626,9 @@ let bonusSvar = {};
 let helhetsbonus = {};
 let aktivRunde = null;
 let deltakerId = null;
+let deltakerType = null;
+let oppretterNyDeltaker = false;
+let kjenteDeltakere = [];
 
 const deepLinkParams = new URLSearchParams(window.location.search);
 const deepLinkRunde = deepLinkParams.get("runde");
@@ -636,14 +658,55 @@ async function hentStatus() {
 }
 
 // ── DELTAKERE ──────────────────────────────────────────────
+function lagDeltakerId(navn) {
+  return String(navn || "")
+    .toLowerCase()
+    .trim()
+    .replaceAll("æ", "ae").replaceAll("ø", "oe").replaceAll("å", "aa")
+    .replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_|_$/g, "") || "ukjent";
+}
+
+function navnNoekkel(navn) {
+  return String(navn || "").trim().replace(/\s+/g, " ").toLocaleLowerCase("no");
+}
+
+function lagreIdentitetLokalt(navn, id, type) {
+  if (id) {
+    localStorage.setItem("vm2026_deltaker_id", id);
+    localStorage.setItem(VIEWER_KEY, id);
+  }
+  if (navn) localStorage.setItem("vm2026_deltaker_navn", navn);
+  if (type) localStorage.setItem("vm2026_deltaker_type", type);
+}
+
+function visNyDeltakerModus(aktiv) {
+  const input = document.getElementById("navnInput");
+  const info = document.getElementById("nyDeltakerInfo");
+  oppretterNyDeltaker = aktiv;
+  input.style.display = aktiv ? "" : "none";
+  info.classList.toggle("vis", aktiv);
+  if (aktiv) {
+    deltakerId = null;
+    deltakerType = "sen_pamelding";
+    input.value = "";
+    input.focus();
+  }
+}
+
 async function hentDeltakere() {
   try {
     const response = await fetch(DELTAKERE_URL + "?t=" + Date.now());
-    if (!response.ok) return;
+    if (!response.ok) throw new Error("Kunne ikke hente deltakerlisten");
     const data = await response.json();
-    if (Array.isArray(data) && data.length > 0) byggDeltakerDropdown(data);
+    if (Array.isArray(data)) byggDeltakerDropdown(data);
   } catch (error) {
-    // Tekstfeltet beholdes som fallback.
+    // Tekstfeltet beholdes som fallback. Backend vil fortsatt kontrollere navnet.
+    const info = document.getElementById("nyDeltakerInfo");
+    info.textContent = "Deltakerlisten kunne ikke lastes. Skriv et eksisterende navn nøyaktig og prøv igjen.";
+    info.classList.add("vis");
   }
 }
 
@@ -652,46 +715,107 @@ function byggDeltakerDropdown(deltakere) {
   const input = document.getElementById("navnInput");
   const label = document.getElementById("navnLabel");
 
-  deltakere.sort((a, b) => a.navn.localeCompare(b.navn, "no"));
-  deltakere.forEach(deltaker => {
+  kjenteDeltakere = deltakere
+    .filter(d => d && d.id && d.navn)
+    .map(d => ({
+      id: String(d.id),
+      navn: String(d.navn),
+      deltaker_type: d.deltaker_type === "sen_pamelding" ? "sen_pamelding" : "ordinaer"
+    }))
+    .sort((a, b) => a.navn.localeCompare(b.navn, "no"));
+
+  select.innerHTML = '<option value="">— Velg deg selv —</option>';
+  kjenteDeltakere.forEach(deltaker => {
     const option = document.createElement("option");
     option.value = deltaker.id;
-    option.textContent = deltaker.navn;
+    option.textContent = deltaker.navn + (deltaker.deltaker_type === "sen_pamelding" ? " · sen påmelding" : "");
+    option.dataset.type = deltaker.deltaker_type;
     select.appendChild(option);
   });
 
-  const lagretId = localStorage.getItem("vm2026_deltaker_id") || localStorage.getItem(VIEWER_KEY);
-  if (lagretId) {
-    const funnet = deltakere.find(d => d.id === lagretId);
-    if (funnet) {
-      select.value = lagretId;
-      deltakerId = lagretId;
-      input.value = funnet.navn;
-      localStorage.setItem("vm2026_deltaker_id", lagretId);
-      localStorage.setItem(VIEWER_KEY, lagretId);
-    }
+  const newOption = document.createElement("option");
+  newOption.value = "__new__";
+  newOption.textContent = "+ Opprett ny deltaker";
+  select.appendChild(newOption);
+
+  const lagretId = deltakerId || localStorage.getItem("vm2026_deltaker_id") || localStorage.getItem(VIEWER_KEY);
+  const lagretNavn = input.value || localStorage.getItem("vm2026_deltaker_navn") || "";
+  const lagretType = deltakerType || localStorage.getItem("vm2026_deltaker_type") || null;
+  let funnet = lagretId ? kjenteDeltakere.find(d => d.id === lagretId) : null;
+
+  // En helt ny deltaker kan ha rukket å levere før deltakere.json er oppdatert.
+  if (!funnet && lagretId && lagretNavn && lagretType === "sen_pamelding") {
+    funnet = { id: lagretId, navn: lagretNavn, deltaker_type: "sen_pamelding" };
+    kjenteDeltakere.push(funnet);
+    const option = document.createElement("option");
+    option.value = funnet.id;
+    option.textContent = funnet.navn + " · sen påmelding";
+    option.dataset.type = "sen_pamelding";
+    select.insertBefore(option, newOption);
+  }
+
+  if (funnet) {
+    select.value = funnet.id;
+    deltakerId = funnet.id;
+    deltakerType = funnet.deltaker_type;
+    oppretterNyDeltaker = false;
+    input.value = funnet.navn;
+    input.style.display = "none";
+    document.getElementById("nyDeltakerInfo").classList.remove("vis");
+    lagreIdentitetLokalt(funnet.navn, funnet.id, funnet.deltaker_type);
+  } else {
+    input.style.display = "none";
   }
 
   select.addEventListener("change", () => {
-    const funnet = deltakere.find(d => d.id === select.value);
-    if (funnet) {
-      deltakerId = funnet.id;
-      input.value = funnet.navn;
-      localStorage.setItem("vm2026_deltaker_id", deltakerId);
-      localStorage.setItem(VIEWER_KEY, deltakerId);
+    if (select.value === "__new__") {
+      visNyDeltakerModus(true);
     } else {
-      deltakerId = null;
-      input.value = "";
-      localStorage.removeItem("vm2026_deltaker_id");
-      localStorage.removeItem(VIEWER_KEY);
+      const valgt = kjenteDeltakere.find(d => d.id === select.value);
+      oppretterNyDeltaker = false;
+      document.getElementById("nyDeltakerInfo").classList.remove("vis");
+      input.style.display = "none";
+      if (valgt) {
+        deltakerId = valgt.id;
+        deltakerType = valgt.deltaker_type;
+        input.value = valgt.navn;
+        lagreIdentitetLokalt(valgt.navn, valgt.id, valgt.deltaker_type);
+      } else {
+        deltakerId = null;
+        deltakerType = null;
+        input.value = "";
+        localStorage.removeItem("vm2026_deltaker_id");
+        localStorage.removeItem(VIEWER_KEY);
+      }
     }
     lagreTilStorage();
     if (status) byggUI();
   });
 
   select.style.display = "";
-  input.style.display = "none";
   label.textContent = "Hvem er du?";
+}
+
+function registrerNyDeltakerLokalt(navn, id) {
+  if (!kjenteDeltakere.some(d => d.id === id)) {
+    kjenteDeltakere.push({ id, navn, deltaker_type: "sen_pamelding" });
+  }
+  const select = document.getElementById("deltakerSelect");
+  if (select && ![...select.options].some(option => option.value === id)) {
+    const option = document.createElement("option");
+    option.value = id;
+    option.textContent = navn + " · sen påmelding";
+    option.dataset.type = "sen_pamelding";
+    const newOption = [...select.options].find(option => option.value === "__new__");
+    select.insertBefore(option, newOption || null);
+  }
+  if (select) select.value = id;
+  deltakerId = id;
+  deltakerType = "sen_pamelding";
+  oppretterNyDeltaker = false;
+  document.getElementById("navnInput").style.display = "none";
+  document.getElementById("nyDeltakerInfo").classList.remove("vis");
+  lagreIdentitetLokalt(navn, id, "sen_pamelding");
 }
 
 // ── DEMO ───────────────────────────────────────────────────
@@ -1141,7 +1265,22 @@ async function leverRunde(runde) {
     return;
   }
 
-  const identitet = deltakerId || navn.toLowerCase().replace(/[^a-z0-9æøå]+/gi, "_");
+  if (oppretterNyDeltaker) {
+    const navnFinnes = kjenteDeltakere.some(d => navnNoekkel(d.navn) === navnNoekkel(navn));
+    if (navnFinnes) {
+      warning.innerHTML = '<div class="error-box">Navnet finnes allerede. Velg det fra listen i stedet.</div>';
+      return;
+    }
+    deltakerId = lagDeltakerId(navn);
+    deltakerType = "sen_pamelding";
+  }
+
+  if (!deltakerId) {
+    warning.innerHTML = '<div class="error-box">Velg navnet ditt fra listen, eller velg «Opprett ny deltaker».</div>';
+    return;
+  }
+
+  const identitet = deltakerId;
   const bekreftelsesKey = "vm2026_identitet_bekreftet_" + identitet;
   if (sessionStorage.getItem(bekreftelsesKey) !== "1") {
     const riktig = window.confirm(`Du sender inn tips som ${navn}. Er dette riktig?`);
@@ -1153,8 +1292,7 @@ async function leverRunde(runde) {
     sessionStorage.setItem(bekreftelsesKey, "1");
   }
   if (deltakerId) {
-    localStorage.setItem("vm2026_deltaker_id", deltakerId);
-    localStorage.setItem(VIEWER_KEY, deltakerId);
+    lagreIdentitetLokalt(navn, deltakerId, deltakerType || "ordinaer");
   }
 
   const åpne = (status?.[runde]?.kamper || []).filter(erKampTippebar);
@@ -1184,7 +1322,8 @@ async function leverRunde(runde) {
       innlevert: new Date().toISOString(),
       token: TOKEN,
       runde,
-      deltaker_id: deltakerId || null
+      deltaker_id: deltakerId,
+      deltaker_type: deltakerType || "ordinaer"
     },
     tippinger: utfylte.map(kamp => ({
       kamp_id: kamp.id,
@@ -1208,6 +1347,7 @@ async function leverRunde(runde) {
       const error = await response.json().catch(() => null);
       throw new Error(error?.details || error?.error || "Submit-feil: " + response.status);
     }
+    if (deltakerType === "sen_pamelding") registrerNyDeltakerLokalt(navn, deltakerId);
     visSucces(navn, runde, utfylte.map(kamp => kamp.id), Boolean(rundebonus), Object.keys(helhet).length);
   } catch (error) {
     button.disabled = false;
@@ -1239,6 +1379,7 @@ function lagreTilStorage() {
   localStorage.setItem("vm2026_utslagsrunder", JSON.stringify({
     navn: document.getElementById("navnInput").value,
     deltaker_id: deltakerId,
+    deltaker_type: deltakerType,
     tippinger,
     bonusSvar,
     helhetsbonus
@@ -1252,6 +1393,7 @@ function lastFraStorage() {
     const data = JSON.parse(raw);
     if (data.navn) document.getElementById("navnInput").value = data.navn;
     if (data.deltaker_id) deltakerId = data.deltaker_id;
+    if (data.deltaker_type) deltakerType = data.deltaker_type;
     if (data.tippinger) tippinger = data.tippinger;
     if (data.bonusSvar) bonusSvar = data.bonusSvar;
     if (data.helhetsbonus) helhetsbonus = data.helhetsbonus;
