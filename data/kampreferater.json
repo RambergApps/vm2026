@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-25T00:21:31Z",
+  "sist_oppdatert": "2026-06-25T00:31:38Z",
   "antall_kamper": 52,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -10345,7 +10345,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 49,
+        "antall_sok": 50,
         "fallback": true,
         "cache_key": "Colombia_DR_Congo_2026_06_23|1-0",
         "serper_score": -100,
@@ -10355,7 +10355,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 49,
+        "retry_antall": 50,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
         "mangler": [
@@ -10548,7 +10548,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T00:20:35Z"
+      "oppdatert": "2026-06-25T00:31:32Z"
     },
     "Bosnia___Herzegovina_Qatar_2026_06_24": {
       "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
@@ -11221,29 +11221,27 @@
       "gruppe": "C",
       "runde": "gruppe",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Brazil beat Scotland 3-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Brazil beat Scotland 3-0.\nGoals: Vinicius Junior (7, 45+3) and Matheus Cunha (60).\n\nWith the help of two goals from Vinicius Junior, Brazil secured top spot in Group C and left Scotland's hopes in the balance.\nBrazil strolled into the Round of 32 of the FIFA World Cup 2026™ with a comfortable 3-0 victory over Scotland at Miami Stadium.\nWith two first-half goals, Vinicius Junior led the way for the five-times champions who can now look forward to a Houston encounter with Group F’s runners-up on 29 June.\nFor Scotland, by contrast, the dream of surviving the group stage for the first time remains in the balance.\nKey stat: Vinicius Junior has become the fifth Brazil player to score in all three games of a World Cup group stage, following in the footsteps of Jairzinho (1970), Romario (1994), and Ronaldo and Rivaldo (both 2002).",
       "recap_kvalitet": {
-        "score": 6,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 13,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "Scotland_Brazil_2026_06_24|0-3",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 6,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 13,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
-        "mangler": [
-          "goal_events"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -11429,7 +11427,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T00:21:31Z"
+      "oppdatert": "2026-06-25T00:31:38Z"
     }
   }
 }

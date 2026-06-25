@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-25T00:20:35Z",
-    "antall_sok": 49,
+    "sist_sokt": "2026-06-25T00:31:32Z",
+    "antall_sok": 50,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3367,7 +3367,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-25T00:20:17Z",
+      "hentet": "2026-06-25T00:31:08Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -3692,10 +3692,10 @@
   "Scotland_Brazil_2026_06_24|0-3": {
     "kamp_id": "Scotland_Brazil_2026_06_24",
     "resultat": "0-3",
-    "sist_sokt": "2026-06-25T00:21:31Z",
-    "antall_sok": 1,
-    "beste_score": 6,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-25T00:31:38Z",
+    "antall_sok": 2,
+    "beste_score": 13,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -3710,17 +3710,42 @@
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 3,
       "score": 10,
-      "hentet": "2026-06-25T00:20:49Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
-      "brace_scorer": "",
+      "hentet": "2026-06-25T00:31:38Z",
+      "goal_events": [
+        {
+          "spiller": "Vinicius Junior",
+          "lag": "Brazil",
+          "minutt": "7",
+          "type": "goal"
+        },
+        {
+          "spiller": "Vinicius Junior",
+          "lag": "Brazil",
+          "minutt": "45+3",
+          "type": "goal"
+        },
+        {
+          "spiller": "Matheus Cunha",
+          "lag": "Brazil",
+          "minutt": "60",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Vinicius Junior",
+        "Matheus Cunha"
+      ],
+      "lead_scorer": "Vinicius Junior",
+      "brace_scorer": "Vinicius Junior",
       "hat_trick_player": "",
       "article_paragraphs": [
         "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights?searchOverlay=1)"
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights?searchOverlay=1)",
+        "With the help of two goals from Vinicius Junior, Brazil secured top spot in Group C and left Scotland's hopes in the balance.",
+        "Brazil strolled into the Round of 32 of the FIFA World Cup 2026™ with a comfortable 3-0 victory over Scotland at Miami Stadium.",
+        "With two first-half goals, Vinicius Junior led the way for the five-times champions who can now look forward to a Houston encounter with Group F’s runners-up on 29 June. For Scotland, by contrast, the dream of surviving the group stage for the first time remains in the balance. They sit third in the section with three points and a goal difference of minus three."
       ],
-      "key_stat": "",
+      "key_stat": "Vinicius Junior has become the fifth Brazil player to score in all three games of a World Cup group stage, following in the footsteps of Jairzinho (1970), Romario (1994), and Ronaldo and Rivaldo (both 2002).",
       "player_of_match": "",
       "early_lead": false,
       "came_from_behind": false,
@@ -3732,16 +3757,17 @@
       "brace_text": false,
       "first_goal_past_keeper": false,
       "all_goals_first_half": false,
-      "lead_goal_early": false,
+      "lead_goal_early": true,
       "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
       "fastest_stat": false,
       "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 6,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
