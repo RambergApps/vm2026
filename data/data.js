@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-24T23:30:58Z
+// Sist oppdatert: 2026-06-25T00:01:08Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-24T23:30:58Z",
+  "sist_oppdatert": "2026-06-25T00:01:08Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -54,7 +54,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-12",
-      "kilde_score": "football_data_org",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-06-12",
       "fd_match_id": 537333,
       "fd_utcDate": "2026-06-12T19:00:00Z",
@@ -984,7 +984,7 @@ const VM_DATA = {
       "canonical_kamp_id": "Morocco_Haiti_2026_06_24",
       "hjemmelag": "Morocco",
       "bortelag": "Haiti",
-      "hjemme": 2,
+      "hjemme": 4,
       "borte": 2,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -1005,7 +1005,7 @@ const VM_DATA = {
       "hjemme": 0,
       "borte": 3,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1926,171 +1926,171 @@ const VM_DATA = {
     },
     {
       "rank": 2,
+      "spiller": "Vinicius Junior",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 273
+    },
+    {
+      "rank": 3,
       "spiller": "Kylian Mbappe",
       "maal": 4,
       "assists": 0,
       "minutter": 199
     },
     {
-      "rank": 3,
+      "rank": 4,
       "spiller": "Erling Haaland",
       "maal": 4,
       "assists": 0,
       "minutter": 207
     },
     {
-      "rank": 4,
+      "rank": 5,
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
       "minutter": 69
     },
     {
-      "rank": 5,
+      "rank": 6,
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 1,
       "minutter": 146
     },
     {
-      "rank": 6,
-      "spiller": "Vinicius Junior",
+      "rank": 7,
+      "spiller": "Matheus Cunha",
       "maal": 3,
-      "assists": 1,
-      "minutter": 215
+      "assists": 0,
+      "minutter": 190
     },
     {
-      "rank": 7,
+      "rank": 8,
+      "spiller": "Ismael Saibari",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 255
+    },
+    {
+      "rank": 9,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 270
     },
     {
-      "rank": 8,
+      "rank": 10,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
       "minutter": 123
     },
     {
-      "rank": 9,
+      "rank": 11,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 149
     },
     {
-      "rank": 10,
+      "rank": 12,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 173
     },
     {
-      "rank": 11,
+      "rank": 13,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 174
     },
     {
-      "rank": 12,
+      "rank": 14,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 13,
+      "rank": 15,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 14,
+      "rank": 16,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 39
     },
     {
-      "rank": 15,
+      "rank": 17,
       "spiller": "Brian Brobbey",
       "maal": 2,
       "assists": 0,
       "minutter": 88
     },
     {
-      "rank": 16,
-      "spiller": "Matheus Cunha",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 133
-    },
-    {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 176
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
-      "minutter": 186
+      "minutter": 187
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 192
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 201
-    },
-    {
-      "rank": 25,
-      "spiller": "Ismael Saibari",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 203
     },
     {
       "rank": 26,
@@ -2213,59 +2213,59 @@ const VM_DATA = {
     },
     {
       "rank": 43,
+      "spiller": "Achraf Hakimi",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 289
+    },
+    {
+      "rank": 44,
       "spiller": "Mattias Svanberg",
       "maal": 1,
       "assists": 0,
       "minutter": 13
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 47,
+      "rank": 48,
+      "spiller": "Soufiane Rahimi",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 34
+    },
+    {
+      "rank": 49,
       "spiller": "Rafael Leao",
       "maal": 1,
       "assists": 0,
       "minutter": 36
     },
     {
-      "rank": 48,
+      "rank": 50,
       "spiller": "Marcus Rashford",
       "maal": 1,
       "assists": 0,
       "minutter": 37
-    },
-    {
-      "rank": 49,
-      "spiller": "Helio Varela",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 40
-    },
-    {
-      "rank": 50,
-      "spiller": "Leo Ostigard",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 41
     }
   ],
   "stilling": [
@@ -2527,7 +2527,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -2536,7 +2536,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -3578,7 +3578,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -3587,7 +3587,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -4629,7 +4629,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -4638,7 +4638,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -5680,7 +5680,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -5689,7 +5689,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -6731,7 +6731,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -6740,7 +6740,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -7782,7 +7782,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -7791,7 +7791,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -8833,7 +8833,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -8842,7 +8842,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -9884,7 +9884,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -9893,7 +9893,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -10935,7 +10935,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -10944,7 +10944,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -11986,7 +11986,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -11995,7 +11995,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -13037,7 +13037,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -13046,7 +13046,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -14088,7 +14088,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -14097,7 +14097,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -15139,7 +15139,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -15148,7 +15148,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -16190,7 +16190,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -16199,7 +16199,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -17241,7 +17241,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -17250,7 +17250,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -18292,7 +18292,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -18301,7 +18301,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -19343,7 +19343,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -19352,7 +19352,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -20394,7 +20394,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -20403,7 +20403,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -21445,7 +21445,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -21454,7 +21454,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -22496,7 +22496,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -22505,7 +22505,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -23547,7 +23547,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -23556,7 +23556,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -24598,7 +24598,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -24607,7 +24607,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -25649,7 +25649,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -25658,7 +25658,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -26700,7 +26700,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -26709,7 +26709,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -27751,7 +27751,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -27760,7 +27760,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -28802,7 +28802,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -28811,7 +28811,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -29853,7 +29853,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -29862,7 +29862,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -30904,7 +30904,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -30913,7 +30913,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
@@ -31955,7 +31955,7 @@ const VM_DATA = {
           "faktisk_b": 3,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "gruppe"
         },
         {
@@ -31964,7 +31964,7 @@ const VM_DATA = {
           "bortelag": "Haiti",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 2,
+          "faktisk_h": 4,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
