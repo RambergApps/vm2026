@@ -8,8 +8,9 @@ Forutsetning:
 
 Scriptet:
 - bruker FIFA match_no 73–88 som stabil brakettkobling
-- oppretter bare kamper der FIFA og football-data.org kjenner begge lag
-- bruker kamp-ID og UTC-dato fra football-data.org-koblingen
+- oppretter kamper når kontrollen har et komplett, konfliktfritt lagpar
+- bruker football-data.org sin entydige kampkobling/UTC-tid og FIFA-lagnavn som
+  fallback når football-data.org ennå har tomme lagfelt
 - skriver genererte R32-kamper til data/manuelle-kamper.json
 - bevarer andre manuelle kamper og eventuelle ferdige resultater
 - endrer ikke status.json direkte; poengregning.py oppdaterer visningen etterpå
@@ -104,14 +105,29 @@ def build_generated_entry(
     slots: dict[str, str],
 ) -> dict[str, Any]:
     match_no = int(item["fifa_match_no"])
-    home = str(item.get("fd_hjemmelag") or "").strip()
-    away = str(item.get("fd_bortelag") or "").strip()
-    date = str(item.get("fd_dato") or "").strip()
-    utc_date = str(item.get("fd_utcDate") or "").strip()
+    home = str(
+        item.get("kamp_hjemmelag")
+        or item.get("fd_hjemmelag")
+        or item.get("fifa_hjemme")
+        or ""
+    ).strip()
+    away = str(
+        item.get("kamp_bortelag")
+        or item.get("fd_bortelag")
+        or item.get("fifa_borte")
+        or ""
+    ).strip()
+    date = str(item.get("kamp_dato") or item.get("fd_dato") or item.get("fifa_dato") or "").strip()
+    utc_date = str(
+        item.get("kamp_utcDate")
+        or item.get("fd_utcDate")
+        or item.get("fifa_utcDate")
+        or ""
+    ).strip()
     match_id = str(item.get("kamp_id") or "").strip()
 
     if not all((home, away, date, utc_date, match_id, item.get("fd_match_id"))):
-        raise RuntimeError(f"M{match_no} er markert matched, men mangler nødvendig FD-data")
+        raise RuntimeError(f"M{match_no} er markert matched, men mangler nødvendig kampdata")
 
     previous = previous or {}
     preserve_result = bool(previous.get("ferdig")) or (
@@ -133,6 +149,7 @@ def build_generated_entry(
         "borte": previous.get("borte") if preserve_result else None,
         "ferdig": bool(previous.get("ferdig")) if preserve_result else False,
         "kilde": GENERATED_SOURCE,
+        "lagkilde": item.get("lagkilde", previous.get("lagkilde", "")),
         "slot_hjemme": slots.get("slot_hjemme", previous.get("slot_hjemme", "")),
         "slot_borte": slots.get("slot_borte", previous.get("slot_borte", "")),
     }
@@ -174,7 +191,7 @@ def main() -> int:
         updated: list[int] = []
 
         for item in control_matches:
-            if item.get("status") != "matched" or not item.get("kamp_id"):
+            if item.get("status") != "matched":
                 continue
             match_no = int(item["fifa_match_no"])
             previous = generated_by_no.get(match_no)
