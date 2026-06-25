@@ -8,9 +8,12 @@ Hovedprinsipp
   FIFA event-ID, plassholdere og avspark.
 - Jina-uttrekket brukes bare som tilleggskontroll. Det er ikke komplett nok til å
   være primærkilde for hele R32.
-- football-data.org brukes for eksisterende fd_match_id, UTC-avspark og den
-  kamp-ID-regelen som dagens bygg-r32-flyt bruker.
-- Endelig kamp-ID godkjennes først når begge faktiske lag er kjent.
+- football-data.org brukes for eksisterende fd_match_id og som uavhengig
+  kobling på eksakt UTC-avspark.
+- Lagnavn kan hentes fra den kilden som først har et komplett, faktisk lagpar.
+  FIFA-navn brukes som fallback når football-data.org ennå har tomme lagfelt.
+- Endelig kamp-ID godkjennes først når et komplett lagpar er kjent og ingen
+  kjente lagopplysninger mellom kildene er i konflikt.
 
 Scriptet skriver kun:
     data/fifa-r32-kontroll.json
@@ -118,6 +121,12 @@ def sammenligningsnoekkel(navn: str) -> str:
 
 def samme_lag(a: str, b: str) -> bool:
     return bool(a and b and sammenligningsnoekkel(a) == sammenligningsnoekkel(b))
+
+
+def produksjonsnavn(navn: str) -> str:
+    """Normaliserer kildenavn til lagnavnene som brukes i tippeappen."""
+    navn = str(navn or "").strip()
+    return SAMMENLIGNINGSNAVN.get(navn, navn)
 
 
 def parse_iso_datetime(value: Any) -> datetime | None:
@@ -592,20 +601,53 @@ def match_fifa_mot_fd(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) ->
         result.update({"status": "conflict", "forklaring": "Bortelaget avviker mellom FIFA og football-data.org.", "kamp_id": None})
         return result
 
-    if fifa_home_known and fifa_away_known and fd_home_known and fd_away_known:
+    # Bruk et komplett lagpar fra den kilden som har det først. FD beholdes som
+    # førstevalg når begge lag finnes der, fordi dagens kamp-ID-er allerede er
+    # normalisert mot FD/OpenFootball. FIFA er trygg fallback når FD ennå bare
+    # har kamp-ID og avspark, slik som ved M73 South Africa–Canada.
+    selected_home = ""
+    selected_away = ""
+    team_source = ""
+    if fd_home_known and fd_away_known:
+        selected_home = produksjonsnavn(fd.get("fd_hjemmelag_for_id", ""))
+        selected_away = produksjonsnavn(fd.get("fd_bortelag_for_id", ""))
+        team_source = "football_data_org"
+    elif fifa_home_known and fifa_away_known:
+        selected_home = produksjonsnavn(fifa.get("fifa_hjemme", ""))
+        selected_away = produksjonsnavn(fifa.get("fifa_borte", ""))
+        team_source = "fifa_api"
+
+    date_part = str(fd.get("fd_dato") or fifa.get("fifa_dato") or "").strip()
+    utc_date = str(fd.get("fd_utcDate") or fifa.get("fifa_utcDate") or "").strip()
+
+    if selected_home and selected_away and date_part and utc_date:
         result.update(
             {
                 "status": "matched",
-                "forklaring": "FIFA-kampnummer, identisk UTC-avspark og begge lag er entydig koblet.",
+                "forklaring": (
+                    "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; "
+                    + (
+                        "begge lag er bekreftet hos football-data.org."
+                        if team_source == "football_data_org"
+                        else "begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar."
+                    )
+                ),
+                "kamp_hjemmelag": selected_home,
+                "kamp_bortelag": selected_away,
+                "kamp_dato": date_part,
+                "kamp_utcDate": utc_date,
+                "lagkilde": team_source,
+                "kamp_id": kamp_id(selected_home, selected_away, date_part),
             }
         )
         return result
 
-    # Matchnummer og fd_match_id kan kobles nå, men kamp-ID må vente på faktiske lag.
+    # Matchnummer og fd_match_id kan kobles nå, men kamp-ID må vente til én av
+    # kildene har et komplett faktisk lagpar.
     result.update(
         {
             "status": "pending",
-            "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+            "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
             "kamp_id": None,
         }
     )
@@ -655,9 +697,19 @@ def legg_til_eksisterende_kontroll(item: dict[str, Any], existing: list[dict[str
     if same_number:
         item["eksisterende_koblinger"] = same_number
         if item.get("kamp_id"):
-            item["kamp_id_samsvarer_med_eksisterende"] = all(
-                not entry.get("kamp_id") or entry.get("kamp_id") == item.get("kamp_id")
+            # Statusfilen inneholder opprinnelige plassholder-ID-er som 2A_2B.
+            # De er ikke reelle tidligere kamp-ID-er og skal derfor ikke gi et
+            # falskt ID-avvik når kampen for første gang får faktiske lag.
+            comparable = [
+                entry
                 for entry in same_number
+                if entry.get("kamp_id")
+                and not er_placeholder(str(entry.get("hjemme") or ""))
+                and not er_placeholder(str(entry.get("borte") or ""))
+            ]
+            item["kamp_id_samsvarer_med_eksisterende"] = all(
+                entry.get("kamp_id") == item.get("kamp_id")
+                for entry in comparable
             )
 
 
@@ -788,7 +840,7 @@ def main() -> int:
                 "fifa_jina": None if args.skip_jina else (str(args.jina_file) if args.jina_file else JINA_URL),
                 "football_data": str(args.football_data_file) if args.football_data_file else FOOTBALL_DATA_URL,
             },
-            "kamp_id_regel": "rens(hjemmelag)_rens(bortelag)_rens(football-data utcDate[:10])",
+            "kamp_id_regel": "rens(komplett lagpar fra FD, ellers FIFA)_rens(football-data utcDate[:10])",
             "oppsummering": {
                 "forventet_antall_r32": 16,
                 "fifa_api_r32_funnet": len(fifa_matches),
