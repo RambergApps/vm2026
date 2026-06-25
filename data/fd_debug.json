@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T20:01:00Z",
+  "tidspunkt": "2026-06-25T20:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -392,34 +392,6 @@
       "fd_dato": "2026-06-21",
       "fd_utcDate": "2026-06-21T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Ecuador_Curaçao_2026_06_21"
-    },
-    "537355": {
-      "fd_match_id": 537355,
-      "fd_hjemmelag": "Ecuador",
-      "fd_bortelag": "Germany",
-      "hjemmelag_normalisert": "Ecuador",
-      "bortelag_normalisert": "Germany",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-25",
-      "fd_utcDate": "2026-06-25T20:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Ecuador_Germany_2026_06_25"
-    },
-    "537356": {
-      "fd_match_id": 537356,
-      "fd_hjemmelag": "Curaçao",
-      "fd_bortelag": "Ivory Coast",
-      "hjemmelag_normalisert": "Curaçao",
-      "bortelag_normalisert": "Ivory Coast",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-25",
-      "fd_utcDate": "2026-06-25T20:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Curaçao_Ivory_Coast_2026_06_25"
     },
     "537357": {
       "fd_match_id": 537357,
