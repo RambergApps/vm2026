@@ -998,6 +998,86 @@ body {
 .modal-bonus-answer{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
 .modal-bonus-poeng{font-family:'Bebas Neue',sans-serif;font-size:20px;white-space:nowrap}
 @media(max-width:640px){.bonusstatus-grid{grid-template-columns:1fr}.bonusstatus-round{grid-template-columns:78px 1fr}.bonusstatus-pill{grid-column:2;width:max-content}.bonusstatus-title{font-size:32px}}
+
+/* ── SEN PÅMELDING ── */
+.senpamelding-merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  margin-top: 5px;
+  padding: 3px 7px;
+  border: 1px solid rgba(255,214,0,.34);
+  border-radius: 999px;
+  background: rgba(255,214,0,.08);
+  color: var(--gold);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.senpamelding-merke.venter {
+  border-color: rgba(122,138,170,.34);
+  background: rgba(122,138,170,.07);
+  color: var(--muted);
+}
+.startpoeng-banner {
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,214,0,.28);
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(255,214,0,.08), rgba(239,43,45,.04));
+}
+.startpoeng-banner-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.startpoeng-banner-text {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.startpoeng-info {
+  margin: 0 0 16px;
+  padding: 13px 14px;
+  border: 1px solid rgba(255,214,0,.25);
+  border-radius: 9px;
+  background: rgba(255,214,0,.055);
+}
+.startpoeng-info-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.startpoeng-info-value {
+  color: var(--text);
+  white-space: nowrap;
+}
+.startpoeng-info-text {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+@media (max-width: 600px) {
+  .startpoeng-info-title { align-items: flex-start; }
+  .startpoeng-banner { padding: 12px 13px; }
+}
+
 </style>
 </head>
 <body>
@@ -1122,6 +1202,10 @@ body {
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Bonusspørsmål</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold)">10 + 20 poeng</div>
         <div style="font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5">Rundebonus gir 10 poeng. De tre spørsmålene for hele utslagsfasen gir 20 poeng hver. Målbaserte spørsmål bruker de første 90 minuttene, inkludert tilleggstid.</div>
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid rgba(255,214,0,.28);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Sen påmelding</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.55">Nye deltakere kan begynne å tippe åpne utslagskamper med én gang. Når gruppespillet er ferdig, får de avrundet gjennomsnittlig gruppespillscore blant deltakerne som leverte gruppespillet som startpoeng. Allerede stengte kamper kan ikke tippes.</div>
       </div>
       <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Maks poeng totalt</div>
@@ -1595,6 +1679,57 @@ function samletUtslagspoeng(d) {
   return (d.poeng_utslagsrunder || 0) + (d.poeng_bonus || 0) + (d.poeng_helhetsbonus || 0);
 }
 
+function erSenPamelding(d) {
+  return !!(d && (d.sen_pamelding === true || d.deltaker_type === "sen_pamelding"));
+}
+
+function startpoengVerdi(d) {
+  return Number(d?.poeng_start || 0);
+}
+
+function gruppeEllerStartpoeng(d) {
+  return Number(d?.poeng_gruppespill || 0) + startpoengVerdi(d);
+}
+
+function senPameldingMerkeHTML(d) {
+  if (!erSenPamelding(d)) return "";
+  const beregnet = d.startpoeng_status === "beregnet";
+  const tekst = beregnet
+    ? `Sen påmelding · ${startpoengVerdi(d)} startpoeng`
+    : "Sen påmelding · startpoeng venter";
+  return `<div class="senpamelding-merke ${beregnet ? "" : "venter"}">${escHTML(tekst)}</div>`;
+}
+
+function startpoengInfoHTML(d) {
+  if (!erSenPamelding(d)) return "";
+  const beregnet = d.startpoeng_status === "beregnet";
+  const verdi = beregnet ? `${startpoengVerdi(d)} poeng` : "Beregnes etter gruppespillet";
+  const forklaring = beregnet
+    ? `Startpoengene tilsvarer avrundet gjennomsnittlig gruppespillscore blant deltakerne som tippet gruppespillet.`
+    : `Deltakeren kan tippe åpne utslagskamper nå. Gjennomsnittlig gruppespillscore legges automatisk til når alle 72 gruppespillkampene er ferdige.`;
+  return `<div class="startpoeng-info">
+    <div class="startpoeng-info-title">
+      <span>Sen påmelding</span>
+      <span class="startpoeng-info-value">${escHTML(verdi)}</span>
+    </div>
+    <div class="startpoeng-info-text">${escHTML(forklaring)}</div>
+  </div>`;
+}
+
+function byggStartpoengBanner(stilling) {
+  const senpameldte = (stilling || []).filter(erSenPamelding);
+  if (!senpameldte.length) return "";
+  const meta = VM_DATA?.startpoengstatus || {};
+  const beregnet = meta.status === "beregnet" && meta.startpoeng !== null && meta.startpoeng !== undefined;
+  const tekst = beregnet
+    ? `${senpameldte.length} senpåmeldt${senpameldte.length === 1 ? "" : "e"} har fått ${meta.startpoeng} startpoeng, basert på gjennomsnittet etter gruppespillet.`
+    : `${senpameldte.length} senpåmeldt${senpameldte.length === 1 ? "" : "e"} deltar i utslagsrundene. Startpoengene beregnes automatisk når gruppespillet er ferdig.`;
+  return `<div class="startpoeng-banner">
+    <div class="startpoeng-banner-title">Sen påmelding</div>
+    <div class="startpoeng-banner-text">${escHTML(tekst)}</div>
+  </div>`;
+}
+
 function bonusStatusLabel(status) {
   return {
     ferdig:"Fasit klar",
@@ -1711,7 +1846,7 @@ function aapneModal(event, i) {
   const bonusHTML = byggBonusModalHTML(d);
 
   document.getElementById("modalInnhold").innerHTML = `<div class="modal-header">
-    <div><div class="modal-navn">${escHTML(d.navn)}</div><div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div></div>
+    <div><div class="modal-navn">${escHTML(d.navn)}</div><div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div>${senPameldingMerkeHTML(d)}</div>
     <button class="modal-lukk" onclick="lukkModal()">✕</button>
   </div>
   <div class="modal-stats">
@@ -1719,7 +1854,7 @@ function aapneModal(event, i) {
     <div class="modal-stat"><div class="modal-stat-val">${poengUtsl}</div><div class="modal-stat-lbl">Utslag inkl. bonus</div></div>
     <div class="modal-stat"><div class="modal-stat-val">${ferdigeKamper.length}</div><div class="modal-stat-lbl">Kamper ferdig</div></div>
   </div>
-  <div class="modal-body">${bonusHTML}${kampHTML || (!bonusHTML ? '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>' : '')}</div>`;
+  <div class="modal-body">${startpoengInfoHTML(d)}${bonusHTML}${kampHTML || (!bonusHTML ? '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>' : '')}</div>`;
 
   document.getElementById("modalOverlay").classList.add("vis");
   document.body.style.overflow = "hidden";
@@ -2322,6 +2457,7 @@ function byggStilling() {
         <div class="podium-navn">${escHTML(d.navn)}</div>
         <div class="podium-poeng">${d.poeng_totalt}</div>
         <div class="podium-vinner-tag">${escHTML(d.turneringsvinner || "")}</div>
+        ${senPameldingMerkeHTML(d)}
       </div>`;
   });
   podiumHTML += '</div>';
@@ -2329,7 +2465,7 @@ function byggStilling() {
   let tabellHTML = `
     <div class="stilling-header">
       <div>#</div><div>Navn</div>
-      <div style="text-align:right" class="col-gruppe">Gruppe</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe/start</div>
       <div style="text-align:right">Utsl.</div>
       <div style="text-align:right">Turn.</div>
       <div style="text-align:right">Totalt</div>
@@ -2346,8 +2482,9 @@ function byggStilling() {
         <div>
           <span class="rad-navn" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</span>
           <div class="rad-vinner ${vinnerCls}">🏆 ${escHTML(d.turneringsvinner || "—")}</div>
+          ${senPameldingMerkeHTML(d)}
         </div>
-        <div class="rad-tall col-gruppe">${d.poeng_gruppespill}</div>
+        <div class="rad-tall col-gruppe">${gruppeEllerStartpoeng(d)}</div>
         <div class="rad-tall">${samletUtslagspoeng(d)}</div>
         <div class="rad-tall">${d.poeng_turneringsvinner}</div>
         <div class="rad-totalt">${d.poeng_totalt}</div>
@@ -2357,8 +2494,9 @@ function byggStilling() {
       </div>`;
   });
 
+  const startpoengHTML = byggStartpoengBanner(stilling);
   const dagensHTML = byggDagensKamper();
-  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + dagensHTML + tabellHTML;
+  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + startpoengHTML + dagensHTML + tabellHTML;
 
   if (VM_DATA.sist_oppdatert) {
     const dato = new Date(VM_DATA.sist_oppdatert);
@@ -2370,10 +2508,10 @@ function byggStilling() {
 }
 
 function byggDetaljer(d) {
-  if (!d.tippinger?.length) return '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
+  let html = startpoengInfoHTML(d);
+  if (!d.tippinger?.length) return html + '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
   const bonuser = d.tippinger.filter(t => t.type === 'bonus' || t.type === 'helhetsbonus');
   const ferdigeKamper = d.tippinger.filter(t => (!t.type || t.type === 'kamp') && t.ferdig);
-  let html = '';
   if (bonuser.length) {
     html += '<div class="detaljer-tittel">Bonusspørsmål</div>';
     bonuser.forEach(t => {
@@ -2430,14 +2568,14 @@ function byggDetaljertTabell() {
   let html = `
     <div class="stilling-header">
       <div>#</div><div>Navn</div>
-      <div style="text-align:right" class="col-gruppe">Gruppe</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe/start</div>
       <div style="text-align:right">Utsl.</div>
       <div style="text-align:right">Turn.</div>
       <div style="text-align:right">Totalt</div>
     </div>`;
   VM_DATA.stilling.forEach((d, i) => {
-    const poengGruppe = aktivRunde === "alle" ? d.poeng_gruppespill :
-      aktivRunde === "gruppe" ? d.poeng_gruppespill : 0;
+    const poengGruppe = aktivRunde === "alle" ? gruppeEllerStartpoeng(d) :
+      aktivRunde === "gruppe" ? Number(d.poeng_gruppespill || 0) : 0;
     const poengUtsl = aktivRunde === "alle" ? samletUtslagspoeng(d) :
       aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((sum,t) => sum + (t.poeng || 0), 0) || 0) : 0;
     const poengTurn = aktivRunde === "alle" ? d.poeng_turneringsvinner : 0;
@@ -2445,7 +2583,7 @@ function byggDetaljertTabell() {
     html += `
       <div class="stilling-rad">
         <div class="plass-num ${i<3?'p'+(i+1):''}">${i+1}</div>
-        <div><div class="rad-navn" style="cursor:pointer" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</div></div>
+        <div><div class="rad-navn" style="cursor:pointer" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</div>${senPameldingMerkeHTML(d)}</div>
         <div class="rad-tall col-gruppe">${poengGruppe}</div>
         <div class="rad-tall">${poengUtsl}</div>
         <div class="rad-tall">${poengTurn}</div>
