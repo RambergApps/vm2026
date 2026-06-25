@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-24",
   "dato_norsk": "Onsdag 24. juni 2026",
-  "generert": "2026-06-25T08:01:35Z",
+  "generert": "2026-06-25T08:30:19Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -233,7 +233,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 67,
+        "antall_sok": 68,
         "fallback": true,
         "cache_key": "Colombia_DR_Congo_2026_06_23|1-0",
         "serper_score": -100,
@@ -243,7 +243,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 67,
+        "retry_antall": 68,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
         "mangler": [
