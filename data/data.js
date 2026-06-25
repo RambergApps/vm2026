@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-25T20:30:51Z
+// Sist oppdatert: 2026-06-25T20:35:01Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-25T20:30:51Z",
+  "sist_oppdatert": "2026-06-25T20:35:01Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2068,31 +2068,31 @@ const VM_DATA = {
     },
     {
       "rank": 24,
-      "spiller": "Kai Havertz",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 192
-    },
-    {
-      "rank": 25,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 201
     },
     {
-      "rank": 26,
+      "rank": 25,
       "spiller": "Harry Kane",
       "maal": 2,
       "assists": 0,
       "minutter": 204
     },
     {
-      "rank": 27,
+      "rank": 26,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 206
+    },
+    {
+      "rank": 27,
+      "spiller": "Kai Havertz",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 219
     },
     {
       "rank": 28,
@@ -2173,38 +2173,38 @@ const VM_DATA = {
     },
     {
       "rank": 39,
-      "spiller": "Felix Nmecha",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 181
-    },
-    {
-      "rank": 40,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 41,
+      "rank": 40,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 42,
+      "rank": 41,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 43,
+      "rank": 42,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
+    },
+    {
+      "rank": 43,
+      "spiller": "Felix Nmecha",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 208
     },
     {
       "rank": 44,
@@ -2266,7 +2266,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-25T20:30:51Z",
+    "sist_beregnet": "2026-06-25T20:35:01Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
