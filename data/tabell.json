@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-25T02:31:03Z",
-  "sist_oppdatert_grupper": "2026-06-25T02:31:03Z",
-  "sist_oppdatert_utslag": "2026-06-25T02:31:03Z",
+  "sist_oppdatert": "2026-06-25T03:01:07Z",
+  "sist_oppdatert_grupper": "2026-06-25T03:01:07Z",
+  "sist_oppdatert_utslag": "2026-06-25T03:01:07Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -52,7 +52,7 @@
         "maal_for": 2,
         "maal_mot": 3,
         "maal_forskjell": -1,
-        "lagdisiplin": -12,
+        "lagdisiplin": -13,
         "poeng": 4
       },
       {
@@ -822,13 +822,13 @@
       "runde": "r32",
       "utcDate": "2026-06-28T19:00:00Z",
       "dato": "2026-06-28",
-      "hjemme": "2A",
+      "hjemme": "South Africa",
       "borte": "Canada",
-      "hjemme_kode": "",
+      "hjemme_kode": "RSA",
       "borte_kode": "CAN",
-      "hjemme_kjent": false,
+      "hjemme_kjent": true,
       "borte_kjent": true,
-      "hjemme_placeholder": "2A",
+      "hjemme_placeholder": "",
       "borte_placeholder": "",
       "status": "1",
       "hjemme_score": null,
