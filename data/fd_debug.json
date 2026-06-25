@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T21:01:00Z",
+  "tidspunkt": "2026-06-25T21:30:52Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -399,10 +399,10 @@
       "fd_bortelag": "Germany",
       "hjemmelag_normalisert": "Ecuador",
       "bortelag_normalisert": "Germany",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Ecuador_Germany_2026_06_25"
@@ -413,10 +413,10 @@
       "fd_bortelag": "Ivory Coast",
       "hjemmelag_normalisert": "Curaçao",
       "bortelag_normalisert": "Ivory Coast",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 2,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Curaçao_Ivory_Coast_2026_06_25"
