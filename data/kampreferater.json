@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-25T02:01:36Z",
+  "sist_oppdatert": "2026-06-25T02:31:32Z",
   "antall_kamper": 54,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -10345,7 +10345,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 53,
+        "antall_sok": 54,
         "fallback": true,
         "cache_key": "Colombia_DR_Congo_2026_06_23|1-0",
         "serper_score": -100,
@@ -10355,7 +10355,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 53,
+        "retry_antall": 54,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
         "mangler": [
@@ -10548,7 +10548,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T02:01:35Z"
+      "oppdatert": "2026-06-25T02:31:32Z"
     },
     "Bosnia___Herzegovina_Qatar_2026_06_24": {
       "kamp_id": "Bosnia___Herzegovina_Qatar_2026_06_24",
@@ -11437,12 +11437,12 @@
       "hjemmelag": "Czech Republic",
       "bortelag": "Mexico",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Czech Republic and Mexico are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Mexico lead Czech Republic 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -11628,7 +11628,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-25T02:01:06Z"
+      "oppdatert": "2026-06-25T02:31:04Z"
     },
     "South_Africa_South_Korea_2026_06_24": {
       "kamp_id": "South_Africa_South_Korea_2026_06_24",
@@ -11637,13 +11637,13 @@
       "fd_utcDate": "2026-06-25T01:00:00Z",
       "hjemmelag": "South Africa",
       "bortelag": "South Korea",
-      "hjemme_score": 0,
+      "hjemme_score": 1,
       "borte_score": 0,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "South Africa and South Korea are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "South Africa lead South Korea 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -11829,7 +11829,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-25T02:01:06Z"
+      "oppdatert": "2026-06-25T02:31:04Z"
     }
   }
 }

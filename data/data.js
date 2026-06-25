@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-25T02:01:05Z
+// Sist oppdatert: 2026-06-25T02:31:03Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-25T02:01:05Z",
+  "sist_oppdatert": "2026-06-25T02:31:03Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -967,9 +967,9 @@ const VM_DATA = {
       "hjemmelag": "Czech Republic",
       "bortelag": "Mexico",
       "hjemme": 0,
-      "borte": 0,
+      "borte": 2,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1022,10 +1022,10 @@ const VM_DATA = {
       "canonical_kamp_id": "South_Africa_South_Korea_2026_06_24",
       "hjemmelag": "South Africa",
       "bortelag": "South Korea",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
       "kilde_score": "football_data_org",
@@ -1966,7 +1966,7 @@ const VM_DATA = {
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
-      "minutter": 190
+      "minutter": 191
     },
     {
       "rank": 8,
@@ -2110,164 +2110,164 @@ const VM_DATA = {
     },
     {
       "rank": 28,
+      "spiller": "Julian Quinones",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 238
+    },
+    {
+      "rank": 29,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 194
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 145
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 168
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Soufiane Rahimi",
       "maal": 1,
       "assists": 1,
       "minutter": 53
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 57
     },
     {
-      "rank": 34,
+      "rank": 35,
+      "spiller": "Luis Romo",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 140
+    },
+    {
+      "rank": 36,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 35,
+      "rank": 37,
       "spiller": "Mostafa Zico",
       "maal": 1,
       "assists": 1,
       "minutter": 159
     },
     {
-      "rank": 36,
+      "rank": 38,
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 37,
+      "rank": 39,
       "spiller": "Felix Nmecha",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 38,
+      "rank": 40,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 39,
-      "spiller": "Hwang Inbeom",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 186
-    },
-    {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Alex Freeman",
       "maal": 1,
       "assists": 1,
       "minutter": 209
     },
     {
-      "rank": 44,
+      "rank": 45,
+      "spiller": "Hwang Inbeom",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 255
+    },
+    {
+      "rank": 46,
       "spiller": "Achraf Hakimi",
       "maal": 1,
       "assists": 1,
       "minutter": 308
     },
     {
-      "rank": 45,
+      "rank": 47,
       "spiller": "Mattias Svanberg",
       "maal": 1,
       "assists": 0,
       "minutter": 13
     },
     {
-      "rank": 46,
+      "rank": 48,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 47,
+      "rank": 49,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 48,
+      "rank": 50,
       "spiller": "Gessime Yassine",
       "maal": 1,
       "assists": 0,
       "minutter": 28
-    },
-    {
-      "rank": 49,
-      "spiller": "Jaminton Campaz",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 28
-    },
-    {
-      "rank": 50,
-      "spiller": "Rafael Leao",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 36
     }
   ],
   "stilling": [
@@ -2350,10 +2350,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -2362,11 +2362,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3405,10 +3405,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3417,11 +3417,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4460,10 +4460,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4472,11 +4472,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5515,10 +5515,10 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5527,11 +5527,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6570,10 +6570,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6582,11 +6582,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7625,10 +7625,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7637,11 +7637,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8680,10 +8680,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8692,11 +8692,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9735,10 +9735,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9747,11 +9747,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10790,10 +10790,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10802,11 +10802,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11845,10 +11845,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11857,11 +11857,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12900,10 +12900,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12912,11 +12912,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13955,10 +13955,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13967,11 +13967,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15010,10 +15010,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15022,11 +15022,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16065,10 +16065,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16077,11 +16077,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17120,10 +17120,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17132,11 +17132,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18175,10 +18175,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18187,11 +18187,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19230,10 +19230,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19242,11 +19242,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20285,10 +20285,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20297,11 +20297,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21340,10 +21340,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21352,11 +21352,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22395,10 +22395,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22407,11 +22407,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23450,10 +23450,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23462,11 +23462,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24505,10 +24505,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24517,11 +24517,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25560,10 +25560,10 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25572,11 +25572,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26615,10 +26615,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26627,11 +26627,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27670,10 +27670,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27682,11 +27682,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28725,10 +28725,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28737,11 +28737,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29780,10 +29780,10 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29792,11 +29792,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30835,10 +30835,10 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 3,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30847,11 +30847,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31890,10 +31890,10 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31902,11 +31902,11 @@ const VM_DATA = {
           "bortelag": "South Korea",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {

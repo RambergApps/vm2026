@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T02:01:05Z",
+  "tidspunkt": "2026-06-25T02:30:55Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -63,10 +63,10 @@
       "fd_bortelag": "Mexico",
       "hjemmelag_normalisert": "Czech Republic",
       "bortelag_normalisert": "Mexico",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
-      "borte": 0,
+      "borte": 2,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Czech_Republic_Mexico_2026_06_25"
@@ -77,9 +77,9 @@
       "fd_bortelag": "South Korea",
       "hjemmelag_normalisert": "South Africa",
       "bortelag_normalisert": "South Korea",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T01:00:00Z",
