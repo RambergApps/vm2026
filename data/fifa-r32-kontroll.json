@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-25T07:01:06Z",
+  "generert": "2026-06-25T07:15:18Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -13,7 +13,7 @@
     "fifa_jina": null,
     "football_data": "https://api.football-data.org/v4/competitions/WC/matches"
   },
-  "kamp_id_regel": "rens(hjemmelag)_rens(bortelag)_rens(football-data utcDate[:10])",
+  "kamp_id_regel": "rens(komplett lagpar fra FD, ellers FIFA)_rens(football-data utcDate[:10])",
   "oppsummering": {
     "forventet_antall_r32": 16,
     "fifa_api_r32_funnet": 16,
@@ -21,8 +21,8 @@
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
-    "matched": 0,
-    "pending": 16,
+    "matched": 1,
+    "pending": 15,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
     "motstridende_fifa_api_duplikater": [],
@@ -56,10 +56,15 @@
       "fd_dato": "2026-06-28",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "South_Africa_Canada_2026_06_28",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "South Africa",
+      "kamp_bortelag": "Canada",
+      "kamp_dato": "2026-06-28",
+      "kamp_utcDate": "2026-06-28T19:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -69,7 +74,8 @@
           "borte": "2B",
           "dato": "2026-06-28"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 74,
@@ -95,7 +101,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -131,7 +137,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -167,7 +173,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -203,7 +209,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -239,7 +245,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -275,7 +281,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -311,7 +317,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -347,7 +353,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -383,7 +389,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -419,7 +425,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -455,7 +461,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -491,7 +497,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -527,7 +533,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -563,7 +569,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -599,7 +605,7 @@
       "kamp_id": null,
       "koblet_pa": "eksakt_utc_avspark",
       "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; minst én lagplass er fortsatt en placeholder.",
+      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",

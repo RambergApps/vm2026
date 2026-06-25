@@ -1,19 +1,22 @@
 {
   "r32": {
-    "aapen": false,
-    "frist": null,
+    "aapen": true,
+    "frist": "2026-06-28T19:00:00Z",
     "kamper": [
       {
-        "id": "2A_2B_2026_06_28",
-        "hjemme": "2A",
-        "borte": "2B",
+        "id": "South_Africa_Canada_2026_06_28",
+        "hjemme": "South Africa",
+        "borte": "Canada",
         "dato": "2026-06-28",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 73,
         "slot_hjemme": "2A",
         "slot_borte": "2B",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-06-28T19:00:00Z",
+        "fd_match_id": 537417,
+        "fifa_event_id": "400021518",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "1E_3A_B_C_D_F_2026_06_29",
@@ -196,8 +199,8 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 0,
-    "neste_frist": null
+    "antall_tippebare": 1,
+    "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {
     "aapen": false,
