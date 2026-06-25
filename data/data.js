@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-25T21:30:53Z
+// Sist oppdatert: 2026-06-25T21:46:10Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-25T21:30:53Z",
+  "sist_oppdatert": "2026-06-25T21:46:10Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1098,7 +1098,7 @@ const VM_DATA = {
       "canonical_kamp_id": "Ecuador_Germany_2026_06_25",
       "hjemmelag": "Ecuador",
       "bortelag": "Germany",
-      "hjemme": 1,
+      "hjemme": 2,
       "borte": 1,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -1953,7 +1953,7 @@ const VM_DATA = {
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
-      "minutter": 69
+      "minutter": 77
     },
     {
       "rank": 6,
@@ -2041,185 +2041,185 @@ const VM_DATA = {
     },
     {
       "rank": 18,
+      "spiller": "Nicolas Pepe",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 164
+    },
+    {
+      "rank": 19,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 176
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 183
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Ismaila Sarr",
       "maal": 2,
       "assists": 0,
       "minutter": 185
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 187
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Elijah Just",
       "maal": 2,
       "assists": 0,
       "minutter": 190
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 201
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Harry Kane",
       "maal": 2,
       "assists": 0,
       "minutter": 204
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 206
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
-      "minutter": 219
+      "minutter": 255
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 194
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 145
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 168
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Soufiane Rahimi",
       "maal": 1,
       "assists": 1,
       "minutter": 53
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 57
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Luis Romo",
       "maal": 1,
       "assists": 1,
       "minutter": 140
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Mostafa Zico",
       "maal": 1,
       "assists": 1,
       "minutter": 159
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 39,
+      "rank": 40,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
-    },
-    {
-      "rank": 43,
-      "spiller": "Felix Nmecha",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 208
     },
     {
       "rank": 44,
@@ -2230,45 +2230,45 @@ const VM_DATA = {
     },
     {
       "rank": 45,
+      "spiller": "Felix Nmecha",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 249
+    },
+    {
+      "rank": 46,
       "spiller": "Hwang Inbeom",
       "maal": 1,
       "assists": 1,
       "minutter": 286
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Achraf Hakimi",
       "maal": 1,
       "assists": 1,
       "minutter": 308
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Mattias Svanberg",
       "maal": 1,
       "assists": 0,
       "minutter": 13
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
-    },
-    {
-      "rank": 50,
-      "spiller": "Gessime Yassine",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 28
     }
   ],
   "startpoengstatus": {
@@ -2281,7 +2281,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-25T21:30:53Z",
+    "sist_beregnet": "2026-06-25T21:46:10Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
@@ -2755,7 +2755,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -3818,7 +3818,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -4881,7 +4881,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 4,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -5944,7 +5944,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -7007,7 +7007,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -8070,7 +8070,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -9133,7 +9133,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -10196,7 +10196,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -11259,7 +11259,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -12322,7 +12322,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -13385,7 +13385,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -14448,7 +14448,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -15511,7 +15511,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -16574,7 +16574,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -17637,7 +17637,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -18700,7 +18700,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -19763,7 +19763,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -20826,7 +20826,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -21889,7 +21889,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -22952,7 +22952,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -24015,7 +24015,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -25078,7 +25078,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -26141,7 +26141,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -27204,7 +27204,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -28267,7 +28267,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 5,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -29330,7 +29330,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 4,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -30393,7 +30393,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -31456,7 +31456,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -32519,7 +32519,7 @@ const VM_DATA = {
           "bortelag": "Germany",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
