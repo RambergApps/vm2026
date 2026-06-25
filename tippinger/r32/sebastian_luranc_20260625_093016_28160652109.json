@@ -1,0 +1,30 @@
+{
+  "bonus": {
+    "id": "antall_uavgjort",
+    "svar": 5
+  },
+  "helhetsbonus": {
+    "flest_maal_lag": "Canada",
+    "golden_boot": "Messi",
+    "totale_maal_utslag": "0_46"
+  },
+  "meta": {
+    "deltaker_id": "sebastian_luranc",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-06-25T09:30:06.885Z",
+    "navn": "Sebastian Luranc",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-25T09:30:16Z"
+  },
+  "tippinger": [
+    {
+      "borte": 3,
+      "bortelag": "Canada",
+      "hjemme": 1,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_Canada_2026_06_28",
+      "match_no": 73
+    }
+  ]
+}
