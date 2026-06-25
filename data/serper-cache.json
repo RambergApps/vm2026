@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-25T00:01:42Z",
-    "antall_sok": 48,
+    "sist_sokt": "2026-06-25T00:20:35Z",
+    "antall_sok": 49,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3367,7 +3367,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-25T00:01:22Z",
+      "hentet": "2026-06-25T00:20:17Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -3581,6 +3581,170 @@
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/bosnia-and-herzegovina-qatar-highlights-match-report",
       "direct_fifa_probe": true,
       "_forsok_url": 4
+    }
+  },
+  "Morocco_Haiti_2026_06_24|4-2": {
+    "kamp_id": "Morocco_Haiti_2026_06_24",
+    "resultat": "4-2",
+    "sist_sokt": "2026-06-25T00:20:42Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/morocco-haiti-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 4,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-06-25T00:20:42Z",
+      "goal_events": [
+        {
+          "spiller": "Bono",
+          "lag": "Haiti",
+          "minutt": "10",
+          "type": "own_goal"
+        },
+        {
+          "spiller": "Hakimi",
+          "lag": "Morocco",
+          "minutt": "39",
+          "type": "goal"
+        },
+        {
+          "spiller": "Isidor",
+          "lag": "Haiti",
+          "minutt": "43",
+          "type": "goal"
+        },
+        {
+          "spiller": "Saibari",
+          "lag": "Morocco",
+          "minutt": "45+1",
+          "type": "goal"
+        },
+        {
+          "spiller": "Rahimi",
+          "lag": "Morocco",
+          "minutt": "78",
+          "type": "goal"
+        },
+        {
+          "spiller": "Yassine",
+          "lag": "Morocco",
+          "minutt": "89",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Bono",
+        "Hakimi",
+        "Isidor",
+        "Saibari",
+        "Rahimi",
+        "Yassine"
+      ],
+      "lead_scorer": "Bono",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/morocco-haiti-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/morocco-haiti-match-report-highlights?searchOverlay=1)",
+        "Les Grenadiers scored two historic goals before waving goodbye to the tournament, but Morocco secured the victory to continue their World Cup journey.",
+        "Moroccocame from behind to defeat a dogged Haititeam in their final match of group play at FIFA World Cup 2026™. The Atlas Lions suffered a huge scare with Les Grenadiers twice taking the lead but they finished with a flourish to secure the victory.",
+        "Haiti came out playing free of pressure which created an action packed first half which thrilled fans with four goals. They opened the scoring just ten minutes into the match when full back Jean-Kevin Duverne cut the ball back across the penalty area, and Lenny Joseph gave it an audacious back heel flick. The ball ricocheted in off Morocco keeper Yassine Bono, but that did not take away from celebrations of what was Haiti's first World Cup goal in 52 years."
+      ],
+      "key_stat": "Haiti scored two goals for the first time at the FIFA World Cup, the first of which made them the 45th nation to score a goal at the 2026 showpiece.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": true,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": true,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/morocco-haiti-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Scotland_Brazil_2026_06_24|0-3": {
+    "kamp_id": "Scotland_Brazil_2026_06_24",
+    "resultat": "0-3",
+    "sist_sokt": "2026-06-25T00:21:31Z",
+    "antall_sok": 1,
+    "beste_score": 6,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 3,
+      "score": 10,
+      "hentet": "2026-06-25T00:20:49Z",
+      "goal_events": [],
+      "scorere": [],
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights?searchOverlay=1)"
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 6,
+      "mangler": [
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   }
 }
