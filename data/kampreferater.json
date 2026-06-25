@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-25T22:01:04Z",
+  "sist_oppdatert": "2026-06-25T22:09:45Z",
   "antall_kamper": 56,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -11035,15 +11035,21 @@
             "poeng": 2
           },
           {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
             "navn": "Alexander",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 2
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Olympus fc",
             "tippa_h": 3,
-            "tippa_b": 1,
+            "tippa_b": 0,
             "poeng": 2
           },
           {
@@ -11061,12 +11067,6 @@
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 4,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 2
           },
@@ -11101,13 +11101,31 @@
             "poeng": 2
           },
           {
+            "navn": "Sondre Garstad",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
             "navn": "Bror Ramberg",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 2
           },
           {
-            "navn": "Sondre Garstad",
+            "navn": "Diyan K.",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Sebastian Luranc",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 2
@@ -11119,14 +11137,8 @@
             "poeng": 2
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 3,
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 2
           },
@@ -11134,18 +11146,6 @@
             "navn": "Geir Magne Evensen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 1,
             "poeng": 2
           },
           {
@@ -11207,7 +11207,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T22:01:03Z"
+      "oppdatert": "2026-06-25T22:08:43Z"
     },
     "Scotland_Brazil_2026_06_24": {
       "kamp_id": "Scotland_Brazil_2026_06_24",
@@ -11267,6 +11267,12 @@
             "poeng": 2
           },
           {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
             "navn": "Anders Rikheim",
             "tippa_h": 1,
             "tippa_b": 3,
@@ -11274,12 +11280,6 @@
           },
           {
             "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 2
@@ -11315,25 +11315,13 @@
             "poeng": 2
           },
           {
-            "navn": "Atle Johansen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 2
           },
           {
-            "navn": "Sebastian Luranc",
+            "navn": "Atle Johansen",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 2
@@ -11351,14 +11339,20 @@
             "poeng": 2
           },
           {
-            "navn": "Thomas Lindland",
+            "navn": "Sjur Revheim",
             "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 2
           },
           {
-            "navn": "Anders Sundero",
+            "navn": "Sebastian Luranc",
             "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 2
           },
@@ -11372,6 +11366,12 @@
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 0,
             "tippa_b": 5,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 2,
             "poeng": 2
           }
         ],
@@ -11427,7 +11427,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T22:01:04Z"
+      "oppdatert": "2026-06-25T22:08:44Z"
     },
     "Czech_Republic_Mexico_2026_06_24": {
       "kamp_id": "Czech_Republic_Mexico_2026_06_24",
@@ -11481,6 +11481,12 @@
             "poeng": 2
           },
           {
+            "navn": "Olympus fc",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
             "navn": "Anders Rikheim",
             "tippa_h": 1,
             "tippa_b": 2,
@@ -11490,12 +11496,6 @@
             "navn": "Arne Kristian Johansen",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 0,
-            "tippa_b": 1,
             "poeng": 2
           },
           {
@@ -11517,27 +11517,27 @@
             "poeng": 2
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
             "navn": "Jorgen Lindland",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 2
           },
           {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
             "navn": "Thomas Lindland",
             "tippa_h": 1,
             "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 3,
             "poeng": 2
           },
           {
@@ -11597,6 +11597,12 @@
             "poeng": 0
           },
           {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Sjur Revheim",
             "tippa_h": 1,
             "tippa_b": 0,
@@ -11609,20 +11615,14 @@
             "poeng": 0
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
+            "navn": "Andreas Handelsby",
+            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -11647,7 +11647,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T03:31:38Z"
+      "oppdatert": "2026-06-25T22:08:44Z"
     },
     "South_Africa_South_Korea_2026_06_24": {
       "kamp_id": "South_Africa_South_Korea_2026_06_24",
@@ -11733,15 +11733,21 @@
             "poeng": 0
           },
           {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
             "navn": "Alexander",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 0,
-            "tippa_b": 2,
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -11754,12 +11760,6 @@
             "navn": "Kjetil bjerke",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -11793,7 +11793,25 @@
             "poeng": 0
           },
           {
+            "navn": "Sondre Garstad",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Bror Ramberg",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jorgen Lindland",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -11805,14 +11823,8 @@
             "poeng": 0
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -11823,27 +11835,15 @@
             "poeng": 0
           },
           {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 2,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -11867,7 +11867,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-25T03:31:58Z"
+      "oppdatert": "2026-06-25T22:08:44Z"
     },
     "Curaçao_Ivory_Coast_2026_06_25": {
       "kamp_id": "Curaçao_Ivory_Coast_2026_06_25",
@@ -11878,89 +11878,150 @@
       "bortelag": "Ivory Coast",
       "hjemme_score": 0,
       "borte_score": 2,
-      "gruppe": "",
+      "gruppe": "E",
       "runde": "gruppe",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Ivory Coast lead Curaçao 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "Ivory Coast beat Curaçao 2-0.\nGoals: Pepe (7, 64).\n\nNicolas Pepe scored a dynamic double as Côte d'Ivoire secured their place in the knockout stages for the first time with a comfortable victory over Curaçao, whose FIFA World Cup™ debut ended on a disappointing note.\nAn onrushing Pepe easily tapped home from close range, giving Côte d'Ivoire the lead and their fastest World Cup goal in the process.\nWhat few chances Curaçao had were created by Tahith Chong and captain Leandro Bacuna.\nPepe doubled the Elephants lead in the second half, slotting home with his left foot after a simple give-and-go with Nottingham Forest midfielder Ibrahim Sangare left him alone in the box against Eloy Room.\nKey stat: Nicolas Pepe's seventh-minute goal is the fastest scored by Côte d'Ivoire in their World Cup history.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 11,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Curaçao_Ivory_Coast_2026_06_25|0-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 11,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/curacao-cote-divoire-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
+        "eksakt": [
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 0,
-            "tippa_b": 4,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 0
+            "poeng": 6
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 6
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          },
+          {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 0,
+            "tippa_b": 4,
+            "poeng": 2
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 1,
             "tippa_b": 4,
-            "poeng": 0
+            "poeng": 2
           },
           {
             "navn": "Ken Arne Hansen",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 2
           },
           {
             "navn": "Magnus Børrud",
             "tippa_h": 1,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 2
           },
           {
             "navn": "Alex Myrvokd",
             "tippa_h": 0,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 2
           },
           {
             "navn": "Rickard Jacobsson",
             "tippa_h": 1,
             "tippa_b": 4,
+            "poeng": 2
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Alexander",
+            "tippa_h": 1,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -11982,9 +12043,9 @@
             "poeng": 0
           },
           {
-            "navn": "Sondre Garstad",
+            "navn": "Sebastian Luranc",
             "tippa_h": 1,
-            "tippa_b": 3,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -11994,50 +12055,8 @@
             "poeng": 0
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -12067,8 +12086,8 @@
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-25T21:30:53Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-06-25T22:08:50Z"
     },
     "Ecuador_Germany_2026_06_25": {
       "kamp_id": "Ecuador_Germany_2026_06_25",
@@ -12079,23 +12098,67 @@
       "bortelag": "Germany",
       "hjemme_score": 2,
       "borte_score": 1,
-      "gruppe": "",
+      "gruppe": "E",
       "runde": "gruppe",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Ecuador lead Germany 2-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "Ecuador beat Germany 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 6,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "Ecuador_Germany_2026_06_25|2-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 6,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-germany-highlights-match-report",
+        "mangler": [
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [],
-        "riktig": [],
+        "riktig": [
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 2
+          }
+        ],
         "bom": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 0,
+            "tippa_b": 4,
             "poeng": 0
           },
           {
@@ -12105,9 +12168,9 @@
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 0,
-            "tippa_b": 4,
+            "navn": "Olympus fc",
+            "tippa_h": 2,
+            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -12124,12 +12187,6 @@
           },
           {
             "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
             "tippa_h": 2,
             "tippa_b": 3,
             "poeng": 0
@@ -12165,6 +12222,12 @@
             "poeng": 0
           },
           {
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Atle Johansen",
             "tippa_h": 1,
             "tippa_b": 3,
@@ -12177,37 +12240,7 @@
             "poeng": 0
           },
           {
-            "navn": "Sjur Revheim",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Diyan K.",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
@@ -12219,14 +12252,26 @@
             "poeng": 0
           },
           {
+            "navn": "Sjur Revheim",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Thomas Lindland",
             "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 0,
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -12243,21 +12288,15 @@
             "poeng": 0
           },
           {
+            "navn": "Anders Sundero",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 1,
             "tippa_b": 4,
-            "poeng": 0
-          },
-          {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 1,
-            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -12268,8 +12307,8 @@
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-25T21:46:11Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-06-25T22:09:45Z"
     }
   }
 }
