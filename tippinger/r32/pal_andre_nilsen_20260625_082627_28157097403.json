@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "deltaker_id": "paal_andr_nilsen",
+    "innlevert": "2026-06-25T08:26:13.214Z",
+    "navn": "Pål André Nilsen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-25T08:26:27Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Canada",
+      "hjemme": 1,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_Canada_2026_06_28",
+      "match_no": 73
+    }
+  ]
+}
