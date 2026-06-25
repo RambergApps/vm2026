@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-25T00:31:02Z
+// Sist oppdatert: 2026-06-25T01:01:12Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-25T00:31:02Z",
+  "sist_oppdatert": "2026-06-25T01:01:12Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1931,7 +1931,7 @@ const VM_DATA = {
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
-      "minutter": 273
+      "minutter": 293
     },
     {
       "rank": 3,
@@ -2138,136 +2138,136 @@ const VM_DATA = {
     },
     {
       "rank": 32,
+      "spiller": "Soufiane Rahimi",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 53
+    },
+    {
+      "rank": 33,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 57
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Mostafa Zico",
       "maal": 1,
       "assists": 1,
       "minutter": 159
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Felix Nmecha",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Hwang Inbeom",
       "maal": 1,
       "assists": 1,
       "minutter": 186
     },
     {
-      "rank": 39,
+      "rank": 40,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 1,
       "minutter": 200
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Alex Freeman",
       "maal": 1,
       "assists": 1,
       "minutter": 209
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Achraf Hakimi",
       "maal": 1,
       "assists": 1,
-      "minutter": 289
+      "minutter": 308
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Mattias Svanberg",
       "maal": 1,
       "assists": 0,
       "minutter": 13
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Giovanni Reyna",
       "maal": 1,
       "assists": 0,
       "minutter": 19
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Trezeguet",
       "maal": 1,
       "assists": 0,
       "minutter": 24
     },
     {
-      "rank": 47,
+      "rank": 48,
+      "spiller": "Gessime Yassine",
+      "maal": 1,
+      "assists": 0,
+      "minutter": 28
+    },
+    {
+      "rank": 49,
       "spiller": "Jaminton Campaz",
       "maal": 1,
       "assists": 0,
       "minutter": 28
     },
     {
-      "rank": 48,
-      "spiller": "Soufiane Rahimi",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 34
-    },
-    {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Rafael Leao",
       "maal": 1,
       "assists": 0,
       "minutter": 36
-    },
-    {
-      "rank": 50,
-      "spiller": "Marcus Rashford",
-      "maal": 1,
-      "assists": 0,
-      "minutter": 37
     }
   ],
   "stilling": [
