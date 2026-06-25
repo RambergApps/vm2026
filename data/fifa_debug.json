@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T21:46:09Z",
+  "tidspunkt": "2026-06-25T22:01:02Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -343,14 +343,14 @@
       "fifa_event_id": "400021466",
       "hjemmelag": "Ecuador",
       "bortelag": "Germany",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 2,
       "borte": 1,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T20:00:00Z",
-      "fifa_match_time": "85'"
+      "fifa_match_time": "98'"
     },
     "400021467": {
       "fifa_event_id": "400021467",
@@ -369,14 +369,14 @@
       "fifa_event_id": "400021468",
       "hjemmelag": "Curaçao",
       "bortelag": "Ivory Coast",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 2,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T20:00:00Z",
-      "fifa_match_time": "84'"
+      "fifa_match_time": "97'"
     },
     "400021469": {
       "fifa_event_id": "400021469",
@@ -415,7 +415,7 @@
       "borte": null,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T23:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021472": {
       "fifa_event_id": "400021472",
@@ -441,7 +441,7 @@
       "borte": null,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T23:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021474": {
       "fifa_event_id": "400021474",
