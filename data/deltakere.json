@@ -1,118 +1,147 @@
 [
   {
     "id": "alex_myrvokd",
-    "navn": "Alex Myrvokd"
+    "navn": "Alex Myrvokd",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "alexander",
-    "navn": "Alexander"
+    "navn": "Alexander",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "anders_rikheim",
-    "navn": "Anders Rikheim"
+    "navn": "Anders Rikheim",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "anders_sundero",
-    "navn": "Anders Sundero"
+    "navn": "Anders Sundero",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "andreas_handelsby",
-    "navn": "Andreas Handelsby"
+    "navn": "Andreas Handelsby",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "arne_kristian_johansen",
-    "navn": "Arne Kristian Johansen"
+    "navn": "Arne Kristian Johansen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "atle_johansen",
-    "navn": "Atle Johansen"
+    "navn": "Atle Johansen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "bjoernar_tallaksrud",
-    "navn": "Bjørnar Tallaksrud"
+    "navn": "Bjørnar Tallaksrud",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "bror_ramberg",
-    "navn": "Bror Ramberg"
+    "navn": "Bror Ramberg",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "chris_hortman",
-    "navn": "Chris Hortman"
+    "navn": "Chris Hortman",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "diyan_k",
-    "navn": "Diyan K."
+    "navn": "Diyan K.",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "geir_magne_evensen",
-    "navn": "Geir Magne Evensen"
+    "navn": "Geir Magne Evensen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "jakob_roedahl_thingnes",
-    "navn": "Jakob Rødahl Thingnes"
+    "navn": "Jakob Rødahl Thingnes",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "jorgen_lindland",
-    "navn": "Jorgen Lindland"
+    "navn": "Jorgen Lindland",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "ken_arne_hansen",
-    "navn": "Ken Arne Hansen"
+    "navn": "Ken Arne Hansen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "kjetil_bjerke",
-    "navn": "Kjetil bjerke"
+    "navn": "Kjetil bjerke",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "magnus_boerrud",
-    "navn": "Magnus Børrud"
+    "navn": "Magnus Børrud",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "marita_hauge_gjerde",
-    "navn": "Marita Hauge Gjerde"
+    "navn": "Marita Hauge Gjerde",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "olympus_fc",
-    "navn": "Olympus fc"
+    "navn": "Olympus fc",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "paal_andr_nilsen",
-    "navn": "Pål André Nilsen"
+    "navn": "Pål André Nilsen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "rickard_jacobsson",
-    "navn": "Rickard Jacobsson"
+    "navn": "Rickard Jacobsson",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "sebastian_luranc",
-    "navn": "Sebastian Luranc"
+    "navn": "Sebastian Luranc",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "selina_marie_kortvedt",
-    "navn": "Selina Marie Kortvedt"
+    "navn": "Selina Marie Kortvedt",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "sergio_gomes",
-    "navn": "sergio gomes"
+    "navn": "sergio gomes",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "sjur_revheim",
-    "navn": "Sjur Revheim"
+    "navn": "Sjur Revheim",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "sondre_garstad",
-    "navn": "Sondre Garstad"
+    "navn": "Sondre Garstad",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "thomas_lindland",
-    "navn": "Thomas Lindland"
+    "navn": "Thomas Lindland",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "ulf_morten_johansen",
-    "navn": "Ulf-Morten Johansen"
+    "navn": "Ulf-Morten Johansen",
+    "deltaker_type": "ordinaer"
   },
   {
     "id": "vegard_hammervold_midtboe",
-    "navn": "Vegard Hammervold Midtbø"
+    "navn": "Vegard Hammervold Midtbø",
+    "deltaker_type": "ordinaer"
   }
 ]
