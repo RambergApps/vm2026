@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T22:30:50Z",
+  "tidspunkt": "2026-06-25T23:01:03Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -408,14 +408,14 @@
       "fifa_event_id": "400021471",
       "hjemmelag": "Japan",
       "bortelag": "Sweden",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T23:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "1'"
     },
     "400021472": {
       "fifa_event_id": "400021472",
@@ -434,14 +434,14 @@
       "fifa_event_id": "400021473",
       "hjemmelag": "Tunisia",
       "bortelag": "Netherlands",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-06-25",
       "fifa_utcDate": "2026-06-25T23:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "1'"
     },
     "400021474": {
       "fifa_event_id": "400021474",
