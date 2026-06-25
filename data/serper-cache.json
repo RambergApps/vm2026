@@ -3349,8 +3349,8 @@
   "Colombia_DR_Congo_2026_06_23|1-0": {
     "kamp_id": "Colombia_DR_Congo_2026_06_23",
     "resultat": "1-0",
-    "sist_sokt": "2026-06-25T03:01:39Z",
-    "antall_sok": 55,
+    "sist_sokt": "2026-06-25T03:31:30Z",
+    "antall_sok": 56,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -3358,7 +3358,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -3367,15 +3367,15 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-06-25T03:01:21Z",
+      "hentet": "2026-06-25T03:31:11Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -3401,9 +3401,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-dr-congo-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   },
   "Switzerland_Canada_2026_06_24|2-1": {
@@ -3771,6 +3771,162 @@
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/scotland-brazil-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
+    }
+  },
+  "Czech_Republic_Mexico_2026_06_24|0-3": {
+    "kamp_id": "Czech_Republic_Mexico_2026_06_24",
+    "resultat": "0-3",
+    "sist_sokt": "2026-06-25T03:31:38Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/czechia-mexico-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 3,
+      "score": 10,
+      "hentet": "2026-06-25T03:31:38Z",
+      "goal_events": [
+        {
+          "spiller": "Mateo Chavez",
+          "lag": "Mexico",
+          "minutt": "55",
+          "type": "goal"
+        },
+        {
+          "spiller": "Julian Quinones",
+          "lag": "Mexico",
+          "minutt": "61",
+          "type": "goal"
+        },
+        {
+          "spiller": "Alvaro Fidalgo",
+          "lag": "Mexico",
+          "minutt": "90+4",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Mateo Chavez",
+        "Julian Quinones",
+        "Alvaro Fidalgo"
+      ],
+      "lead_scorer": "Mateo Chavez",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Goals from Mateo Chavez, Julian Quinones and Alvaro Fidalgo plus an appearance for Guillermo Ochoa help co-hosts complete a perfect group stage, while Czechia's competition comes to an end.",
+        "The momentum continues to build for Mexico, who wrapped up their FIFA World Cup 2026™ group-stage commitments with a third straight victory by confidently swatting Czechia aside 3-0. The defeat in turn means Czechia have been eliminated.",
+        "The co-hosts came into this contest already certain of top spot in Group A and a place in the Round of 32, but Czechia needed a positive result in order to stand any chance of joining El Tri in the knockout stage.",
+        "Mexico gradually settled into their rhythm though, and ten minutes into the second half Mateo Chavez used his pace to break in behind before calmly slotting home and sparking bedlam inside Mexico City Stadium.",
+        "The celebrations were ramped up even further with 12 minutes remaining when Javier Aguirre sent on 40-year-old goalkeeper Guillermo Ochoa, involved in his sixth edition of the World Cup, before Alvaro Fidalgo added the gloss with another goal in injury time."
+      ],
+      "key_stat": "This is the first time Mexico have won all three of their group-stage matches at the World Cup, and also the first time they have kept clean sheets in all of their group-stage games since 1970.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": true,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/czechia-mexico-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "South_Africa_South_Korea_2026_06_24|1-0": {
+    "kamp_id": "South_Africa_South_Korea_2026_06_24",
+    "resultat": "1-0",
+    "sist_sokt": "2026-06-25T03:31:58Z",
+    "antall_sok": 1,
+    "beste_score": 9,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-korea-republic-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 0,
+      "score": 10,
+      "hentet": "2026-06-25T03:31:58Z",
+      "goal_events": [
+        {
+          "spiller": "Maseko",
+          "lag": "South Africa",
+          "minutt": "63",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Maseko"
+      ],
+      "lead_scorer": "Maseko",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Korea Republic had the majority of the ball in Monterrey, but a Thapelo Maseko stunner clinched victory and historic progress for Bafana Bafana.",
+        "It was a game that neither side could afford to lose - but it was South Africa who found a way to win.",
+        "Thanks to a second-half goal from winger Thapelo Maseko, Bafana Bafana overcame an energetic Korea Republic in an exciting, albeit low-scoring, clash to advance to their first-ever knockout match at the FIFA World Cup™.",
+        "Playing in front of a largely Korean crowd, South Africa started the better in Monterrey. Early on, Maseko had a promising fastbreak cut out at the last moment by Korea defender Lee Gihyuk. Later in the half Kim Seunggyu made two fine saves, first parrying Thalente Mbatha's shot from distance, before denying Evidence Makgopa from point-blank range.",
+        "Hong Myungbo threw caution to the wind after the break, making three changes, including the introduction of talisman Son Heungmin, in an attempt to shift the scoreline in Korea Republic's favour. However, as the Koreans pushed for an opener, it was a South African substitute who made the difference."
+      ],
+      "key_stat": "Thapelo Maseko has become the second youngest goalscorer for South Africa in the FIFA World Cup at 22 years and 225 days.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 9,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-korea-republic-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 3
     }
   }
 }

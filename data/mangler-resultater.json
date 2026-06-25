@@ -1,25 +1,4 @@
 {
-  "sist_sjekket": "2026-06-25T03:01:07Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Czech_Republic_Mexico_2026_06_24",
-      "hjemmelag": "Czech Republic",
-      "bortelag": "Mexico",
-      "dato": "2026-06-24",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "South_Africa_South_Korea_2026_06_24",
-      "hjemmelag": "South Africa",
-      "bortelag": "South Korea",
-      "dato": "2026-06-24",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-25T03:30:59Z",
+  "kamper": []
 }

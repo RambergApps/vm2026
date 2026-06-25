@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T03:01:04Z",
+  "tidspunkt": "2026-06-25T03:30:59Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -63,8 +63,8 @@
       "fd_bortelag": "Mexico",
       "hjemmelag_normalisert": "Czech Republic",
       "bortelag_normalisert": "Mexico",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 0,
       "borte": 3,
       "fd_dato": "2026-06-25",
@@ -77,8 +77,8 @@
       "fd_bortelag": "South Korea",
       "hjemmelag_normalisert": "South Africa",
       "bortelag_normalisert": "South Korea",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 1,
       "borte": 0,
       "fd_dato": "2026-06-25",
