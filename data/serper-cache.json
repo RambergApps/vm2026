@@ -4009,10 +4009,10 @@
   "Ecuador_Germany_2026_06_25|2-1": {
     "kamp_id": "Ecuador_Germany_2026_06_25",
     "resultat": "2-1",
-    "sist_sokt": "2026-06-25T23:02:07Z",
-    "antall_sok": 3,
-    "beste_score": 6,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-06-25T23:31:10Z",
+    "antall_sok": 4,
+    "beste_score": 12,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -4027,23 +4027,46 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-25T23:01:22Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-06-25T23:31:10Z",
+      "goal_events": [
+        {
+          "spiller": "Sane",
+          "lag": "Germany",
+          "minutt": "2",
+          "type": "goal"
+        },
+        {
+          "spiller": "Angulo",
+          "lag": "Ecuador",
+          "minutt": "9",
+          "type": "goal"
+        },
+        {
+          "spiller": "Plata",
+          "lag": "Ecuador",
+          "minutt": "77",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Sane",
+        "Angulo",
+        "Plata"
+      ],
+      "lead_scorer": "Sane",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "Highlights South Africa v Korea Republic | Group A | FIFA World Cup 2026™ | Highlights South Africa v Korea Republic | Group A | FIFA World Cup 2026™ | Highlights",
-        "Highlights Czechia v Mexico | Group A | FIFA World Cup 2026™ | Highlights Czechia v Mexico | Group A | FIFA World Cup 2026™ | Highlights",
-        "Highlights Morocco v Haiti | Group C | FIFA World Cup 2026™ | Highlights Morocco v Haiti | Group C | FIFA World Cup 2026™ | Highlights",
-        "Highlights Scotland v Brazil | Group C | FIFA World Cup 2026™ | Highlights Scotland v Brazil | Group C | FIFA World Cup 2026™ | Highlights",
-        "Highlights Bosnia and Herzegovina v Qatar | Group B | FIFA World Cup 2026™ | Highlights Bosnia and Herzegovina v Qatar | Group B | FIFA World Cup 2026™ | Highlights"
+        "Ecuador came from behind to beat Germany through Gonzalo Plata's late strike to put themselves into the knockouts.",
+        "Ecuador have secured their spot in the Round of 32 after they came from behind to beat Germany 2-1 in their final Group E game on Thursday.",
+        "With group winners Germany already qualified for the next stage after two wins, the big question for the large sections of the New York/New Jersey Stadium swathed in yellow was whether Ecuador could join them after firing blanks - and taking a single point - against Côte d’Ivoire and Curaçao.",
+        "After nine minutes Sebastian Beccacece’s players had the goal they had been craving. The only problem was they were already trailing at that point, having fallen behind to Leroy Sane’s first goal at a major tournament for Germany. From Florian Wirtz’s lay-off, Sane rolled the ball low past the right hand of the diving Hernan Galindez from inside the box. It was Germany’s earliest World Cup goal since 1934.",
+        "To Ecuador’s credit, they took just seven minutes to respond as they finally broke their duck at the FIFA World Cup 2026™. The source was not Enner Valencia, making a record ninth World Cup appearance for his country. Rather it was midfielder Nilson Angulo, brought in for his first start here in North America. Pablo Vite picked up a loose ball in Germany’s half and fed Angulo who, finding space to shoot just outside the D, fired through the legs of Aleksandar Pavlovic and beyond the dive of Manuel Neuer."
       ],
       "key_stat": "",
       "player_of_match": "",
-      "early_lead": false,
-      "came_from_behind": false,
+      "early_lead": true,
+      "came_from_behind": true,
       "knockout_secured": false,
       "group_top": false,
       "hit_bar": false,
@@ -4052,16 +4075,17 @@
       "brace_text": false,
       "first_goal_past_keeper": false,
       "all_goals_first_half": false,
-      "lead_goal_early": false,
+      "lead_goal_early": true,
       "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": false,
+      "deciding_last_goal": true,
       "fastest_stat": false,
-      "record_stat": false,
+      "record_stat": true,
       "eliminated_loser": false,
-      "referat_fakta_score": 6,
-      "mangler": [
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-germany-highlights-match-report",
       "direct_fifa_probe": true,
       "_forsok_url": 2

@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-25T23:01:12Z",
-  "sist_oppdatert_grupper": "2026-06-25T23:01:12Z",
-  "sist_oppdatert_utslag": "2026-06-25T23:01:12Z",
+  "sist_oppdatert": "2026-06-25T23:30:51Z",
+  "sist_oppdatert_grupper": "2026-06-25T23:30:51Z",
+  "sist_oppdatert_utslag": "2026-06-25T23:30:51Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -359,15 +359,15 @@
         "fifa_navn": "Netherlands",
         "kode": "NED",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/NED%201x",
-        "spilt": 2,
-        "seier": 1,
+        "spilt": 3,
+        "seier": 2,
         "uavgjort": 1,
         "tap": 0,
-        "maal_for": 7,
+        "maal_for": 9,
         "maal_mot": 3,
-        "maal_forskjell": 4,
+        "maal_forskjell": 6,
         "lagdisiplin": -3,
-        "poeng": 4
+        "poeng": 7
       },
       {
         "plass": 2,
@@ -375,15 +375,15 @@
         "fifa_navn": "Japan",
         "kode": "JPN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/JPN%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 1,
-        "uavgjort": 1,
+        "uavgjort": 2,
         "tap": 0,
         "maal_for": 6,
         "maal_mot": 2,
         "maal_forskjell": 4,
         "lagdisiplin": 0,
-        "poeng": 4
+        "poeng": 5
       },
       {
         "plass": 3,
@@ -391,15 +391,15 @@
         "fifa_navn": "Sweden",
         "kode": "SWE",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/SWE%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 1,
-        "uavgjort": 0,
+        "uavgjort": 1,
         "tap": 1,
         "maal_for": 6,
         "maal_mot": 6,
         "maal_forskjell": 0,
         "lagdisiplin": -3,
-        "poeng": 3
+        "poeng": 4
       },
       {
         "plass": 4,
@@ -407,13 +407,13 @@
         "fifa_navn": "Tunisia",
         "kode": "TUN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/TUN%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 0,
         "uavgjort": 0,
-        "tap": 2,
+        "tap": 3,
         "maal_for": 1,
-        "maal_mot": 9,
-        "maal_forskjell": -8,
+        "maal_mot": 11,
+        "maal_forskjell": -10,
         "lagdisiplin": -1,
         "poeng": 0
       }

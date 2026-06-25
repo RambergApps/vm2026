@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-25T23:01:03Z",
+  "tidspunkt": "2026-06-25T23:30:51Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -483,10 +483,10 @@
       "fd_bortelag": "Netherlands",
       "hjemmelag_normalisert": "Tunisia",
       "bortelag_normalisert": "Netherlands",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 2,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T23:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Tunisia_Netherlands_2026_06_25"
@@ -497,10 +497,10 @@
       "fd_bortelag": "Sweden",
       "hjemmelag_normalisert": "Japan",
       "bortelag_normalisert": "Sweden",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-06-25",
       "fd_utcDate": "2026-06-25T23:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Japan_Sweden_2026_06_25"
