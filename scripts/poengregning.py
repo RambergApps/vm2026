@@ -27,6 +27,8 @@ import unicodedata
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
+from sen_pamelding import apply_late_signup_points
+
 # ── KONFIG ────────────────────────────────────────────────────────────────────
 API_URL               = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
 FOOTBALL_DATA_API_URL = "https://api.football-data.org/v4/competitions/WC/matches"
@@ -1117,14 +1119,27 @@ def les_alle_tippinger():
                     print(f"  ADVARSEL: Ingen navn i {fil.name} — hopper over")
                     continue
 
+                requested_type = str(meta.get("deltaker_type", "") or "").strip().lower()
+                navn_slug = lag_deltaker_id(navn)
                 if runde == "gruppespill":
-                    did = lag_deltaker_id(navn)
+                    did = navn_slug
+                    participant_type = "ordinaer"
                 else:
                     did_fra_meta = str(meta.get("deltaker_id", "") or "").strip()
                     if did_fra_meta and did_fra_meta in deltakere:
                         did = did_fra_meta
+                        participant_type = deltakere[did].get("deltaker_type", "ordinaer")
+                    elif requested_type == "sen_pamelding":
+                        did = navn_slug
+                        participant_type = "sen_pamelding"
+                        if did_fra_meta and did_fra_meta != did:
+                            print(
+                                f"  ADVARSEL: deltaker_id '{did_fra_meta}' matcher ikke navnet i {fil.name} "
+                                f"— bruker '{did}'"
+                            )
                     else:
-                        did = lag_deltaker_id(navn)
+                        did = navn_slug
+                        participant_type = "ukjent"
                         if did_fra_meta and did_fra_meta not in deltakere:
                             print(f"  ADVARSEL: Ukjent deltaker_id '{did_fra_meta}' i {fil.name} — bruker navn-slug '{did}'")
 
@@ -1132,6 +1147,7 @@ def les_alle_tippinger():
                     deltakere[did] = {
                         "navn": navn,
                         "deltaker_id": did,
+                        "deltaker_type": participant_type,
                         "turneringsvinner": "",
                         "gruppespill": [],
                         "utslagsrunder": [],
@@ -1142,6 +1158,14 @@ def les_alle_tippinger():
                         "_nyeste_helhetsbonus": {},
                         "_gruppespill_sort": ("", ""),
                     }
+                elif runde == "gruppespill":
+                    # En faktisk gruppespillkupong gjør alltid deltakeren ordinær.
+                    deltakere[did]["deltaker_type"] = "ordinaer"
+                elif (
+                    deltakere[did].get("deltaker_type") in (None, "", "ukjent")
+                    and participant_type == "sen_pamelding"
+                ):
+                    deltakere[did]["deltaker_type"] = "sen_pamelding"
 
                 innlevert = str(meta.get("innlevert", "") or "")
                 sort_key = (innlevert, fil.name)
@@ -1224,7 +1248,14 @@ def skriv_deltakere_json(deltakere):
     ]
     """
     liste = sorted(
-        [{"id": d["deltaker_id"], "navn": d["navn"]} for d in deltakere.values()],
+        [
+            {
+                "id": d["deltaker_id"],
+                "navn": d["navn"],
+                "deltaker_type": d.get("deltaker_type", "ordinaer"),
+            }
+            for d in deltakere.values()
+        ],
         key=lambda x: x["navn"].lower()
     )
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -1635,7 +1666,11 @@ def regn_poeng_deltaker(
     return {
         "navn":                    navn,
         "deltaker_id":             deltaker.get("deltaker_id", ""),   # ← NY
+        "deltaker_type":           deltaker.get("deltaker_type", "ordinaer"),
+        "sen_pamelding":           deltaker.get("deltaker_type") == "sen_pamelding",
         "poeng_totalt":            poeng_totalt,
+        "poeng_start":             0,
+        "startpoeng_status":       "venter" if deltaker.get("deltaker_type") == "sen_pamelding" else "ikke_aktuelt",
         "poeng_gruppespill":       poeng_gruppespill,
         "poeng_utslagsrunder":     poeng_utslagsrunder,
         "poeng_bonus":            poeng_bonus,
@@ -1690,7 +1725,7 @@ def bygg_public_resultater(resultat_lookup):
     return resultater
 
 
-def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None, bonusstatus=None, spillerstatistikk=None):
+def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None, bonusstatus=None, spillerstatistikk=None, startpoengstatus=None):
     """Skriver ferdig data.js som leaderboard-siden leser."""
 
     # Sorter etter poeng totalt
@@ -1705,6 +1740,7 @@ def skriv_data_js(stilling, sist_oppdatert, resultat_lookup=None, bonusstatus=No
         "resultater": bygg_public_resultater(resultat_lookup or {}),
         "bonusstatus": bonusstatus or {"helhet": {}, "runder": {}},
         "spillerstatistikk": spillerstatistikk or [],
+        "startpoengstatus": startpoengstatus or {"status": "ikke_beregnet"},
         "stilling": stilling_sortert,
     }
 
@@ -2085,6 +2121,7 @@ def main():
             deltakere[did] = {
                 "navn":             navn,
                 "deltaker_id":      did,
+                "deltaker_type":    "ordinaer",
                 "turneringsvinner": d.get("turneringsvinner", ""),
                 "gruppespill":      d.get("gruppespill", []),
                 "utslagsrunder":    [],
@@ -2121,10 +2158,23 @@ def main():
               f"helhetsbonus: {resultat.get('poeng_helhetsbonus', 0)}p, "
               f"turneringsvinner: {resultat['poeng_turneringsvinner']}p)")
 
+    # Legg på gjennomsnittlig gruppespillscore for eksplisitt senpåmeldte.
+    # Før gruppespillet er ferdig beholdes poeng_start=0 og status='venter'.
+    stilling, startpoengstatus = apply_late_signup_points(stilling, deltakere, resultat_lookup)
+    print(
+        "  → Startpoengstatus: "
+        f"{startpoengstatus.get('status')} "
+        f"(startpoeng={startpoengstatus.get('startpoeng')}, "
+        f"senpåmeldte={startpoengstatus.get('antall_senpameldte', 0)})"
+    )
+
     # Skriv data.js
     print("\nSkriver data.js...")
     sist_oppdatert = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    skriv_data_js(stilling, sist_oppdatert, resultat_lookup, bonusstatus, spillerstatistikk)
+    skriv_data_js(
+        stilling, sist_oppdatert, resultat_lookup, bonusstatus,
+        spillerstatistikk, startpoengstatus
+    )
 
     print("\n" + "=" * 60)
     print("Ferdig!")
