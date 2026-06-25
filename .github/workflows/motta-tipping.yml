@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: motta-tipping
+  cancel-in-progress: false
+
 jobs:
   lagre-tipping:
     runs-on: ubuntu-latest
@@ -57,6 +61,70 @@ jobs:
               raise SystemExit("Mangler navn")
           if not isinstance(data, dict):
               raise SystemExit("Ugyldig dataformat")
+
+          def slug(value):
+              value = str(value or "").lower().strip()
+              value = value.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
+              value = value.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
+              value = re.sub(r"[^a-z0-9]+", "_", value)
+              return re.sub(r"_+", "_", value).strip("_") or "ukjent"
+
+          def name_key(value):
+              value = unicodedata.normalize("NFKD", str(value or "")).encode("ascii", "ignore").decode("ascii")
+              return re.sub(r"\s+", " ", value).strip().casefold()
+
+          participants_path = Path("data/deltakere.json")
+          participants = []
+          if participants_path.exists():
+              try:
+                  loaded = json.loads(participants_path.read_text(encoding="utf-8"))
+                  participants = loaded if isinstance(loaded, list) else []
+              except Exception:
+                  participants = []
+
+          by_participant_id = {
+              str(item.get("id") or "").strip(): item
+              for item in participants
+              if isinstance(item, dict) and str(item.get("id") or "").strip()
+          }
+          by_participant_name = {
+              name_key(item.get("navn")): item
+              for item in participants
+              if isinstance(item, dict) and name_key(item.get("navn"))
+          }
+
+          meta = data.setdefault("meta", {})
+          requested_id = str(meta.get("deltaker_id") or "").strip()
+          requested_type = str(meta.get("deltaker_type") or "").strip().lower()
+          generated_id = slug(navn)
+          existing_by_id = by_participant_id.get(requested_id) if requested_id else None
+          existing_by_name = by_participant_name.get(name_key(navn))
+
+          if requested_type == "sen_pamelding":
+              if requested_id and requested_id != generated_id:
+                  raise SystemExit("Deltaker-ID matcher ikke navnet")
+              canonical_id = generated_id
+              existing = by_participant_id.get(canonical_id)
+              if existing:
+                  existing_type = str(existing.get("deltaker_type") or "ordinaer")
+                  if name_key(existing.get("navn")) != name_key(navn):
+                      raise SystemExit("Deltaker-ID er allerede i bruk av et annet navn")
+                  if existing_type != "sen_pamelding":
+                      raise SystemExit("Navnet finnes allerede som ordinær deltaker. Velg navnet fra listen.")
+              if existing_by_name and str(existing_by_name.get("id")) != canonical_id:
+                  raise SystemExit("Navnet finnes allerede med en annen deltaker-ID")
+              canonical_type = "sen_pamelding"
+          else:
+              existing = existing_by_id or existing_by_name
+              if not existing:
+                  raise SystemExit("Ukjent deltaker. Velg navnet fra listen eller bruk 'Opprett ny deltaker'.")
+              if name_key(existing.get("navn")) != name_key(navn):
+                  raise SystemExit("Valgt deltaker-ID og navn samsvarer ikke")
+              canonical_id = str(existing.get("id"))
+              canonical_type = str(existing.get("deltaker_type") or "ordinaer")
+
+          meta["deltaker_id"] = canonical_id
+          meta["deltaker_type"] = canonical_type
 
           status = json.loads(Path("data/status.json").read_text(encoding="utf-8"))
           round_data = status.get(runde) or {}
@@ -181,9 +249,10 @@ jobs:
           data.setdefault("meta", {})["server_mottatt"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
           data["meta"]["navn"] = navn
           data["meta"]["runde"] = runde
+          data["meta"]["deltaker_id"] = canonical_id
+          data["meta"]["deltaker_type"] = canonical_type
 
-          safe = unicodedata.normalize("NFKD", navn).encode("ascii", "ignore").decode("ascii").lower()
-          safe = re.sub(r"[^a-z0-9]+", "_", safe).strip("_") or "ukjent"
+          safe = canonical_id
           timestamp = now.strftime("%Y%m%d_%H%M%S")
           run_id = os.environ.get("GITHUB_RUN_ID", "local")
           target_dir = Path("tippinger") / runde
