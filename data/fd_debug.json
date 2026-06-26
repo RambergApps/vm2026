@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T16:01:00Z",
+  "tidspunkt": "2026-06-26T16:30:55Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1008,6 +1008,62 @@
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Croatia_Ghana_2026_06_27"
+    },
+    "537417": {
+      "fd_match_id": 537417,
+      "fd_hjemmelag": "South Africa",
+      "fd_bortelag": "Canada",
+      "hjemmelag_normalisert": "South Africa",
+      "bortelag_normalisert": "Canada",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-06-28",
+      "fd_utcDate": "2026-06-28T19:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "South_Africa_Canada_2026_06_28"
+    },
+    "537418": {
+      "fd_match_id": 537418,
+      "fd_hjemmelag": "Netherlands",
+      "fd_bortelag": "Morocco",
+      "hjemmelag_normalisert": "Netherlands",
+      "bortelag_normalisert": "Morocco",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-06-30",
+      "fd_utcDate": "2026-06-30T01:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Netherlands_Morocco_2026_06_30"
+    },
+    "537421": {
+      "fd_match_id": 537421,
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Bosnia-Herzegovina",
+      "hjemmelag_normalisert": "USA",
+      "bortelag_normalisert": "Bosnia & Herzegovina",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-02",
+      "fd_utcDate": "2026-07-02T00:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "USA_Bosnia___Herzegovina_2026_07_02"
+    },
+    "537423": {
+      "fd_match_id": 537423,
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Japan",
+      "hjemmelag_normalisert": "Brazil",
+      "bortelag_normalisert": "Japan",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-06-29",
+      "fd_utcDate": "2026-06-29T17:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Brazil_Japan_2026_06_29"
     }
   }
 }
