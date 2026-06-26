@@ -4321,8 +4321,8 @@
   "Turkey_USA_2026_06_25|3-2": {
     "kamp_id": "Turkey_USA_2026_06_25",
     "resultat": "3-2",
-    "sist_sokt": "2026-06-26T21:02:07Z",
-    "antall_sok": 40,
+    "sist_sokt": "2026-06-26T21:31:49Z",
+    "antall_sok": 41,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4330,7 +4330,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -4339,15 +4339,15 @@
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-06-26T21:01:28Z",
+      "hentet": "2026-06-26T21:31:03Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -4372,9 +4372,166 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
+    }
+  },
+  "Norway_France_2026_06_26|1-4": {
+    "kamp_id": "Norway_France_2026_06_26",
+    "resultat": "1-4",
+    "sist_sokt": "2026-06-26T21:32:16Z",
+    "antall_sok": 1,
+    "beste_score": 4,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": false,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 4,
+      "score": 10,
+      "hentet": "2026-06-26T21:31:55Z",
+      "goal_events": [],
+      "scorere": [],
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights?searchOverlay=1)"
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 4,
+      "mangler": [
+        "resultat_i_fulltekst",
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Senegal_Iraq_2026_06_26|5-0": {
+    "kamp_id": "Senegal_Iraq_2026_06_26",
+    "resultat": "5-0",
+    "sist_sokt": "2026-06-26T21:32:21Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-iraq-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 5,
+      "kamp_borte_score": 0,
+      "score": 10,
+      "hentet": "2026-06-26T21:32:21Z",
+      "goal_events": [
+        {
+          "spiller": "Habib Diarra",
+          "lag": "Senegal",
+          "minutt": "4",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ismaila Sarr",
+          "lag": "Senegal",
+          "minutt": "56",
+          "type": "goal"
+        },
+        {
+          "spiller": "Pape Gueye",
+          "lag": "Senegal",
+          "minutt": "59",
+          "type": "goal"
+        },
+        {
+          "spiller": "Pape Gueye",
+          "lag": "Senegal",
+          "minutt": "71",
+          "type": "goal"
+        },
+        {
+          "spiller": "Iliman Ndiaye",
+          "lag": "Senegal",
+          "minutt": "82",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Habib Diarra",
+        "Ismaila Sarr",
+        "Pape Gueye",
+        "Iliman Ndiaye"
+      ],
+      "lead_scorer": "Habib Diarra",
+      "brace_scorer": "Pape Gueye",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "The Lions of Teranga scored their way into contention for the last 32 of the FIFA World Cup 2026 with a goals fest against Iraq in Toronto.",
+        "Senegal gave themselves hope of extending their stay at the FIFA World Cup™ with an emphatic 5-0 win over Iraq as the two nations met for the first time on football's biggest stage in the final Group I clash in Toronto.",
+        "Senegal took the lead within four minutes of kick-off after Abdoulaye Seck nodded the ball in the direction of the net from a corner kick, with Habid Diarra getting the final touch.",
+        "Iraq were reduced to ten men shortly after falling behind when Rebin Sulaka was deemed to have denied Sadio Mane a clear goalscoring opportunity.",
+        "Senegal did find the back of the net for a second time ten minutes into the restart, and it was a gift from their opponents. A mistake from Zidane Iqbal deep in his own half laid it on a plate for Lamine Camara, who squared it for Sarr to fire home his third goal of the tournament."
+      ],
+      "key_stat": "Senegal are featuring at the global finals for the third consecutive edition, while it’s just a second outing for an Iraq side that lost all three group-stage matches on their debut at Mexico 1986.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-iraq-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   }
 }
