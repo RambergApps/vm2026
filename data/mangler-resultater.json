@@ -1,4 +1,45 @@
 {
-  "sist_sjekket": "2026-06-25T23:55:24Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-26T00:01:04Z",
+  "kamper": [
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Japan_Sweden_2026_06_25",
+      "hjemmelag": "Japan",
+      "bortelag": "Sweden",
+      "dato": "2026-06-25",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Paraguay_Australia_2026_06_25",
+      "hjemmelag": "Paraguay",
+      "bortelag": "Australia",
+      "dato": "2026-06-25",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Tunisia_Netherlands_2026_06_25",
+      "hjemmelag": "Tunisia",
+      "bortelag": "Netherlands",
+      "dato": "2026-06-25",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Turkey_USA_2026_06_25",
+      "hjemmelag": "Turkey",
+      "bortelag": "USA",
+      "dato": "2026-06-25",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
