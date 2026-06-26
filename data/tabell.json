@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-26T04:01:04Z",
+  "sist_oppdatert": "2026-06-26T04:30:53Z",
   "sist_oppdatert_grupper": "2026-06-26T04:01:04Z",
-  "sist_oppdatert_utslag": "2026-06-26T04:01:04Z",
+  "sist_oppdatert_utslag": "2026-06-26T04:30:53Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,10 +14,12 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": true,
+    "grupper": false,
     "utslag": true
   },
-  "advarsler": [],
+  "advarsler": [
+    "Gruppetabell beholdt fra forrige gyldige fil: Ufullstendig FIFA-tabell. Mangler komplett gruppe: L"
+  ],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -1092,13 +1094,13 @@
       "runde": "r32",
       "utcDate": "2026-07-03T18:00:00Z",
       "dato": "2026-07-03",
-      "hjemme": "2D",
+      "hjemme": "Australia",
       "borte": "2G",
-      "hjemme_kode": "",
+      "hjemme_kode": "AUS",
       "borte_kode": "",
-      "hjemme_kjent": false,
+      "hjemme_kjent": true,
       "borte_kjent": false,
-      "hjemme_placeholder": "2D",
+      "hjemme_placeholder": "",
       "borte_placeholder": "2G",
       "status": "1",
       "hjemme_score": null,

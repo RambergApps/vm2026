@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T04:01:03Z",
+  "tidspunkt": "2026-06-26T04:30:53Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -252,14 +252,14 @@
       "fifa_event_id": "400021459",
       "hjemmelag": "Turkey",
       "bortelag": "USA",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
-      "hjemme": 2,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
+      "hjemme": 3,
       "borte": 2,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T02:00:00Z",
-      "fifa_match_time": "90'+8'"
+      "fifa_match_time": "99'"
     },
     "400021460": {
       "fifa_event_id": "400021460",
