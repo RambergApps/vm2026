@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T04:30:53Z
+// Sist oppdatert: 2026-06-26T04:35:59Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T04:30:53Z",
+  "sist_oppdatert": "2026-06-26T04:35:59Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2241,31 +2241,31 @@ const VM_DATA = {
     },
     {
       "rank": 39,
-      "spiller": "Sebastian Berhalter",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 146
-    },
-    {
-      "rank": 40,
       "spiller": "Ousmane Dembele",
       "maal": 1,
       "assists": 1,
       "minutter": 155
     },
     {
-      "rank": 41,
+      "rank": 40,
       "spiller": "Mostafa Zico",
       "maal": 1,
       "assists": 1,
       "minutter": 159
     },
     {
-      "rank": 42,
+      "rank": 41,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
+    },
+    {
+      "rank": 42,
+      "spiller": "Sebastian Berhalter",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 182
     },
     {
       "rank": 43,
@@ -2276,52 +2276,52 @@ const VM_DATA = {
     },
     {
       "rank": 44,
+      "spiller": "Baris Alper Yilmaz",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 199
+    },
+    {
+      "rank": 45,
       "spiller": "Ramin Rezaeian",
       "maal": 1,
       "assists": 1,
       "minutter": 204
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Alex Freeman",
       "maal": 1,
       "assists": 1,
-      "minutter": 209
+      "minutter": 231
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Felix Nmecha",
       "maal": 1,
       "assists": 1,
       "minutter": 249
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
       "minutter": 260
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Hwang Inbeom",
       "maal": 1,
       "assists": 1,
       "minutter": 286
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Virgil Van Dijk",
       "maal": 1,
       "assists": 1,
       "minutter": 297
-    },
-    {
-      "rank": 50,
-      "spiller": "Achraf Hakimi",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 308
     }
   ],
   "startpoengstatus": {
@@ -2334,7 +2334,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T04:30:53Z",
+    "sist_beregnet": "2026-06-26T04:35:59Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
