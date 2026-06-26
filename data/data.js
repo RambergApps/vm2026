@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T18:35:17Z
+// Sist oppdatert: 2026-06-26T18:38:51Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T18:35:17Z",
+  "sist_oppdatert": "2026-06-26T18:38:51Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2314,7 +2314,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T18:35:17Z",
+    "sist_beregnet": "2026-06-26T18:38:51Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
