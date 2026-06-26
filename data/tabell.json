@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-26T20:04:24Z",
-  "sist_oppdatert_grupper": "2026-06-26T20:00:59Z",
-  "sist_oppdatert_utslag": "2026-06-26T20:04:24Z",
+  "sist_oppdatert": "2026-06-26T20:30:56Z",
+  "sist_oppdatert_grupper": "2026-06-26T20:30:56Z",
+  "sist_oppdatert_utslag": "2026-06-26T20:30:56Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,12 +14,10 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": false,
+    "grupper": true,
     "utslag": true
   },
-  "advarsler": [
-    "Gruppetabell beholdt fra forrige gyldige fil: FIFA/Jina-svaret mangler gruppetabellene"
-  ],
+  "advarsler": [],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -559,15 +557,15 @@
         "fifa_navn": "France",
         "kode": "FRA",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/FRA%201x",
-        "spilt": 2,
-        "seier": 2,
+        "spilt": 3,
+        "seier": 3,
         "uavgjort": 0,
         "tap": 0,
-        "maal_for": 6,
-        "maal_mot": 1,
-        "maal_forskjell": 5,
+        "maal_for": 9,
+        "maal_mot": 2,
+        "maal_forskjell": 7,
         "lagdisiplin": 0,
-        "poeng": 6
+        "poeng": 9
       },
       {
         "plass": 2,
@@ -575,14 +573,14 @@
         "fifa_navn": "Norway",
         "kode": "NOR",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/NOR%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 2,
         "uavgjort": 0,
-        "tap": 0,
-        "maal_for": 7,
-        "maal_mot": 3,
-        "maal_forskjell": 4,
-        "lagdisiplin": 0,
+        "tap": 1,
+        "maal_for": 8,
+        "maal_mot": 6,
+        "maal_forskjell": 2,
+        "lagdisiplin": -1,
         "poeng": 6
       },
       {
@@ -591,15 +589,15 @@
         "fifa_navn": "Senegal",
         "kode": "SEN",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/SEN%201x",
-        "spilt": 2,
-        "seier": 0,
+        "spilt": 3,
+        "seier": 1,
         "uavgjort": 0,
         "tap": 2,
-        "maal_for": 3,
+        "maal_for": 4,
         "maal_mot": 6,
-        "maal_forskjell": -3,
-        "lagdisiplin": 0,
-        "poeng": 0
+        "maal_forskjell": -2,
+        "lagdisiplin": -1,
+        "poeng": 3
       },
       {
         "plass": 4,
@@ -607,14 +605,14 @@
         "fifa_navn": "Iraq",
         "kode": "IRQ",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/IRQ%201x",
-        "spilt": 2,
+        "spilt": 3,
         "seier": 0,
         "uavgjort": 0,
-        "tap": 2,
+        "tap": 3,
         "maal_for": 1,
-        "maal_mot": 7,
-        "maal_forskjell": -6,
-        "lagdisiplin": -2,
+        "maal_mot": 8,
+        "maal_forskjell": -7,
+        "lagdisiplin": -6,
         "poeng": 0
       }
     ],
