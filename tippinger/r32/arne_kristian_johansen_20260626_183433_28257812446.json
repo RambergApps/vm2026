@@ -1,0 +1,52 @@
+{
+  "bonus": {
+    "id": "antall_uavgjort",
+    "svar": 12
+  },
+  "helhetsbonus": {
+    "flest_maal_lag": "Brazil"
+  },
+  "meta": {
+    "deltaker_id": "arne_kristian_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-06-26T18:34:24.038Z",
+    "navn": "Arne Kristian Johansen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-26T18:34:33Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Canada",
+      "hjemme": 1,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_Canada_2026_06_28",
+      "match_no": 73
+    },
+    {
+      "borte": 2,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "Netherlands",
+      "kamp_id": "Netherlands_Morocco_2026_06_30",
+      "match_no": 75
+    },
+    {
+      "borte": 1,
+      "bortelag": "Japan",
+      "hjemme": 3,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Japan_2026_06_29",
+      "match_no": 76
+    },
+    {
+      "borte": 1,
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme": 3,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "match_no": 81
+    }
+  ]
+}
