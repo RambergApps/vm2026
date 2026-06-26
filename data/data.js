@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T19:01:06Z
+// Sist oppdatert: 2026-06-26T19:31:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T19:01:06Z",
+  "sist_oppdatert": "2026-06-26T19:31:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1247,36 +1247,26 @@ const VM_DATA = {
       "canonical_kamp_id": "Norway_France_2026_06_26",
       "hjemmelag": "Norway",
       "bortelag": "France",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 2,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-26",
-      "fd_match_id": 537395,
-      "fd_utcDate": "2026-06-26T19:00:00Z",
-      "fd_hjemmelag": "Norway",
-      "fd_bortelag": "France"
+      "kilde_score": "fifa_calendar"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
       "canonical_kamp_id": "Senegal_Iraq_2026_06_26",
       "hjemmelag": "Senegal",
       "bortelag": "Iraq",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-26",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-26",
-      "fd_match_id": 537396,
-      "fd_utcDate": "2026-06-26T19:00:00Z",
-      "fd_hjemmelag": "Senegal",
-      "fd_bortelag": "Iraq"
+      "kilde_score": "fifa_calendar"
     },
     "Uruguay_Spain_2026_06_26": {
       "kamp_id": "Uruguay_Spain_2026_06_26",
@@ -1416,11 +1406,8 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-28",
       "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-28",
       "fd_match_id": 537417,
       "fd_utcDate": "2026-06-28T19:00:00Z",
-      "fd_hjemmelag": "South Africa",
-      "fd_bortelag": "Canada",
       "match_no": 73
     },
     "Brazil_Japan_2026_06_29": {
@@ -1435,11 +1422,8 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
       "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-29",
       "fd_match_id": 537423,
       "fd_utcDate": "2026-06-29T17:00:00Z",
-      "fd_hjemmelag": "Brazil",
-      "fd_bortelag": "Japan",
       "match_no": 76
     },
     "Germany_3A_B_C_D_F_2026_06_29": {
@@ -1447,6 +1431,19 @@ const VM_DATA = {
       "canonical_kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
       "hjemmelag": "Germany",
       "bortelag": "3A/B/C/D/F",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "r32",
+      "dato_openfootball": "2026-06-29",
+      "kilde_score": "openfootball"
+    },
+    "Netherlands_Morocco_2026_06_29": {
+      "kamp_id": "Netherlands_Morocco_2026_06_29",
+      "canonical_kamp_id": "Netherlands_Morocco_2026_06_29",
+      "hjemmelag": "Netherlands",
+      "bortelag": "Morocco",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1507,7 +1504,6 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "manuell_fallback",
-      "dato_fd_org": "2026-06-30",
       "fd_match_id": 537418,
       "fd_utcDate": "2026-06-30T01:00:00Z",
       "match_no": 75
@@ -1606,7 +1602,6 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "manuell_fallback",
-      "dato_fd_org": "2026-07-02",
       "fd_match_id": 537421,
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "match_no": 81
@@ -1962,17 +1957,17 @@ const VM_DATA = {
     },
     {
       "rank": 2,
+      "spiller": "Kylian Mbappe",
+      "maal": 4,
+      "assists": 2,
+      "minutter": 222
+    },
+    {
+      "rank": 3,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 293
-    },
-    {
-      "rank": 3,
-      "spiller": "Kylian Mbappe",
-      "maal": 4,
-      "assists": 0,
-      "minutter": 199
     },
     {
       "rank": 4,
@@ -1997,108 +1992,108 @@ const VM_DATA = {
     },
     {
       "rank": 7,
+      "spiller": "Ousmane Dembele",
+      "maal": 3,
+      "assists": 1,
+      "minutter": 178
+    },
+    {
+      "rank": 8,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 168
     },
     {
-      "rank": 8,
+      "rank": 9,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 191
     },
     {
-      "rank": 9,
+      "rank": 10,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 255
     },
     {
-      "rank": 10,
+      "rank": 11,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 270
     },
     {
-      "rank": 11,
+      "rank": 12,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
       "minutter": 147
     },
     {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 149
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 173
     },
     {
-      "rank": 14,
+      "rank": 15,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 245
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 268
     },
     {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 39
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 149
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 0,
       "minutter": 164
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
-    },
-    {
-      "rank": 21,
-      "spiller": "Ismaila Sarr",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 185
     },
     {
       "rank": 22,
@@ -2137,94 +2132,94 @@ const VM_DATA = {
     },
     {
       "rank": 27,
+      "spiller": "Ismaila Sarr",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 207
+    },
+    {
+      "rank": 28,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 255
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 278
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 285
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 296
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 145
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 168
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 2,
       "minutter": 302
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Soufiane Rahimi",
       "maal": 1,
       "assists": 1,
       "minutter": 53
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 57
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Luis Romo",
       "maal": 1,
       "assists": 1,
       "minutter": 140
-    },
-    {
-      "rank": 39,
-      "spiller": "Ousmane Dembele",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 155
     },
     {
       "rank": 40,
@@ -2314,7 +2309,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T19:01:06Z",
+    "sist_beregnet": "2026-06-26T19:31:11Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
@@ -3125,11 +3120,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3138,11 +3133,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4200,11 +4195,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4213,11 +4208,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5275,11 +5270,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5288,11 +5283,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6350,11 +6345,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6363,11 +6358,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7425,11 +7420,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7438,11 +7433,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8500,11 +8495,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8513,11 +8508,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9575,11 +9570,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9588,11 +9583,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10650,11 +10645,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10663,11 +10658,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11725,11 +11720,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11738,11 +11733,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12800,11 +12795,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12813,11 +12808,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13875,11 +13870,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13888,11 +13883,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14950,11 +14945,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14963,11 +14958,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16025,11 +16020,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16038,11 +16033,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17100,11 +17095,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17113,11 +17108,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18175,11 +18170,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18188,11 +18183,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19250,11 +19245,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19263,11 +19258,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20325,11 +20320,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20338,11 +20333,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21400,11 +21395,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21413,11 +21408,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22475,11 +22470,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -22488,11 +22483,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23550,11 +23545,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23563,11 +23558,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24625,11 +24620,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24638,11 +24633,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 5,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25700,11 +25695,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 4,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25713,11 +25708,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26775,11 +26770,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26788,11 +26783,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27850,11 +27845,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27863,11 +27858,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28925,11 +28920,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28938,11 +28933,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30000,11 +29995,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30013,11 +30008,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31075,11 +31070,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31088,11 +31083,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32150,11 +32145,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32163,11 +32158,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -33225,11 +33220,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -33238,11 +33233,11 @@ const VM_DATA = {
           "bortelag": "Iraq",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 1,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
