@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-26T01:30:50Z",
+  "generert": "2026-06-26T02:01:00Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -153,12 +153,20 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 75,
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemme": "Netherlands",
+          "borte": "Morocco",
+          "dato": "2026-06-30"
+        },
+        {
           "kilde": "status.json",
           "match_no": 75,
-          "kamp_id": "1F_2C_2026_06_29",
-          "hjemme": "1F",
-          "borte": "2C",
-          "dato": "2026-06-29"
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemme": "Netherlands",
+          "borte": "Morocco",
+          "dato": "2026-06-30"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -195,11 +203,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 76,
+          "kamp_id": "Brazil_Japan_2026_06_29",
+          "hjemme": "Brazil",
+          "borte": "Japan",
+          "dato": "2026-06-29"
+        },
+        {
           "kilde": "status.json",
           "match_no": 76,
-          "kamp_id": "1C_2F_2026_06_29",
-          "hjemme": "1C",
-          "borte": "2F",
+          "kamp_id": "Brazil_Japan_2026_06_29",
+          "hjemme": "Brazil",
+          "borte": "Japan",
           "dato": "2026-06-29"
         }
       ],
@@ -381,12 +397,20 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 81,
+          "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+          "hjemme": "USA",
+          "borte": "Bosnia & Herzegovina",
+          "dato": "2026-07-02"
+        },
+        {
           "kilde": "status.json",
           "match_no": 81,
-          "kamp_id": "1D_3B_E_F_I_J_2026_07_01",
-          "hjemme": "1D",
-          "borte": "3B/E/F/I/J",
-          "dato": "2026-07-01"
+          "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+          "hjemme": "USA",
+          "borte": "Bosnia & Herzegovina",
+          "dato": "2026-07-02"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true

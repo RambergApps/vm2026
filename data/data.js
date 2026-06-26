@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T01:30:51Z
+// Sist oppdatert: 2026-06-26T02:01:12Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T01:30:51Z",
+  "sist_oppdatert": "2026-06-26T02:01:12Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1137,13 +1137,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Paraguay_Australia_2026_06_25",
       "hjemmelag": "Paraguay",
       "bortelag": "Australia",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-06-26",
       "fd_match_id": 537350,
       "fd_utcDate": "2026-06-26T02:00:00Z",
@@ -1174,13 +1174,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Turkey_USA_2026_06_25",
       "hjemmelag": "Turkey",
       "bortelag": "USA",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-06-26",
       "fd_match_id": 537349,
       "fd_utcDate": "2026-06-26T02:00:00Z",
@@ -2019,7 +2019,7 @@ const VM_DATA = {
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
-      "minutter": 157
+      "minutter": 168
     },
     {
       "rank": 8,
@@ -2047,7 +2047,7 @@ const VM_DATA = {
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
-      "minutter": 123
+      "minutter": 147
     },
     {
       "rank": 12,
@@ -2075,14 +2075,14 @@ const VM_DATA = {
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
-      "minutter": 243
+      "minutter": 244
     },
     {
       "rank": 16,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
-      "minutter": 250
+      "minutter": 267
     },
     {
       "rank": 17,
@@ -2096,7 +2096,7 @@ const VM_DATA = {
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
-      "minutter": 117
+      "minutter": 149
     },
     {
       "rank": 19,
@@ -2156,38 +2156,38 @@ const VM_DATA = {
     },
     {
       "rank": 27,
-      "spiller": "Daichi Kamada",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 245
-    },
-    {
-      "rank": 28,
-      "spiller": "Yasin Ayari",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 253
-    },
-    {
-      "rank": 29,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 255
     },
     {
-      "rank": 30,
+      "rank": 28,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
     },
     {
+      "rank": 29,
+      "spiller": "Daichi Kamada",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 277
+    },
+    {
+      "rank": 30,
+      "spiller": "Yasin Ayari",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 285
+    },
+    {
       "rank": 31,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
-      "minutter": 263
+      "minutter": 296
     },
     {
       "rank": 32,
@@ -2205,17 +2205,17 @@ const VM_DATA = {
     },
     {
       "rank": 34,
-      "spiller": "Viktor Gyokeres",
-      "maal": 1,
-      "assists": 2,
-      "minutter": 270
-    },
-    {
-      "rank": 35,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
+    },
+    {
+      "rank": 35,
+      "spiller": "Viktor Gyokeres",
+      "maal": 1,
+      "assists": 2,
+      "minutter": 302
     },
     {
       "rank": 36,
@@ -2292,21 +2292,21 @@ const VM_DATA = {
       "spiller": "Keito Nakamura",
       "maal": 1,
       "assists": 1,
-      "minutter": 250
+      "minutter": 260
     },
     {
       "rank": 47,
-      "spiller": "Virgil Van Dijk",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 268
-    },
-    {
-      "rank": 48,
       "spiller": "Hwang Inbeom",
       "maal": 1,
       "assists": 1,
       "minutter": 286
+    },
+    {
+      "rank": 48,
+      "spiller": "Virgil Van Dijk",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 297
     },
     {
       "rank": 49,
@@ -2333,7 +2333,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T01:30:51Z",
+    "sist_beregnet": "2026-06-26T02:01:12Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
@@ -2704,11 +2704,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -2717,11 +2717,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3775,11 +3775,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3788,11 +3788,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4846,11 +4846,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4859,11 +4859,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5917,11 +5917,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5930,11 +5930,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6988,11 +6988,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7001,11 +7001,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8059,11 +8059,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8072,11 +8072,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9130,11 +9130,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9143,11 +9143,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10201,11 +10201,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -10214,11 +10214,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11272,11 +11272,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11285,11 +11285,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12343,11 +12343,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12356,11 +12356,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13414,11 +13414,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13427,11 +13427,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14485,11 +14485,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14498,11 +14498,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15556,11 +15556,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15569,11 +15569,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16627,11 +16627,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16640,11 +16640,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17698,11 +17698,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17711,11 +17711,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18769,11 +18769,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18782,11 +18782,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19840,11 +19840,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19853,11 +19853,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20911,11 +20911,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20924,11 +20924,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21982,11 +21982,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21995,11 +21995,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23053,11 +23053,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23066,11 +23066,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24124,11 +24124,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24137,11 +24137,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25195,11 +25195,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25208,11 +25208,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26266,11 +26266,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26279,11 +26279,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27337,11 +27337,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27350,11 +27350,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28408,11 +28408,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28421,11 +28421,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29479,11 +29479,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29492,11 +29492,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30550,11 +30550,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30563,11 +30563,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31621,11 +31621,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31634,11 +31634,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32692,11 +32692,11 @@ const VM_DATA = {
           "bortelag": "USA",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32705,11 +32705,11 @@ const VM_DATA = {
           "bortelag": "Australia",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {

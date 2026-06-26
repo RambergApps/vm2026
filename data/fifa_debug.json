@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T01:30:51Z",
+  "tidspunkt": "2026-06-26T02:01:02Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -252,14 +252,14 @@
       "fifa_event_id": "400021459",
       "hjemmelag": "Turkey",
       "bortelag": "USA",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T02:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "1'"
     },
     "400021460": {
       "fifa_event_id": "400021460",
@@ -278,14 +278,14 @@
       "fifa_event_id": "400021461",
       "hjemmelag": "Paraguay",
       "bortelag": "Australia",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T02:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "1'"
     },
     "400021462": {
       "fifa_event_id": "400021462",
