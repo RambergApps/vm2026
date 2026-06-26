@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T18:30:53Z",
+  "tidspunkt": "2026-06-26T19:01:05Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -694,8 +694,8 @@
       "fifa_event_id": "400021493",
       "hjemmelag": "Senegal",
       "bortelag": "Iraq",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "FIFA_STATUS_12",
+      "fifa_status_raw": 12,
       "ferdig": false,
       "hjemme": null,
       "borte": null,
