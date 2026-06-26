@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T03:01:05Z",
+  "tidspunkt": "2026-06-26T03:30:54Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -315,10 +315,10 @@
       "fd_bortelag": "United States",
       "hjemmelag_normalisert": "Turkey",
       "bortelag_normalisert": "USA",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 2,
-      "borte": 1,
+      "borte": 2,
       "fd_dato": "2026-06-26",
       "fd_utcDate": "2026-06-26T02:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Turkey_USA_2026_06_26"
@@ -329,7 +329,7 @@
       "fd_bortelag": "Australia",
       "hjemmelag_normalisert": "Paraguay",
       "bortelag_normalisert": "Australia",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
