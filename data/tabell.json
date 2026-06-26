@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-26T17:30:53Z",
-  "sist_oppdatert_grupper": "2026-06-26T04:01:04Z",
-  "sist_oppdatert_utslag": "2026-06-26T17:30:53Z",
+  "sist_oppdatert": "2026-06-26T18:01:01Z",
+  "sist_oppdatert_grupper": "2026-06-26T18:01:01Z",
+  "sist_oppdatert_utslag": "2026-06-26T18:01:01Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,12 +14,10 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": false,
+    "grupper": true,
     "utslag": true
   },
-  "advarsler": [
-    "Gruppetabell beholdt fra forrige gyldige fil: Ufullstendig FIFA-tabell. Mangler komplett gruppe: L"
-  ],
+  "advarsler": [],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -233,8 +231,8 @@
         "seier": 2,
         "uavgjort": 0,
         "tap": 1,
-        "maal_for": 7,
-        "maal_mot": 3,
+        "maal_for": 8,
+        "maal_mot": 4,
         "maal_forskjell": 4,
         "lagdisiplin": -5,
         "poeng": 6
@@ -252,7 +250,7 @@
         "maal_for": 2,
         "maal_mot": 2,
         "maal_forskjell": 0,
-        "lagdisiplin": -4,
+        "lagdisiplin": -5,
         "poeng": 4
       },
       {
@@ -268,7 +266,7 @@
         "maal_for": 2,
         "maal_mot": 4,
         "maal_forskjell": -2,
-        "lagdisiplin": -11,
+        "lagdisiplin": -12,
         "poeng": 4
       },
       {
@@ -281,8 +279,8 @@
         "seier": 1,
         "uavgjort": 0,
         "tap": 2,
-        "maal_for": 2,
-        "maal_mot": 4,
+        "maal_for": 3,
+        "maal_mot": 5,
         "maal_forskjell": -2,
         "lagdisiplin": -3,
         "poeng": 3
