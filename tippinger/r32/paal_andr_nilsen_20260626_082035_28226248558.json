@@ -1,0 +1,53 @@
+{
+  "bonus": {
+    "id": "antall_uavgjort",
+    "svar": 4
+  },
+  "helhetsbonus": {
+    "golden_boot": "Kylian Mbappe",
+    "totale_maal_utslag": "47_77"
+  },
+  "meta": {
+    "deltaker_id": "paal_andr_nilsen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-06-26T08:20:24.762Z",
+    "navn": "Pål André Nilsen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-26T08:20:35Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Canada",
+      "hjemme": 1,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_Canada_2026_06_28",
+      "match_no": 73
+    },
+    {
+      "borte": 0,
+      "bortelag": "Morocco",
+      "hjemme": 1,
+      "hjemmelag": "Netherlands",
+      "kamp_id": "Netherlands_Morocco_2026_06_30",
+      "match_no": 75
+    },
+    {
+      "borte": 1,
+      "bortelag": "Japan",
+      "hjemme": 2,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Japan_2026_06_29",
+      "match_no": 76
+    },
+    {
+      "borte": 0,
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme": 2,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "match_no": 81
+    }
+  ]
+}
