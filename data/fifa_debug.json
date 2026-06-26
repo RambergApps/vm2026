@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T03:30:54Z",
+  "tidspunkt": "2026-06-26T04:01:03Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -259,7 +259,7 @@
       "borte": 2,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T02:00:00Z",
-      "fifa_match_time": "67'"
+      "fifa_match_time": "90'+8'"
     },
     "400021460": {
       "fifa_event_id": "400021460",
@@ -278,14 +278,14 @@
       "fifa_event_id": "400021461",
       "hjemmelag": "Paraguay",
       "bortelag": "Australia",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 0,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T02:00:00Z",
-      "fifa_match_time": "67'"
+      "fifa_match_time": "96'"
     },
     "400021462": {
       "fifa_event_id": "400021462",
