@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T12:31:09Z
+// Sist oppdatert: 2026-06-26T13:01:01Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T12:31:09Z",
+  "sist_oppdatert": "2026-06-26T13:01:01Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1416,35 +1416,12 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-28",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-28",
       "fd_match_id": 537417,
       "fd_utcDate": "2026-06-28T19:00:00Z",
+      "fd_hjemmelag": "South Africa",
+      "fd_bortelag": "Canada",
       "match_no": 73
-    },
-    "1F_Morocco_2026_06_29": {
-      "kamp_id": "1F_Morocco_2026_06_29",
-      "canonical_kamp_id": "1F_Morocco_2026_06_29",
-      "hjemmelag": "1F",
-      "bortelag": "Morocco",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
-    },
-    "Brazil_2F_2026_06_29": {
-      "kamp_id": "Brazil_2F_2026_06_29",
-      "canonical_kamp_id": "Brazil_2F_2026_06_29",
-      "hjemmelag": "Brazil",
-      "bortelag": "2F",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -1457,9 +1434,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-29",
       "fd_match_id": 537423,
       "fd_utcDate": "2026-06-29T17:00:00Z",
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Japan",
       "match_no": 76
     },
     "Germany_3A_B_C_D_F_2026_06_29": {
@@ -1489,10 +1469,10 @@ const VM_DATA = {
       "kilde_score": "openfootball",
       "match_no": 77
     },
-    "2E_2I_2026_06_30": {
-      "kamp_id": "2E_2I_2026_06_30",
-      "canonical_kamp_id": "2E_2I_2026_06_30",
-      "hjemmelag": "2E",
+    "Ivory_Coast_2I_2026_06_30": {
+      "kamp_id": "Ivory_Coast_2I_2026_06_30",
+      "canonical_kamp_id": "Ivory_Coast_2I_2026_06_30",
+      "hjemmelag": "Ivory Coast",
       "bortelag": "2I",
       "hjemme": null,
       "borte": null,
@@ -1500,8 +1480,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball",
-      "match_no": 78
+      "kilde_score": "openfootball"
     },
     "Mexico_3C_E_F_H_I_2026_06_30": {
       "kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
@@ -1528,6 +1507,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-06-30",
       "fd_match_id": 537418,
       "fd_utcDate": "2026-06-30T01:00:00Z",
       "match_no": 75
@@ -1626,6 +1606,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-02",
       "fd_match_id": 537421,
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "match_no": 81
@@ -1658,10 +1639,10 @@ const VM_DATA = {
       "kilde_score": "openfootball",
       "match_no": 87
     },
-    "2D_2G_2026_07_03": {
-      "kamp_id": "2D_2G_2026_07_03",
-      "canonical_kamp_id": "2D_2G_2026_07_03",
-      "hjemmelag": "2D",
+    "Australia_2G_2026_07_03": {
+      "kamp_id": "Australia_2G_2026_07_03",
+      "canonical_kamp_id": "Australia_2G_2026_07_03",
+      "hjemmelag": "Australia",
       "bortelag": "2G",
       "hjemme": null,
       "borte": null,
@@ -1669,8 +1650,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball",
-      "match_no": 88
+      "kilde_score": "openfootball"
     },
     "W73_W75_2026_07_04": {
       "kamp_id": "W73_W75_2026_07_04",
@@ -2334,7 +2314,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T12:31:09Z",
+    "sist_beregnet": "2026-06-26T13:01:01Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",
