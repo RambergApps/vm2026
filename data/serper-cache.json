@@ -4090,5 +4090,98 @@
       "direct_fifa_probe": true,
       "_forsok_url": 2
     }
+  },
+  "Tunisia_Netherlands_2026_06_25|1-3": {
+    "kamp_id": "Tunisia_Netherlands_2026_06_25",
+    "resultat": "1-3",
+    "sist_sokt": "2026-06-26T01:01:20Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-netherlands-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 3,
+      "score": 10,
+      "hentet": "2026-06-26T01:01:20Z",
+      "goal_events": [
+        {
+          "spiller": "Skhiri",
+          "lag": "Netherlands",
+          "minutt": "3",
+          "type": "own_goal"
+        },
+        {
+          "spiller": "Brobbey",
+          "lag": "Netherlands",
+          "minutt": "7",
+          "type": "goal"
+        },
+        {
+          "spiller": "Mastouri",
+          "lag": "Tunisia",
+          "minutt": "54",
+          "type": "goal"
+        },
+        {
+          "spiller": "Van Hecke",
+          "lag": "Netherlands",
+          "minutt": "62",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Skhiri",
+        "Brobbey",
+        "Mastouri",
+        "Van Hecke"
+      ],
+      "lead_scorer": "Skhiri",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-netherlands-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-netherlands-match-report-highlights?searchOverlay=1)",
+        "Ronald Koeman's side grabbed two early goals to help secure top spot in Group F, while the Eagles of Carthage depart the World Cup without a point.",
+        "The Netherlands clinched top spot in Group F and set up a Round of 32 meeting with Morocco in Monterrey on 29 June as they overcame Tunisia at Kansas City Stadium.",
+        "Ronald Koeman’s men needed just three minutes to break the deadlock against their already-eliminated opponents, with captain Ellyes Skhiri slicing into his own net from Denzel Dumfries’ cross as he looked to prevent the ball reaching Brian Brobbey."
+      ],
+      "key_stat": "This was the first time in their 58 World Cup matches that the Netherlands have scored two goals in the opening seven minutes of a game.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_assist": "Denzel Dumfries’",
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": true,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-netherlands-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
