@@ -1,16 +1,6 @@
 {
-  "sist_sjekket": "2026-06-26T01:01:01Z",
+  "sist_sjekket": "2026-06-26T01:30:51Z",
   "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Japan_Sweden_2026_06_25",
-      "hjemmelag": "Japan",
-      "bortelag": "Sweden",
-      "dato": "2026-06-25",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "type": "mangler_resultat",
       "kamp_id": "Paraguay_Australia_2026_06_25",

@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T01:01:00Z",
+  "tidspunkt": "2026-06-26T01:30:51Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -937,6 +937,19 @@
       "fifa_utcDate": "2026-06-23T23:00:00Z",
       "fifa_match_time": "96'"
     },
+    "400021516": {
+      "fifa_event_id": "400021516",
+      "hjemmelag": "Brazil",
+      "bortelag": "Japan",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-06-29",
+      "fifa_utcDate": "2026-06-29T17:00:00Z",
+      "fifa_match_time": null
+    },
     "400021518": {
       "fifa_event_id": "400021518",
       "hjemmelag": "South Africa",
@@ -948,6 +961,32 @@
       "borte": null,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T19:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021522": {
+      "fifa_event_id": "400021522",
+      "hjemmelag": "Netherlands",
+      "bortelag": "Morocco",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-06-30",
+      "fifa_utcDate": "2026-06-30T01:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021524": {
+      "fifa_event_id": "400021524",
+      "hjemmelag": "USA",
+      "bortelag": "Bosnia & Herzegovina",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-02",
+      "fifa_utcDate": "2026-07-02T00:00:00Z",
       "fifa_match_time": null
     }
   }

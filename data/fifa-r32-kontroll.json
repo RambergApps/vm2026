@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-26T01:00:59Z",
+  "generert": "2026-06-26T01:30:50Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -21,8 +21,8 @@
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
-    "matched": 1,
-    "pending": 15,
+    "matched": 4,
+    "pending": 12,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
     "motstridende_fifa_api_duplikater": [],
@@ -128,13 +128,13 @@
       "fifa_dato": "2026-06-30",
       "fifa_tid": "01:00",
       "fifa_tid_hadde_tidssone": true,
-      "fifa_hjemme": "1F",
+      "fifa_hjemme": "Netherlands",
       "fifa_borte": "Morocco",
-      "fifa_hjemme_kode": "",
+      "fifa_hjemme_kode": "NED",
       "fifa_borte_kode": "MAR",
-      "fifa_hjemme_kjent": false,
+      "fifa_hjemme_kjent": true,
       "fifa_borte_kjent": true,
-      "fifa_hjemme_placeholder": "1F",
+      "fifa_hjemme_placeholder": "",
       "fifa_borte_placeholder": "",
       "fifa_api_result_index": 75,
       "fd_match_id": 537418,
@@ -142,10 +142,15 @@
       "fd_dato": "2026-06-30",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Netherlands_Morocco_2026_06_30",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Netherlands",
+      "kamp_bortelag": "Morocco",
+      "kamp_dato": "2026-06-30",
+      "kamp_utcDate": "2026-06-30T01:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -155,7 +160,8 @@
           "borte": "2C",
           "dato": "2026-06-29"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 76,
@@ -165,23 +171,28 @@
       "fifa_tid": "17:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Brazil",
-      "fifa_borte": "2F",
+      "fifa_borte": "Japan",
       "fifa_hjemme_kode": "BRA",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "JPN",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "2F",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 73,
       "fd_match_id": 537423,
       "fd_utcDate": "2026-06-29T17:00:00Z",
       "fd_dato": "2026-06-29",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Brazil_Japan_2026_06_29",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Brazil",
+      "kamp_bortelag": "Japan",
+      "kamp_dato": "2026-06-29",
+      "kamp_utcDate": "2026-06-29T17:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -191,7 +202,8 @@
           "borte": "2F",
           "dato": "2026-06-29"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 77,
@@ -345,23 +357,28 @@
       "fifa_tid": "00:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "USA",
-      "fifa_borte": "3BEFIJ",
+      "fifa_borte": "Bosnia and Herzegovina",
       "fifa_hjemme_kode": "USA",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "BIH",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "3BEFIJ",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 81,
       "fd_match_id": 537421,
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "fd_dato": "2026-07-02",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "USA",
+      "kamp_bortelag": "Bosnia & Herzegovina",
+      "kamp_dato": "2026-07-02",
+      "kamp_utcDate": "2026-07-02T00:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -371,7 +388,8 @@
           "borte": "3B/E/F/I/J",
           "dato": "2026-07-01"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 82,

@@ -4183,5 +4183,80 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Japan_Sweden_2026_06_25|1-1": {
+    "kamp_id": "Japan_Sweden_2026_06_25",
+    "resultat": "1-1",
+    "sist_sokt": "2026-06-26T01:31:04Z",
+    "antall_sok": 1,
+    "beste_score": 11,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-sweden-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-06-26T01:31:04Z",
+      "goal_events": [
+        {
+          "spiller": "Maeda",
+          "lag": "Japan",
+          "minutt": "56",
+          "type": "goal"
+        },
+        {
+          "spiller": "Elanga",
+          "lag": "Sweden",
+          "minutt": "62",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Maeda",
+        "Elanga"
+      ],
+      "lead_scorer": "Maeda",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Daizen Maeda and Anthony Elanga traded quick-fire goals as Japan and Sweden advanced to the Round of 32 behind Group F winners the Netherlands.",
+        "A hard-fought draw has taken Japan through to the FIFA World Cup 2026™ knockout stage as Group F runners-up and secured Sweden's spot as one of the eight best third-placed teams.",
+        "The Samurai Blue arrived at Dallas Stadium knowing a draw would secure a top-two finish, while Sweden needed all three points to leapfrog their opponents into second place.",
+        "Japan soon began to assert control, dictating the tempo and forcing Graham Potter's charges deep inside their own half. Daizen Maeda headed narrowly wide early on, before Yukinari Sugawara tested Jacob Zetterstrom for the first time.",
+        "Keito Nakamura went even closer to breaking the deadlock, but his cleverly disguised effort was brilliantly tipped around the post."
+      ],
+      "key_stat": "Japan have gone unbeaten in the World Cup group stage for the first time.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": true,
+      "group_top": true,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": true,
+      "referat_fakta_score": 11,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-sweden-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

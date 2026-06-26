@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-25T07:15:18Z",
+  "sist_oppdatert": "2026-06-26T01:30:50Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -19,6 +19,63 @@
       "lagkilde": "fifa_api",
       "slot_hjemme": "2A",
       "slot_borte": "2B"
+    },
+    {
+      "kamp_id": "Netherlands_Morocco_2026_06_30",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 75,
+      "dato": "2026-06-30",
+      "utcDate": "2026-06-30T01:00:00Z",
+      "fd_match_id": 537418,
+      "fifa_event_id": "400021522",
+      "hjemmelag": "Netherlands",
+      "bortelag": "Morocco",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1F",
+      "slot_borte": "2C"
+    },
+    {
+      "kamp_id": "Brazil_Japan_2026_06_29",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 76,
+      "dato": "2026-06-29",
+      "utcDate": "2026-06-29T17:00:00Z",
+      "fd_match_id": 537423,
+      "fifa_event_id": "400021516",
+      "hjemmelag": "Brazil",
+      "bortelag": "Japan",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1C",
+      "slot_borte": "2F"
+    },
+    {
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 81,
+      "dato": "2026-07-02",
+      "utcDate": "2026-07-02T00:00:00Z",
+      "fd_match_id": 537421,
+      "fifa_event_id": "400021524",
+      "hjemmelag": "USA",
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1D",
+      "slot_borte": "3B/E/F/I/J"
     }
   ]
 }
