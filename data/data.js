@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-26T08:20:40Z
+// Sist oppdatert: 2026-06-26T08:30:50Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-26T08:20:40Z",
+  "sist_oppdatert": "2026-06-26T08:30:50Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -972,12 +972,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537331,
       "fd_utcDate": "2026-06-25T01:00:00Z",
       "fd_hjemmelag": "Czechia",
-      "fd_bortelag": "Mexico"
+      "fd_bortelag": "Mexico",
+      "avanserer": "Mexico"
     },
     "Morocco_Haiti_2026_06_24": {
       "kamp_id": "Morocco_Haiti_2026_06_24",
@@ -1028,12 +1029,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-24",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537332,
       "fd_utcDate": "2026-06-25T01:00:00Z",
       "fd_hjemmelag": "South Africa",
-      "fd_bortelag": "South Korea"
+      "fd_bortelag": "South Korea",
+      "avanserer": "South Africa"
     },
     "Switzerland_Canada_2026_06_24": {
       "kamp_id": "Switzerland_Canada_2026_06_24",
@@ -1065,12 +1067,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537356,
       "fd_utcDate": "2026-06-25T20:00:00Z",
       "fd_hjemmelag": "Curaçao",
-      "fd_bortelag": "Ivory Coast"
+      "fd_bortelag": "Ivory Coast",
+      "avanserer": "Ivory Coast"
     },
     "Cura_ao_Ivory_Coast_2026_06_25": {
       "kamp_id": "Cura_ao_Ivory_Coast_2026_06_25",
@@ -1083,12 +1086,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537356,
       "fd_utcDate": "2026-06-25T20:00:00Z",
       "fd_hjemmelag": "Curaçao",
       "fd_bortelag": "Ivory Coast",
+      "avanserer": "Ivory Coast",
       "alias_for": "Curaçao_Ivory_Coast_2026_06_25"
     },
     "Ecuador_Germany_2026_06_25": {
@@ -1102,12 +1106,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537355,
       "fd_utcDate": "2026-06-25T20:00:00Z",
       "fd_hjemmelag": "Ecuador",
-      "fd_bortelag": "Germany"
+      "fd_bortelag": "Germany",
+      "avanserer": "Ecuador"
     },
     "Japan_Sweden_2026_06_25": {
       "kamp_id": "Japan_Sweden_2026_06_25",
@@ -1120,7 +1125,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537362,
       "fd_utcDate": "2026-06-25T23:00:00Z",
@@ -1156,12 +1161,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-25",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-25",
       "fd_match_id": 537361,
       "fd_utcDate": "2026-06-25T23:00:00Z",
       "fd_hjemmelag": "Tunisia",
-      "fd_bortelag": "Netherlands"
+      "fd_bortelag": "Netherlands",
+      "avanserer": "Netherlands"
     },
     "Turkey_USA_2026_06_25": {
       "kamp_id": "Turkey_USA_2026_06_25",
@@ -2328,7 +2334,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-26T08:20:40Z",
+    "sist_beregnet": "2026-06-26T08:30:50Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Cape_Verde_Saudi_Arabia_2026_06_26",

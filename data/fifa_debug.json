@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-26T08:18:29Z",
+  "tidspunkt": "2026-06-26T08:30:49Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -519,7 +519,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T03:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021480": {
       "fifa_event_id": "400021480",
@@ -545,7 +545,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T03:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021482": {
       "fifa_event_id": "400021482",
@@ -584,7 +584,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021485": {
       "fifa_event_id": "400021485",
@@ -597,7 +597,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021486": {
       "fifa_event_id": "400021486",
@@ -649,7 +649,7 @@
       "borte": null,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T19:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021490": {
       "fifa_event_id": "400021490",
@@ -701,7 +701,7 @@
       "borte": null,
       "fifa_dato": "2026-06-26",
       "fifa_utcDate": "2026-06-26T19:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021494": {
       "fifa_event_id": "400021494",
@@ -727,7 +727,7 @@
       "borte": null,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T02:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021496": {
       "fifa_event_id": "400021496",
@@ -753,7 +753,7 @@
       "borte": null,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T02:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021498": {
       "fifa_event_id": "400021498",
@@ -792,7 +792,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T23:30:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021501": {
       "fifa_event_id": "400021501",
@@ -857,7 +857,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T23:30:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021506": {
       "fifa_event_id": "400021506",
@@ -896,7 +896,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021509": {
       "fifa_event_id": "400021509",
@@ -909,7 +909,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021510": {
       "fifa_event_id": "400021510",
@@ -948,7 +948,7 @@
       "borte": null,
       "fifa_dato": "2026-06-29",
       "fifa_utcDate": "2026-06-29T17:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021518": {
       "fifa_event_id": "400021518",
@@ -961,7 +961,7 @@
       "borte": null,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T19:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021522": {
       "fifa_event_id": "400021522",
@@ -974,7 +974,7 @@
       "borte": null,
       "fifa_dato": "2026-06-30",
       "fifa_utcDate": "2026-06-30T01:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021524": {
       "fifa_event_id": "400021524",
@@ -987,7 +987,7 @@
       "borte": null,
       "fifa_dato": "2026-07-02",
       "fifa_utcDate": "2026-07-02T00:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     }
   }
 }
