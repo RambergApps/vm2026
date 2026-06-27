@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T04:30:57Z",
+  "tidspunkt": "2026-06-27T05:01:04Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -569,8 +569,8 @@
       "bortelag_normalisert": "Belgium",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
-      "borte": 2,
+      "hjemme": 1,
+      "borte": 4,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T03:00:00Z",
       "fd_kamp_id_basert_paa_dato": "New_Zealand_Belgium_2026_06_27"

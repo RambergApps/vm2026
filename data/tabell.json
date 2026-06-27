@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-27T04:30:58Z",
-  "sist_oppdatert_grupper": "2026-06-27T04:30:58Z",
-  "sist_oppdatert_utslag": "2026-06-27T04:30:58Z",
+  "sist_oppdatert": "2026-06-27T05:01:05Z",
+  "sist_oppdatert_grupper": "2026-06-27T05:01:05Z",
+  "sist_oppdatert_utslag": "2026-06-27T05:01:05Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -421,6 +421,22 @@
     "G": [
       {
         "plass": 1,
+        "lag": "Belgium",
+        "fifa_navn": "Belgium",
+        "kode": "BEL",
+        "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/BEL%201x",
+        "spilt": 3,
+        "seier": 1,
+        "uavgjort": 2,
+        "tap": 0,
+        "maal_for": 5,
+        "maal_mot": 2,
+        "maal_forskjell": 3,
+        "lagdisiplin": -7,
+        "poeng": 5
+      },
+      {
+        "plass": 2,
         "lag": "Egypt",
         "fifa_navn": "Egypt",
         "kode": "EGY",
@@ -436,22 +452,6 @@
         "poeng": 5
       },
       {
-        "plass": 2,
-        "lag": "Belgium",
-        "fifa_navn": "Belgium",
-        "kode": "BEL",
-        "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/BEL%201x",
-        "spilt": 3,
-        "seier": 1,
-        "uavgjort": 2,
-        "tap": 0,
-        "maal_for": 2,
-        "maal_mot": 1,
-        "maal_forskjell": 1,
-        "lagdisiplin": -7,
-        "poeng": 5
-      },
-      {
         "plass": 3,
         "lag": "Iran",
         "fifa_navn": "IR Iran",
@@ -464,7 +464,7 @@
         "maal_for": 3,
         "maal_mot": 3,
         "maal_forskjell": 0,
-        "lagdisiplin": -4,
+        "lagdisiplin": -5,
         "poeng": 3
       },
       {
@@ -477,10 +477,10 @@
         "seier": 0,
         "uavgjort": 1,
         "tap": 2,
-        "maal_for": 3,
-        "maal_mot": 6,
-        "maal_forskjell": -3,
-        "lagdisiplin": -2,
+        "maal_for": 4,
+        "maal_mot": 9,
+        "maal_forskjell": -5,
+        "lagdisiplin": -4,
         "poeng": 1
       }
     ],
@@ -984,13 +984,13 @@
       "runde": "r32",
       "utcDate": "2026-07-01T20:00:00Z",
       "dato": "2026-07-01",
-      "hjemme": "1G",
+      "hjemme": "Belgium",
       "borte": "3AEHIJ",
-      "hjemme_kode": "",
+      "hjemme_kode": "BEL",
       "borte_kode": "",
-      "hjemme_kjent": false,
+      "hjemme_kjent": true,
       "borte_kjent": false,
-      "hjemme_placeholder": "1G",
+      "hjemme_placeholder": "",
       "borte_placeholder": "3AEHIJ",
       "status": "1",
       "hjemme_score": null,
