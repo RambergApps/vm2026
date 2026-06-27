@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-27T15:24:54Z",
+  "sist_oppdatert": "2026-06-27T15:32:18Z",
   "antall_kamper": 66,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -12987,7 +12987,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 83,
+        "antall_sok": 84,
         "fallback": true,
         "cache_key": "Turkey_USA_2026_06_25|3-2",
         "serper_score": -100,
@@ -12997,7 +12997,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 83,
+        "retry_antall": 84,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
         "mangler": [
@@ -13188,7 +13188,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T15:24:28Z"
+      "oppdatert": "2026-06-27T15:31:52Z"
     },
     "Norway_France_2026_06_26": {
       "kamp_id": "Norway_France_2026_06_26",
@@ -13209,7 +13209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 43,
+        "antall_sok": 44,
         "fallback": true,
         "cache_key": "Norway_France_2026_06_26|1-4",
         "serper_score": -100,
@@ -13219,7 +13219,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 43,
+        "retry_antall": 44,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
         "mangler": [
@@ -13410,7 +13410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T15:24:54Z"
+      "oppdatert": "2026-06-27T15:32:17Z"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
