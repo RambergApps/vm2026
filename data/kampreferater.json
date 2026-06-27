@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-27T05:33:28Z",
+  "sist_oppdatert": "2026-06-27T05:35:37Z",
   "antall_kamper": 66,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -12987,7 +12987,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 59,
+        "antall_sok": 60,
         "fallback": true,
         "cache_key": "Turkey_USA_2026_06_25|3-2",
         "serper_score": -100,
@@ -12997,7 +12997,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 59,
+        "retry_antall": 60,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
         "mangler": [
@@ -13188,7 +13188,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T05:31:57Z"
+      "oppdatert": "2026-06-27T05:35:11Z"
     },
     "Norway_France_2026_06_26": {
       "kamp_id": "Norway_France_2026_06_26",
@@ -13209,7 +13209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 19,
+        "antall_sok": 20,
         "fallback": true,
         "cache_key": "Norway_France_2026_06_26|1-4",
         "serper_score": -100,
@@ -13219,7 +13219,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 19,
+        "retry_antall": 20,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
         "mangler": [
@@ -13410,7 +13410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T05:32:29Z"
+      "oppdatert": "2026-06-27T05:35:37Z"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
@@ -14302,29 +14302,27 @@
       "gruppe": "G",
       "runde": "gruppe",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Egypt and Iran drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Egypt and Iran drew 1-1.\nGoals: Egypt — Saber (5); Iran — Rezaeian (14).\n\nThe Pharaohs head into the knockout rounds unbeaten at World Cup 2026 after drawing their final Group G game with IR Iran, who stay in contention to join them.\nEgypt secured their place in the FIFA World Cup™ knockout phase for the first time in their history after a frantic draw with IR Iran, who must now wait to discover whether the point is enough to send them through as one of the tournament's eight best third-placed teams.\nThe Pharaohs will now face Australia in the Round of 32 as Group G runners-up, while IR Iran's World Cup fate hinges on the outcome of the remaining games in Groups J, K and L.\nEgypt made the perfect start as Mahmoud Saber converted from close range after Alireza Beiranvand could only parry Mohamed Salah's deflected strike.\nKey stat: Prior to World Cup 2026, Egypt had played in three World Cups without winning (D2 L5)",
       "recap_kvalitet": {
-        "score": 6,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 11,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "Egypt_Iran_2026_06_26|1-1",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 6,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 11,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/egypt-ir-iran-match-report-highlights",
-        "mangler": [
-          "goal_events"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -14510,7 +14508,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T05:33:19Z"
+      "oppdatert": "2026-06-27T05:35:37Z"
     }
   }
 }

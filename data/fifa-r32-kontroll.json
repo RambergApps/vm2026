@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-27T05:30:55Z",
+  "generert": "2026-06-27T05:33:56Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -719,11 +719,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 88,
+          "kamp_id": "Australia_Egypt_2026_07_03",
+          "hjemme": "Australia",
+          "borte": "Egypt",
+          "dato": "2026-07-03"
+        },
+        {
           "kilde": "status.json",
           "match_no": 88,
-          "kamp_id": "2D_2G_2026_07_03",
-          "hjemme": "2D",
-          "borte": "2G",
+          "kamp_id": "Australia_Egypt_2026_07_03",
+          "hjemme": "Australia",
+          "borte": "Egypt",
           "dato": "2026-07-03"
         }
       ],
