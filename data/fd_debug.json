@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T03:01:05Z",
+  "tidspunkt": "2026-06-27T03:31:00Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -561,30 +561,16 @@
       "fd_utcDate": "2026-06-22T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "New_Zealand_Egypt_2026_06_22"
     },
-    "537367": {
-      "fd_match_id": 537367,
-      "fd_hjemmelag": "New Zealand",
-      "fd_bortelag": "Belgium",
-      "hjemmelag_normalisert": "New Zealand",
-      "bortelag_normalisert": "Belgium",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-27",
-      "fd_utcDate": "2026-06-27T03:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "New_Zealand_Belgium_2026_06_27"
-    },
     "537368": {
       "fd_match_id": 537368,
       "fd_hjemmelag": "Egypt",
       "fd_bortelag": "Iran",
       "hjemmelag_normalisert": "Egypt",
       "bortelag_normalisert": "Iran",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T03:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Egypt_Iran_2026_06_27"
@@ -735,10 +721,10 @@
       "fd_bortelag": "France",
       "hjemmelag_normalisert": "Norway",
       "bortelag_normalisert": "France",
-      "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 1,
-      "borte": 4,
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
       "fd_dato": "2026-06-26",
       "fd_utcDate": "2026-06-26T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Norway_France_2026_06_26"
@@ -749,10 +735,10 @@
       "fd_bortelag": "Iraq",
       "hjemmelag_normalisert": "Senegal",
       "bortelag_normalisert": "Iraq",
-      "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 5,
-      "borte": 0,
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
       "fd_dato": "2026-06-26",
       "fd_utcDate": "2026-06-26T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Senegal_Iraq_2026_06_26"
