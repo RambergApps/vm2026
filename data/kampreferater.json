@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-27T22:31:29Z",
+  "sist_oppdatert": "2026-06-27T22:40:06Z",
   "antall_kamper": 68,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -13209,7 +13209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 62,
+        "antall_sok": 63,
         "fallback": true,
         "cache_key": "Norway_France_2026_06_26|1-4",
         "serper_score": -100,
@@ -13219,7 +13219,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 62,
+        "retry_antall": 63,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
         "mangler": [
@@ -13410,7 +13410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T22:31:29Z"
+      "oppdatert": "2026-06-27T22:40:06Z"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
@@ -14518,12 +14518,12 @@
       "hjemmelag": "Croatia",
       "bortelag": "Ghana",
       "hjemme_score": 1,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "gruppe",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Croatia lead Ghana 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Croatia and Ghana are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -14709,7 +14709,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-27T22:31:06Z"
+      "oppdatert": "2026-06-27T22:39:37Z"
     },
     "Panama_England_2026_06_27": {
       "kamp_id": "Panama_England_2026_06_27",
