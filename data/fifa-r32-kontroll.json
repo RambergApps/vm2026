@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-27T13:30:54Z",
+  "generert": "2026-06-27T14:01:02Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -304,7 +304,7 @@
       "fd_match_id": 537424,
       "fd_utcDate": "2026-06-30T17:00:00Z",
       "fd_dato": "2026-06-30",
-      "fd_hjemmelag": "",
+      "fd_hjemmelag": "Ivory Coast",
       "fd_bortelag": "",
       "kamp_id": "Ivory_Coast_Norway_2026_06_30",
       "koblet_pa": "eksakt_utc_avspark",
