@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-27T14:32:24Z",
+  "sist_oppdatert": "2026-06-27T15:02:29Z",
   "antall_kamper": 66,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -12987,7 +12987,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 81,
+        "antall_sok": 82,
         "fallback": true,
         "cache_key": "Turkey_USA_2026_06_25|3-2",
         "serper_score": -100,
@@ -12997,7 +12997,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 81,
+        "retry_antall": 82,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
         "mangler": [
@@ -13188,7 +13188,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T14:31:48Z"
+      "oppdatert": "2026-06-27T15:02:04Z"
     },
     "Norway_France_2026_06_26": {
       "kamp_id": "Norway_France_2026_06_26",
@@ -13209,7 +13209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 41,
+        "antall_sok": 42,
         "fallback": true,
         "cache_key": "Norway_France_2026_06_26|1-4",
         "serper_score": -100,
@@ -13219,9 +13219,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 41,
+        "retry_antall": 42,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -13410,7 +13410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-27T14:32:23Z"
+      "oppdatert": "2026-06-27T15:02:29Z"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",

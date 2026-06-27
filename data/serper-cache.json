@@ -4321,8 +4321,8 @@
   "Turkey_USA_2026_06_25|3-2": {
     "kamp_id": "Turkey_USA_2026_06_25",
     "resultat": "3-2",
-    "sist_sokt": "2026-06-27T14:31:48Z",
-    "antall_sok": 81,
+    "sist_sokt": "2026-06-27T15:02:04Z",
+    "antall_sok": 82,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4339,7 +4339,7 @@
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-06-27T14:31:03Z",
+      "hentet": "2026-06-27T15:01:16Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -4380,8 +4380,8 @@
   "Norway_France_2026_06_26|1-4": {
     "kamp_id": "Norway_France_2026_06_26",
     "resultat": "1-4",
-    "sist_sokt": "2026-06-27T14:32:23Z",
-    "antall_sok": 41,
+    "sist_sokt": "2026-06-27T15:02:29Z",
+    "antall_sok": 42,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4389,7 +4389,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -4398,15 +4398,15 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 4,
       "score": 10,
-      "hentet": "2026-06-27T14:32:10Z",
+      "hentet": "2026-06-27T15:02:10Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -4431,9 +4431,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   },
   "Senegal_Iraq_2026_06_26|5-0": {
