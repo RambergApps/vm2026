@@ -1,4 +1,45 @@
 {
-  "sist_sjekket": "2026-06-26T23:30:53Z",
-  "kamper": []
+  "sist_sjekket": "2026-06-27T00:01:05Z",
+  "kamper": [
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Cape_Verde_Saudi_Arabia_2026_06_26",
+      "hjemmelag": "Cape Verde",
+      "bortelag": "Saudi Arabia",
+      "dato": "2026-06-26",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Egypt_Iran_2026_06_26",
+      "hjemmelag": "Egypt",
+      "bortelag": "Iran",
+      "dato": "2026-06-26",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "New_Zealand_Belgium_2026_06_26",
+      "hjemmelag": "New Zealand",
+      "bortelag": "Belgium",
+      "dato": "2026-06-26",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    },
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Uruguay_Spain_2026_06_26",
+      "hjemmelag": "Uruguay",
+      "bortelag": "Spain",
+      "dato": "2026-06-26",
+      "runde": "gruppe",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
