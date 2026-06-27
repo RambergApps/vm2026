@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T01:30:56Z",
+  "tidspunkt": "2026-06-27T02:01:04Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -519,7 +519,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T03:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021480": {
       "fifa_event_id": "400021480",
@@ -545,7 +545,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T03:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021482": {
       "fifa_event_id": "400021482",
@@ -584,20 +584,20 @@
       "borte": 1,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "67'"
+      "fifa_match_time": "90'+6'"
     },
     "400021485": {
       "fifa_event_id": "400021485",
       "hjemmelag": "Cape Verde",
       "bortelag": "Saudi Arabia",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 0,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "67'"
+      "fifa_match_time": "90'"
     },
     "400021486": {
       "fifa_event_id": "400021486",
