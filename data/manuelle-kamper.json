@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-27T23:01:03Z",
+  "sist_oppdatert": "2026-06-27T23:30:55Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -114,6 +114,25 @@
       "lagkilde": "fifa_api",
       "slot_hjemme": "2E",
       "slot_borte": "2I"
+    },
+    {
+      "kamp_id": "Mexico_Ecuador_2026_07_01",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 79,
+      "dato": "2026-07-01",
+      "utcDate": "2026-07-01T01:00:00Z",
+      "fd_match_id": 537425,
+      "fifa_event_id": "400021520",
+      "hjemmelag": "Mexico",
+      "bortelag": "Ecuador",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1A",
+      "slot_borte": "3C/E/F/H/I"
     },
     {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",

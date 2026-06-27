@@ -4380,8 +4380,8 @@
   "Norway_France_2026_06_26|1-4": {
     "kamp_id": "Norway_France_2026_06_26",
     "resultat": "1-4",
-    "sist_sokt": "2026-06-27T23:02:57Z",
-    "antall_sok": 64,
+    "sist_sokt": "2026-06-27T23:31:37Z",
+    "antall_sok": 65,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4398,7 +4398,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 4,
       "score": 10,
-      "hentet": "2026-06-27T23:02:24Z",
+      "hentet": "2026-06-27T23:31:16Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -4999,6 +4999,91 @@
       "mangler": [],
       "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-england-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Croatia_Ghana_2026_06_27|2-1": {
+    "kamp_id": "Croatia_Ghana_2026_06_27",
+    "resultat": "2-1",
+    "sist_sokt": "2026-06-27T23:31:08Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/croatia-ghana-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 2,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-06-27T23:31:08Z",
+      "goal_events": [
+        {
+          "spiller": "Sucic",
+          "lag": "Croatia",
+          "minutt": "31",
+          "type": "goal"
+        },
+        {
+          "spiller": "Luckassen",
+          "lag": "Ghana",
+          "minutt": "73",
+          "type": "goal"
+        },
+        {
+          "spiller": "Vlasic",
+          "lag": "Croatia",
+          "minutt": "83",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Sucic",
+        "Luckassen",
+        "Vlasic"
+      ],
+      "lead_scorer": "Sucic",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Zlatko Dalic's side finish runners-up in Group L and will play the second-placed team from Group K.",
+        "Petar Sucic and Nikola Vlasic were the goalscoring heroes as Croatia beat Ghana to leapfrog thealready-qualified Black Stars into second spot in Group L.",
+        "The warning signs were there for Carlos Queiroz’s side as early as the 17th minute, when Vlasic found space 20 yards from goal and clipped the outside of the post with a powerful right-foot shot.",
+        "It was certainly no more than Croatia deserved when they took the head just after the half-hour, with Sucic crashing a stunning 30-yard drive through a couple of attempted blocks and just inside the left-hand post.",
+        "Ghana were offering little at the other end at this stage, with Antoine Semenyo - who fired narrowly wide as half-time approached - their only real source of attacking menace."
+      ],
+      "key_stat": "Sucic, at 22 years and 245 days, became the second-youngest player to score for Croatia at the FIFA World Cup, after Josko Gvardiol (20 years, 328 days against Morocco in 2022).",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": true,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/croatia-ghana-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }

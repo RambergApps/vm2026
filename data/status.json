@@ -94,16 +94,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1A_3C_E_F_H_I_2026_06_30",
-        "hjemme": "1A",
-        "borte": "3C/E/F/H/I",
-        "dato": "2026-06-30",
-        "info": "",
+        "id": "Mexico_Ecuador_2026_07_01",
+        "hjemme": "Mexico",
+        "borte": "Ecuador",
+        "dato": "2026-07-01",
+        "info": "Kampoppsett bekreftet",
         "match_no": 79,
         "slot_hjemme": "1A",
         "slot_borte": "3C/E/F/H/I",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-01T01:00:00Z",
+        "fd_match_id": 537425,
+        "fifa_event_id": "400021520",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "1L_3E_H_I_J_K_2026_07_01",
@@ -223,7 +226,7 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 9,
+    "antall_tippebare": 10,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {
