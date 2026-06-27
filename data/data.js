@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-27T06:01:08Z
+// Sist oppdatert: 2026-06-27T06:31:06Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-27T06:01:08Z",
+  "sist_oppdatert": "2026-06-27T06:31:06Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2126,7 +2126,7 @@ const VM_DATA = {
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
-      "minutter": 287
+      "minutter": 291
     },
     {
       "rank": 14,
@@ -2182,7 +2182,7 @@ const VM_DATA = {
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
-      "minutter": 299
+      "minutter": 309
     },
     {
       "rank": 22,
@@ -2333,59 +2333,59 @@ const VM_DATA = {
     },
     {
       "rank": 43,
-      "spiller": "Trezeguet",
+      "spiller": "Romelu Lukaku",
       "maal": 1,
       "assists": 1,
-      "minutter": 119
+      "minutter": 121
     },
     {
       "rank": 44,
+      "spiller": "Trezeguet",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 129
+    },
+    {
+      "rank": 45,
       "spiller": "Bradley Barcola",
       "maal": 1,
       "assists": 1,
       "minutter": 135
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Luis Romo",
       "maal": 1,
       "assists": 1,
       "minutter": 140
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Nathaniel Brown",
       "maal": 1,
       "assists": 1,
       "minutter": 181
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Sebastian Berhalter",
       "maal": 1,
       "assists": 1,
       "minutter": 182
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Luis Diaz",
       "maal": 1,
       "assists": 1,
       "minutter": 198
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Baris Alper Yilmaz",
       "maal": 1,
       "assists": 1,
       "minutter": 200
-    },
-    {
-      "rank": 50,
-      "spiller": "Alex Freeman",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 231
     }
   ],
   "startpoengstatus": {
@@ -2398,7 +2398,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-27T06:01:08Z",
+    "sist_beregnet": "2026-06-27T06:31:06Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Colombia_Portugal_2026_06_27",
