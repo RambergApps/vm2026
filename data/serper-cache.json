@@ -4380,8 +4380,8 @@
   "Norway_France_2026_06_26|1-4": {
     "kamp_id": "Norway_France_2026_06_26",
     "resultat": "1-4",
-    "sist_sokt": "2026-06-27T22:40:06Z",
-    "antall_sok": 63,
+    "sist_sokt": "2026-06-27T23:02:57Z",
+    "antall_sok": 64,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4398,7 +4398,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 4,
       "score": 10,
-      "hentet": "2026-06-27T22:39:44Z",
+      "hentet": "2026-06-27T23:02:24Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -4847,8 +4847,8 @@
   "Egypt_Iran_2026_06_26|1-2": {
     "kamp_id": "Egypt_Iran_2026_06_26",
     "resultat": "1-2",
-    "sist_sokt": "2026-06-27T21:03:31Z",
-    "antall_sok": 2,
+    "sist_sokt": "2026-06-27T23:02:06Z",
+    "antall_sok": 3,
     "beste_score": 9,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -4865,7 +4865,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-06-27T21:02:43Z",
+      "hentet": "2026-06-27T23:01:15Z",
       "goal_events": [
         {
           "spiller": "Saber",
@@ -4921,6 +4921,84 @@
       ],
       "rikt_fulltekstgrunnlag": false,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/egypt-ir-iran-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Panama_England_2026_06_27|0-2": {
+    "kamp_id": "Panama_England_2026_06_27",
+    "resultat": "0-2",
+    "sist_sokt": "2026-06-27T23:02:14Z",
+    "antall_sok": 1,
+    "beste_score": 11,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-england-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-06-27T23:02:14Z",
+      "goal_events": [
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "62",
+          "type": "goal"
+        },
+        {
+          "spiller": "Kane",
+          "lag": "England",
+          "minutt": "67",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Bellingham",
+        "Kane"
+      ],
+      "lead_scorer": "Bellingham",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-england-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-england-match-report-highlights?searchOverlay=1)",
+        "England ensured first place in Group L as second-half goals by Jude Bellingham and Harry Kane undid the resistance of Panama in rainy New York New Jersey..",
+        "England made sure of first place in Group L as second-half goals by Jude Bellingham and Harry Kane earned their second win of this FIFA World Cup 2026™ at New York New Jersey Stadium.",
+        "England had thrashed Panama 6-1 when the teams met at Russia 2018 but this was a closer contest as Thomas Christiansen’s team frustrated England in the first half. It was Bellingham who provided the key, holding off his marker and prodding in on the volley from Bukayo Saka’s corner after 62 minutes. The England No10 then crossed for Harry Kane to head his 11th World Cup goal - one more than previous record-holder Gary Lineker."
+      ],
+      "key_stat": "Goalkeeper Jordan Pickford moved into outright second place on England’s all‑time FIFA World Cup appearance list, with his 15th outing moving him clear of Bobby Moore, Bobby Charlton, Terry Butcher and Ashley Cole - leaving only Peter Shilton, on 17, ahead of him.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 11,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-england-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }

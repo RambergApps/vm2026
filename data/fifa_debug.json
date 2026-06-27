@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T22:39:36Z",
+  "tidspunkt": "2026-06-27T23:01:04Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -889,27 +889,27 @@
       "fifa_event_id": "400021508",
       "hjemmelag": "Panama",
       "bortelag": "England",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 2,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": "80'"
+      "fifa_match_time": "98'"
     },
     "400021509": {
       "fifa_event_id": "400021509",
       "hjemmelag": "Croatia",
       "bortelag": "Ghana",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
-      "hjemme": 1,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
+      "hjemme": 2,
       "borte": 1,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": "78'"
+      "fifa_match_time": "98'"
     },
     "400021510": {
       "fifa_event_id": "400021510",
