@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T21:30:59Z",
+  "tidspunkt": "2026-06-27T22:01:04Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -987,13 +987,27 @@
       "fd_bortelag": "England",
       "hjemmelag_normalisert": "Panama",
       "bortelag_normalisert": "England",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Panama_England_2026_06_27"
+    },
+    "537414": {
+      "fd_match_id": 537414,
+      "fd_hjemmelag": "Croatia",
+      "fd_bortelag": "Ghana",
+      "hjemmelag_normalisert": "Croatia",
+      "bortelag_normalisert": "Ghana",
+      "status": "PAUSED",
+      "ferdig": false,
+      "hjemme": 1,
+      "borte": 0,
+      "fd_dato": "2026-06-27",
+      "fd_utcDate": "2026-06-27T21:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Croatia_Ghana_2026_06_27"
     },
     "537417": {
       "fd_match_id": 537417,

@@ -1,17 +1,444 @@
 {
-  "dato": "2026-06-26",
-  "dato_norsk": "Fredag 26. juni 2026",
-  "generert": "2026-06-27T21:32:14Z",
-  "antall_kamper": 6,
+  "dato": "2026-06-27",
+  "dato_norsk": "Lørdag 27. juni 2026",
+  "generert": "2026-06-27T22:01:50Z",
+  "antall_kamper": 4,
   "kamper": [
     {
-      "kamp_id": "Japan_Sweden_2026_06_25",
-      "hjemmelag": "Japan",
-      "bortelag": "Sweden",
+      "kamp_id": "Cape_Verde_Saudi_Arabia_2026_06_26",
+      "hjemmelag": "Cape Verde",
+      "bortelag": "Saudi Arabia",
+      "hjemme_score": 0,
+      "borte_score": 0,
+      "gruppe": "H",
+      "recap_tekst": "Cape Verde and Saudi Arabia drew 0-0.\nTheir result tonight, coupled with Spain's victory over La Celeste, has confirmed that the pair will advance.\n\nCabo Verde have penned a FIFA World Cup™ fairy tale of epic proportions by recording a goalless draw with Saudi Arabia to secure their progress from Group H behind pool toppers Spain.\nThe Blue Sharks also memorably held the European champions in their opener before securing a 2-2 draw with Uruguay.\nSaudi Arabia, meanwhile, will prop up the section with two points.\nKey stat: Cabo Verde are the first nation since Chile at France 1998 to make it out of the groups after drawing all of their matches.\nPlayer of the Match: Deroy Duarte (Kapp Verde).",
+      "snippets_raa": [],
+      "serper_kandidater": [],
+      "recap_kvalitet": {
+        "score": 8,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Cape_Verde_Saudi_Arabia_2026_06_26|0-0",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 8,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cabo-verde-saudi-arabia-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
+      },
+      "tippinger": {
+        "eksakt": [],
+        "riktig": [
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 2
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Magnus Børrud",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Atle Johansen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Sjur Revheim",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Bror Ramberg",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Selina Marie Kortvedt",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          }
+        ]
+      }
+    },
+    {
+      "kamp_id": "Uruguay_Spain_2026_06_26",
+      "hjemmelag": "Uruguay",
+      "bortelag": "Spain",
+      "hjemme_score": 0,
+      "borte_score": 1,
+      "gruppe": "H",
+      "recap_tekst": "Spain beat Uruguay 1-0.\nGoals: Baena (42).\n\nComing across the penalty area from the left wing, Baena controlled a low cross from Marcos Llorente and fired a shot toward the Uruguayan goal.\nUruguay have been knocked out of the FIFA World Cup 2026™ at the group stage after Alex Baena's late first-half goal secured top spot in Group H for Spain.\nIt was a dismal end to the competition for Marcelo Biela's men, who substituted goalkeeper Fernando Muslera at half-time after his error led to Baena's strike and who had Agustin Canobbio sent off in injury time.\nAs expected,La Roja had the lion's share of possession for large stretches of the match, and the first half wound down, Spain's possession finally led to a clear goalscoring opportunity.\nKey stat: This is Spain's first victory against Uruguay at the FIFA World Cup. The prior two games ended in a draw.",
+      "snippets_raa": [],
+      "serper_kandidater": [],
+      "recap_kvalitet": {
+        "score": 9,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Uruguay_Spain_2026_06_26|0-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 9,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-spain-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
+      },
+      "tippinger": {
+        "eksakt": [
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 6
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Magnus Børrud",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Atle Johansen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Sjur Revheim",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 1,
+            "tippa_b": 4,
+            "poeng": 2
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 3,
+            "tippa_b": 4,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 1,
+            "tippa_b": 5,
+            "poeng": 2
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Bror Ramberg",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Andreas Handelsby",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Chris Hortman",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Selina Marie Kortvedt",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          }
+        ]
+      }
+    },
+    {
+      "kamp_id": "Egypt_Iran_2026_06_26",
+      "hjemmelag": "Egypt",
+      "bortelag": "Iran",
       "hjemme_score": 1,
       "borte_score": 1,
-      "gruppe": "F",
-      "recap_tekst": "Japan and Sweden drew 1-1.\nGoals: Japan — Maeda (56); Sweden — Elanga (62).\n\nDaizen Maeda and Anthony Elanga traded quick-fire goals as Japan and Sweden advanced to the Round of 32 behind Group F winners the Netherlands.\nA hard-fought draw has taken Japan through to the FIFA World Cup 2026™ knockout stage as Group F runners-up and secured Sweden's spot as one of the eight best third-placed teams.\nThe Samurai Blue arrived at Dallas Stadium knowing a draw would secure a top-two finish, while Sweden needed all three points to leapfrog their opponents into second place.\nJapan soon began to assert control, dictating the tempo and forcing Graham Potter's charges deep inside their own half.\nKey stat: Japan have gone unbeaten in the World Cup group stage for the first time.",
+      "gruppe": "G",
+      "recap_tekst": "Egypt and Iran drew 1-1.\nGoals: Egypt — Saber (5); Iran — Rezaeian (14).\n\nThe Pharaohs head into the knockout rounds unbeaten at World Cup 2026 after drawing their final Group G game with IR Iran, who stay in contention to join them.\nEgypt secured their place in the FIFA World Cup™ knockout phase for the first time in their history after a frantic draw with IR Iran, who must now wait to discover whether the point is enough to send them through as one of the tournament's eight best third-placed teams.\nThe Pharaohs will now face Australia in the Round of 32 as Group G runners-up, while IR Iran's World Cup fate hinges on the outcome of the remaining games in Groups J, K and L.\nEgypt made the perfect start as Mahmoud Saber converted from close range after Alireza Beiranvand could only parry Mohamed Salah's deflected strike.\nKey stat: Prior to World Cup 2026, Egypt had played in three World Cups without winning (D2 L5)",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -19,9 +446,9 @@
         "status": "ok",
         "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
+        "antall_sok": 2,
         "fallback": false,
-        "cache_key": "Japan_Sweden_2026_06_25|1-1",
+        "cache_key": "Egypt_Iran_2026_06_26|1-1",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
@@ -29,22 +456,16 @@
         "referat_fakta_score": 11,
         "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-sweden-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/egypt-ir-iran-match-report-highlights",
         "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [
           {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 6
-          },
-          {
-            "navn": "Alex Myrvokd",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 6
@@ -56,13 +477,13 @@
             "poeng": 6
           },
           {
-            "navn": "Thomas Lindland",
+            "navn": "Atle Johansen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 6
           },
           {
-            "navn": "Geir Magne Evensen",
+            "navn": "Ulf-Morten Johansen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 6
@@ -70,13 +491,19 @@
         ],
         "riktig": [
           {
-            "navn": "Chris Hortman",
-            "tippa_h": 3,
-            "tippa_b": 3,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 2
           },
           {
-            "navn": "Selina Marie Kortvedt",
+            "navn": "Bror Ramberg",
+            "tippa_h": 0,
+            "tippa_b": 0,
+            "poeng": 2
+          },
+          {
+            "navn": "Andreas Handelsby",
             "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 2
@@ -84,111 +511,105 @@
         ],
         "bom": [
           {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 1,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Alexander",
-            "tippa_h": 2,
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Anders Rikheim",
             "tippa_h": 2,
-            "tippa_b": 0,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 1,
-            "tippa_b": 2,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Olympus fc",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 3,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Arne Kristian Johansen",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alex Myrvokd",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 1,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Jorgen Lindland",
             "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_b": 3,
             "poeng": 0
           },
           {
             "navn": "Magnus Børrud",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 3,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Rickard Jacobsson",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Atle Johansen",
-            "tippa_h": 1,
-            "tippa_b": 2,
+            "tippa_h": 2,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Sjur Revheim",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
           },
           {
             "navn": "Sebastian Luranc",
-            "tippa_h": 2,
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
             "tippa_h": 1,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 0,
-            "tippa_b": 2,
             "poeng": 0
           },
           {
@@ -198,34 +619,40 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
+            "navn": "sergio gomes",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Jakob Rødahl Thingnes",
             "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "sergio gomes",
+            "navn": "Chris Hortman",
             "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 2,
-            "tippa_b": 0,
+            "navn": "Selina Marie Kortvedt",
+            "tippa_h": 1,
+            "tippa_b": 3,
             "poeng": 0
           }
         ]
       }
     },
     {
-      "kamp_id": "Tunisia_Netherlands_2026_06_25",
-      "hjemmelag": "Tunisia",
-      "bortelag": "Netherlands",
+      "kamp_id": "New_Zealand_Belgium_2026_06_26",
+      "hjemmelag": "New Zealand",
+      "bortelag": "Belgium",
       "hjemme_score": 1,
-      "borte_score": 3,
-      "gruppe": "F",
-      "recap_tekst": "Netherlands beat Tunisia 3-1.\nGoals: Tunisia — Mastouri (54); Netherlands — Skhiri (3), Brobbey (7) and Van Hecke (62).\n\nThe Netherlands clinched top spot in Group F and set up a Round of 32 meeting with Morocco in Monterrey on 29 June as they overcame Tunisia at Kansas City Stadium.\nRonald Koeman’s men needed just three minutes to break the deadlock against their already-eliminated opponents, with captain Ellyes Skhiri slicing into his own net from Denzel Dumfries’ cross as he looked to prevent the ball reaching Brian Brobbey.\nRonald Koeman's side grabbed two early goals to help secure top spot in Group F, while the Eagles of Carthage depart the World Cup without a point.\nKey stat: This was the first time in their 58 World Cup matches that the Netherlands have scored two goals in the opening seven minutes of a game.",
+      "borte_score": 5,
+      "gruppe": "G",
+      "recap_tekst": "Belgium beat New Zealand 5-1.\nGoals: New Zealand — Just (84); Belgium — Trossard (28, 50), De Bruyne (66), Lukaku (86) and Saelemaekers (90+4).\n\nBelgium dominated proceedings from the first whistle at BC Place Vancouver, and Leandro Trossard opened the scoring in the 28th minute when he nudged home from inside the six-yard box after New Zealand had failed to deal with an in-swinging corner from the left.\nGoals from Leandro Trossard, Kevin De Bruyne, Romelu Lukaku, and Alexis Saelemaekers sent the Red Devils into the Round of 32 and New Zealand home early.\nA last-gasp header from substitute Romelu Lukaku secured Belgium top spot on a rollercoaster day of action in Group G at the FIFA World Cup 2026™, with New Zealand being eliminated in the process.\nKey stat: Thibaut Courtois, with his 18th appearance, has eclipsed Enzo Scifo to go outright first in terms of Belgium games at the World Cup.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -235,7 +662,7 @@
         "source_type": "article_report",
         "antall_sok": 1,
         "fallback": false,
-        "cache_key": "Tunisia_Netherlands_2026_06_25|1-3",
+        "cache_key": "New_Zealand_Belgium_2026_06_26|1-5",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
@@ -245,729 +672,130 @@
         "next_retry_at": "",
         "retry_antall": 1,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-netherlands-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/new-zealand-belgium-match-report-highlights",
         "mangler": [],
-        "offisiell_kilde_sokt": []
-      },
-      "tippinger": {
-        "eksakt": [
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 6
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 6
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 6
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 6
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 6
-          }
-        ],
-        "riktig": [
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 0,
-            "tippa_b": 4,
-            "poeng": 2
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 0,
-            "tippa_b": 4,
-            "poeng": 2
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Rickard Jacobsson",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Atle Johansen",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 0,
-            "tippa_b": 5,
-            "poeng": 2
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 4,
-            "poeng": 2
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Selina Marie Kortvedt",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 2
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Magnus Børrud",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          }
-        ]
-      }
-    },
-    {
-      "kamp_id": "Paraguay_Australia_2026_06_25",
-      "hjemmelag": "Paraguay",
-      "bortelag": "Australia",
-      "hjemme_score": 0,
-      "borte_score": 0,
-      "gruppe": "D",
-      "recap_tekst": "Paraguay and Australia drew 0-0.\nLa Albirroja and the Socceroos played out an energetic affair in California with no winner.\n\nThe draw sends Australia through to the knockout phase.\nAustraliaattacked but Paraguay battened down the hatches in a spirited final Group D match of the FIFA World Cup 2026™ that sent the Socceroos through to the Round of 32 as runners-up.\nIrvine tested Orlando Gill early, firing a fizzing shot at goal just three minutes into the match which the Paraguayan netminder was able to parry over the crossbar.\nKey stat: This is only Australia's second goalless draw in its last 23 matches at the FIFA World Cup.",
-      "snippets_raa": [],
-      "serper_kandidater": [],
-      "recap_kvalitet": {
-        "score": 7,
-        "status": "ok",
-        "grunnlag": "fifa_fulltekst",
-        "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": false,
-        "cache_key": "Paraguay_Australia_2026_06_25|0-0",
-        "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 7,
-        "venter_pa_bedre_kilde": false,
-        "next_retry_at": "",
-        "retry_antall": 1,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-australia-match-report-highlights",
-        "mangler": [],
-        "offisiell_kilde_sokt": []
-      },
-      "tippinger": {
-        "eksakt": [
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 6
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 6
-          }
-        ],
-        "riktig": [
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Selina Marie Kortvedt",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 2
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Magnus Børrud",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Rickard Jacobsson",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Atle Johansen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 0
-          }
-        ]
-      }
-    },
-    {
-      "kamp_id": "Turkey_USA_2026_06_25",
-      "hjemmelag": "Turkey",
-      "bortelag": "USA",
-      "hjemme_score": 3,
-      "borte_score": 2,
-      "gruppe": "D",
-      "recap_tekst": "Turkey beat USA 3-2.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
-      "snippets_raa": [],
-      "serper_kandidater": [],
-      "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 100,
-        "fallback": true,
-        "cache_key": "Turkey_USA_2026_06_25|3-2",
-        "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
-        "next_retry_at": "",
-        "retry_antall": 100,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkey-united-states-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [],
         "riktig": [
           {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Anders Rikheim",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
             "navn": "Olympus fc",
-            "tippa_h": 2,
-            "tippa_b": 0,
+            "tippa_h": 0,
+            "tippa_b": 2,
             "poeng": 2
           },
           {
             "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 1,
+            "tippa_b": 4,
             "poeng": 2
           },
           {
             "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 0,
+            "tippa_h": 0,
+            "tippa_b": 1,
             "poeng": 2
           },
           {
             "navn": "Alex Myrvokd",
-            "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Jorgen Lindland",
+            "tippa_h": 1,
+            "tippa_b": 3,
             "poeng": 2
           },
           {
             "navn": "Magnus Børrud",
-            "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Rickard Jacobsson",
+            "tippa_h": 1,
+            "tippa_b": 3,
             "poeng": 2
           },
           {
             "navn": "Atle Johansen",
-            "tippa_h": 2,
+            "tippa_h": 0,
             "tippa_b": 1,
+            "poeng": 2
+          },
+          {
+            "navn": "Sjur Revheim",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 2
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 3,
             "poeng": 2
           },
           {
             "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 2
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 0,
+            "tippa_b": 3,
             "poeng": 2
           },
           {
             "navn": "Marita Hauge Gjerde",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 2
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Rickard Jacobsson",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Chris Hortman",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Selina Marie Kortvedt",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 0
-          }
-        ]
-      }
-    },
-    {
-      "kamp_id": "Norway_France_2026_06_26",
-      "hjemmelag": "Norway",
-      "bortelag": "France",
-      "hjemme_score": 1,
-      "borte_score": 4,
-      "gruppe": "I",
-      "recap_tekst": "France beat Norway 4-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
-      "snippets_raa": [],
-      "serper_kandidater": [],
-      "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 60,
-        "fallback": true,
-        "cache_key": "Norway_France_2026_06_26|1-4",
-        "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
-        "next_retry_at": "",
-        "retry_antall": 60,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
-        "offisiell_kilde_sokt": []
-      },
-      "tippinger": {
-        "eksakt": [],
-        "riktig": [
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Rickard Jacobsson",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 2
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Andreas Handelsby",
-            "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 2
           },
@@ -978,309 +806,47 @@
             "poeng": 2
           },
           {
-            "navn": "Chris Hortman",
-            "tippa_h": 1,
+            "navn": "Jakob Rødahl Thingnes",
+            "tippa_h": 0,
             "tippa_b": 3,
             "poeng": 2
           },
           {
             "navn": "Selina Marie Kortvedt",
-            "tippa_h": 1,
-            "tippa_b": 3,
+            "tippa_h": 0,
+            "tippa_b": 2,
             "poeng": 2
           }
         ],
         "bom": [
           {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Magnus Børrud",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Atle Johansen",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Geir Magne Evensen",
             "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 4,
-            "tippa_b": 2,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
             "navn": "Bror Ramberg",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Jakob Rødahl Thingnes",
             "tippa_h": 3,
             "tippa_b": 3,
             "poeng": 0
-          }
-        ]
-      }
-    },
-    {
-      "kamp_id": "Senegal_Iraq_2026_06_26",
-      "hjemmelag": "Senegal",
-      "bortelag": "Iraq",
-      "hjemme_score": 5,
-      "borte_score": 0,
-      "gruppe": "I",
-      "recap_tekst": "Senegal beat Iraq 5-0.\nGoals: Habib Diarra (4), Ismaila Sarr (56), Pape Gueye (59, 71) and Iliman Ndiaye (82).\n\nSenegal gave themselves hope of extending their stay at the FIFA World Cup™ with an emphatic 5-0 win over Iraq as the two nations met for the first time on football's biggest stage in the final Group I clash in Toronto.\nThe Lions of Teranga scored their way into contention for the last 32 of the FIFA World Cup 2026 with a goals fest against Iraq in Toronto.\nSenegal took the lead within four minutes of kick-off after Abdoulaye Seck nodded the ball in the direction of the net from a corner kick, with Habid Diarra getting the final touch.\nIraq were reduced to ten men shortly after falling behind when Rebin Sulaka was deemed to have denied Sadio Mane a clear goalscoring opportunity.\nKey stat: Senegal are featuring at the global finals for the third consecutive edition, while it’s just a second outing for an Iraq side that lost all three group-stage matches on their debut at Mexico 1986.",
-      "snippets_raa": [],
-      "serper_kandidater": [],
-      "recap_kvalitet": {
-        "score": 13,
-        "status": "ok",
-        "grunnlag": "fifa_fulltekst",
-        "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": false,
-        "cache_key": "Senegal_Iraq_2026_06_26|5-0",
-        "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 13,
-        "venter_pa_bedre_kilde": false,
-        "next_retry_at": "",
-        "retry_antall": 1,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-iraq-match-report-highlights",
-        "mangler": [],
-        "offisiell_kilde_sokt": []
-      },
-      "tippinger": {
-        "eksakt": [
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 5,
-            "tippa_b": 0,
-            "poeng": 6
-          }
-        ],
-        "riktig": [
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Anders Rikheim",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Jorgen Lindland",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Magnus Børrud",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 2
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 3,
-            "tippa_b": 2,
-            "poeng": 2
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 2
           },
           {
             "navn": "Andreas Handelsby",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 2
-          },
-          {
-            "navn": "Selina Marie Kortvedt",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 2
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Rickard Jacobsson",
             "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Atle Johansen",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Sjur Revheim",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Bror Ramberg",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
+            "tippa_h": 3,
             "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "Jakob Rødahl Thingnes",
-            "tippa_h": 2,
-            "tippa_b": 3,
+            "navn": "sergio gomes",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -1298,55 +864,55 @@
       "navn": "Vegard Hammervold Midtbø",
       "plass": 1,
       "poeng_totalt": 112,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 10
     },
     {
       "navn": "Pål André Nilsen",
       "plass": 2,
       "poeng_totalt": 110,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 2
     },
     {
       "navn": "Alexander",
       "plass": 3,
       "poeng_totalt": 106,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 2
     },
     {
       "navn": "Anders Rikheim",
       "plass": 4,
       "poeng_totalt": 104,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 4
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 5,
       "poeng_totalt": 104,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 4
     },
     {
       "navn": "Olympus fc",
       "plass": 6,
       "poeng_totalt": 104,
-      "poeng_i_dag": 8
+      "poeng_i_dag": 4
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 7,
       "poeng_totalt": 102,
-      "poeng_i_dag": 12
+      "poeng_i_dag": 2
     },
     {
       "navn": "Ken Arne Hansen",
       "plass": 8,
       "poeng_totalt": 98,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 8
     },
     {
       "navn": "Alex Myrvokd",
       "plass": 9,
       "poeng_totalt": 96,
-      "poeng_i_dag": 14
+      "poeng_i_dag": 6
     },
     {
       "navn": "Diyan K.",
@@ -1358,13 +924,13 @@
       "navn": "Bjørnar Tallaksrud",
       "plass": 11,
       "poeng_totalt": 86,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 2
     },
     {
       "navn": "Jorgen Lindland",
       "plass": 12,
       "poeng_totalt": 86,
-      "poeng_i_dag": 12
+      "poeng_i_dag": 4
     },
     {
       "navn": "Magnus Børrud",
@@ -1376,43 +942,43 @@
       "navn": "Rickard Jacobsson",
       "plass": 14,
       "poeng_totalt": 86,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 6
     },
     {
       "navn": "Atle Johansen",
       "plass": 15,
       "poeng_totalt": 84,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 10
     },
     {
       "navn": "Sjur Revheim",
       "plass": 16,
       "poeng_totalt": 84,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 4
     },
     {
       "navn": "Thomas Lindland",
       "plass": 17,
       "poeng_totalt": 84,
-      "poeng_i_dag": 12
+      "poeng_i_dag": 4
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 18,
       "poeng_totalt": 82,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 4
     },
     {
       "navn": "Sondre Garstad",
       "plass": 19,
       "poeng_totalt": 80,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 2
     },
     {
       "navn": "Geir Magne Evensen",
       "plass": 20,
       "poeng_totalt": 78,
-      "poeng_i_dag": 12
+      "poeng_i_dag": 0
     },
     {
       "navn": "Marita Hauge Gjerde",
@@ -1430,7 +996,7 @@
       "navn": "Andreas Handelsby",
       "plass": 23,
       "poeng_totalt": 72,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 2
     },
     {
       "navn": "Anders Sundero",
@@ -1442,7 +1008,7 @@
       "navn": "Ulf-Morten Johansen",
       "plass": 25,
       "poeng_totalt": 70,
-      "poeng_i_dag": 4
+      "poeng_i_dag": 8
     },
     {
       "navn": "sergio gomes",
@@ -1460,13 +1026,13 @@
       "navn": "Chris Hortman",
       "plass": 28,
       "poeng_totalt": 56,
-      "poeng_i_dag": 8
+      "poeng_i_dag": 0
     },
     {
       "navn": "Selina Marie Kortvedt",
       "plass": 29,
       "poeng_totalt": 54,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 2
     }
   ]
 }
