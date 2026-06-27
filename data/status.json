@@ -19,16 +19,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1E_3A_B_C_D_F_2026_06_29",
-        "hjemme": "1E",
-        "borte": "3A/B/C/D/F",
+        "id": "Germany_Paraguay_2026_06_29",
+        "hjemme": "Germany",
+        "borte": "Paraguay",
         "dato": "2026-06-29",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 74,
         "slot_hjemme": "1E",
         "slot_borte": "3A/B/C/D/F",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-06-29T20:30:00Z",
+        "fd_match_id": 537415,
+        "fifa_event_id": "400021513",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Netherlands_Morocco_2026_06_30",
@@ -61,16 +64,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1I_3C_D_F_G_H_2026_06_30",
-        "hjemme": "1I",
-        "borte": "3C/D/F/G/H",
+        "id": "France_Sweden_2026_06_30",
+        "hjemme": "France",
+        "borte": "Sweden",
         "dato": "2026-06-30",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 77,
         "slot_hjemme": "1I",
         "slot_borte": "3C/D/F/G/H",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-06-30T21:00:00Z",
+        "fd_match_id": 537416,
+        "fifa_event_id": "400021523",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Ivory_Coast_Norway_2026_06_30",
@@ -175,16 +181,19 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "1J_2H_2026_07_03",
-        "hjemme": "1J",
-        "borte": "2H",
+        "id": "Argentina_Cape_Verde_2026_07_03",
+        "hjemme": "Argentina",
+        "borte": "Cape Verde",
         "dato": "2026-07-03",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 86,
         "slot_hjemme": "1J",
         "slot_borte": "2H",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-03T22:00:00Z",
+        "fd_match_id": 537427,
+        "fifa_event_id": "400021521",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "1K_3D_E_I_J_L_2026_07_03",
@@ -211,7 +220,7 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 5,
+    "antall_tippebare": 8,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {

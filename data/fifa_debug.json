@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T02:01:04Z",
+  "tidspunkt": "2026-06-27T02:30:54Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -577,14 +577,14 @@
       "fifa_event_id": "400021484",
       "hjemmelag": "Uruguay",
       "bortelag": "Spain",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 1,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "90'+6'"
+      "fifa_match_time": "97'"
     },
     "400021485": {
       "fifa_event_id": "400021485",
@@ -597,7 +597,7 @@
       "borte": 0,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T00:00:00Z",
-      "fifa_match_time": "90'"
+      "fifa_match_time": "96'"
     },
     "400021486": {
       "fifa_event_id": "400021486",
@@ -937,6 +937,19 @@
       "fifa_utcDate": "2026-06-23T23:00:00Z",
       "fifa_match_time": "96'"
     },
+    "400021513": {
+      "fifa_event_id": "400021513",
+      "hjemmelag": "Germany",
+      "bortelag": "Paraguay",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-06-29",
+      "fifa_utcDate": "2026-06-29T20:30:00Z",
+      "fifa_match_time": null
+    },
     "400021514": {
       "fifa_event_id": "400021514",
       "hjemmelag": "Ivory Coast",
@@ -976,6 +989,19 @@
       "fifa_utcDate": "2026-06-28T19:00:00Z",
       "fifa_match_time": null
     },
+    "400021521": {
+      "fifa_event_id": "400021521",
+      "hjemmelag": "Argentina",
+      "bortelag": "Cape Verde",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-03",
+      "fifa_utcDate": "2026-07-03T22:00:00Z",
+      "fifa_match_time": null
+    },
     "400021522": {
       "fifa_event_id": "400021522",
       "hjemmelag": "Netherlands",
@@ -987,6 +1013,19 @@
       "borte": null,
       "fifa_dato": "2026-06-30",
       "fifa_utcDate": "2026-06-30T01:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021523": {
+      "fifa_event_id": "400021523",
+      "hjemmelag": "France",
+      "bortelag": "Sweden",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-06-30",
+      "fifa_utcDate": "2026-06-30T21:00:00Z",
       "fifa_match_time": null
     },
     "400021524": {
