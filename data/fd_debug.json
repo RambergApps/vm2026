@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T00:01:05Z",
+  "tidspunkt": "2026-06-27T00:30:53Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -644,34 +644,6 @@
       "fd_dato": "2026-06-21",
       "fd_utcDate": "2026-06-21T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Uruguay_Cape_Verde_2026_06_21"
-    },
-    "537373": {
-      "fd_match_id": 537373,
-      "fd_hjemmelag": "Uruguay",
-      "fd_bortelag": "Spain",
-      "hjemmelag_normalisert": "Uruguay",
-      "bortelag_normalisert": "Spain",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-27",
-      "fd_utcDate": "2026-06-27T00:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Uruguay_Spain_2026_06_27"
-    },
-    "537374": {
-      "fd_match_id": 537374,
-      "fd_hjemmelag": "Cape Verde Islands",
-      "fd_bortelag": "Saudi Arabia",
-      "hjemmelag_normalisert": "Cape Verde",
-      "bortelag_normalisert": "Saudi Arabia",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-27",
-      "fd_utcDate": "2026-06-27T00:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Cape_Verde_Saudi_Arabia_2026_06_27"
     },
     "537391": {
       "fd_match_id": 537391,
