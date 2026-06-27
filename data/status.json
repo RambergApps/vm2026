@@ -208,19 +208,22 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "2D_2G_2026_07_03",
-        "hjemme": "2D",
-        "borte": "2G",
+        "id": "Australia_Egypt_2026_07_03",
+        "hjemme": "Australia",
+        "borte": "Egypt",
         "dato": "2026-07-03",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 88,
         "slot_hjemme": "2D",
         "slot_borte": "2G",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-03T18:00:00Z",
+        "fd_match_id": 537428,
+        "fifa_event_id": "400021515",
+        "tippebar": true,
+        "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 8,
+    "antall_tippebare": 9,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {

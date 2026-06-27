@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-27T05:01:05Z",
-  "sist_oppdatert_grupper": "2026-06-27T05:01:05Z",
-  "sist_oppdatert_utslag": "2026-06-27T05:01:05Z",
+  "sist_oppdatert": "2026-06-27T05:30:56Z",
+  "sist_oppdatert_grupper": "2026-06-27T05:30:56Z",
+  "sist_oppdatert_utslag": "2026-06-27T05:30:56Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -1093,13 +1093,13 @@
       "utcDate": "2026-07-03T18:00:00Z",
       "dato": "2026-07-03",
       "hjemme": "Australia",
-      "borte": "2G",
+      "borte": "Egypt",
       "hjemme_kode": "AUS",
-      "borte_kode": "",
+      "borte_kode": "EGY",
       "hjemme_kjent": true,
-      "borte_kjent": false,
+      "borte_kjent": true,
       "hjemme_placeholder": "",
-      "borte_placeholder": "2G",
+      "borte_placeholder": "",
       "status": "1",
       "hjemme_score": null,
       "borte_score": null

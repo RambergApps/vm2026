@@ -1,25 +1,4 @@
 {
-  "sist_sjekket": "2026-06-27T05:01:05Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Egypt_Iran_2026_06_26",
-      "hjemmelag": "Egypt",
-      "bortelag": "Iran",
-      "dato": "2026-06-26",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "New_Zealand_Belgium_2026_06_26",
-      "hjemmelag": "New Zealand",
-      "bortelag": "Belgium",
-      "dato": "2026-06-26",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-27T05:30:56Z",
+  "kamper": []
 }

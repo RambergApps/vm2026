@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-27T05:01:03Z",
+  "generert": "2026-06-27T05:30:55Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -21,8 +21,8 @@
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
-    "matched": 8,
-    "pending": 8,
+    "matched": 9,
+    "pending": 7,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
     "motstridende_fifa_api_duplikater": [],
@@ -695,23 +695,28 @@
       "fifa_tid": "18:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Australia",
-      "fifa_borte": "2G",
+      "fifa_borte": "Egypt",
       "fifa_hjemme_kode": "AUS",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "EGY",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "2G",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 85,
       "fd_match_id": 537428,
       "fd_utcDate": "2026-07-03T18:00:00Z",
       "fd_dato": "2026-07-03",
       "fd_hjemmelag": "Australia",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Australia_Egypt_2026_07_03",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Australia",
+      "kamp_bortelag": "Egypt",
+      "kamp_dato": "2026-07-03",
+      "kamp_utcDate": "2026-07-03T18:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -721,7 +726,8 @@
           "borte": "2G",
           "dato": "2026-07-03"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     }
   ]
 }
