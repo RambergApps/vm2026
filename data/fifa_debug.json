@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T22:01:05Z",
+  "tidspunkt": "2026-06-27T22:30:57Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -792,7 +792,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T23:30:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021501": {
       "fifa_event_id": "400021501",
@@ -857,7 +857,7 @@
       "borte": null,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T23:30:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021506": {
       "fifa_event_id": "400021506",
@@ -893,10 +893,10 @@
       "fifa_status_raw": 3,
       "ferdig": false,
       "hjemme": 0,
-      "borte": 0,
+      "borte": 2,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": ""
+      "fifa_match_time": "71'"
     },
     "400021509": {
       "fifa_event_id": "400021509",
@@ -909,7 +909,7 @@
       "borte": 0,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T21:00:00Z",
-      "fifa_match_time": ""
+      "fifa_match_time": "68'"
     },
     "400021510": {
       "fifa_event_id": "400021510",
