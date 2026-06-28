@@ -1,0 +1,150 @@
+{
+  "bonus": {
+    "id": "antall_uavgjort",
+    "svar": 4
+  },
+  "helhetsbonus": {
+    "flest_maal_lag": "France",
+    "golden_boot": "Kylian Mbappe",
+    "totale_maal_utslag": "47_77"
+  },
+  "meta": {
+    "deltaker_id": "paal_andr_nilsen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-06-28T09:38:57.886Z",
+    "navn": "Pål André Nilsen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-28T09:39:08Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Canada",
+      "hjemme": 1,
+      "hjemmelag": "South Africa",
+      "kamp_id": "South_Africa_Canada_2026_06_28",
+      "match_no": 73
+    },
+    {
+      "borte": 0,
+      "bortelag": "Paraguay",
+      "hjemme": 3,
+      "hjemmelag": "Germany",
+      "kamp_id": "Germany_Paraguay_2026_06_29",
+      "match_no": 74
+    },
+    {
+      "borte": 2,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "Netherlands",
+      "kamp_id": "Netherlands_Morocco_2026_06_30",
+      "match_no": 75
+    },
+    {
+      "borte": 1,
+      "bortelag": "Japan",
+      "hjemme": 2,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Japan_2026_06_29",
+      "match_no": 76
+    },
+    {
+      "borte": 1,
+      "bortelag": "Sweden",
+      "hjemme": 3,
+      "hjemmelag": "France",
+      "kamp_id": "France_Sweden_2026_06_30",
+      "match_no": 77
+    },
+    {
+      "borte": 2,
+      "bortelag": "Norway",
+      "hjemme": 1,
+      "hjemmelag": "Ivory Coast",
+      "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+      "match_no": 78
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ecuador",
+      "hjemme": 1,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_Ecuador_2026_07_01",
+      "match_no": 79
+    },
+    {
+      "borte": 0,
+      "bortelag": "DR Congo",
+      "hjemme": 2,
+      "hjemmelag": "England",
+      "kamp_id": "England_DR_Congo_2026_07_01",
+      "match_no": 80
+    },
+    {
+      "borte": 0,
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme": 2,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "match_no": 81
+    },
+    {
+      "borte": 1,
+      "bortelag": "Senegal",
+      "hjemme": 1,
+      "hjemmelag": "Belgium",
+      "kamp_id": "Belgium_Senegal_2026_07_01",
+      "match_no": 82
+    },
+    {
+      "borte": 1,
+      "bortelag": "Croatia",
+      "hjemme": 1,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Croatia_2026_07_02",
+      "match_no": 83
+    },
+    {
+      "borte": 0,
+      "bortelag": "Austria",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Austria_2026_07_02",
+      "match_no": 84
+    },
+    {
+      "borte": 1,
+      "bortelag": "Algeria",
+      "hjemme": 2,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Algeria_2026_07_03",
+      "match_no": 85
+    },
+    {
+      "borte": 0,
+      "bortelag": "Cape Verde",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+      "match_no": 86
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ghana",
+      "hjemme": 2,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "match_no": 87
+    },
+    {
+      "borte": 1,
+      "bortelag": "Egypt",
+      "hjemme": 1,
+      "hjemmelag": "Australia",
+      "kamp_id": "Australia_Egypt_2026_07_03",
+      "match_no": 88
+    }
+  ]
+}
