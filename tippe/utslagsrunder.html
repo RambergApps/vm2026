@@ -965,13 +965,18 @@ function erKampTippebar(kamp) {
   return kickoff === null || Date.now() < kickoff;
 }
 
+function kampHarStartet(kamp) {
+  const kickoff = parseKickoff(kamp);
+  return kickoff !== null && Date.now() >= kickoff;
+}
+
 function kampStatusTekst(kamp) {
   if (erKampTippebar(kamp)) {
     return erKampLevert(kamp.id)
       ? "✓ Tips lagret – kan oppdateres frem til avspark"
       : "Åpen for tipping";
   }
-  if (kamp?.tippe_status === "startet") return "Tippingen er stengt – kampen har startet";
+  if (kamp?.tippe_status === "startet" || kampHarStartet(kamp)) return "Tippingen er stengt – kampen har startet";
   if (kamp?.tippe_status === "mangler_avsparkstid") return "Venter på bekreftet avsparkstid";
   return "Lagene er ikke klare ennå";
 }
