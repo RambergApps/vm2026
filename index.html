@@ -802,6 +802,69 @@ body {
 .recap-poeng.positiv { color: var(--gold); }
 .recap-poeng.null { color: var(--muted); }
 .recap-tomt { color: var(--muted); font-size: 13px; padding: 13px 2px 2px; }
+
+.recap-tipstatus {
+  margin-bottom: 18px;
+  border: 1px solid rgba(239,43,45,.30);
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(239,43,45,.09), rgba(255,214,0,.035));
+  padding: 13px 14px;
+}
+.recap-tipstatus.ok {
+  border-color: rgba(0,230,118,.28);
+  background: linear-gradient(135deg, rgba(0,230,118,.075), rgba(255,214,0,.025));
+}
+.recap-tipstatus-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.recap-tipstatus-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.recap-tipstatus-runde {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.recap-tipstatus-tekst {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.recap-tipstatus-link {
+  display: inline-flex;
+  margin-top: 10px;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.recap-tipstatus-link:hover { background: #ff3b3d; }
+@media (max-width: 560px) {
+  .recap-tipstatus-top { align-items: flex-start; }
+  .recap-tipstatus-runde { font-size: 10px; }
+}
 @media (max-width: 560px) {
   .recap-rad { grid-template-columns: minmax(0,1fr) auto; }
   .recap-poeng { grid-column: 2; }
@@ -1317,6 +1380,7 @@ function initBakgrunnsmusikk() {
 const VIEWER_KEY = "vm2026_viewer_id";
 const RECAP_KEY_PREFIX = "vm2026_recap_last_shown_";
 const RECAP_INTERVAL_MS = 5 * 60 * 60 * 1000;
+const INNLEVERINGSSTATUS_URL = "data/innleveringsstatus.json";
 let modalKanLukkes = true;
 let modalOnClose = null;
 
@@ -1454,6 +1518,151 @@ function recapData(deltaker) {
   return { idag, igaar, gaarsdagens, dagens };
 }
 
+
+const TIPPE_RUNDER = ["r32", "r16", "qf", "sf", "final"];
+const HELHETSBONUS_FELT = ["flest_maal_lag", "totale_maal_utslag", "golden_boot"];
+
+function profilKickoffMillis(kamp) {
+  const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato || "";
+  if (!raw) return null;
+  const value = Date.parse(String(raw).includes("T") ? raw : String(raw) + "T00:00:00Z");
+  return Number.isFinite(value) ? value : null;
+}
+
+function profilKampErAapen(kamp) {
+  if (!kamp || kamp.tippebar !== true) return false;
+  const kickoff = profilKickoffMillis(kamp);
+  return kickoff === null || Date.now() < kickoff;
+}
+
+function profilBonusFrist(runde) {
+  const tider = (STATUS_DATA?.[runde]?.kamper || [])
+    .map(profilKickoffMillis)
+    .filter(value => Number.isFinite(value));
+  if (tider.length) return Math.min(...tider);
+  const fallback = Date.parse(STATUS_DATA?.[runde]?.neste_frist || STATUS_DATA?.[runde]?.frist || "");
+  return Number.isFinite(fallback) ? fallback : null;
+}
+
+function profilBonusErAapen(runde) {
+  const frist = profilBonusFrist(runde);
+  return frist !== null && Date.now() < frist;
+}
+
+function gjeldendeTippeRunde() {
+  return TIPPE_RUNDER.find(runde => {
+    const kamper = STATUS_DATA?.[runde]?.kamper || [];
+    return kamper.some(profilKampErAapen) || profilBonusErAapen(runde);
+  }) || null;
+}
+
+function innleveringForDeltaker(deltaker) {
+  const id = deltaker?.deltaker_id;
+  if (!id) return null;
+  const root = INNLEVERINGSSTATUS_DATA;
+  if (!root) return null;
+  return root.deltakere?.[id] || root[id] || null;
+}
+
+function statusRundeForDeltaker(deltaker, runde) {
+  const innlevering = innleveringForDeltaker(deltaker) || {};
+  return innlevering.runder?.[runde] || innlevering[runde] || {};
+}
+
+function lokaleLeverteKamperForDeltaker(deltaker) {
+  try {
+    const all = JSON.parse(localStorage.getItem("vm2026_leverte_kamper") || "{}") || {};
+    const id = deltaker?.deltaker_id || "";
+    const navn = String(deltaker?.navn || "").trim().toLowerCase();
+    return { ...(all[navn] || {}), ...(all[id] || {}) };
+  } catch (error) {
+    return {};
+  }
+}
+
+function kampIdFraStatus(kamp) {
+  return String(kamp?.id || kamp?.kamp_id || "");
+}
+
+function harLevertKampTips(deltaker, runde, kamp) {
+  const kid = kampIdFraStatus(kamp);
+  if (!kid) return false;
+  const rundeStatus = statusRundeForDeltaker(deltaker, runde);
+  const serverKamper = Array.isArray(rundeStatus.kamper) ? rundeStatus.kamper.map(String) : [];
+  if (serverKamper.includes(kid)) return true;
+  const lokale = lokaleLeverteKamperForDeltaker(deltaker);
+  return Boolean(lokale[kid]);
+}
+
+function harLevertRundebonus(deltaker, runde) {
+  const rundeStatus = statusRundeForDeltaker(deltaker, runde);
+  return Boolean(rundeStatus.bonus);
+}
+
+function harLevertHelhetsbonus(deltaker, felt) {
+  const rundeStatus = statusRundeForDeltaker(deltaker, "r32");
+  return Boolean(rundeStatus.helhetsbonus?.[felt]);
+}
+
+function manglendeTippeStatus(deltaker) {
+  const runde = gjeldendeTippeRunde();
+  if (!runde) return null;
+
+  const aapneKamper = (STATUS_DATA?.[runde]?.kamper || []).filter(profilKampErAapen);
+  const manglerKamper = aapneKamper.filter(kamp => !harLevertKampTips(deltaker, runde, kamp)).length;
+
+  let manglerBonus = 0;
+  if (profilBonusErAapen(runde) && !harLevertRundebonus(deltaker, runde)) manglerBonus += 1;
+  if (runde === "r32" && profilBonusErAapen("r32")) {
+    manglerBonus += HELHETSBONUS_FELT.filter(felt => !harLevertHelhetsbonus(deltaker, felt)).length;
+  }
+
+  return {
+    runde,
+    rundeNavn: RUNDE_NAVN[runde] || runde.toUpperCase(),
+    aapneKamper: aapneKamper.length,
+    bonusAapen: profilBonusErAapen(runde),
+    manglerKamper,
+    manglerBonus,
+    manglerTotalt: manglerKamper + manglerBonus
+  };
+}
+
+function antallTekst(antall, entall, flertall) {
+  return `${antall} ${antall === 1 ? entall : flertall}`;
+}
+
+function byggManglendeTipsHTML(deltaker) {
+  if (!INNLEVERINGSSTATUS_DATA) return "";
+  const status = manglendeTippeStatus(deltaker);
+  if (!status) return "";
+
+  if (status.manglerTotalt === 0) {
+    return `<div class="recap-tipstatus ok">
+      <div class="recap-tipstatus-top">
+        <div class="recap-tipstatus-title">Alle åpne tips er levert</div>
+        <div class="recap-tipstatus-runde">${escHTML(status.rundeNavn)}</div>
+      </div>
+      <div class="recap-tipstatus-tekst">Du er ajour for nåværende runde.</div>
+    </div>`;
+  }
+
+  const deler = [];
+  if (status.manglerKamper > 0) deler.push(antallTekst(status.manglerKamper, "kamptips", "kamptips"));
+  if (status.manglerBonus > 0) deler.push(antallTekst(status.manglerBonus, "bonusspørsmål", "bonusspørsmål"));
+  const tekst = deler.join(" og ") + " gjenstår.";
+  const lenke = `tippe/utslagsrunder.html?runde=${encodeURIComponent(status.runde)}`;
+
+  return `<div class="recap-tipstatus">
+    <div class="recap-tipstatus-top">
+      <div class="recap-tipstatus-title">Du mangler tips</div>
+      <div class="recap-tipstatus-runde">${escHTML(status.rundeNavn)}</div>
+    </div>
+    <div class="recap-tipstatus-tekst">${escHTML(tekst)}</div>
+    <a class="recap-tipstatus-link" href="${escHTML(lenke)}">Gå til utslagsrunder</a>
+  </div>`;
+}
+
 function recapKampRad(item, visPoeng) {
   const r = item.resultat;
   const t = item.tips;
@@ -1478,7 +1687,8 @@ function visRecapModal(force = false) {
     return;
   }
   const data = recapData(deltaker);
-  if (!data.gaarsdagens.length && !data.dagens.length) return;
+  const tipstatusHTML = byggManglendeTipsHTML(deltaker);
+  if (!data.gaarsdagens.length && !data.dagens.length && !tipstatusHTML) return;
 
   const key = RECAP_KEY_PREFIX + deltaker.deltaker_id;
   const sistVist = Number(localStorage.getItem(key) || 0);
@@ -1498,7 +1708,7 @@ function visRecapModal(force = false) {
     <div class="modal-header">
       <div>
         <div class="modal-navn">Din VM-oppdatering</div>
-        <div class="modal-meta">Gårsdagens poeng og dagens tips</div>
+        <div class="modal-meta">Status, gårsdagens poeng og dagens tips</div>
       </div>
       <button class="modal-lukk" onclick="lukkModal()">✕</button>
     </div>
@@ -1507,6 +1717,7 @@ function visRecapModal(force = false) {
       <button type="button" class="recap-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>
     </div>
     <div class="modal-body">
+      ${tipstatusHTML}
       <div class="recap-seksjon">
         <div class="recap-seksjon-tittel"><span>Gårsdagens poengfangst</span><span class="recap-total">+${gaarsPoeng} poeng</span></div>
         ${gaarsHTML}
@@ -1903,6 +2114,7 @@ const flaggLag = navn => FLAGG_LAG[navn] || '';
 // ── TABELL- OG KAMPREFERATDATA ───────────────────────────
 let TABELL_DATA = null;
 let STATUS_DATA = null;
+let INNLEVERINGSSTATUS_DATA = null;
 let KAMPREFERAT_DATA = { kamper: {} };
 let aktivGruppeFilter = 'alle';
 let aktivUtslagsrunde = 'r32';
@@ -1920,6 +2132,7 @@ async function hentJsonFil(url, fallback) {
 
 async function lastTabellData() { TABELL_DATA = await hentJsonFil('data/tabell.json', null); }
 async function lastStatusData() { STATUS_DATA = await hentJsonFil('data/status.json', {}); }
+async function lastInnleveringsstatus() { INNLEVERINGSSTATUS_DATA = await hentJsonFil(INNLEVERINGSSTATUS_URL, null); }
 async function lastKampreferater() { KAMPREFERAT_DATA = await hentJsonFil('data/kampreferater.json', { kamper: {} }); }
 
 function lagNokkel(navn) {
@@ -2616,7 +2829,7 @@ function escHTML(str) {
 
 async function init() {
   initBakgrunnsmusikk();
-  await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastKampreferater()]);
+  await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastInnleveringsstatus(), lastKampreferater()]);
   byggStilling();
   byggTabellFane();
   byggKamperFane();
