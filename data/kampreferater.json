@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T00:12:52Z",
+  "sist_oppdatert": "2026-06-28T00:31:29Z",
   "antall_kamper": 70,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -13209,7 +13209,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 67,
+        "antall_sok": 68,
         "fallback": true,
         "cache_key": "Norway_France_2026_06_26|1-4",
         "serper_score": -100,
@@ -13219,7 +13219,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 67,
+        "retry_antall": 68,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-france-match-report-highlights",
         "mangler": [
@@ -13410,7 +13410,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-28T00:12:51Z"
+      "oppdatert": "2026-06-28T00:31:29Z"
     },
     "Senegal_Iraq_2026_06_26": {
       "kamp_id": "Senegal_Iraq_2026_06_26",
@@ -14953,17 +14953,17 @@
     "Colombia_Portugal_2026_06_27": {
       "kamp_id": "Colombia_Portugal_2026_06_27",
       "canonical_kamp_id": "Colombia_Portugal_2026_06_27",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537407,
+      "fd_utcDate": "2026-06-27T23:30:00Z",
       "hjemmelag": "Colombia",
       "bortelag": "Portugal",
       "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Colombia and Portugal are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Colombia and Portugal are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -15149,22 +15149,22 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-28T00:01:20Z"
+      "oppdatert": "2026-06-28T00:31:04Z"
     },
     "DR_Congo_Uzbekistan_2026_06_27": {
       "kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
       "canonical_kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537408,
+      "fd_utcDate": "2026-06-27T23:30:00Z",
       "hjemmelag": "DR Congo",
       "bortelag": "Uzbekistan",
       "hjemme_score": 0,
       "borte_score": 1,
       "gruppe": "",
       "runde": "gruppe",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Uzbekistan lead DR Congo 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Uzbekistan lead DR Congo 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -15350,7 +15350,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-28T00:01:20Z"
+      "oppdatert": "2026-06-28T00:31:04Z"
     }
   }
 }
