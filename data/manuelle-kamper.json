@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T05:30:58Z",
+  "sist_oppdatert": "2026-06-28T06:30:59Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -16,7 +16,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "2A",
       "slot_borte": "2B"
     },
@@ -35,7 +35,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1E",
       "slot_borte": "3A/B/C/D/F"
     },
@@ -54,7 +54,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1F",
       "slot_borte": "2C"
     },
@@ -73,7 +73,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1C",
       "slot_borte": "2F"
     },
@@ -92,7 +92,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1I",
       "slot_borte": "3C/D/F/G/H"
     },
@@ -111,7 +111,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "2E",
       "slot_borte": "2I"
     },
@@ -130,7 +130,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1A",
       "slot_borte": "3C/E/F/H/I"
     },
@@ -149,7 +149,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1L",
       "slot_borte": "3E/H/I/J/K"
     },
@@ -168,7 +168,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1D",
       "slot_borte": "3B/E/F/I/J"
     },
@@ -187,7 +187,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1G",
       "slot_borte": "3A/E/H/I/J"
     },
@@ -206,7 +206,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "2K",
       "slot_borte": "2L"
     },
@@ -225,7 +225,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1H",
       "slot_borte": "2J"
     },
@@ -244,7 +244,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1B",
       "slot_borte": "3E/F/G/I/J"
     },
@@ -263,7 +263,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1J",
       "slot_borte": "2H"
     },
@@ -282,7 +282,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1K",
       "slot_borte": "3D/E/I/J/L"
     },
@@ -301,7 +301,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "2D",
       "slot_borte": "2G"
     }
