@@ -802,6 +802,61 @@ body {
 .recap-poeng.positiv { color: var(--gold); }
 .recap-poeng.null { color: var(--muted); }
 .recap-tomt { color: var(--muted); font-size: 13px; padding: 13px 2px 2px; }
+.recap-tipstatus {
+  margin-bottom: 18px;
+  border: 1px solid rgba(239,43,45,.32);
+  border-radius: 10px;
+  padding: 12px 13px;
+  background: rgba(239,43,45,.065);
+}
+.recap-tipstatus.ok {
+  border-color: rgba(0,230,118,.34);
+  background: rgba(0,230,118,.075);
+}
+.recap-tipstatus-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.recap-tipstatus-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.recap-tipstatus-round {
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.recap-tipstatus-text {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.recap-tipstatus-action {
+  display: inline-flex;
+  margin-top: 10px;
+  border: 1px solid rgba(239,43,45,.38);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 7px 11px;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.recap-tipstatus-action:hover { filter: brightness(1.06); }
 @media (max-width: 560px) {
   .recap-rad { grid-template-columns: minmax(0,1fr) auto; }
   .recap-poeng { grid-column: 2; }
@@ -1317,6 +1372,9 @@ function initBakgrunnsmusikk() {
 const VIEWER_KEY = "vm2026_viewer_id";
 const RECAP_KEY_PREFIX = "vm2026_recap_last_shown_";
 const RECAP_INTERVAL_MS = 5 * 60 * 60 * 1000;
+const INNLEVERINGSSTATUS_URL = "data/innleveringsstatus.json";
+const STATUS_RUNDER_REKKEFOLGE = ["r32", "r16", "qf", "sf", "final"];
+const HELHETSBONUS_FELT = ["flest_maal_lag", "totale_maal_utslag", "golden_boot"];
 let modalKanLukkes = true;
 let modalOnClose = null;
 
@@ -1437,6 +1495,145 @@ function tipsLookupForDeltaker(deltaker) {
   return lookup;
 }
 
+function innleveringsstatusForDeltaker(deltaker) {
+  const root = INNLEVERINGSSTATUS_DATA?.deltakere || {};
+  return root[deltaker?.deltaker_id] || null;
+}
+
+function lokalUtslagStatusForDeltaker(deltaker) {
+  try {
+    const raw = JSON.parse(localStorage.getItem("vm2026_utslagsrunder") || "{}");
+    if (!raw || raw.deltaker_id !== deltaker?.deltaker_id) return null;
+    return raw;
+  } catch (error) {
+    return null;
+  }
+}
+
+function lokaltLeverteKamperForDeltaker(deltaker) {
+  try {
+    const alle = JSON.parse(localStorage.getItem("vm2026_leverte_kamper") || "{}");
+    const keyNavn = String(deltaker?.navn || "").trim().toLowerCase();
+    return {
+      ...(alle?.[deltaker?.deltaker_id] || {}),
+      ...(keyNavn ? (alle?.[keyNavn] || {}) : {})
+    };
+  } catch (error) {
+    return {};
+  }
+}
+
+function statusKickoffMs(kamp) {
+  const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato;
+  const timestamp = Date.parse(raw || "");
+  return Number.isFinite(timestamp) ? timestamp : null;
+}
+
+function statusKampErApen(kamp) {
+  if (!kamp || kamp.tippebar !== true) return false;
+  const kickoff = statusKickoffMs(kamp);
+  return kickoff === null || Date.now() < kickoff;
+}
+
+function bonusFristMsForRunde(runde) {
+  const tider = (STATUS_DATA?.[runde]?.kamper || [])
+    .map(statusKickoffMs)
+    .filter(Number.isFinite);
+  if (tider.length) return Math.min(...tider);
+  const fallback = Date.parse(STATUS_DATA?.[runde]?.neste_frist || STATUS_DATA?.[runde]?.frist || "");
+  return Number.isFinite(fallback) ? fallback : null;
+}
+
+function bonusErApenForRunde(runde) {
+  const frist = bonusFristMsForRunde(runde);
+  return frist !== null && Date.now() < frist;
+}
+
+function finnGjeldendeUtslagsrunde() {
+  return STATUS_RUNDER_REKKEFOLGE.find(runde => {
+    const data = STATUS_DATA?.[runde];
+    const kamper = data?.kamper || [];
+    return Boolean(data?.aapen && kamper.some(statusKampErApen));
+  }) || null;
+}
+
+function levertKampIdSet(deltaker, runde) {
+  const set = new Set();
+  const statusRunde = innleveringsstatusForDeltaker(deltaker)?.runder?.[runde];
+  (statusRunde?.kamper || []).forEach(id => set.add(String(id)));
+  Object.keys(lokaltLeverteKamperForDeltaker(deltaker) || {}).forEach(id => set.add(String(id)));
+  return set;
+}
+
+function lokalBonusStatus(deltaker, runde) {
+  const raw = lokalUtslagStatusForDeltaker(deltaker);
+  if (!raw) return { bonus: false, helhetsbonus: {} };
+  const bonusSvar = raw.bonusSvar?.[runde]?.svar;
+  const bonus = bonusSvar !== undefined && bonusSvar !== null && String(bonusSvar).trim() !== "";
+  const helhetsbonus = {};
+  HELHETSBONUS_FELT.forEach(felt => {
+    const verdi = raw.helhetsbonus?.[felt];
+    if (verdi !== undefined && verdi !== null && String(verdi).trim() !== "") helhetsbonus[felt] = true;
+  });
+  return { bonus, helhetsbonus };
+}
+
+function manglendeTippeStatus(deltaker) {
+  const runde = finnGjeldendeUtslagsrunde();
+  if (!runde) return null;
+  const kamper = (STATUS_DATA?.[runde]?.kamper || []).filter(statusKampErApen);
+  const leverteKamper = levertKampIdSet(deltaker, runde);
+  const manglerKamper = kamper.filter(kamp => kamp?.id && !leverteKamper.has(String(kamp.id))).length;
+
+  let manglerBonus = 0;
+  if (bonusErApenForRunde(runde)) {
+    const statusRunde = innleveringsstatusForDeltaker(deltaker)?.runder?.[runde] || {};
+    const lokal = lokalBonusStatus(deltaker, runde);
+    if (!statusRunde.bonus && !lokal.bonus) manglerBonus += 1;
+    if (runde === "r32") {
+      HELHETSBONUS_FELT.forEach(felt => {
+        if (!statusRunde.helhetsbonus?.[felt] && !lokal.helhetsbonus?.[felt]) manglerBonus += 1;
+      });
+    }
+  }
+
+  return { runde, manglerKamper, manglerBonus };
+}
+
+function recapKampErLevert(deltaker, resultat) {
+  const runde = resultat?.runde;
+  if (!runde || !STATUS_RUNDER_REKKEFOLGE.includes(runde)) return false;
+  const leverte = levertKampIdSet(deltaker, runde);
+  return [resultat?._canonical, resultat?._key, resultat?.kamp_id, resultat?.canonical_kamp_id, resultat?.alias_for]
+    .filter(Boolean)
+    .some(id => leverte.has(String(id)));
+}
+
+function byggRecapTippeStatusHTML(deltaker) {
+  if (!INNLEVERINGSSTATUS_DATA) return "";
+  const status = manglendeTippeStatus(deltaker);
+  if (!status) return "";
+
+  const harMangler = status.manglerKamper > 0 || status.manglerBonus > 0;
+  const deler = [];
+  if (status.manglerKamper > 0) deler.push(`${status.manglerKamper} kamptips`);
+  if (status.manglerBonus > 0) deler.push(`${status.manglerBonus} bonusspørsmål`);
+  const tekst = harMangler
+    ? `${deler.join(" og ")} gjenstår.`
+    : "Du er ajour for nåværende runde.";
+  const tittel = harMangler ? "Du mangler tips" : "Alle åpne tips er levert";
+  const href = `tippe/utslagsrunder.html?runde=${encodeURIComponent(status.runde)}`;
+
+  return `<div class="recap-tipstatus ${harMangler ? "mangler" : "ok"}">
+    <div class="recap-tipstatus-top">
+      <div class="recap-tipstatus-title">${escHTML(tittel)}</div>
+      <div class="recap-tipstatus-round">${escHTML(RUNDE_NAVN[status.runde] || status.runde)}</div>
+    </div>
+    <div class="recap-tipstatus-text">${escHTML(tekst)}</div>
+    ${harMangler ? `<a class="recap-tipstatus-action" href="${escHTML(href)}">Gå til utslagsrunder</a>` : ""}
+  </div>`;
+}
+
 function recapData(deltaker) {
   const idag = norskDatoMedOffset(0);
   const igaar = norskDatoMedOffset(-1);
@@ -1454,19 +1651,21 @@ function recapData(deltaker) {
   return { idag, igaar, gaarsdagens, dagens };
 }
 
-function recapKampRad(item, visPoeng) {
+function recapKampRad(item, visPoeng, deltaker = null) {
   const r = item.resultat;
   const t = item.tips;
   const faktisk = r.hjemme !== null && r.hjemme !== undefined && r.borte !== null && r.borte !== undefined
     ? `${r.hjemme}–${r.borte}` : "–";
-  const tips = t && Number.isInteger(t.tippa_h) && Number.isInteger(t.tippa_b)
-    ? `${t.tippa_h}–${t.tippa_b}` : "Ikke tippet";
+  const harSynligTips = t && Number.isInteger(t.tippa_h) && Number.isInteger(t.tippa_b);
+  const levertUtenSynligScore = !harSynligTips && deltaker && recapKampErLevert(deltaker, r);
+  const tips = harSynligTips ? `${t.tippa_h}–${t.tippa_b}` : (levertUtenSynligScore ? "Levert" : "Ikke tippet");
+  const tipsLabel = levertUtenSynligScore ? "Tips lagret" : "Ditt tips";
   const poeng = Number(t?.poeng || 0);
   return `<div class="recap-rad">
     <div class="recap-kampnavn">${escHTML(r.hjemmelag || "?")} – ${escHTML(r.bortelag || "?")}
       <div class="recap-kampmeta">${escHTML(formatKickoffKort(r))}${r.ferdig ? ` · Resultat ${escHTML(faktisk)}` : ""}</div>
     </div>
-    <div class="recap-tips">${escHTML(tips)}<small>Ditt tips</small></div>
+    <div class="recap-tips">${escHTML(tips)}<small>${escHTML(tipsLabel)}</small></div>
     ${visPoeng ? `<div class="recap-poeng ${poeng > 0 ? "positiv" : "null"}">${poeng > 0 ? "+" : ""}${poeng}p</div>` : ""}
   </div>`;
 }
@@ -1486,10 +1685,10 @@ function visRecapModal(force = false) {
 
   const gaarsPoeng = data.gaarsdagens.reduce((sum, x) => sum + Number(x.tips?.poeng || 0), 0);
   const gaarsHTML = data.gaarsdagens.length
-    ? data.gaarsdagens.map(x => recapKampRad(x, true)).join("")
+    ? data.gaarsdagens.map(x => recapKampRad(x, true, deltaker)).join("")
     : '<div class="recap-tomt">Ingen ferdige kamper fra i går.</div>';
   const dagensHTML = data.dagens.length
-    ? data.dagens.map(x => recapKampRad(x, Boolean(x.resultat?.ferdig))).join("")
+    ? data.dagens.map(x => recapKampRad(x, Boolean(x.resultat?.ferdig), deltaker)).join("")
     : '<div class="recap-tomt">Ingen kamper i dag.</div>';
 
   modalKanLukkes = true;
@@ -1507,6 +1706,7 @@ function visRecapModal(force = false) {
       <button type="button" class="recap-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>
     </div>
     <div class="modal-body">
+      ${byggRecapTippeStatusHTML(deltaker)}
       <div class="recap-seksjon">
         <div class="recap-seksjon-tittel"><span>Gårsdagens poengfangst</span><span class="recap-total">+${gaarsPoeng} poeng</span></div>
         ${gaarsHTML}
@@ -1552,10 +1752,81 @@ function iDagNorsk() {
 }
 
 function byggDagensKamper() {
-  if (!ALLE_KAMPER.length) return '';
-
   const idag = iDagNorsk();
-  const dagensKamper = ALLE_KAMPER.filter(k => k.dato_norsk === idag);
+  const UTSLAGS_RUNDER_DAGENS = ['r32', 'r16', 'qf', 'sf', 'bronze', 'bronsefinale', 'final'];
+  const erUtslagsrundeDagens = runde => UTSLAGS_RUNDER_DAGENS.includes(String(runde || '').toLowerCase());
+
+  const statusDatoNorsk = kamp => {
+    const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato_utc || kamp?.starttid || '';
+    if (raw) {
+      const dato = new Date(raw);
+      if (!Number.isNaN(dato.getTime())) {
+        return dato.toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+      }
+    }
+    return String(kamp?.dato_norsk || kamp?.dato || '').slice(0, 10);
+  };
+
+  const statusTidNorsk = kamp => {
+    const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato_utc || kamp?.starttid || '';
+    if (raw) {
+      const dato = new Date(raw);
+      if (!Number.isNaN(dato.getTime())) {
+        return dato.toLocaleTimeString('nb-NO', { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit' });
+      }
+    }
+    return String(kamp?.klokkeslett_norsk || kamp?.tid || '');
+  };
+
+  const erKjentDagensLag = navn => {
+    const s = String(navn || '').trim();
+    if (!s) return false;
+    const low = s.toLowerCase();
+    if (['?', '-', 'tbd', 'null', 'none', 'ikke klar'].includes(low)) return false;
+    if (/^(winner|loser|vinner|taper)\b/i.test(s)) return false;
+    if (/^(w|l|ru)\d+$/i.test(s)) return false;
+    if (/^[123][a-l]$/i.test(s)) return false;
+    if (/^3[a-l]{2,}$/i.test(s.replaceAll('/', ''))) return false;
+    return true;
+  };
+
+  const statusKamperIDag = [];
+  UTSLAGS_RUNDER_DAGENS.forEach(runde => {
+    (STATUS_DATA?.[runde]?.kamper || []).forEach(kamp => {
+      if (statusDatoNorsk(kamp) !== idag) return;
+      const hjemmelag = kamp.hjemme || kamp.hjemmelag || '';
+      const bortelag = kamp.borte || kamp.bortelag || '';
+      if (!erKjentDagensLag(hjemmelag) || !erKjentDagensLag(bortelag)) return;
+      statusKamperIDag.push({
+        kamp_id: kamp.id || kamp.kamp_id || null,
+        hjemmelag,
+        bortelag,
+        dato_utc: String(kamp.utcDate || kamp.fd_utcDate || '').slice(0, 10),
+        dato_norsk: idag,
+        klokkeslett_utc: '',
+        klokkeslett_norsk: statusTidNorsk(kamp),
+        status: kamp.status || (kamp.ferdig ? 'FINISHED' : 'TIMED'),
+        gruppe: kamp.gruppe || RUNDE_NAVN[runde] || runde.toUpperCase(),
+        runde,
+        match_no: kamp.match_no,
+        _fra_status: true
+      });
+    });
+  });
+
+  const runderMedStatusIDag = new Set(statusKamperIDag.map(k => String(k.runde || '').toLowerCase()));
+  const kamperFraKamperJson = (ALLE_KAMPER || [])
+    .filter(k => k.dato_norsk === idag)
+    .filter(k => {
+      const runde = String(k.runde || '').toLowerCase();
+      if (!erUtslagsrundeDagens(runde)) return true;
+      if (runderMedStatusIDag.has(runde)) return false;
+      return erKjentDagensLag(k.hjemmelag) && erKjentDagensLag(k.bortelag);
+    });
+
+  const dagensKamper = [...kamperFraKamperJson, ...statusKamperIDag]
+    .sort((a, b) => String(a.klokkeslett_norsk || '').localeCompare(String(b.klokkeslett_norsk || '')));
+
   if (!dagensKamper.length) return '';
 
   const FLAGG = {
@@ -1564,7 +1835,7 @@ function byggDagensKamper() {
     'Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦',
     'Haiti':'🇭🇹','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Australia':'🇦🇺','Turkey':'🇹🇷',
     'Germany':'🇩🇪','Curaçao':'🇨🇼','Netherlands':'🇳🇱','Japan':'🇯🇵',
-    'Ivory Coast':'🇨🇮','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
+    'Ivory Coast':'🇨🇮','Ecuador':'🇪🇨','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
     'Cape Verde':'🇨🇻','Belgium':'🇧🇪','Egypt':'🇪🇬','Saudi Arabia':'🇸🇦',
     'Uruguay':'🇺🇾','Iran':'🇮🇷','New Zealand':'🇳🇿','France':'🇫🇷',
     'Senegal':'🇸🇳','Iraq':'🇮🇶','Norway':'🇳🇴','Argentina':'🇦🇷',
@@ -1580,7 +1851,6 @@ function byggDagensKamper() {
   };
   const visNavn = n => FD_TIL_OF_VIS[n] || n;
 
-  const normNavn = s => String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'_').replace(/_+/g,'_').replace(/^_|_$/g,'');
   const FD_TIL_OF2 = {'united states':'usa','cape verde islands':'cape verde','congo dr':'dr congo','czechia':'czech republic'};
   const normFd = s => { const low=String(s||'').toLowerCase().trim(); return (FD_TIL_OF2[low]||low).replace(/[^a-z0-9]/g,'_').replace(/_+/g,'_').replace(/^_|_$/g,''); };
 
@@ -1904,6 +2174,7 @@ const flaggLag = navn => FLAGG_LAG[navn] || '';
 let TABELL_DATA = null;
 let STATUS_DATA = null;
 let KAMPREFERAT_DATA = { kamper: {} };
+let INNLEVERINGSSTATUS_DATA = null;
 let aktivGruppeFilter = 'alle';
 let aktivUtslagsrunde = 'r32';
 
@@ -1921,6 +2192,7 @@ async function hentJsonFil(url, fallback) {
 async function lastTabellData() { TABELL_DATA = await hentJsonFil('data/tabell.json', null); }
 async function lastStatusData() { STATUS_DATA = await hentJsonFil('data/status.json', {}); }
 async function lastKampreferater() { KAMPREFERAT_DATA = await hentJsonFil('data/kampreferater.json', { kamper: {} }); }
+async function lastInnleveringsstatus() { INNLEVERINGSSTATUS_DATA = await hentJsonFil(INNLEVERINGSSTATUS_URL, null); }
 
 function lagNokkel(navn) {
   const map = {
@@ -2616,7 +2888,7 @@ function escHTML(str) {
 
 async function init() {
   initBakgrunnsmusikk();
-  await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastKampreferater()]);
+  await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastKampreferater(), lastInnleveringsstatus()]);
   byggStilling();
   byggTabellFane();
   byggKamperFane();
