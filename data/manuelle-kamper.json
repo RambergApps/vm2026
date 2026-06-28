@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T02:01:01Z",
+  "sist_oppdatert": "2026-06-28T04:01:05Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -209,6 +209,44 @@
       "lagkilde": "fifa_api",
       "slot_hjemme": "2K",
       "slot_borte": "2L"
+    },
+    {
+      "kamp_id": "Spain_Austria_2026_07_02",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 84,
+      "dato": "2026-07-02",
+      "utcDate": "2026-07-02T19:00:00Z",
+      "fd_match_id": 537420,
+      "fifa_event_id": "400021519",
+      "hjemmelag": "Spain",
+      "bortelag": "Austria",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1H",
+      "slot_borte": "2J"
+    },
+    {
+      "kamp_id": "Switzerland_Algeria_2026_07_03",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 85,
+      "dato": "2026-07-03",
+      "utcDate": "2026-07-03T03:00:00Z",
+      "fd_match_id": 537429,
+      "fifa_event_id": "400021527",
+      "hjemmelag": "Switzerland",
+      "bortelag": "Algeria",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1B",
+      "slot_borte": "3E/F/G/I/J"
     },
     {
       "kamp_id": "Argentina_Cape_Verde_2026_07_03",

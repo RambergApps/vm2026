@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-28T03:31:00Z",
+  "sist_oppdatert": "2026-06-28T04:01:07Z",
   "sist_oppdatert_grupper": "2026-06-28T03:31:00Z",
-  "sist_oppdatert_utslag": "2026-06-28T03:31:00Z",
+  "sist_oppdatert_utslag": "2026-06-28T04:01:07Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,10 +14,12 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": true,
+    "grupper": false,
     "utslag": true
   },
-  "advarsler": [],
+  "advarsler": [
+    "Gruppetabell beholdt fra forrige gyldige fil: FIFA/Jina-svaret mangler gruppetabellene"
+  ],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -1021,13 +1023,13 @@
       "utcDate": "2026-07-02T19:00:00Z",
       "dato": "2026-07-02",
       "hjemme": "Spain",
-      "borte": "2J",
+      "borte": "Austria",
       "hjemme_kode": "ESP",
-      "borte_kode": "",
+      "borte_kode": "AUT",
       "hjemme_kjent": true,
-      "borte_kjent": false,
+      "borte_kjent": true,
       "hjemme_placeholder": "",
-      "borte_placeholder": "2J",
+      "borte_placeholder": "",
       "status": "1",
       "hjemme_score": null,
       "borte_score": null
@@ -1039,13 +1041,13 @@
       "utcDate": "2026-07-03T03:00:00Z",
       "dato": "2026-07-03",
       "hjemme": "Switzerland",
-      "borte": "3EFGIJ",
+      "borte": "Algeria",
       "hjemme_kode": "SUI",
-      "borte_kode": "",
+      "borte_kode": "ALG",
       "hjemme_kjent": true,
-      "borte_kjent": false,
+      "borte_kjent": true,
       "hjemme_placeholder": "",
-      "borte_placeholder": "3EFGIJ",
+      "borte_placeholder": "",
       "status": "1",
       "hjemme_score": null,
       "borte_score": null

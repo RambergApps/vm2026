@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-28T03:30:58Z",
+  "generert": "2026-06-28T04:01:05Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -21,13 +21,13 @@
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
-    "matched": 14,
-    "pending": 2,
+    "matched": 16,
+    "pending": 0,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
     "motstridende_fifa_api_duplikater": [],
     "klar_for_matchnummer_mapping": true,
-    "klar_for_produksjonsbruk": false
+    "klar_for_produksjonsbruk": true
   },
   "fifa_api_merknader": [],
   "jina_kontroll": {
@@ -593,23 +593,28 @@
       "fifa_tid": "19:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Spain",
-      "fifa_borte": "2J",
+      "fifa_borte": "Austria",
       "fifa_hjemme_kode": "ESP",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "AUT",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "2J",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 82,
       "fd_match_id": 537420,
       "fd_utcDate": "2026-07-02T19:00:00Z",
       "fd_dato": "2026-07-02",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Spain_Austria_2026_07_02",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Spain",
+      "kamp_bortelag": "Austria",
+      "kamp_dato": "2026-07-02",
+      "kamp_utcDate": "2026-07-02T19:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -619,7 +624,8 @@
           "borte": "2J",
           "dato": "2026-07-02"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 85,
@@ -629,23 +635,28 @@
       "fifa_tid": "03:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Switzerland",
-      "fifa_borte": "3EFGIJ",
+      "fifa_borte": "Algeria",
       "fifa_hjemme_kode": "SUI",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "ALG",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "3EFGIJ",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 84,
       "fd_match_id": 537429,
       "fd_utcDate": "2026-07-03T03:00:00Z",
       "fd_dato": "2026-07-03",
       "fd_hjemmelag": "Switzerland",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Switzerland_Algeria_2026_07_03",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Switzerland",
+      "kamp_bortelag": "Algeria",
+      "kamp_dato": "2026-07-03",
+      "kamp_utcDate": "2026-07-03T03:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -655,7 +666,8 @@
           "borte": "3E/F/G/I/J",
           "dato": "2026-07-02"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 86,

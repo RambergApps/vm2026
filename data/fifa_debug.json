@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-28T03:30:59Z",
+  "tidspunkt": "2026-06-28T04:01:06Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -720,14 +720,14 @@
       "fifa_event_id": "400021495",
       "hjemmelag": "Jordan",
       "bortelag": "Argentina",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 1,
-      "borte": 2,
+      "borte": 3,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T02:00:00Z",
-      "fifa_match_time": "69'"
+      "fifa_match_time": "96'"
     },
     "400021496": {
       "fifa_event_id": "400021496",
@@ -746,14 +746,14 @@
       "fifa_event_id": "400021497",
       "hjemmelag": "Algeria",
       "bortelag": "Austria",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
-      "hjemme": 2,
-      "borte": 2,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
+      "hjemme": 3,
+      "borte": 3,
       "fifa_dato": "2026-06-28",
       "fifa_utcDate": "2026-06-28T02:00:00Z",
-      "fifa_match_time": "68'"
+      "fifa_match_time": "97'"
     },
     "400021498": {
       "fifa_event_id": "400021498",
@@ -1028,6 +1028,19 @@
       "fifa_utcDate": "2026-06-28T19:00:00Z",
       "fifa_match_time": null
     },
+    "400021519": {
+      "fifa_event_id": "400021519",
+      "hjemmelag": "Spain",
+      "bortelag": "Austria",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-02",
+      "fifa_utcDate": "2026-07-02T19:00:00Z",
+      "fifa_match_time": null
+    },
     "400021520": {
       "fifa_event_id": "400021520",
       "hjemmelag": "Mexico",
@@ -1117,6 +1130,19 @@
       "borte": null,
       "fifa_dato": "2026-07-02",
       "fifa_utcDate": "2026-07-02T23:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021527": {
+      "fifa_event_id": "400021527",
+      "hjemmelag": "Switzerland",
+      "bortelag": "Algeria",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-03",
+      "fifa_utcDate": "2026-07-03T03:00:00Z",
       "fifa_match_time": null
     }
   }

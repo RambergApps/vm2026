@@ -169,28 +169,34 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1H_2J_2026_07_02",
-        "hjemme": "1H",
-        "borte": "2J",
+        "id": "Spain_Austria_2026_07_02",
+        "hjemme": "Spain",
+        "borte": "Austria",
         "dato": "2026-07-02",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 84,
         "slot_hjemme": "1H",
         "slot_borte": "2J",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-02T19:00:00Z",
+        "fd_match_id": 537420,
+        "fifa_event_id": "400021519",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
-        "id": "1B_3E_F_G_I_J_2026_07_02",
-        "hjemme": "1B",
-        "borte": "3E/F/G/I/J",
-        "dato": "2026-07-02",
-        "info": "",
+        "id": "Switzerland_Algeria_2026_07_03",
+        "hjemme": "Switzerland",
+        "borte": "Algeria",
+        "dato": "2026-07-03",
+        "info": "Kampoppsett bekreftet",
         "match_no": 85,
         "slot_hjemme": "1B",
         "slot_borte": "3E/F/G/I/J",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-03T03:00:00Z",
+        "fd_match_id": 537429,
+        "fifa_event_id": "400021527",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Argentina_Cape_Verde_2026_07_03",
@@ -238,7 +244,7 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 14,
+    "antall_tippebare": 16,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {

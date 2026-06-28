@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-28T03:30:59Z",
+  "tidspunkt": "2026-06-28T04:01:06Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -822,7 +822,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 2,
+      "borte": 3,
       "fd_dato": "2026-06-28",
       "fd_utcDate": "2026-06-28T02:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Jordan_Argentina_2026_06_28"
@@ -835,7 +835,7 @@
       "bortelag_normalisert": "Austria",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 2,
+      "hjemme": 3,
       "borte": 2,
       "fd_dato": "2026-06-28",
       "fd_utcDate": "2026-06-28T02:00:00Z",
@@ -987,10 +987,10 @@
       "fd_bortelag": "England",
       "hjemmelag_normalisert": "Panama",
       "bortelag_normalisert": "England",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 0,
+      "borte": 2,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Panama_England_2026_06_27"
@@ -1001,10 +1001,10 @@
       "fd_bortelag": "Ghana",
       "hjemmelag_normalisert": "Croatia",
       "bortelag_normalisert": "Ghana",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 2,
+      "borte": 1,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Croatia_Ghana_2026_06_27"
