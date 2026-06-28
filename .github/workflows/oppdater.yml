@@ -7,6 +7,8 @@ on:
     paths:
       - 'tippinger/**'
       - 'data/manuelle-kamper.json'
+      - 'scripts/generer-innleveringsstatus.py'
+      - '.github/workflows/oppdater.yml'
   workflow_dispatch:
 
 permissions:
@@ -48,6 +50,9 @@ jobs:
         env:
           GITHUB_ACTIONS: 'true'
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
+      - name: Generer innleveringsstatus for popup
+        run: python scripts/generer-innleveringsstatus.py
 
       - name: Generer FIFA-tabeller og komplett utslagsoppsett
         run: python scripts/generer-tabell.py
