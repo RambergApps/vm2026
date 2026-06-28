@@ -1751,11 +1751,94 @@ function iDagNorsk() {
   return new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
 }
 
+function kampDatoNorskFraUtc(value) {
+  const timestamp = Date.parse(value || "");
+  if (!Number.isFinite(timestamp)) return "";
+  return new Date(timestamp).toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+}
+
+function kampKlokkeslettNorskFraUtc(value) {
+  const timestamp = Date.parse(value || "");
+  if (!Number.isFinite(timestamp)) return "";
+  return new Date(timestamp).toLocaleTimeString('no-NO', { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit' });
+}
+
+function erUkjentKampnavn(navn) {
+  const n = String(navn || '').trim();
+  return !n || n === '?' || /^(TBD|W\d+|L\d+|Winner|Runner|[123][A-L])$/i.test(n) || n.includes('/');
+}
+
+function normDagensKampFelt(value) {
+  return String(value || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+}
+
+function statusKampTilDagensKamp(kamp, runde) {
+  return {
+    kamp_id: kamp.id || kamp.kamp_id || '',
+    match_no: kamp.match_no ?? null,
+    hjemmelag: kamp.hjemme || kamp.hjemmelag || '',
+    bortelag: kamp.borte || kamp.bortelag || '',
+    dato_norsk: kampDatoNorskFraUtc(kamp.utcDate || kamp.fd_utcDate) || kamp.dato || '',
+    klokkeslett_norsk: kampKlokkeslettNorskFraUtc(kamp.utcDate || kamp.fd_utcDate),
+    gruppe: String(runde || kamp.runde || '').toUpperCase(),
+    runde: String(runde || kamp.runde || '').toUpperCase()
+  };
+}
+
+function statusKamperForDagensDato(datoNorsk) {
+  const liste = [];
+  Object.entries(STATUS_DATA || {}).forEach(([runde, data]) => {
+    (data?.kamper || []).forEach(kamp => {
+      const hjemmelag = kamp.hjemme || kamp.hjemmelag;
+      const bortelag = kamp.borte || kamp.bortelag;
+      if (erUkjentKampnavn(hjemmelag) || erUkjentKampnavn(bortelag)) return;
+      const dato = kampDatoNorskFraUtc(kamp.utcDate || kamp.fd_utcDate) || kamp.dato || '';
+      if (dato === datoNorsk) liste.push(statusKampTilDagensKamp(kamp, runde));
+    });
+  });
+  return liste;
+}
+
+function dagensKampNoekkel(kamp) {
+  if (kamp?.match_no !== undefined && kamp?.match_no !== null && String(kamp.match_no) !== '') return 'match_no:' + String(kamp.match_no);
+  if (kamp?.kamp_id && !erUkjentKampnavn(kamp.hjemmelag) && !erUkjentKampnavn(kamp.bortelag)) return 'id:' + String(kamp.kamp_id);
+  return '';
+}
+
+function dagensKampSlotNoekkel(kamp) {
+  const dato = kamp?.dato_norsk || '';
+  const tid = kamp?.klokkeslett_norsk || '';
+  const runde = normDagensKampFelt(kamp?.runde || kamp?.gruppe || '');
+  return dato && tid && runde ? `slot:${dato}:${tid}:${runde}` : '';
+}
+
 function byggDagensKamper() {
-  if (!ALLE_KAMPER.length) return '';
+  if (!ALLE_KAMPER.length && !STATUS_DATA) return '';
 
   const idag = iDagNorsk();
-  const dagensKamper = ALLE_KAMPER.filter(k => k.dato_norsk === idag);
+  const statusKamper = statusKamperForDagensDato(idag);
+  const statusByKey = new Map(statusKamper.map(kamp => [dagensKampNoekkel(kamp), kamp]).filter(([key]) => key));
+  const statusBySlot = new Map(statusKamper.map(kamp => [dagensKampSlotNoekkel(kamp), kamp]).filter(([key]) => key));
+  const brukteStatusKeys = new Set();
+
+  const dagensKamper = ALLE_KAMPER
+    .filter(k => k.dato_norsk === idag)
+    .map(kamp => {
+      const ukjentLag = erUkjentKampnavn(kamp.hjemmelag) || erUkjentKampnavn(kamp.bortelag);
+      const key = dagensKampNoekkel(kamp);
+      const slotKey = dagensKampSlotNoekkel(kamp);
+      const statusKamp = (key ? statusByKey.get(key) : null) || (ukjentLag && slotKey ? statusBySlot.get(slotKey) : null);
+      if (statusKamp) {
+        const statusKey = dagensKampNoekkel(statusKamp) || dagensKampSlotNoekkel(statusKamp);
+        if (statusKey) brukteStatusKeys.add(statusKey);
+      }
+      if (statusKamp && ukjentLag) return { ...kamp, ...statusKamp };
+      return kamp;
+    })
+    .concat(statusKamper.filter(kamp => {
+      const key = dagensKampNoekkel(kamp) || dagensKampSlotNoekkel(kamp);
+      return key && !brukteStatusKeys.has(key);
+    }));
   if (!dagensKamper.length) return '';
 
   const FLAGG = {
