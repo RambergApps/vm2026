@@ -1316,6 +1316,16 @@ def parse_iso_utc(value):
         return None
 
 
+def kamp_har_startet(kamp):
+    """True når avspark er passert. Brukes for å offentliggjøre låste utslagstips uten å beregne poeng."""
+    kickoff = parse_iso_utc(
+        (kamp or {}).get("fd_utcDate")
+        or (kamp or {}).get("utcDate")
+        or (kamp or {}).get("fifa_utcDate")
+    )
+    return bool(kickoff and datetime.now(timezone.utc) >= kickoff)
+
+
 def les_bonusfrister():
     """Henter første bekreftede avspark per utslagsrunde fra status.json.
 
@@ -1866,6 +1876,23 @@ def regn_poeng_deltaker(
             res = ascii_lookup.get(kid)
 
         if not res or not res["ferdig"]:
+            # Utslagstips skal ikke være synlige før avspark.
+            # Når kampen har startet er tipset låst, og kan trygt vises med 0 poeng
+            # frem til 90-minuttersresultatet foreligger.
+            if res and kamp_har_startet(res):
+                tipping_detaljer.append({
+                    "kamp_id":   kid,
+                    "hjemmelag": res.get("hjemmelag", ""),
+                    "bortelag":  res.get("bortelag", ""),
+                    "tippa_h":   t.get("hjemme"),
+                    "tippa_b":   t.get("borte"),
+                    "faktisk_h": res.get("hjemme"),
+                    "faktisk_b": res.get("borte"),
+                    "poeng":     0,
+                    "ferdig":    False,
+                    "status":    res.get("status", "TIMED"),
+                    "runde":     runde,
+                })
             continue
 
         p, riktig, eksakt = regn_poeng_for_kamp(
