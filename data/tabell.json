@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-06-28T04:01:07Z",
-  "sist_oppdatert_grupper": "2026-06-28T03:31:00Z",
-  "sist_oppdatert_utslag": "2026-06-28T04:01:07Z",
+  "sist_oppdatert": "2026-06-28T04:31:12Z",
+  "sist_oppdatert_grupper": "2026-06-28T04:31:12Z",
+  "sist_oppdatert_utslag": "2026-06-28T04:31:12Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,12 +14,10 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": false,
+    "grupper": true,
     "utslag": true
   },
-  "advarsler": [
-    "Gruppetabell beholdt fra forrige gyldige fil: FIFA/Jina-svaret mangler gruppetabellene"
-  ],
+  "advarsler": [],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -629,8 +627,8 @@
         "seier": 3,
         "uavgjort": 0,
         "tap": 0,
-        "maal_for": 7,
-        "maal_mot": 0,
+        "maal_for": 8,
+        "maal_mot": 1,
         "maal_forskjell": 7,
         "lagdisiplin": -2,
         "poeng": 9
@@ -642,14 +640,14 @@
         "kode": "AUT",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/AUT%201x",
         "spilt": 3,
-        "seier": 2,
-        "uavgjort": 0,
+        "seier": 1,
+        "uavgjort": 1,
         "tap": 1,
-        "maal_for": 4,
-        "maal_mot": 3,
-        "maal_forskjell": 1,
+        "maal_for": 6,
+        "maal_mot": 6,
+        "maal_forskjell": 0,
         "lagdisiplin": -4,
-        "poeng": 6
+        "poeng": 4
       },
       {
         "plass": 3,
@@ -659,13 +657,13 @@
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/ALG%201x",
         "spilt": 3,
         "seier": 1,
-        "uavgjort": 0,
-        "tap": 2,
-        "maal_for": 2,
-        "maal_mot": 5,
-        "maal_forskjell": -3,
+        "uavgjort": 1,
+        "tap": 1,
+        "maal_for": 5,
+        "maal_mot": 7,
+        "maal_forskjell": -2,
         "lagdisiplin": -1,
-        "poeng": 3
+        "poeng": 4
       },
       {
         "plass": 4,
@@ -677,10 +675,10 @@
         "seier": 0,
         "uavgjort": 0,
         "tap": 3,
-        "maal_for": 2,
-        "maal_mot": 7,
+        "maal_for": 3,
+        "maal_mot": 8,
         "maal_forskjell": -5,
-        "lagdisiplin": -2,
+        "lagdisiplin": -4,
         "poeng": 0
       }
     ],

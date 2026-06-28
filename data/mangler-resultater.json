@@ -1,25 +1,4 @@
 {
-  "sist_sjekket": "2026-06-28T04:01:07Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Algeria_Austria_2026_06_27",
-      "hjemmelag": "Algeria",
-      "bortelag": "Austria",
-      "dato": "2026-06-27",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Jordan_Argentina_2026_06_27",
-      "hjemmelag": "Jordan",
-      "bortelag": "Argentina",
-      "dato": "2026-06-27",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-06-28T04:31:12Z",
+  "kamper": []
 }
