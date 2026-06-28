@@ -15,6 +15,7 @@
         "utcDate": "2026-06-28T19:00:00Z",
         "fd_match_id": 537417,
         "fifa_event_id": "400021518",
+        "avanserer": "Canada",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -264,11 +265,11 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W73_W75_2026_07_04",
-        "hjemme": "W73",
+        "id": "Canada_W75_2026_07_04",
+        "hjemme": "Canada",
         "borte": "W75",
         "dato": "2026-07-04",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 90,
         "slot_hjemme": "W73",
         "slot_borte": "W75",
