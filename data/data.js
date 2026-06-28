@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-28T07:30:57Z
+// Sist oppdatert: 2026-06-28T08:01:06Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-28T07:30:57Z",
+  "sist_oppdatert": "2026-06-28T08:01:06Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1450,19 +1450,6 @@ const VM_DATA = {
       "fd_bortelag": "Japan",
       "match_no": 76
     },
-    "Germany_3A_B_C_D_F_2026_06_29": {
-      "kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
-      "canonical_kamp_id": "Germany_3A_B_C_D_F_2026_06_29",
-      "hjemmelag": "Germany",
-      "bortelag": "3A/B/C/D/F",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
-    },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
       "canonical_kamp_id": "Germany_Paraguay_2026_06_29",
@@ -1474,25 +1461,13 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-06-29",
       "fd_match_id": 537415,
       "fd_utcDate": "2026-06-29T20:30:00Z",
+      "fd_hjemmelag": "Germany",
+      "fd_bortelag": "Paraguay",
       "match_no": 74
-    },
-    "1I_3C_D_F_G_H_2026_06_30": {
-      "kamp_id": "1I_3C_D_F_G_H_2026_06_30",
-      "canonical_kamp_id": "1I_3C_D_F_G_H_2026_06_30",
-      "hjemmelag": "1I",
-      "bortelag": "3C/D/F/G/H",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball",
-      "match_no": 77
     },
     "France_Sweden_2026_06_30": {
       "kamp_id": "France_Sweden_2026_06_30",
@@ -1505,24 +1480,13 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-06-30",
       "fd_match_id": 537416,
       "fd_utcDate": "2026-06-30T21:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Sweden",
       "match_no": 77
-    },
-    "Ivory_Coast_2I_2026_06_30": {
-      "kamp_id": "Ivory_Coast_2I_2026_06_30",
-      "canonical_kamp_id": "Ivory_Coast_2I_2026_06_30",
-      "hjemmelag": "Ivory Coast",
-      "bortelag": "2I",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball"
     },
     "Ivory_Coast_Norway_2026_06_30": {
       "kamp_id": "Ivory_Coast_Norway_2026_06_30",
@@ -1535,24 +1499,13 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-06-30",
       "fd_match_id": 537424,
       "fd_utcDate": "2026-06-30T17:00:00Z",
+      "fd_hjemmelag": "Ivory Coast",
+      "fd_bortelag": "Norway",
       "match_no": 78
-    },
-    "Mexico_3C_E_F_H_I_2026_06_30": {
-      "kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
-      "canonical_kamp_id": "Mexico_3C_E_F_H_I_2026_06_30",
-      "hjemmelag": "Mexico",
-      "bortelag": "3C/E/F/H/I",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball"
     },
     "Netherlands_Morocco_2026_06_30": {
       "kamp_id": "Netherlands_Morocco_2026_06_30",
@@ -1571,34 +1524,6 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-30T01:00:00Z",
       "match_no": 75
     },
-    "1G_3A_E_H_I_J_2026_07_01": {
-      "kamp_id": "1G_3A_E_H_I_J_2026_07_01",
-      "canonical_kamp_id": "1G_3A_E_H_I_J_2026_07_01",
-      "hjemmelag": "1G",
-      "bortelag": "3A/E/H/I/J",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball",
-      "match_no": 82
-    },
-    "1L_3E_H_I_J_K_2026_07_01": {
-      "kamp_id": "1L_3E_H_I_J_K_2026_07_01",
-      "canonical_kamp_id": "1L_3E_H_I_J_K_2026_07_01",
-      "hjemmelag": "1L",
-      "bortelag": "3E/H/I/J/K",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball",
-      "match_no": 80
-    },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
       "canonical_kamp_id": "Belgium_Senegal_2026_07_01",
@@ -1610,10 +1535,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
+      "fd_hjemmelag": "Belgium",
+      "fd_bortelag": "Senegal",
       "match_no": 82
     },
     "England_DR_Congo_2026_07_01": {
@@ -1627,10 +1554,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537426,
       "fd_utcDate": "2026-07-01T16:00:00Z",
+      "fd_hjemmelag": "England",
+      "fd_bortelag": "Congo DR",
       "match_no": 80
     },
     "Mexico_Ecuador_2026_07_01": {
@@ -1650,47 +1579,6 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-01T01:00:00Z",
       "match_no": 79
     },
-    "USA_3B_E_F_I_J_2026_07_01": {
-      "kamp_id": "USA_3B_E_F_I_J_2026_07_01",
-      "canonical_kamp_id": "USA_3B_E_F_I_J_2026_07_01",
-      "hjemmelag": "USA",
-      "bortelag": "3B/E/F/I/J",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball"
-    },
-    "1H_2J_2026_07_02": {
-      "kamp_id": "1H_2J_2026_07_02",
-      "canonical_kamp_id": "1H_2J_2026_07_02",
-      "hjemmelag": "1H",
-      "bortelag": "2J",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball",
-      "match_no": 84
-    },
-    "2K_2L_2026_07_02": {
-      "kamp_id": "2K_2L_2026_07_02",
-      "canonical_kamp_id": "2K_2L_2026_07_02",
-      "hjemmelag": "2K",
-      "bortelag": "2L",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball",
-      "match_no": 83
-    },
     "Portugal_Croatia_2026_07_02": {
       "kamp_id": "Portugal_Croatia_2026_07_02",
       "canonical_kamp_id": "Portugal_Croatia_2026_07_02",
@@ -1702,10 +1590,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-02",
       "fd_match_id": 537419,
       "fd_utcDate": "2026-07-02T23:00:00Z",
+      "fd_hjemmelag": "Portugal",
+      "fd_bortelag": "Croatia",
       "match_no": 83
     },
     "Spain_Austria_2026_07_02": {
@@ -1719,24 +1609,13 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-02",
       "fd_match_id": 537420,
       "fd_utcDate": "2026-07-02T19:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Austria",
       "match_no": 84
-    },
-    "Switzerland_3E_F_G_I_J_2026_07_02": {
-      "kamp_id": "Switzerland_3E_F_G_I_J_2026_07_02",
-      "canonical_kamp_id": "Switzerland_3E_F_G_I_J_2026_07_02",
-      "hjemmelag": "Switzerland",
-      "bortelag": "3E/F/G/I/J",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball"
     },
     "USA_Bosnia___Herzegovina_2026_07_02": {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -1755,33 +1634,6 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "match_no": 81
     },
-    "1J_2H_2026_07_03": {
-      "kamp_id": "1J_2H_2026_07_03",
-      "canonical_kamp_id": "1J_2H_2026_07_03",
-      "hjemmelag": "1J",
-      "bortelag": "2H",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball",
-      "match_no": 86
-    },
-    "1K_3D_E_I_J_L_2026_07_03": {
-      "kamp_id": "1K_3D_E_I_J_L_2026_07_03",
-      "canonical_kamp_id": "1K_3D_E_I_J_L_2026_07_03",
-      "hjemmelag": "1K",
-      "bortelag": "3D/E/I/J/L",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball"
-    },
     "Argentina_Cape_Verde_2026_07_03": {
       "kamp_id": "Argentina_Cape_Verde_2026_07_03",
       "canonical_kamp_id": "Argentina_Cape_Verde_2026_07_03",
@@ -1793,24 +1645,13 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-03",
       "fd_match_id": 537427,
       "fd_utcDate": "2026-07-03T22:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Cape Verde Islands",
       "match_no": 86
-    },
-    "Australia_2G_2026_07_03": {
-      "kamp_id": "Australia_2G_2026_07_03",
-      "canonical_kamp_id": "Australia_2G_2026_07_03",
-      "hjemmelag": "Australia",
-      "bortelag": "2G",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-07-03",
-      "kilde_score": "openfootball"
     },
     "Australia_Egypt_2026_07_03": {
       "kamp_id": "Australia_Egypt_2026_07_03",
@@ -1823,10 +1664,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "openfootball",
       "dato_fd_org": "2026-07-03",
       "fd_match_id": 537428,
       "fd_utcDate": "2026-07-03T18:00:00Z",
+      "fd_hjemmelag": "Australia",
+      "fd_bortelag": "Egypt",
       "match_no": 88
     },
     "Switzerland_Algeria_2026_07_03": {
@@ -2525,7 +2368,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-28T07:30:57Z"
+    "sist_beregnet": "2026-06-28T08:01:06Z"
   },
   "stilling": [
     {
