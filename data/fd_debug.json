@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-28T01:01:05Z",
+  "tidspunkt": "2026-06-28T01:30:57Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -919,7 +919,7 @@
       "bortelag_normalisert": "Uzbekistan",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 3,
       "borte": 1,
       "fd_dato": "2026-06-27",
       "fd_utcDate": "2026-06-27T23:30:00Z",

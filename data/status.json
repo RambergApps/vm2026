@@ -148,16 +148,19 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "2K_2L_2026_07_02",
-        "hjemme": "2K",
-        "borte": "2L",
+        "id": "Portugal_Croatia_2026_07_02",
+        "hjemme": "Portugal",
+        "borte": "Croatia",
         "dato": "2026-07-02",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 83,
         "slot_hjemme": "2K",
         "slot_borte": "2L",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-02T23:00:00Z",
+        "fd_match_id": 537419,
+        "fifa_event_id": "400021526",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "1H_2J_2026_07_02",
@@ -199,16 +202,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1K_3D_E_I_J_L_2026_07_03",
-        "hjemme": "1K",
-        "borte": "3D/E/I/J/L",
-        "dato": "2026-07-03",
-        "info": "",
+        "id": "Colombia_Ghana_2026_07_04",
+        "hjemme": "Colombia",
+        "borte": "Ghana",
+        "dato": "2026-07-04",
+        "info": "Kampoppsett bekreftet",
         "match_no": 87,
         "slot_hjemme": "1K",
         "slot_borte": "3D/E/I/J/L",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-04T01:30:00Z",
+        "fd_match_id": 537430,
+        "fifa_event_id": "400021517",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Australia_Egypt_2026_07_03",
@@ -226,7 +232,7 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 10,
+    "antall_tippebare": 12,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {

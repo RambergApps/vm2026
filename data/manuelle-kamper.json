@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T01:01:04Z",
+  "sist_oppdatert": "2026-06-28T01:30:56Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -16,7 +16,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "2A",
       "slot_borte": "2B"
     },
@@ -54,7 +54,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1F",
       "slot_borte": "2C"
     },
@@ -73,7 +73,7 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1C",
       "slot_borte": "2F"
     },
@@ -149,9 +149,28 @@
       "borte": null,
       "ferdig": false,
       "kilde": "football_data_org_r32",
-      "lagkilde": "fifa_api",
+      "lagkilde": "football_data_org",
       "slot_hjemme": "1D",
       "slot_borte": "3B/E/F/I/J"
+    },
+    {
+      "kamp_id": "Portugal_Croatia_2026_07_02",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 83,
+      "dato": "2026-07-02",
+      "utcDate": "2026-07-02T23:00:00Z",
+      "fd_match_id": 537419,
+      "fifa_event_id": "400021526",
+      "hjemmelag": "Portugal",
+      "bortelag": "Croatia",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "2K",
+      "slot_borte": "2L"
     },
     {
       "kamp_id": "Argentina_Cape_Verde_2026_07_03",
@@ -171,6 +190,25 @@
       "lagkilde": "fifa_api",
       "slot_hjemme": "1J",
       "slot_borte": "2H"
+    },
+    {
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 87,
+      "dato": "2026-07-04",
+      "utcDate": "2026-07-04T01:30:00Z",
+      "fd_match_id": 537430,
+      "fifa_event_id": "400021517",
+      "hjemmelag": "Colombia",
+      "bortelag": "Ghana",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1K",
+      "slot_borte": "3D/E/I/J/L"
     },
     {
       "kamp_id": "Australia_Egypt_2026_07_03",
