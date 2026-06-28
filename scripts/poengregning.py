@@ -1691,11 +1691,15 @@ def bygg_bonusstatus(resultat_lookup, spillerstatistikk):
     maal_kategori = kategoriser_totale_maal(totale_maal)
     toppscorer = spillerstatistikk[0] if spillerstatistikk else None
 
+    utslagsfasen_startet = any(kamp_har_startet(k) for k in utslagskamper)
+
     runder = {}
     for runde in UTSLAGSRUNDER:
         r_kamper = [k for k in ferdige if k.get("runde") == runde]
+        runde_startet = any(kamp_har_startet(k) for k in utslagskamper if k.get("runde") == runde)
         forventet = FORVENTET_ANTALL.get(runde, 0)
         ferdig_runde = forventet > 0 and len(r_kamper) >= forventet
+        runde_status = "ferdig" if ferdig_runde else ("paagaar" if (runde_startet or r_kamper) else "ikke_startet")
         if runde == "r32":
             verdi = sum(1 for k in r_kamper if k["hjemme"] == k["borte"])
         elif runde == "r16":
@@ -1709,7 +1713,7 @@ def bygg_bonusstatus(resultat_lookup, spillerstatistikk):
         else:
             verdi = None
         runder[runde] = {
-            "status": "ferdig" if ferdig_runde else ("paagaar" if r_kamper else "ikke_startet"),
+            "status": runde_status,
             "ferdige_kamper": len(r_kamper),
             "totalt_kamper": forventet,
             "verdi": verdi,
@@ -1720,7 +1724,7 @@ def bygg_bonusstatus(resultat_lookup, spillerstatistikk):
     return {
         "helhet": {
             "flest_maal_lag": {
-                "status": "ferdig" if alle_ferdige else ("paagaar" if ferdige else "ikke_startet"),
+                "status": "ferdig" if alle_ferdige else ("paagaar" if (utslagsfasen_startet or ferdige) else "ikke_startet"),
                 "ledere": ledere,
                 "antall_maal": maks_maal,
                 "ferdige_kamper": len(ferdige),
@@ -1729,7 +1733,7 @@ def bygg_bonusstatus(resultat_lookup, spillerstatistikk):
                 "sporsmal": HELHETSBONUS_SPORSMAL["flest_maal_lag"]["tekst"],
             },
             "totale_maal_utslag": {
-                "status": "ferdig" if alle_ferdige else ("paagaar" if ferdige else "ikke_startet"),
+                "status": "ferdig" if alle_ferdige else ("paagaar" if (utslagsfasen_startet or ferdige) else "ikke_startet"),
                 "antall": totale_maal,
                 "forelopig_kategori": maal_kategori,
                 "forelopig_kategori_tekst": visningsverdi_maalintervall(maal_kategori),
