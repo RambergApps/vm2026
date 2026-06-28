@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T07:01:44Z",
+  "sist_oppdatert": "2026-06-28T07:31:27Z",
   "antall_kamper": 72,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15188,7 +15188,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 12,
+        "antall_sok": 13,
         "fallback": true,
         "cache_key": "DR_Congo_Uzbekistan_2026_06_27|3-1",
         "serper_score": -100,
@@ -15198,7 +15198,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 12,
+        "retry_antall": 13,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-match-report-highlights",
         "mangler": [
@@ -15390,7 +15390,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-28T07:01:44Z"
+      "oppdatert": "2026-06-28T07:31:27Z"
     },
     "Algeria_Austria_2026_06_27": {
       "kamp_id": "Algeria_Austria_2026_06_27",
