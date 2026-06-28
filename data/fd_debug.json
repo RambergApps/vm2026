@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-27T23:30:56Z",
+  "tidspunkt": "2026-06-28T00:01:09Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -896,34 +896,6 @@
       "fd_dato": "2026-06-24",
       "fd_utcDate": "2026-06-24T02:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Colombia_DR_Congo_2026_06_24"
-    },
-    "537407": {
-      "fd_match_id": 537407,
-      "fd_hjemmelag": "Colombia",
-      "fd_bortelag": "Portugal",
-      "hjemmelag_normalisert": "Colombia",
-      "bortelag_normalisert": "Portugal",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-27",
-      "fd_utcDate": "2026-06-27T23:30:00Z",
-      "fd_kamp_id_basert_paa_dato": "Colombia_Portugal_2026_06_27"
-    },
-    "537408": {
-      "fd_match_id": 537408,
-      "fd_hjemmelag": "Congo DR",
-      "fd_bortelag": "Uzbekistan",
-      "hjemmelag_normalisert": "DR Congo",
-      "bortelag_normalisert": "Uzbekistan",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-06-27",
-      "fd_utcDate": "2026-06-27T23:30:00Z",
-      "fd_kamp_id_basert_paa_dato": "DR_Congo_Uzbekistan_2026_06_27"
     },
     "537409": {
       "fd_match_id": 537409,

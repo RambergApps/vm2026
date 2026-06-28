@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-27T23:30:56Z
+// Sist oppdatert: 2026-06-28T00:01:20Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-27T23:30:56Z",
+  "sist_oppdatert": "2026-06-28T00:01:20Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1323,18 +1323,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Colombia_Portugal_2026_06_27",
       "hjemmelag": "Colombia",
       "bortelag": "Portugal",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-27",
-      "fd_match_id": 537407,
-      "fd_utcDate": "2026-06-27T23:30:00Z",
-      "fd_hjemmelag": "Colombia",
-      "fd_bortelag": "Portugal"
+      "kilde_score": "fifa_calendar"
     },
     "Croatia_Ghana_2026_06_27": {
       "kamp_id": "Croatia_Ghana_2026_06_27",
@@ -1360,18 +1355,13 @@ const VM_DATA = {
       "canonical_kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
       "hjemmelag": "DR Congo",
       "bortelag": "Uzbekistan",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 1,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "gruppe",
       "dato_openfootball": "2026-06-27",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-06-27",
-      "fd_match_id": 537408,
-      "fd_utcDate": "2026-06-27T23:30:00Z",
-      "fd_hjemmelag": "Congo DR",
-      "fd_bortelag": "Uzbekistan"
+      "kilde_score": "fifa_calendar"
     },
     "Jordan_Argentina_2026_06_27": {
       "kamp_id": "Jordan_Argentina_2026_06_27",
@@ -2141,143 +2131,143 @@ const VM_DATA = {
     },
     {
       "rank": 13,
-      "spiller": "Elijah Just",
+      "spiller": "Harry Kane",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
       "rank": 14,
+      "spiller": "Elijah Just",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 291
+    },
+    {
+      "rank": 15,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
       "minutter": 147
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 186
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 232
     },
     {
-      "rank": 18,
+      "rank": 19,
+      "spiller": "Jude Bellingham",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 237
+    },
+    {
+      "rank": 20,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 245
     },
     {
-      "rank": 19,
+      "rank": 21,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 268
     },
     {
-      "rank": 20,
+      "rank": 22,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 21,
+      "rank": 23,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
     },
     {
-      "rank": 22,
+      "rank": 24,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 39
     },
     {
-      "rank": 23,
+      "rank": 25,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 149
     },
     {
-      "rank": 24,
+      "rank": 26,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 0,
       "minutter": 164
     },
     {
-      "rank": 25,
+      "rank": 27,
       "spiller": "Folarin Balogun",
       "maal": 2,
       "assists": 0,
       "minutter": 179
     },
     {
-      "rank": 26,
+      "rank": 28,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 187
     },
     {
-      "rank": 27,
-      "spiller": "Cristiano Ronaldo",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 201
-    },
-    {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 206
     },
     {
-      "rank": 29,
-      "spiller": "Jude Bellingham",
+      "rank": 30,
+      "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
-      "minutter": 231
+      "minutter": 224
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Kai Havertz",
       "maal": 2,
       "assists": 0,
       "minutter": 255
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
-    },
-    {
-      "rank": 32,
-      "spiller": "Harry Kane",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 271
     },
     {
       "rank": 33,
@@ -2400,10 +2390,10 @@ const VM_DATA = {
     },
     {
       "rank": 50,
-      "spiller": "Petar Sucic",
+      "spiller": "Baris Alper Yilmaz",
       "maal": 1,
       "assists": 1,
-      "minutter": 191
+      "minutter": 200
     }
   ],
   "startpoengstatus": {
@@ -2416,7 +2406,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": null,
     "startpoeng": null,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-27T23:30:56Z",
+    "sist_beregnet": "2026-06-28T00:01:20Z",
     "uferdige_gruppekamper": [
       "Algeria_Austria_2026_06_27",
       "Colombia_Portugal_2026_06_27",
@@ -3403,11 +3393,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -3416,11 +3406,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4494,11 +4484,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -4507,11 +4497,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5585,11 +5575,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -5598,11 +5588,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6676,11 +6666,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -6689,11 +6679,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7767,11 +7757,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -7780,11 +7770,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8858,11 +8848,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -8871,11 +8861,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9949,11 +9939,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -9962,11 +9952,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11040,11 +11030,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -11053,11 +11043,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12131,11 +12121,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -12144,11 +12134,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13222,11 +13212,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -13235,11 +13225,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14313,11 +14303,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -14326,11 +14316,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15404,11 +15394,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -15417,11 +15407,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16495,11 +16485,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -16508,11 +16498,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17586,11 +17576,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -17599,11 +17589,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18677,11 +18667,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -18690,11 +18680,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19768,11 +19758,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -19781,11 +19771,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20859,11 +20849,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -20872,11 +20862,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21950,11 +21940,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -21963,11 +21953,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23041,11 +23031,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -23054,11 +23044,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24132,11 +24122,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -24145,11 +24135,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25223,11 +25213,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -25236,11 +25226,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26314,11 +26304,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -26327,11 +26317,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27405,11 +27395,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -27418,11 +27408,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28496,11 +28486,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -28509,11 +28499,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29587,11 +29577,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -29600,11 +29590,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30678,11 +30668,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -30691,11 +30681,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31769,11 +31759,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -31782,11 +31772,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32860,11 +32850,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -32873,11 +32863,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -33951,11 +33941,11 @@ const VM_DATA = {
           "bortelag": "Portugal",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
@@ -33964,11 +33954,11 @@ const VM_DATA = {
           "bortelag": "Uzbekistan",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "gruppe"
         },
         {
