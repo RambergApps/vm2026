@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-06-28T15:01:05Z",
+  "sist_oppdatert": "2026-06-28T15:31:09Z",
   "deltakere": {
     "alexander": {
       "navn": "Alexander",
@@ -200,6 +200,39 @@
         }
       }
     },
+    "olympus_fc": {
+      "navn": "Olympus fc",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
     "paal_andr_nilsen": {
       "navn": "Pål André Nilsen",
       "deltaker_type": "ordinaer",
@@ -258,6 +291,39 @@
         "r32": {
           "kamper": [
             "South_Africa_Canada_2026_06_28"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "sondre_garstad": {
+      "navn": "Sondre Garstad",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
           ],
           "bonus": true,
           "bonus_id": "antall_uavgjort",
