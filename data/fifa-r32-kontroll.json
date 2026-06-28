@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-28T02:01:01Z",
+  "generert": "2026-06-28T02:30:57Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -417,11 +417,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 80,
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemme": "England",
+          "borte": "DR Congo",
+          "dato": "2026-07-01"
+        },
+        {
           "kilde": "status.json",
           "match_no": 80,
-          "kamp_id": "1L_3E_H_I_J_K_2026_07_01",
-          "hjemme": "1L",
-          "borte": "3E/H/I/J/K",
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemme": "England",
+          "borte": "DR Congo",
           "dato": "2026-07-01"
         }
       ],
@@ -509,11 +517,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 82,
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemme": "Belgium",
+          "borte": "Senegal",
+          "dato": "2026-07-01"
+        },
+        {
           "kilde": "status.json",
           "match_no": 82,
-          "kamp_id": "1G_3A_E_H_I_J_2026_07_01",
-          "hjemme": "1G",
-          "borte": "3A/E/H/I/J",
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemme": "Belgium",
+          "borte": "Senegal",
           "dato": "2026-07-01"
         }
       ],
