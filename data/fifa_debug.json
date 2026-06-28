@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-28T01:30:57Z",
+  "tidspunkt": "2026-06-28T02:01:02Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -785,14 +785,14 @@
       "fifa_event_id": "400021500",
       "hjemmelag": "DR Congo",
       "bortelag": "Uzbekistan",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 3,
       "borte": 1,
       "fifa_dato": "2026-06-27",
       "fifa_utcDate": "2026-06-27T23:30:00Z",
-      "fifa_match_time": "90'+7'"
+      "fifa_match_time": "99'"
     },
     "400021501": {
       "fifa_event_id": "400021501",
@@ -937,6 +937,19 @@
       "fifa_utcDate": "2026-06-23T23:00:00Z",
       "fifa_match_time": "96'"
     },
+    "400021512": {
+      "fifa_event_id": "400021512",
+      "hjemmelag": "England",
+      "bortelag": "DR Congo",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-01",
+      "fifa_utcDate": "2026-07-01T16:00:00Z",
+      "fifa_match_time": null
+    },
     "400021513": {
       "fifa_event_id": "400021513",
       "hjemmelag": "Germany",
@@ -1078,6 +1091,19 @@
       "borte": null,
       "fifa_dato": "2026-07-02",
       "fifa_utcDate": "2026-07-02T00:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021525": {
+      "fifa_event_id": "400021525",
+      "hjemmelag": "Belgium",
+      "bortelag": "Senegal",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-01",
+      "fifa_utcDate": "2026-07-01T20:00:00Z",
       "fifa_match_time": null
     },
     "400021526": {

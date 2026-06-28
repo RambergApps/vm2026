@@ -1,31 +1,11 @@
 {
-  "sist_sjekket": "2026-06-28T01:31:05Z",
+  "sist_sjekket": "2026-06-28T02:01:02Z",
   "kamper": [
     {
       "type": "mangler_resultat",
       "kamp_id": "Algeria_Austria_2026_06_27",
       "hjemmelag": "Algeria",
       "bortelag": "Austria",
-      "dato": "2026-06-27",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Colombia_Portugal_2026_06_27",
-      "hjemmelag": "Colombia",
-      "bortelag": "Portugal",
-      "dato": "2026-06-27",
-      "runde": "gruppe",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
-      "hjemmelag": "DR Congo",
-      "bortelag": "Uzbekistan",
       "dato": "2026-06-27",
       "runde": "gruppe",
       "gruppe": "",

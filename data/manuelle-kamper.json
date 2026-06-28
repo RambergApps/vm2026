@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-28T01:30:56Z",
+  "sist_oppdatert": "2026-06-28T02:01:01Z",
   "kamper": [
     {
       "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -135,6 +135,25 @@
       "slot_borte": "3C/E/F/H/I"
     },
     {
+      "kamp_id": "England_DR_Congo_2026_07_01",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 80,
+      "dato": "2026-07-01",
+      "utcDate": "2026-07-01T16:00:00Z",
+      "fd_match_id": 537426,
+      "fifa_event_id": "400021512",
+      "hjemmelag": "England",
+      "bortelag": "DR Congo",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1L",
+      "slot_borte": "3E/H/I/J/K"
+    },
+    {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
       "runde": "r32",
       "gruppe": "",
@@ -152,6 +171,25 @@
       "lagkilde": "football_data_org",
       "slot_hjemme": "1D",
       "slot_borte": "3B/E/F/I/J"
+    },
+    {
+      "kamp_id": "Belgium_Senegal_2026_07_01",
+      "runde": "r32",
+      "gruppe": "",
+      "match_no": 82,
+      "dato": "2026-07-01",
+      "utcDate": "2026-07-01T20:00:00Z",
+      "fd_match_id": 537422,
+      "fifa_event_id": "400021525",
+      "hjemmelag": "Belgium",
+      "bortelag": "Senegal",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "kilde": "football_data_org_r32",
+      "lagkilde": "fifa_api",
+      "slot_hjemme": "1G",
+      "slot_borte": "3A/E/H/I/J"
     },
     {
       "kamp_id": "Portugal_Croatia_2026_07_02",

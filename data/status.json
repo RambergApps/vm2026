@@ -109,16 +109,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1L_3E_H_I_J_K_2026_07_01",
-        "hjemme": "1L",
-        "borte": "3E/H/I/J/K",
+        "id": "England_DR_Congo_2026_07_01",
+        "hjemme": "England",
+        "borte": "DR Congo",
         "dato": "2026-07-01",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 80,
         "slot_hjemme": "1L",
         "slot_borte": "3E/H/I/J/K",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-01T16:00:00Z",
+        "fd_match_id": 537426,
+        "fifa_event_id": "400021512",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -136,16 +139,19 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "1G_3A_E_H_I_J_2026_07_01",
-        "hjemme": "1G",
-        "borte": "3A/E/H/I/J",
+        "id": "Belgium_Senegal_2026_07_01",
+        "hjemme": "Belgium",
+        "borte": "Senegal",
         "dato": "2026-07-01",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 82,
         "slot_hjemme": "1G",
         "slot_borte": "3A/E/H/I/J",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "utcDate": "2026-07-01T20:00:00Z",
+        "fd_match_id": 537422,
+        "fifa_event_id": "400021525",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Portugal_Croatia_2026_07_02",
@@ -232,7 +238,7 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 12,
+    "antall_tippebare": 14,
     "neste_frist": "2026-06-28T19:00:00Z"
   },
   "r16": {

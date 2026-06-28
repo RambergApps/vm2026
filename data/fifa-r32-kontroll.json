@@ -1,5 +1,5 @@
 {
-  "generert": "2026-06-28T01:30:56Z",
+  "generert": "2026-06-28T02:01:01Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -21,8 +21,8 @@
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
     "koblet_entydig_pa_utc_avspark": 16,
-    "matched": 12,
-    "pending": 4,
+    "matched": 14,
+    "pending": 2,
     "conflict": 0,
     "kamp_id_avvik_mot_eksisterende": [],
     "motstridende_fifa_api_duplikater": [],
@@ -393,23 +393,28 @@
       "fifa_tid": "16:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "England",
-      "fifa_borte": "3EHIJK",
+      "fifa_borte": "Congo DR",
       "fifa_hjemme_kode": "ENG",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "COD",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "3EHIJK",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 79,
       "fd_match_id": 537426,
       "fd_utcDate": "2026-07-01T16:00:00Z",
       "fd_dato": "2026-07-01",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "England_DR_Congo_2026_07_01",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "England",
+      "kamp_bortelag": "DR Congo",
+      "kamp_dato": "2026-07-01",
+      "kamp_utcDate": "2026-07-01T16:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -419,7 +424,8 @@
           "borte": "3E/H/I/J/K",
           "dato": "2026-07-01"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 81,
@@ -479,23 +485,28 @@
       "fifa_tid": "20:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Belgium",
-      "fifa_borte": "3AEHIJ",
+      "fifa_borte": "Senegal",
       "fifa_hjemme_kode": "BEL",
-      "fifa_borte_kode": "",
+      "fifa_borte_kode": "SEN",
       "fifa_hjemme_kjent": true,
-      "fifa_borte_kjent": false,
+      "fifa_borte_kjent": true,
       "fifa_hjemme_placeholder": "",
-      "fifa_borte_placeholder": "3AEHIJ",
+      "fifa_borte_placeholder": "",
       "fifa_api_result_index": 80,
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
       "fd_dato": "2026-07-01",
       "fd_hjemmelag": "",
       "fd_bortelag": "",
-      "kamp_id": null,
+      "kamp_id": "Belgium_Senegal_2026_07_01",
       "koblet_pa": "eksakt_utc_avspark",
-      "status": "pending",
-      "forklaring": "FIFA-kampnummer er koblet til fd_match_id på eksakt UTC-avspark; ingen kilde har ennå et komplett faktisk lagpar.",
+      "status": "matched",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos FIFA mens football-data.org ennå mangler komplett lagpar.",
+      "kamp_hjemmelag": "Belgium",
+      "kamp_bortelag": "Senegal",
+      "kamp_dato": "2026-07-01",
+      "kamp_utcDate": "2026-07-01T20:00:00Z",
+      "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
           "kilde": "status.json",
@@ -505,7 +516,8 @@
           "borte": "3A/E/H/I/J",
           "dato": "2026-07-01"
         }
-      ]
+      ],
+      "kamp_id_samsvarer_med_eksisterende": true
     },
     {
       "fifa_match_no": 83,
@@ -539,11 +551,19 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 83,
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemme": "Portugal",
+          "borte": "Croatia",
+          "dato": "2026-07-02"
+        },
+        {
           "kilde": "status.json",
           "match_no": 83,
-          "kamp_id": "2K_2L_2026_07_02",
-          "hjemme": "2K",
-          "borte": "2L",
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemme": "Portugal",
+          "borte": "Croatia",
           "dato": "2026-07-02"
         }
       ],
@@ -703,12 +723,20 @@
       "lagkilde": "fifa_api",
       "eksisterende_koblinger": [
         {
+          "kilde": "manuelle-kamper.json",
+          "match_no": 87,
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemme": "Colombia",
+          "borte": "Ghana",
+          "dato": "2026-07-04"
+        },
+        {
           "kilde": "status.json",
           "match_no": 87,
-          "kamp_id": "1K_3D_E_I_J_L_2026_07_03",
-          "hjemme": "1K",
-          "borte": "3D/E/I/J/L",
-          "dato": "2026-07-03"
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemme": "Colombia",
+          "borte": "Ghana",
+          "dato": "2026-07-04"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
