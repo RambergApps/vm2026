@@ -2082,7 +2082,7 @@ function aapneModal(event, i) {
   const poengUtsl = samletUtslagspoeng(d);
   const vinnerCls = d.turneringsvinner_riktig ? 'color:var(--accent)' : 'color:var(--muted)';
 
-  const rundeRekkefølge = ['gruppe','r32','r16','qf','sf','final'];
+  const rundeRekkefølge = ['final','sf','qf','r16','r32','gruppe'];
   const perRunde = {};
   kampTippinger.forEach(t => {
     const r = t.runde || 'gruppe';
