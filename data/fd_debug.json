@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-28T19:30:57Z",
+  "tidspunkt": "2026-06-28T20:01:00Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1043,7 +1043,7 @@
       "fd_bortelag": "Canada",
       "hjemmelag_normalisert": "South Africa",
       "bortelag_normalisert": "Canada",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
