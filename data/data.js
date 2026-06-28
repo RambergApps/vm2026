@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-28T06:31:00Z
+// Sist oppdatert: 2026-06-28T06:50:19Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-28T06:31:00Z",
+  "sist_oppdatert": "2026-06-28T06:50:19Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1424,8 +1424,11 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-28",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-28",
       "fd_match_id": 537417,
       "fd_utcDate": "2026-06-28T19:00:00Z",
+      "fd_hjemmelag": "South Africa",
+      "fd_bortelag": "Canada",
       "match_no": 73
     },
     "Brazil_Japan_2026_06_29": {
@@ -1440,8 +1443,11 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-06-29",
       "fd_match_id": 537423,
       "fd_utcDate": "2026-06-29T17:00:00Z",
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Japan",
       "match_no": 76
     },
     "Germany_3A_B_C_D_F_2026_06_29": {
@@ -1469,22 +1475,10 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-29",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-06-29",
       "fd_match_id": 537415,
       "fd_utcDate": "2026-06-29T20:30:00Z",
       "match_no": 74
-    },
-    "Netherlands_Morocco_2026_06_29": {
-      "kamp_id": "Netherlands_Morocco_2026_06_29",
-      "canonical_kamp_id": "Netherlands_Morocco_2026_06_29",
-      "hjemmelag": "Netherlands",
-      "bortelag": "Morocco",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r32",
-      "dato_openfootball": "2026-06-29",
-      "kilde_score": "openfootball"
     },
     "1I_3C_D_F_G_H_2026_06_30": {
       "kamp_id": "1I_3C_D_F_G_H_2026_06_30",
@@ -1512,6 +1506,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-06-30",
       "fd_match_id": 537416,
       "fd_utcDate": "2026-06-30T21:00:00Z",
       "match_no": 77
@@ -1541,6 +1536,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-06-30",
       "fd_match_id": 537424,
       "fd_utcDate": "2026-06-30T17:00:00Z",
       "match_no": 78
@@ -1570,6 +1566,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-06-30",
       "fd_match_id": 537418,
       "fd_utcDate": "2026-06-30T01:00:00Z",
       "match_no": 75
@@ -1614,6 +1611,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-01",
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
       "match_no": 82
@@ -1630,6 +1628,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-01",
       "fd_match_id": 537426,
       "fd_utcDate": "2026-07-01T16:00:00Z",
       "match_no": 80
@@ -1646,6 +1645,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-01",
       "fd_match_id": 537425,
       "fd_utcDate": "2026-07-01T01:00:00Z",
       "match_no": 79
@@ -1703,6 +1703,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-02",
       "fd_match_id": 537419,
       "fd_utcDate": "2026-07-02T23:00:00Z",
       "match_no": 83
@@ -1719,6 +1720,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-02",
       "fd_match_id": 537420,
       "fd_utcDate": "2026-07-02T19:00:00Z",
       "match_no": 84
@@ -1748,6 +1750,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-02",
       "fd_match_id": 537421,
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "match_no": 81
@@ -1791,6 +1794,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-03",
       "fd_match_id": 537427,
       "fd_utcDate": "2026-07-03T22:00:00Z",
       "match_no": 86
@@ -1820,6 +1824,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-03",
       "fd_match_id": 537428,
       "fd_utcDate": "2026-07-03T18:00:00Z",
       "match_no": 88
@@ -1836,6 +1841,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-03",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-03",
       "fd_match_id": 537429,
       "fd_utcDate": "2026-07-03T03:00:00Z",
       "match_no": 85
@@ -1852,6 +1858,7 @@ const VM_DATA = {
       "runde": "r32",
       "dato_openfootball": "2026-07-04",
       "kilde_score": "manuell_fallback",
+      "dato_fd_org": "2026-07-04",
       "fd_match_id": 537430,
       "fd_utcDate": "2026-07-04T01:30:00Z",
       "match_no": 87
@@ -2518,7 +2525,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-28T06:31:00Z"
+    "sist_beregnet": "2026-06-28T06:50:19Z"
   },
   "stilling": [
     {
