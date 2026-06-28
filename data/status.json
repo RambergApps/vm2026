@@ -15,8 +15,8 @@
         "utcDate": "2026-06-28T19:00:00Z",
         "fd_match_id": 537417,
         "fifa_event_id": "400021518",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Germany_Paraguay_2026_06_29",
@@ -244,8 +244,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 16,
-    "neste_frist": "2026-06-28T19:00:00Z"
+    "antall_tippebare": 15,
+    "neste_frist": "2026-06-29T17:00:00Z"
   },
   "r16": {
     "aapen": false,

@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-28T18:47:51Z
+// Sist oppdatert: 2026-06-28T19:01:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-28T18:47:51Z",
+  "sist_oppdatert": "2026-06-28T19:01:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1417,13 +1417,13 @@ const VM_DATA = {
       "canonical_kamp_id": "South_Africa_Canada_2026_06_28",
       "hjemmelag": "South Africa",
       "bortelag": "Canada",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-06-28",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-06-28",
       "fd_match_id": 537417,
       "fd_utcDate": "2026-06-28T19:00:00Z",
@@ -2368,7 +2368,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-28T18:47:51Z"
+    "sist_beregnet": "2026-06-28T19:01:11Z"
   },
   "stilling": [
     {
@@ -4565,6 +4565,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 3,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Lionel Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 2
@@ -5664,6 +5707,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 3
@@ -6763,6 +6849,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "78 mål eller flere",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Lionel Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 4
@@ -11159,6 +11288,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 10,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Lionel Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 8
@@ -14456,6 +14628,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 10,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "Argentina",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "78 mål eller flere",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 11
@@ -17753,6 +17968,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 3,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Lionel Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 14
@@ -21050,6 +21308,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "Canada",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "0–46 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 17
@@ -22149,6 +22450,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "South Africa",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "0–46 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 18
@@ -23248,6 +23592,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 19
@@ -24347,6 +24734,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "0–46 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 20
@@ -26545,6 +26975,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 10,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "47–77 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Erling Haaland",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 22
@@ -27644,6 +28117,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 7,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "France",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "0–46 mål",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Lionel Messi",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 23
@@ -30941,6 +31457,49 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "type": "bonus",
+          "runde": "r32",
+          "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 9,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "flest_maal_lag",
+          "runde": "helhet",
+          "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "Argentina",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "totale_maal_utslag",
+          "runde": "helhet",
+          "sporsmal": "Hvor mange mål scores totalt fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "78 mål eller flere",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
+        },
+        {
+          "type": "helhetsbonus",
+          "id": "golden_boot",
+          "runde": "helhet",
+          "sporsmal": "Hvem vinner FIFA Golden Boot?",
+          "svar": "Kylian Mbappe",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 26
