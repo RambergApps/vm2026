@@ -1,0 +1,300 @@
+{
+  "format": "innleveringsstatus_v1",
+  "sist_oppdatert": "2026-06-28T12:38:12Z",
+  "deltakere": {
+    "alexander": {
+      "navn": "Alexander",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "anders_sundero": {
+      "navn": "Anders Sundero",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "arne_kristian_johansen": {
+      "navn": "Arne Kristian Johansen",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "diyan_k": {
+      "navn": "Diyan K.",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "geir_magne_evensen": {
+      "navn": "Geir Magne Evensen",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "paal_andr_nilsen": {
+      "navn": "Pål André Nilsen",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "sebastian_luranc": {
+      "navn": "Sebastian Luranc",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "South_Africa_Canada_2026_06_28"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "sjur_revheim": {
+      "navn": "Sjur Revheim",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "South_Africa_Canada_2026_06_28"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "ulf_morten_johansen": {
+      "navn": "Ulf-Morten Johansen",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_uavgjort",
+          "helhetsbonus": {
+            "flest_maal_lag": true,
+            "totale_maal_utslag": true,
+            "golden_boot": true
+          }
+        }
+      }
+    },
+    "sergio_gomes": {
+      "navn": "sergio gomes",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "South_Africa_Canada_2026_06_28",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": false
+        }
+      }
+    }
+  }
+}
