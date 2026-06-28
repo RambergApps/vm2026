@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """
-Genererer en trygg, offentlig innleveringsstatus for utslagstipping.
+Genererer trygg, offentlig innleveringsstatus for utslagstipping.
 
 Formål:
-- index.html kan vise om innlogget deltaker mangler tips i nåværende runde.
+- index.html kan vise om innlogget deltaker mangler tips i nåværende utslagsrunde.
 - Filen avslører ikke score/tips, kun hvilke kamp-ID-er og bonusfelt som er levert.
 
 Leser:
   tippinger/**/*.json
+
 Skriver:
   data/innleveringsstatus.json
+
+Merk:
+- Gruppespillfiler hoppes over stille. De er ikke relevante for popupen.
+- Utslagstips kan ligge i mapper som tippinger/r32/, tippinger/r16/ osv.,
+  eller ha meta.runde/payload.runde satt til en støttet utslagsrunde.
 """
 
 from __future__ import annotations
@@ -26,6 +32,7 @@ DATA_DIR = REPO_ROOT / "data"
 OUT_FILE = DATA_DIR / "innleveringsstatus.json"
 
 RUNDER = {"r32", "r16", "qf", "sf", "final"}
+GRUPPESPILL_NAVN = {"gruppe", "grupper", "gruppespill", "group", "groupstage", "group_stage"}
 HELHETSBONUS_FELT = ("flest_maal_lag", "totale_maal_utslag", "golden_boot")
 
 
@@ -53,17 +60,28 @@ def les_json(path: Path) -> dict[str, Any] | None:
         return None
 
 
-def runde_fra_fil(path: Path, payload: dict[str, Any]) -> str:
-    meta = payload.get("meta") if isinstance(payload.get("meta"), dict) else {}
-    runde = str(meta.get("runde") or payload.get("runde") or "").strip().lower()
-    if runde in RUNDER:
-        return runde
+def normaliser_rundenavn(value: Any) -> str:
+    return str(value or "").strip().lower().replace("-", "_").replace(" ", "_")
 
-    for part in reversed(path.parts):
-        p = part.lower()
-        if p in RUNDER:
-            return p
-    return "ukjent"
+
+def runde_fra_fil(path: Path, payload: dict[str, Any]) -> str | None:
+    """
+    Returnerer støttet utslagsrunde, eller None hvis filen ikke er en utslagstipping.
+    Gruppespillfiler er forventet i repoet og skal ikke gi advarsel.
+    """
+    meta = payload.get("meta") if isinstance(payload.get("meta"), dict) else {}
+    kandidater = [
+        normaliser_rundenavn(meta.get("runde")),
+        normaliser_rundenavn(payload.get("runde")),
+    ]
+    kandidater.extend(normaliser_rundenavn(part) for part in reversed(path.parts))
+
+    for verdi in kandidater:
+        if verdi in RUNDER:
+            return verdi
+        if verdi in GRUPPESPILL_NAVN:
+            return None
+    return None
 
 
 def har_verdi(value: Any) -> bool:
@@ -130,21 +148,33 @@ def bygg_innleveringsstatus() -> dict[str, Any]:
     filer = sorted(TIPPINGER_DIR.rglob("*.json"))
     print(f"Leser {len(filer)} tippingfil(er) fra {TIPPINGER_DIR}")
 
+    hoppet_gruppespill = 0
+    hoppet_ukjent = 0
+    behandlet = 0
+
     for path in filer:
         payload = les_json(path)
         if not payload:
+            continue
+
+        runde = runde_fra_fil(path, payload)
+        if runde not in RUNDER:
+            # Ikke støy på gamle/ordinære gruppespillfiler. De er ikke relevante her.
+            path_parts = {normaliser_rundenavn(part) for part in path.parts}
+            meta = payload.get("meta") if isinstance(payload.get("meta"), dict) else {}
+            explicit = {normaliser_rundenavn(meta.get("runde")), normaliser_rundenavn(payload.get("runde"))}
+            if path_parts & GRUPPESPILL_NAVN or explicit & GRUPPESPILL_NAVN or not explicit - {""}:
+                hoppet_gruppespill += 1
+            else:
+                hoppet_ukjent += 1
+                print(f"ADVARSEL: Hopper over fil uten støttet utslagsrunde: {path}")
             continue
 
         meta = payload.get("meta") if isinstance(payload.get("meta"), dict) else {}
         navn = str(meta.get("navn") or payload.get("navn") or "").strip()
         deltaker_id = str(meta.get("deltaker_id") or "").strip() or lag_deltaker_id(navn)
         if not deltaker_id or deltaker_id == "ukjent":
-            print(f"ADVARSEL: Hopper over fil uten deltaker/navn: {path}")
-            continue
-
-        runde = runde_fra_fil(path, payload)
-        if runde not in RUNDER:
-            print(f"ADVARSEL: Hopper over fil med ukjent runde '{runde}': {path}")
+            print(f"ADVARSEL: Hopper over utslagsfil uten deltaker/navn: {path}")
             continue
 
         deltaker_type = str(meta.get("deltaker_type") or "ordinaer").strip() or "ordinaer"
@@ -176,6 +206,14 @@ def bygg_innleveringsstatus() -> dict[str, Any]:
                 # Helhetsbonus gjelder hele utslagsfasen, men fristen er R32.
                 r32_data = deltaker["runder"].setdefault("r32", tom_runde())
                 r32_data.setdefault("helhetsbonus", {})[felt] = True
+
+        behandlet += 1
+
+    print(f"  → Behandlet {behandlet} utslagsfil(er)")
+    if hoppet_gruppespill:
+        print(f"  → Hoppet over {hoppet_gruppespill} gruppespillfil(er)")
+    if hoppet_ukjent:
+        print(f"  → Hoppet over {hoppet_ukjent} fil(er) uten støttet utslagsrunde")
 
     return normaliser_for_json(deltakere)
 
