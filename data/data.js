@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-29T18:45:44Z
+// Sist oppdatert: 2026-06-29T19:01:09Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-29T18:45:44Z",
+  "sist_oppdatert": "2026-06-29T19:01:09Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2035,7 +2035,7 @@ const VM_DATA = {
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
-      "minutter": 341
+      "minutter": 385
     },
     {
       "rank": 5,
@@ -2074,17 +2074,17 @@ const VM_DATA = {
     },
     {
       "rank": 10,
-      "spiller": "Matheus Cunha",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 238
-    },
-    {
-      "rank": 11,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 255
+    },
+    {
+      "rank": 11,
+      "spiller": "Matheus Cunha",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 260
     },
     {
       "rank": 12,
@@ -2172,17 +2172,17 @@ const VM_DATA = {
     },
     {
       "rank": 24,
-      "spiller": "Ayase Ueda",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 292
-    },
-    {
-      "rank": 25,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
+    },
+    {
+      "rank": 25,
+      "spiller": "Ayase Ueda",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 337
     },
     {
       "rank": 26,
@@ -2273,7 +2273,7 @@ const VM_DATA = {
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
-      "minutter": 325
+      "minutter": 359
     },
     {
       "rank": 39,
@@ -2370,7 +2370,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-29T18:45:44Z"
+    "sist_beregnet": "2026-06-29T19:01:09Z"
   },
   "stilling": [
     {
