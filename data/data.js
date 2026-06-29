@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-29T12:31:01Z
+// Sist oppdatert: 2026-06-29T12:45:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-29T12:31:01Z",
+  "sist_oppdatert": "2026-06-29T12:45:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1690,6 +1690,19 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-03T03:00:00Z",
       "match_no": 85
     },
+    "Canada_W75_2026_07_04": {
+      "kamp_id": "Canada_W75_2026_07_04",
+      "canonical_kamp_id": "Canada_W75_2026_07_04",
+      "hjemmelag": "Canada",
+      "bortelag": "W75",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "r16",
+      "dato_openfootball": "2026-07-04",
+      "kilde_score": "openfootball"
+    },
     "Colombia_Ghana_2026_07_04": {
       "kamp_id": "Colombia_Ghana_2026_07_04",
       "canonical_kamp_id": "Colombia_Ghana_2026_07_04",
@@ -1706,20 +1719,6 @@ const VM_DATA = {
       "fd_match_id": 537430,
       "fd_utcDate": "2026-07-04T01:30:00Z",
       "match_no": 87
-    },
-    "W73_W75_2026_07_04": {
-      "kamp_id": "W73_W75_2026_07_04",
-      "canonical_kamp_id": "W73_W75_2026_07_04",
-      "hjemmelag": "W73",
-      "bortelag": "W75",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r16",
-      "dato_openfootball": "2026-07-04",
-      "kilde_score": "openfootball",
-      "match_no": 90
     },
     "W74_W77_2026_07_04": {
       "kamp_id": "W74_W77_2026_07_04",
@@ -2371,7 +2370,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-29T12:31:01Z"
+    "sist_beregnet": "2026-06-29T12:45:39Z"
   },
   "stilling": [
     {
