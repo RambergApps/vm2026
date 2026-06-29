@@ -5150,8 +5150,8 @@
   "DR_Congo_Uzbekistan_2026_06_27|3-1": {
     "kamp_id": "DR_Congo_Uzbekistan_2026_06_27",
     "resultat": "3-1",
-    "sist_sokt": "2026-06-29T14:31:35Z",
-    "antall_sok": 100,
+    "sist_sokt": "2026-06-29T14:46:07Z",
+    "antall_sok": 101,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5168,7 +5168,7 @@
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-29T14:31:16Z",
+      "hentet": "2026-06-29T14:45:49Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -5404,8 +5404,8 @@
   "South_Africa_Canada_2026_06_28|0-1": {
     "kamp_id": "South_Africa_Canada_2026_06_28",
     "resultat": "0-1",
-    "sist_sokt": "2026-06-29T14:32:07Z",
-    "antall_sok": 50,
+    "sist_sokt": "2026-06-29T14:46:43Z",
+    "antall_sok": 51,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5413,7 +5413,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-highlights-match-report",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -5422,15 +5422,15 @@
       "kamp_hjemme_score": 0,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-29T14:31:45Z",
+      "hentet": "2026-06-29T14:46:29Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-highlights-match-report?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -5456,9 +5456,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 2
     }
   }
 }
