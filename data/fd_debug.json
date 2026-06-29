@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-29T21:15:39Z",
+  "tidspunkt": "2026-06-29T21:31:03Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1015,10 +1015,10 @@
       "fd_bortelag": "Paraguay",
       "hjemmelag_normalisert": "Germany",
       "bortelag_normalisert": "Paraguay",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
-      "borte": 0,
+      "borte": 1,
       "fd_dato": "2026-06-29",
       "fd_utcDate": "2026-06-29T20:30:00Z",
       "fd_kamp_id_basert_paa_dato": "Germany_Paraguay_2026_06_29"

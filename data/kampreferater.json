@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-29T21:17:21Z",
+  "sist_oppdatert": "2026-06-29T21:32:59Z",
   "antall_kamper": 75,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15188,7 +15188,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 126,
+        "antall_sok": 127,
         "fallback": true,
         "cache_key": "DR_Congo_Uzbekistan_2026_06_27|3-1",
         "serper_score": -100,
@@ -15198,7 +15198,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 126,
+        "retry_antall": 127,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-match-report-highlights",
         "mangler": [
@@ -15390,7 +15390,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T21:16:04Z"
+      "oppdatert": "2026-06-29T21:31:29Z"
     },
     "Algeria_Austria_2026_06_27": {
       "kamp_id": "Algeria_Austria_2026_06_27",
@@ -15850,7 +15850,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 76,
+        "antall_sok": 77,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
@@ -15860,7 +15860,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 76,
+        "retry_antall": 77,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
         "mangler": [
@@ -15962,7 +15962,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T21:16:32Z"
+      "oppdatert": "2026-06-29T21:31:59Z"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -15983,7 +15983,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 7,
+        "antall_sok": 8,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -15993,7 +15993,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 7,
+        "retry_antall": 8,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -16094,7 +16094,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T21:17:21Z"
+      "oppdatert": "2026-06-29T21:32:59Z"
     },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
@@ -16104,12 +16104,12 @@
       "hjemmelag": "Germany",
       "bortelag": "Paraguay",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Germany and Paraguay are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Paraguay lead Germany 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -16217,7 +16217,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-29T20:45:39Z"
+      "oppdatert": "2026-06-29T21:31:04Z"
     }
   }
 }
