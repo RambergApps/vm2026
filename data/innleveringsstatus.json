@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-06-29T06:01:06Z",
+  "sist_oppdatert": "2026-06-29T06:30:55Z",
   "deltakere": {
     "alexander": {
       "navn": "Alexander",
@@ -197,6 +197,32 @@
             "totale_maal_utslag": true,
             "golden_boot": true
           }
+        }
+      }
+    },
+    "kjetil_bjerke": {
+      "navn": "Kjetil bjerke",
+      "deltaker_type": "ordinaer",
+      "runder": {
+        "r32": {
+          "kamper": [
+            "Argentina_Cape_Verde_2026_07_03",
+            "Australia_Egypt_2026_07_03",
+            "Belgium_Senegal_2026_07_01",
+            "Brazil_Japan_2026_06_29",
+            "Colombia_Ghana_2026_07_04",
+            "England_DR_Congo_2026_07_01",
+            "France_Sweden_2026_06_30",
+            "Germany_Paraguay_2026_06_29",
+            "Ivory_Coast_Norway_2026_06_30",
+            "Mexico_Ecuador_2026_07_01",
+            "Netherlands_Morocco_2026_06_30",
+            "Portugal_Croatia_2026_07_02",
+            "Spain_Austria_2026_07_02",
+            "Switzerland_Algeria_2026_07_03",
+            "USA_Bosnia___Herzegovina_2026_07_02"
+          ],
+          "bonus": false
         }
       }
     },
