@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-29T17:45:44Z
+// Sist oppdatert: 2026-06-29T17:52:19Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-29T17:45:44Z",
+  "sist_oppdatert": "2026-06-29T17:52:19Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2035,7 +2035,7 @@ const VM_DATA = {
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
-      "minutter": 293
+      "minutter": 341
     },
     {
       "rank": 5,
@@ -2077,7 +2077,7 @@ const VM_DATA = {
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
-      "minutter": 191
+      "minutter": 238
     },
     {
       "rank": 11,
@@ -2158,24 +2158,24 @@ const VM_DATA = {
     },
     {
       "rank": 22,
-      "spiller": "Ayase Ueda",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 245
-    },
-    {
-      "rank": 23,
       "spiller": "Cody Gakpo",
       "maal": 2,
       "assists": 1,
       "minutter": 268
     },
     {
-      "rank": 24,
+      "rank": 23,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
+    },
+    {
+      "rank": 24,
+      "spiller": "Ayase Ueda",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 292
     },
     {
       "rank": 25,
@@ -2249,31 +2249,31 @@ const VM_DATA = {
     },
     {
       "rank": 35,
-      "spiller": "Daichi Kamada",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 278
-    },
-    {
-      "rank": 36,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 0,
       "minutter": 280
     },
     {
-      "rank": 37,
+      "rank": 36,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 285
     },
     {
-      "rank": 38,
+      "rank": 37,
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
       "minutter": 300
+    },
+    {
+      "rank": 38,
+      "spiller": "Daichi Kamada",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 325
     },
     {
       "rank": 39,
@@ -2370,7 +2370,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-29T17:45:44Z"
+    "sist_beregnet": "2026-06-29T17:52:19Z"
   },
   "stilling": [
     {
