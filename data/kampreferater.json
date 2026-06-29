@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-29T23:02:30Z",
+  "sist_oppdatert": "2026-06-29T23:13:08Z",
   "antall_kamper": 75,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15850,7 +15850,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 84,
+        "antall_sok": 85,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
@@ -15860,7 +15860,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 84,
+        "retry_antall": 85,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
         "mangler": [
@@ -15962,7 +15962,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T23:02:30Z"
+      "oppdatert": "2026-06-29T23:13:07Z"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -15983,7 +15983,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 15,
+        "antall_sok": 16,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -15993,7 +15993,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 15,
+        "retry_antall": 16,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -16094,7 +16094,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T23:02:03Z"
+      "oppdatert": "2026-06-29T23:12:44Z"
     },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
