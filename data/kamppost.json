@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-28",
   "dato_norsk": "Søndag 28. juni 2026",
-  "generert": "2026-06-29T21:47:34Z",
+  "generert": "2026-06-29T21:58:00Z",
   "antall_kamper": 5,
   "kamper": [
     {
@@ -232,7 +232,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 128,
+        "antall_sok": 129,
         "fallback": true,
         "cache_key": "DR_Congo_Uzbekistan_2026_06_27|3-1",
         "serper_score": -100,
@@ -242,7 +242,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 128,
+        "retry_antall": 129,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-match-report-highlights",
         "mangler": [
@@ -876,7 +876,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 78,
+        "antall_sok": 79,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
@@ -886,7 +886,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 78,
+        "retry_antall": 79,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
         "mangler": [
