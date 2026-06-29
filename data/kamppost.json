@@ -1,8 +1,8 @@
 {
   "dato": "2026-06-29",
   "dato_norsk": "Mandag 29. juni 2026",
-  "generert": "2026-06-29T23:16:58Z",
-  "antall_kamper": 1,
+  "generert": "2026-06-29T23:33:25Z",
+  "antall_kamper": 2,
   "kamper": [
     {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 17,
+        "antall_sok": 18,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 17,
+        "retry_antall": 18,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -90,15 +90,15 @@
             "poeng": 3
           },
           {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 4,
             "tippa_b": 2,
+            "poeng": 3
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 0,
             "poeng": 3
           },
           {
@@ -125,6 +125,144 @@
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 3,
             "tippa_b": 3,
+            "poeng": 0
+          }
+        ]
+      }
+    },
+    {
+      "kamp_id": "Germany_Paraguay_2026_06_29",
+      "hjemmelag": "Germany",
+      "bortelag": "Paraguay",
+      "hjemme_score": 1,
+      "borte_score": 1,
+      "gruppe": "",
+      "recap_tekst": "Germany and Paraguay drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "snippets_raa": [],
+      "serper_kandidater": [],
+      "recap_kvalitet": {
+        "score": 4,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "Germany_Paraguay_2026_06_29|1-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "mangler": [
+          "resultat_i_fulltekst",
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
+      },
+      "tippinger": {
+        "eksakt": [],
+        "riktig": [
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 3
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 3
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 4,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 4,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 4,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 0
           }
         ]
@@ -247,15 +385,15 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Geir Magne Evensen",
+      "navn": "Marita Hauge Gjerde",
       "plass": 20,
-      "poeng_totalt": 87,
-      "poeng_i_dag": 3
+      "poeng_totalt": 89,
+      "poeng_i_dag": 6
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Geir Magne Evensen",
       "plass": 21,
-      "poeng_totalt": 86,
+      "poeng_totalt": 87,
       "poeng_i_dag": 3
     },
     {
@@ -273,8 +411,8 @@
     {
       "navn": "sergio gomes",
       "plass": 24,
-      "poeng_totalt": 79,
-      "poeng_i_dag": 3
+      "poeng_totalt": 82,
+      "poeng_i_dag": 6
     },
     {
       "navn": "Bror Ramberg",
