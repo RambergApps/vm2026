@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-29T21:01:11Z
+// Sist oppdatert: 2026-06-29T21:15:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-29T21:01:11Z",
+  "sist_oppdatert": "2026-06-29T21:15:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2050,7 +2050,7 @@ const VM_DATA = {
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
-      "minutter": 106
+      "minutter": 138
     },
     {
       "rank": 7,
@@ -2236,31 +2236,31 @@ const VM_DATA = {
     },
     {
       "rank": 33,
-      "spiller": "Kai Havertz",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 255
-    },
-    {
-      "rank": 34,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
     },
     {
-      "rank": 35,
+      "rank": 34,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 0,
       "minutter": 280
     },
     {
-      "rank": 36,
+      "rank": 35,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 285
+    },
+    {
+      "rank": 36,
+      "spiller": "Kai Havertz",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 287
     },
     {
       "rank": 37,
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-29T21:01:11Z"
+    "sist_beregnet": "2026-06-29T21:15:39Z"
   },
   "stilling": [
     {
