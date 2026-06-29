@@ -61,6 +61,7 @@
         "utcDate": "2026-06-29T17:00:00Z",
         "fd_match_id": 537423,
         "fifa_event_id": "400021516",
+        "avanserer": "Brazil",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -277,11 +278,11 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W76_W78_2026_07_05",
-        "hjemme": "W76",
+        "id": "Brazil_W78_2026_07_05",
+        "hjemme": "Brazil",
         "borte": "W78",
         "dato": "2026-07-05",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 91,
         "slot_hjemme": "W76",
         "slot_borte": "W78",
