@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-29T18:16:45Z",
+  "sist_oppdatert": "2026-06-29T18:31:57Z",
   "antall_kamper": 74,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15188,7 +15188,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 116,
+        "antall_sok": 117,
         "fallback": true,
         "cache_key": "DR_Congo_Uzbekistan_2026_06_27|3-1",
         "serper_score": -100,
@@ -15198,9 +15198,9 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 116,
+        "retry_antall": 117,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-highlights-match-report",
         "mangler": [
           "riktig_kamp",
           "resultat_i_fulltekst",
@@ -15390,7 +15390,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T18:16:09Z"
+      "oppdatert": "2026-06-29T18:31:25Z"
     },
     "Algeria_Austria_2026_06_27": {
       "kamp_id": "Algeria_Austria_2026_06_27",
@@ -15850,7 +15850,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 66,
+        "antall_sok": 67,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
@@ -15860,7 +15860,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 66,
+        "retry_antall": 67,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
         "mangler": [
@@ -15962,7 +15962,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T18:16:45Z"
+      "oppdatert": "2026-06-29T18:31:57Z"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -15971,13 +15971,13 @@
       "fd_utcDate": "2026-06-29T17:00:00Z",
       "hjemmelag": "Brazil",
       "bortelag": "Japan",
-      "hjemme_score": 0,
+      "hjemme_score": 1,
       "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Japan lead Brazil 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Brazil and Japan are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -16073,7 +16073,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-29T18:15:41Z"
+      "oppdatert": "2026-06-29T18:30:58Z"
     }
   }
 }
