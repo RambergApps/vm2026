@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-29T20:01:20Z
+// Sist oppdatert: 2026-06-29T20:15:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-29T20:01:20Z",
+  "sist_oppdatert": "2026-06-29T20:15:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2036,7 +2036,7 @@ const VM_DATA = {
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
-      "minutter": 385
+      "minutter": 398
     },
     {
       "rank": 5,
@@ -2183,7 +2183,7 @@ const VM_DATA = {
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
-      "minutter": 337
+      "minutter": 349
     },
     {
       "rank": 26,
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-29T20:01:20Z"
+    "sist_beregnet": "2026-06-29T20:15:39Z"
   },
   "stilling": [
     {
