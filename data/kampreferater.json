@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-29T18:31:57Z",
+  "sist_oppdatert": "2026-06-29T18:46:44Z",
   "antall_kamper": 74,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15188,7 +15188,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 117,
+        "antall_sok": 118,
         "fallback": true,
         "cache_key": "DR_Congo_Uzbekistan_2026_06_27|3-1",
         "serper_score": -100,
@@ -15198,9 +15198,9 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 117,
+        "retry_antall": 118,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dr-congo-uzbekistan-match-report-highlights",
         "mangler": [
           "riktig_kamp",
           "resultat_i_fulltekst",
@@ -15390,7 +15390,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T18:31:25Z"
+      "oppdatert": "2026-06-29T18:46:12Z"
     },
     "Algeria_Austria_2026_06_27": {
       "kamp_id": "Algeria_Austria_2026_06_27",
@@ -15850,7 +15850,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 67,
+        "antall_sok": 68,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
@@ -15860,7 +15860,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 67,
+        "retry_antall": 68,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
         "mangler": [
@@ -15962,7 +15962,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-29T18:31:57Z"
+      "oppdatert": "2026-06-29T18:46:44Z"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
