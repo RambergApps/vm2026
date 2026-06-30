@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T22:01:13Z
+// Sist oppdatert: 2026-06-30T22:15:41Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T22:01:13Z",
+  "sist_oppdatert": "2026-06-30T22:15:41Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1477,10 +1477,10 @@ const VM_DATA = {
       "canonical_kamp_id": "France_Sweden_2026_06_30",
       "hjemmelag": "France",
       "bortelag": "Sweden",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
       "kilde_score": "football_data_org",
@@ -2375,7 +2375,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T22:01:13Z"
+    "sist_beregnet": "2026-06-30T22:15:41Z"
   },
   "stilling": [
     {
@@ -3494,11 +3494,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4719,11 +4719,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -5944,11 +5944,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -7155,11 +7155,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -8323,11 +8323,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -9548,11 +9548,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -12914,11 +12914,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -14125,11 +14125,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 6,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -15293,11 +15293,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -16504,11 +16504,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -18814,11 +18814,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -19982,11 +19982,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 6,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -22306,11 +22306,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -25729,11 +25729,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 5,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -28110,11 +28110,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -29335,11 +29335,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -31616,11 +31616,11 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
