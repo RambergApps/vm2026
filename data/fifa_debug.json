@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-30T18:45:38Z",
+  "tidspunkt": "2026-06-30T19:01:10Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -967,14 +967,14 @@
       "fifa_event_id": "400021514",
       "hjemmelag": "Ivory Coast",
       "bortelag": "Norway",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 1,
-      "borte": 1,
+      "borte": 2,
       "fifa_dato": "2026-06-30",
       "fifa_utcDate": "2026-06-30T17:00:00Z",
-      "fifa_match_time": "85'"
+      "fifa_match_time": "98'"
     },
     "400021515": {
       "fifa_event_id": "400021515",
