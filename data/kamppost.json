@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-29",
   "dato_norsk": "Mandag 29. juni 2026",
-  "generert": "2026-06-30T04:01:32Z",
+  "generert": "2026-06-30T04:18:41Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -15,25 +15,25 @@
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 0,
+        "score": 12,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "",
-        "antall_sok": 37,
+        "source_type": "article_report",
+        "antall_sok": 38,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
-        "referat_fakta_score": 0,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 37,
-        "direct_fifa_probe": false,
-        "fifa_direct_probe_url": "",
+        "retry_antall": 38,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
-          "fulltekst"
+          "goal_events"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -141,25 +141,26 @@
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 0,
+        "score": 4,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "",
-        "antall_sok": 20,
+        "source_type": "article_report",
+        "antall_sok": 21,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
-        "fulltekst_status": "ikke_funnet",
-        "fulltekst_kilde": "",
-        "fulltekst_score": -100,
-        "referat_fakta_score": 0,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 20,
-        "direct_fifa_probe": false,
-        "fifa_direct_probe_url": "",
+        "retry_antall": 21,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
         "mangler": [
-          "fulltekst"
+          "resultat_i_fulltekst",
+          "goal_events"
         ],
         "offisiell_kilde_sokt": []
       },
