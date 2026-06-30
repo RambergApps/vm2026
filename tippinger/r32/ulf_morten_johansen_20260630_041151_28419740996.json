@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "deltaker_id": "ulf_morten_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-06-30T04:11:41.907Z",
+    "navn": "Ulf-Morten Johansen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-06-30T04:11:51Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Sweden",
+      "hjemme": 4,
+      "hjemmelag": "France",
+      "kamp_id": "France_Sweden_2026_06_30",
+      "match_no": 77
+    },
+    {
+      "borte": 3,
+      "bortelag": "Norway",
+      "hjemme": 0,
+      "hjemmelag": "Ivory Coast",
+      "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+      "match_no": 78
+    },
+    {
+      "borte": 3,
+      "bortelag": "Ecuador",
+      "hjemme": 2,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_Ecuador_2026_07_01",
+      "match_no": 79
+    },
+    {
+      "borte": 0,
+      "bortelag": "DR Congo",
+      "hjemme": 3,
+      "hjemmelag": "England",
+      "kamp_id": "England_DR_Congo_2026_07_01",
+      "match_no": 80
+    },
+    {
+      "borte": 0,
+      "bortelag": "Bosnia & Herzegovina",
+      "hjemme": 1,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "match_no": 81
+    },
+    {
+      "borte": 1,
+      "bortelag": "Senegal",
+      "hjemme": 0,
+      "hjemmelag": "Belgium",
+      "kamp_id": "Belgium_Senegal_2026_07_01",
+      "match_no": 82
+    },
+    {
+      "borte": 2,
+      "bortelag": "Croatia",
+      "hjemme": 2,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Croatia_2026_07_02",
+      "match_no": 83
+    },
+    {
+      "borte": 2,
+      "bortelag": "Austria",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Austria_2026_07_02",
+      "match_no": 84
+    },
+    {
+      "borte": 2,
+      "bortelag": "Algeria",
+      "hjemme": 0,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Algeria_2026_07_03",
+      "match_no": 85
+    },
+    {
+      "borte": 1,
+      "bortelag": "Cape Verde",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+      "match_no": 86
+    },
+    {
+      "borte": 1,
+      "bortelag": "Ghana",
+      "hjemme": 1,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "match_no": 87
+    },
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Australia",
+      "kamp_id": "Australia_Egypt_2026_07_03",
+      "match_no": 88
+    }
+  ]
+}

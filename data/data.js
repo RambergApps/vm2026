@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T04:01:06Z
+// Sist oppdatert: 2026-06-30T04:12:03Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T04:01:06Z",
+  "sist_oppdatert": "2026-06-30T04:12:03Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2071,7 +2071,7 @@ const VM_DATA = {
       "spiller": "Cody Gakpo",
       "maal": 3,
       "assists": 1,
-      "minutter": 349
+      "minutter": 394
     },
     {
       "rank": 10,
@@ -2110,17 +2110,17 @@ const VM_DATA = {
     },
     {
       "rank": 15,
-      "spiller": "Ismael Saibari",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 337
-    },
-    {
-      "rank": 16,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 370
+    },
+    {
+      "rank": 16,
+      "spiller": "Ismael Saibari",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 390
     },
     {
       "rank": 17,
@@ -2134,7 +2134,7 @@ const VM_DATA = {
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
-      "minutter": 228
+      "minutter": 281
     },
     {
       "rank": 19,
@@ -2327,17 +2327,17 @@ const VM_DATA = {
     },
     {
       "rank": 46,
-      "spiller": "Soufiane Rahimi",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 53
-    },
-    {
-      "rank": 47,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 84
+    },
+    {
+      "rank": 47,
+      "spiller": "Soufiane Rahimi",
+      "maal": 1,
+      "assists": 1,
+      "minutter": 96
     },
     {
       "rank": 48,
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T04:01:06Z"
+    "sist_beregnet": "2026-06-30T04:12:03Z"
   },
   "stilling": [
     {
