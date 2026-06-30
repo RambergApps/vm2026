@@ -94,6 +94,7 @@
         "utcDate": "2026-06-30T17:00:00Z",
         "fd_match_id": 537424,
         "fifa_event_id": "400021514",
+        "avanserer": "Norway",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -280,16 +281,16 @@
         "tippe_status": "mangler_avsparkstid"
       },
       {
-        "id": "Brazil_W78_2026_07_05",
+        "id": "Brazil_Norway_2026_07_05",
         "hjemme": "Brazil",
-        "borte": "W78",
+        "borte": "Norway",
         "dato": "2026-07-05",
         "info": "Autofyll fra avansement",
         "match_no": 91,
         "slot_hjemme": "W76",
         "slot_borte": "W78",
         "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippe_status": "mangler_avsparkstid"
       },
       {
         "id": "W79_W80_2026_07_05",
