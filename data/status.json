@@ -79,6 +79,7 @@
         "utcDate": "2026-06-30T21:00:00Z",
         "fd_match_id": 537416,
         "fifa_event_id": "400021523",
+        "avanserer": "France",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -257,16 +258,16 @@
     "frist": null,
     "kamper": [
       {
-        "id": "Paraguay_W77_2026_07_04",
+        "id": "Paraguay_France_2026_07_04",
         "hjemme": "Paraguay",
-        "borte": "W77",
+        "borte": "France",
         "dato": "2026-07-04",
         "info": "Autofyll fra avansement",
         "match_no": 89,
         "slot_hjemme": "W74",
         "slot_borte": "W77",
         "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippe_status": "mangler_avsparkstid"
       },
       {
         "id": "Canada_Morocco_2026_07_04",
