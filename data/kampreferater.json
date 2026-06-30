@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-30T17:33:49Z",
+  "sist_oppdatert": "2026-06-30T17:48:14Z",
   "antall_kamper": 77,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15983,7 +15983,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 95,
+        "antall_sok": 96,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -15993,7 +15993,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 95,
+        "retry_antall": 96,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -16094,7 +16094,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T17:31:52Z"
+      "oppdatert": "2026-06-30T17:46:24Z"
     },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
@@ -16115,7 +16115,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 78,
+        "antall_sok": 79,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
@@ -16125,9 +16125,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 78,
+        "retry_antall": 79,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -16238,7 +16238,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T17:32:41Z"
+      "oppdatert": "2026-06-30T17:47:15Z"
     },
     "Netherlands_Morocco_2026_06_30": {
       "kamp_id": "Netherlands_Morocco_2026_06_30",
@@ -16259,7 +16259,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 59,
+        "antall_sok": 60,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
@@ -16269,7 +16269,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 59,
+        "retry_antall": 60,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
         "mangler": [
@@ -16389,7 +16389,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T17:33:48Z"
+      "oppdatert": "2026-06-30T17:48:14Z"
     },
     "Ivory_Coast_Norway_2026_06_30": {
       "kamp_id": "Ivory_Coast_Norway_2026_06_30",
@@ -16399,12 +16399,12 @@
       "hjemmelag": "Ivory Coast",
       "bortelag": "Norway",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Ivory Coast and Norway are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Norway lead Ivory Coast 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -16518,7 +16518,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-06-30T17:01:14Z"
+      "oppdatert": "2026-06-30T17:45:39Z"
     }
   }
 }
