@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T16:45:39Z
+// Sist oppdatert: 2026-06-30T17:01:13Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T16:45:39Z",
+  "sist_oppdatert": "2026-06-30T17:01:13Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1496,13 +1496,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Ivory_Coast_Norway_2026_06_30",
       "hjemmelag": "Ivory Coast",
       "bortelag": "Norway",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-06-30",
       "fd_match_id": 537424,
       "fd_utcDate": "2026-06-30T17:00:00Z",
@@ -2373,7 +2373,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T16:45:39Z"
+    "sist_beregnet": "2026-06-30T17:01:13Z"
   },
   "stilling": [
     {
@@ -3498,6 +3498,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4699,6 +4712,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -5897,6 +5923,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -7081,6 +7120,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -8219,6 +8271,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -9417,6 +9482,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -12759,6 +12837,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -13940,6 +14031,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 4,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -16183,6 +16287,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 2,
+          "tippa_b": 4,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -17351,6 +17468,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
@@ -18548,6 +18678,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -20845,6 +20988,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -24187,6 +24343,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -25382,6 +25551,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -27739,6 +27921,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemmelag": "Netherlands",
           "bortelag": "Morocco",
@@ -28934,6 +29129,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -32287,6 +32495,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "hjemmelag": "Ivory Coast",
+          "bortelag": "Norway",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {

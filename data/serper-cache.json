@@ -5463,8 +5463,8 @@
   "Brazil_Japan_2026_06_29|2-1": {
     "kamp_id": "Brazil_Japan_2026_06_29",
     "resultat": "2-1",
-    "sist_sokt": "2026-06-30T16:46:29Z",
-    "antall_sok": 91,
+    "sist_sokt": "2026-06-30T17:02:00Z",
+    "antall_sok": 92,
     "beste_score": 12,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5481,7 +5481,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-30T16:46:12Z",
+      "hentet": "2026-06-30T17:01:44Z",
       "goal_events": [
         {
           "spiller": "Juju",
@@ -5547,8 +5547,8 @@
   "Germany_Paraguay_2026_06_29|1-1": {
     "kamp_id": "Germany_Paraguay_2026_06_29",
     "resultat": "1-1",
-    "sist_sokt": "2026-06-30T16:47:34Z",
-    "antall_sok": 74,
+    "sist_sokt": "2026-06-30T17:02:51Z",
+    "antall_sok": 75,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5556,7 +5556,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -5565,15 +5565,15 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-30T16:46:43Z",
+      "hentet": "2026-06-30T17:02:10Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -5598,16 +5598,16 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   },
   "Netherlands_Morocco_2026_06_30|1-1": {
     "kamp_id": "Netherlands_Morocco_2026_06_30",
     "resultat": "1-1",
-    "sist_sokt": "2026-06-30T16:48:20Z",
-    "antall_sok": 55,
+    "sist_sokt": "2026-06-30T17:04:03Z",
+    "antall_sok": 56,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5624,7 +5624,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-06-30T16:47:41Z",
+      "hentet": "2026-06-30T17:03:00Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
