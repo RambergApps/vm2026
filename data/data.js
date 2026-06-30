@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T22:15:41Z
+// Sist oppdatert: 2026-06-30T22:31:03Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T22:15:41Z",
+  "sist_oppdatert": "2026-06-30T22:31:03Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1477,7 +1477,7 @@ const VM_DATA = {
       "canonical_kamp_id": "France_Sweden_2026_06_30",
       "hjemmelag": "France",
       "bortelag": "Sweden",
-      "hjemme": 1,
+      "hjemme": 2,
       "borte": 0,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2023,24 +2023,24 @@ const VM_DATA = {
     },
     {
       "rank": 2,
+      "spiller": "Kylian Mbappe",
+      "maal": 5,
+      "assists": 2,
+      "minutter": 354
+    },
+    {
+      "rank": 3,
       "spiller": "Erling Haaland",
       "maal": 5,
       "assists": 0,
       "minutter": 309
     },
     {
-      "rank": 3,
-      "spiller": "Kylian Mbappe",
-      "maal": 4,
-      "assists": 2,
-      "minutter": 302
-    },
-    {
       "rank": 4,
       "spiller": "Ousmane Dembele",
       "maal": 4,
-      "assists": 1,
-      "minutter": 236
+      "assists": 2,
+      "minutter": 289
     },
     {
       "rank": 5,
@@ -2156,73 +2156,73 @@ const VM_DATA = {
     },
     {
       "rank": 21,
+      "spiller": "Bradley Barcola",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 200
+    },
+    {
+      "rank": 22,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 213
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 232
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Jude Bellingham",
       "maal": 2,
       "assists": 1,
       "minutter": 237
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 39
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Marko Arnautovic",
       "maal": 2,
       "assists": 0,
       "minutter": 137
-    },
-    {
-      "rank": 30,
-      "spiller": "Anthony Elanga",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 161
     },
     {
       "rank": 31,
@@ -2247,31 +2247,31 @@ const VM_DATA = {
     },
     {
       "rank": 34,
+      "spiller": "Anthony Elanga",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 213
+    },
+    {
+      "rank": 35,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 216
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Julian Quinones",
       "maal": 2,
       "assists": 0,
       "minutter": 269
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 0,
       "minutter": 280
-    },
-    {
-      "rank": 37,
-      "spiller": "Yasin Ayari",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 297
     },
     {
       "rank": 38,
@@ -2282,87 +2282,87 @@ const VM_DATA = {
     },
     {
       "rank": 39,
+      "spiller": "Yasin Ayari",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 350
+    },
+    {
+      "rank": 40,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 359
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
-      "minutter": 307
+      "minutter": 360
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Iliman Ndiaye",
       "maal": 1,
       "assists": 2,
       "minutter": 56
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 206
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 230
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 45,
-      "spiller": "Viktor Gyokeres",
-      "maal": 1,
-      "assists": 2,
-      "minutter": 314
-    },
-    {
       "rank": 46,
-      "spiller": "Julio Enciso",
+      "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 2,
       "minutter": 367
     },
     {
       "rank": 47,
+      "spiller": "Julio Enciso",
+      "maal": 1,
+      "assists": 2,
+      "minutter": 367
+    },
+    {
+      "rank": 48,
       "spiller": "Promise David",
       "maal": 1,
       "assists": 1,
       "minutter": 84
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Soufiane Rahimi",
       "maal": 1,
       "assists": 1,
       "minutter": 96
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Romelu Lukaku",
       "maal": 1,
       "assists": 1,
       "minutter": 121
-    },
-    {
-      "rank": 50,
-      "spiller": "Trezeguet",
-      "maal": 1,
-      "assists": 1,
-      "minutter": 129
     }
   ],
   "startpoengstatus": {
@@ -2375,7 +2375,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T22:15:41Z"
+    "sist_beregnet": "2026-06-30T22:31:03Z"
   },
   "stilling": [
     {
@@ -3494,7 +3494,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -4719,7 +4719,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -5944,7 +5944,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -7155,7 +7155,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -8323,7 +8323,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -9548,7 +9548,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -12914,7 +12914,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -14125,7 +14125,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 6,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -15293,7 +15293,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -16504,7 +16504,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -18814,7 +18814,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -19982,7 +19982,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 6,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -22306,7 +22306,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -25729,7 +25729,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 5,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -28110,7 +28110,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -29335,7 +29335,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -31616,7 +31616,7 @@ const VM_DATA = {
           "bortelag": "Sweden",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
