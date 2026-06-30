@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T21:15:38Z
+// Sist oppdatert: 2026-06-30T21:31:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T21:15:38Z",
+  "sist_oppdatert": "2026-06-30T21:31:04Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2033,14 +2033,14 @@ const VM_DATA = {
       "spiller": "Kylian Mbappe",
       "maal": 4,
       "assists": 2,
-      "minutter": 290
+      "minutter": 302
     },
     {
       "rank": 4,
       "spiller": "Ousmane Dembele",
       "maal": 4,
       "assists": 1,
-      "minutter": 225
+      "minutter": 236
     },
     {
       "rank": 5,
@@ -2222,7 +2222,7 @@ const VM_DATA = {
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
-      "minutter": 149
+      "minutter": 161
     },
     {
       "rank": 31,
@@ -2271,7 +2271,7 @@ const VM_DATA = {
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
-      "minutter": 285
+      "minutter": 297
     },
     {
       "rank": 38,
@@ -2292,7 +2292,7 @@ const VM_DATA = {
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
-      "minutter": 296
+      "minutter": 307
     },
     {
       "rank": 41,
@@ -2327,7 +2327,7 @@ const VM_DATA = {
       "spiller": "Viktor Gyokeres",
       "maal": 1,
       "assists": 2,
-      "minutter": 302
+      "minutter": 314
     },
     {
       "rank": 46,
@@ -2375,7 +2375,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T21:15:38Z"
+    "sist_beregnet": "2026-06-30T21:31:04Z"
   },
   "stilling": [
     {
