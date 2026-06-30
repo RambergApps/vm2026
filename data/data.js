@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T01:31:05Z
+// Sist oppdatert: 2026-06-30T01:34:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T01:31:05Z",
+  "sist_oppdatert": "2026-06-30T01:34:04Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2071,21 +2071,21 @@ const VM_DATA = {
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
-      "minutter": 168
+      "minutter": 189
     },
     {
       "rank": 10,
-      "spiller": "Ismael Saibari",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 255
-    },
-    {
-      "rank": 11,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 260
+    },
+    {
+      "rank": 11,
+      "spiller": "Ismael Saibari",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 276
     },
     {
       "rank": 12,
@@ -2127,7 +2127,7 @@ const VM_DATA = {
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 1,
-      "minutter": 147
+      "minutter": 168
     },
     {
       "rank": 18,
@@ -2166,17 +2166,17 @@ const VM_DATA = {
     },
     {
       "rank": 23,
-      "spiller": "Cody Gakpo",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 268
-    },
-    {
-      "rank": 24,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
+    },
+    {
+      "rank": 24,
+      "spiller": "Cody Gakpo",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 289
     },
     {
       "rank": 25,
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T01:31:05Z"
+    "sist_beregnet": "2026-06-30T01:34:04Z"
   },
   "stilling": [
     {
