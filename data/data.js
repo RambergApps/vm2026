@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T00:45:38Z
+// Sist oppdatert: 2026-06-30T01:01:13Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T00:45:38Z",
+  "sist_oppdatert": "2026-06-30T01:01:13Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T00:45:38Z"
+    "sist_beregnet": "2026-06-30T01:01:13Z"
   },
   "stilling": [
     {
@@ -3496,6 +3496,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -4683,6 +4696,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -5851,6 +5877,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
         }
       ],
       "plass": 3
@@ -6977,6 +7016,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -8164,6 +8216,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -9345,6 +9410,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         }
       ],
@@ -12673,6 +12751,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -13840,6 +13931,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         }
       ],
@@ -16066,6 +16170,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -18349,6 +18466,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         }
       ],
@@ -21677,6 +21807,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -22831,6 +22974,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
         },
         {
           "kamp_id": "South_Africa_Canada_2026_06_28",
@@ -25173,6 +25329,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -26357,6 +26526,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -27538,6 +27720,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -29824,6 +30019,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -32061,6 +32269,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "hjemmelag": "Netherlands",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
