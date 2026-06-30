@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-30T04:18:41Z",
+  "sist_oppdatert": "2026-06-30T04:31:18Z",
   "antall_kamper": 76,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15846,27 +15846,25 @@
       "referatstatus": "forelopig",
       "recap_tekst": "Canada beat South Africa 1-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "score": 2,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 107,
+        "source_type": "",
+        "antall_sok": 108,
         "fallback": true,
         "cache_key": "South_Africa_Canada_2026_06_28|0-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 2,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 107,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/south-africa-canada-match-report-highlights",
+        "retry_antall": 108,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "riktig_kamp",
-          "resultat_i_fulltekst",
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -15961,8 +15959,8 @@
           }
         ]
       },
-      "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T04:17:50Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-06-30T04:31:13Z"
     },
     "Brazil_Japan_2026_06_29": {
       "kamp_id": "Brazil_Japan_2026_06_29",
@@ -15979,25 +15977,25 @@
       "referatstatus": "forelopig",
       "recap_tekst": "Brazil beat Japan 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "score": 12,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 38,
+        "source_type": "",
+        "antall_sok": 39,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 12,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 38,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
+        "retry_antall": 39,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -16093,8 +16091,8 @@
           }
         ]
       },
-      "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T04:16:30Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-06-30T04:31:08Z"
     },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
@@ -16111,26 +16109,25 @@
       "referatstatus": "forelopig",
       "recap_tekst": "Germany and Paraguay drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "score": 4,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 21,
+        "source_type": "",
+        "antall_sok": 22,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 21,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "retry_antall": 22,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -16237,8 +16234,8 @@
           }
         ]
       },
-      "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T04:17:25Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-06-30T04:31:11Z"
     },
     "Netherlands_Morocco_2026_06_30": {
       "kamp_id": "Netherlands_Morocco_2026_06_30",
@@ -16255,26 +16252,25 @@
       "referatstatus": "forelopig",
       "recap_tekst": "Netherlands and Morocco drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "score": 4,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 2,
+        "source_type": "",
+        "antall_sok": 3,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
+        "retry_antall": 3,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -16388,8 +16384,8 @@
           }
         ]
       },
-      "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T04:18:40Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-06-30T04:31:18Z"
     }
   }
 }
