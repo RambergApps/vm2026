@@ -31,6 +31,7 @@
         "utcDate": "2026-06-29T20:30:00Z",
         "fd_match_id": 537415,
         "fifa_event_id": "400021513",
+        "avanserer": "Paraguay",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -46,6 +47,7 @@
         "utcDate": "2026-06-30T01:00:00Z",
         "fd_match_id": 537418,
         "fifa_event_id": "400021522",
+        "avanserer": "Morocco",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -250,15 +252,15 @@
     "neste_frist": "2026-06-30T17:00:00Z"
   },
   "r16": {
-    "aapen": false,
+    "aapen": true,
     "frist": null,
     "kamper": [
       {
-        "id": "W74_W77_2026_07_04",
-        "hjemme": "W74",
+        "id": "Paraguay_W77_2026_07_04",
+        "hjemme": "Paraguay",
         "borte": "W77",
         "dato": "2026-07-04",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 89,
         "slot_hjemme": "W74",
         "slot_borte": "W77",
@@ -266,16 +268,16 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "Canada_W75_2026_07_04",
+        "id": "Canada_Morocco_2026_07_04",
         "hjemme": "Canada",
-        "borte": "W75",
+        "borte": "Morocco",
         "dato": "2026-07-04",
         "info": "Autofyll fra avansement",
         "match_no": 90,
         "slot_hjemme": "W73",
         "slot_borte": "W75",
         "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippe_status": "mangler_avsparkstid"
       },
       {
         "id": "Brazil_W78_2026_07_05",
