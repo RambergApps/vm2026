@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-30T17:01:12Z",
+  "tidspunkt": "2026-06-30T17:15:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1155,10 +1155,10 @@
       "fd_bortelag": "Norway",
       "hjemmelag_normalisert": "Ivory Coast",
       "bortelag_normalisert": "Norway",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-06-30",
       "fd_utcDate": "2026-06-30T17:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Ivory_Coast_Norway_2026_06_30"
