@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-06-30T01:01:13Z
+// Sist oppdatert: 2026-06-30T01:15:37Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-06-30T01:01:13Z",
+  "sist_oppdatert": "2026-06-30T01:15:37Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1514,13 +1514,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Netherlands_Morocco_2026_06_30",
       "hjemmelag": "Netherlands",
       "bortelag": "Morocco",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-06-30",
-      "kilde_score": "manuell_fallback",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-06-30",
       "fd_match_id": 537418,
       "fd_utcDate": "2026-06-30T01:00:00Z",
@@ -2371,7 +2371,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-06-30T01:01:13Z"
+    "sist_beregnet": "2026-06-30T01:15:37Z"
   },
   "stilling": [
     {
@@ -3504,11 +3504,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4701,11 +4701,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -5884,11 +5884,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -7024,11 +7024,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -8221,11 +8221,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -9418,11 +9418,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -12756,11 +12756,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -13939,11 +13939,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -16178,11 +16178,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -18474,11 +18474,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -21812,11 +21812,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -22981,11 +22981,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -25334,11 +25334,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -26531,11 +26531,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -27728,11 +27728,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -30024,11 +30024,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -32277,11 +32277,11 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
