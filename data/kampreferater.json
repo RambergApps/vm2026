@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-06-30T16:18:25Z",
+  "sist_oppdatert": "2026-06-30T16:33:55Z",
   "antall_kamper": 76,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -15983,7 +15983,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 89,
+        "antall_sok": 90,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -15993,7 +15993,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 89,
+        "retry_antall": 90,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -16094,7 +16094,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T16:16:28Z"
+      "oppdatert": "2026-06-30T16:32:02Z"
     },
     "Germany_Paraguay_2026_06_29": {
       "kamp_id": "Germany_Paraguay_2026_06_29",
@@ -16115,7 +16115,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 72,
+        "antall_sok": 73,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
@@ -16125,9 +16125,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 72,
+        "retry_antall": 73,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-highlights-match-report",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -16238,7 +16238,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T16:17:20Z"
+      "oppdatert": "2026-06-30T16:33:05Z"
     },
     "Netherlands_Morocco_2026_06_30": {
       "kamp_id": "Netherlands_Morocco_2026_06_30",
@@ -16259,7 +16259,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 53,
+        "antall_sok": 54,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
@@ -16269,9 +16269,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 53,
+        "retry_antall": 54,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -16389,7 +16389,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-06-30T16:18:25Z"
+      "oppdatert": "2026-06-30T16:33:55Z"
     }
   }
 }
