@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-29",
   "dato_norsk": "Mandag 29. juni 2026",
-  "generert": "2026-06-30T03:47:42Z",
+  "generert": "2026-06-30T04:01:32Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -15,38 +15,38 @@
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 12,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 36,
+        "source_type": "",
+        "antall_sok": 37,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 12,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 36,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
+        "retry_antall": 37,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [
           {
-            "navn": "Olympus fc",
+            "navn": "Pål André Nilsen",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
           },
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Olympus fc",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
@@ -78,13 +78,19 @@
             "poeng": 3
           },
           {
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Thomas Lindland",
             "tippa_h": 3,
             "tippa_b": 2,
             "poeng": 3
           },
           {
-            "navn": "Sondre Garstad",
+            "navn": "Geir Magne Evensen",
             "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 3
@@ -93,12 +99,6 @@
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 4,
             "tippa_b": 2,
-            "poeng": 3
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 0,
             "poeng": 3
           },
           {
@@ -141,26 +141,25 @@
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 4,
+        "score": 0,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 19,
+        "source_type": "",
+        "antall_sok": 20,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 19,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
+        "retry_antall": 20,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
         "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
+          "fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -182,13 +181,19 @@
         ],
         "bom": [
           {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
             "navn": "Olympus fc",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 0
           },
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Alexander",
             "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 0
@@ -197,12 +202,6 @@
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 3,
-            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -236,14 +235,14 @@
             "poeng": 0
           },
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 3,
+            "navn": "Sondre Garstad",
+            "tippa_h": 4,
             "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 4,
+            "navn": "Thomas Lindland",
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -271,33 +270,33 @@
   ],
   "stilling": [
     {
-      "navn": "Olympus fc",
+      "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 130,
+      "poeng_totalt": 133,
       "poeng_i_dag": 7
     },
     {
-      "navn": "Pål André Nilsen",
+      "navn": "Olympus fc",
       "plass": 2,
       "poeng_totalt": 130,
       "poeng_i_dag": 7
     },
     {
-      "navn": "Vegard Hammervold Midtbø",
+      "navn": "Alexander",
       "plass": 3,
+      "poeng_totalt": 129,
+      "poeng_i_dag": 3
+    },
+    {
+      "navn": "Vegard Hammervold Midtbø",
+      "plass": 4,
       "poeng_totalt": 124,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Alexander",
-      "plass": 4,
-      "poeng_totalt": 122,
-      "poeng_i_dag": 3
-    },
-    {
       "navn": "Arne Kristian Johansen",
       "plass": 5,
-      "poeng_totalt": 114,
+      "poeng_totalt": 117,
       "poeng_i_dag": 3
     },
     {
@@ -339,80 +338,80 @@
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 12,
-      "poeng_totalt": 99,
+      "poeng_totalt": 102,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Magnus Børrud",
+      "navn": "Sebastian Luranc",
       "plass": 13,
+      "poeng_totalt": 102,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Sondre Garstad",
+      "plass": 14,
+      "poeng_totalt": 99,
+      "poeng_i_dag": 3
+    },
+    {
+      "navn": "Magnus Børrud",
+      "plass": 15,
       "poeng_totalt": 98,
       "poeng_i_dag": 0
     },
     {
       "navn": "Thomas Lindland",
-      "plass": 14,
+      "plass": 16,
       "poeng_totalt": 97,
       "poeng_i_dag": 3
     },
     {
       "navn": "Atle Johansen",
-      "plass": 15,
+      "plass": 17,
       "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {
       "navn": "Rickard Jacobsson",
-      "plass": 16,
-      "poeng_totalt": 96,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Sondre Garstad",
-      "plass": 17,
-      "poeng_totalt": 96,
-      "poeng_i_dag": 3
-    },
-    {
-      "navn": "Sebastian Luranc",
       "plass": 18,
-      "poeng_totalt": 95,
+      "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Sjur Revheim",
+      "navn": "Geir Magne Evensen",
       "plass": 19,
-      "poeng_totalt": 92,
-      "poeng_i_dag": 0
+      "poeng_totalt": 94,
+      "poeng_i_dag": 3
     },
     {
       "navn": "Marita Hauge Gjerde",
       "plass": 20,
-      "poeng_totalt": 89,
+      "poeng_totalt": 92,
       "poeng_i_dag": 6
     },
     {
-      "navn": "Geir Magne Evensen",
+      "navn": "Sjur Revheim",
       "plass": 21,
-      "poeng_totalt": 87,
-      "poeng_i_dag": 3
+      "poeng_totalt": 92,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Ulf-Morten Johansen",
       "plass": 22,
-      "poeng_totalt": 86,
+      "poeng_totalt": 89,
       "poeng_i_dag": 3
     },
     {
-      "navn": "Andreas Handelsby",
+      "navn": "sergio gomes",
       "plass": 23,
-      "poeng_totalt": 82,
-      "poeng_i_dag": 0
+      "poeng_totalt": 85,
+      "poeng_i_dag": 6
     },
     {
-      "navn": "sergio gomes",
+      "navn": "Andreas Handelsby",
       "plass": 24,
       "poeng_totalt": 82,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 0
     },
     {
       "navn": "Bror Ramberg",
