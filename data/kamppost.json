@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-29",
   "dato_norsk": "Mandag 29. juni 2026",
-  "generert": "2026-06-30T05:04:21Z",
+  "generert": "2026-06-30T05:18:38Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 41,
+        "antall_sok": 42,
         "fallback": true,
         "cache_key": "Brazil_Japan_2026_06_29|2-1",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 41,
+        "retry_antall": 42,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-brazil-match-report-highlights",
         "mangler": [
@@ -145,7 +145,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 24,
+        "antall_sok": 25,
         "fallback": true,
         "cache_key": "Germany_Paraguay_2026_06_29|1-1",
         "serper_score": -100,
@@ -155,7 +155,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 24,
+        "retry_antall": 25,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-match-report-highlights",
         "mangler": [
