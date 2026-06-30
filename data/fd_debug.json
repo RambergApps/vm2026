@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-06-30T02:45:44Z",
+  "tidspunkt": "2026-06-30T03:01:11Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1060,7 +1060,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 0,
+      "borte": 1,
       "fd_dato": "2026-06-30",
       "fd_utcDate": "2026-06-30T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Netherlands_Morocco_2026_06_30"
