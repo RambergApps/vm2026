@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-01T18:03:59Z",
+  "sist_oppdatert": "2026-07-01T18:19:54Z",
   "antall_kamper": 80,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16259,7 +16259,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 117,
+        "antall_sok": 118,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
@@ -16269,7 +16269,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 117,
+        "retry_antall": 118,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
         "mangler": [
@@ -16363,6 +16363,12 @@
             "poeng": 0
           },
           {
+            "navn": "Thomas Lindland",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -16375,12 +16381,6 @@
             "poeng": 0
           },
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 0,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -16389,7 +16389,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T18:02:11Z"
+      "oppdatert": "2026-07-01T18:17:08Z"
     },
     "Ivory_Coast_Norway_2026_06_30": {
       "kamp_id": "Ivory_Coast_Norway_2026_06_30",
@@ -16410,7 +16410,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 41,
+        "antall_sok": 42,
         "fallback": true,
         "cache_key": "Ivory_Coast_Norway_2026_06_30|1-2",
         "serper_score": -100,
@@ -16420,7 +16420,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 41,
+        "retry_antall": 42,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-match-report-highlights",
         "mangler": [
@@ -16541,7 +16541,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T18:02:59Z"
+      "oppdatert": "2026-07-01T18:18:31Z"
     },
     "France_Sweden_2026_06_30": {
       "kamp_id": "France_Sweden_2026_06_30",
@@ -16562,7 +16562,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 36,
+        "antall_sok": 37,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -16572,7 +16572,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 36,
+        "retry_antall": 37,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -16628,6 +16628,12 @@
             "poeng": 3
           },
           {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Sondre Garstad",
             "tippa_h": 6,
             "tippa_b": 2,
@@ -16649,12 +16655,6 @@
             "navn": "Alex Myrvokd",
             "tippa_h": 6,
             "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 0,
             "poeng": 3
           },
           {
@@ -16691,7 +16691,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T18:03:58Z"
+      "oppdatert": "2026-07-01T18:19:54Z"
     },
     "Mexico_Ecuador_2026_07_01": {
       "kamp_id": "Mexico_Ecuador_2026_07_01",
@@ -16759,15 +16759,15 @@
             "poeng": 3
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Thomas Lindland",
             "tippa_h": 1,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -16841,7 +16841,7 @@
         ]
       },
       "kilde": "forelopig",
-      "oppdatert": "2026-07-01T12:07:08Z"
+      "oppdatert": "2026-07-01T18:19:54Z"
     },
     "England_DR_Congo_2026_07_01": {
       "kamp_id": "England_DR_Congo_2026_07_01",
@@ -16854,123 +16854,144 @@
       "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "England lead DR Congo 2-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "England beat DR Congo 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 0,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "",
+        "antall_sok": 0,
+        "fallback": true,
+        "cache_key": "England_DR_Congo_2026_07_01|2-1",
+        "serper_score": -100,
+        "fulltekst_status": "ikke_sokt",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 0,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
+        "mangler": [
+          "fulltekst"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 7
+          }
+        ],
+        "riktig": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Alexander",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 1,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 4,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sondre Garstad",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sebastian Luranc",
             "tippa_h": 1,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Alex Myrvokd",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Geir Magne Evensen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "sergio gomes",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 3
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-01T18:01:16Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-07-01T18:19:54Z"
     }
   }
 }

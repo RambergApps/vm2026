@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T18:01:10Z",
+  "tidspunkt": "2026-07-01T18:15:43Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1156,6 +1156,19 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T17:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021531": {
+      "fifa_event_id": "400021531",
+      "hjemmelag": "Mexico",
+      "bortelag": "England",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-06",
+      "fifa_utcDate": "2026-07-06T00:00:00Z",
       "fifa_match_time": null
     },
     "400021532": {

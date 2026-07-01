@@ -1,7 +1,7 @@
 {
   "dato": "2026-06-30",
   "dato_norsk": "Tirsdag 30. juni 2026",
-  "generert": "2026-07-01T18:03:59Z",
+  "generert": "2026-07-01T18:19:54Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 117,
+        "antall_sok": 118,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 117,
+        "retry_antall": 118,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
         "mangler": [
@@ -123,6 +123,12 @@
             "poeng": 0
           },
           {
+            "navn": "Thomas Lindland",
+            "tippa_h": 0,
+            "tippa_b": 3,
+            "poeng": 0
+          },
+          {
             "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -132,12 +138,6 @@
             "navn": "Alex Myrvokd",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 0,
-            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -164,7 +164,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 41,
+        "antall_sok": 42,
         "fallback": true,
         "cache_key": "Ivory_Coast_Norway_2026_06_30|1-2",
         "serper_score": -100,
@@ -174,7 +174,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 41,
+        "retry_antall": 42,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-match-report-highlights",
         "mangler": [
@@ -310,7 +310,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 36,
+        "antall_sok": 37,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -320,7 +320,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 36,
+        "retry_antall": 37,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -376,6 +376,12 @@
             "poeng": 3
           },
           {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Sondre Garstad",
             "tippa_h": 6,
             "tippa_b": 2,
@@ -397,12 +403,6 @@
             "navn": "Alex Myrvokd",
             "tippa_h": 6,
             "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 0,
             "poeng": 3
           },
           {
@@ -444,98 +444,98 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 143,
+      "poeng_totalt": 146,
       "poeng_i_dag": 13
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 142,
+      "poeng_totalt": 145,
       "poeng_i_dag": 17
     },
     {
       "navn": "Olympus fc",
       "plass": 3,
-      "poeng_totalt": 136,
+      "poeng_totalt": 139,
       "poeng_i_dag": 6
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 4,
-      "poeng_totalt": 130,
+      "poeng_totalt": 133,
       "poeng_i_dag": 6
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 5,
-      "poeng_totalt": 126,
+      "poeng_totalt": 129,
       "poeng_i_dag": 10
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 123,
+      "poeng_totalt": 126,
       "poeng_i_dag": 9
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 7,
-      "poeng_totalt": 115,
+      "poeng_totalt": 118,
       "poeng_i_dag": 13
     },
     {
-      "navn": "Ken Arne Hansen",
+      "navn": "Thomas Lindland",
       "plass": 8,
-      "poeng_totalt": 112,
-      "poeng_i_dag": 0
+      "poeng_totalt": 117,
+      "poeng_i_dag": 10
     },
     {
       "navn": "Sondre Garstad",
       "plass": 9,
-      "poeng_totalt": 112,
+      "poeng_totalt": 115,
       "poeng_i_dag": 9
     },
     {
       "navn": "Diyan K.",
       "plass": 10,
-      "poeng_totalt": 111,
+      "poeng_totalt": 114,
       "poeng_i_dag": 3
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 11,
-      "poeng_totalt": 111,
+      "poeng_totalt": 114,
       "poeng_i_dag": 13
     },
     {
       "navn": "Alex Myrvokd",
       "plass": 12,
-      "poeng_totalt": 110,
+      "poeng_totalt": 113,
       "poeng_i_dag": 6
     },
     {
-      "navn": "Anders Rikheim",
+      "navn": "Ken Arne Hansen",
       "plass": 13,
-      "poeng_totalt": 110,
+      "poeng_totalt": 112,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Thomas Lindland",
+      "navn": "Anders Rikheim",
       "plass": 14,
       "poeng_totalt": 110,
-      "poeng_i_dag": 10
-    },
-    {
-      "navn": "Jorgen Lindland",
-      "plass": 15,
-      "poeng_totalt": 104,
       "poeng_i_dag": 0
     },
     {
       "navn": "Geir Magne Evensen",
-      "plass": 16,
-      "poeng_totalt": 103,
+      "plass": 15,
+      "poeng_totalt": 106,
       "poeng_i_dag": 13
+    },
+    {
+      "navn": "Jorgen Lindland",
+      "plass": 16,
+      "poeng_totalt": 104,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Magnus Børrud",
@@ -550,22 +550,22 @@
       "poeng_i_dag": 9
     },
     {
-      "navn": "Atle Johansen",
+      "navn": "Ulf-Morten Johansen",
       "plass": 19,
-      "poeng_totalt": 96,
-      "poeng_i_dag": 0
+      "poeng_totalt": 98,
+      "poeng_i_dag": 9
     },
     {
-      "navn": "Rickard Jacobsson",
+      "navn": "Atle Johansen",
       "plass": 20,
       "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Ulf-Morten Johansen",
+      "navn": "Rickard Jacobsson",
       "plass": 21,
-      "poeng_totalt": 95,
-      "poeng_i_dag": 9
+      "poeng_totalt": 96,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Sjur Revheim",
@@ -576,13 +576,13 @@
     {
       "navn": "sergio gomes",
       "plass": 23,
-      "poeng_totalt": 88,
+      "poeng_totalt": 91,
       "poeng_i_dag": 6
     },
     {
       "navn": "Anders Sundero",
       "plass": 24,
-      "poeng_totalt": 86,
+      "poeng_totalt": 89,
       "poeng_i_dag": 6
     },
     {

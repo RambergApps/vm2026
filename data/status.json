@@ -127,6 +127,7 @@
         "utcDate": "2026-07-01T16:00:00Z",
         "fd_match_id": 537426,
         "fifa_event_id": "400021512",
+        "avanserer": "England",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -298,17 +299,17 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "Mexico_W80_2026_07_05",
+        "id": "Mexico_England_2026_07_05",
         "hjemme": "Mexico",
-        "borte": "W80",
+        "borte": "England",
         "dato": "2026-07-05",
         "info": "Autofyll fra avansement",
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",
         "utcDate": "2026-07-06T00:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "W83_W84_2026_07_06",
@@ -363,7 +364,7 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 3,
+    "antall_tippebare": 4,
     "neste_frist": "2026-07-04T17:00:00Z"
   },
   "qf": {
