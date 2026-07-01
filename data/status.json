@@ -111,6 +111,7 @@
         "utcDate": "2026-07-01T01:00:00Z",
         "fd_match_id": 537425,
         "fifa_event_id": "400021520",
+        "avanserer": "Mexico",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -294,11 +295,11 @@
         "tippe_status": "mangler_avsparkstid"
       },
       {
-        "id": "W79_W80_2026_07_05",
-        "hjemme": "W79",
+        "id": "Mexico_W80_2026_07_05",
+        "hjemme": "Mexico",
         "borte": "W80",
         "dato": "2026-07-05",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",

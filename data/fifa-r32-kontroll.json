@@ -1,5 +1,5 @@
 {
-  "generert": "2026-07-01T01:01:16Z",
+  "generert": "2026-07-01T12:04:19Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -20,7 +20,9 @@
     "fifa_api_match_no_mangler": [],
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
-    "koblet_entydig_pa_utc_avspark": 16,
+    "koblet_entydig_pa_utc_avspark": 15,
+    "koblet_via_eksisterende_mapping": 1,
+    "koblet_entydig_med_stabil_fallback": 16,
     "matched": 16,
     "pending": 0,
     "conflict": 0,
@@ -72,7 +74,10 @@
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemme": "South Africa",
           "borte": "Canada",
-          "dato": "2026-06-28"
+          "dato": "2026-06-28",
+          "utcDate": "2026-06-28T19:00:00Z",
+          "fd_match_id": 537417,
+          "fifa_event_id": "400021518"
         },
         {
           "kilde": "status.json",
@@ -80,7 +85,10 @@
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemme": "South Africa",
           "borte": "Canada",
-          "dato": "2026-06-28"
+          "dato": "2026-06-28",
+          "utcDate": "2026-06-28T19:00:00Z",
+          "fd_match_id": 537417,
+          "fifa_event_id": "400021518"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -122,7 +130,10 @@
           "kamp_id": "Germany_Paraguay_2026_06_29",
           "hjemme": "Germany",
           "borte": "Paraguay",
-          "dato": "2026-06-29"
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T20:30:00Z",
+          "fd_match_id": 537415,
+          "fifa_event_id": "400021513"
         },
         {
           "kilde": "status.json",
@@ -130,7 +141,10 @@
           "kamp_id": "Germany_Paraguay_2026_06_29",
           "hjemme": "Germany",
           "borte": "Paraguay",
-          "dato": "2026-06-29"
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T20:30:00Z",
+          "fd_match_id": 537415,
+          "fifa_event_id": "400021513"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -172,7 +186,10 @@
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemme": "Netherlands",
           "borte": "Morocco",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T01:00:00Z",
+          "fd_match_id": 537418,
+          "fifa_event_id": "400021522"
         },
         {
           "kilde": "status.json",
@@ -180,7 +197,10 @@
           "kamp_id": "Netherlands_Morocco_2026_06_30",
           "hjemme": "Netherlands",
           "borte": "Morocco",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T01:00:00Z",
+          "fd_match_id": 537418,
+          "fifa_event_id": "400021522"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -222,7 +242,10 @@
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemme": "Brazil",
           "borte": "Japan",
-          "dato": "2026-06-29"
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T17:00:00Z",
+          "fd_match_id": 537423,
+          "fifa_event_id": "400021516"
         },
         {
           "kilde": "status.json",
@@ -230,7 +253,10 @@
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemme": "Brazil",
           "borte": "Japan",
-          "dato": "2026-06-29"
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T17:00:00Z",
+          "fd_match_id": 537423,
+          "fifa_event_id": "400021516"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -272,7 +298,10 @@
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemme": "France",
           "borte": "Sweden",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T21:00:00Z",
+          "fd_match_id": 537416,
+          "fifa_event_id": "400021523"
         },
         {
           "kilde": "status.json",
@@ -280,7 +309,10 @@
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemme": "France",
           "borte": "Sweden",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T21:00:00Z",
+          "fd_match_id": 537416,
+          "fifa_event_id": "400021523"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -322,7 +354,10 @@
           "kamp_id": "Ivory_Coast_Norway_2026_06_30",
           "hjemme": "Ivory Coast",
           "borte": "Norway",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T17:00:00Z",
+          "fd_match_id": 537424,
+          "fifa_event_id": "400021514"
         },
         {
           "kilde": "status.json",
@@ -330,7 +365,10 @@
           "kamp_id": "Ivory_Coast_Norway_2026_06_30",
           "hjemme": "Ivory Coast",
           "borte": "Norway",
-          "dato": "2026-06-30"
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T17:00:00Z",
+          "fd_match_id": 537424,
+          "fifa_event_id": "400021514"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -338,9 +376,9 @@
     {
       "fifa_match_no": 79,
       "fifa_event_id": "400021520",
-      "fifa_utcDate": "2026-07-01T01:00:00Z",
+      "fifa_utcDate": "2026-07-01T02:00:00Z",
       "fifa_dato": "2026-07-01",
-      "fifa_tid": "01:00",
+      "fifa_tid": "02:00",
       "fifa_tid_hadde_tidssone": true,
       "fifa_hjemme": "Mexico",
       "fifa_borte": "Ecuador",
@@ -357,9 +395,15 @@
       "fd_hjemmelag": "Mexico",
       "fd_bortelag": "Ecuador",
       "kamp_id": "Mexico_Ecuador_2026_07_01",
-      "koblet_pa": "eksakt_utc_avspark",
+      "koblet_pa": "eksisterende_match_no_fd_match_id",
+      "opprinnelig_utc_konflikt": {
+        "forklaring": "Fant ingen football-data.org-kamp med identisk UTC-avspark.",
+        "fifa_utcDate": "2026-07-01T02:00:00Z",
+        "fd_utcDate_valgt_fra_eksisterende_mapping": "2026-07-01T01:00:00Z",
+        "fd_kandidater_med_samme_utc": []
+      },
       "status": "matched",
-      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos football-data.org.",
+      "forklaring": "FIFA-kampnummer ble koblet via eksisterende match_no -> fd_match_id fordi live-kildene ikke hadde identisk UTC-avspark i denne kjøringen. Lag og event-ID ble validert før fallback ble godtatt.",
       "kamp_hjemmelag": "Mexico",
       "kamp_bortelag": "Ecuador",
       "kamp_dato": "2026-07-01",
@@ -372,7 +416,10 @@
           "kamp_id": "Mexico_Ecuador_2026_07_01",
           "hjemme": "Mexico",
           "borte": "Ecuador",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T01:00:00Z",
+          "fd_match_id": 537425,
+          "fifa_event_id": "400021520"
         },
         {
           "kilde": "status.json",
@@ -380,7 +427,10 @@
           "kamp_id": "Mexico_Ecuador_2026_07_01",
           "hjemme": "Mexico",
           "borte": "Ecuador",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T01:00:00Z",
+          "fd_match_id": 537425,
+          "fifa_event_id": "400021520"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -422,7 +472,10 @@
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemme": "England",
           "borte": "DR Congo",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T16:00:00Z",
+          "fd_match_id": 537426,
+          "fifa_event_id": "400021512"
         },
         {
           "kilde": "status.json",
@@ -430,7 +483,10 @@
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemme": "England",
           "borte": "DR Congo",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T16:00:00Z",
+          "fd_match_id": 537426,
+          "fifa_event_id": "400021512"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -472,7 +528,10 @@
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemme": "USA",
           "borte": "Bosnia & Herzegovina",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T00:00:00Z",
+          "fd_match_id": 537421,
+          "fifa_event_id": "400021524"
         },
         {
           "kilde": "status.json",
@@ -480,7 +539,10 @@
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemme": "USA",
           "borte": "Bosnia & Herzegovina",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T00:00:00Z",
+          "fd_match_id": 537421,
+          "fifa_event_id": "400021524"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -522,7 +584,10 @@
           "kamp_id": "Belgium_Senegal_2026_07_01",
           "hjemme": "Belgium",
           "borte": "Senegal",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T20:00:00Z",
+          "fd_match_id": 537422,
+          "fifa_event_id": "400021525"
         },
         {
           "kilde": "status.json",
@@ -530,7 +595,10 @@
           "kamp_id": "Belgium_Senegal_2026_07_01",
           "hjemme": "Belgium",
           "borte": "Senegal",
-          "dato": "2026-07-01"
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T20:00:00Z",
+          "fd_match_id": 537422,
+          "fifa_event_id": "400021525"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -572,7 +640,10 @@
           "kamp_id": "Portugal_Croatia_2026_07_02",
           "hjemme": "Portugal",
           "borte": "Croatia",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T23:00:00Z",
+          "fd_match_id": 537419,
+          "fifa_event_id": "400021526"
         },
         {
           "kilde": "status.json",
@@ -580,7 +651,10 @@
           "kamp_id": "Portugal_Croatia_2026_07_02",
           "hjemme": "Portugal",
           "borte": "Croatia",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T23:00:00Z",
+          "fd_match_id": 537419,
+          "fifa_event_id": "400021526"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -622,7 +696,10 @@
           "kamp_id": "Spain_Austria_2026_07_02",
           "hjemme": "Spain",
           "borte": "Austria",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T19:00:00Z",
+          "fd_match_id": 537420,
+          "fifa_event_id": "400021519"
         },
         {
           "kilde": "status.json",
@@ -630,7 +707,10 @@
           "kamp_id": "Spain_Austria_2026_07_02",
           "hjemme": "Spain",
           "borte": "Austria",
-          "dato": "2026-07-02"
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T19:00:00Z",
+          "fd_match_id": 537420,
+          "fifa_event_id": "400021519"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -672,7 +752,10 @@
           "kamp_id": "Switzerland_Algeria_2026_07_03",
           "hjemme": "Switzerland",
           "borte": "Algeria",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T03:00:00Z",
+          "fd_match_id": 537429,
+          "fifa_event_id": "400021527"
         },
         {
           "kilde": "status.json",
@@ -680,7 +763,10 @@
           "kamp_id": "Switzerland_Algeria_2026_07_03",
           "hjemme": "Switzerland",
           "borte": "Algeria",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T03:00:00Z",
+          "fd_match_id": 537429,
+          "fifa_event_id": "400021527"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -722,7 +808,10 @@
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemme": "Argentina",
           "borte": "Cape Verde",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T22:00:00Z",
+          "fd_match_id": 537427,
+          "fifa_event_id": "400021521"
         },
         {
           "kilde": "status.json",
@@ -730,7 +819,10 @@
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemme": "Argentina",
           "borte": "Cape Verde",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T22:00:00Z",
+          "fd_match_id": 537427,
+          "fifa_event_id": "400021521"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -772,7 +864,10 @@
           "kamp_id": "Colombia_Ghana_2026_07_04",
           "hjemme": "Colombia",
           "borte": "Ghana",
-          "dato": "2026-07-04"
+          "dato": "2026-07-04",
+          "utcDate": "2026-07-04T01:30:00Z",
+          "fd_match_id": 537430,
+          "fifa_event_id": "400021517"
         },
         {
           "kilde": "status.json",
@@ -780,7 +875,10 @@
           "kamp_id": "Colombia_Ghana_2026_07_04",
           "hjemme": "Colombia",
           "borte": "Ghana",
-          "dato": "2026-07-04"
+          "dato": "2026-07-04",
+          "utcDate": "2026-07-04T01:30:00Z",
+          "fd_match_id": 537430,
+          "fifa_event_id": "400021517"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true
@@ -822,7 +920,10 @@
           "kamp_id": "Australia_Egypt_2026_07_03",
           "hjemme": "Australia",
           "borte": "Egypt",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T18:00:00Z",
+          "fd_match_id": 537428,
+          "fifa_event_id": "400021515"
         },
         {
           "kilde": "status.json",
@@ -830,7 +931,10 @@
           "kamp_id": "Australia_Egypt_2026_07_03",
           "hjemme": "Australia",
           "borte": "Egypt",
-          "dato": "2026-07-03"
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T18:00:00Z",
+          "fd_match_id": 537428,
+          "fifa_event_id": "400021515"
         }
       ],
       "kamp_id_samsvarer_med_eksisterende": true

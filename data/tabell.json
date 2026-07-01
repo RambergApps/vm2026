@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-07-01T01:01:17Z",
+  "sist_oppdatert": "2026-07-01T12:04:30Z",
   "sist_oppdatert_grupper": "2026-07-01T01:01:17Z",
-  "sist_oppdatert_utslag": "2026-07-01T01:01:17Z",
+  "sist_oppdatert_utslag": "2026-07-01T12:04:30Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -14,10 +14,12 @@
     }
   },
   "oppdatert_i_denne_kjoringen": {
-    "grupper": true,
+    "grupper": false,
     "utslag": true
   },
-  "advarsler": [],
+  "advarsler": [
+    "Gruppetabell beholdt fra forrige gyldige fil: FIFA/Jina-svaret mangler gruppetabellene"
+  ],
   "antall_grupper": 12,
   "antall_lag": 48,
   "antall_utslagskamper": 32,
@@ -928,7 +930,7 @@
       "match_no": 79,
       "fifa_event_id": "400021520",
       "runde": "r32",
-      "utcDate": "2026-07-01T01:00:00Z",
+      "utcDate": "2026-07-01T02:00:00Z",
       "dato": "2026-07-01",
       "hjemme": "Mexico",
       "borte": "Ecuador",
@@ -938,9 +940,9 @@
       "borte_kjent": true,
       "hjemme_placeholder": "",
       "borte_placeholder": "",
-      "status": "10",
-      "hjemme_score": null,
-      "borte_score": null
+      "status": "0",
+      "hjemme_score": 2,
+      "borte_score": 0
     },
     {
       "match_no": 80,
@@ -1164,13 +1166,13 @@
       "runde": "r16",
       "utcDate": "2026-07-06T00:00:00Z",
       "dato": "2026-07-06",
-      "hjemme": "W79",
+      "hjemme": "Mexico",
       "borte": "W80",
-      "hjemme_kode": "",
+      "hjemme_kode": "MEX",
       "borte_kode": "",
-      "hjemme_kjent": false,
+      "hjemme_kjent": true,
       "borte_kjent": false,
-      "hjemme_placeholder": "W79",
+      "hjemme_placeholder": "",
       "borte_placeholder": "W80",
       "status": "1",
       "hjemme_score": null,
