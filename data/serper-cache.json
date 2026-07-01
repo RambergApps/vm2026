@@ -5606,8 +5606,8 @@
   "Netherlands_Morocco_2026_06_30|1-1": {
     "kamp_id": "Netherlands_Morocco_2026_06_30",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-01T17:32:14Z",
-    "antall_sok": 115,
+    "sist_sokt": "2026-07-01T17:46:55Z",
+    "antall_sok": 116,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5624,7 +5624,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-01T17:31:18Z",
+      "hentet": "2026-07-01T17:45:54Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -5665,8 +5665,8 @@
   "Ivory_Coast_Norway_2026_06_30|1-2": {
     "kamp_id": "Ivory_Coast_Norway_2026_06_30",
     "resultat": "1-2",
-    "sist_sokt": "2026-07-01T17:33:06Z",
-    "antall_sok": 39,
+    "sist_sokt": "2026-07-01T17:48:00Z",
+    "antall_sok": 40,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5683,7 +5683,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-07-01T17:32:21Z",
+      "hentet": "2026-07-01T17:47:00Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -5725,8 +5725,8 @@
   "France_Sweden_2026_06_30|3-0": {
     "kamp_id": "France_Sweden_2026_06_30",
     "resultat": "3-0",
-    "sist_sokt": "2026-07-01T17:33:59Z",
-    "antall_sok": 34,
+    "sist_sokt": "2026-07-01T17:49:28Z",
+    "antall_sok": 35,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5734,7 +5734,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-highlights-match-report",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -5743,15 +5743,15 @@
       "kamp_hjemme_score": 3,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-01T17:33:13Z",
+      "hentet": "2026-07-01T17:48:30Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-highlights-match-report?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -5776,9 +5776,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 2
     }
   }
 }

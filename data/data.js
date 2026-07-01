@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T17:31:05Z
+// Sist oppdatert: 2026-07-01T17:45:44Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T17:31:05Z",
+  "sist_oppdatert": "2026-07-01T17:45:44Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1554,7 +1554,7 @@ const VM_DATA = {
       "canonical_kamp_id": "England_DR_Congo_2026_07_01",
       "hjemmelag": "England",
       "bortelag": "DR Congo",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 1,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2123,21 +2123,21 @@ const VM_DATA = {
       "spiller": "Harry Kane",
       "maal": 3,
       "assists": 0,
-      "minutter": 316
+      "minutter": 362
     },
     {
       "rank": 15,
-      "spiller": "Yoane Wissa",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 332
-    },
-    {
-      "rank": 16,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 370
+    },
+    {
+      "rank": 16,
+      "spiller": "Yoane Wissa",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 377
     },
     {
       "rank": 17,
@@ -2204,17 +2204,17 @@ const VM_DATA = {
     },
     {
       "rank": 26,
-      "spiller": "Jude Bellingham",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 262
-    },
-    {
-      "rank": 27,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
+    },
+    {
+      "rank": 27,
+      "spiller": "Jude Bellingham",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 308
     },
     {
       "rank": 28,
@@ -2388,7 +2388,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T17:31:05Z"
+    "sist_beregnet": "2026-07-01T17:45:44Z"
   },
   "stilling": [
     {
@@ -3507,7 +3507,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -4760,7 +4760,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -6013,7 +6013,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -7252,7 +7252,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -8448,7 +8448,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -9644,7 +9644,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -10897,7 +10897,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 4,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -13249,7 +13249,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -14502,7 +14502,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -15741,7 +15741,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -16966,7 +16966,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -19261,7 +19261,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -21556,7 +21556,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -23908,7 +23908,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -27359,7 +27359,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -29768,7 +29768,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -30978,7 +30978,7 @@ const VM_DATA = {
           "bortelag": "DR Congo",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
