@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T00:15:40Z",
+  "tidspunkt": "2026-07-01T00:30:59Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1045,8 +1045,8 @@
       "fifa_event_id": "400021520",
       "hjemmelag": "Mexico",
       "bortelag": "Ecuador",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "FIFA_STATUS_10",
+      "fifa_status_raw": 10,
       "ferdig": false,
       "hjemme": null,
       "borte": null,
