@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T15:45:47Z
+// Sist oppdatert: 2026-07-01T16:01:15Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T15:45:47Z",
+  "sist_oppdatert": "2026-07-01T16:01:15Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1554,13 +1554,13 @@ const VM_DATA = {
       "canonical_kamp_id": "England_DR_Congo_2026_07_01",
       "hjemmelag": "England",
       "bortelag": "DR Congo",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537426,
       "fd_utcDate": "2026-07-01T16:00:00Z",
@@ -2388,7 +2388,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T15:45:47Z"
+    "sist_beregnet": "2026-07-01T16:01:15Z"
   },
   "stilling": [
     {
@@ -3499,6 +3499,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4742,6 +4755,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -5982,6 +6008,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -7208,6 +7247,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -8391,6 +8443,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -9571,6 +9636,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -10811,6 +10889,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 4,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -13153,6 +13244,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -14393,6 +14497,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -15619,6 +15736,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -16829,6 +16959,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "France_Sweden_2026_06_30",
@@ -19113,6 +19256,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -21392,6 +21548,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -23731,6 +23900,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 0,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -27172,6 +27354,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -29568,6 +29763,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "France_Sweden_2026_06_30",
           "hjemmelag": "France",
           "bortelag": "Sweden",
@@ -30762,6 +30970,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "hjemmelag": "England",
+          "bortelag": "DR Congo",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
