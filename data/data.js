@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T16:31:28Z
+// Sist oppdatert: 2026-07-01T16:45:40Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T16:31:28Z",
+  "sist_oppdatert": "2026-07-01T16:45:40Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2110,24 +2110,24 @@ const VM_DATA = {
     },
     {
       "rank": 13,
-      "spiller": "Harry Kane",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 291
-    },
-    {
-      "rank": 14,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
+      "rank": 14,
+      "spiller": "Harry Kane",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 316
+    },
+    {
       "rank": 15,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
-      "minutter": 306
+      "minutter": 332
     },
     {
       "rank": 16,
@@ -2194,17 +2194,17 @@ const VM_DATA = {
     },
     {
       "rank": 25,
-      "spiller": "Jude Bellingham",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 237
-    },
-    {
-      "rank": 26,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
+    },
+    {
+      "rank": 26,
+      "spiller": "Jude Bellingham",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 262
     },
     {
       "rank": 27,
@@ -2385,7 +2385,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T16:31:28Z"
+    "sist_beregnet": "2026-07-01T16:45:40Z"
   },
   "stilling": [
     {
