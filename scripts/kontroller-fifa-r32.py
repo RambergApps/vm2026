@@ -558,35 +558,122 @@ def kompakt_fd(fd: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+
+
+def finn_fd_via_eksisterende_mapping(
+    fifa: dict[str, Any],
+    fd_matches: list[dict[str, Any]],
+    existing: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    """
+    Stabil fallback etter at R32 allerede er opprettet.
+
+    Første gang R32 bygges skal vi være strenge på eksakt UTC-kobling. Etter at
+    match_no -> fd_match_id er lagret i manuelle-kamper/status, er den koblingen
+    mer stabil enn live avsparkstid fra to API-er. Denne fallbacken brukes bare
+    når eksisterende match_no har en fd_match_id, og lag/fifa_event_id ikke er i
+    konflikt.
+    """
+    try:
+        match_no = int(fifa.get("fifa_match_no"))
+    except (TypeError, ValueError):
+        return None
+
+    fd_by_id = {
+        str(fd.get("fd_match_id")): fd
+        for fd in fd_matches
+        if fd.get("fd_match_id") is not None
+    }
+
+    for entry in existing or []:
+        try:
+            if int(entry.get("match_no")) != match_no:
+                continue
+        except (TypeError, ValueError):
+            continue
+
+        fd_id = str(entry.get("fd_match_id") or "").strip()
+        if not fd_id or fd_id not in fd_by_id:
+            continue
+
+        # Hvis eksisterende mapping sier et annet FIFA-event enn dagens FIFA-kamp,
+        # er det en reell konflikt og fallback skal ikke brukes.
+        existing_fifa_id = str(entry.get("fifa_event_id") or "").strip()
+        current_fifa_id = str(fifa.get("fifa_event_id") or "").strip()
+        if existing_fifa_id and current_fifa_id and existing_fifa_id != current_fifa_id:
+            continue
+
+        fd = fd_by_id[fd_id]
+
+        # Ikke godta fallback hvis kildene er uenige om faktiske lag.
+        if fifa.get("fifa_hjemme_kjent") and fd.get("fd_hjemmelag_kjent"):
+            if not samme_lag(fifa.get("fifa_hjemme", ""), fd.get("fd_hjemmelag_for_id", "")):
+                continue
+        if fifa.get("fifa_borte_kjent") and fd.get("fd_bortelag_kjent"):
+            if not samme_lag(fifa.get("fifa_borte", ""), fd.get("fd_bortelag_for_id", "")):
+                continue
+
+        existing_home = str(entry.get("hjemme") or "")
+        existing_away = str(entry.get("borte") or "")
+        if existing_home and not er_placeholder(existing_home) and fd.get("fd_hjemmelag_kjent"):
+            if not samme_lag(existing_home, fd.get("fd_hjemmelag_for_id", "")):
+                continue
+        if existing_away and not er_placeholder(existing_away) and fd.get("fd_bortelag_kjent"):
+            if not samme_lag(existing_away, fd.get("fd_bortelag_for_id", "")):
+                continue
+
+        fd_copy = dict(fd)
+        fd_copy["_existing_r32_entry"] = entry
+        return fd_copy
+    return None
+
+
 # ── FIFA ↔ FOOTBALL-DATA MATCHING ─────────────────────────────────────────────
-def match_fifa_mot_fd(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) -> dict[str, Any]:
+def match_fifa_mot_fd(
+    fifa: dict[str, Any],
+    fd_matches: list[dict[str, Any]],
+    existing: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     result = dict(fifa)
     exact_time = [fd for fd in fd_matches if fifa.get("fifa_utcDate") and fd.get("fd_utcDate") == fifa.get("fifa_utcDate")]
+    opprinnelig_utc_konflikt = None
 
-    if len(exact_time) == 0:
-        result.update(
-            {
-                "status": "conflict",
-                "forklaring": "Fant ingen football-data.org-kamp med identisk UTC-avspark.",
-                "kamp_id": None,
-                "fd_kandidater": [],
+    if len(exact_time) == 1:
+        fd = exact_time[0]
+        koblet_pa = "eksakt_utc_avspark"
+    else:
+        fd = finn_fd_via_eksisterende_mapping(fifa, fd_matches, existing or [])
+        if fd:
+            koblet_pa = "eksisterende_match_no_fd_match_id"
+            opprinnelig_utc_konflikt = {
+                "forklaring": (
+                    "Fant ingen football-data.org-kamp med identisk UTC-avspark."
+                    if len(exact_time) == 0
+                    else "Flere football-data.org-kamper har samme UTC-avspark."
+                ),
+                "fifa_utcDate": fifa.get("fifa_utcDate"),
+                "fd_utcDate_valgt_fra_eksisterende_mapping": fd.get("fd_utcDate"),
+                "fd_kandidater_med_samme_utc": [kompakt_fd(x) for x in exact_time],
             }
-        )
-        return result
-    if len(exact_time) > 1:
-        result.update(
-            {
-                "status": "conflict",
-                "forklaring": "Flere football-data.org-kamper har samme UTC-avspark.",
-                "kamp_id": None,
-                "fd_kandidater": [kompakt_fd(fd) for fd in exact_time],
-            }
-        )
-        return result
+        else:
+            result.update(
+                {
+                    "status": "conflict",
+                    "forklaring": (
+                        "Fant ingen football-data.org-kamp med identisk UTC-avspark."
+                        if len(exact_time) == 0
+                        else "Flere football-data.org-kamper har samme UTC-avspark."
+                    ),
+                    "kamp_id": None,
+                    "fd_kandidater": [kompakt_fd(fd) for fd in exact_time],
+                }
+            )
+            return result
 
-    fd = exact_time[0]
     result.update(kompakt_fd(fd))
-    result["koblet_pa"] = "eksakt_utc_avspark"
+    result["koblet_pa"] = koblet_pa
+    if opprinnelig_utc_konflikt:
+        result["opprinnelig_utc_konflikt"] = opprinnelig_utc_konflikt
 
     fifa_home_known = bool(fifa.get("fifa_hjemme_kjent"))
     fifa_away_known = bool(fifa.get("fifa_borte_kjent"))
@@ -617,8 +704,13 @@ def match_fifa_mot_fd(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) ->
         selected_away = produksjonsnavn(fifa.get("fifa_borte", ""))
         team_source = "fifa_api"
 
-    date_part = str(fd.get("fd_dato") or fifa.get("fifa_dato") or "").strip()
-    utc_date = str(fd.get("fd_utcDate") or fifa.get("fifa_utcDate") or "").strip()
+    existing_r32_entry = fd.get("_existing_r32_entry") if isinstance(fd, dict) else None
+    if koblet_pa == "eksisterende_match_no_fd_match_id" and isinstance(existing_r32_entry, dict):
+        date_part = str(existing_r32_entry.get("dato") or fd.get("fd_dato") or fifa.get("fifa_dato") or "").strip()
+        utc_date = str(existing_r32_entry.get("utcDate") or fd.get("fd_utcDate") or fifa.get("fifa_utcDate") or "").strip()
+    else:
+        date_part = str(fd.get("fd_dato") or fifa.get("fifa_dato") or "").strip()
+        utc_date = str(fd.get("fd_utcDate") or fifa.get("fifa_utcDate") or "").strip()
 
     if selected_home and selected_away and date_part and utc_date:
         result.update(
@@ -640,6 +732,12 @@ def match_fifa_mot_fd(fifa: dict[str, Any], fd_matches: list[dict[str, Any]]) ->
                 "kamp_id": kamp_id(selected_home, selected_away, date_part),
             }
         )
+        if koblet_pa == "eksisterende_match_no_fd_match_id":
+            result["forklaring"] = (
+                "FIFA-kampnummer ble koblet via eksisterende match_no -> fd_match_id fordi "
+                "live-kildene ikke hadde identisk UTC-avspark i denne kjøringen. "
+                "Lag og event-ID ble validert før fallback ble godtatt."
+            )
         return result
 
     # Matchnummer og fd_match_id kan kobles nå, men kamp-ID må vente til én av
@@ -668,6 +766,9 @@ def les_eksisterende_r32() -> list[dict[str, Any]]:
                     "hjemme": item.get("hjemmelag", ""),
                     "borte": item.get("bortelag", ""),
                     "dato": item.get("dato", ""),
+                    "utcDate": item.get("utcDate", ""),
+                    "fd_match_id": item.get("fd_match_id"),
+                    "fifa_event_id": item.get("fifa_event_id"),
                 }
             )
     status = les_json(STATUS_JSON, {})
@@ -681,6 +782,9 @@ def les_eksisterende_r32() -> list[dict[str, Any]]:
                 "hjemme": item.get("hjemme", ""),
                 "borte": item.get("borte", ""),
                 "dato": item.get("dato", ""),
+                "utcDate": item.get("utcDate", ""),
+                "fd_match_id": item.get("fd_match_id"),
+                "fifa_event_id": item.get("fifa_event_id"),
             }
         )
     return entries
@@ -781,7 +885,7 @@ def main() -> int:
         existing = les_eksisterende_r32()
         mapped: list[dict[str, Any]] = []
         for fifa in fifa_matches:
-            item = match_fifa_mot_fd(fifa, fd_matches)
+            item = match_fifa_mot_fd(fifa, fd_matches, existing)
             legg_til_eksisterende_kontroll(item, existing)
             mapped.append(item)
 
@@ -789,6 +893,8 @@ def main() -> int:
         fifa_numbers = {item["fifa_match_no"] for item in fifa_matches}
         missing_numbers = sorted(R32_MATCH_NUMBERS - fifa_numbers)
         exact_utc_links = sum(1 for item in mapped if item.get("koblet_pa") == "eksakt_utc_avspark")
+        stable_existing_links = sum(1 for item in mapped if item.get("koblet_pa") == "eksisterende_match_no_fd_match_id")
+        trusted_links = exact_utc_links + stable_existing_links
         id_mismatches = [
             item["fifa_match_no"]
             for item in mapped
@@ -819,7 +925,7 @@ def main() -> int:
         ready_for_mapping = bool(
             len(fifa_matches) == 16
             and len(fd_matches) == 16
-            and exact_utc_links == 16
+            and trusted_links == 16
             and counts.get("conflict", 0) == 0
             and not missing_numbers
             and not nonidentical_api_duplicates
@@ -848,6 +954,8 @@ def main() -> int:
                 "fifa_jina_r32_funnet": len(jina_matches),
                 "football_data_r32_funnet": len(fd_matches),
                 "koblet_entydig_pa_utc_avspark": exact_utc_links,
+                "koblet_via_eksisterende_mapping": stable_existing_links,
+                "koblet_entydig_med_stabil_fallback": trusted_links,
                 "matched": counts.get("matched", 0),
                 "pending": counts.get("pending", 0),
                 "conflict": counts.get("conflict", 0),
@@ -870,10 +978,26 @@ def main() -> int:
             "Status: "
             f"api={len(fifa_matches)}/16, "
             f"utc-koblet={exact_utc_links}/16, "
+            f"eksisterende-fallback={stable_existing_links}/16, "
+            f"trygt-koblet={trusted_links}/16, "
             f"matched={counts.get('matched', 0)}, "
             f"pending={counts.get('pending', 0)}, "
             f"conflict={counts.get('conflict', 0)}"
         )
+
+        conflicts = [item for item in mapped if item.get("status") == "conflict"]
+        if conflicts:
+            print("\nKonflikter i R32-kontroll:")
+            for item in conflicts:
+                print(json.dumps({
+                    "match_no": item.get("fifa_match_no"),
+                    "fifa_event_id": item.get("fifa_event_id"),
+                    "fifa_utcDate": item.get("fifa_utcDate"),
+                    "fifa_hjemme": item.get("fifa_hjemme"),
+                    "fifa_borte": item.get("fifa_borte"),
+                    "forklaring": item.get("forklaring"),
+                    "fd_kandidater": item.get("fd_kandidater"),
+                }, ensure_ascii=False, indent=2))
 
         if args.strict and not ready_for_mapping:
             return 2
