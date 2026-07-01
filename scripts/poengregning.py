@@ -110,6 +110,11 @@ HELHETSBONUS_SPORSMAL = {
 }
 UTSLAGSRUNDER = ("r32", "r16", "qf", "sf", "final")
 
+# FIFA Calendar gir avsparkstid per offisielt matchnummer.
+# Brukes kun til frist/tippebar for utslagskamper som er bygget fra Wxx-slotter.
+# Endrer ikke kamp_id, fd_match_id, fifa_event_id eller match_no.
+FIFA_MATCH_NO_LOOKUP = {}
+
 # ── TESTMODUS ─────────────────────────────────────────────────────────────────
 TEST_MODE = not os.environ.get("GITHUB_ACTIONS")
 
@@ -501,7 +506,11 @@ def hent_fifa_calendar():
 
     Brukes som sekundær resultatkilde etter football-data bulk. FIFA-kallet er
     åpent og gir live/final score, men OpenFootball eier fortsatt kamp-ID-ene.
+    I tillegg lagres avsparkstid per offisielt matchnummer, slik at senere
+    utslagsrunder kan åpnes fortløpende når lagene er klare.
     """
+    global FIFA_MATCH_NO_LOOKUP
+    FIFA_MATCH_NO_LOOKUP = {}
     print("Henter kampresultater fra FIFA Calendar API...")
     try:
         r = requests.get(
@@ -526,6 +535,13 @@ def hent_fifa_calendar():
         if not isinstance(raw, dict):
             continue
         item = fifa_kamp_til_resultat(raw)
+
+        # Lagre FIFA-avspark per match_no også for kamper der lagene fortsatt
+        # er placeholders. Dette brukes kun til utcDate/tippefrist i status.json.
+        match_no = parse_int(item.get("fifa_match_no"))
+        if match_no is not None and item.get("fifa_utcDate"):
+            FIFA_MATCH_NO_LOOKUP[match_no] = item
+
         if not item.get("hjemmelag") or not item.get("bortelag") or not item.get("fifa_dato"):
             continue
         key = item.get("fifa_event_id") or item.get("fifa_kamp_id_basert_paa_dato")
@@ -535,6 +551,7 @@ def hent_fifa_calendar():
     paagaar_antall = sum(1 for v in fifa_lookup.values() if v.get("status") in ("IN_PLAY", "PAUSED"))
     med_score = sum(1 for v in fifa_lookup.values() if v.get("har_score"))
     print(f"  -> {ferdig_antall} ferdigspilte, {paagaar_antall} pågående, {med_score} med score fra FIFA Calendar")
+    print(f"  -> {len(FIFA_MATCH_NO_LOOKUP)} kamper med FIFA-avsparkstid per match_no")
 
     debug_data = {
         "tidspunkt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -2261,6 +2278,33 @@ def autofyll_neste_runder(status, resultat_lookup):
                 kamp["id"] = kamp_id(kamp.get("hjemme", slot_h), kamp.get("borte", slot_b), kamp.get("dato", ""))
                 kamp["info"] = "Autofyll fra avansement"
 
+
+def oppdater_status_med_fifa_tidspunkter(status):
+    """
+    Legger FIFA-avsparkstid på status-kamper basert på match_no.
+
+    Dette gjør at R16/QF/SF/finale kan bli tippebare straks begge lag er klare
+    via Wxx-avansement. Funksjonen endrer kun utcDate for eksisterende kamp-slotter;
+    den endrer ikke kamp_id, match_no, fd_match_id, fifa_event_id, lag eller score.
+    """
+    if not FIFA_MATCH_NO_LOOKUP:
+        print("  → FIFA-avspark per match_no ikke tilgjengelig — hopper over tidssynk")
+        return
+
+    oppdatert = 0
+    for runde in RUNDE_REKKEFOLGE:
+        for index, kamp in enumerate(status.get(runde, {}).get("kamper", [])):
+            match_no = match_no_for(runde, index, kamp)
+            fifa = FIFA_MATCH_NO_LOOKUP.get(match_no)
+            fifa_utc = fifa.get("fifa_utcDate") if fifa else None
+            if not fifa_utc:
+                continue
+            if kamp.get("utcDate") != fifa_utc:
+                kamp["utcDate"] = fifa_utc
+                oppdatert += 1
+
+    print(f"  → Synket FIFA-avsparkstid på {oppdatert} status-kamper")
+
 def parse_utc_datetime(value):
     if not value:
         return None
@@ -2353,6 +2397,7 @@ def oppdater_status(resultat_lookup):
     # Kjør én gang til slik at API-oppføringer som nå fikk match_no kan berike metadata.
     oppdater_status_med_api_kamper(status, resultat_lookup)
     autofyll_neste_runder(status, resultat_lookup)
+    oppdater_status_med_fifa_tidspunkter(status)
     oppdater_tippebar_status(status)
 
     with open(STATUS_JSON, "w", encoding="utf-8") as f:
