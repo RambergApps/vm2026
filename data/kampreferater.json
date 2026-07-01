@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-01T12:27:13Z",
+  "sist_oppdatert": "2026-07-01T12:34:36Z",
   "antall_kamper": 79,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16259,7 +16259,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 93,
+        "antall_sok": 94,
         "fallback": true,
         "cache_key": "Netherlands_Morocco_2026_06_30|1-1",
         "serper_score": -100,
@@ -16269,9 +16269,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 93,
+        "retry_antall": 94,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-highlights-match-report",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -16389,7 +16389,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T12:25:21Z"
+      "oppdatert": "2026-07-01T12:32:18Z"
     },
     "Ivory_Coast_Norway_2026_06_30": {
       "kamp_id": "Ivory_Coast_Norway_2026_06_30",
@@ -16410,7 +16410,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 17,
+        "antall_sok": 18,
         "fallback": true,
         "cache_key": "Ivory_Coast_Norway_2026_06_30|1-2",
         "serper_score": -100,
@@ -16420,9 +16420,9 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 17,
+        "retry_antall": 18,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-match-report-highlights",
         "mangler": [
           "riktig_kamp",
           "resultat_i_fulltekst",
@@ -16541,7 +16541,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T12:26:17Z"
+      "oppdatert": "2026-07-01T12:33:22Z"
     },
     "France_Sweden_2026_06_30": {
       "kamp_id": "France_Sweden_2026_06_30",
@@ -16562,7 +16562,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 12,
+        "antall_sok": 13,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -16572,7 +16572,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 12,
+        "retry_antall": 13,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -16691,7 +16691,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T12:27:13Z"
+      "oppdatert": "2026-07-01T12:34:36Z"
     },
     "Mexico_Ecuador_2026_07_01": {
       "kamp_id": "Mexico_Ecuador_2026_07_01",
