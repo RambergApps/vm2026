@@ -1,6 +1,1201 @@
 {
-  "generert": null,
-  "oppsummering": {},
-  "avvik": [],
-  "kamper": []
+  "generert": "2026-07-01T12:55:45Z",
+  "formaal": "Uavhengig FIFA-kontroll av lagrede R32-kamper",
+  "produksjonsdata_endret": false,
+  "master_tid": "fifa",
+  "kilder": {
+    "fifa_api": "https://api.fifa.com/api/v3/calendar/matches",
+    "fifa_api_params": {
+      "idCompetition": 17,
+      "idSeason": 285023,
+      "count": 500,
+      "language": "en"
+    },
+    "status_json": "data/status.json",
+    "manuelle_kamper_json": "data/manuelle-kamper.json",
+    "football_data": null
+  },
+  "oppsummering": {
+    "forventet_antall_r32": 16,
+    "fifa_api_r32_funnet": 16,
+    "fifa_api_match_no_mangler": [],
+    "lagret_status_r32_funnet": 16,
+    "lagret_manuelle_r32_funnet": 16,
+    "ok": 15,
+    "klokkeslett_avvik": 1,
+    "conflict": 0,
+    "master_tid": "fifa",
+    "bruker_football_data": false,
+    "produksjonsdata_endret": false
+  },
+  "kamper": [
+    {
+      "match_no": 73,
+      "status": "ok",
+      "fifa": {
+        "match_no": 73,
+        "fifa_event_id": "400021518",
+        "fifa_utcDate": "2026-06-28T19:00:00Z",
+        "fifa_dato": "2026-06-28",
+        "fifa_tid": "19:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "South Africa",
+        "fifa_borte": "Canada",
+        "fifa_hjemme_raw": "South Africa",
+        "fifa_borte_raw": "Canada",
+        "fifa_hjemme_kode": "RSA",
+        "fifa_borte_kode": "CAN",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 72
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "South_Africa_Canada_2026_06_28",
+          "match_no": 73,
+          "hjemme": "South Africa",
+          "borte": "Canada",
+          "dato": "2026-06-28",
+          "utcDate": "2026-06-28T19:00:00Z",
+          "fd_match_id": 537417,
+          "fifa_event_id": "400021518",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-28T19:00:00Z",
+        "lagret_utcDate": "2026-06-28T19:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "South_Africa_Canada_2026_06_28",
+          "match_no": 73,
+          "hjemme": "South Africa",
+          "borte": "Canada",
+          "dato": "2026-06-28",
+          "utcDate": "2026-06-28T19:00:00Z",
+          "fd_match_id": 537417,
+          "fifa_event_id": "400021518",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-28T19:00:00Z",
+        "lagret_utcDate": "2026-06-28T19:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 74,
+      "status": "ok",
+      "fifa": {
+        "match_no": 74,
+        "fifa_event_id": "400021513",
+        "fifa_utcDate": "2026-06-29T20:30:00Z",
+        "fifa_dato": "2026-06-29",
+        "fifa_tid": "20:30",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Germany",
+        "fifa_borte": "Paraguay",
+        "fifa_hjemme_raw": "Germany",
+        "fifa_borte_raw": "Paraguay",
+        "fifa_hjemme_kode": "GER",
+        "fifa_borte_kode": "PAR",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 74
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Germany_Paraguay_2026_06_29",
+          "match_no": 74,
+          "hjemme": "Germany",
+          "borte": "Paraguay",
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T20:30:00Z",
+          "fd_match_id": 537415,
+          "fifa_event_id": "400021513",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-29T20:30:00Z",
+        "lagret_utcDate": "2026-06-29T20:30:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Germany_Paraguay_2026_06_29",
+          "match_no": 74,
+          "hjemme": "Germany",
+          "borte": "Paraguay",
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T20:30:00Z",
+          "fd_match_id": 537415,
+          "fifa_event_id": "400021513",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-29T20:30:00Z",
+        "lagret_utcDate": "2026-06-29T20:30:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 75,
+      "status": "ok",
+      "fifa": {
+        "match_no": 75,
+        "fifa_event_id": "400021522",
+        "fifa_utcDate": "2026-06-30T01:00:00Z",
+        "fifa_dato": "2026-06-30",
+        "fifa_tid": "01:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Netherlands",
+        "fifa_borte": "Morocco",
+        "fifa_hjemme_raw": "Netherlands",
+        "fifa_borte_raw": "Morocco",
+        "fifa_hjemme_kode": "NED",
+        "fifa_borte_kode": "MAR",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 75
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "match_no": 75,
+          "hjemme": "Netherlands",
+          "borte": "Morocco",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T01:00:00Z",
+          "fd_match_id": 537418,
+          "fifa_event_id": "400021522",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T01:00:00Z",
+        "lagret_utcDate": "2026-06-30T01:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Netherlands_Morocco_2026_06_30",
+          "match_no": 75,
+          "hjemme": "Netherlands",
+          "borte": "Morocco",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T01:00:00Z",
+          "fd_match_id": 537418,
+          "fifa_event_id": "400021522",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T01:00:00Z",
+        "lagret_utcDate": "2026-06-30T01:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 76,
+      "status": "ok",
+      "fifa": {
+        "match_no": 76,
+        "fifa_event_id": "400021516",
+        "fifa_utcDate": "2026-06-29T17:00:00Z",
+        "fifa_dato": "2026-06-29",
+        "fifa_tid": "17:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Brazil",
+        "fifa_borte": "Japan",
+        "fifa_hjemme_raw": "Brazil",
+        "fifa_borte_raw": "Japan",
+        "fifa_hjemme_kode": "BRA",
+        "fifa_borte_kode": "JPN",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 73
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Brazil_Japan_2026_06_29",
+          "match_no": 76,
+          "hjemme": "Brazil",
+          "borte": "Japan",
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T17:00:00Z",
+          "fd_match_id": 537423,
+          "fifa_event_id": "400021516",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-29T17:00:00Z",
+        "lagret_utcDate": "2026-06-29T17:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Brazil_Japan_2026_06_29",
+          "match_no": 76,
+          "hjemme": "Brazil",
+          "borte": "Japan",
+          "dato": "2026-06-29",
+          "utcDate": "2026-06-29T17:00:00Z",
+          "fd_match_id": 537423,
+          "fifa_event_id": "400021516",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-29T17:00:00Z",
+        "lagret_utcDate": "2026-06-29T17:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 77,
+      "status": "ok",
+      "fifa": {
+        "match_no": 77,
+        "fifa_event_id": "400021523",
+        "fifa_utcDate": "2026-06-30T21:00:00Z",
+        "fifa_dato": "2026-06-30",
+        "fifa_tid": "21:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "France",
+        "fifa_borte": "Sweden",
+        "fifa_hjemme_raw": "France",
+        "fifa_borte_raw": "Sweden",
+        "fifa_hjemme_kode": "FRA",
+        "fifa_borte_kode": "SWE",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 77
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "France_Sweden_2026_06_30",
+          "match_no": 77,
+          "hjemme": "France",
+          "borte": "Sweden",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T21:00:00Z",
+          "fd_match_id": 537416,
+          "fifa_event_id": "400021523",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T21:00:00Z",
+        "lagret_utcDate": "2026-06-30T21:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "France_Sweden_2026_06_30",
+          "match_no": 77,
+          "hjemme": "France",
+          "borte": "Sweden",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T21:00:00Z",
+          "fd_match_id": 537416,
+          "fifa_event_id": "400021523",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T21:00:00Z",
+        "lagret_utcDate": "2026-06-30T21:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 78,
+      "status": "ok",
+      "fifa": {
+        "match_no": 78,
+        "fifa_event_id": "400021514",
+        "fifa_utcDate": "2026-06-30T17:00:00Z",
+        "fifa_dato": "2026-06-30",
+        "fifa_tid": "17:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Ivory Coast",
+        "fifa_borte": "Norway",
+        "fifa_hjemme_raw": "Côte d'Ivoire",
+        "fifa_borte_raw": "Norway",
+        "fifa_hjemme_kode": "CIV",
+        "fifa_borte_kode": "NOR",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 76
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "match_no": 78,
+          "hjemme": "Ivory Coast",
+          "borte": "Norway",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T17:00:00Z",
+          "fd_match_id": 537424,
+          "fifa_event_id": "400021514",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T17:00:00Z",
+        "lagret_utcDate": "2026-06-30T17:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Ivory_Coast_Norway_2026_06_30",
+          "match_no": 78,
+          "hjemme": "Ivory Coast",
+          "borte": "Norway",
+          "dato": "2026-06-30",
+          "utcDate": "2026-06-30T17:00:00Z",
+          "fd_match_id": 537424,
+          "fifa_event_id": "400021514",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-06-30T17:00:00Z",
+        "lagret_utcDate": "2026-06-30T17:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 79,
+      "status": "klokkeslett_avvik",
+      "fifa": {
+        "match_no": 79,
+        "fifa_event_id": "400021520",
+        "fifa_utcDate": "2026-07-01T02:00:00Z",
+        "fifa_dato": "2026-07-01",
+        "fifa_tid": "02:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Mexico",
+        "fifa_borte": "Ecuador",
+        "fifa_hjemme_raw": "Mexico",
+        "fifa_borte_raw": "Ecuador",
+        "fifa_hjemme_kode": "MEX",
+        "fifa_borte_kode": "ECU",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 78
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Mexico_Ecuador_2026_07_01",
+          "match_no": 79,
+          "hjemme": "Mexico",
+          "borte": "Ecuador",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T01:00:00Z",
+          "fd_match_id": 537425,
+          "fifa_event_id": "400021520",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "klokkeslett avviker med -60 minutter: FIFA=2026-07-01T02:00:00Z, lagret=2026-07-01T01:00:00Z"
+        ],
+        "klokkeslett_avvik": true,
+        "conflict": false,
+        "ok": false,
+        "fifa_utcDate": "2026-07-01T02:00:00Z",
+        "lagret_utcDate": "2026-07-01T01:00:00Z",
+        "avvik_minutter": -60,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Mexico_Ecuador_2026_07_01",
+          "match_no": 79,
+          "hjemme": "Mexico",
+          "borte": "Ecuador",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T01:00:00Z",
+          "fd_match_id": 537425,
+          "fifa_event_id": "400021520",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "klokkeslett avviker med -60 minutter: FIFA=2026-07-01T02:00:00Z, lagret=2026-07-01T01:00:00Z"
+        ],
+        "klokkeslett_avvik": true,
+        "conflict": false,
+        "ok": false,
+        "fifa_utcDate": "2026-07-01T02:00:00Z",
+        "lagret_utcDate": "2026-07-01T01:00:00Z",
+        "avvik_minutter": -60,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 80,
+      "status": "ok",
+      "fifa": {
+        "match_no": 80,
+        "fifa_event_id": "400021512",
+        "fifa_utcDate": "2026-07-01T16:00:00Z",
+        "fifa_dato": "2026-07-01",
+        "fifa_tid": "16:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "England",
+        "fifa_borte": "DR Congo",
+        "fifa_hjemme_raw": "England",
+        "fifa_borte_raw": "Congo DR",
+        "fifa_hjemme_kode": "ENG",
+        "fifa_borte_kode": "COD",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 79
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "match_no": 80,
+          "hjemme": "England",
+          "borte": "DR Congo",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T16:00:00Z",
+          "fd_match_id": 537426,
+          "fifa_event_id": "400021512",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-01T16:00:00Z",
+        "lagret_utcDate": "2026-07-01T16:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "England_DR_Congo_2026_07_01",
+          "match_no": 80,
+          "hjemme": "England",
+          "borte": "DR Congo",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T16:00:00Z",
+          "fd_match_id": 537426,
+          "fifa_event_id": "400021512",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-01T16:00:00Z",
+        "lagret_utcDate": "2026-07-01T16:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 81,
+      "status": "ok",
+      "fifa": {
+        "match_no": 81,
+        "fifa_event_id": "400021524",
+        "fifa_utcDate": "2026-07-02T00:00:00Z",
+        "fifa_dato": "2026-07-02",
+        "fifa_tid": "00:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "USA",
+        "fifa_borte": "Bosnia & Herzegovina",
+        "fifa_hjemme_raw": "USA",
+        "fifa_borte_raw": "Bosnia and Herzegovina",
+        "fifa_hjemme_kode": "USA",
+        "fifa_borte_kode": "BIH",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 81
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+          "match_no": 81,
+          "hjemme": "USA",
+          "borte": "Bosnia & Herzegovina",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T00:00:00Z",
+          "fd_match_id": 537421,
+          "fifa_event_id": "400021524",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T00:00:00Z",
+        "lagret_utcDate": "2026-07-02T00:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+          "match_no": 81,
+          "hjemme": "USA",
+          "borte": "Bosnia & Herzegovina",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T00:00:00Z",
+          "fd_match_id": 537421,
+          "fifa_event_id": "400021524",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T00:00:00Z",
+        "lagret_utcDate": "2026-07-02T00:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 82,
+      "status": "ok",
+      "fifa": {
+        "match_no": 82,
+        "fifa_event_id": "400021525",
+        "fifa_utcDate": "2026-07-01T20:00:00Z",
+        "fifa_dato": "2026-07-01",
+        "fifa_tid": "20:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Belgium",
+        "fifa_borte": "Senegal",
+        "fifa_hjemme_raw": "Belgium",
+        "fifa_borte_raw": "Senegal",
+        "fifa_hjemme_kode": "BEL",
+        "fifa_borte_kode": "SEN",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 80
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "match_no": 82,
+          "hjemme": "Belgium",
+          "borte": "Senegal",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T20:00:00Z",
+          "fd_match_id": 537422,
+          "fifa_event_id": "400021525",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-01T20:00:00Z",
+        "lagret_utcDate": "2026-07-01T20:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "match_no": 82,
+          "hjemme": "Belgium",
+          "borte": "Senegal",
+          "dato": "2026-07-01",
+          "utcDate": "2026-07-01T20:00:00Z",
+          "fd_match_id": 537422,
+          "fifa_event_id": "400021525",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-01T20:00:00Z",
+        "lagret_utcDate": "2026-07-01T20:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 83,
+      "status": "ok",
+      "fifa": {
+        "match_no": 83,
+        "fifa_event_id": "400021526",
+        "fifa_utcDate": "2026-07-02T23:00:00Z",
+        "fifa_dato": "2026-07-02",
+        "fifa_tid": "23:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Portugal",
+        "fifa_borte": "Croatia",
+        "fifa_hjemme_raw": "Portugal",
+        "fifa_borte_raw": "Croatia",
+        "fifa_hjemme_kode": "POR",
+        "fifa_borte_kode": "CRO",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 83
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "match_no": 83,
+          "hjemme": "Portugal",
+          "borte": "Croatia",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T23:00:00Z",
+          "fd_match_id": 537419,
+          "fifa_event_id": "400021526",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T23:00:00Z",
+        "lagret_utcDate": "2026-07-02T23:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "match_no": 83,
+          "hjemme": "Portugal",
+          "borte": "Croatia",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T23:00:00Z",
+          "fd_match_id": 537419,
+          "fifa_event_id": "400021526",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T23:00:00Z",
+        "lagret_utcDate": "2026-07-02T23:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 84,
+      "status": "ok",
+      "fifa": {
+        "match_no": 84,
+        "fifa_event_id": "400021519",
+        "fifa_utcDate": "2026-07-02T19:00:00Z",
+        "fifa_dato": "2026-07-02",
+        "fifa_tid": "19:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Spain",
+        "fifa_borte": "Austria",
+        "fifa_hjemme_raw": "Spain",
+        "fifa_borte_raw": "Austria",
+        "fifa_hjemme_kode": "ESP",
+        "fifa_borte_kode": "AUT",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 82
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "match_no": 84,
+          "hjemme": "Spain",
+          "borte": "Austria",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T19:00:00Z",
+          "fd_match_id": 537420,
+          "fifa_event_id": "400021519",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T19:00:00Z",
+        "lagret_utcDate": "2026-07-02T19:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "match_no": 84,
+          "hjemme": "Spain",
+          "borte": "Austria",
+          "dato": "2026-07-02",
+          "utcDate": "2026-07-02T19:00:00Z",
+          "fd_match_id": 537420,
+          "fifa_event_id": "400021519",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-02T19:00:00Z",
+        "lagret_utcDate": "2026-07-02T19:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 85,
+      "status": "ok",
+      "fifa": {
+        "match_no": 85,
+        "fifa_event_id": "400021527",
+        "fifa_utcDate": "2026-07-03T03:00:00Z",
+        "fifa_dato": "2026-07-03",
+        "fifa_tid": "03:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Switzerland",
+        "fifa_borte": "Algeria",
+        "fifa_hjemme_raw": "Switzerland",
+        "fifa_borte_raw": "Algeria",
+        "fifa_hjemme_kode": "SUI",
+        "fifa_borte_kode": "ALG",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 84
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Switzerland_Algeria_2026_07_03",
+          "match_no": 85,
+          "hjemme": "Switzerland",
+          "borte": "Algeria",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T03:00:00Z",
+          "fd_match_id": 537429,
+          "fifa_event_id": "400021527",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T03:00:00Z",
+        "lagret_utcDate": "2026-07-03T03:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Switzerland_Algeria_2026_07_03",
+          "match_no": 85,
+          "hjemme": "Switzerland",
+          "borte": "Algeria",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T03:00:00Z",
+          "fd_match_id": 537429,
+          "fifa_event_id": "400021527",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T03:00:00Z",
+        "lagret_utcDate": "2026-07-03T03:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 86,
+      "status": "ok",
+      "fifa": {
+        "match_no": 86,
+        "fifa_event_id": "400021521",
+        "fifa_utcDate": "2026-07-03T22:00:00Z",
+        "fifa_dato": "2026-07-03",
+        "fifa_tid": "22:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Argentina",
+        "fifa_borte": "Cape Verde",
+        "fifa_hjemme_raw": "Argentina",
+        "fifa_borte_raw": "Cabo Verde",
+        "fifa_hjemme_kode": "ARG",
+        "fifa_borte_kode": "CPV",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 86
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+          "match_no": 86,
+          "hjemme": "Argentina",
+          "borte": "Cape Verde",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T22:00:00Z",
+          "fd_match_id": 537427,
+          "fifa_event_id": "400021521",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T22:00:00Z",
+        "lagret_utcDate": "2026-07-03T22:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+          "match_no": 86,
+          "hjemme": "Argentina",
+          "borte": "Cape Verde",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T22:00:00Z",
+          "fd_match_id": 537427,
+          "fifa_event_id": "400021521",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T22:00:00Z",
+        "lagret_utcDate": "2026-07-03T22:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 87,
+      "status": "ok",
+      "fifa": {
+        "match_no": 87,
+        "fifa_event_id": "400021517",
+        "fifa_utcDate": "2026-07-04T01:30:00Z",
+        "fifa_dato": "2026-07-04",
+        "fifa_tid": "01:30",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Colombia",
+        "fifa_borte": "Ghana",
+        "fifa_hjemme_raw": "Colombia",
+        "fifa_borte_raw": "Ghana",
+        "fifa_hjemme_kode": "COL",
+        "fifa_borte_kode": "GHA",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 87
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "match_no": 87,
+          "hjemme": "Colombia",
+          "borte": "Ghana",
+          "dato": "2026-07-04",
+          "utcDate": "2026-07-04T01:30:00Z",
+          "fd_match_id": 537430,
+          "fifa_event_id": "400021517",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-04T01:30:00Z",
+        "lagret_utcDate": "2026-07-04T01:30:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "match_no": 87,
+          "hjemme": "Colombia",
+          "borte": "Ghana",
+          "dato": "2026-07-04",
+          "utcDate": "2026-07-04T01:30:00Z",
+          "fd_match_id": 537430,
+          "fifa_event_id": "400021517",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-04T01:30:00Z",
+        "lagret_utcDate": "2026-07-04T01:30:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    },
+    {
+      "match_no": 88,
+      "status": "ok",
+      "fifa": {
+        "match_no": 88,
+        "fifa_event_id": "400021515",
+        "fifa_utcDate": "2026-07-03T18:00:00Z",
+        "fifa_dato": "2026-07-03",
+        "fifa_tid": "18:00",
+        "fifa_tid_hadde_tidssone": true,
+        "fifa_hjemme": "Australia",
+        "fifa_borte": "Egypt",
+        "fifa_hjemme_raw": "Australia",
+        "fifa_borte_raw": "Egypt",
+        "fifa_hjemme_kode": "AUS",
+        "fifa_borte_kode": "EGY",
+        "fifa_hjemme_kjent": true,
+        "fifa_borte_kjent": true,
+        "fifa_hjemme_placeholder": "",
+        "fifa_borte_placeholder": "",
+        "fifa_api_result_index": 85
+      },
+      "status_json": {
+        "kilde": "status.json",
+        "lagret": {
+          "kamp_id": "Australia_Egypt_2026_07_03",
+          "match_no": 88,
+          "hjemme": "Australia",
+          "borte": "Egypt",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T18:00:00Z",
+          "fd_match_id": 537428,
+          "fifa_event_id": "400021515",
+          "kilde": null,
+          "lagkilde": null
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T18:00:00Z",
+        "lagret_utcDate": "2026-07-03T18:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      },
+      "manuelle_kamper_json": {
+        "kilde": "manuelle-kamper.json",
+        "lagret": {
+          "kamp_id": "Australia_Egypt_2026_07_03",
+          "match_no": 88,
+          "hjemme": "Australia",
+          "borte": "Egypt",
+          "dato": "2026-07-03",
+          "utcDate": "2026-07-03T18:00:00Z",
+          "fd_match_id": 537428,
+          "fifa_event_id": "400021515",
+          "kilde": "football_data_org_r32",
+          "lagkilde": "football_data_org"
+        },
+        "funn": [
+          "OK"
+        ],
+        "klokkeslett_avvik": false,
+        "conflict": false,
+        "ok": true,
+        "fifa_utcDate": "2026-07-03T18:00:00Z",
+        "lagret_utcDate": "2026-07-03T18:00:00Z",
+        "avvik_minutter": 0,
+        "master_tid": "fifa"
+      }
+    }
+  ]
 }
