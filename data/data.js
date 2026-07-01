@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T19:45:39Z
+// Sist oppdatert: 2026-07-01T20:01:12Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T19:45:39Z",
+  "sist_oppdatert": "2026-07-01T20:01:12Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1535,13 +1535,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Belgium_Senegal_2026_07_01",
       "hjemmelag": "Belgium",
       "bortelag": "Senegal",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
@@ -2054,7 +2054,7 @@ const VM_DATA = {
       "spiller": "Harry Kane",
       "maal": 5,
       "assists": 0,
-      "minutter": 393
+      "minutter": 394
     },
     {
       "rank": 5,
@@ -2222,7 +2222,7 @@ const VM_DATA = {
       "spiller": "Jude Bellingham",
       "maal": 2,
       "assists": 1,
-      "minutter": 339
+      "minutter": 340
     },
     {
       "rank": 29,
@@ -2389,7 +2389,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T19:45:39Z"
+    "sist_beregnet": "2026-07-01T20:01:12Z"
   },
   "stilling": [
     {
@@ -3487,6 +3487,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -4743,6 +4756,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -5995,6 +6021,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -7251,6 +7290,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -8432,6 +8484,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -9629,6 +9694,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -10885,6 +10963,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -12139,6 +12230,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -13334,6 +13438,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -14590,6 +14707,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -15844,6 +15974,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -17068,6 +17211,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "England_DR_Congo_2026_07_01",
@@ -20449,6 +20605,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -23903,6 +24072,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -25155,6 +25337,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 0,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",
@@ -29765,6 +29960,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Brazil_Japan_2026_06_29",
           "hjemmelag": "Brazil",
           "bortelag": "Japan",
@@ -30974,6 +31182,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Belgium_Senegal_2026_07_01",
+          "hjemmelag": "Belgium",
+          "bortelag": "Senegal",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Brazil_Japan_2026_06_29",

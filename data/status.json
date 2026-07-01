@@ -158,8 +158,8 @@
         "utcDate": "2026-07-01T20:00:00Z",
         "fd_match_id": 537422,
         "fifa_event_id": "400021525",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Portugal_Croatia_2026_07_02",
@@ -252,8 +252,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 8,
-    "neste_frist": "2026-07-01T20:00:00Z"
+    "antall_tippebare": 7,
+    "neste_frist": "2026-07-02T00:00:00Z"
   },
   "r16": {
     "aapen": true,
