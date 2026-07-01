@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T23:01:11Z
+// Sist oppdatert: 2026-07-01T23:15:51Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T23:01:11Z",
+  "sist_oppdatert": "2026-07-01T23:15:51Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2067,17 +2067,17 @@ const VM_DATA = {
     },
     {
       "rank": 6,
-      "spiller": "Ismaila Sarr",
-      "maal": 4,
-      "assists": 1,
-      "minutter": 373
-    },
-    {
-      "rank": 7,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 398
+    },
+    {
+      "rank": 7,
+      "spiller": "Ismaila Sarr",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 418
     },
     {
       "rank": 8,
@@ -2165,24 +2165,24 @@ const VM_DATA = {
     },
     {
       "rank": 20,
-      "spiller": "Romelu Lukaku",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 169
-    },
-    {
-      "rank": 21,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 22,
+      "rank": 21,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 213
+    },
+    {
+      "rank": 22,
+      "spiller": "Romelu Lukaku",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 214
     },
     {
       "rank": 23,
@@ -2245,7 +2245,7 @@ const VM_DATA = {
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 1,
-      "minutter": 378
+      "minutter": 401
     },
     {
       "rank": 32,
@@ -2333,52 +2333,52 @@ const VM_DATA = {
     },
     {
       "rank": 44,
+      "spiller": "Youri Tielemans",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 437
+    },
+    {
+      "rank": 45,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 389
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Iliman Ndiaye",
       "maal": 1,
       "assists": 2,
       "minutter": 133
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 206
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
       "minutter": 230
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Breel Embolo",
       "maal": 1,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Julio Enciso",
       "maal": 1,
       "assists": 2,
       "minutter": 367
-    },
-    {
-      "rank": 50,
-      "spiller": "Viktor Gyokeres",
-      "maal": 1,
-      "assists": 2,
-      "minutter": 400
     }
   ],
   "startpoengstatus": {
@@ -2391,7 +2391,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T23:01:11Z"
+    "sist_beregnet": "2026-07-01T23:15:51Z"
   },
   "stilling": [
     {
