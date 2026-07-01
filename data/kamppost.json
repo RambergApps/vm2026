@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-01",
   "dato_norsk": "Onsdag 1. juli 2026",
-  "generert": "2026-07-01T22:18:39Z",
+  "generert": "2026-07-01T22:33:51Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 2,
+        "antall_sok": 3,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
+        "retry_antall": 3,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -164,7 +164,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 2,
+        "antall_sok": 3,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -174,7 +174,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
+        "retry_antall": 3,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
