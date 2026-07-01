@@ -76,12 +76,22 @@ def validate_control(report: dict[str, Any]) -> list[dict[str, Any]]:
     summary = report.get("oppsummering") or {}
     if summary.get("fifa_api_r32_funnet") != 16:
         raise RuntimeError("FIFA-kontrollen inneholder ikke alle 16 R32-kampene")
-    if summary.get("koblet_entydig_pa_utc_avspark") != 16:
-        raise RuntimeError("Ikke alle 16 FIFA-kampnumre er entydig koblet til football-data.org")
+
+    # Ny kontrollfil kan ha 15/16 på eksakt UTC, men 16/16 trygg kobling når
+    # den siste kampen valideres mot eksisterende match_no -> fd_match_id.
+    # Bakoverkompatibelt: gamle rapporter bruker kun koblet_entydig_pa_utc_avspark.
+    trusted_links = summary.get(
+        "koblet_entydig_med_stabil_fallback",
+        summary.get("koblet_entydig_pa_utc_avspark"),
+    )
+    if trusted_links != 16:
+        raise RuntimeError("Ikke alle 16 FIFA-kampnumre er trygt koblet til football-data.org")
     if summary.get("conflict", 0) != 0:
         raise RuntimeError("FIFA-kontrollen inneholder konflikt(er); ingen data skrives")
     if not summary.get("klar_for_matchnummer_mapping"):
         raise RuntimeError("FIFA-kontrollen er ikke klar for matchnummer-mapping")
+    if summary.get("klar_for_produksjonsbruk") is False:
+        raise RuntimeError("FIFA-kontrollen er ikke klar for produksjonsbruk")
 
     matches = report.get("kamper")
     if not isinstance(matches, list):
