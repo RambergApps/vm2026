@@ -488,6 +488,7 @@ body {
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
+  line-height: 1.35;
 }
 .kamp-status.open { color: var(--accent); background: rgba(0,230,118,.06); }
 .kamp-status.saved { color: var(--accent2); background: rgba(255,214,0,.06); }
@@ -970,13 +971,32 @@ function kampHarStartet(kamp) {
   return kickoff !== null && Date.now() >= kickoff;
 }
 
+function formaterKampFrist(kamp) {
+  const kickoff = parseKickoff(kamp);
+  if (kickoff === null) return null;
+  return new Date(kickoff)
+    .toLocaleString("no-NO", {
+      timeZone: "Europe/Oslo",
+      day: "2-digit",
+      month: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit"
+    })
+    .replace(",", "");
+}
+
 function kampStatusTekst(kamp) {
+  const frist = formaterKampFrist(kamp);
+  const fristTekst = frist ? `${frist} norsk tid` : "avspark";
+
   if (erKampTippebar(kamp)) {
     return erKampLevert(kamp.id)
-      ? "✓ Tips lagret – kan oppdateres frem til avspark"
-      : "Åpen for tipping";
+      ? `✓ Tips lagret – kan oppdateres frem til ${fristTekst}`
+      : `Åpen for tipping – frist ${fristTekst}`;
   }
-  if (kamp?.tippe_status === "startet" || kampHarStartet(kamp)) return "Tippingen er stengt – kampen har startet";
+  if (kamp?.tippe_status === "startet" || kampHarStartet(kamp)) {
+    return frist ? `Tippingen er stengt – fristen var ${fristTekst}` : "Tippingen er stengt – kampen har startet";
+  }
   if (kamp?.tippe_status === "mangler_avsparkstid") return "Venter på bekreftet avsparkstid";
   return "Lagene er ikke klare ennå";
 }
