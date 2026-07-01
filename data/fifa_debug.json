@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T22:45:39Z",
+  "tidspunkt": "2026-07-01T22:50:14Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1110,14 +1110,14 @@
       "fifa_event_id": "400021525",
       "hjemmelag": "Belgium",
       "bortelag": "Senegal",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 3,
       "borte": 2,
       "fifa_dato": "2026-07-01",
       "fifa_utcDate": "2026-07-01T20:00:00Z",
-      "fifa_match_time": "120'+7'"
+      "fifa_match_time": "132'"
     },
     "400021526": {
       "fifa_event_id": "400021526",

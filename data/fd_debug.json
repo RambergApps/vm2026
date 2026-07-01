@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T22:45:39Z",
+  "tidspunkt": "2026-07-01T22:50:14Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1157,8 +1157,8 @@
       "bortelag_normalisert": "Senegal",
       "status": "PAUSED",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 3,
+      "borte": 2,
       "fd_dato": "2026-07-01",
       "fd_utcDate": "2026-07-01T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Belgium_Senegal_2026_07_01"
