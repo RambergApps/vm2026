@@ -108,7 +108,7 @@
         "match_no": 79,
         "slot_hjemme": "1A",
         "slot_borte": "3C/E/F/H/I",
-        "utcDate": "2026-07-01T01:00:00Z",
+        "utcDate": "2026-07-01T02:00:00Z",
         "fd_match_id": 537425,
         "fifa_event_id": "400021520",
         "avanserer": "Mexico",
@@ -256,7 +256,7 @@
   },
   "r16": {
     "aapen": true,
-    "frist": null,
+    "frist": "2026-07-04T17:00:00Z",
     "kamper": [
       {
         "id": "Paraguay_France_2026_07_04",
@@ -267,8 +267,9 @@
         "match_no": 89,
         "slot_hjemme": "W74",
         "slot_borte": "W77",
-        "tippebar": false,
-        "tippe_status": "mangler_avsparkstid"
+        "utcDate": "2026-07-04T21:00:00Z",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Canada_Morocco_2026_07_04",
@@ -279,8 +280,9 @@
         "match_no": 90,
         "slot_hjemme": "W73",
         "slot_borte": "W75",
-        "tippebar": false,
-        "tippe_status": "mangler_avsparkstid"
+        "utcDate": "2026-07-04T17:00:00Z",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Brazil_Norway_2026_07_05",
@@ -291,8 +293,9 @@
         "match_no": 91,
         "slot_hjemme": "W76",
         "slot_borte": "W78",
-        "tippebar": false,
-        "tippe_status": "mangler_avsparkstid"
+        "utcDate": "2026-07-05T20:00:00Z",
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Mexico_W80_2026_07_05",
@@ -303,6 +306,7 @@
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",
+        "utcDate": "2026-07-06T00:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -315,6 +319,7 @@
         "match_no": 93,
         "slot_hjemme": "W83",
         "slot_borte": "W84",
+        "utcDate": "2026-07-06T19:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -327,6 +332,7 @@
         "match_no": 94,
         "slot_hjemme": "W81",
         "slot_borte": "W82",
+        "utcDate": "2026-07-07T00:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -339,6 +345,7 @@
         "match_no": 95,
         "slot_hjemme": "W86",
         "slot_borte": "W88",
+        "utcDate": "2026-07-07T16:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -351,16 +358,17 @@
         "match_no": 96,
         "slot_hjemme": "W85",
         "slot_borte": "W87",
+        "utcDate": "2026-07-07T20:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 0,
-    "neste_frist": null
+    "antall_tippebare": 3,
+    "neste_frist": "2026-07-04T17:00:00Z"
   },
   "qf": {
     "aapen": false,
-    "frist": null,
+    "frist": "2026-07-09T20:00:00Z",
     "kamper": [
       {
         "id": "W89_W90_2026_07_09",
@@ -371,6 +379,7 @@
         "match_no": 97,
         "slot_hjemme": "W89",
         "slot_borte": "W90",
+        "utcDate": "2026-07-09T20:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -383,6 +392,7 @@
         "match_no": 98,
         "slot_hjemme": "W93",
         "slot_borte": "W94",
+        "utcDate": "2026-07-10T19:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -395,6 +405,7 @@
         "match_no": 99,
         "slot_hjemme": "W91",
         "slot_borte": "W92",
+        "utcDate": "2026-07-11T21:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -407,6 +418,7 @@
         "match_no": 100,
         "slot_hjemme": "W95",
         "slot_borte": "W96",
+        "utcDate": "2026-07-12T01:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       }
@@ -416,7 +428,7 @@
   },
   "sf": {
     "aapen": false,
-    "frist": null,
+    "frist": "2026-07-14T19:00:00Z",
     "kamper": [
       {
         "id": "W97_W98_2026_07_14",
@@ -427,6 +439,7 @@
         "match_no": 101,
         "slot_hjemme": "W97",
         "slot_borte": "W98",
+        "utcDate": "2026-07-14T19:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       },
@@ -439,6 +452,7 @@
         "match_no": 102,
         "slot_hjemme": "W99",
         "slot_borte": "W100",
+        "utcDate": "2026-07-15T19:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       }
@@ -448,7 +462,7 @@
   },
   "final": {
     "aapen": false,
-    "frist": null,
+    "frist": "2026-07-19T19:00:00Z",
     "kamper": [
       {
         "id": "W101_W102_2026_07_19",
@@ -459,6 +473,7 @@
         "match_no": 104,
         "slot_hjemme": "W101",
         "slot_borte": "W102",
+        "utcDate": "2026-07-19T19:00:00Z",
         "tippebar": false,
         "tippe_status": "venter_pa_lag"
       }
