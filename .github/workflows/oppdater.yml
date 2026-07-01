@@ -7,6 +7,9 @@ on:
     paths:
       - 'tippinger/**'
       - 'data/manuelle-kamper.json'
+      - 'scripts/kontroller-fifa-r32.py'
+      - 'scripts/bygg-r32.py'
+      - 'scripts/poengregning.py'
       - 'scripts/generer-innleveringsstatus.py'
       - '.github/workflows/oppdater.yml'
   workflow_dispatch:
