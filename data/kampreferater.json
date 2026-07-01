@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-01T22:52:36Z",
+  "sist_oppdatert": "2026-07-01T23:04:16Z",
   "antall_kamper": 81,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16410,7 +16410,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 63,
+        "antall_sok": 64,
         "fallback": true,
         "cache_key": "Ivory_Coast_Norway_2026_06_30|1-2",
         "serper_score": -100,
@@ -16420,7 +16420,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 63,
+        "retry_antall": 64,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-match-report-highlights",
         "mangler": [
@@ -16477,15 +16477,15 @@
             "poeng": 3
           },
           {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
-            "tippa_b": 4,
-            "poeng": 3
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 1,
             "tippa_b": 3,
+            "poeng": 3
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 2,
+            "tippa_b": 4,
             "poeng": 3
           },
           {
@@ -16541,7 +16541,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T22:51:49Z"
+      "oppdatert": "2026-07-01T23:03:29Z"
     },
     "France_Sweden_2026_06_30": {
       "kamp_id": "France_Sweden_2026_06_30",
@@ -16562,7 +16562,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 58,
+        "antall_sok": 59,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -16572,7 +16572,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 58,
+        "retry_antall": 59,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -16628,15 +16628,15 @@
             "poeng": 3
           },
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 6,
             "tippa_b": 2,
+            "poeng": 3
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 2,
+            "tippa_b": 0,
             "poeng": 3
           },
           {
@@ -16676,22 +16676,22 @@
             "poeng": 3
           },
           {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 4,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 3
           }
         ],
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T22:52:36Z"
+      "oppdatert": "2026-07-01T23:04:15Z"
     },
     "Mexico_Ecuador_2026_07_01": {
       "kamp_id": "Mexico_Ecuador_2026_07_01",
@@ -16712,7 +16712,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 5,
+        "antall_sok": 6,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -16722,7 +16722,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 5,
+        "retry_antall": 6,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -16842,7 +16842,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T22:50:40Z"
+      "oppdatert": "2026-07-01T23:01:45Z"
     },
     "England_DR_Congo_2026_07_01": {
       "kamp_id": "England_DR_Congo_2026_07_01",
@@ -16863,7 +16863,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 5,
+        "antall_sok": 6,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -16873,7 +16873,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 5,
+        "retry_antall": 6,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -16930,15 +16930,15 @@
             "poeng": 3
           },
           {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 4,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 3,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 4,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -16972,14 +16972,14 @@
             "poeng": 3
           },
           {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
+            "navn": "sergio gomes",
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 3
           }
@@ -16994,7 +16994,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-01T22:51:05Z"
+      "oppdatert": "2026-07-01T23:02:18Z"
     },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
@@ -17007,16 +17007,62 @@
       "borte_score": 2,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "PAUSED",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Belgium lead Senegal 3-2.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "Belgium beat Senegal 3-2.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 4,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "Belgium_Senegal_2026_07_01|3-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
+        "mangler": [
+          "resultat_i_fulltekst",
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
+        "eksakt": [
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 7
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 7
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          }
+        ],
         "bom": [
           {
             "navn": "Pål André Nilsen",
@@ -17034,18 +17080,6 @@
             "navn": "Olympus fc",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -17067,12 +17101,6 @@
             "poeng": 0
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 3,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 1,
@@ -17113,17 +17141,11 @@
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 3,
-            "tippa_b": 2,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-01T22:50:15Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-01T23:02:41Z"
     }
   }
 }

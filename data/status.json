@@ -158,6 +158,7 @@
         "utcDate": "2026-07-01T20:00:00Z",
         "fd_match_id": 537422,
         "fifa_event_id": "400021525",
+        "avanserer": "Belgium",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -325,11 +326,11 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W81_W82_2026_07_06",
+        "id": "W81_Belgium_2026_07_06",
         "hjemme": "W81",
-        "borte": "W82",
+        "borte": "Belgium",
         "dato": "2026-07-06",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 94,
         "slot_hjemme": "W81",
         "slot_borte": "W82",

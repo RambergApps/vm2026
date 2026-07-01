@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T22:50:14Z",
+  "tidspunkt": "2026-07-01T23:01:10Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1155,8 +1155,8 @@
       "fd_bortelag": "Senegal",
       "hjemmelag_normalisert": "Belgium",
       "bortelag_normalisert": "Senegal",
-      "status": "PAUSED",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 3,
       "borte": 2,
       "fd_dato": "2026-07-01",
