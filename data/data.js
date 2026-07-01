@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-01T18:31:08Z
+// Sist oppdatert: 2026-07-01T18:45:56Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-01T18:31:08Z",
+  "sist_oppdatert": "2026-07-01T18:45:56Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2051,80 +2051,80 @@ const VM_DATA = {
     },
     {
       "rank": 4,
+      "spiller": "Harry Kane",
+      "maal": 5,
+      "assists": 0,
+      "minutter": 393
+    },
+    {
+      "rank": 5,
       "spiller": "Ousmane Dembele",
       "maal": 4,
       "assists": 2,
       "minutter": 304
     },
     {
-      "rank": 5,
+      "rank": 6,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 398
     },
     {
-      "rank": 6,
+      "rank": 7,
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
       "minutter": 174
     },
     {
-      "rank": 7,
+      "rank": 8,
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 1,
       "minutter": 146
     },
     {
-      "rank": 8,
+      "rank": 9,
       "spiller": "Ismaila Sarr",
       "maal": 3,
       "assists": 1,
       "minutter": 274
     },
     {
-      "rank": 9,
+      "rank": 10,
       "spiller": "Julian Quinones",
       "maal": 3,
       "assists": 1,
       "minutter": 354
     },
     {
-      "rank": 10,
+      "rank": 11,
       "spiller": "Cody Gakpo",
       "maal": 3,
       "assists": 1,
       "minutter": 394
     },
     {
-      "rank": 11,
+      "rank": 12,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 260
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
-    },
-    {
-      "rank": 14,
-      "spiller": "Harry Kane",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 362
     },
     {
       "rank": 15,
@@ -2135,24 +2135,24 @@ const VM_DATA = {
     },
     {
       "rank": 16,
-      "spiller": "Yoane Wissa",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 377
-    },
-    {
-      "rank": 17,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 390
     },
     {
-      "rank": 18,
+      "rank": 17,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
+    },
+    {
+      "rank": 18,
+      "spiller": "Yoane Wissa",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 409
     },
     {
       "rank": 19,
@@ -2212,17 +2212,17 @@ const VM_DATA = {
     },
     {
       "rank": 27,
-      "spiller": "Jude Bellingham",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 308
-    },
-    {
-      "rank": 28,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
+    },
+    {
+      "rank": 28,
+      "spiller": "Jude Bellingham",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 339
     },
     {
       "rank": 29,
@@ -2389,7 +2389,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-01T18:31:08Z"
+    "sist_beregnet": "2026-07-01T18:45:56Z"
   },
   "stilling": [
     {
