@@ -111,8 +111,8 @@
         "utcDate": "2026-07-01T01:00:00Z",
         "fd_match_id": 537425,
         "fifa_event_id": "400021520",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "England_DR_Congo_2026_07_01",
@@ -250,8 +250,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 10,
-    "neste_frist": "2026-07-01T01:00:00Z"
+    "antall_tippebare": 9,
+    "neste_frist": "2026-07-01T16:00:00Z"
   },
   "r16": {
     "aapen": true,
