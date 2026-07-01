@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-01T17:01:09Z",
+  "tidspunkt": "2026-07-01T17:15:37Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1211,7 +1211,7 @@
       "fd_bortelag": "Congo DR",
       "hjemmelag_normalisert": "England",
       "bortelag_normalisert": "DR Congo",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 1,
