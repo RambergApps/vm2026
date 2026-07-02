@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-02T00:01:15Z",
+  "tidspunkt": "2026-07-02T00:15:43Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1141,10 +1141,10 @@
       "fd_bortelag": "Bosnia-Herzegovina",
       "hjemmelag_normalisert": "USA",
       "bortelag_normalisert": "Bosnia & Herzegovina",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-07-02",
       "fd_utcDate": "2026-07-02T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "USA_Bosnia___Herzegovina_2026_07_02"
