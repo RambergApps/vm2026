@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T00:45:39Z
+// Sist oppdatert: 2026-07-02T01:01:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T00:45:39Z",
+  "sist_oppdatert": "2026-07-02T01:01:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1541,7 +1541,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "football_data_org",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
@@ -1631,10 +1631,10 @@ const VM_DATA = {
       "canonical_kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
       "hjemmelag": "USA",
       "bortelag": "Bosnia & Herzegovina",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "football_data_org",
@@ -2391,7 +2391,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T00:45:39Z"
+    "sist_beregnet": "2026-07-02T01:01:11Z"
   },
   "stilling": [
     {
@@ -3622,11 +3622,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -4903,11 +4903,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -6184,11 +6184,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -7437,11 +7437,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         }
       ],
@@ -8661,11 +8661,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         }
       ],
@@ -9899,11 +9899,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -11180,11 +11180,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -12461,11 +12461,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 5,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -13728,11 +13728,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         }
       ],
@@ -14966,11 +14966,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -16219,11 +16219,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -17472,11 +17472,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         }
       ],
@@ -20908,11 +20908,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -24387,11 +24387,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -25668,11 +25668,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -26949,11 +26949,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         },
         {
@@ -31584,11 +31584,11 @@ const VM_DATA = {
           "bortelag": "Bosnia & Herzegovina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r32"
         }
       ],
