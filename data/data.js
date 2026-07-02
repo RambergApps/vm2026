@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T18:45:46Z
+// Sist oppdatert: 2026-07-02T19:01:15Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T18:45:46Z",
+  "sist_oppdatert": "2026-07-02T19:01:15Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1612,13 +1612,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Spain_Austria_2026_07_02",
       "hjemmelag": "Spain",
       "bortelag": "Austria",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-02",
       "fd_match_id": 537420,
       "fd_utcDate": "2026-07-02T19:00:00Z",
@@ -2400,7 +2400,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T18:45:46Z"
+    "sist_beregnet": "2026-07-02T19:01:15Z"
   },
   "stilling": [
     {
@@ -3623,6 +3623,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4908,6 +4921,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -6190,6 +6216,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -7458,6 +7497,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -8666,6 +8718,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -9905,6 +9970,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -11190,6 +11268,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 4,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -12472,6 +12563,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -13740,6 +13844,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -14976,6 +15093,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -16233,6 +16363,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -17487,6 +17630,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -18598,6 +18754,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         }
       ],
       "plass": 13
@@ -20921,6 +21090,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -23305,6 +23487,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -25686,6 +25881,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
           "hjemmelag": "USA",
           "bortelag": "Bosnia & Herzegovina",
@@ -26965,6 +27173,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 0,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -31558,6 +31779,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Spain_Austria_2026_07_02",
+          "hjemmelag": "Spain",
+          "bortelag": "Austria",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {

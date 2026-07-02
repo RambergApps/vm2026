@@ -190,8 +190,8 @@
         "utcDate": "2026-07-02T19:00:00Z",
         "fd_match_id": 537420,
         "fifa_event_id": "400021519",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Switzerland_Algeria_2026_07_03",
@@ -254,8 +254,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 6,
-    "neste_frist": "2026-07-02T19:00:00Z"
+    "antall_tippebare": 5,
+    "neste_frist": "2026-07-02T23:00:00Z"
   },
   "r16": {
     "aapen": true,
