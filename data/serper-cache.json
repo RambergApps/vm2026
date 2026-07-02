@@ -5784,8 +5784,8 @@
   "Mexico_Ecuador_2026_07_01|2-0": {
     "kamp_id": "Mexico_Ecuador_2026_07_01",
     "resultat": "2-0",
-    "sist_sokt": "2026-07-02T14:16:14Z",
-    "antall_sok": 69,
+    "sist_sokt": "2026-07-02T14:31:37Z",
+    "antall_sok": 70,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5802,7 +5802,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-02T14:15:50Z",
+      "hentet": "2026-07-02T14:31:17Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -5843,8 +5843,8 @@
   "England_DR_Congo_2026_07_01|2-1": {
     "kamp_id": "England_DR_Congo_2026_07_01",
     "resultat": "2-1",
-    "sist_sokt": "2026-07-02T14:16:41Z",
-    "antall_sok": 69,
+    "sist_sokt": "2026-07-02T14:32:10Z",
+    "antall_sok": 70,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5852,7 +5852,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -5861,15 +5861,15 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-02T14:16:27Z",
+      "hentet": "2026-07-02T14:31:42Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -5895,9 +5895,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   },
   "Belgium_Senegal_2026_07_01|3-2": {
@@ -5962,8 +5962,8 @@
   "USA_Bosnia___Herzegovina_2026_07_02|2-0": {
     "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
     "resultat": "2-0",
-    "sist_sokt": "2026-07-02T14:18:13Z",
-    "antall_sok": 40,
+    "sist_sokt": "2026-07-02T14:33:27Z",
+    "antall_sok": 41,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5980,7 +5980,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-02T14:17:15Z",
+      "hentet": "2026-07-02T14:32:41Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -6021,8 +6021,8 @@
   "Belgium_Senegal_2026_07_01|2-2": {
     "kamp_id": "Belgium_Senegal_2026_07_01",
     "resultat": "2-2",
-    "sist_sokt": "2026-07-02T14:17:05Z",
-    "antall_sok": 35,
+    "sist_sokt": "2026-07-02T14:32:34Z",
+    "antall_sok": 36,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6039,7 +6039,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-07-02T14:16:48Z",
+      "hentet": "2026-07-02T14:32:17Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
