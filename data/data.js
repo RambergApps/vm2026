@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T01:15:39Z
+// Sist oppdatert: 2026-07-02T01:31:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T01:15:39Z",
+  "sist_oppdatert": "2026-07-02T01:31:04Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1541,7 +1541,7 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "r32",
       "dato_openfootball": "2026-07-01",
-      "kilde_score": "football_data_org",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537422,
       "fd_utcDate": "2026-07-01T20:00:00Z",
@@ -1634,7 +1634,7 @@ const VM_DATA = {
       "hjemme": 1,
       "borte": 0,
       "ferdig": false,
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
       "kilde_score": "football_data_org",
@@ -2109,178 +2109,178 @@ const VM_DATA = {
     },
     {
       "rank": 12,
+      "spiller": "Folarin Balogun",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 243
+    },
+    {
+      "rank": 13,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 260
     },
     {
-      "rank": 14,
+      "rank": 15,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 370
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 390
     },
     {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 213
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Romelu Lukaku",
       "maal": 2,
       "assists": 1,
       "minutter": 214
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 232
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 233
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 256
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Jude Bellingham",
       "maal": 2,
       "assists": 1,
       "minutter": 340
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 1,
       "minutter": 401
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
-      "minutter": 39
+      "minutter": 42
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Marko Arnautovic",
       "maal": 2,
       "assists": 0,
       "minutter": 137
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Habib Diarra",
       "maal": 2,
       "assists": 0,
       "minutter": 167
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 187
-    },
-    {
-      "rank": 36,
-      "spiller": "Folarin Balogun",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 193
     },
     {
       "rank": 37,
@@ -2391,7 +2391,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T01:15:39Z"
+    "sist_beregnet": "2026-07-02T01:31:04Z"
   },
   "stilling": [
     {
@@ -3626,7 +3626,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4907,7 +4907,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -6188,7 +6188,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -7441,7 +7441,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -8665,7 +8665,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -9903,7 +9903,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -11184,7 +11184,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -12465,7 +12465,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -13732,7 +13732,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -14970,7 +14970,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -16223,7 +16223,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -17476,7 +17476,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
@@ -20912,7 +20912,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -24391,7 +24391,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -25672,7 +25672,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -26953,7 +26953,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -31588,7 +31588,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "PAUSED",
+          "status": "IN_PLAY",
           "runde": "r32"
         }
       ],
