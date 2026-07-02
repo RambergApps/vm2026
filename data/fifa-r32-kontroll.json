@@ -1,5 +1,5 @@
 {
-  "generert": "2026-07-02T03:15:37Z",
+  "generert": "2026-07-02T03:31:06Z",
   "formaal": "Kontroll av FIFA R32 mot dagens kamp-ID-regel",
   "produksjonsdata_endret": false,
   "kilder": {
@@ -20,8 +20,8 @@
     "fifa_api_match_no_mangler": [],
     "fifa_jina_r32_funnet": 0,
     "football_data_r32_funnet": 16,
-    "koblet_entydig_pa_utc_avspark": 15,
-    "koblet_via_eksisterende_mapping": 1,
+    "koblet_entydig_pa_utc_avspark": 16,
+    "koblet_via_eksisterende_mapping": 0,
     "koblet_entydig_med_stabil_fallback": 16,
     "matched": 16,
     "pending": 0,
@@ -390,24 +390,18 @@
       "fifa_borte_placeholder": "",
       "fifa_api_result_index": 78,
       "fd_match_id": 537425,
-      "fd_utcDate": "2026-07-01T01:00:00Z",
+      "fd_utcDate": "2026-07-01T02:00:00Z",
       "fd_dato": "2026-07-01",
       "fd_hjemmelag": "Mexico",
       "fd_bortelag": "Ecuador",
       "kamp_id": "Mexico_Ecuador_2026_07_01",
-      "koblet_pa": "eksisterende_match_no_fd_match_id",
-      "opprinnelig_utc_konflikt": {
-        "forklaring": "Fant ingen football-data.org-kamp med identisk UTC-avspark.",
-        "fifa_utcDate": "2026-07-01T02:00:00Z",
-        "fd_utcDate_valgt_fra_eksisterende_mapping": "2026-07-01T01:00:00Z",
-        "fd_kandidater_med_samme_utc": []
-      },
+      "koblet_pa": "eksakt_utc_avspark",
       "status": "matched",
-      "forklaring": "FIFA-kampnummer ble koblet via eksisterende match_no -> fd_match_id fordi live-kildene ikke hadde identisk UTC-avspark i denne kjøringen. Lag og event-ID ble validert før fallback ble godtatt.",
+      "forklaring": "FIFA-kampnummer og football-data.org-kamp er entydig koblet på eksakt UTC-avspark; begge lag er bekreftet hos football-data.org.",
       "kamp_hjemmelag": "Mexico",
       "kamp_bortelag": "Ecuador",
       "kamp_dato": "2026-07-01",
-      "kamp_utcDate": "2026-07-01T01:00:00Z",
+      "kamp_utcDate": "2026-07-01T02:00:00Z",
       "lagkilde": "football_data_org",
       "eksisterende_koblinger": [
         {
