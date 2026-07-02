@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T19:15:39Z
+// Sist oppdatert: 2026-07-02T19:31:11Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T19:15:39Z",
+  "sist_oppdatert": "2026-07-02T19:31:11Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2202,21 +2202,21 @@ const VM_DATA = {
     },
     {
       "rank": 24,
-      "spiller": "Mikel Oyarzabal",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 232
-    },
-    {
-      "rank": 25,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 233
     },
     {
-      "rank": 26,
+      "rank": 25,
       "spiller": "Nicolas Pepe",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 255
+    },
+    {
+      "rank": 26,
+      "spiller": "Mikel Oyarzabal",
       "maal": 2,
       "assists": 1,
       "minutter": 255
@@ -2400,7 +2400,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T19:15:39Z"
+    "sist_beregnet": "2026-07-02T19:31:11Z"
   },
   "stilling": [
     {
