@@ -1,17 +1,17 @@
 {
-  "dato": "2026-07-01",
-  "dato_norsk": "Onsdag 1. juli 2026",
-  "generert": "2026-07-02T21:47:54Z",
-  "antall_kamper": 3,
+  "dato": "2026-07-02",
+  "dato_norsk": "Torsdag 2. juli 2026",
+  "generert": "2026-07-02T22:03:06Z",
+  "antall_kamper": 2,
   "kamper": [
     {
-      "kamp_id": "Mexico_Ecuador_2026_07_01",
-      "hjemmelag": "Mexico",
-      "bortelag": "Ecuador",
+      "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
+      "hjemmelag": "USA",
+      "bortelag": "Bosnia & Herzegovina",
       "hjemme_score": 2,
       "borte_score": 0,
       "gruppe": "",
-      "recap_tekst": "Mexico beat Ecuador 2-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "USA beat Bosnia & Herzegovina 2-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -19,9 +19,9 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 101,
+        "antall_sok": 73,
         "fallback": true,
-        "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
+        "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
@@ -29,9 +29,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 101,
+        "retry_antall": 73,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -41,7 +41,13 @@
       "tippinger": {
         "eksakt": [
           {
-            "navn": "Sondre Garstad",
+            "navn": "Pål André Nilsen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 7
+          },
+          {
+            "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 7
@@ -55,37 +61,55 @@
             "poeng": 3
           },
           {
-            "navn": "Kjetil bjerke",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
+            "tippa_h": 5,
+            "tippa_b": 2,
+            "poeng": 3
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Thomas Lindland",
-            "tippa_h": 1,
-            "tippa_b": 0,
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Sebastian Luranc",
+            "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Geir Magne Evensen",
-            "tippa_h": 3,
-            "tippa_b": 1,
+            "tippa_h": 1,
+            "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Anders Sundero",
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "sergio gomes",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
@@ -93,347 +117,181 @@
         ],
         "bom": [
           {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Olympus fc",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Sebastian Luranc",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
-            "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Alex Myrvokd",
             "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 3,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
             "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 1,
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           },
           {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
-            "tippa_b": 1,
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 0
           }
         ]
       }
     },
     {
-      "kamp_id": "England_DR_Congo_2026_07_01",
-      "hjemmelag": "England",
-      "bortelag": "DR Congo",
-      "hjemme_score": 2,
-      "borte_score": 1,
+      "kamp_id": "Spain_Austria_2026_07_02",
+      "hjemmelag": "Spain",
+      "bortelag": "Austria",
+      "hjemme_score": 3,
+      "borte_score": 0,
       "gruppe": "",
-      "recap_tekst": "England beat DR Congo 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "Spain beat Austria 3-0.\nGoals: Oyarzabal (36, 89) and Porro (66).\n\nSpain’s success was their first in the knockout rounds of the World Cup since their triumph in South Africa in 2010 - and their reward is a Round of 16 tie in Dallas on 6 July against the winners of the Portugal-Croatia match.\nMarc Cucurella thought he put Spain in front from a corner kick but the goal was disallowed for a foul on goalkeeper Alexander Schlager.\nOyarzabal broke the deadlock after 36 minutes, when Cucurella supplied the low ball from the left and the Basque frontman steered a first-time shot into the corner for his third goal of these finals.\nKalajdzic had Austria's best chance a minute after his introduction but could not keep his header down from Marcel Sabitzer’s cross.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 2,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 101,
-        "fallback": true,
-        "cache_key": "England_DR_Congo_2026_07_01|2-1",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Spain_Austria_2026_07_02|3-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 2,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 101,
+        "retry_antall": 1,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
-        "mangler": [
-          "riktig_kamp",
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-austria-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "navn": "Pål André Nilsen",
+            "tippa_h": 3,
+            "tippa_b": 0,
             "poeng": 7
           }
         ],
         "riktig": [
           {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
             "navn": "Alexander",
             "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 3,
-            "tippa_b": 0,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 0,
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 0,
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 4,
-            "tippa_b": 1,
+            "tippa_b": 0,
             "poeng": 3
           },
           {
             "navn": "Diyan K.",
             "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          }
-        ]
-      }
-    },
-    {
-      "kamp_id": "Belgium_Senegal_2026_07_01",
-      "hjemmelag": "Belgium",
-      "bortelag": "Senegal",
-      "hjemme_score": 2,
-      "borte_score": 2,
-      "gruppe": "",
-      "recap_tekst": "Belgium and Senegal drew 2-2.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
-      "snippets_raa": [],
-      "serper_kandidater": [],
-      "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
-        "source_type": "article_report",
-        "antall_sok": 67,
-        "fallback": true,
-        "cache_key": "Belgium_Senegal_2026_07_01|2-2",
-        "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
-        "next_retry_at": "",
-        "retry_antall": 67,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
-        "offisiell_kilde_sokt": []
-      },
-      "tippinger": {
-        "eksakt": [],
-        "riktig": [
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 3
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 3
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 0
           },
           {
             "navn": "Thomas Lindland",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
           },
           {
             "navn": "Sondre Garstad",
             "tippa_h": 3,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sebastian Luranc",
-            "tippa_h": 1,
+            "tippa_h": 3,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Alex Myrvokd",
             "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
           },
           {
             "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 3
           },
           {
             "navn": "Ulf-Morten Johansen",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 0
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 3
           },
           {
             "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
           },
           {
             "navn": "Anders Sundero",
-            "tippa_h": 3,
-            "tippa_b": 2,
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
+          }
+        ],
+        "bom": [
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
@@ -445,13 +303,13 @@
       "navn": "Pål André Nilsen",
       "plass": 1,
       "poeng_totalt": 163,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 14
     },
     {
       "navn": "Alexander",
       "plass": 2,
       "poeng_totalt": 154,
-      "poeng_i_dag": 9
+      "poeng_i_dag": 6
     },
     {
       "navn": "Olympus fc",
@@ -463,25 +321,25 @@
       "navn": "Kjetil bjerke",
       "plass": 4,
       "poeng_totalt": 139,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 10
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 5,
       "poeng_totalt": 139,
-      "poeng_i_dag": 3
+      "poeng_i_dag": 6
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
       "poeng_totalt": 132,
-      "poeng_i_dag": 3
+      "poeng_i_dag": 6
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 7,
       "poeng_totalt": 127,
-      "poeng_i_dag": 9
+      "poeng_i_dag": 6
     },
     {
       "navn": "Diyan K.",
@@ -493,19 +351,19 @@
       "navn": "Thomas Lindland",
       "plass": 9,
       "poeng_totalt": 123,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 6
     },
     {
       "navn": "Sondre Garstad",
       "plass": 10,
       "poeng_totalt": 121,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 6
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 11,
       "poeng_totalt": 117,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 3
     },
     {
       "navn": "Alex Myrvokd",
@@ -517,7 +375,7 @@
       "navn": "Ken Arne Hansen",
       "plass": 13,
       "poeng_totalt": 115,
-      "poeng_i_dag": 0
+      "poeng_i_dag": 3
     },
     {
       "navn": "Geir Magne Evensen",
@@ -541,13 +399,13 @@
       "navn": "Ulf-Morten Johansen",
       "plass": 17,
       "poeng_totalt": 104,
-      "poeng_i_dag": 3
+      "poeng_i_dag": 6
     },
     {
       "navn": "Marita Hauge Gjerde",
       "plass": 18,
       "poeng_totalt": 101,
-      "poeng_i_dag": 0
+      "poeng_i_dag": 3
     },
     {
       "navn": "Magnus Børrud",
@@ -559,7 +417,7 @@
       "navn": "sergio gomes",
       "plass": 20,
       "poeng_totalt": 97,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 3
     },
     {
       "navn": "Atle Johansen",
@@ -577,7 +435,7 @@
       "navn": "Anders Sundero",
       "plass": 23,
       "poeng_totalt": 92,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 3
     },
     {
       "navn": "Sjur Revheim",
