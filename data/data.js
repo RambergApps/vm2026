@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T02:31:21Z
+// Sist oppdatert: 2026-07-02T02:45:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T02:31:21Z",
+  "sist_oppdatert": "2026-07-02T02:45:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2078,7 +2078,7 @@ const VM_DATA = {
       "spiller": "Ismaila Sarr",
       "maal": 4,
       "assists": 1,
-      "minutter": 418
+      "minutter": 419
     },
     {
       "rank": 8,
@@ -2110,24 +2110,24 @@ const VM_DATA = {
     },
     {
       "rank": 12,
-      "spiller": "Folarin Balogun",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 243
-    },
-    {
-      "rank": 13,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 14,
+      "rank": 13,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 260
+    },
+    {
+      "rank": 14,
+      "spiller": "Folarin Balogun",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 289
     },
     {
       "rank": 15,
@@ -2190,7 +2190,7 @@ const VM_DATA = {
       "spiller": "Romelu Lukaku",
       "maal": 2,
       "assists": 1,
-      "minutter": 214
+      "minutter": 215
     },
     {
       "rank": 24,
@@ -2218,7 +2218,7 @@ const VM_DATA = {
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
-      "minutter": 256
+      "minutter": 257
     },
     {
       "rank": 28,
@@ -2260,7 +2260,7 @@ const VM_DATA = {
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
-      "minutter": 42
+      "minutter": 88
     },
     {
       "rank": 34,
@@ -2274,7 +2274,7 @@ const VM_DATA = {
       "spiller": "Habib Diarra",
       "maal": 2,
       "assists": 0,
-      "minutter": 167
+      "minutter": 168
     },
     {
       "rank": 36,
@@ -2337,7 +2337,7 @@ const VM_DATA = {
       "spiller": "Youri Tielemans",
       "maal": 2,
       "assists": 0,
-      "minutter": 437
+      "minutter": 438
     },
     {
       "rank": 45,
@@ -2351,7 +2351,7 @@ const VM_DATA = {
       "spiller": "Iliman Ndiaye",
       "maal": 1,
       "assists": 2,
-      "minutter": 133
+      "minutter": 134
     },
     {
       "rank": 47,
@@ -2392,7 +2392,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T02:31:21Z"
+    "sist_beregnet": "2026-07-02T02:45:39Z"
   },
   "stilling": [
     {
