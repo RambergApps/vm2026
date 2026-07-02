@@ -1,23 +1,4 @@
 {
-  "sist_sjekket": "2026-07-02T05:01:21Z",
-  "kamper": [
-    {
-      "type": "mangler_regulartime",
-      "kamp_id": "Belgium_Senegal_2026_07_01",
-      "hjemmelag": "Belgium",
-      "bortelag": "Senegal",
-      "dato": "2026-07-01",
-      "runde": "r32",
-      "gruppe": "",
-      "status": "mangler_regulartime",
-      "status_api": "FINISHED",
-      "duration": "EXTRA_TIME",
-      "fulltime_hjemme": 3,
-      "fulltime_borte": 2,
-      "straffer_hjemme": null,
-      "straffer_borte": null,
-      "avanserer": "Belgium",
-      "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler."
-    }
-  ]
+  "sist_sjekket": "2026-07-02T05:15:37Z",
+  "kamper": []
 }
