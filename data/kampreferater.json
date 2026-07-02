@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-02T05:48:56Z",
+  "sist_oppdatert": "2026-07-02T06:04:26Z",
   "antall_kamper": 82,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16562,7 +16562,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 86,
+        "antall_sok": 87,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -16572,7 +16572,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 86,
+        "retry_antall": 87,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -16691,7 +16691,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T05:48:04Z"
+      "oppdatert": "2026-07-02T06:03:25Z"
     },
     "Mexico_Ecuador_2026_07_01": {
       "kamp_id": "Mexico_Ecuador_2026_07_01",
@@ -16712,7 +16712,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 33,
+        "antall_sok": 34,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -16722,7 +16722,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 33,
+        "retry_antall": 34,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -16842,7 +16842,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T05:46:18Z"
+      "oppdatert": "2026-07-02T06:01:44Z"
     },
     "England_DR_Congo_2026_07_01": {
       "kamp_id": "England_DR_Congo_2026_07_01",
@@ -16863,7 +16863,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 33,
+        "antall_sok": 34,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -16873,7 +16873,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 33,
+        "retry_antall": 34,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -16994,7 +16994,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T05:46:49Z"
+      "oppdatert": "2026-07-02T06:02:10Z"
     },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
@@ -17015,7 +17015,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 28,
+        "antall_sok": 29,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|3-2",
         "serper_score": -100,
@@ -17025,7 +17025,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 28,
+        "retry_antall": 29,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
@@ -17145,7 +17145,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T05:47:16Z"
+      "oppdatert": "2026-07-02T06:02:34Z"
     },
     "USA_Bosnia___Herzegovina_2026_07_02": {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -17166,7 +17166,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 4,
+        "antall_sok": 5,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17176,7 +17176,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 4,
+        "retry_antall": 5,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17296,7 +17296,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T05:48:56Z"
+      "oppdatert": "2026-07-02T06:04:25Z"
     }
   }
 }
