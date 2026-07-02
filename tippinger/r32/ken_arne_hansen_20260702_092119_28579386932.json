@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "deltaker_id": "ken_arne_hansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-02T09:21:07.231Z",
+    "navn": "Ken Arne Hansen",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-02T09:21:19Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Croatia",
+      "hjemme": 3,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Croatia_2026_07_02",
+      "match_no": 83
+    },
+    {
+      "borte": 0,
+      "bortelag": "Austria",
+      "hjemme": 2,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Austria_2026_07_02",
+      "match_no": 84
+    },
+    {
+      "borte": 1,
+      "bortelag": "Algeria",
+      "hjemme": 1,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Algeria_2026_07_03",
+      "match_no": 85
+    },
+    {
+      "borte": 1,
+      "bortelag": "Cape Verde",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+      "match_no": 86
+    },
+    {
+      "borte": 0,
+      "bortelag": "Ghana",
+      "hjemme": 0,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "match_no": 87
+    },
+    {
+      "borte": 1,
+      "bortelag": "Egypt",
+      "hjemme": 1,
+      "hjemmelag": "Australia",
+      "kamp_id": "Australia_Egypt_2026_07_03",
+      "match_no": 88
+    }
+  ]
+}
