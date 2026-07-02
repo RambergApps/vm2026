@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T22:45:41Z
+// Sist oppdatert: 2026-07-02T23:01:10Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T22:45:41Z",
+  "sist_oppdatert": "2026-07-02T23:01:10Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1593,13 +1593,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Portugal_Croatia_2026_07_02",
       "hjemmelag": "Portugal",
       "bortelag": "Croatia",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r32",
       "dato_openfootball": "2026-07-02",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-02",
       "fd_match_id": 537419,
       "fd_utcDate": "2026-07-02T23:00:00Z",
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T22:45:41Z"
+    "sist_beregnet": "2026-07-02T23:01:10Z"
   },
   "stilling": [
     {
@@ -3611,6 +3611,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -4910,6 +4923,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -6203,6 +6229,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -7502,6 +7541,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Spain_Austria_2026_07_02",
           "hjemmelag": "Spain",
           "bortelag": "Austria",
@@ -8724,6 +8776,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -9963,6 +10028,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -11262,6 +11340,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -12555,6 +12646,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -13854,6 +13958,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Spain_Austria_2026_07_02",
           "hjemmelag": "Spain",
           "bortelag": "Austria",
@@ -15090,6 +15207,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -16358,6 +16488,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -17643,6 +17786,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Spain_Austria_2026_07_02",
           "hjemmelag": "Spain",
           "bortelag": "Austria",
@@ -18768,6 +18924,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
         },
         {
           "kamp_id": "Spain_Austria_2026_07_02",
@@ -19992,6 +20161,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -23489,6 +23671,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "South_Africa_Canada_2026_06_28",
           "hjemmelag": "South Africa",
           "bortelag": "Canada",
@@ -24782,6 +24977,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -27177,6 +27385,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
@@ -30628,6 +30849,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Portugal_Croatia_2026_07_02",
+          "hjemmelag": "Portugal",
+          "bortelag": "Croatia",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r32"
         },
         {
