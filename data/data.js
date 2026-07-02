@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T20:31:10Z
+// Sist oppdatert: 2026-07-02T20:45:41Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T20:31:10Z",
+  "sist_oppdatert": "2026-07-02T20:45:41Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1612,7 +1612,7 @@ const VM_DATA = {
       "canonical_kamp_id": "Spain_Austria_2026_07_02",
       "hjemmelag": "Spain",
       "bortelag": "Austria",
-      "hjemme": 1,
+      "hjemme": 2,
       "borte": 0,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2104,119 +2104,119 @@ const VM_DATA = {
     },
     {
       "rank": 10,
+      "spiller": "Mikel Oyarzabal",
+      "maal": 3,
+      "assists": 1,
+      "minutter": 300
+    },
+    {
+      "rank": 11,
       "spiller": "Julian Quinones",
       "maal": 3,
       "assists": 1,
       "minutter": 354
     },
     {
-      "rank": 11,
+      "rank": 12,
       "spiller": "Cody Gakpo",
       "maal": 3,
       "assists": 1,
       "minutter": 394
     },
     {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Folarin Balogun",
       "maal": 3,
       "assists": 0,
       "minutter": 250
     },
     {
-      "rank": 14,
+      "rank": 15,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 260
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 370
     },
     {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 390
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 213
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Romelu Lukaku",
       "maal": 2,
       "assists": 1,
       "minutter": 215
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 233
     },
     {
-      "rank": 25,
-      "spiller": "Nicolas Pepe",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 255
-    },
-    {
       "rank": 26,
-      "spiller": "Mikel Oyarzabal",
+      "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
@@ -2275,7 +2275,7 @@ const VM_DATA = {
       "spiller": "Marko Arnautovic",
       "maal": 2,
       "assists": 0,
-      "minutter": 137
+      "minutter": 141
     },
     {
       "rank": 35,
@@ -2400,7 +2400,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T20:31:10Z"
+    "sist_beregnet": "2026-07-02T20:45:41Z"
   },
   "stilling": [
     {
@@ -3631,7 +3631,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -4926,7 +4926,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -6221,7 +6221,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -7502,7 +7502,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -8726,7 +8726,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -9978,7 +9978,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -11273,7 +11273,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 4,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -12568,7 +12568,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -13849,7 +13849,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -15101,7 +15101,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -16368,7 +16368,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -17635,7 +17635,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -18761,7 +18761,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -21098,7 +21098,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -23492,7 +23492,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -25886,7 +25886,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -27181,7 +27181,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 0,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -31787,7 +31787,7 @@ const VM_DATA = {
           "bortelag": "Austria",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
