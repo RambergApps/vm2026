@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-01",
   "dato_norsk": "Onsdag 1. juli 2026",
-  "generert": "2026-07-02T06:18:42Z",
+  "generert": "2026-07-02T06:34:15Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 35,
+        "antall_sok": 36,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 35,
+        "retry_antall": 36,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -164,7 +164,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 35,
+        "antall_sok": 36,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -174,7 +174,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 35,
+        "retry_antall": 36,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -310,7 +310,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 1,
+        "antall_sok": 2,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|2-2",
         "serper_score": -100,
@@ -320,7 +320,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
