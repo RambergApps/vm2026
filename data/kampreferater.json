@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-02T02:04:19Z",
+  "sist_oppdatert": "2026-07-02T02:18:30Z",
   "antall_kamper": 82,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16410,7 +16410,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 76,
+        "antall_sok": 77,
         "fallback": true,
         "cache_key": "Ivory_Coast_Norway_2026_06_30|1-2",
         "serper_score": -100,
@@ -16420,7 +16420,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 76,
+        "retry_antall": 77,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cote-divoire-norway-match-report-highlights",
         "mangler": [
@@ -16453,6 +16453,12 @@
         ],
         "riktig": [
           {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 3
+          },
+          {
             "navn": "Olympus fc",
             "tippa_h": 1,
             "tippa_b": 3,
@@ -16460,12 +16466,6 @@
           },
           {
             "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 3
-          },
-          {
-            "navn": "Kjetil bjerke",
             "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 3
@@ -16507,14 +16507,14 @@
             "poeng": 3
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 0,
             "tippa_b": 3,
             "poeng": 3
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 0,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
             "tippa_b": 3,
             "poeng": 3
           },
@@ -16541,7 +16541,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T02:03:31Z"
+      "oppdatert": "2026-07-02T02:17:45Z"
     },
     "France_Sweden_2026_06_30": {
       "kamp_id": "France_Sweden_2026_06_30",
@@ -16562,7 +16562,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 71,
+        "antall_sok": 72,
         "fallback": true,
         "cache_key": "France_Sweden_2026_06_30|3-0",
         "serper_score": -100,
@@ -16572,7 +16572,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 71,
+        "retry_antall": 72,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-match-report-highlights",
         "mangler": [
@@ -16664,14 +16664,14 @@
             "poeng": 3
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 5,
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 4,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 4,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 5,
             "tippa_b": 1,
             "poeng": 3
           },
@@ -16691,7 +16691,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T02:04:19Z"
+      "oppdatert": "2026-07-02T02:18:30Z"
     },
     "Mexico_Ecuador_2026_07_01": {
       "kamp_id": "Mexico_Ecuador_2026_07_01",
@@ -16712,7 +16712,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 18,
+        "antall_sok": 19,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -16722,7 +16722,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 18,
+        "retry_antall": 19,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -16822,15 +16822,15 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 2,
             "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -16842,7 +16842,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T02:01:46Z"
+      "oppdatert": "2026-07-02T02:16:01Z"
     },
     "England_DR_Congo_2026_07_01": {
       "kamp_id": "England_DR_Congo_2026_07_01",
@@ -16863,7 +16863,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 18,
+        "antall_sok": 19,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -16873,7 +16873,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 18,
+        "retry_antall": 19,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -16906,6 +16906,12 @@
             "poeng": 3
           },
           {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Olympus fc",
             "tippa_h": 3,
             "tippa_b": 0,
@@ -16914,12 +16920,6 @@
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 3
           },
@@ -16994,7 +16994,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T02:02:07Z"
+      "oppdatert": "2026-07-02T02:16:27Z"
     },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
@@ -17015,7 +17015,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 13,
+        "antall_sok": 14,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|3-2",
         "serper_score": -100,
@@ -17025,7 +17025,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 13,
+        "retry_antall": 14,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
@@ -17051,13 +17051,13 @@
         ],
         "riktig": [
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Kjetil bjerke",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
@@ -17125,15 +17125,15 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 0,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 2,
             "poeng": 0
           },
           {
@@ -17145,7 +17145,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T02:02:36Z"
+      "oppdatert": "2026-07-02T02:16:53Z"
     },
     "USA_Bosnia___Herzegovina_2026_07_02": {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -17158,74 +17158,113 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "USA lead Bosnia & Herzegovina 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "USA beat Bosnia & Herzegovina 2-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 0,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "",
+        "antall_sok": 0,
+        "fallback": true,
+        "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
+        "serper_score": -100,
+        "fulltekst_status": "ikke_sokt",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 0,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
+        "mangler": [
+          "fulltekst"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
+            "poeng": 7
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 7
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
           },
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 5,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Thomas Lindland",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Diyan K.",
             "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -17242,20 +17281,8 @@
             "poeng": 0
           },
           {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 0
           },
@@ -17264,17 +17291,11 @@
             "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-02T02:01:14Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-07-02T02:18:30Z"
     }
   }
 }

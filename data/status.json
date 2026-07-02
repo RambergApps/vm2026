@@ -143,6 +143,7 @@
         "utcDate": "2026-07-02T00:00:00Z",
         "fd_match_id": 537421,
         "fifa_event_id": "400021524",
+        "avanserer": "USA",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -326,8 +327,8 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W81_Belgium_2026_07_06",
-        "hjemme": "W81",
+        "id": "USA_Belgium_2026_07_06",
+        "hjemme": "USA",
         "borte": "Belgium",
         "dato": "2026-07-06",
         "info": "Autofyll fra avansement",
@@ -335,8 +336,8 @@
         "slot_hjemme": "W81",
         "slot_borte": "W82",
         "utcDate": "2026-07-07T00:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "W86_W88_2026_07_07",
@@ -365,7 +366,7 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 4,
+    "antall_tippebare": 5,
     "neste_frist": "2026-07-04T17:00:00Z"
   },
   "qf": {

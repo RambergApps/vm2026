@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-01",
   "dato_norsk": "Onsdag 1. juli 2026",
-  "generert": "2026-07-02T02:04:19Z",
+  "generert": "2026-07-02T02:18:30Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 18,
+        "antall_sok": 19,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 18,
+        "retry_antall": 19,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -129,15 +129,15 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 2,
             "tippa_b": 3,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -164,7 +164,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 18,
+        "antall_sok": 19,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -174,7 +174,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 18,
+        "retry_antall": 19,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -207,6 +207,12 @@
             "poeng": 3
           },
           {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Olympus fc",
             "tippa_h": 3,
             "tippa_b": 0,
@@ -215,12 +221,6 @@
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 3
           },
@@ -310,7 +310,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 13,
+        "antall_sok": 14,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|3-2",
         "serper_score": -100,
@@ -320,7 +320,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 13,
+        "retry_antall": 14,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
@@ -346,13 +346,13 @@
         ],
         "riktig": [
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Kjetil bjerke",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
@@ -420,15 +420,15 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 0,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 2,
             "poeng": 0
           },
           {
@@ -445,61 +445,61 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 146,
+      "poeng_totalt": 153,
       "poeng_i_dag": 3
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 145,
+      "poeng_totalt": 148,
       "poeng_i_dag": 6
     },
     {
-      "navn": "Olympus fc",
+      "navn": "Kjetil bjerke",
       "plass": 3,
+      "poeng_totalt": 139,
+      "poeng_i_dag": 9
+    },
+    {
+      "navn": "Olympus fc",
+      "plass": 4,
       "poeng_totalt": 139,
       "poeng_i_dag": 3
     },
     {
       "navn": "Vegard Hammervold Midtbø",
-      "plass": 4,
-      "poeng_totalt": 136,
-      "poeng_i_dag": 6
-    },
-    {
-      "navn": "Kjetil bjerke",
       "plass": 5,
-      "poeng_totalt": 132,
-      "poeng_i_dag": 9
+      "poeng_totalt": 139,
+      "poeng_i_dag": 6
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 126,
+      "poeng_totalt": 129,
       "poeng_i_dag": 3
     },
     {
       "navn": "Sondre Garstad",
       "plass": 7,
-      "poeng_totalt": 122,
+      "poeng_totalt": 125,
       "poeng_i_dag": 17
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 8,
-      "poeng_totalt": 118,
+      "poeng_totalt": 121,
       "poeng_i_dag": 6
     },
     {
       "navn": "Thomas Lindland",
       "plass": 9,
-      "poeng_totalt": 117,
+      "poeng_totalt": 120,
       "poeng_i_dag": 10
     },
     {
       "navn": "Diyan K.",
       "plass": 10,
-      "poeng_totalt": 114,
+      "poeng_totalt": 117,
       "poeng_i_dag": 3
     },
     {
@@ -529,7 +529,7 @@
     {
       "navn": "Geir Magne Evensen",
       "plass": 15,
-      "poeng_totalt": 106,
+      "poeng_totalt": 109,
       "poeng_i_dag": 6
     },
     {
@@ -539,22 +539,22 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Magnus Børrud",
+      "navn": "Ulf-Morten Johansen",
       "plass": 17,
-      "poeng_totalt": 98,
-      "poeng_i_dag": 0
+      "poeng_totalt": 101,
+      "poeng_i_dag": 3
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Magnus Børrud",
       "plass": 18,
       "poeng_totalt": 98,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Ulf-Morten Johansen",
+      "navn": "Marita Hauge Gjerde",
       "plass": 19,
       "poeng_totalt": 98,
-      "poeng_i_dag": 3
+      "poeng_i_dag": 0
     },
     {
       "navn": "Anders Sundero",
@@ -575,16 +575,16 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Sjur Revheim",
+      "navn": "sergio gomes",
       "plass": 23,
-      "poeng_totalt": 92,
-      "poeng_i_dag": 0
+      "poeng_totalt": 94,
+      "poeng_i_dag": 3
     },
     {
-      "navn": "sergio gomes",
+      "navn": "Sjur Revheim",
       "plass": 24,
-      "poeng_totalt": 91,
-      "poeng_i_dag": 3
+      "poeng_totalt": 92,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Andreas Handelsby",

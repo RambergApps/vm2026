@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-02T02:01:13Z",
+  "tidspunkt": "2026-07-02T02:15:40Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1141,8 +1141,8 @@
       "fd_bortelag": "Bosnia-Herzegovina",
       "hjemmelag_normalisert": "USA",
       "bortelag_normalisert": "Bosnia & Herzegovina",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 2,
       "borte": 0,
       "fd_dato": "2026-07-02",
@@ -1156,9 +1156,9 @@
       "hjemmelag_normalisert": "Belgium",
       "bortelag_normalisert": "Senegal",
       "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 3,
-      "borte": 2,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
       "fd_dato": "2026-07-01",
       "fd_utcDate": "2026-07-01T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Belgium_Senegal_2026_07_01"
