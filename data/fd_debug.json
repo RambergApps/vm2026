@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-02T06:01:12Z",
+  "tidspunkt": "2026-07-02T06:15:38Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -715,6 +715,34 @@
       "fd_utcDate": "2026-07-05T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Brazil_Norway_2026_07_05"
     },
+    "537378": {
+      "fd_match_id": 537378,
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "England",
+      "hjemmelag_normalisert": "Mexico",
+      "bortelag_normalisert": "England",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-06",
+      "fd_utcDate": "2026-07-06T00:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Mexico_England_2026_07_06"
+    },
+    "537380": {
+      "fd_match_id": 537380,
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Belgium",
+      "hjemmelag_normalisert": "USA",
+      "bortelag_normalisert": "Belgium",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T00:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "USA_Belgium_2026_07_07"
+    },
     "537391": {
       "fd_match_id": 537391,
       "fd_hjemmelag": "France",
@@ -1157,7 +1185,7 @@
       "bortelag_normalisert": "Senegal",
       "status": "FINISHED",
       "ferdig": true,
-      "hjemme": 3,
+      "hjemme": 2,
       "borte": 2,
       "fd_dato": "2026-07-01",
       "fd_utcDate": "2026-07-01T20:00:00Z",
