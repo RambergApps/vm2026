@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-02T20:45:40Z",
+  "tidspunkt": "2026-07-02T21:01:11Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1032,14 +1032,14 @@
       "fifa_event_id": "400021519",
       "hjemmelag": "Spain",
       "bortelag": "Austria",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
-      "hjemme": 2,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
+      "hjemme": 3,
       "borte": 0,
       "fifa_dato": "2026-07-02",
       "fifa_utcDate": "2026-07-02T19:00:00Z",
-      "fifa_match_time": "83'"
+      "fifa_match_time": "97'"
     },
     "400021520": {
       "fifa_event_id": "400021520",
