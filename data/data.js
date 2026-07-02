@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T00:15:43Z
+// Sist oppdatert: 2026-07-02T00:31:04Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T00:15:43Z",
+  "sist_oppdatert": "2026-07-02T00:31:04Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2270,17 +2270,17 @@ const VM_DATA = {
     },
     {
       "rank": 35,
-      "spiller": "Folarin Balogun",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 179
-    },
-    {
-      "rank": 36,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 187
+    },
+    {
+      "rank": 36,
+      "spiller": "Folarin Balogun",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 193
     },
     {
       "rank": 37,
@@ -2391,7 +2391,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T00:15:43Z"
+    "sist_beregnet": "2026-07-02T00:31:04Z"
   },
   "stilling": [
     {
