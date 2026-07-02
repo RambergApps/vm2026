@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T23:31:07Z
+// Sist oppdatert: 2026-07-02T23:45:40Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T23:31:07Z",
+  "sist_oppdatert": "2026-07-02T23:45:40Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2326,7 +2326,7 @@ const VM_DATA = {
       "spiller": "Cristiano Ronaldo",
       "maal": 2,
       "assists": 0,
-      "minutter": 300
+      "minutter": 334
     },
     {
       "rank": 42,
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T23:31:07Z"
+    "sist_beregnet": "2026-07-02T23:45:40Z"
   },
   "stilling": [
     {
