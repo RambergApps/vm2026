@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-01",
   "dato_norsk": "Onsdag 1. juli 2026",
-  "generert": "2026-07-02T21:03:26Z",
+  "generert": "2026-07-02T21:18:15Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 97,
+        "antall_sok": 98,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 97,
+        "retry_antall": 98,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -164,7 +164,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 97,
+        "antall_sok": 98,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -174,7 +174,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 97,
+        "retry_antall": 98,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -310,7 +310,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 63,
+        "antall_sok": 64,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|2-2",
         "serper_score": -100,
@@ -320,7 +320,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 63,
+        "retry_antall": 64,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
@@ -444,92 +444,92 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 156,
+      "poeng_totalt": 163,
       "poeng_i_dag": 6
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 151,
+      "poeng_totalt": 154,
       "poeng_i_dag": 9
     },
     {
       "navn": "Olympus fc",
       "plass": 3,
-      "poeng_totalt": 139,
+      "poeng_totalt": 142,
       "poeng_i_dag": 3
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 136,
+      "poeng_totalt": 139,
       "poeng_i_dag": 6
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 5,
-      "poeng_totalt": 136,
+      "poeng_totalt": 139,
       "poeng_i_dag": 3
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 129,
+      "poeng_totalt": 132,
       "poeng_i_dag": 3
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 7,
-      "poeng_totalt": 124,
+      "poeng_totalt": 127,
       "poeng_i_dag": 9
     },
     {
       "navn": "Diyan K.",
       "plass": 8,
-      "poeng_totalt": 120,
+      "poeng_totalt": 123,
       "poeng_i_dag": 6
     },
     {
       "navn": "Thomas Lindland",
       "plass": 9,
-      "poeng_totalt": 120,
+      "poeng_totalt": 123,
       "poeng_i_dag": 10
     },
     {
       "navn": "Sondre Garstad",
       "plass": 10,
-      "poeng_totalt": 118,
+      "poeng_totalt": 121,
       "poeng_i_dag": 10
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 11,
-      "poeng_totalt": 114,
+      "poeng_totalt": 117,
       "poeng_i_dag": 6
     },
     {
       "navn": "Alex Myrvokd",
       "plass": 12,
-      "poeng_totalt": 113,
+      "poeng_totalt": 116,
       "poeng_i_dag": 3
     },
     {
       "navn": "Ken Arne Hansen",
       "plass": 13,
-      "poeng_totalt": 112,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Anders Rikheim",
-      "plass": 14,
-      "poeng_totalt": 110,
+      "poeng_totalt": 115,
       "poeng_i_dag": 0
     },
     {
       "navn": "Geir Magne Evensen",
-      "plass": 15,
-      "poeng_totalt": 109,
+      "plass": 14,
+      "poeng_totalt": 112,
       "poeng_i_dag": 6
+    },
+    {
+      "navn": "Anders Rikheim",
+      "plass": 15,
+      "poeng_totalt": 110,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Jorgen Lindland",
@@ -540,17 +540,17 @@
     {
       "navn": "Ulf-Morten Johansen",
       "plass": 17,
-      "poeng_totalt": 101,
+      "poeng_totalt": 104,
       "poeng_i_dag": 3
     },
     {
-      "navn": "Magnus Børrud",
+      "navn": "Marita Hauge Gjerde",
       "plass": 18,
-      "poeng_totalt": 98,
+      "poeng_totalt": 101,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Magnus Børrud",
       "plass": 19,
       "poeng_totalt": 98,
       "poeng_i_dag": 0
@@ -574,16 +574,16 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Sjur Revheim",
+      "navn": "Anders Sundero",
       "plass": 23,
       "poeng_totalt": 92,
-      "poeng_i_dag": 0
+      "poeng_i_dag": 6
     },
     {
-      "navn": "Anders Sundero",
+      "navn": "Sjur Revheim",
       "plass": 24,
-      "poeng_totalt": 89,
-      "poeng_i_dag": 6
+      "poeng_totalt": 92,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Andreas Handelsby",

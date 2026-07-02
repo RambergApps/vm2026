@@ -190,6 +190,7 @@
         "utcDate": "2026-07-02T19:00:00Z",
         "fd_match_id": 537420,
         "fifa_event_id": "400021519",
+        "avanserer": "Spain",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -314,11 +315,11 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "W83_W84_2026_07_06",
+        "id": "W83_Spain_2026_07_06",
         "hjemme": "W83",
-        "borte": "W84",
+        "borte": "Spain",
         "dato": "2026-07-06",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 93,
         "slot_hjemme": "W83",
         "slot_borte": "W84",

@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-02T21:03:26Z",
+  "sist_oppdatert": "2026-07-02T21:18:15Z",
   "antall_kamper": 83,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16712,7 +16712,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 97,
+        "antall_sok": 98,
         "fallback": true,
         "cache_key": "Mexico_Ecuador_2026_07_01|2-0",
         "serper_score": -100,
@@ -16722,7 +16722,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 97,
+        "retry_antall": 98,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-match-report-highlights",
         "mangler": [
@@ -16842,7 +16842,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T21:01:47Z"
+      "oppdatert": "2026-07-02T21:16:20Z"
     },
     "England_DR_Congo_2026_07_01": {
       "kamp_id": "England_DR_Congo_2026_07_01",
@@ -16863,7 +16863,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 97,
+        "antall_sok": 98,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -16873,7 +16873,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 97,
+        "retry_antall": 98,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -16994,7 +16994,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T21:02:09Z"
+      "oppdatert": "2026-07-02T21:16:48Z"
     },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
@@ -17015,7 +17015,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 63,
+        "antall_sok": 64,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|2-2",
         "serper_score": -100,
@@ -17025,7 +17025,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 63,
+        "retry_antall": 64,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
@@ -17144,7 +17144,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T21:02:34Z"
+      "oppdatert": "2026-07-02T21:17:16Z"
     },
     "USA_Bosnia___Herzegovina_2026_07_02": {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -17165,7 +17165,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 68,
+        "antall_sok": 69,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17175,7 +17175,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 68,
+        "retry_antall": 69,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17295,7 +17295,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-02T21:03:26Z"
+      "oppdatert": "2026-07-02T21:18:10Z"
     },
     "Spain_Austria_2026_07_02": {
       "kamp_id": "Spain_Austria_2026_07_02",
@@ -17308,129 +17308,148 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Spain lead Austria 3-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "Spain beat Austria 3-0.\nGoals: Oyarzabal (36, 89) and Porro (66).\n\nSpain’s success was their first in the knockout rounds of the World Cup since their triumph in South Africa in 2010 - and their reward is a Round of 16 tie in Dallas on 6 July against the winners of the Portugal-Croatia match.\nMarc Cucurella thought he put Spain in front from a corner kick but the goal was disallowed for a foul on goalkeeper Alexander Schlager.\nOyarzabal broke the deadlock after 36 minutes, when Cucurella supplied the low ball from the left and the Basque frontman steered a first-time shot into the corner for his third goal of these finals.\nKalajdzic had Austria's best chance a minute after his introduction but could not keep his header down from Marcel Sabitzer’s cross.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Spain_Austria_2026_07_02|3-0",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-austria-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
-          },
+            "poeng": 7
+          }
+        ],
+        "riktig": [
           {
             "navn": "Alexander",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 4,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Thomas Lindland",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sondre Garstad",
             "tippa_h": 3,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Sebastian Luranc",
             "tippa_h": 3,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Alex Myrvokd",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Ken Arne Hansen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Geir Magne Evensen",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 3,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
+            "poeng": 3
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 3
+          }
+        ],
+        "bom": [
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-02T21:01:18Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-02T21:18:15Z"
     }
   }
 }
