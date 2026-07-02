@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-01T12:04:20Z",
+  "sist_oppdatert": "2026-07-02T07:31:04Z",
   "kamper": {
     "Algeria_Austria_2026_06_27": {
       "of_kamp_id": "Algeria_Austria_2026_06_27",
@@ -883,6 +883,24 @@
       "confidence": "high",
       "sist_matchet": "2026-06-28T08:01:05Z"
     },
+    "Mexico_England_2026_07_05": {
+      "of_kamp_id": "Mexico_England_2026_07_05",
+      "of_dato": "2026-07-05",
+      "of_hjemmelag": "Mexico",
+      "of_bortelag": "England",
+      "runde": "r16",
+      "fd_match_id": 537378,
+      "fd_dato": "2026-07-06",
+      "fd_utcDate": "2026-07-06T00:00:00Z",
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "England",
+      "fd_hjemmelag_normalisert": "Mexico",
+      "fd_bortelag_normalisert": "England",
+      "dato_avvik_dager": 1,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-02T07:31:04Z"
+    },
     "Mexico_South_Africa_2026_06_11": {
       "of_kamp_id": "Mexico_South_Africa_2026_06_11",
       "of_dato": "2026-06-11",
@@ -1548,6 +1566,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-14T13:10:37Z"
+    },
+    "USA_Belgium_2026_07_06": {
+      "of_kamp_id": "USA_Belgium_2026_07_06",
+      "of_dato": "2026-07-06",
+      "of_hjemmelag": "USA",
+      "of_bortelag": "Belgium",
+      "runde": "r16",
+      "fd_match_id": 537380,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T00:00:00Z",
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Belgium",
+      "fd_hjemmelag_normalisert": "USA",
+      "fd_bortelag_normalisert": "Belgium",
+      "dato_avvik_dager": 1,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-02T07:31:04Z"
     },
     "USA_Bosnia___Herzegovina_2026_07_01": {
       "of_kamp_id": "USA_Bosnia___Herzegovina_2026_07_01",

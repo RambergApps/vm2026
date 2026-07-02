@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T07:15:43Z
+// Sist oppdatert: 2026-07-02T07:31:05Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T07:15:43Z",
+  "sist_oppdatert": "2026-07-02T07:31:05Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1770,24 +1770,29 @@ const VM_DATA = {
       "fd_hjemmelag": "Brazil",
       "fd_bortelag": "Norway"
     },
-    "Mexico_W80_2026_07_05": {
-      "kamp_id": "Mexico_W80_2026_07_05",
-      "canonical_kamp_id": "Mexico_W80_2026_07_05",
+    "Mexico_England_2026_07_05": {
+      "kamp_id": "Mexico_England_2026_07_05",
+      "canonical_kamp_id": "Mexico_England_2026_07_05",
       "hjemmelag": "Mexico",
-      "bortelag": "W80",
+      "bortelag": "England",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-06",
+      "fd_match_id": 537378,
+      "fd_utcDate": "2026-07-06T00:00:00Z",
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "England"
     },
-    "W81_W82_2026_07_06": {
-      "kamp_id": "W81_W82_2026_07_06",
-      "canonical_kamp_id": "W81_W82_2026_07_06",
-      "hjemmelag": "W81",
-      "bortelag": "W82",
+    "USA_Belgium_2026_07_06": {
+      "kamp_id": "USA_Belgium_2026_07_06",
+      "canonical_kamp_id": "USA_Belgium_2026_07_06",
+      "hjemmelag": "USA",
+      "bortelag": "Belgium",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1795,7 +1800,11 @@ const VM_DATA = {
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
       "kilde_score": "openfootball",
-      "match_no": 94
+      "dato_fd_org": "2026-07-07",
+      "fd_match_id": 537380,
+      "fd_utcDate": "2026-07-07T00:00:00Z",
+      "fd_hjemmelag": "United States",
+      "fd_bortelag": "Belgium"
     },
     "W83_W84_2026_07_06": {
       "kamp_id": "W83_W84_2026_07_06",
@@ -2391,7 +2400,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T07:15:43Z"
+    "sist_beregnet": "2026-07-02T07:31:05Z"
   },
   "stilling": [
     {
