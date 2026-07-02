@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-02T21:31:03Z
+// Sist oppdatert: 2026-07-02T21:45:37Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-02T21:31:03Z",
+  "sist_oppdatert": "2026-07-02T21:45:37Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2078,38 +2078,38 @@ const VM_DATA = {
     },
     {
       "rank": 6,
+      "spiller": "Mikel Oyarzabal",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 332
+    },
+    {
+      "rank": 7,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 398
     },
     {
-      "rank": 7,
+      "rank": 8,
       "spiller": "Ismaila Sarr",
       "maal": 4,
       "assists": 1,
       "minutter": 419
     },
     {
-      "rank": 8,
+      "rank": 9,
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
       "minutter": 174
     },
     {
-      "rank": 9,
+      "rank": 10,
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 1,
       "minutter": 146
-    },
-    {
-      "rank": 10,
-      "spiller": "Mikel Oyarzabal",
-      "maal": 3,
-      "assists": 1,
-      "minutter": 300
     },
     {
       "rank": 11,
@@ -2274,17 +2274,17 @@ const VM_DATA = {
     },
     {
       "rank": 34,
-      "spiller": "Marko Arnautovic",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 141
-    },
-    {
-      "rank": 35,
       "spiller": "Habib Diarra",
       "maal": 2,
       "assists": 0,
       "minutter": 168
+    },
+    {
+      "rank": 35,
+      "spiller": "Marko Arnautovic",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 173
     },
     {
       "rank": 36,
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-02T21:31:03Z"
+    "sist_beregnet": "2026-07-02T21:45:37Z"
   },
   "stilling": [
     {
