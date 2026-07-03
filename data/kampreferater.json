@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-03T19:16:38Z",
+  "sist_oppdatert": "2026-07-03T19:32:11Z",
   "antall_kamper": 86,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17165,7 +17165,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 164,
+        "antall_sok": 165,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17175,7 +17175,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 164,
+        "retry_antall": 165,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17295,7 +17295,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T19:16:38Z"
+      "oppdatert": "2026-07-03T19:32:10Z"
     },
     "Spain_Austria_2026_07_02": {
       "kamp_id": "Spain_Austria_2026_07_02",
@@ -17766,13 +17766,13 @@
       "fd_utcDate": "2026-07-03T18:00:00Z",
       "hjemmelag": "Australia",
       "bortelag": "Egypt",
-      "hjemme_score": 0,
+      "hjemme_score": 1,
       "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Egypt lead Australia 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Australia and Egypt are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -17892,7 +17892,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-03T19:15:42Z"
+      "oppdatert": "2026-07-03T19:31:09Z"
     }
   }
 }
