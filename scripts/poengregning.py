@@ -1655,6 +1655,33 @@ def visningsverdi_maalintervall(value):
     }.get(value, value)
 
 
+def bygg_match_no_lookup(resultat_lookup):
+    """Lager en ekstra oppslagsnøkkel for utslagskamper: (runde, match_no) -> kamp.
+
+    Dette gjør poengregningen robust dersom kamp_id inneholder en gammel dato,
+    men match_no fortsatt er den samme offisielle FIFA-kampen.
+    """
+    lookup = {}
+    for kamp in resultat_lookup.values():
+        runde = kamp.get("runde")
+        if runde not in UTSLAGSRUNDER:
+            continue
+        match_no = parse_int(kamp.get("match_no") or kamp.get("fifa_match_no"))
+        if match_no is None:
+            continue
+        key = (runde, match_no)
+        eksisterende = lookup.get(key)
+        if eksisterende is None:
+            lookup[key] = kamp
+            continue
+        # Foretrekk kamp som faktisk kan poengberegnes.
+        ny_score = kamp.get("ferdig") and kamp.get("hjemme") is not None and kamp.get("borte") is not None
+        gammel_score = eksisterende.get("ferdig") and eksisterende.get("hjemme") is not None and eksisterende.get("borte") is not None
+        if ny_score and not gammel_score:
+            lookup[key] = kamp
+    return lookup
+
+
 def unike_utslagskamper(resultat_lookup):
     """Returnerer én canonical kamp per utslagskamp, uten alias-/kildedubletter."""
     valgte = {}
@@ -1831,7 +1858,7 @@ def regn_poeng_helhetsbonus(deltaker, bonusstatus, vis_svar=False):
 
 def regn_poeng_deltaker(
     deltaker, resultat_lookup, faktisk_turneringsvinner=None, ascii_lookup=None,
-    bonusstatus=None, bonusfrister=None
+    bonusstatus=None, bonusfrister=None, match_no_lookup=None
 ):
     """Regner totale poeng for én deltaker."""
     navn                 = deltaker["navn"]
@@ -1895,6 +1922,10 @@ def regn_poeng_deltaker(
         res   = resultat_lookup.get(kid)
         if res is None and ascii_lookup:
             res = ascii_lookup.get(kid)
+        if res is None and match_no_lookup:
+            match_no = parse_int(t.get("match_no"))
+            if match_no is not None:
+                res = match_no_lookup.get((runde, match_no))
 
         if not res or not res["ferdig"]:
             # Utslagstips skal ikke være synlige før avspark.
@@ -2017,7 +2048,7 @@ def bygg_public_resultater(resultat_lookup):
             "kilde_score": kamp.get("kilde_score") or kamp.get("kilde", ""),
         }
 
-        for felt in ("dato_fd_org", "fd_match_id", "fd_utcDate", "fd_hjemmelag", "fd_bortelag", "avanserer", "match_no"):
+        for felt in ("dato_fd_org", "fd_match_id", "fd_utcDate", "fd_hjemmelag", "fd_bortelag", "fifa_event_id", "fifa_match_no", "fifa_utcDate", "fifa_dato", "avanserer", "match_no"):
             if kamp.get(felt) is not None:
                 item[felt] = kamp.get(felt)
 
@@ -2483,11 +2514,12 @@ def main():
 
     # Regn poeng
     print("\nRegner poeng...")
+    match_no_lookup = bygg_match_no_lookup(resultat_lookup)
     stilling = []
     for did, deltaker in deltakere.items():
         resultat = regn_poeng_deltaker(
             deltaker, resultat_lookup, faktisk_turneringsvinner, ascii_lookup,
-            bonusstatus, bonusfrister
+            bonusstatus, bonusfrister, match_no_lookup
         )
         stilling.append(resultat)
         print(f"  {deltaker['navn']} ({did}): {resultat['poeng_totalt']}p "
