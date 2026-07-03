@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T08:15:40Z",
+  "tidspunkt": "2026-07-03T08:31:05Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -987,7 +987,7 @@
       "borte": null,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T18:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021516": {
       "fifa_event_id": "400021516",
@@ -1013,7 +1013,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T01:30:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021518": {
       "fifa_event_id": "400021518",
@@ -1065,7 +1065,7 @@
       "borte": null,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T22:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021522": {
       "fifa_event_id": "400021522",
@@ -1156,7 +1156,7 @@
       "borte": null,
       "fifa_dato": "2026-07-06",
       "fifa_utcDate": "2026-07-06T19:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021530": {
       "fifa_event_id": "400021530",
@@ -1169,7 +1169,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T17:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021531": {
       "fifa_event_id": "400021531",
@@ -1182,7 +1182,7 @@
       "borte": null,
       "fifa_dato": "2026-07-06",
       "fifa_utcDate": "2026-07-06T00:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021532": {
       "fifa_event_id": "400021532",
@@ -1195,7 +1195,7 @@
       "borte": null,
       "fifa_dato": "2026-07-05",
       "fifa_utcDate": "2026-07-05T20:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021533": {
       "fifa_event_id": "400021533",
@@ -1208,7 +1208,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T21:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021534": {
       "fifa_event_id": "400021534",
@@ -1221,7 +1221,7 @@
       "borte": null,
       "fifa_dato": "2026-07-07",
       "fifa_utcDate": "2026-07-07T00:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     }
   }
 }
