@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T14:45:42Z
+// Sist oppdatert: 2026-07-03T15:01:16Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T14:45:42Z",
+  "sist_oppdatert": "2026-07-03T15:01:16Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1791,6 +1791,19 @@ const VM_DATA = {
       "fd_hjemmelag": "Mexico",
       "fd_bortelag": "England"
     },
+    "Portugal_Spain_2026_07_06": {
+      "kamp_id": "Portugal_Spain_2026_07_06",
+      "canonical_kamp_id": "Portugal_Spain_2026_07_06",
+      "hjemmelag": "Portugal",
+      "bortelag": "Spain",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "r16",
+      "dato_openfootball": "2026-07-06",
+      "kilde_score": "openfootball"
+    },
     "USA_Belgium_2026_07_06": {
       "kamp_id": "USA_Belgium_2026_07_06",
       "canonical_kamp_id": "USA_Belgium_2026_07_06",
@@ -1809,24 +1822,10 @@ const VM_DATA = {
       "fd_hjemmelag": "United States",
       "fd_bortelag": "Belgium"
     },
-    "W83_W84_2026_07_06": {
-      "kamp_id": "W83_W84_2026_07_06",
-      "canonical_kamp_id": "W83_W84_2026_07_06",
-      "hjemmelag": "W83",
-      "bortelag": "W84",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r16",
-      "dato_openfootball": "2026-07-06",
-      "kilde_score": "openfootball",
-      "match_no": 93
-    },
-    "W85_W87_2026_07_07": {
-      "kamp_id": "W85_W87_2026_07_07",
-      "canonical_kamp_id": "W85_W87_2026_07_07",
-      "hjemmelag": "W85",
+    "Switzerland_W87_2026_07_07": {
+      "kamp_id": "Switzerland_W87_2026_07_07",
+      "canonical_kamp_id": "Switzerland_W87_2026_07_07",
+      "hjemmelag": "Switzerland",
       "bortelag": "W87",
       "hjemme": null,
       "borte": null,
@@ -1834,8 +1833,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-07",
-      "kilde_score": "openfootball",
-      "match_no": 96
+      "kilde_score": "openfootball"
     },
     "W86_W88_2026_07_07": {
       "kamp_id": "W86_W88_2026_07_07",
@@ -2404,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T14:45:42Z"
+    "sist_beregnet": "2026-07-03T15:01:16Z"
   },
   "stilling": [
     {
