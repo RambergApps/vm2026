@@ -207,8 +207,8 @@
         "utcDate": "2026-07-03T03:00:00Z",
         "fd_match_id": 537429,
         "fifa_event_id": "400021527",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Argentina_Cape_Verde_2026_07_03",
@@ -256,8 +256,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 4,
-    "neste_frist": "2026-07-03T03:00:00Z"
+    "antall_tippebare": 3,
+    "neste_frist": "2026-07-03T18:00:00Z"
   },
   "r16": {
     "aapen": true,
