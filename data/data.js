@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T00:31:05Z
+// Sist oppdatert: 2026-07-03T00:45:44Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T00:31:05Z",
+  "sist_oppdatert": "2026-07-03T00:45:44Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1593,7 +1593,7 @@ const VM_DATA = {
       "canonical_kamp_id": "Portugal_Croatia_2026_07_02",
       "hjemmelag": "Portugal",
       "bortelag": "Croatia",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 1,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2162,171 +2162,171 @@ const VM_DATA = {
     },
     {
       "rank": 18,
+      "spiller": "Cristiano Ronaldo",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 378
+    },
+    {
+      "rank": 19,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 390
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 193
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 213
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Romelu Lukaku",
       "maal": 2,
       "assists": 1,
       "minutter": 215
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 233
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 257
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Jude Bellingham",
       "maal": 2,
       "assists": 1,
       "minutter": 340
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 1,
       "minutter": 401
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 88
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Habib Diarra",
       "maal": 2,
       "assists": 0,
       "minutter": 168
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Marko Arnautovic",
       "maal": 2,
       "assists": 0,
       "minutter": 173
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 187
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Amad Diallo",
       "maal": 2,
       "assists": 0,
       "minutter": 211
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 216
     },
     {
-      "rank": 39,
+      "rank": 40,
       "spiller": "Raul Jimenez",
       "maal": 2,
       "assists": 0,
       "minutter": 241
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 247
-    },
-    {
-      "rank": 41,
-      "spiller": "Cristiano Ronaldo",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 334
     },
     {
       "rank": 42,
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T00:31:05Z"
+    "sist_beregnet": "2026-07-03T00:45:44Z"
   },
   "stilling": [
     {
@@ -3619,7 +3619,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -4928,7 +4928,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -6237,7 +6237,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -7546,7 +7546,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -8784,7 +8784,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -10036,7 +10036,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -11345,7 +11345,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -12654,7 +12654,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -13963,7 +13963,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -15215,7 +15215,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -16496,7 +16496,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -17791,7 +17791,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -18931,7 +18931,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -20169,7 +20169,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -23676,7 +23676,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -24985,7 +24985,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -27393,7 +27393,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -30857,7 +30857,7 @@ const VM_DATA = {
           "bortelag": "Croatia",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
