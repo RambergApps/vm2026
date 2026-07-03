@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T07:15:39Z
+// Sist oppdatert: 2026-07-03T07:31:07Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T07:15:39Z",
+  "sist_oppdatert": "2026-07-03T07:31:07Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2202,7 +2202,7 @@ const VM_DATA = {
       "spiller": "Breel Embolo",
       "maal": 2,
       "assists": 2,
-      "minutter": 368
+      "minutter": 369
     },
     {
       "rank": 24,
@@ -2237,7 +2237,7 @@ const VM_DATA = {
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
-      "minutter": 267
+      "minutter": 268
     },
     {
       "rank": 29,
@@ -2404,7 +2404,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T07:15:39Z"
+    "sist_beregnet": "2026-07-03T07:31:07Z"
   },
   "stilling": [
     {
