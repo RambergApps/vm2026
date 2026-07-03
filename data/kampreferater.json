@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-03T00:47:36Z",
+  "sist_oppdatert": "2026-07-03T01:03:04Z",
   "antall_kamper": 84,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -16863,7 +16863,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 114,
+        "antall_sok": 115,
         "fallback": true,
         "cache_key": "England_DR_Congo_2026_07_01|2-1",
         "serper_score": -100,
@@ -16873,7 +16873,7 @@
         "referat_fakta_score": 2,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 114,
+        "retry_antall": 115,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-dr-congo-match-report-highlights",
         "mangler": [
@@ -16994,7 +16994,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T00:47:13Z"
+      "oppdatert": "2026-07-03T01:02:42Z"
     },
     "Belgium_Senegal_2026_07_01": {
       "kamp_id": "Belgium_Senegal_2026_07_01",
@@ -17015,7 +17015,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 80,
+        "antall_sok": 81,
         "fallback": true,
         "cache_key": "Belgium_Senegal_2026_07_01|2-2",
         "serper_score": -100,
@@ -17025,9 +17025,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 80,
+        "retry_antall": 81,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -17144,7 +17144,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T00:47:35Z"
+      "oppdatert": "2026-07-03T01:03:04Z"
     },
     "USA_Bosnia___Herzegovina_2026_07_02": {
       "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
@@ -17165,7 +17165,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 85,
+        "antall_sok": 86,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17175,7 +17175,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 85,
+        "retry_antall": 86,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17295,7 +17295,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T00:46:42Z"
+      "oppdatert": "2026-07-03T01:02:16Z"
     },
     "Spain_Austria_2026_07_02": {
       "kamp_id": "Spain_Austria_2026_07_02",
@@ -17458,13 +17458,13 @@
       "fd_utcDate": "2026-07-02T23:00:00Z",
       "hjemmelag": "Portugal",
       "bortelag": "Croatia",
-      "hjemme_score": 1,
+      "hjemme_score": 2,
       "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Portugal and Croatia are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Portugal lead Croatia 2-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -17584,7 +17584,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-03T00:45:45Z"
+      "oppdatert": "2026-07-03T01:01:20Z"
     }
   }
 }

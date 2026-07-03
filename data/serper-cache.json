@@ -5843,8 +5843,8 @@
   "England_DR_Congo_2026_07_01|2-1": {
     "kamp_id": "England_DR_Congo_2026_07_01",
     "resultat": "2-1",
-    "sist_sokt": "2026-07-03T00:47:13Z",
-    "antall_sok": 114,
+    "sist_sokt": "2026-07-03T01:02:42Z",
+    "antall_sok": 115,
     "beste_score": 2,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5861,7 +5861,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-03T00:46:52Z",
+      "hentet": "2026-07-03T01:02:21Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -5962,8 +5962,8 @@
   "USA_Bosnia___Herzegovina_2026_07_02|2-0": {
     "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
     "resultat": "2-0",
-    "sist_sokt": "2026-07-03T00:46:42Z",
-    "antall_sok": 85,
+    "sist_sokt": "2026-07-03T01:02:16Z",
+    "antall_sok": 86,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5980,7 +5980,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-03T00:45:52Z",
+      "hentet": "2026-07-03T01:01:25Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -6021,8 +6021,8 @@
   "Belgium_Senegal_2026_07_01|2-2": {
     "kamp_id": "Belgium_Senegal_2026_07_01",
     "resultat": "2-2",
-    "sist_sokt": "2026-07-03T00:47:35Z",
-    "antall_sok": 80,
+    "sist_sokt": "2026-07-03T01:03:04Z",
+    "antall_sok": 81,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6030,7 +6030,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-highlights-match-report",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -6039,15 +6039,15 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-07-03T00:47:24Z",
+      "hentet": "2026-07-03T01:02:47Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-highlights-match-report",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-highlights-match-report?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -6072,9 +6072,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-highlights-match-report",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-match-report-highlights",
       "direct_fifa_probe": true,
-      "_forsok_url": 2
+      "_forsok_url": 1
     }
   },
   "Spain_Austria_2026_07_02|3-0": {
