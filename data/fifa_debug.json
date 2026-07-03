@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T04:45:39Z",
+  "tidspunkt": "2026-07-03T05:01:09Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1136,14 +1136,14 @@
       "fifa_event_id": "400021527",
       "hjemmelag": "Switzerland",
       "bortelag": "Algeria",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 2,
       "borte": 0,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T03:00:00Z",
-      "fifa_match_time": "85'"
+      "fifa_match_time": "97'"
     },
     "400021529": {
       "fifa_event_id": "400021529",

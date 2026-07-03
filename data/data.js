@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T04:45:39Z
+// Sist oppdatert: 2026-07-03T05:01:17Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T04:45:39Z",
+  "sist_oppdatert": "2026-07-03T05:01:17Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2110,7 +2110,7 @@ const VM_DATA = {
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 2,
-      "minutter": 195
+      "minutter": 220
     },
     {
       "rank": 11,
@@ -2201,7 +2201,7 @@ const VM_DATA = {
       "spiller": "Breel Embolo",
       "maal": 2,
       "assists": 2,
-      "minutter": 331
+      "minutter": 368
     },
     {
       "rank": 24,
@@ -2219,38 +2219,38 @@ const VM_DATA = {
     },
     {
       "rank": 26,
-      "spiller": "Ruben Vargas",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 242
-    },
-    {
-      "rank": 27,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 28,
+      "rank": 27,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 257
     },
     {
-      "rank": 29,
-      "spiller": "Riyad Mahrez",
+      "rank": 28,
+      "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
-      "minutter": 262
+      "minutter": 267
     },
     {
-      "rank": 30,
+      "rank": 29,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
+    },
+    {
+      "rank": 30,
+      "spiller": "Riyad Mahrez",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 288
     },
     {
       "rank": 31,
@@ -2403,7 +2403,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T04:45:39Z"
+    "sist_beregnet": "2026-07-03T05:01:17Z"
   },
   "stilling": [
     {
