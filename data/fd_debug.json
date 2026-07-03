@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T05:01:09Z",
+  "tidspunkt": "2026-07-03T05:15:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1281,8 +1281,8 @@
       "fd_bortelag": "Algeria",
       "hjemmelag_normalisert": "Switzerland",
       "bortelag_normalisert": "Algeria",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 2,
       "borte": 0,
       "fd_dato": "2026-07-03",

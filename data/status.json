@@ -207,6 +207,7 @@
         "utcDate": "2026-07-03T03:00:00Z",
         "fd_match_id": 537429,
         "fifa_event_id": "400021527",
+        "avanserer": "Switzerland",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -355,11 +356,11 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W85_W87_2026_07_07",
-        "hjemme": "W85",
+        "id": "Switzerland_W87_2026_07_07",
+        "hjemme": "Switzerland",
         "borte": "W87",
         "dato": "2026-07-07",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 96,
         "slot_hjemme": "W85",
         "slot_borte": "W87",
