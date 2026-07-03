@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T18:45:38Z",
+  "tidspunkt": "2026-07-03T19:01:15Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1267,7 +1267,7 @@
       "fd_bortelag": "Egypt",
       "hjemmelag_normalisert": "Australia",
       "bortelag_normalisert": "Egypt",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
       "hjemme": 0,
       "borte": 1,
