@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-03T20:34:29Z",
+  "sist_oppdatert": "2026-07-03T21:03:00Z",
   "antall_kamper": 86,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17165,7 +17165,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 170,
+        "antall_sok": 171,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17175,7 +17175,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 170,
+        "retry_antall": 171,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17213,13 +17213,13 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Arne Kristian Johansen",
+            "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
@@ -17281,21 +17281,21 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T20:34:29Z"
+      "oppdatert": "2026-07-03T21:02:11Z"
     },
     "Spain_Austria_2026_07_02": {
       "kamp_id": "Spain_Austria_2026_07_02",
@@ -17367,13 +17367,13 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Arne Kristian Johansen",
+            "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
@@ -17403,15 +17403,15 @@
             "poeng": 3
           },
           {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Ken Arne Hansen",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -17427,13 +17427,13 @@
             "poeng": 3
           },
           {
-            "navn": "Marita Hauge Gjerde",
+            "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Anders Sundero",
+            "navn": "Marita Hauge Gjerde",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
@@ -17449,7 +17449,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T05:16:24Z"
+      "oppdatert": "2026-07-03T21:02:11Z"
     },
     "Portugal_Croatia_2026_07_02": {
       "kamp_id": "Portugal_Croatia_2026_07_02",
@@ -17770,35 +17770,81 @@
       "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Australia and Egypt are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "Australia and Egypt drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 4,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "Australia_Egypt_2026_07_03|1-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights",
+        "mangler": [
+          "resultat_i_fulltekst",
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 7
           },
           {
             "navn": "Alexander",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 7
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 7
           },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 7
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 7
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 0,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 0,
+            "tippa_b": 0,
+            "poeng": 3
+          }
+        ],
+        "bom": [
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 1,
@@ -17815,12 +17861,6 @@
             "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 0,
-            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -17854,21 +17894,9 @@
             "poeng": 0
           },
           {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Geir Magne Evensen",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 0,
-            "tippa_b": 0,
             "poeng": 0
           },
           {
@@ -17882,17 +17910,11 @@
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-03T19:31:09Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-03T21:03:00Z"
     }
   }
 }

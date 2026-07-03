@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-02",
   "dato_norsk": "Torsdag 2. juli 2026",
-  "generert": "2026-07-03T20:34:29Z",
+  "generert": "2026-07-03T21:03:00Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 170,
+        "antall_sok": 171,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 170,
+        "retry_antall": 171,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -67,13 +67,13 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Arne Kristian Johansen",
+            "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
@@ -135,15 +135,15 @@
             "poeng": 0
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
@@ -215,13 +215,13 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Arne Kristian Johansen",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Arne Kristian Johansen",
+            "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 3
@@ -251,15 +251,15 @@
             "poeng": 3
           },
           {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Ken Arne Hansen",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -275,13 +275,13 @@
             "poeng": 3
           },
           {
-            "navn": "Marita Hauge Gjerde",
+            "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Anders Sundero",
+            "navn": "Marita Hauge Gjerde",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
@@ -302,19 +302,19 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 166,
+      "poeng_totalt": 173,
       "poeng_i_dag": 14
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 157,
+      "poeng_totalt": 164,
       "poeng_i_dag": 6
     },
     {
       "navn": "Olympus fc",
       "plass": 3,
-      "poeng_totalt": 152,
+      "poeng_totalt": 159,
       "poeng_i_dag": 3
     },
     {
@@ -330,15 +330,15 @@
       "poeng_i_dag": 6
     },
     {
-      "navn": "Diyan K.",
+      "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 133,
+      "poeng_totalt": 135,
       "poeng_i_dag": 6
     },
     {
-      "navn": "Arne Kristian Johansen",
+      "navn": "Diyan K.",
       "plass": 7,
-      "poeng_totalt": 132,
+      "poeng_totalt": 133,
       "poeng_i_dag": 6
     },
     {
@@ -366,15 +366,15 @@
       "poeng_i_dag": 3
     },
     {
-      "navn": "Alex Myrvokd",
+      "navn": "Ken Arne Hansen",
       "plass": 12,
-      "poeng_totalt": 119,
+      "poeng_totalt": 125,
       "poeng_i_dag": 3
     },
     {
-      "navn": "Ken Arne Hansen",
+      "navn": "Alex Myrvokd",
       "plass": 13,
-      "poeng_totalt": 118,
+      "poeng_totalt": 119,
       "poeng_i_dag": 3
     },
     {
@@ -390,16 +390,16 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Jorgen Lindland",
+      "navn": "sergio gomes",
       "plass": 16,
-      "poeng_totalt": 104,
-      "poeng_i_dag": 0
+      "poeng_totalt": 107,
+      "poeng_i_dag": 3
     },
     {
-      "navn": "sergio gomes",
+      "navn": "Jorgen Lindland",
       "plass": 17,
       "poeng_totalt": 104,
-      "poeng_i_dag": 3
+      "poeng_i_dag": 0
     },
     {
       "navn": "Ulf-Morten Johansen",
@@ -408,34 +408,34 @@
       "poeng_i_dag": 6
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Anders Sundero",
       "plass": 19,
+      "poeng_totalt": 102,
+      "poeng_i_dag": 3
+    },
+    {
+      "navn": "Marita Hauge Gjerde",
+      "plass": 20,
       "poeng_totalt": 101,
       "poeng_i_dag": 3
     },
     {
       "navn": "Magnus Børrud",
-      "plass": 20,
+      "plass": 21,
       "poeng_totalt": 98,
       "poeng_i_dag": 0
     },
     {
       "navn": "Atle Johansen",
-      "plass": 21,
-      "poeng_totalt": 96,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Rickard Jacobsson",
       "plass": 22,
       "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Anders Sundero",
+      "navn": "Rickard Jacobsson",
       "plass": 23,
-      "poeng_totalt": 95,
-      "poeng_i_dag": 3
+      "poeng_totalt": 96,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Sjur Revheim",

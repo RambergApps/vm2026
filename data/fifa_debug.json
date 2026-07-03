@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T20:33:37Z",
+  "tidspunkt": "2026-07-03T21:01:14Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -980,14 +980,14 @@
       "fifa_event_id": "400021515",
       "hjemmelag": "Australia",
       "bortelag": "Egypt",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 1,
       "borte": 1,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T18:00:00Z",
-      "fifa_match_time": "117'"
+      "fifa_match_time": "129'"
     },
     "400021516": {
       "fifa_event_id": "400021516",
@@ -1065,7 +1065,7 @@
       "borte": null,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T22:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": null
     },
     "400021522": {
       "fifa_event_id": "400021522",
