@@ -5962,8 +5962,8 @@
   "USA_Bosnia___Herzegovina_2026_07_02|2-0": {
     "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
     "resultat": "2-0",
-    "sist_sokt": "2026-07-03T11:16:34Z",
-    "antall_sok": 130,
+    "sist_sokt": "2026-07-03T11:32:11Z",
+    "antall_sok": 131,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5971,7 +5971,7 @@
     "fulltekst_fakta": {
       "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-highlights-match-report",
       "kilde_tittel": "",
       "domene": "fifa.com",
       "source_type": "article_report",
@@ -5980,15 +5980,15 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-03T11:15:52Z",
+      "hentet": "2026-07-03T11:31:31Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights?searchOverlay=1)"
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-highlights-match-report?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -6013,9 +6013,9 @@
         "goal_events"
       ],
       "rikt_fulltekstgrunnlag": false,
-      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-highlights-match-report",
       "direct_fifa_probe": true,
-      "_forsok_url": 1
+      "_forsok_url": 2
     }
   },
   "Belgium_Senegal_2026_07_01|2-2": {
