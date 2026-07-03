@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T20:15:38Z",
+  "tidspunkt": "2026-07-03T20:30:52Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -987,7 +987,7 @@
       "borte": 1,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T18:00:00Z",
-      "fifa_match_time": "102'"
+      "fifa_match_time": "115'"
     },
     "400021516": {
       "fifa_event_id": "400021516",

@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T20:15:39Z
+// Sist oppdatert: 2026-07-03T20:30:52Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T20:15:39Z",
+  "sist_oppdatert": "2026-07-03T20:30:52Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1429,6 +1429,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-28T19:00:00Z",
       "fd_hjemmelag": "South Africa",
       "fd_bortelag": "Canada",
+      "fifa_event_id": "400021518",
       "avanserer": "Canada",
       "match_no": 73
     },
@@ -1449,6 +1450,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-29T17:00:00Z",
       "fd_hjemmelag": "Brazil",
       "fd_bortelag": "Japan",
+      "fifa_event_id": "400021516",
       "avanserer": "Brazil",
       "match_no": 76
     },
@@ -1469,6 +1471,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-29T20:30:00Z",
       "fd_hjemmelag": "Germany",
       "fd_bortelag": "Paraguay",
+      "fifa_event_id": "400021513",
       "avanserer": "Paraguay",
       "match_no": 74
     },
@@ -1489,6 +1492,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-30T21:00:00Z",
       "fd_hjemmelag": "France",
       "fd_bortelag": "Sweden",
+      "fifa_event_id": "400021523",
       "avanserer": "France",
       "match_no": 77
     },
@@ -1509,6 +1513,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-06-30T17:00:00Z",
       "fd_hjemmelag": "Ivory Coast",
       "fd_bortelag": "Norway",
+      "fifa_event_id": "400021514",
       "avanserer": "Norway",
       "match_no": 78
     },
@@ -1527,6 +1532,7 @@ const VM_DATA = {
       "dato_fd_org": "2026-06-30",
       "fd_match_id": 537418,
       "fd_utcDate": "2026-06-30T01:00:00Z",
+      "fifa_event_id": "400021522",
       "avanserer": "Morocco",
       "match_no": 75
     },
@@ -1547,6 +1553,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-01T20:00:00Z",
       "fd_hjemmelag": "Belgium",
       "fd_bortelag": "Senegal",
+      "fifa_event_id": "400021525",
       "avanserer": "Belgium",
       "match_no": 82
     },
@@ -1567,6 +1574,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-01T16:00:00Z",
       "fd_hjemmelag": "England",
       "fd_bortelag": "Congo DR",
+      "fifa_event_id": "400021512",
       "avanserer": "England",
       "match_no": 80
     },
@@ -1585,6 +1593,7 @@ const VM_DATA = {
       "dato_fd_org": "2026-07-01",
       "fd_match_id": 537425,
       "fd_utcDate": "2026-07-01T02:00:00Z",
+      "fifa_event_id": "400021520",
       "avanserer": "Mexico",
       "match_no": 79
     },
@@ -1605,6 +1614,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-02T23:00:00Z",
       "fd_hjemmelag": "Portugal",
       "fd_bortelag": "Croatia",
+      "fifa_event_id": "400021526",
       "avanserer": "Portugal",
       "match_no": 83
     },
@@ -1625,6 +1635,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-02T19:00:00Z",
       "fd_hjemmelag": "Spain",
       "fd_bortelag": "Austria",
+      "fifa_event_id": "400021519",
       "avanserer": "Spain",
       "match_no": 84
     },
@@ -1643,6 +1654,7 @@ const VM_DATA = {
       "dato_fd_org": "2026-07-02",
       "fd_match_id": 537421,
       "fd_utcDate": "2026-07-02T00:00:00Z",
+      "fifa_event_id": "400021524",
       "avanserer": "USA",
       "match_no": 81
     },
@@ -1663,6 +1675,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-03T22:00:00Z",
       "fd_hjemmelag": "Argentina",
       "fd_bortelag": "Cape Verde Islands",
+      "fifa_event_id": "400021521",
       "match_no": 86
     },
     "Australia_Egypt_2026_07_03": {
@@ -1682,6 +1695,10 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-03T18:00:00Z",
       "fd_hjemmelag": "Australia",
       "fd_bortelag": "Egypt",
+      "fifa_event_id": "400021515",
+      "fifa_match_no": 88,
+      "fifa_utcDate": "2026-07-03T18:00:00Z",
+      "fifa_dato": "2026-07-03",
       "match_no": 88
     },
     "Switzerland_Algeria_2026_07_03": {
@@ -1699,6 +1716,7 @@ const VM_DATA = {
       "dato_fd_org": "2026-07-03",
       "fd_match_id": 537429,
       "fd_utcDate": "2026-07-03T03:00:00Z",
+      "fifa_event_id": "400021527",
       "avanserer": "Switzerland",
       "match_no": 85
     },
@@ -1735,6 +1753,7 @@ const VM_DATA = {
       "dato_fd_org": "2026-07-04",
       "fd_match_id": 537430,
       "fd_utcDate": "2026-07-04T01:30:00Z",
+      "fifa_event_id": "400021517",
       "match_no": 87
     },
     "Paraguay_France_2026_07_04": {
@@ -2402,7 +2421,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T20:15:39Z"
+    "sist_beregnet": "2026-07-03T20:30:52Z"
   },
   "stilling": [
     {
