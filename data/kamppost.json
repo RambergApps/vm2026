@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-02",
   "dato_norsk": "Torsdag 2. juli 2026",
-  "generert": "2026-07-03T19:46:37Z",
+  "generert": "2026-07-03T20:02:00Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 166,
+        "antall_sok": 167,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 166,
+        "retry_antall": 167,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [

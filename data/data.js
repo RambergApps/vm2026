@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T19:45:41Z
+// Sist oppdatert: 2026-07-03T20:01:06Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T19:45:41Z",
+  "sist_oppdatert": "2026-07-03T20:01:06Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2340,7 +2340,7 @@ const VM_DATA = {
       "spiller": "Emam Ashour",
       "maal": 2,
       "assists": 0,
-      "minutter": 251
+      "minutter": 297
     },
     {
       "rank": 44,
@@ -2389,7 +2389,7 @@ const VM_DATA = {
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
-      "minutter": 268
+      "minutter": 314
     }
   ],
   "startpoengstatus": {
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T19:45:41Z"
+    "sist_beregnet": "2026-07-03T20:01:06Z"
   },
   "stilling": [
     {
