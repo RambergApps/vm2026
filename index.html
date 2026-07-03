@@ -1453,9 +1453,14 @@ function norskDatoMedOffset(offset = 0) {
   return base.toISOString().slice(0, 10);
 }
 
+function resultatTidspunktUtc(resultat) {
+  return resultat?.utcDate || resultat?.fifa_utcDate || resultat?.fd_utcDate || "";
+}
+
 function resultatDatoNorsk(resultat) {
-  if (resultat?.fd_utcDate) {
-    const dato = new Date(resultat.fd_utcDate);
+  const raw = resultatTidspunktUtc(resultat);
+  if (raw) {
+    const dato = new Date(raw);
     if (!Number.isNaN(dato.getTime())) {
       return dato.toLocaleDateString("sv-SE", { timeZone: "Europe/Oslo" });
     }
@@ -1464,8 +1469,9 @@ function resultatDatoNorsk(resultat) {
 }
 
 function formatKickoffKort(resultat) {
-  if (!resultat?.fd_utcDate) return resultatDatoNorsk(resultat);
-  const dato = new Date(resultat.fd_utcDate);
+  const raw = resultatTidspunktUtc(resultat);
+  if (!raw) return resultatDatoNorsk(resultat);
+  const dato = new Date(raw);
   if (Number.isNaN(dato.getTime())) return resultatDatoNorsk(resultat);
   return dato.toLocaleTimeString("nb-NO", { timeZone: "Europe/Oslo", hour: "2-digit", minute: "2-digit" });
 }
@@ -1524,7 +1530,7 @@ function lokaltLeverteKamperForDeltaker(deltaker) {
 }
 
 function statusKickoffMs(kamp) {
-  const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato;
+  const raw = kamp?.utcDate || kamp?.fifa_utcDate || kamp?.fd_utcDate || kamp?.dato;
   const timestamp = Date.parse(raw || "");
   return Number.isFinite(timestamp) ? timestamp : null;
 }
@@ -2339,7 +2345,7 @@ function kampVisning(kamp) {
     borte: borteKjent ? borte : placeholderTekst(borte),
     hjemmeKjent,
     borteKjent,
-    utc: kamp.utcDate || app.utcDate || '',
+    utc: app.utcDate || kamp.utcDate || kamp.fifa_utcDate || '',
     hjemmeScore: kamp.hjemme_score,
     borteScore: kamp.borte_score,
   };
@@ -2371,7 +2377,7 @@ function byggUtslagsOversikt() {
   filter.innerHTML = UTSLAG_RUNDER.map(([id,tekst]) => `<button class="utslag-filter-btn ${aktivUtslagsrunde === id ? 'active' : ''}" onclick="settUtslagsrunde('${id}')">${tekst}</button>`).join('');
 
   const kamper = kombinerteUtslagskamper(aktivUtslagsrunde);
-  const tippebare = kamper.filter(k => k.app_status?.tippebar).length;
+  const tippebare = kamper.filter(k => statusKampErApen(k.app_status)).length;
   if (aktivUtslagsrunde === 'bronze') {
     oppsummering.textContent = `${kamper.length} kamp · bronsefinalen er ikke del av tipping`;
   } else {
@@ -2386,7 +2392,7 @@ function byggUtslagsOversikt() {
   innhold.innerHTML = kamper.map(kamp => {
     const visning = kampVisning(kamp);
     const beggeKjent = visning.hjemmeKjent && visning.borteKjent;
-    const tippebar = !!kamp.app_status?.tippebar;
+    const tippebar = statusKampErApen(kamp.app_status);
     const ferdig = fifaKampErFerdig(kamp.status);
     const statusTekst = tippebar ? 'Åpen for tipping' : ferdig ? 'Ferdig' : beggeKjent ? (aktivUtslagsrunde === 'bronze' ? 'Lagene er klare' : 'Tipping stengt') : (visning.hjemmeKjent || visning.borteKjent) ? 'Ett lag klart' : 'Venter på lag';
     const score = utslagScoreTekst(visning);
@@ -2485,8 +2491,9 @@ function kampStatus(kamp) {
 }
 
 function kampTidspunkt(kamp) {
-  if (kamp.fd_utcDate) {
-    const d = new Date(kamp.fd_utcDate);
+  const rawUtc = kamp.utcDate || kamp.fifa_utcDate || kamp.fd_utcDate;
+  if (rawUtc) {
+    const d = new Date(rawUtc);
     if (!Number.isNaN(d.getTime())) return d;
   }
   const dato = kamp.dato_openfootball || kamp.dato || '';
@@ -2500,7 +2507,8 @@ function kampTidspunkt(kamp) {
 function formaterDatoNorsk(kamp, medTid = true) {
   const d = kampTidspunkt(kamp);
   if (Number.isNaN(d.getTime())) return '';
-  const opts = medTid && kamp.fd_utcDate
+  const rawUtc = kamp.utcDate || kamp.fifa_utcDate || kamp.fd_utcDate;
+  const opts = medTid && rawUtc
     ? { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }
     : { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit' };
   return new Intl.DateTimeFormat('nb-NO', opts).format(d).replace(',', '');
