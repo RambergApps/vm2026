@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-03T21:03:00Z",
+  "sist_oppdatert": "2026-07-03T21:16:38Z",
   "antall_kamper": 86,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17165,7 +17165,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 171,
+        "antall_sok": 172,
         "fallback": true,
         "cache_key": "USA_Bosnia___Herzegovina_2026_07_02|2-0",
         "serper_score": -100,
@@ -17175,7 +17175,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 171,
+        "retry_antall": 172,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/united-states-bosnia-herzegovina-match-report-highlights",
         "mangler": [
@@ -17295,7 +17295,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T21:02:11Z"
+      "oppdatert": "2026-07-03T21:16:33Z"
     },
     "Spain_Austria_2026_07_02": {
       "kamp_id": "Spain_Austria_2026_07_02",
@@ -17771,30 +17771,27 @@
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Australia and Egypt drew 1-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Australia and Egypt drew 1-1.\nGoals: Australia — Hany (55); Egypt — Ashour (13).\n\nEgypt created fresh history in Dallas as they earned their first knockout win at a World Cup finals, beating Australia 4-2 on penalties after a 1-1 draw.\nNow they are celebrating an Antipodean double after a shootout triumph secured by Hossam Abdelmaguid, after misses by Australia’s Harry Souttar and Lucas Herrington.\nThe Pharaohs had gained an early lead in the game through Emam Ashour but Mohamed Hany’s second-half own goal meant a tight game went all the way to penalties with Hossam Hassan’s men prevailing to set up a Round of 16 tie in Atlanta on 7 July against the winners of the Argentina v Cabo Verde tie.\nInstead they were soon trailing as Ashour struck in the second phase of a set-play after 13 minutes.",
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 10,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "Australia_Egypt_2026_07_03|1-1",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 10,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -17914,7 +17911,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-03T21:03:00Z"
+      "oppdatert": "2026-07-03T21:16:38Z"
     }
   }
 }

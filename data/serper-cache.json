@@ -5962,8 +5962,8 @@
   "USA_Bosnia___Herzegovina_2026_07_02|2-0": {
     "kamp_id": "USA_Bosnia___Herzegovina_2026_07_02",
     "resultat": "2-0",
-    "sist_sokt": "2026-07-03T21:02:11Z",
-    "antall_sok": 171,
+    "sist_sokt": "2026-07-03T21:16:33Z",
+    "antall_sok": 172,
     "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -5980,7 +5980,7 @@
       "kamp_hjemme_score": 2,
       "kamp_borte_score": 0,
       "score": 10,
-      "hentet": "2026-07-03T21:01:24Z",
+      "hentet": "2026-07-03T21:15:43Z",
       "goal_events": [],
       "scorere": [],
       "lead_scorer": "",
@@ -6415,10 +6415,10 @@
   "Australia_Egypt_2026_07_03|1-1": {
     "kamp_id": "Australia_Egypt_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-03T21:03:00Z",
-    "antall_sok": 1,
-    "beste_score": 4,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-07-03T21:16:38Z",
+    "antall_sok": 2,
+    "beste_score": 10,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -6429,27 +6429,46 @@
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
-      "resultat_i_fulltekst": false,
+      "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-03T21:02:17Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-07-03T21:16:38Z",
+      "goal_events": [
+        {
+          "spiller": "Ashour",
+          "lag": "Egypt",
+          "minutt": "13",
+          "type": "goal"
+        },
+        {
+          "spiller": "Hany",
+          "lag": "Australia",
+          "minutt": "55",
+          "type": "own_goal"
+        }
+      ],
+      "scorere": [
+        "Ashour",
+        "Hany"
+      ],
+      "lead_scorer": "Ashour",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights?searchOverlay=1)"
+        "Egypt created fresh history in Dallas as they earned their first knockout win at a World Cup finals, beating Australia 4-2 on penalties after a 1-1 draw.",
+        "In their previous match, the Pharaohs had beaten New Zealand to record their first victory on the world stage. Now they are celebrating an Antipodean double after a shootout triumph secured by Hossam Abdelmaguid, after misses by Australia’s Harry Souttar and Lucas Herrington.",
+        "The Pharaohs had gained an early lead in the game through Emam Ashour but Mohamed Hany’s second-half own goal meant a tight game went all the way to penalties with Hossam Hassan’s men prevailing to set up a Round of 16 tie in Atlanta on 7 July against the winners of the Argentina v Cabo Verde tie.",
+        "The Socceroos nearly made the perfect start when Cristian Volpato hit the top of the crossbar with an early long-range strike yet. Instead they were soon trailing as Ashour struck in the second phase of a set-play after 13 minutes.",
+        "The midfielder’s own initial strike was charged down but when Karim Hafez crossed the ball back into the box, Ashour stooped to head in at the far post. The 28-year-old had not scored for his country before arriving in North America but now has two World Cup goals."
       ],
       "key_stat": "",
       "player_of_match": "",
-      "early_lead": false,
+      "early_lead": true,
       "came_from_behind": false,
       "knockout_secured": false,
       "group_top": false,
-      "hit_bar": false,
+      "hit_bar": true,
       "late_pressure": false,
       "stoppage": null,
       "brace_text": false,
@@ -6458,14 +6477,11 @@
       "lead_goal_early": false,
       "lead_goal_stoppage": false,
       "fastest_stat": false,
-      "record_stat": false,
+      "record_stat": true,
       "eliminated_loser": false,
-      "referat_fakta_score": 4,
-      "mangler": [
-        "resultat_i_fulltekst",
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 10,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/australia-egypt-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
