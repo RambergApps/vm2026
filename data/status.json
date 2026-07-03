@@ -223,8 +223,8 @@
         "utcDate": "2026-07-03T22:00:00Z",
         "fd_match_id": 537427,
         "fifa_event_id": "400021521",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Colombia_Ghana_2026_07_04",
@@ -257,8 +257,8 @@
         "tippe_status": "startet"
       }
     ],
-    "antall_tippebare": 2,
-    "neste_frist": "2026-07-03T22:00:00Z"
+    "antall_tippebare": 1,
+    "neste_frist": "2026-07-04T01:30:00Z"
   },
   "r16": {
     "aapen": true,
