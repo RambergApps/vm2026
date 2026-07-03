@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-03T18:31:08Z
+// Sist oppdatert: 2026-07-03T18:45:49Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-03T18:31:08Z",
+  "sist_oppdatert": "2026-07-03T18:45:49Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2337,59 +2337,59 @@ const VM_DATA = {
     },
     {
       "rank": 43,
+      "spiller": "Emam Ashour",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 251
+    },
+    {
+      "rank": 44,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 359
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 371
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Youri Tielemans",
       "maal": 2,
       "assists": 0,
       "minutter": 438
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Alexander Isak",
       "maal": 1,
       "assists": 3,
       "minutter": 389
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Iliman Ndiaye",
       "maal": 1,
       "assists": 2,
       "minutter": 134
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Nathan Saliba",
       "maal": 1,
       "assists": 2,
       "minutter": 206
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Mohamed Salah",
       "maal": 1,
       "assists": 2,
-      "minutter": 230
-    },
-    {
-      "rank": 50,
-      "spiller": "Julio Enciso",
-      "maal": 1,
-      "assists": 2,
-      "minutter": 367
+      "minutter": 268
     }
   ],
   "startpoengstatus": {
@@ -2402,7 +2402,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-03T18:31:08Z"
+    "sist_beregnet": "2026-07-03T18:45:49Z"
   },
   "stilling": [
     {
