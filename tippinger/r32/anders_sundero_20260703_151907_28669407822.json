@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "deltaker_id": "anders_sundero",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-03T15:18:59.989Z",
+    "navn": "Anders Sundero",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-03T15:19:07Z"
+  },
+  "tippinger": [
+    {
+      "borte": 0,
+      "bortelag": "Cape Verde",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+      "match_no": 86
+    },
+    {
+      "borte": 0,
+      "bortelag": "Ghana",
+      "hjemme": 2,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "match_no": 87
+    },
+    {
+      "borte": 1,
+      "bortelag": "Egypt",
+      "hjemme": 1,
+      "hjemmelag": "Australia",
+      "kamp_id": "Australia_Egypt_2026_07_03",
+      "match_no": 88
+    }
+  ]
+}
