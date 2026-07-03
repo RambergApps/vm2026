@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-03T23:01:18Z",
+  "sist_oppdatert": "2026-07-03T23:15:53Z",
   "antall_kamper": 87,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17924,9 +17924,9 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r32",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Argentina lead Cape Verde 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Argentina lead Cape Verde 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18046,7 +18046,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-03T23:01:18Z"
+      "oppdatert": "2026-07-03T23:15:53Z"
     }
   }
 }
