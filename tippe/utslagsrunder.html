@@ -955,8 +955,9 @@ function escapeHtml(value) {
 }
 
 function parseKickoff(kamp) {
-  if (!kamp?.utcDate) return null;
-  const timestamp = Date.parse(kamp.utcDate);
+  const raw = kamp?.utcDate || kamp?.fifa_utcDate || kamp?.fd_utcDate;
+  if (!raw) return null;
+  const timestamp = Date.parse(raw);
   return Number.isFinite(timestamp) ? timestamp : null;
 }
 
@@ -1069,7 +1070,7 @@ function bonusErAapen(runde) {
 function formaterBonusFrist(runde) {
   const frist = bonusFrist(runde);
   if (frist === null) return "Avventer bekreftet avsparkstid";
-  return "Stenger " + new Date(frist).toLocaleString("no-NO", {day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  return "Stenger " + new Date(frist).toLocaleString("no-NO", {timeZone:"Europe/Oslo",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
 }
 
 function kjenteR32Lag() {
