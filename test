@@ -1,0 +1,3203 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM 2026 — TEST vinnerfeiring</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+:root {
+  --bg:       #060912;
+  --surface:  #0d1320;
+  --card:     #111a2e;
+  --card2:    #152035;
+  --border:   #1e2d4a;
+  --accent:   #ef2b2d;
+  --gold:     #ffd600;
+  --silver:   #b0bec5;
+  --bronze:   #ff8a65;
+  --text:     #e8f0ff;
+  --muted:    #6b7fa8;
+  --norway:   #ef2b2d;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0,230,118,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,230,118,.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-glow {
+  position: fixed; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 600px;
+  background: radial-gradient(ellipse, rgba(0,230,118,.06) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.hero {
+  position: relative; z-index: 1;
+  padding: 56px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background-image:
+    linear-gradient(180deg,
+      rgba(6,9,18,.55) 0%,
+      rgba(6,9,18,.45) 40%,
+      rgba(6,9,18,.75) 75%,
+      rgba(6,9,18,.97) 100%),
+    url('Haaland.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,230,118,.1);
+  border: 1px solid rgba(0,230,118,.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.8); } }
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 12vw, 120px);
+  line-height: .9;
+  letter-spacing: .02em;
+  color: var(--text);
+}
+.hero h1 .year { color: var(--accent); }
+.hero-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(14px, 3vw, 20px);
+  font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+  color: rgba(255,255,255,.85); margin-top: 8px;
+}
+
+
+
+
+
+.nav {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 0;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.nav-tab {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: 14px 20px; color: var(--muted);
+  border-bottom: 3px solid transparent;
+  cursor: pointer; white-space: nowrap; transition: all .2s;
+}
+.nav-tab:hover { color: var(--text); }
+.nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.container {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  padding: 32px 16px 80px;
+}
+
+.seksjon { display: none; }
+.seksjon.active { display: block; }
+
+.podium {
+  display: grid; grid-template-columns: 1fr 1.1fr 1fr;
+  gap: 8px; margin-bottom: 32px; align-items: end;
+}
+.podium-plass {
+  border-radius: 10px 10px 0 0;
+  padding: 20px 12px 16px;
+  text-align: center;
+  position: relative;
+  page-break-inside: avoid;
+}
+.podium-plass.p1 { background: linear-gradient(180deg, rgba(255,214,0,.15) 0%, rgba(255,214,0,.05) 100%); border: 1.5px solid rgba(255,214,0,.3); min-height: 160px; }
+.podium-plass.p2 { background: linear-gradient(180deg, rgba(176,190,197,.1) 0%, rgba(176,190,197,.03) 100%); border: 1.5px solid rgba(176,190,197,.2); min-height: 130px; }
+.podium-plass.p3 { background: linear-gradient(180deg, rgba(255,138,101,.1) 0%, rgba(255,138,101,.03) 100%); border: 1.5px solid rgba(255,138,101,.2); min-height: 110px; }
+
+.podium-medal { font-size: 28px; margin-bottom: 8px; }
+.podium-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 800; text-transform: uppercase;
+  word-break: break-word;
+}
+.podium-poeng {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px; line-height: 1; margin-top: 4px;
+}
+.podium-plass.p1 .podium-poeng { color: var(--gold); }
+.podium-plass.p2 .podium-poeng { color: var(--silver); }
+.podium-plass.p3 .podium-poeng { color: var(--bronze); }
+.podium-vinner-tag {
+  font-size: 10px; color: var(--muted);
+  margin-top: 4px; font-family: 'Barlow Condensed', sans-serif;
+}
+
+.stilling-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px 60px 60px 80px;
+  gap: 8px; padding: 8px 16px;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); border-bottom: 1px solid var(--border);
+}
+.stilling-rad {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px 60px 60px 80px;
+  gap: 8px; padding: 14px 16px;
+  border-bottom: 1px solid rgba(30,45,74,.6);
+  align-items: center;
+  transition: background .15s; cursor: pointer;
+  page-break-inside: avoid;
+}
+.stilling-rad:hover { background: rgba(255,255,255,.02); }
+.stilling-rad.aktiv { background: rgba(0,230,118,.04); border-color: rgba(0,230,118,.1); }
+.stilling-rad.norge { border-left: 3px solid var(--norway); }
+
+.plass-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px; color: var(--muted); text-align: center;
+}
+.plass-num.p1 { color: var(--gold); }
+.plass-num.p2 { color: var(--silver); }
+.plass-num.p3 { color: var(--bronze); }
+
+.rad-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 700; text-transform: uppercase;
+  color: var(--accent); text-decoration: underline; text-decoration-color: rgba(0,230,118,.3);
+  cursor: pointer; display: inline;
+}
+.rad-navn:hover { text-decoration-color: var(--accent); }
+.rad-vinner {
+  font-size: 11px; color: var(--muted); margin-top: 1px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.rad-vinner.riktig { color: var(--accent); }
+
+.rad-tall {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 700; text-align: right;
+}
+.rad-totalt {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; text-align: right; color: var(--text);
+}
+
+.detaljer {
+  display: none;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px;
+}
+.detaljer.vis { display: block; }
+.detaljer-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.kamp-rad {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid rgba(30,45,74,.4);
+  font-size: 13px;
+}
+.kamp-rad:last-child { border-bottom: none; }
+.kamp-lag { flex: 1; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; }
+.kamp-score { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--muted); min-width: 80px; text-align: center; }
+.kamp-score.riktig { color: var(--accent); }
+.kamp-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 16px;
+  min-width: 40px; text-align: right;
+}
+.kamp-poeng.p0 { color: var(--muted); }
+.kamp-poeng.p2 { color: var(--text); }
+.kamp-poeng.p4 { color: var(--gold); }
+
+/* ── DAGENS KAMPER ── */
+.dagens-kamper {
+  margin-bottom: 28px;
+}
+.dagens-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 10px;
+}
+.dagens-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted);
+}
+.dagens-dato {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  color: var(--accent);
+}
+.kamp-liste {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.kamp-rad {
+  display: grid;
+  grid-template-columns: 56px 1fr 72px 1fr 56px;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 8px;
+  border-bottom: 1px solid rgba(30,45,74,.5);
+  transition: background .15s;
+}
+.kamp-rad:last-child { border-bottom: none; }
+.kamp-rad:nth-child(odd) { background: var(--surface); }
+.kamp-rad:nth-child(even) { background: var(--card); }
+.kamp-rad:hover { background: rgba(255,255,255,.03); }
+.kamp-tid {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em;
+  color: var(--muted);
+}
+.kamp-tid.ferdig { color: var(--accent); }
+.kamp-tid.paagaar { color: #ef2b2d; font-weight: 700; }
+.kamp-hjemme {
+  display: flex; align-items: center; gap: 8px;
+}
+.kamp-borte {
+  display: flex; align-items: center; gap: 8px;
+  justify-content: flex-end;
+}
+.kamp-flag { font-size: 16px; line-height: 1; flex-shrink: 0; }
+.kamp-navn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 800; text-transform: uppercase;
+  color: var(--text); line-height: 1;
+}
+.kamp-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px; line-height: 1; color: var(--gold);
+  text-align: center; white-space: nowrap;
+}
+.kamp-score.venter {
+  font-size: 16px; color: var(--border);
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+}
+.kamp-gruppe {
+  font-size: 10px; color: var(--muted);
+  letter-spacing: .08em; text-transform: uppercase;
+  text-align: right; line-height: 1.3;
+}
+
+
+
+/* ── KAMPER-FANE ── */
+.kamper-intro {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 16px; margin-bottom: 18px;
+}
+.kamper-intro h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px; line-height: 1; color: var(--accent);
+}
+.kamper-intro p {
+  color: var(--muted); font-size: 13px; margin-top: 6px; max-width: 560px;
+}
+.kamper-oppdatert {
+  color: var(--muted); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.kamper-filter {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px;
+}
+.kamper-btn {
+  background: transparent; color: var(--muted); border: 1.5px solid var(--border);
+  border-radius: 999px; padding: 7px 13px; cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.kamper-btn.active, .kamper-btn:hover { color: #000; background: var(--accent); border-color: var(--accent); }
+
+/* ── TABELL-FANE ── */
+.tabell-intro {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:16px; margin-bottom:18px;
+}
+.tabell-intro h2 {
+  font-family:'Bebas Neue',sans-serif; font-size:42px; line-height:1; color:var(--accent);
+}
+.tabell-intro p { color:var(--muted); font-size:13px; margin-top:6px; max-width:600px; }
+.tabell-oppdatert {
+  color:var(--muted); font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap;
+}
+.tabell-undernav, .gruppe-filter, .utslag-filter {
+  display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;
+}
+.tabell-del-btn, .gruppe-filter-btn, .utslag-filter-btn {
+  background:transparent; color:var(--muted); border:1.5px solid var(--border);
+  border-radius:999px; padding:7px 13px; cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase;
+}
+.tabell-del-btn.active, .gruppe-filter-btn.active, .utslag-filter-btn.active,
+.tabell-del-btn:hover, .gruppe-filter-btn:hover, .utslag-filter-btn:hover {
+  color:#000; background:var(--accent); border-color:var(--accent);
+}
+.tabell-panel { display:none; }
+.tabell-panel.active { display:block; }
+.gruppe-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.gruppe-kort {
+  background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden;
+}
+.gruppe-kort-header {
+  display:flex; justify-content:space-between; align-items:center; padding:12px 14px;
+  background:var(--surface); border-bottom:1px solid var(--border);
+}
+.gruppe-kort-header h3 {
+  font-family:'Barlow Condensed',sans-serif; font-size:17px; font-weight:900;
+  text-transform:uppercase; letter-spacing:.06em;
+}
+.gruppe-kort-header span { color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.08em; }
+.gruppe-tabell-header, .gruppe-tabell-rad {
+  display:grid; grid-template-columns:26px minmax(0,1fr) 28px 28px 28px 28px 50px 32px;
+  gap:4px; align-items:center; padding:8px 10px;
+}
+.gruppe-tabell-header {
+  color:var(--muted); font-family:'Barlow Condensed',sans-serif; font-size:9px;
+  font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  border-bottom:1px solid rgba(30,45,74,.65);
+}
+.gruppe-tabell-rad { border-bottom:1px solid rgba(30,45,74,.45); min-height:43px; }
+.gruppe-tabell-rad:last-child { border-bottom:none; }
+.gruppe-plass { font-family:'Bebas Neue',sans-serif; font-size:18px; text-align:center; color:var(--muted); }
+.gruppe-lag { min-width:0; display:flex; align-items:center; gap:7px; }
+.gruppe-lag-navn {
+  min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:800; text-transform:uppercase;
+}
+.gruppe-klar {
+  display:block; width:max-content; margin-top:2px; padding:2px 5px; border-radius:999px;
+  color:var(--accent); border:1px solid rgba(239,43,45,.3); background:rgba(239,43,45,.08);
+  font-size:8px; font-weight:900; letter-spacing:.07em; text-transform:uppercase;
+}
+.gruppe-tall { text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; }
+.gruppe-poeng { text-align:center; font-family:'Bebas Neue',sans-serif; font-size:19px; color:var(--gold); }
+.utslag-oppsummering { color:var(--muted); font-size:13px; margin:-4px 0 14px; }
+.utslag-liste { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.utslag-kamp {
+  background:var(--card); border:1px solid var(--border); border-radius:12px; padding:13px 14px;
+}
+.utslag-kamp.tippebar { border-color:rgba(239,43,45,.38); box-shadow:0 0 0 1px rgba(239,43,45,.05) inset; }
+.utslag-kamp-top { display:flex; justify-content:space-between; gap:10px; margin-bottom:10px; }
+.utslag-matchno {
+  font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:900;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent);
+}
+.utslag-dato { color:var(--muted); font-size:10px; text-align:right; }
+.utslag-lag { display:flex; align-items:center; gap:8px; min-height:31px; }
+.utslag-lag + .utslag-lag { border-top:1px solid rgba(30,45,74,.55); margin-top:5px; padding-top:5px; }
+.utslag-lag-navn {
+  font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:900; text-transform:uppercase;
+}
+.utslag-lag-navn.placeholder { color:var(--muted); font-size:13px; }
+.utslag-kamp-footer { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:11px; }
+.utslag-status {
+  color:var(--muted); font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase;
+}
+.utslag-status.open { color:var(--accent); }
+.utslag-tips-lenke {
+  display:inline-block; text-decoration:none; background:var(--accent); color:#fff;
+  border-radius:999px; padding:7px 11px; font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:900; letter-spacing:.06em; text-transform:uppercase;
+}
+
+/* ── KAMPREFERAT PER KAMP ── */
+.kampoversikt-rad { grid-template-columns:72px 1fr 76px 1fr 86px auto; }
+.kampreferat-action-desktop { display:flex; justify-content:flex-end; }
+.kampreferat-btn {
+  border:1px solid rgba(239,43,45,.35); background:rgba(239,43,45,.08); color:var(--accent);
+  border-radius:999px; padding:7px 10px; cursor:pointer; white-space:nowrap;
+  font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:900;
+  letter-spacing:.07em; text-transform:uppercase;
+}
+.kampreferat-btn:hover { background:var(--accent); color:#fff; }
+.kampreferat-btn.live { background:var(--accent); color:#fff; }
+.kampreferat-btn:disabled { cursor:default; color:var(--muted); border-color:var(--border); background:transparent; }
+.kampmobil-actions { display:none; margin-top:10px; padding-top:9px; border-top:1px solid rgba(30,45,74,.65); }
+.referat-statusmerke {
+  display:inline-block; border:1px solid var(--border); border-radius:999px; padding:4px 8px;
+  color:var(--muted); font-family:'Barlow Condensed',sans-serif; font-size:10px;
+  font-weight:900; letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px;
+}
+.referat-statusmerke.live { color:#fff; background:var(--accent); border-color:var(--accent); }
+.referat-tekst { color:rgba(232,240,255,.95); font-size:15px; line-height:1.7; }
+.referat-tekst p + p { margin-top:12px; }
+.referat-kilde { color:var(--muted); font-size:11px; margin-top:16px; }
+
+@media (max-width:640px) {
+  .tabell-intro { display:block; }
+  .tabell-intro h2 { font-size:34px; }
+  .tabell-oppdatert { margin-top:6px; }
+  .tabell-undernav, .gruppe-filter, .utslag-filter {
+    flex-wrap:nowrap; overflow-x:auto; margin-left:-16px; margin-right:-16px; padding:0 16px 5px;
+    scrollbar-width:none;
+  }
+  .tabell-undernav::-webkit-scrollbar, .gruppe-filter::-webkit-scrollbar, .utslag-filter::-webkit-scrollbar { display:none; }
+  .tabell-del-btn, .gruppe-filter-btn, .utslag-filter-btn { flex:0 0 auto; }
+  .gruppe-grid, .utslag-liste { grid-template-columns:1fr; }
+  .gruppe-tabell-header, .gruppe-tabell-rad {
+    grid-template-columns:24px minmax(0,1fr) 28px 28px 50px 32px;
+  }
+  .gruppe-col-u, .gruppe-col-t { display:none; }
+  .kampoversikt-action-desktop { display:none; }
+  .kampmobil-actions { display:flex; }
+  .kampmobil-actions .kampreferat-btn { width:100%; padding:9px 12px; }
+}
+
+.kampdato-gruppe { margin-bottom: 24px; }
+.kampdato-tittel {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 8px; padding-left: 2px;
+}
+.kampoversikt-liste {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  background: var(--card);
+}
+.kampoversikt-rad {
+  display: grid; grid-template-columns: 72px 1fr 76px 1fr 86px auto;
+  gap: 10px; align-items: center; padding: 12px 14px;
+  border-bottom: 1px solid rgba(30,45,74,.55); cursor: pointer;
+  transition: background .15s, transform .15s;
+}
+.kampoversikt-rad:last-child { border-bottom: none; }
+.kampoversikt-rad:nth-child(odd) { background: var(--surface); }
+.kampoversikt-rad:nth-child(even) { background: var(--card); }
+.kampoversikt-rad:hover { background: rgba(0,230,118,.06); }
+.kampoversikt-tid {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .06em; color: var(--muted);
+}
+.kampoversikt-lag {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; color: var(--text); min-width: 0;
+}
+.kampoversikt-lag.borte { justify-content: flex-end; text-align: right; }
+.kampoversikt-lag span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kampoversikt-score {
+  font-family: 'Bebas Neue', sans-serif; font-size: 24px; line-height: 1;
+  color: var(--gold); text-align: center; white-space: nowrap;
+}
+.kampoversikt-score.venter {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+  letter-spacing: .08em; color: var(--muted); text-transform: uppercase;
+}
+.kampoversikt-status {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; text-align: right; color: var(--muted);
+}
+.kampoversikt-status.ferdig { color: var(--accent); }
+.kampoversikt-status.live { color: #ef2b2d; }
+.kamp-modal-resultat {
+  display: flex; justify-content: space-between; gap: 12px; align-items: center;
+  background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 20px;
+}
+.kamp-modal-score {
+  font-family: 'Bebas Neue', sans-serif; font-size: 42px; line-height: 1; color: var(--gold);
+}
+.kamp-modal-tid {
+  color: var(--muted); font-size: 12px; font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.poenggivere-tittel {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 4px;
+}
+.poenggiver-rad {
+  display: grid; grid-template-columns: 1fr 92px 46px; gap: 10px; align-items: center;
+  padding: 9px 4px; border-bottom: 1px solid rgba(30,45,74,.45);
+}
+.poenggiver-rad:last-child { border-bottom: none; }
+.poenggiver-navn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; color: var(--text);
+}
+.poenggiver-tips {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px; text-align: center; color: var(--text);
+}
+.poenggiver-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 22px; text-align: right; color: var(--gold);
+}
+
+.kampoversikt-mobile { display: none; }
+
+@media (max-width: 640px) {
+  /* Kun mobiltilpasning for Kamper-fanen */
+  .kamper-intro { display: block; margin-bottom: 12px; }
+  .kamper-intro h2 { font-size: 34px; }
+  .kamper-intro p { display: none; }
+  .kamper-oppdatert { margin-top: 6px; font-size: 10px; }
+
+  .kamper-filter {
+    flex-wrap: nowrap; overflow-x: auto; gap: 8px;
+    margin: 0 -16px 14px; padding: 0 16px 6px;
+    scrollbar-width: none;
+  }
+  .kamper-filter::-webkit-scrollbar { display: none; }
+  .kamper-btn {
+    flex: 0 0 auto; padding: 8px 13px; font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .kampdato-gruppe { margin-bottom: 16px; }
+  .kampdato-tittel { font-size: 11px; margin-bottom: 7px; padding-left: 3px; }
+  .kampoversikt-liste {
+    border: 0; border-radius: 0; overflow: visible; background: transparent;
+  }
+  .kampoversikt-rad {
+    display: block; padding: 0; margin-bottom: 10px;
+    border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; background: var(--card);
+    box-shadow: 0 10px 24px rgba(0,0,0,.16);
+  }
+  .kampoversikt-rad:nth-child(odd),
+  .kampoversikt-rad:nth-child(even) { background: var(--card); }
+  .kampoversikt-rad > .kampoversikt-tid,
+  .kampoversikt-rad > .kampoversikt-lag,
+  .kampoversikt-rad > .kampoversikt-score,
+  .kampoversikt-rad > .kampoversikt-status { display: none; }
+
+  .kampoversikt-mobile { display: block; padding: 12px 14px 11px; }
+  .kampmobil-top {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; margin-bottom: 10px;
+  }
+  .kampmobil-tid {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800;
+    letter-spacing: .08em; color: var(--muted);
+  }
+  .kampmobil-status {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 900;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+    border: 1px solid rgba(122,138,170,.35); border-radius: 999px;
+    padding: 4px 8px;
+  }
+  .kampmobil-status.ferdig { color: var(--accent); border-color: rgba(239,43,45,.36); }
+  .kampmobil-status.live { color: #fff; background: #ef2b2d; border-color: #ef2b2d; }
+  .kampmobil-lagrow {
+    display: grid; grid-template-columns: minmax(0,1fr) auto;
+    align-items: center; gap: 10px; min-height: 30px;
+  }
+  .kampmobil-lagnavn {
+    min-width: 0; display: flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900;
+    text-transform: uppercase; color: var(--text);
+  }
+  .kampmobil-lagnavn .kampmobil-navn {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .kampmobil-score {
+    font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: .9;
+    color: var(--gold); min-width: 24px; text-align: right;
+  }
+  .kampmobil-score.venter { color: var(--muted); opacity: .7; }
+  .kampmobil-poenginfo {
+    margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(30,45,74,.65);
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  }
+  .kampmobil-poenginfo.aktiv { color: var(--accent2); }
+
+  .poenggiver-rad { grid-template-columns: 1fr 70px 42px; }
+
+  .recap-poeng-header { align-items: flex-start; }
+  .recap-poeng-row { grid-template-columns: 56px minmax(0,1fr); gap: 8px; }
+  .recap-poeng-label { min-height: 24px; font-size: 16px; }
+  .recap-poeng-chip { font-size: 11px; padding: 6px 8px; }
+}
+
+
+
+
+/* ── BAKGRUNNSMUSIKK ── */
+.musikk-kontroll {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(232,240,255,.22);
+  background: rgba(6,9,18,.28);
+  color: rgba(232,240,255,.76);
+  border-radius: 999px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 4px rgba(0,0,0,.75);
+  transition: color .15s, border-color .15s, background .15s;
+}
+.musikk-kontroll:hover,
+.musikk-kontroll.aktiv {
+  color: var(--text);
+  border-color: rgba(239,43,45,.46);
+  background: rgba(239,43,45,.11);
+}
+.musikk-kontroll .musikk-ikon {
+  font-size: 12px;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .musikk-kontroll {
+    top: 11px;
+    left: 11px;
+    padding: 4px 7px;
+    font-size: 8px;
+    gap: 4px;
+  }
+  .musikk-kontroll .musikk-ikon { font-size: 10px; }
+}
+@media print {
+  .musikk-kontroll { display: none !important; }
+}
+
+/* ── LOKAL BRUKERPROFIL OG DAGLIG OPPSUMMERING ── */
+.profil-linje {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 4;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  color: rgba(232,240,255,.68);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 4px rgba(0,0,0,.75);
+}
+.profil-linje.vis { display: flex; }
+.profil-linje strong { color: var(--text); font-size: 12px; font-weight: 900; }
+.profil-linje .profil-bytte-btn {
+  padding: 4px 8px;
+  background: rgba(6,9,18,.28);
+  font-size: 9px;
+  line-height: 1.2;
+  text-shadow: none;
+}
+@media (max-width: 640px) {
+  .profil-linje {
+    top: 11px;
+    right: 11px;
+    gap: 7px;
+    font-size: 9px;
+    letter-spacing: .035em;
+  }
+  .profil-linje strong { font-size: 10px; }
+  .profil-linje .profil-bytte-btn { padding: 3px 6px; font-size: 8px; }
+}
+.profil-bytte-btn,
+.recap-bytte-btn,
+.profil-bekreft-btn,
+.recap-lukk-btn {
+  border: 1px solid rgba(239,43,45,.38);
+  background: rgba(239,43,45,.08);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 11px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.profil-bytte-btn:hover,
+.recap-bytte-btn:hover,
+.profil-bekreft-btn:hover,
+.recap-lukk-btn:hover { background: var(--accent); color: #fff; }
+.profil-velger-intro { color: var(--muted); font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+.profil-feil { margin-top: 12px; padding: 10px 12px; border: 1px solid rgba(255,90,90,.35); border-radius: 8px; background: rgba(255,90,90,.08); color: #ff9090; font-size: 13px; }
+.profil-velger-select {
+  width: 100%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 11px 12px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  outline: none;
+}
+.profil-velger-select:focus { border-color: var(--accent); }
+.profil-velger-actions,
+.recap-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 16px; }
+.profil-bekreft-btn,
+.recap-lukk-btn { background: var(--accent); color: #fff; padding: 10px 16px; }
+.recap-topplinje {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 20px; border-bottom: 1px solid var(--border);
+  color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
+}
+.recap-topplinje strong { color: var(--text); }
+.recap-seksjon + .recap-seksjon { margin-top: 20px; }
+.recap-seksjon-tittel {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-bottom: 7px; border-bottom: 1px solid var(--border);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 900;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+}
+.recap-total { color: var(--accent); font-size: 14px; }
+.recap-rad {
+  display: grid; grid-template-columns: minmax(0,1fr) auto auto;
+  gap: 10px; align-items: center; padding: 10px 2px;
+  border-bottom: 1px solid rgba(30,45,74,.45);
+}
+.recap-rad:last-child { border-bottom: none; }
+.recap-kampnavn {
+  min-width: 0; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 800; text-transform: uppercase;
+}
+.recap-kampmeta { color: var(--muted); font-size: 10px; font-weight: 500; text-transform: none; margin-top: 2px; }
+.recap-tips { text-align: right; color: var(--text); font-family: 'Bebas Neue', sans-serif; font-size: 19px; white-space: nowrap; }
+.recap-tips small { display: block; color: var(--muted); font-family: 'Barlow', sans-serif; font-size: 10px; }
+.recap-poeng { min-width: 42px; text-align: right; font-family: 'Bebas Neue', sans-serif; font-size: 21px; }
+.recap-poeng.positiv { color: var(--gold); }
+.recap-poeng.null { color: var(--muted); }
+.recap-tomt { color: var(--muted); font-size: 13px; padding: 13px 2px 2px; }
+.recap-tipstatus {
+  margin-bottom: 18px;
+  border: 1px solid rgba(239,43,45,.32);
+  border-radius: 10px;
+  padding: 12px 13px;
+  background: rgba(239,43,45,.065);
+}
+.recap-tipstatus.ok {
+  border-color: rgba(0,230,118,.34);
+  background: rgba(0,230,118,.075);
+}
+.recap-tipstatus-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.recap-tipstatus-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.recap-tipstatus-round {
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.recap-tipstatus-text {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.recap-tipstatus-action {
+  display: inline-flex;
+  margin-top: 10px;
+  border: 1px solid rgba(239,43,45,.38);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 7px 11px;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.recap-tipstatus-action:hover { filter: brightness(1.06); }
+@media (max-width: 560px) {
+  .recap-rad { grid-template-columns: minmax(0,1fr) auto; }
+  .recap-poeng { grid-column: 2; }
+  .recap-topplinje { align-items: flex-start; }
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(6,9,18,.88);
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  padding: 24px 16px;
+}
+.modal-overlay.vis { display: flex; align-items: flex-start; justify-content: center; }
+.modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%; max-width: 640px;
+  margin: auto;
+  animation: modalInn .2s ease;
+}
+@keyframes modalInn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+.modal-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.modal-navn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; line-height: 1; color: var(--text);
+}
+.modal-meta {
+  font-size: 12px; color: var(--muted); margin-top: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.modal-lukk {
+  background: none; border: none; color: var(--muted);
+  font-size: 22px; cursor: pointer; padding: 4px; line-height: 1;
+  flex-shrink: 0; margin-left: 12px;
+  transition: color .15s;
+}
+.modal-lukk:hover { color: var(--text); }
+
+.modal-stats {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+.modal-stat {
+  flex: 1; text-align: center; padding: 14px 8px;
+  border-right: 1px solid var(--border);
+}
+.modal-stat:last-child { border-right: none; }
+.modal-stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; line-height: 1; color: var(--accent);
+}
+.modal-stat-lbl {
+  font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-top: 3px;
+}
+
+.modal-body { padding: 16px 20px 20px; }
+
+.modal-runde-tittel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted); padding: 10px 0 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px; margin-top: 8px;
+}
+.modal-runde-tittel:first-child { margin-top: 0; }
+
+.modal-kamp {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px; align-items: center;
+  padding: 7px 4px;
+  border-bottom: 1px solid rgba(30,45,74,.4);
+  font-size: 13px;
+}
+.modal-kamp:last-child { border-bottom: none; }
+
+.modal-kamp-lag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13.5px; font-weight: 700; text-transform: uppercase;
+  color: var(--text); line-height: 1.2;
+}
+.modal-kamp-lag .dato { font-size: 10px; color: var(--muted); font-weight: 400; text-transform: none; display: block; margin-top: 1px; }
+
+.modal-kamp-score {
+  text-align: center; min-width: 110px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px;
+}
+.modal-score-tippa {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+  color: var(--text);
+}
+.modal-score-tippa.riktig { color: var(--accent); }
+.modal-score-tippa.delvis { color: var(--gold); }
+.modal-score-actual {
+  font-size: 11px; color: var(--muted); margin-top: 1px;
+}
+.modal-kamp-poeng {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  min-width: 36px; text-align: right;
+}
+.modal-kamp-poeng.p0 { color: var(--muted); }
+.modal-kamp-poeng.pp { color: var(--text); }
+.modal-kamp-poeng.phigh { color: var(--gold); }
+.modal-kamp-pending { color: var(--muted); font-size: 11px; text-align: right; }
+
+.ingen-data {
+  text-align: center; padding: 64px 24px; color: var(--muted);
+}
+.ingen-data .stor { font-size: 48px; margin-bottom: 16px; }
+.ingen-data h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px; font-weight: 800; text-transform: uppercase;
+  color: var(--text); margin-bottom: 8px;
+}
+.ingen-data a {
+  display: inline-block; margin-top: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 6px;
+  background: var(--accent); color: #000; text-decoration: none;
+  transition: all .2s;
+}
+.ingen-data a:hover { background: #00ff85; transform: translateY(-1px); }
+
+.sist-oppdatert {
+  text-align: center; font-size: 11px; color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif; letter-spacing: .08em;
+  padding: 16px 0 0;
+}
+
+.runde-filter {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.runde-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px;
+  border: 1.5px solid var(--border);
+  background: transparent; color: var(--muted); cursor: pointer; transition: all .15s;
+}
+.runde-btn:hover { color: var(--text); border-color: var(--muted); }
+.runde-btn.active { background: rgba(0,230,118,.1); border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 600px) {
+  .podium { grid-template-columns: 1fr 1.05fr 1fr; gap: 6px; }
+  .podium-navn { font-size: 13px; }
+  .podium-plass.p1 { min-height: 160px; padding-top: 40px; border-color: rgba(255,214,0,.4); }
+  .podium-plass.p2 { min-height: 130px; padding-top: 20px; }
+  .podium-plass.p3 { min-height: 105px; padding-top: 8px; border-color: rgba(255,138,101,.3); }
+  .podium-plass.p1 .podium-poeng { color: var(--gold) !important; }
+  .podium-plass.p3 .podium-poeng { color: var(--bronze) !important; }
+  .stilling-header,
+  .stilling-rad { grid-template-columns: 32px 1fr 52px 52px 80px; }
+  .stilling-header .col-gruppe,
+  .stilling-rad .col-gruppe { display: none; }
+  .stat-item { padding: 16px 20px; }
+  .modal-kamp { grid-template-columns: 1fr auto auto; }
+}
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stilling-rad { page-break-inside: avoid; }
+}
+
+/* ── BONUSSTATUS ── */
+.bonusstatus-wrap{margin-bottom:24px}
+.bonusstatus-title{font-family:'Bebas Neue',sans-serif;font-size:36px;line-height:1;color:var(--accent);margin-bottom:6px}
+.bonusstatus-sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.bonusstatus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.bonusstatus-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.bonusstatus-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.bonusstatus-value{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;line-height:1.15}
+.bonusstatus-meta{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.35}
+.bonusstatus-rounds{display:grid;gap:7px}
+.bonusstatus-round{display:grid;grid-template-columns:100px 1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:10px 12px}
+.bonusstatus-round-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase}
+.bonusstatus-round-text{font-size:12px;color:var(--muted)}
+.bonusstatus-pill{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;border:1px solid var(--border);border-radius:999px;padding:4px 8px;color:var(--muted);white-space:nowrap}
+.bonusstatus-pill.ferdig{color:var(--accent);border-color:rgba(0,230,118,.35);background:rgba(0,230,118,.08)}
+.bonusstatus-pill.paagaar,.bonusstatus-pill.forelopig{color:var(--gold);border-color:rgba(255,214,0,.35);background:rgba(255,214,0,.08)}
+.modal-bonus{border:1px solid var(--border);border-radius:9px;padding:11px 12px;margin-bottom:8px;background:var(--surface)}
+.modal-bonus-top{display:flex;justify-content:space-between;gap:12px}
+.modal-bonus-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px}
+.modal-bonus-answer{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
+.modal-bonus-poeng{font-family:'Bebas Neue',sans-serif;font-size:20px;white-space:nowrap}
+@media(max-width:640px){.bonusstatus-grid{grid-template-columns:1fr}.bonusstatus-round{grid-template-columns:78px 1fr}.bonusstatus-pill{grid-column:2;width:max-content}.bonusstatus-title{font-size:32px}}
+
+/* ── SEN PÅMELDING ── */
+.senpamelding-merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  margin-top: 5px;
+  padding: 3px 7px;
+  border: 1px solid rgba(255,214,0,.34);
+  border-radius: 999px;
+  background: rgba(255,214,0,.08);
+  color: var(--gold);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.senpamelding-merke.venter {
+  border-color: rgba(122,138,170,.34);
+  background: rgba(122,138,170,.07);
+  color: var(--muted);
+}
+.startpoeng-banner {
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,214,0,.28);
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(255,214,0,.08), rgba(239,43,45,.04));
+}
+.startpoeng-banner-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.startpoeng-banner-text {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.startpoeng-info {
+  margin: 0 0 16px;
+  padding: 13px 14px;
+  border: 1px solid rgba(255,214,0,.25);
+  border-radius: 9px;
+  background: rgba(255,214,0,.055);
+}
+.startpoeng-info-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.startpoeng-info-value {
+  color: var(--text);
+  white-space: nowrap;
+}
+.startpoeng-info-text {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+@media (max-width: 600px) {
+  .startpoeng-info-title { align-items: flex-start; }
+  .startpoeng-banner { padding: 12px 13px; }
+}
+
+
+/* ── TEST: VINNERFEIRING ────────────────────────────────────────── */
+.vinner-test-badge {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 1300;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,214,0,.4);
+  background: rgba(13,19,32,.92);
+  color: var(--gold);
+  border-radius: 999px;
+  padding: 9px 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  cursor: pointer;
+}
+.vinner-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255,214,0,.18), transparent 34%),
+    radial-gradient(circle at 12% 80%, rgba(239,43,45,.20), transparent 32%),
+    rgba(6,9,18,.92);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+.vinner-overlay.vis { display: flex; }
+.vinner-card {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 100%);
+  border: 1px solid rgba(255,214,0,.34);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(21,32,53,.98), rgba(13,19,32,.98));
+  box-shadow: 0 30px 110px rgba(0,0,0,.58), 0 0 70px rgba(255,214,0,.10);
+  padding: 30px 22px 24px;
+  text-align: center;
+  animation: vinnerCardInn .45s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes vinnerCardInn {
+  from { opacity: 0; transform: translateY(22px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.vinner-test-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+  background: var(--gold);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.vinner-trophy {
+  font-size: clamp(58px, 16vw, 104px);
+  line-height: 1;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 12px 22px rgba(255,214,0,.20));
+  animation: trophyPop 1.25s ease-in-out infinite;
+}
+@keyframes trophyPop {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+.vinner-kicker {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.vinner-title {
+  margin-top: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 13vw, 86px);
+  line-height: .9;
+  color: var(--text);
+}
+.vinner-navn {
+  color: var(--gold);
+  text-shadow: 0 0 22px rgba(255,214,0,.15);
+}
+.vinner-poeng {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 18px;
+  border: 1px solid rgba(255,214,0,.25);
+  background: rgba(255,214,0,.08);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  color: var(--gold);
+}
+.vinner-poeng strong { font-size: 28px; line-height: 1; }
+.vinner-subtekst {
+  max-width: 470px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.vinner-podium-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 22px;
+}
+.vinner-mini-plass {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+  padding: 12px 8px;
+  min-width: 0;
+}
+.vinner-mini-medalje { font-size: 24px; }
+.vinner-mini-navn {
+  margin-top: 5px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vinner-mini-poeng { color: var(--muted); font-size: 12px; margin-top: 3px; }
+.vinner-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.vinner-btn {
+  border: 1px solid rgba(255,214,0,.38);
+  border-radius: 999px;
+  background: var(--gold);
+  color: #000;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.vinner-btn.secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.vinner-confetti {
+  position: absolute;
+  top: -18px;
+  width: 9px;
+  height: 16px;
+  border-radius: 2px;
+  opacity: .96;
+  animation-name: confettiFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes confettiFall {
+  0% { transform: translate3d(0,-20px,0) rotate(0deg); }
+  100% { transform: translate3d(var(--drift),110vh,0) rotate(720deg); }
+}
+@media (max-width: 560px) {
+  .vinner-card { padding: 26px 16px 20px; }
+  .vinner-podium-mini { grid-template-columns: 1fr; }
+  .vinner-test-badge { left: 10px; bottom: 10px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+<button class="vinner-test-badge" type="button" onclick="visVinnerFeiring(true)">🏆 Test vinnerfeiring</button>
+
+<audio id="backgroundMusic" loop preload="metadata">
+  <source src="vm-theme.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="lukkModalKlikk(event)">
+  <div class="modal" id="modalInnhold"></div>
+</div>
+
+
+<!-- HERO -->
+<div class="hero">
+  <button type="button" class="musikk-kontroll" id="musikkKnapp" onclick="toggleBakgrunnsmusikk(event)" aria-pressed="false" title="Slå bakgrunnsmusikk av eller på">
+    <span class="musikk-ikon" id="musikkIkon">🔊</span>
+    <span id="musikkTekst">Musikk</span>
+  </button>
+  <div class="profil-linje" id="profilLinje"></div>
+  <h1>VM <span class="year">2026</span></h1>
+  <div class="hero-sub">Tippekonkurranse · USA / Canada / Mexico</div>
+
+</div>
+
+
+
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-tab active" onclick="byttSeksjon('stilling', this)">Stilling</div>
+  <div class="nav-tab" onclick="byttSeksjon('tabell-seksjon', this)">Tabell</div>
+  <div class="nav-tab" onclick="byttSeksjon('kamper-seksjon', this)">Kamper</div>
+  <div class="nav-tab" onclick="byttSeksjon('detaljer-seksjon', this)">Detaljer</div>
+  <div class="nav-tab" onclick="byttSeksjon('regler', this)">Regler</div>
+</div>
+
+<div class="container">
+
+  <!-- STILLING -->
+  <div class="seksjon active" id="stilling">
+    <div id="stillingsinnhold">
+      <div class="ingen-data">
+        <div class="stor">⏳</div>
+        <h3>Laster stilling...</h3>
+        <p>Henter data fra serveren</p>
+      </div>
+    </div>
+    <div class="sist-oppdatert" id="sistOppdatert"></div>
+  </div>
+
+  <!-- TABELL -->
+  <div class="seksjon" id="tabell-seksjon">
+    <div class="tabell-intro">
+      <div>
+        <h2>Tabell</h2>
+        <p>FIFAs gruppetabeller og den fortløpende utslagsbraketten. Lag som er bekreftet i Runde av 32 markeres automatisk.</p>
+      </div>
+      <div class="tabell-oppdatert" id="tabellOppdatert"></div>
+    </div>
+    <div class="tabell-undernav">
+      <button class="tabell-del-btn active" data-tabell-del="grupper" onclick="visTabellDel('grupper', this)">Gruppespill</button>
+      <button class="tabell-del-btn" data-tabell-del="utslag" onclick="visTabellDel('utslag', this)">Utslagsrunder</button>
+    </div>
+    <div class="tabell-panel active" id="tabell-grupper">
+      <div class="gruppe-filter" id="gruppeFilter"></div>
+      <div class="gruppe-grid" id="gruppeTabeller"></div>
+    </div>
+    <div class="tabell-panel" id="tabell-utslag">
+      <div class="utslag-filter" id="utslagFilter"></div>
+      <div class="utslag-oppsummering" id="utslagOppsummering"></div>
+      <div class="utslag-liste" id="utslagInnhold"></div>
+    </div>
+  </div>
+
+  <!-- KAMPER -->
+  <div class="seksjon" id="kamper-seksjon">
+    <div class="kamper-intro">
+      <div>
+        <h2>Kamper</h2>
+        <p>Alle kamper vises med norsk dato og tid. Kamp-ID og poengmatching bruker fortsatt canonical OpenFootball-ID.</p>
+      </div>
+      <div class="kamper-oppdatert" id="kamperOppdatert"></div>
+    </div>
+    <div class="kamper-filter" id="kamperFilter"></div>
+    <div id="kamperInnhold"></div>
+  </div>
+
+  <!-- DETALJER -->
+  <div class="seksjon" id="detaljer-seksjon">
+    <div id="bonusstatus"></div>
+    <div class="runde-filter" id="rundeFilter"></div>
+    <div id="detaljertabell"></div>
+  </div>
+
+  <!-- REGLER -->
+  <div class="seksjon" id="regler">
+    <div style="max-width:600px">
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:36px;margin-bottom:24px;color:var(--accent)">Poengregler</h2>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:32px">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Type</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Riktig utfall</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Eksakt resultat 90 min</th>
+          </tr>
+        </thead>
+        <tbody id="reglerTabell"></tbody>
+      </table>
+      <div style="background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Turneringsvinner</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold)">70 poeng</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">Tippa ved registrering — kan ikke endres</div>
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px;font-size:13px;color:var(--muted);line-height:1.5">
+        Alle kamper poengberegnes på resultatet i løpet av de første 90 minuttene, inkludert tilleggstid. Ekstraomganger, straffer og hvilket lag som går videre påvirker ikke kamp-poengene.
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Bonusspørsmål</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold)">10 + 20 poeng</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5">Rundebonus gir 10 poeng. De tre spørsmålene for hele utslagsfasen gir 20 poeng hver. Målbaserte spørsmål bruker de første 90 minuttene, inkludert tilleggstid.</div>
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid rgba(255,214,0,.28);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Sen påmelding</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.55">Nye deltakere kan begynne å tippe åpne utslagskamper med én gang. Når gruppespillet er ferdig, får de avrundet gjennomsnittlig gruppespillscore blant deltakerne som leverte gruppespillet som startpoeng. Allerede stengte kamper kan ikke tippes.</div>
+      </div>
+      <div style="margin-top:24px;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:20px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Maks poeng totalt</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent)">855</div>
+      </div>
+      <div style="margin-top:24px;text-align:center">
+        <a href="tippe/" style="display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:14px 40px;border-radius:6px;background:var(--accent);color:#000;text-decoration:none">
+          ⚽ Lever tipping
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.write('<script src="data/data.js?v=' + Date.now() + '"><\/script>');
+</script>
+<script>
+const REGLER = [
+  { type: "Gruppespill",   utfall: 2, eksakt: 4 },
+  { type: "Runde av 32",   utfall: 3, eksakt: 4 },
+  { type: "Runde av 16",   utfall: 4, eksakt: 4 },
+  { type: "Kvartfinale",   utfall: 5, eksakt: 4 },
+  { type: "Semifinale",    utfall: 6, eksakt: 4 },
+  { type: "Finale",        utfall: 7, eksakt: 4 },
+];
+
+document.getElementById("reglerTabell").innerHTML = REGLER.map(r => `
+  <tr>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">${r.type}</td>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text)">${r.utfall}p</td>
+    <td style="padding:10px 12px;border-bottom:1px solid rgba(30,45,74,.6);text-align:right;font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--accent)">+${r.eksakt}p</td>
+  </tr>
+`).join("");
+
+
+
+
+
+// ── BAKGRUNNSMUSIKK ───────────────────────────────────────
+const MUSIC_KEY = "vm2026_music_enabled";
+const MUSIC_VOLUME = 0.12;
+let musikkStartforsokGjort = false;
+
+function bakgrunnsmusikk() {
+  return document.getElementById("backgroundMusic");
+}
+
+function musikkErOnsket() {
+  return localStorage.getItem(MUSIC_KEY) !== "false";
+}
+
+function oppdaterMusikkKnapp() {
+  const knapp = document.getElementById("musikkKnapp");
+  const ikon = document.getElementById("musikkIkon");
+  const tekst = document.getElementById("musikkTekst");
+  if (!knapp || !ikon || !tekst) return;
+  const aktiv = musikkErOnsket();
+  knapp.classList.toggle("aktiv", aktiv);
+  knapp.setAttribute("aria-pressed", aktiv ? "true" : "false");
+  ikon.textContent = aktiv ? "🔊" : "🔇";
+  tekst.textContent = aktiv ? "Musikk" : "Musikk av";
+}
+
+function forsokStartBakgrunnsmusikk() {
+  const lyd = bakgrunnsmusikk();
+  if (!lyd || !musikkErOnsket()) return;
+  lyd.volume = MUSIC_VOLUME;
+  const promise = lyd.play();
+  if (promise && typeof promise.catch === "function") {
+    promise.catch(() => {
+      // Nettleseren krever en brukerhandling. Neste klikk prøver igjen.
+    });
+  }
+}
+
+function toggleBakgrunnsmusikk(event) {
+  event?.stopPropagation();
+  const lyd = bakgrunnsmusikk();
+  const nyVerdi = !musikkErOnsket();
+  localStorage.setItem(MUSIC_KEY, nyVerdi ? "true" : "false");
+  if (lyd) {
+    lyd.volume = MUSIC_VOLUME;
+    if (nyVerdi) {
+      forsokStartBakgrunnsmusikk();
+    } else {
+      lyd.pause();
+    }
+  }
+  oppdaterMusikkKnapp();
+}
+
+function initBakgrunnsmusikk() {
+  const lyd = bakgrunnsmusikk();
+  if (!lyd) return;
+  lyd.volume = MUSIC_VOLUME;
+  oppdaterMusikkKnapp();
+
+  const startVedBrukerhandling = () => {
+    if (!musikkStartforsokGjort) musikkStartforsokGjort = true;
+    forsokStartBakgrunnsmusikk();
+  };
+  document.addEventListener("pointerdown", startVedBrukerhandling, { once: true, passive: true });
+  document.addEventListener("keydown", startVedBrukerhandling, { once: true });
+}
+
+// ── LOKAL BRUKERPROFIL OG FEMTIMERSOPPSUMMERING ───────────
+const VIEWER_KEY = "vm2026_viewer_id";
+const RECAP_KEY_PREFIX = "vm2026_recap_last_shown_";
+const RECAP_INTERVAL_MS = 5 * 60 * 60 * 1000;
+const INNLEVERINGSSTATUS_URL = "data/innleveringsstatus.json";
+const STATUS_RUNDER_REKKEFOLGE = ["r32", "r16", "qf", "sf", "final"];
+const HELHETSBONUS_FELT = ["flest_maal_lag", "totale_maal_utslag", "golden_boot"];
+let modalKanLukkes = true;
+let modalOnClose = null;
+
+function finnProfilDeltaker(id = localStorage.getItem(VIEWER_KEY)) {
+  if (!id || typeof VM_DATA === "undefined") return null;
+  return (VM_DATA.stilling || []).find(d => d.deltaker_id === id) || null;
+}
+
+function oppdaterProfilLinje() {
+  const linje = document.getElementById("profilLinje");
+  if (!linje) return;
+  const deltaker = finnProfilDeltaker();
+  if (!deltaker) {
+    linje.classList.remove("vis");
+    linje.innerHTML = "";
+    return;
+  }
+  linje.innerHTML = `
+    <div>Innlogget: <strong>${escHTML(deltaker.navn)}</strong></div>
+    <button type="button" class="profil-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>`;
+  linje.classList.add("vis");
+}
+
+function visProfilvelger(paakrevd = false) {
+  const deltakere = [...(VM_DATA?.stilling || [])].sort((a,b) => String(a.navn).localeCompare(String(b.navn), "nb"));
+  if (!deltakere.length) return;
+  const valgt = localStorage.getItem(VIEWER_KEY) || "";
+  modalKanLukkes = !paakrevd;
+  modalOnClose = null;
+
+  document.getElementById("modalInnhold").innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">Hvem er du?</div>
+        <div class="modal-meta">Valget lagres bare i denne nettleseren</div>
+      </div>
+      ${paakrevd ? "" : '<button class="modal-lukk" onclick="lukkModal()">✕</button>'}
+    </div>
+    <div class="modal-body">
+      <div class="profil-velger-intro">Velg navnet ditt for å se din poengfangst og dine tips. Velger du feil, kan du når som helst bruke «Bytt bruker».</div>
+      <select class="profil-velger-select" id="profilVelgerSelect">
+        <option value="">— Velg deg selv —</option>
+        ${deltakere.map(d => `<option value="${escHTML(d.deltaker_id)}" ${d.deltaker_id === valgt ? "selected" : ""}>${escHTML(d.navn)}</option>`).join("")}
+      </select>
+      <div id="profilVelgerFeil"></div>
+      <div class="profil-velger-actions">
+        <button type="button" class="profil-bekreft-btn" onclick="bekreftProfilvalg()">Bruk denne profilen</button>
+      </div>
+    </div>`;
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function bekreftProfilvalg() {
+  const select = document.getElementById("profilVelgerSelect");
+  const id = select?.value || "";
+  const deltaker = finnProfilDeltaker(id);
+  if (!deltaker) {
+    document.getElementById("profilVelgerFeil").innerHTML = '<div class="profil-feil">Velg navnet ditt før du fortsetter.</div>';
+    return;
+  }
+  localStorage.setItem(VIEWER_KEY, id);
+  // Samme profil brukes som forhåndsvalg på utslagstippingen.
+  localStorage.setItem("vm2026_deltaker_id", id);
+  oppdaterProfilLinje();
+  lukkModal(true);
+  window.setTimeout(() => visRecapModal(true), 0);
+}
+
+function norskDatoMedOffset(offset = 0) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(new Date());
+  const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  const base = new Date(Date.UTC(Number(map.year), Number(map.month) - 1, Number(map.day) + offset, 12));
+  return base.toISOString().slice(0, 10);
+}
+
+function resultatTidspunktUtc(resultat) {
+  return resultat?.utcDate || resultat?.fifa_utcDate || resultat?.fd_utcDate || "";
+}
+
+function resultatDatoNorsk(resultat) {
+  const raw = resultatTidspunktUtc(resultat);
+  if (raw) {
+    const dato = new Date(raw);
+    if (!Number.isNaN(dato.getTime())) {
+      return dato.toLocaleDateString("sv-SE", { timeZone: "Europe/Oslo" });
+    }
+  }
+  return String(resultat?.dato_openfootball || resultat?.dato || "").slice(0, 10);
+}
+
+function formatKickoffKort(resultat) {
+  const raw = resultatTidspunktUtc(resultat);
+  if (!raw) return resultatDatoNorsk(resultat);
+  const dato = new Date(raw);
+  if (Number.isNaN(dato.getTime())) return resultatDatoNorsk(resultat);
+  return dato.toLocaleTimeString("nb-NO", { timeZone: "Europe/Oslo", hour: "2-digit", minute: "2-digit" });
+}
+
+function unikeProfilResultater() {
+  const map = new Map();
+  Object.entries(VM_DATA?.resultater || {}).forEach(([key, resultat]) => {
+    if (!resultat) return;
+    const canonical = resultat.canonical_kamp_id || resultat.alias_for || key;
+    const finnes = map.get(canonical);
+    if (!finnes || (finnes.alias_for && !resultat.alias_for)) {
+      map.set(canonical, { ...resultat, _key: key, _canonical: canonical });
+    }
+  });
+  return [...map.values()];
+}
+
+function tipsLookupForDeltaker(deltaker) {
+  const lookup = new Map();
+  (deltaker?.tippinger || []).forEach(tips => {
+    if (tips.type && tips.type !== "kamp") return;
+    const resultat = VM_DATA?.resultater?.[tips.kamp_id];
+    const canonical = resultat?.canonical_kamp_id || resultat?.alias_for || tips.kamp_id;
+    lookup.set(canonical, tips);
+    lookup.set(tips.kamp_id, tips);
+  });
+  return lookup;
+}
+
+function innleveringsstatusForDeltaker(deltaker) {
+  const root = INNLEVERINGSSTATUS_DATA?.deltakere || {};
+  return root[deltaker?.deltaker_id] || null;
+}
+
+function lokalUtslagStatusForDeltaker(deltaker) {
+  try {
+    const raw = JSON.parse(localStorage.getItem("vm2026_utslagsrunder") || "{}");
+    if (!raw || raw.deltaker_id !== deltaker?.deltaker_id) return null;
+    return raw;
+  } catch (error) {
+    return null;
+  }
+}
+
+function lokaltLeverteKamperForDeltaker(deltaker) {
+  try {
+    const alle = JSON.parse(localStorage.getItem("vm2026_leverte_kamper") || "{}");
+    const keyNavn = String(deltaker?.navn || "").trim().toLowerCase();
+    return {
+      ...(alle?.[deltaker?.deltaker_id] || {}),
+      ...(keyNavn ? (alle?.[keyNavn] || {}) : {})
+    };
+  } catch (error) {
+    return {};
+  }
+}
+
+function statusKickoffMs(kamp) {
+  const raw = kamp?.utcDate || kamp?.fifa_utcDate || kamp?.fd_utcDate || kamp?.dato;
+  const timestamp = Date.parse(raw || "");
+  return Number.isFinite(timestamp) ? timestamp : null;
+}
+
+function statusKampErApen(kamp) {
+  if (!kamp || kamp.tippebar !== true) return false;
+  const kickoff = statusKickoffMs(kamp);
+  return kickoff === null || Date.now() < kickoff;
+}
+
+function bonusFristMsForRunde(runde) {
+  const tider = (STATUS_DATA?.[runde]?.kamper || [])
+    .map(statusKickoffMs)
+    .filter(Number.isFinite);
+  if (tider.length) return Math.min(...tider);
+  const fallback = Date.parse(STATUS_DATA?.[runde]?.neste_frist || STATUS_DATA?.[runde]?.frist || "");
+  return Number.isFinite(fallback) ? fallback : null;
+}
+
+function bonusErApenForRunde(runde) {
+  const frist = bonusFristMsForRunde(runde);
+  return frist !== null && Date.now() < frist;
+}
+
+function finnGjeldendeUtslagsrunde() {
+  return STATUS_RUNDER_REKKEFOLGE.find(runde => {
+    const data = STATUS_DATA?.[runde];
+    const kamper = data?.kamper || [];
+    return Boolean(data?.aapen && kamper.some(statusKampErApen));
+  }) || null;
+}
+
+function levertKampIdSet(deltaker, runde) {
+  const set = new Set();
+  const statusRunde = innleveringsstatusForDeltaker(deltaker)?.runder?.[runde];
+  (statusRunde?.kamper || []).forEach(id => set.add(String(id)));
+  Object.keys(lokaltLeverteKamperForDeltaker(deltaker) || {}).forEach(id => set.add(String(id)));
+  return set;
+}
+
+function lokalBonusStatus(deltaker, runde) {
+  const raw = lokalUtslagStatusForDeltaker(deltaker);
+  if (!raw) return { bonus: false, helhetsbonus: {} };
+  const bonusSvar = raw.bonusSvar?.[runde]?.svar;
+  const bonus = bonusSvar !== undefined && bonusSvar !== null && String(bonusSvar).trim() !== "";
+  const helhetsbonus = {};
+  HELHETSBONUS_FELT.forEach(felt => {
+    const verdi = raw.helhetsbonus?.[felt];
+    if (verdi !== undefined && verdi !== null && String(verdi).trim() !== "") helhetsbonus[felt] = true;
+  });
+  return { bonus, helhetsbonus };
+}
+
+function manglendeTippeStatus(deltaker) {
+  const runde = finnGjeldendeUtslagsrunde();
+  if (!runde) return null;
+  const kamper = (STATUS_DATA?.[runde]?.kamper || []).filter(statusKampErApen);
+  const leverteKamper = levertKampIdSet(deltaker, runde);
+  const manglerKamper = kamper.filter(kamp => kamp?.id && !leverteKamper.has(String(kamp.id))).length;
+
+  let manglerBonus = 0;
+  if (bonusErApenForRunde(runde)) {
+    const statusRunde = innleveringsstatusForDeltaker(deltaker)?.runder?.[runde] || {};
+    const lokal = lokalBonusStatus(deltaker, runde);
+    if (!statusRunde.bonus && !lokal.bonus) manglerBonus += 1;
+    if (runde === "r32") {
+      HELHETSBONUS_FELT.forEach(felt => {
+        if (!statusRunde.helhetsbonus?.[felt] && !lokal.helhetsbonus?.[felt]) manglerBonus += 1;
+      });
+    }
+  }
+
+  return { runde, manglerKamper, manglerBonus };
+}
+
+function recapKampErLevert(deltaker, resultat) {
+  const runde = resultat?.runde;
+  if (!runde || !STATUS_RUNDER_REKKEFOLGE.includes(runde)) return false;
+  const leverte = levertKampIdSet(deltaker, runde);
+  return [resultat?._canonical, resultat?._key, resultat?.kamp_id, resultat?.canonical_kamp_id, resultat?.alias_for]
+    .filter(Boolean)
+    .some(id => leverte.has(String(id)));
+}
+
+function byggRecapTippeStatusHTML(deltaker) {
+  if (!INNLEVERINGSSTATUS_DATA) return "";
+  const status = manglendeTippeStatus(deltaker);
+  if (!status) return "";
+
+  const harMangler = status.manglerKamper > 0 || status.manglerBonus > 0;
+  const deler = [];
+  if (status.manglerKamper > 0) deler.push(`${status.manglerKamper} kamptips`);
+  if (status.manglerBonus > 0) deler.push(`${status.manglerBonus} bonusspørsmål`);
+  const tekst = harMangler
+    ? `${deler.join(" og ")} gjenstår.`
+    : "Du er ajour for nåværende runde.";
+  const tittel = harMangler ? "Du mangler tips" : "Alle åpne tips er levert";
+  const href = `tippe/utslagsrunder.html?runde=${encodeURIComponent(status.runde)}`;
+
+  return `<div class="recap-tipstatus ${harMangler ? "mangler" : "ok"}">
+    <div class="recap-tipstatus-top">
+      <div class="recap-tipstatus-title">${escHTML(tittel)}</div>
+      <div class="recap-tipstatus-round">${escHTML(RUNDE_NAVN[status.runde] || status.runde)}</div>
+    </div>
+    <div class="recap-tipstatus-text">${escHTML(tekst)}</div>
+    ${harMangler ? `<a class="recap-tipstatus-action" href="${escHTML(href)}">Gå til utslagsrunder</a>` : ""}
+  </div>`;
+}
+
+function recapData(deltaker) {
+  const idag = norskDatoMedOffset(0);
+  const igaar = norskDatoMedOffset(-1);
+  const tipsLookup = tipsLookupForDeltaker(deltaker);
+  const resultater = unikeProfilResultater().sort((a,b) => String(a.fd_utcDate || a.dato_openfootball || "").localeCompare(String(b.fd_utcDate || b.dato_openfootball || "")));
+
+  const finnTips = resultat => tipsLookup.get(resultat._canonical) || tipsLookup.get(resultat._key) || null;
+  const gaarsdagens = resultater
+    .filter(r => resultatDatoNorsk(r) === igaar && r.ferdig)
+    .map(r => ({ resultat: r, tips: finnTips(r) }))
+    .filter(x => x.tips);
+  const dagens = resultater
+    .filter(r => resultatDatoNorsk(r) === idag)
+    .map(r => ({ resultat: r, tips: finnTips(r) }));
+  return { idag, igaar, gaarsdagens, dagens };
+}
+
+function recapKampRad(item, visPoeng, deltaker = null) {
+  const r = item.resultat;
+  const t = item.tips;
+  const faktisk = r.hjemme !== null && r.hjemme !== undefined && r.borte !== null && r.borte !== undefined
+    ? `${r.hjemme}–${r.borte}` : "–";
+  const harSynligTips = t && Number.isInteger(t.tippa_h) && Number.isInteger(t.tippa_b);
+  const levertUtenSynligScore = !harSynligTips && deltaker && recapKampErLevert(deltaker, r);
+  const tips = harSynligTips ? `${t.tippa_h}–${t.tippa_b}` : (levertUtenSynligScore ? "Levert" : "Ikke tippet");
+  const tipsLabel = levertUtenSynligScore ? "Tips lagret" : "Ditt tips";
+  const poeng = Number(t?.poeng || 0);
+  return `<div class="recap-rad">
+    <div class="recap-kampnavn">${escHTML(r.hjemmelag || "?")} – ${escHTML(r.bortelag || "?")}
+      <div class="recap-kampmeta">${escHTML(formatKickoffKort(r))}${r.ferdig ? ` · Resultat ${escHTML(faktisk)}` : ""}</div>
+    </div>
+    <div class="recap-tips">${escHTML(tips)}<small>${escHTML(tipsLabel)}</small></div>
+    ${visPoeng ? `<div class="recap-poeng ${poeng > 0 ? "positiv" : "null"}">${poeng > 0 ? "+" : ""}${poeng}p</div>` : ""}
+  </div>`;
+}
+
+function visRecapModal(force = false) {
+  const deltaker = finnProfilDeltaker();
+  if (!deltaker) {
+    visProfilvelger(true);
+    return;
+  }
+  const data = recapData(deltaker);
+  if (!data.gaarsdagens.length && !data.dagens.length) return;
+
+  const key = RECAP_KEY_PREFIX + deltaker.deltaker_id;
+  const sistVist = Number(localStorage.getItem(key) || 0);
+  if (!force && Date.now() - sistVist < RECAP_INTERVAL_MS) return;
+
+  const gaarsPoeng = data.gaarsdagens.reduce((sum, x) => sum + Number(x.tips?.poeng || 0), 0);
+  const gaarsHTML = data.gaarsdagens.length
+    ? data.gaarsdagens.map(x => recapKampRad(x, true, deltaker)).join("")
+    : '<div class="recap-tomt">Ingen ferdige kamper fra i går.</div>';
+  const dagensHTML = data.dagens.length
+    ? data.dagens.map(x => recapKampRad(x, Boolean(x.resultat?.ferdig), deltaker)).join("")
+    : '<div class="recap-tomt">Ingen kamper i dag.</div>';
+
+  modalKanLukkes = true;
+  modalOnClose = () => localStorage.setItem(key, String(Date.now()));
+  document.getElementById("modalInnhold").innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">Din VM-oppdatering</div>
+        <div class="modal-meta">Gårsdagens poeng og dagens tips</div>
+      </div>
+      <button class="modal-lukk" onclick="lukkModal()">✕</button>
+    </div>
+    <div class="recap-topplinje">
+      <div>Viser: <strong>${escHTML(deltaker.navn)}</strong></div>
+      <button type="button" class="recap-bytte-btn" onclick="visProfilvelger(false)">Bytt bruker</button>
+    </div>
+    <div class="modal-body">
+      ${byggRecapTippeStatusHTML(deltaker)}
+      <div class="recap-seksjon">
+        <div class="recap-seksjon-tittel"><span>Gårsdagens poengfangst</span><span class="recap-total">+${gaarsPoeng} poeng</span></div>
+        ${gaarsHTML}
+      </div>
+      <div class="recap-seksjon">
+        <div class="recap-seksjon-tittel"><span>Dagens kamper</span><span>${data.dagens.length} kamper</span></div>
+        ${dagensHTML}
+      </div>
+      <div class="recap-actions"><button type="button" class="recap-lukk-btn" onclick="lukkModal()">Lukk</button></div>
+    </div>`;
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function initProfilOgRecap() {
+  if (!VM_DATA?.stilling?.length) return;
+  const lagret = finnProfilDeltaker();
+  if (!lagret) {
+    localStorage.removeItem(VIEWER_KEY);
+    visProfilvelger(true);
+    return;
+  }
+  oppdaterProfilLinje();
+  visRecapModal(false);
+}
+
+// ── MODAL ─────────────────────────────────────────────────
+// ── KAMPDATA ──────────────────────────────────────────────
+let ALLE_KAMPER = [];
+
+async function lastKampData() {
+  try {
+    const r = await fetch('data/kamper.json?t=' + Date.now());
+    const data = await r.json();
+    ALLE_KAMPER = data.kamper || [];
+  } catch(e) {
+    console.warn('Kunne ikke laste kamper.json:', e);
+  }
+}
+
+function iDagNorsk() {
+  return new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+}
+
+function byggDagensKamper() {
+  const idag = iDagNorsk();
+  const UTSLAGS_RUNDER_DAGENS = ['r32', 'r16', 'qf', 'sf', 'bronze', 'bronsefinale', 'final'];
+  const erUtslagsrundeDagens = runde => UTSLAGS_RUNDER_DAGENS.includes(String(runde || '').toLowerCase());
+
+  const statusDatoNorsk = kamp => {
+    const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato_utc || kamp?.starttid || '';
+    if (raw) {
+      const dato = new Date(raw);
+      if (!Number.isNaN(dato.getTime())) {
+        return dato.toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' });
+      }
+    }
+    return String(kamp?.dato_norsk || kamp?.dato || '').slice(0, 10);
+  };
+
+  const statusTidNorsk = kamp => {
+    const raw = kamp?.utcDate || kamp?.fd_utcDate || kamp?.dato_utc || kamp?.starttid || '';
+    if (raw) {
+      const dato = new Date(raw);
+      if (!Number.isNaN(dato.getTime())) {
+        return dato.toLocaleTimeString('nb-NO', { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit' });
+      }
+    }
+    return String(kamp?.klokkeslett_norsk || kamp?.tid || '');
+  };
+
+  const erKjentDagensLag = navn => {
+    const s = String(navn || '').trim();
+    if (!s) return false;
+    const low = s.toLowerCase();
+    if (['?', '-', 'tbd', 'null', 'none', 'ikke klar'].includes(low)) return false;
+    if (/^(winner|loser|vinner|taper)\b/i.test(s)) return false;
+    if (/^(w|l|ru)\d+$/i.test(s)) return false;
+    if (/^[123][a-l]$/i.test(s)) return false;
+    if (/^3[a-l]{2,}$/i.test(s.replaceAll('/', ''))) return false;
+    return true;
+  };
+
+  const statusKamperIDag = [];
+  UTSLAGS_RUNDER_DAGENS.forEach(runde => {
+    (STATUS_DATA?.[runde]?.kamper || []).forEach(kamp => {
+      if (statusDatoNorsk(kamp) !== idag) return;
+      const hjemmelag = kamp.hjemme || kamp.hjemmelag || '';
+      const bortelag = kamp.borte || kamp.bortelag || '';
+      if (!erKjentDagensLag(hjemmelag) || !erKjentDagensLag(bortelag)) return;
+      statusKamperIDag.push({
+        kamp_id: kamp.id || kamp.kamp_id || null,
+        hjemmelag,
+        bortelag,
+        dato_utc: String(kamp.utcDate || kamp.fd_utcDate || '').slice(0, 10),
+        dato_norsk: idag,
+        klokkeslett_utc: '',
+        klokkeslett_norsk: statusTidNorsk(kamp),
+        status: kamp.status || (kamp.ferdig ? 'FINISHED' : 'TIMED'),
+        gruppe: kamp.gruppe || RUNDE_NAVN[runde] || runde.toUpperCase(),
+        runde,
+        match_no: kamp.match_no,
+        _fra_status: true
+      });
+    });
+  });
+
+  const runderMedStatusIDag = new Set(statusKamperIDag.map(k => String(k.runde || '').toLowerCase()));
+  const kamperFraKamperJson = (ALLE_KAMPER || [])
+    .filter(k => k.dato_norsk === idag)
+    .filter(k => {
+      const runde = String(k.runde || '').toLowerCase();
+      if (!erUtslagsrundeDagens(runde)) return true;
+      if (runderMedStatusIDag.has(runde)) return false;
+      return erKjentDagensLag(k.hjemmelag) && erKjentDagensLag(k.bortelag);
+    });
+
+  const dagensKamper = [...kamperFraKamperJson, ...statusKamperIDag]
+    .sort((a, b) => String(a.klokkeslett_norsk || '').localeCompare(String(b.klokkeslett_norsk || '')));
+
+  if (!dagensKamper.length) return '';
+
+  const FLAGG = {
+    'Mexico':'🇲🇽','South Africa':'🇿🇦','South Korea':'🇰🇷','Czech Republic':'🇨🇿',
+    'Canada':'🇨🇦','Bosnia & Herzegovina':'🇧🇦','USA':'🇺🇸','Paraguay':'🇵🇾',
+    'Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦',
+    'Haiti':'🇭🇹','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Australia':'🇦🇺','Turkey':'🇹🇷',
+    'Germany':'🇩🇪','Curaçao':'🇨🇼','Netherlands':'🇳🇱','Japan':'🇯🇵',
+    'Ivory Coast':'🇨🇮','Ecuador':'🇪🇨','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
+    'Cape Verde':'🇨🇻','Belgium':'🇧🇪','Egypt':'🇪🇬','Saudi Arabia':'🇸🇦',
+    'Uruguay':'🇺🇾','Iran':'🇮🇷','New Zealand':'🇳🇿','France':'🇫🇷',
+    'Senegal':'🇸🇳','Iraq':'🇮🇶','Norway':'🇳🇴','Argentina':'🇦🇷',
+    'Algeria':'🇩🇿','Austria':'🇦🇹','Jordan':'🇯🇴','Portugal':'🇵🇹',
+    'DR Congo':'🇨🇩','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Ghana':'🇬🇭','Panama':'🇵🇦',
+    'Uzbekistan':'🇺🇿','Colombia':'🇨🇴','Croatia':'🇭🇷',
+  };
+  const flagg = n => FLAGG[n] || '';
+
+  const FD_TIL_OF_VIS = {
+    'United States':'USA','Bosnia-Herzegovina':'Bosnia & Herzegovina',
+    'Cape Verde Islands':'Cape Verde','Congo DR':'DR Congo','Czechia':'Czech Republic',
+  };
+  const visNavn = n => FD_TIL_OF_VIS[n] || n;
+
+  const FD_TIL_OF2 = {'united states':'usa','cape verde islands':'cape verde','congo dr':'dr congo','czechia':'czech republic'};
+  const normFd = s => { const low=String(s||'').toLowerCase().trim(); return (FD_TIL_OF2[low]||low).replace(/[^a-z0-9]/g,'_').replace(/_+/g,'_').replace(/^_|_$/g,''); };
+
+  const resultatLookup = {};
+  const resultatLookupId = {};
+  const leggTilResultat = (kid, r) => {
+    if (!r) return;
+    const hjemmelag = r.hjemmelag || r.homeTeam || '';
+    const bortelag = r.bortelag || r.awayTeam || '';
+    const value = {
+      faktisk_h: r.hjemme ?? r.faktisk_h ?? null,
+      faktisk_b: r.borte ?? r.faktisk_b ?? null,
+      ferdig: !!r.ferdig,
+      status: r.status || (r.ferdig ? 'FINISHED' : 'TIMED'),
+      kilde_score: r.kilde_score || r.kilde || '',
+      kamp_id: kid
+    };
+
+    if (kid) resultatLookupId[kid] = value;
+    if (r.canonical_kamp_id && r.canonical_kamp_id !== kid) resultatLookupId[r.canonical_kamp_id] = value;
+    if (r.alias_for && r.alias_for !== kid) resultatLookupId[r.alias_for] = value;
+
+    if (hjemmelag && bortelag) {
+      const navnKey = normFd(hjemmelag) + '__' + normFd(bortelag);
+      resultatLookup[navnKey] = value;
+    }
+  };
+
+  if (VM_DATA?.resultater && typeof VM_DATA.resultater === 'object') {
+    Object.entries(VM_DATA.resultater).forEach(([kid, r]) => leggTilResultat(kid, r));
+  } else if (VM_DATA?.stilling?.length) {
+    // Bakoverkompatibilitet mot eldre data.js uten VM_DATA.resultater.
+    VM_DATA.stilling[0].tippinger?.forEach(t => {
+      if (t.hjemmelag && t.bortelag) {
+        const navnKey = normFd(t.hjemmelag) + '__' + normFd(t.bortelag);
+        resultatLookup[navnKey] = { faktisk_h: t.faktisk_h, faktisk_b: t.faktisk_b, ferdig: t.ferdig, status: t.status || (t.ferdig ? 'FINISHED' : 'TIMED') };
+      }
+    });
+  }
+
+  const datoNorsk = new Date().toLocaleDateString('no-NO', {
+    timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long'
+  });
+
+  const raderHTML = dagensKamper.map(k => {
+    const navnKey = k.hjemmelag && k.bortelag ? normFd(k.hjemmelag)+'__'+normFd(k.bortelag) : null;
+    const res = (k.kamp_id && resultatLookupId[k.kamp_id]) || (navnKey ? resultatLookup[navnKey] : null);
+    const ferdig = res?.ferdig;
+    const status = res?.status || (ferdig ? 'FINISHED' : 'TIMED');
+    const paagaar = status === 'IN_PLAY' || status === 'PAUSED';
+    const tidTxt = ferdig ? 'Ferdig' : paagaar ? (status === 'PAUSED' ? 'Pause 🔴' : 'Pågående 🔴') : k.klokkeslett_norsk;
+    const tidCls = ferdig ? 'ferdig' : paagaar ? 'paagaar' : '';
+    const h = visNavn(k.hjemmelag || '?');
+    const b = visNavn(k.bortelag  || '?');
+    const gruppe = escHTML(k.gruppe || k.runde || '');
+    const harScore =
+      res &&
+      res.faktisk_h !== null &&
+      res.faktisk_h !== undefined &&
+      res.faktisk_b !== null &&
+      res.faktisk_b !== undefined;
+
+    const scoreHTML = harScore
+      ? `<div class="kamp-score">${res.faktisk_h}–${res.faktisk_b}</div>`
+      : `<div class="kamp-score venter">–</div>`;
+    return `
+      <div class="kamp-rad">
+        <div class="kamp-tid ${tidCls}">${tidTxt}</div>
+        <div class="kamp-hjemme">
+          <span class="kamp-flag">${flagg(h)}</span>
+          <span class="kamp-navn">${escHTML(h)}</span>
+        </div>
+        ${scoreHTML}
+        <div class="kamp-borte">
+          <span class="kamp-navn">${escHTML(b)}</span>
+          <span class="kamp-flag">${flagg(b)}</span>
+        </div>
+        <div class="kamp-gruppe">${gruppe}</div>
+      </div>`;
+  }).join('');
+
+  return `
+    <div class="dagens-kamper">
+      <div class="dagens-header">
+        <div class="dagens-tittel">Kamper i dag</div>
+        <div class="dagens-dato">${escHTML(datoNorsk)}</div>
+      </div>
+      <div class="kamp-liste">${raderHTML}</div>
+    </div>`;
+}
+
+
+const RUNDE_NAVN = { gruppe:"Gruppespill", r32:"Runde av 32", r16:"Runde av 16", qf:"Kvartfinale", sf:"Semifinale", final:"Finale", helhet:"Hele utslagsfasen" };
+
+function samletUtslagspoeng(d) {
+  return (d.poeng_utslagsrunder || 0) + (d.poeng_bonus || 0) + (d.poeng_helhetsbonus || 0);
+}
+
+function erSenPamelding(d) {
+  return !!(d && (d.sen_pamelding === true || d.deltaker_type === "sen_pamelding"));
+}
+
+function startpoengVerdi(d) {
+  return Number(d?.poeng_start || 0);
+}
+
+function gruppeEllerStartpoeng(d) {
+  return Number(d?.poeng_gruppespill || 0) + startpoengVerdi(d);
+}
+
+function senPameldingMerkeHTML(d) {
+  if (!erSenPamelding(d)) return "";
+  const beregnet = d.startpoeng_status === "beregnet";
+  const tekst = beregnet
+    ? `Sen påmelding · ${startpoengVerdi(d)} startpoeng`
+    : "Sen påmelding · startpoeng venter";
+  return `<div class="senpamelding-merke ${beregnet ? "" : "venter"}">${escHTML(tekst)}</div>`;
+}
+
+function startpoengInfoHTML(d) {
+  if (!erSenPamelding(d)) return "";
+  const beregnet = d.startpoeng_status === "beregnet";
+  const verdi = beregnet ? `${startpoengVerdi(d)} poeng` : "Beregnes etter gruppespillet";
+  const forklaring = beregnet
+    ? `Startpoengene tilsvarer avrundet gjennomsnittlig gruppespillscore blant deltakerne som tippet gruppespillet.`
+    : `Deltakeren kan tippe åpne utslagskamper nå. Gjennomsnittlig gruppespillscore legges automatisk til når alle 72 gruppespillkampene er ferdige.`;
+  return `<div class="startpoeng-info">
+    <div class="startpoeng-info-title">
+      <span>Sen påmelding</span>
+      <span class="startpoeng-info-value">${escHTML(verdi)}</span>
+    </div>
+    <div class="startpoeng-info-text">${escHTML(forklaring)}</div>
+  </div>`;
+}
+
+function byggStartpoengBanner(stilling) {
+  const senpameldte = (stilling || []).filter(erSenPamelding);
+  if (!senpameldte.length) return "";
+  const meta = VM_DATA?.startpoengstatus || {};
+  const beregnet = meta.status === "beregnet" && meta.startpoeng !== null && meta.startpoeng !== undefined;
+  const tekst = beregnet
+    ? `${senpameldte.length} senpåmeldt${senpameldte.length === 1 ? "" : "e"} har fått ${meta.startpoeng} startpoeng, basert på gjennomsnittet etter gruppespillet.`
+    : `${senpameldte.length} senpåmeldt${senpameldte.length === 1 ? "" : "e"} deltar i utslagsrundene. Startpoengene beregnes automatisk når gruppespillet er ferdig.`;
+  return `<div class="startpoeng-banner">
+    <div class="startpoeng-banner-title">Sen påmelding</div>
+    <div class="startpoeng-banner-text">${escHTML(tekst)}</div>
+  </div>`;
+}
+
+function bonusStatusLabel(status) {
+  return {
+    ferdig:"Fasit klar",
+    paagaar:"Pågår",
+    forelopig:"Foreløpig",
+    ikke_startet:"Ikke startet",
+    avventer_fifa:"Avventer FIFA"
+  }[status] || "Avventer";
+}
+
+function byggBonusstatus() {
+  const container = document.getElementById("bonusstatus");
+  if (!container) return;
+  const data = typeof VM_DATA !== "undefined" ? VM_DATA.bonusstatus : null;
+  if (!data?.helhet) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const flest = data.helhet.flest_maal_lag || {};
+  const totalt = data.helhet.totale_maal_utslag || {};
+  const golden = data.helhet.golden_boot || {};
+  const lederTekst = (flest.ledere || []).length ? `${(flest.ledere || []).join(', ')} · ${flest.antall_maal || 0} mål` : 'Ingen mål registrert ennå';
+  const totalTekst = `${totalt.antall || 0} mål`;
+  const totalMeta = totalt.status === 'ferdig'
+    ? `Fasit: ${totalt.fasit_tekst || totalt.forelopig_kategori_tekst || '—'}`
+    : totalt.status === 'ikke_startet'
+      ? 'Utslagsfasen er ikke startet'
+      : `Foreløpig kategori: ${totalt.forelopig_kategori_tekst || '—'}`;
+  const goldenTekst = golden.spiller ? `${golden.spiller} · ${golden.maal ?? 0} mål` : 'Ikke tilgjengelig';
+
+  const roundOrder = ['r32','r16','qf','sf','final'];
+  const rounds = roundOrder.map(runde => {
+    const item = data.runder?.[runde] || {};
+    const verdi = item.verdi === null || item.verdi === undefined ? '—' : (item.verdi === 'ja' ? 'Ja' : item.verdi === 'nei' ? 'Nei' : item.verdi);
+    const korteSporsmal = {r32:'Uavgjorte kamper',r16:'Lag som holder nullen',qf:'Ettmålsseiere',sf:'Totalt antall mål',final:'Begge lag scorer'};
+    const statusTekst = item.status === 'ferdig'
+      ? `Fasit: ${verdi}`
+      : `${verdi === '—' ? 'Ingen foreløpig verdi' : `Foreløpig: ${verdi}`} · ${item.ferdige_kamper || 0} av ${item.totalt_kamper || 0} kamper`;
+    const tekst = `${korteSporsmal[runde]} · ${statusTekst}`;
+    return `<div class="bonusstatus-round">
+      <div class="bonusstatus-round-name">${escHTML(RUNDE_NAVN[runde])}</div>
+      <div class="bonusstatus-round-text">${escHTML(tekst)}</div>
+      <div class="bonusstatus-pill ${escHTML(item.status || '')}">${escHTML(bonusStatusLabel(item.status))}</div>
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `<div class="bonusstatus-wrap">
+    <div class="bonusstatus-title">Bonusstatus</div>
+    <div class="bonusstatus-sub">Status og foreløpige verdier. Deltakernes svar vises i detaljene for hver deltaker.</div>
+    <div class="bonusstatus-grid">
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Flest mål · utslagsfasen</div><div class="bonusstatus-value">${escHTML(lederTekst)}</div><div class="bonusstatus-meta">${flest.ferdige_kamper || 0} av ${flest.totalt_kamper || 31} kamper ferdig</div></div>
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Totalt antall mål</div><div class="bonusstatus-value">${escHTML(totalTekst)}</div><div class="bonusstatus-meta">${escHTML(totalMeta)} · ${totalt.ferdige_kamper || 0} av ${totalt.totalt_kamper || 31} kamper</div></div>
+      <div class="bonusstatus-card"><div class="bonusstatus-label">Golden Boot</div><div class="bonusstatus-value">${escHTML(goldenTekst)}</div><div class="bonusstatus-meta">${escHTML(bonusStatusLabel(golden.status))} · Kilde: FIFA</div></div>
+    </div>
+    <div class="bonusstatus-rounds">${rounds}</div>
+  </div>`;
+}
+
+function byggBonusModalHTML(d) {
+  const bonuser = (d.tippinger || []).filter(t => t.type === 'bonus' || t.type === 'helhetsbonus');
+  if (!bonuser.length) return '';
+  return `<div class="modal-runde-tittel">Bonusspørsmål</div>` + bonuser.map(t => {
+    const status = t.ferdig ? `Fasit: ${t.fasit ?? '—'}` : 'Avventer fasit';
+    const poengCls = t.poeng > 0 ? 'color:var(--accent)' : 'color:var(--muted)';
+    return `<div class="modal-bonus">
+      <div class="modal-bonus-top"><div class="modal-bonus-title">${escHTML(t.sporsmal || '')}</div><div class="modal-bonus-poeng" style="${poengCls}">${t.ferdig ? `${t.poeng || 0}p` : '–'}</div></div>
+      <div class="modal-bonus-answer">Valgt: ${escHTML(t.svar ?? '—')}<br>${escHTML(status)}</div>
+    </div>`;
+  }).join('');
+}
+
+function aapneModal(event, i) {
+  event.stopPropagation();
+  const d = VM_DATA.stilling[i];
+  if (!d) return;
+
+  const kampTippinger = (d.tippinger || []).filter(t => !t.type || t.type === 'kamp');
+  const ferdigeKamper = kampTippinger.filter(t => t.ferdig);
+  const poengUtsl = samletUtslagspoeng(d);
+  const vinnerCls = d.turneringsvinner_riktig ? 'color:var(--accent)' : 'color:var(--muted)';
+
+  const rundeRekkefølge = ['final','sf','qf','r16','r32','gruppe'];
+  const perRunde = {};
+  kampTippinger.forEach(t => {
+    const r = t.runde || 'gruppe';
+    if (!perRunde[r]) perRunde[r] = [];
+    perRunde[r].push(t);
+  });
+
+  let kampHTML = '';
+  rundeRekkefølge.forEach(runde => {
+    const kamper = perRunde[runde];
+    if (!kamper?.length) return;
+    kampHTML += `<div class="modal-runde-tittel">${RUNDE_NAVN[runde] || runde}</div>`;
+    kamper.forEach(t => {
+      if (t.ferdig) {
+        const scoreCls = t.eksakt ? 'riktig' : t.riktig_utfall ? 'delvis' : '';
+        const poengCls = t.poeng === 0 ? 'p0' : t.poeng >= 6 ? 'phigh' : 'pp';
+        kampHTML += `<div class="modal-kamp">
+          <div class="modal-kamp-lag">${escHTML(t.hjemmelag || '')} – ${escHTML(t.bortelag || '')}</div>
+          <div class="modal-kamp-score"><div class="modal-score-tippa ${scoreCls}">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div><div class="modal-score-actual">Fasit: ${t.faktisk_h}–${t.faktisk_b}</div></div>
+          <div class="modal-kamp-poeng ${poengCls}">${t.poeng}p</div>
+        </div>`;
+      } else {
+        kampHTML += `<div class="modal-kamp">
+          <div class="modal-kamp-lag">${escHTML(t.hjemmelag || '?')} – ${escHTML(t.bortelag || '?')}</div>
+          <div class="modal-kamp-score"><div class="modal-score-tippa">${t.tippa_h ?? '–'}–${t.tippa_b ?? '–'}</div><div class="modal-score-actual">Ikke spilt</div></div>
+          <div class="modal-kamp-pending">–</div>
+        </div>`;
+      }
+    });
+  });
+  const bonusHTML = byggBonusModalHTML(d);
+
+  document.getElementById("modalInnhold").innerHTML = `<div class="modal-header">
+    <div><div class="modal-navn">${escHTML(d.navn)}</div><div class="modal-meta" style="${vinnerCls}">🏆 Turneringsvinner: ${escHTML(d.turneringsvinner || '—')}${d.turneringsvinner_riktig ? ' ✓' : ''}</div>${senPameldingMerkeHTML(d)}</div>
+    <button class="modal-lukk" onclick="lukkModal()">✕</button>
+  </div>
+  <div class="modal-stats">
+    <div class="modal-stat"><div class="modal-stat-val">${d.poeng_totalt}</div><div class="modal-stat-lbl">Totalt</div></div>
+    <div class="modal-stat"><div class="modal-stat-val">${poengUtsl}</div><div class="modal-stat-lbl">Utslag inkl. bonus</div></div>
+    <div class="modal-stat"><div class="modal-stat-val">${ferdigeKamper.length}</div><div class="modal-stat-lbl">Kamper ferdig</div></div>
+  </div>
+  <div class="modal-body">${startpoengInfoHTML(d)}${bonusHTML}${kampHTML || (!bonusHTML ? '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>' : '')}</div>`;
+
+  document.getElementById("modalOverlay").classList.add("vis");
+  document.body.style.overflow = "hidden";
+}
+
+function lukkModal(force = false) {
+  if (!force && !modalKanLukkes) return;
+  document.getElementById("modalOverlay").classList.remove("vis");
+  document.body.style.overflow = "";
+  const callback = modalOnClose;
+  modalOnClose = null;
+  modalKanLukkes = true;
+  if (typeof callback === "function") callback();
+  // Et klikk på lukkeknappen er en gyldig brukerhandling for lydavspilling.
+  forsokStartBakgrunnsmusikk();
+}
+
+function lukkModalKlikk(e) {
+  if (e.target === document.getElementById("modalOverlay")) lukkModal();
+}
+
+document.addEventListener("keydown", e => { if (e.key === "Escape") lukkModal(); });
+
+
+
+// ── KAMPER-FANE ──────────────────────────────────────────
+let aktivKampFilter = 'alle';
+
+const FLAGG_LAG = {
+  'Mexico':'🇲🇽','South Africa':'🇿🇦','South Korea':'🇰🇷','Czech Republic':'🇨🇿',
+  'Canada':'🇨🇦','Bosnia & Herzegovina':'🇧🇦','USA':'🇺🇸','United States':'🇺🇸','Paraguay':'🇵🇾',
+  'Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦',
+  'Haiti':'🇭🇹','Scotland':'🏴','Australia':'🇦🇺','Turkey':'🇹🇷',
+  'Germany':'🇩🇪','Curaçao':'🇨🇼','Curacao':'🇨🇼','Netherlands':'🇳🇱','Japan':'🇯🇵',
+  'Ivory Coast':'🇨🇮','Ecuador':'🇪🇨','Sweden':'🇸🇪','Tunisia':'🇹🇳','Spain':'🇪🇸',
+  'Cape Verde':'🇨🇻','Belgium':'🇧🇪','Egypt':'🇪🇬','Saudi Arabia':'🇸🇦',
+  'Uruguay':'🇺🇾','Iran':'🇮🇷','New Zealand':'🇳🇿','France':'🇫🇷',
+  'Senegal':'🇸🇳','Iraq':'🇮🇶','Norway':'🇳🇴','Argentina':'🇦🇷',
+  'Algeria':'🇩🇿','Austria':'🇦🇹','Jordan':'🇯🇴','Portugal':'🇵🇹',
+  'DR Congo':'🇨🇩','England':'🏴','Ghana':'🇬🇭','Panama':'🇵🇦',
+  'Uzbekistan':'🇺🇿','Colombia':'🇨🇴','Croatia':'🇭🇷'
+};
+const flaggLag = navn => FLAGG_LAG[navn] || '';
+
+
+// ── TABELL- OG KAMPREFERATDATA ───────────────────────────
+let TABELL_DATA = null;
+let STATUS_DATA = null;
+let KAMPREFERAT_DATA = { kamper: {} };
+let INNLEVERINGSSTATUS_DATA = null;
+let aktivGruppeFilter = 'alle';
+let aktivUtslagsrunde = 'r32';
+
+async function hentJsonFil(url, fallback) {
+  try {
+    const response = await fetch(url + '?t=' + Date.now());
+    if (!response.ok) return fallback;
+    return await response.json();
+  } catch (error) {
+    console.warn('Kunne ikke hente ' + url, error);
+    return fallback;
+  }
+}
+
+async function lastTabellData() { TABELL_DATA = await hentJsonFil('data/tabell.json', null); }
+async function lastStatusData() { STATUS_DATA = await hentJsonFil('data/status.json', {}); }
+async function lastKampreferater() { KAMPREFERAT_DATA = await hentJsonFil('data/kampreferater.json', { kamper: {} }); }
+async function lastInnleveringsstatus() { INNLEVERINGSSTATUS_DATA = await hentJsonFil(INNLEVERINGSSTATUS_URL, null); }
+
+function lagNokkel(navn) {
+  const map = {
+    'korea republic':'south korea', 'czechia':'czech republic',
+    'bosnia and herzegovina':'bosnia & herzegovina', "côte d'ivoire":'ivory coast',
+    'cote d\'ivoire':'ivory coast', 'türkiye':'turkey', 'ir iran':'iran',
+    'cabo verde':'cape verde', 'congo dr':'dr congo', 'united states':'usa'
+  };
+  const low = String(navn || '').trim().toLowerCase();
+  return (map[low] || low).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
+}
+
+function fifaUtslagskamper() {
+  return Array.isArray(TABELL_DATA?.utslagskamper) ? TABELL_DATA.utslagskamper : [];
+}
+
+function kjenteR32Lag() {
+  const sett = new Set();
+  fifaUtslagskamper().filter(k => k.runde === 'r32').forEach(k => {
+    if (k.hjemme_kjent) sett.add(lagNokkel(k.hjemme));
+    if (k.borte_kjent) sett.add(lagNokkel(k.borte));
+  });
+  return sett;
+}
+
+function visTabellDel(del, knapp) {
+  document.querySelectorAll('.tabell-panel').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tabell-del-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tabell-' + del)?.classList.add('active');
+  knapp?.classList.add('active');
+  if (del === 'utslag') byggUtslagsOversikt();
+}
+
+function settGruppeFilter(gruppe) {
+  aktivGruppeFilter = gruppe;
+  byggGruppeTabeller();
+}
+
+function maalForskjellTekst(verdi) {
+  const n = Number(verdi || 0);
+  return n > 0 ? '+' + n : String(n);
+}
+
+function byggGruppeTabeller() {
+  const filter = document.getElementById('gruppeFilter');
+  const innhold = document.getElementById('gruppeTabeller');
+  if (!filter || !innhold) return;
+  const grupper = TABELL_DATA?.grupper || {};
+  const bokstaver = Object.keys(grupper).sort();
+  filter.innerHTML = [['alle','Alle'], ...bokstaver.map(g => [g,g])].map(([id,tekst]) =>
+    `<button class="gruppe-filter-btn ${aktivGruppeFilter === id ? 'active' : ''}" onclick="settGruppeFilter('${id}')">${tekst}</button>`
+  ).join('');
+
+  if (!bokstaver.length) {
+    innhold.innerHTML = '<div class="ingen-data"><div class="stor">📊</div><h3>Tabellen er ikke tilgjengelig ennå</h3><p>Neste workflow-kjøring forsøker på nytt.</p></div>';
+    return;
+  }
+
+  const klare = kjenteR32Lag();
+  const vis = aktivGruppeFilter === 'alle' ? bokstaver : bokstaver.filter(g => g === aktivGruppeFilter);
+  innhold.innerHTML = vis.map(gruppe => {
+    const rows = grupper[gruppe] || [];
+    return `
+      <section class="gruppe-kort">
+        <div class="gruppe-kort-header"><h3>Gruppe ${gruppe}</h3><span>FIFA-tabell</span></div>
+        <div class="gruppe-tabell-header">
+          <div>#</div><div>Lag</div><div>K</div><div>V</div><div class="gruppe-col-u">U</div><div class="gruppe-col-t">T</div><div>MF</div><div>P</div>
+        </div>
+        ${rows.map(rad => {
+          const klar = klare.has(lagNokkel(rad.lag));
+          return `<div class="gruppe-tabell-rad">
+            <div class="gruppe-plass">${rad.plass}</div>
+            <div class="gruppe-lag"><span>${flaggLag(rad.lag)}</span><div><div class="gruppe-lag-navn">${escHTML(rad.lag)}</div>${klar ? '<span class="gruppe-klar">Klar for R32</span>' : ''}</div></div>
+            <div class="gruppe-tall">${rad.spilt}</div><div class="gruppe-tall">${rad.seier}</div>
+            <div class="gruppe-tall gruppe-col-u">${rad.uavgjort}</div><div class="gruppe-tall gruppe-col-t">${rad.tap}</div>
+            <div class="gruppe-tall">${rad.maal_for}–${rad.maal_mot}<br><span style="color:var(--muted);font-size:10px">${maalForskjellTekst(rad.maal_forskjell)}</span></div>
+            <div class="gruppe-poeng">${rad.poeng}</div>
+          </div>`;
+        }).join('')}
+      </section>`;
+  }).join('');
+}
+
+const UTSLAG_RUNDER = [
+  ['r32','R32'],['r16','R16'],['qf','Kvartfinaler'],['sf','Semifinaler'],['bronze','Bronsefinale'],['final','Finale']
+];
+function settUtslagsrunde(runde) { aktivUtslagsrunde = runde; byggUtslagsOversikt(); }
+
+function placeholderTekst(verdi) {
+  const s = String(verdi || '').trim();
+  let m = s.match(/^([123])([A-L])$/i);
+  if (m) return `${m[1]}. plass gruppe ${m[2].toUpperCase()}`;
+  m = s.replaceAll('/','').match(/^3([A-L]{2,})$/i);
+  if (m) return `3. plass ${m[1].toUpperCase().split('').join('/')}`;
+  m = s.match(/^W(\d+)$/i);
+  if (m) return `Vinner M${m[1]}`;
+  m = s.match(/^L(\d+)$/i);
+  if (m) return `Taper M${m[1]}`;
+  m = s.match(/^RU(\d+)$/i);
+  if (m) return `Tapende lag M${m[1]}`;
+  return s || 'Ikke klar';
+}
+
+function statusKamperMap(runde) {
+  return new Map((STATUS_DATA?.[runde]?.kamper || []).map(k => [Number(k.match_no), k]));
+}
+
+function fallbackStatusKamper(runde) {
+  return (STATUS_DATA?.[runde]?.kamper || []).map(kamp => ({
+    match_no: Number(kamp.match_no),
+    runde,
+    utcDate: kamp.utcDate || '',
+    dato: kamp.dato || '',
+    hjemme: kamp.hjemme || kamp.slot_hjemme || '',
+    borte: kamp.borte || kamp.slot_borte || '',
+    hjemme_kjent: erKjentLag(kamp.hjemme || kamp.slot_hjemme || ''),
+    borte_kjent: erKjentLag(kamp.borte || kamp.slot_borte || ''),
+    hjemme_placeholder: kamp.slot_hjemme || '',
+    borte_placeholder: kamp.slot_borte || '',
+    status: '',
+    hjemme_score: null,
+    borte_score: null,
+    app_status: kamp,
+  }));
+}
+
+function kombinerteUtslagskamper(runde) {
+  const fifaKamper = fifaUtslagskamper().filter(k => k.runde === runde).sort((a,b) => Number(a.match_no)-Number(b.match_no));
+  if (!fifaKamper.length) return fallbackStatusKamper(runde);
+  const appMap = statusKamperMap(runde);
+  return fifaKamper.map(kamp => ({ ...kamp, app_status: appMap.get(Number(kamp.match_no)) || null }));
+}
+
+function kampVisning(kamp) {
+  const app = kamp.app_status || {};
+  let hjemme = kamp.hjemme || app.hjemme || app.slot_hjemme || '';
+  let borte = kamp.borte || app.borte || app.slot_borte || '';
+  const hjemmeKjent = typeof kamp.hjemme_kjent === 'boolean' ? kamp.hjemme_kjent : erKjentLag(hjemme);
+  const borteKjent = typeof kamp.borte_kjent === 'boolean' ? kamp.borte_kjent : erKjentLag(borte);
+  if (!hjemmeKjent) hjemme = kamp.hjemme_placeholder || hjemme;
+  if (!borteKjent) borte = kamp.borte_placeholder || borte;
+  return {
+    hjemme: hjemmeKjent ? hjemme : placeholderTekst(hjemme),
+    borte: borteKjent ? borte : placeholderTekst(borte),
+    hjemmeKjent,
+    borteKjent,
+    utc: app.utcDate || kamp.utcDate || kamp.fifa_utcDate || '',
+    hjemmeScore: kamp.hjemme_score,
+    borteScore: kamp.borte_score,
+  };
+}
+
+function utslagDatoTekst(visning, kamp) {
+  if (visning.utc) {
+    const d = new Date(visning.utc);
+    if (!Number.isNaN(d.getTime())) return new Intl.DateTimeFormat('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d).replace(',','');
+  }
+  const dato = kamp.dato || kamp.app_status?.dato || '';
+  return dato ? new Intl.DateTimeFormat('nb-NO',{day:'2-digit',month:'2-digit'}).format(new Date(dato + 'T12:00:00Z')) : '';
+}
+
+function fifaKampErFerdig(status) {
+  return /(finished|complete|completed|full.?time|after.?penalties|after.?extra.?time)/i.test(String(status || ''));
+}
+
+function utslagScoreTekst(visning) {
+  if (visning.hjemmeScore === null || visning.hjemmeScore === undefined || visning.borteScore === null || visning.borteScore === undefined) return '';
+  return `<span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);margin-left:auto">${visning.hjemmeScore}–${visning.borteScore}</span>`;
+}
+
+function byggUtslagsOversikt() {
+  const filter = document.getElementById('utslagFilter');
+  const innhold = document.getElementById('utslagInnhold');
+  const oppsummering = document.getElementById('utslagOppsummering');
+  if (!filter || !innhold || !oppsummering) return;
+  filter.innerHTML = UTSLAG_RUNDER.map(([id,tekst]) => `<button class="utslag-filter-btn ${aktivUtslagsrunde === id ? 'active' : ''}" onclick="settUtslagsrunde('${id}')">${tekst}</button>`).join('');
+
+  const kamper = kombinerteUtslagskamper(aktivUtslagsrunde);
+  const tippebare = kamper.filter(k => statusKampErApen(k.app_status)).length;
+  if (aktivUtslagsrunde === 'bronze') {
+    oppsummering.textContent = `${kamper.length} kamp · bronsefinalen er ikke del av tipping`;
+  } else {
+    oppsummering.textContent = `${tippebare} kamp${tippebare === 1 ? '' : 'er'} åpne for tipping · ${kamper.length - tippebare} venter eller er stengt`;
+  }
+
+  if (!kamper.length) {
+    innhold.innerHTML = '<div class="ingen-data"><div class="stor">🏟️</div><h3>Ingen kamper i denne runden ennå</h3><p>FIFA-data oppdateres ved neste workflow-kjøring.</p></div>';
+    return;
+  }
+
+  innhold.innerHTML = kamper.map(kamp => {
+    const visning = kampVisning(kamp);
+    const beggeKjent = visning.hjemmeKjent && visning.borteKjent;
+    const tippebar = statusKampErApen(kamp.app_status);
+    const ferdig = fifaKampErFerdig(kamp.status);
+    const statusTekst = tippebar ? 'Åpen for tipping' : ferdig ? 'Ferdig' : beggeKjent ? (aktivUtslagsrunde === 'bronze' ? 'Lagene er klare' : 'Tipping stengt') : (visning.hjemmeKjent || visning.borteKjent) ? 'Ett lag klart' : 'Venter på lag';
+    const score = utslagScoreTekst(visning);
+    return `<article class="utslag-kamp ${tippebar ? 'tippebar' : ''}">
+      <div class="utslag-kamp-top"><div class="utslag-matchno">M${kamp.match_no || '–'} · ${aktivUtslagsrunde === 'bronze' ? 'Bronsefinale' : (RUNDE_NAVN[aktivUtslagsrunde] || aktivUtslagsrunde)}</div><div class="utslag-dato">${escHTML(utslagDatoTekst(visning,kamp))}</div></div>
+      <div class="utslag-lag"><span>${visning.hjemmeKjent ? flaggLag(visning.hjemme) : '◻'}</span><span class="utslag-lag-navn ${visning.hjemmeKjent ? '' : 'placeholder'}">${escHTML(visning.hjemme)}</span>${score}</div>
+      <div class="utslag-lag"><span>${visning.borteKjent ? flaggLag(visning.borte) : '◻'}</span><span class="utslag-lag-navn ${visning.borteKjent ? '' : 'placeholder'}">${escHTML(visning.borte)}</span></div>
+      <div class="utslag-kamp-footer"><span class="utslag-status ${tippebar ? 'open' : ''}">${statusTekst}</span>${tippebar ? `<a class="utslag-tips-lenke" href="tippe/utslagsrunder.html?runde=${aktivUtslagsrunde}&kamp=${kamp.match_no}">Lever tips →</a>` : ''}</div>
+    </article>`;
+  }).join('');
+}
+
+function byggTabellFane() {
+  byggGruppeTabeller();
+  byggUtslagsOversikt();
+  const el = document.getElementById('tabellOppdatert');
+  const oppdatert = TABELL_DATA?.sist_oppdatert_utslag || TABELL_DATA?.sist_oppdatert;
+  if (el && oppdatert) {
+    el.textContent = 'Sist oppdatert ' + new Date(oppdatert).toLocaleString('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+  }
+}
+
+function byggKampreferatIndex() {
+  const index = new Map();
+  const kamper = KAMPREFERAT_DATA?.kamper || {};
+  Object.entries(kamper).forEach(([key, entry]) => {
+    if (!entry) return;
+    [key, entry.kamp_id, entry.canonical_kamp_id, entry.fd_match_id != null ? String(entry.fd_match_id) : ''].filter(Boolean).forEach(id => index.set(String(id), entry));
+  });
+  return index;
+}
+
+function finnKampreferat(kamp) {
+  const index = byggKampreferatIndex();
+  const candidates = [kamp.fd_match_id != null ? String(kamp.fd_match_id) : '', ...alleKampIdVarianter(kamp)];
+  for (const id of candidates) if (id && index.has(String(id))) return index.get(String(id));
+  return null;
+}
+
+function byggLiveFallbackReferat(kamp) {
+  const h = kamp.hjemme, b = kamp.borte;
+  const hjemme = kamp.hjemmelag || 'Hjemmelaget';
+  const borte = kamp.bortelag || 'bortelaget';
+  let first = `${hjemme} mot ${borte} pågår.`;
+  if (h !== null && h !== undefined && b !== null && b !== undefined) {
+    first = h > b ? `${hjemme} leder ${h}–${b}.` : b > h ? `${borte} leder ${b}–${h}.` : `Stillingen er ${h}–${b} mellom ${hjemme} og ${borte}.`;
+  }
+  return first + '\n\nReferatet oppdateres når flere bekreftede kampdetaljer er tilgjengelige.';
+}
+
+function referatKnappHTML(kamp, status, mobile=false) {
+  const entry = finnKampreferat(kamp);
+  let label = '';
+  let disabled = false;
+  let live = false;
+  if (status.type === 'live') { label = 'Live-referat'; live = true; }
+  else if (status.type === 'ferdig' && entry) label = entry.referatstatus === 'endelig' ? 'Kampreferat' : 'Foreløpig referat';
+  else if (status.type === 'ferdig') { label = 'Referat kommer'; disabled = true; }
+  else return '';
+  return `<button class="kampreferat-btn ${live ? 'live' : ''}" ${disabled ? 'disabled' : ''} onclick="${disabled ? '' : `aapneReferatModal(event,'${escHTML(canonicalKampId(kamp))}')`}">${label}</button>`;
+}
+
+function aapneReferatModal(event, canonicalId) {
+  event?.stopPropagation();
+  const kamp = finnKamp(canonicalId);
+  if (!kamp) return;
+  const status = kampStatus(kamp);
+  const entry = finnKampreferat(kamp);
+  const tekst = entry?.recap_tekst || (status.type === 'live' ? byggLiveFallbackReferat(kamp) : 'Referatet er ikke tilgjengelig ennå.');
+  const referatstatus = entry?.referatstatus || (status.type === 'live' ? 'midlertidig' : 'forelopig');
+  const label = referatstatus === 'endelig' ? 'Endelig kampreferat' : referatstatus === 'midlertidig' ? 'Live · midlertidig' : 'Foreløpig referat';
+  const avsnitt = String(tekst).split(/\n\s*\n/).map(a => a.trim()).filter(Boolean);
+  const score = kamp.hjemme !== null && kamp.hjemme !== undefined && kamp.borte !== null && kamp.borte !== undefined ? `${kamp.hjemme}–${kamp.borte}` : '–';
+  const oppdatert = entry?.oppdatert ? new Date(entry.oppdatert).toLocaleString('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
+  document.getElementById('modalInnhold').innerHTML = `
+    <div class="modal-header"><div><div class="modal-navn">${escHTML(kamp.hjemmelag)} – ${escHTML(kamp.bortelag)}</div><div class="modal-meta">${escHTML(formaterDatoNorsk(kamp,true))}</div></div><button class="modal-lukk" onclick="lukkModal()">✕</button></div>
+    <div class="kamp-modal-resultat"><div><div class="kamp-modal-tid">${escHTML(status.tekst)}</div></div><div class="kamp-modal-score">${escHTML(score)}</div></div>
+    <div class="modal-body"><div class="referat-statusmerke ${referatstatus === 'midlertidig' ? 'live' : ''}">${escHTML(label)}</div><div class="referat-tekst">${avsnitt.map(a => `<p>${escHTML(a).replace(/\n/g,'<br>')}</p>`).join('')}</div>${oppdatert ? `<div class="referat-kilde">Sist oppdatert ${escHTML(oppdatert)}${entry?.kilde ? ' · ' + escHTML(entry.kilde) : ''}</div>` : ''}</div>`;
+  document.getElementById('modalOverlay').classList.add('vis');
+  document.body.style.overflow = 'hidden';
+}
+
+function kampIdTilAscii(kid) {
+  return String(kid || '').split('').map(c => {
+    if (c === '_') return '_';
+    return (/^[a-z0-9]$/i.test(c) && c.charCodeAt(0) < 128) ? c : '_';
+  }).join('');
+}
+
+function kampStatus(kamp) {
+  const status = kamp.status || (kamp.ferdig ? 'FINISHED' : 'TIMED');
+  if (kamp.ferdig || status === 'FINISHED') return { tekst: 'Ferdig', cls: 'ferdig', type: 'ferdig' };
+  if (status === 'IN_PLAY') return { tekst: 'Live', cls: 'live', type: 'live' };
+  if (status === 'PAUSED') return { tekst: 'Pause', cls: 'live', type: 'live' };
+  return { tekst: 'Ikke spilt', cls: '', type: 'kommende' };
+}
+
+function kampTidspunkt(kamp) {
+  const rawUtc = kamp.utcDate || kamp.fifa_utcDate || kamp.fd_utcDate;
+  if (rawUtc) {
+    const d = new Date(rawUtc);
+    if (!Number.isNaN(d.getTime())) return d;
+  }
+  const dato = kamp.dato_openfootball || kamp.dato || '';
+  if (dato) {
+    const d = new Date(dato + 'T12:00:00Z');
+    if (!Number.isNaN(d.getTime())) return d;
+  }
+  return new Date(8640000000000000);
+}
+
+function formaterDatoNorsk(kamp, medTid = true) {
+  const d = kampTidspunkt(kamp);
+  if (Number.isNaN(d.getTime())) return '';
+  const rawUtc = kamp.utcDate || kamp.fifa_utcDate || kamp.fd_utcDate;
+  const opts = medTid && rawUtc
+    ? { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }
+    : { timeZone: 'Europe/Oslo', weekday: 'short', day: '2-digit', month: '2-digit' };
+  return new Intl.DateTimeFormat('nb-NO', opts).format(d).replace(',', '');
+}
+
+function datoGruppeNorsk(kamp) {
+  const d = kampTidspunkt(kamp);
+  if (Number.isNaN(d.getTime())) return 'Ukjent dato';
+  return new Intl.DateTimeFormat('nb-NO', {
+    timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long'
+  }).format(d);
+}
+
+function canonicalKampId(kamp) {
+  return kamp.canonical_kamp_id || kamp.alias_for || kamp.kamp_id || '';
+}
+
+
+function erKjentLag(navn) {
+  const n = String(navn || '').trim();
+  if (!n) return false;
+  const low = n.toLowerCase();
+  if (n.includes('/')) return false;
+  if (/^[123][A-L]$/i.test(n)) return false;
+  if (/^W\d+$/i.test(n)) return false;
+  return !['winner','runner','path','tbd','place','placeholder'].some(x => low.includes(x));
+}
+
+function alleKampIdVarianter(kamp) {
+  const ids = new Set();
+  [kamp.kamp_id, kamp.canonical_kamp_id, kamp.alias_for].filter(Boolean).forEach(id => ids.add(id));
+  const canonical = canonicalKampId(kamp);
+  Object.values(VM_DATA?.resultater || {}).forEach(r => {
+    if (!r) return;
+    if (r.canonical_kamp_id === canonical || r.alias_for === canonical || r.kamp_id === canonical) {
+      [r.kamp_id, r.canonical_kamp_id, r.alias_for].filter(Boolean).forEach(id => ids.add(id));
+    }
+  });
+  Array.from(ids).forEach(id => ids.add(kampIdTilAscii(id)));
+  return ids;
+}
+
+function hentKamperFraResultater() {
+  const resultater = VM_DATA?.resultater || {};
+  const byCanonical = new Map();
+  Object.values(resultater).forEach(k => {
+    if (!k) return;
+
+    // Ikke vis bracket-/placeholder-kamper som 2A–2B, W74 osv. i Kamper-fanen.
+    // De blir først relevante når status/poengscriptet har fylt inn ekte lag.
+    if (!erKjentLag(k.hjemmelag) || !erKjentLag(k.bortelag)) return;
+
+    const canonical = canonicalKampId(k);
+    if (!canonical) return;
+    const eksisterende = byCanonical.get(canonical);
+    // Foretrekk canonical-oppføring fremfor ASCII-/aliasoppføring.
+    if (!eksisterende || (!k.alias_for && k.kamp_id === canonical)) byCanonical.set(canonical, k);
+  });
+  return Array.from(byCanonical.values()).sort((a,b) => kampTidspunkt(a) - kampTidspunkt(b));
+}
+
+function byggKamperFane() {
+  const el = document.getElementById('kamperInnhold');
+  const filterEl = document.getElementById('kamperFilter');
+  if (!el || !filterEl) return;
+
+  const alle = hentKamperFraResultater();
+  const counts = alle.reduce((acc, k) => {
+    const type = kampStatus(k).type;
+    acc[type] = (acc[type] || 0) + 1;
+    acc.alle++;
+    return acc;
+  }, { alle: 0, ferdig: 0, live: 0, kommende: 0 });
+
+  const filtere = [
+    ['alle', `Alle (${counts.alle})`], ['ferdig', `Ferdig (${counts.ferdig})`],
+    ['live', `Live (${counts.live})`], ['kommende', `Kommende (${counts.kommende})`]
+  ];
+  filterEl.innerHTML = filtere.map(([id, tekst]) => `<button class="kamper-btn ${aktivKampFilter === id ? 'active' : ''}" onclick="settKampFilter('${id}')">${tekst}</button>`).join('');
+
+  const kamper = aktivKampFilter === 'alle' ? alle : alle.filter(k => kampStatus(k).type === aktivKampFilter);
+  if (!kamper.length) {
+    el.innerHTML = '<div class="ingen-data"><div class="stor">⚽</div><h3>Ingen kamper å vise</h3></div>';
+    return;
+  }
+
+  const grupper = new Map();
+  kamper.forEach(k => { const g = datoGruppeNorsk(k); if (!grupper.has(g)) grupper.set(g, []); grupper.get(g).push(k); });
+  let html = '';
+  grupper.forEach((liste, dato) => {
+    html += `<div class="kampdato-gruppe"><div class="kampdato-tittel">${escHTML(dato)}</div><div class="kampoversikt-liste">`;
+    liste.forEach(k => {
+      const status = kampStatus(k), h = k.hjemmelag || '?', b = k.bortelag || '?';
+      const harScore = k.hjemme !== null && k.hjemme !== undefined && k.borte !== null && k.borte !== undefined;
+      const score = harScore ? `${k.hjemme}–${k.borte}` : 'Ikke spilt';
+      const tid = formaterDatoNorsk(k, true).split(' ').slice(-1)[0] || '';
+      const poengAntall = status.type === 'ferdig' ? poenggivereForKamp(k).length : null;
+      const poengTekst = poengAntall !== null ? `${poengAntall} fikk poeng →` : '';
+      const referatDesktop = referatKnappHTML(k,status,false);
+      const referatMobil = referatKnappHTML(k,status,true);
+      html += `<div class="kampoversikt-rad" onclick="aapneKampModal('${escHTML(canonicalKampId(k))}')">
+        <div class="kampoversikt-tid">${escHTML(tid)}</div>
+        <div class="kampoversikt-lag"><span>${flaggLag(h)}</span><span>${escHTML(h)}</span></div>
+        <div class="kampoversikt-score ${harScore ? '' : 'venter'}">${escHTML(score)}</div>
+        <div class="kampoversikt-lag borte"><span>${escHTML(b)}</span><span>${flaggLag(b)}</span></div>
+        <div class="kampoversikt-status ${status.cls}">${status.tekst}</div>
+        <div class="kampreferat-action-desktop">${referatDesktop}</div>
+        <div class="kampoversikt-mobile" aria-hidden="true">
+          <div class="kampmobil-top"><div class="kampmobil-tid">${escHTML(tid)}</div><div class="kampmobil-status ${status.cls}">${escHTML(status.tekst)}</div></div>
+          <div class="kampmobil-lagrow"><div class="kampmobil-lagnavn"><span>${flaggLag(h)}</span><span class="kampmobil-navn">${escHTML(h)}</span></div><div class="kampmobil-score ${harScore ? '' : 'venter'}">${harScore ? k.hjemme : '–'}</div></div>
+          <div class="kampmobil-lagrow"><div class="kampmobil-lagnavn"><span>${flaggLag(b)}</span><span class="kampmobil-navn">${escHTML(b)}</span></div><div class="kampmobil-score ${harScore ? '' : 'venter'}">${harScore ? k.borte : '–'}</div></div>
+          ${poengTekst ? `<div class="kampmobil-poenginfo aktiv">${escHTML(poengTekst)}</div>` : ''}
+          ${referatMobil ? `<div class="kampmobil-actions">${referatMobil}</div>` : ''}
+        </div>
+      </div>`;
+    });
+    html += '</div></div>';
+  });
+  el.innerHTML = html;
+  const oppdatert = document.getElementById('kamperOppdatert');
+  if (oppdatert && VM_DATA?.sist_oppdatert) oppdatert.textContent = 'Sist oppdatert ' + new Date(VM_DATA.sist_oppdatert).toLocaleString('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+}
+
+function settKampFilter(filter) {
+  aktivKampFilter = filter;
+  byggKamperFane();
+}
+
+function finnKamp(canonicalId) {
+  return hentKamperFraResultater().find(k => canonicalKampId(k) === canonicalId || k.kamp_id === canonicalId);
+}
+
+function poenggivereForKamp(kamp) {
+  const ids = alleKampIdVarianter(kamp);
+  const rows = [];
+  (VM_DATA?.stilling || []).forEach(d => {
+    const treff = (d.tippinger || []).find(t => ids.has(t.kamp_id) || ids.has(kampIdTilAscii(t.kamp_id)));
+    if (treff && Number(treff.poeng || 0) > 0) {
+      rows.push({
+        navn: d.navn,
+        poeng: Number(treff.poeng || 0),
+        tips: `${treff.tippa_h ?? '–'}–${treff.tippa_b ?? '–'}`,
+        eksakt: !!treff.eksakt,
+        riktig_utfall: !!treff.riktig_utfall
+      });
+    }
+  });
+  return rows.sort((a,b) => b.poeng - a.poeng || a.navn.localeCompare(b.navn, 'nb'));
+}
+
+function aapneKampModal(canonicalId) {
+  const kamp = finnKamp(canonicalId);
+  if (!kamp) return;
+  const status = kampStatus(kamp);
+  const h = kamp.hjemmelag || '?';
+  const b = kamp.bortelag || '?';
+  const harScore = kamp.hjemme !== null && kamp.hjemme !== undefined && kamp.borte !== null && kamp.borte !== undefined;
+  const score = harScore ? `${kamp.hjemme}–${kamp.borte}` : '–';
+  const poenggivere = poenggivereForKamp(kamp);
+
+  let body = '';
+  if (!kamp.ferdig && status.type !== 'ferdig') {
+    body = '<p style="color:var(--muted);font-size:13px">Kampen er ikke ferdigspilt ennå. Poengoversikt vises når resultatet er klart.</p>';
+  } else if (!poenggivere.length) {
+    body = '<p style="color:var(--muted);font-size:13px">Ingen fikk poeng på denne kampen.</p>';
+  } else {
+    body = `
+      <div class="poenggivere-tittel">Poenggivende tips</div>
+      ${poenggivere.map(p => `
+        <div class="poenggiver-rad">
+          <div class="poenggiver-navn">${escHTML(p.navn)}</div>
+          <div class="poenggiver-tips">${escHTML(p.tips)}</div>
+          <div class="poenggiver-poeng">${p.poeng}p</div>
+        </div>
+      `).join('')}`;
+  }
+
+  document.getElementById('modalInnhold').innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-navn">${escHTML(h)} – ${escHTML(b)}</div>
+        <div class="modal-meta">${escHTML(formaterDatoNorsk(kamp, true))}</div>
+      </div>
+      <button class="modal-lukk" onclick="lukkModal()">✕</button>
+    </div>
+    <div class="kamp-modal-resultat">
+      <div>
+        <div class="kamp-modal-tid">${escHTML(status.tekst)}</div>
+      </div>
+      <div class="kamp-modal-score">${escHTML(score)}</div>
+    </div>
+    <div class="modal-body">${body}</div>`;
+
+  document.getElementById('modalOverlay').classList.add('vis');
+  document.body.style.overflow = 'hidden';
+}
+
+
+
+// ── TEST: VINNERFEIRING ──────────────────────────────────────────
+const TEST_VINNERFEIRING = true;
+let vinnerFeiringAutoVist = false;
+
+function finnVinnerdataForFeiring() {
+  const stilling = [...(VM_DATA?.stilling || [])]
+    .filter(d => d && d.navn)
+    .sort((a, b) => Number(b.poeng_totalt || 0) - Number(a.poeng_totalt || 0) || String(a.navn || '').localeCompare(String(b.navn || ''), 'nb'));
+
+  if (!stilling.length) return null;
+
+  const toppscore = Number(stilling[0].poeng_totalt || 0);
+  const vinnere = stilling.filter(d => Number(d.poeng_totalt || 0) === toppscore);
+  return {
+    stilling,
+    vinnere,
+    topp3: stilling.slice(0, 3),
+    poeng: toppscore,
+    tittel: vinnere.length > 1 ? 'Delt seier!' : 'Vinneren er',
+    navn: vinnere.map(d => d.navn).join(' & ')
+  };
+}
+
+function vinnerPodiumMiniHTML(topp3) {
+  const medaljer = ['🥇', '🥈', '🥉'];
+  return topp3.map((d, i) => `
+    <div class="vinner-mini-plass">
+      <div class="vinner-mini-medalje">${medaljer[i] || '🏅'}</div>
+      <div class="vinner-mini-navn">${escHTML(d.navn || '')}</div>
+      <div class="vinner-mini-poeng">${Number(d.poeng_totalt || 0)} poeng</div>
+    </div>
+  `).join('');
+}
+
+function lagKonfettiHTML(antall = 70) {
+  const farger = ['#ffd600', '#ef2b2d', '#00e676', '#e8f0ff', '#4fc3f7'];
+  let html = '';
+  for (let i = 0; i < antall; i++) {
+    const left = Math.round(Math.random() * 10000) / 100;
+    const duration = Math.round((4.2 + Math.random() * 4.3) * 100) / 100;
+    const delay = Math.round((Math.random() * 3.8) * 100) / 100;
+    const drift = Math.round((-90 + Math.random() * 180) * 10) / 10;
+    const color = farger[i % farger.length];
+    const width = 6 + Math.round(Math.random() * 7);
+    const height = 9 + Math.round(Math.random() * 14);
+    html += `<span class="vinner-confetti" style="left:${left}%;background:${color};width:${width}px;height:${height}px;animation-duration:${duration}s;animation-delay:-${delay}s;--drift:${drift}px"></span>`;
+  }
+  return html;
+}
+
+function visVinnerFeiring(force = false) {
+  const data = finnVinnerdataForFeiring();
+  if (!data) return;
+
+  let overlay = document.getElementById('vinnerFeiringOverlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'vinnerFeiringOverlay';
+    overlay.className = 'vinner-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    document.body.appendChild(overlay);
+  }
+
+  overlay.innerHTML = `
+    ${lagKonfettiHTML()}
+    <div class="vinner-card">
+      <div class="vinner-test-label">Testmodus · ikke produksjonstrigger</div>
+      <div class="vinner-trophy">🏆</div>
+      <div class="vinner-kicker">VM 2026-tippingen</div>
+      <div class="vinner-title">${escHTML(data.tittel)}<br><span class="vinner-navn">${escHTML(data.navn)}</span></div>
+      <div class="vinner-poeng"><strong>${data.poeng}</strong><span>poeng</span></div>
+      <div class="vinner-subtekst">
+        Denne testfilen tvinger frem effekten. I produksjon bør samme visning først trigges når finalen er ferdig og siste poengregning er skrevet til data.js.
+      </div>
+      <div class="vinner-podium-mini">${vinnerPodiumMiniHTML(data.topp3)}</div>
+      <div class="vinner-actions">
+        <button type="button" class="vinner-btn" onclick="lukkVinnerFeiring()">Se resultatlisten</button>
+        <button type="button" class="vinner-btn secondary" onclick="visVinnerFeiring(true)">Kjør effekten igjen</button>
+      </div>
+    </div>
+  `;
+
+  overlay.classList.add('vis');
+  document.body.style.overflow = 'hidden';
+}
+
+function lukkVinnerFeiring() {
+  const overlay = document.getElementById('vinnerFeiringOverlay');
+  if (overlay) overlay.classList.remove('vis');
+  document.body.style.overflow = '';
+}
+
+function triggeTestVinnerfeiringEtterLasting() {
+  if (!TEST_VINNERFEIRING || vinnerFeiringAutoVist) return;
+  vinnerFeiringAutoVist = true;
+  window.setTimeout(() => visVinnerFeiring(true), 700);
+}
+
+// ── BYGG STILLING ──────────────────────────────────────────
+function byggStilling() {
+  if (typeof VM_DATA === "undefined" || !VM_DATA.stilling?.length) {
+    document.getElementById("stillingsinnhold").innerHTML = `
+      <div class="ingen-data">
+        <div class="stor">🏆</div>
+        <h3>Ingen tippinger ennå</h3>
+        <p>Vær den første til å levere!</p>
+        <a href="tippe/">⚽ Lever tipping nå</a>
+      </div>`;
+    return;
+  }
+
+  const stilling = VM_DATA.stilling;
+  const topp3    = stilling.slice(0, 3);
+
+
+
+  let podiumHTML = '<div class="podium">';
+  const podiumRekkefølge = topp3.length >= 2 ? [topp3[1], topp3[0], topp3[2]] : topp3;
+  const podiumKlasser = topp3.length >= 2 ? ["p2","p1","p3"] : ["p1"];
+  const medals = topp3.length >= 2 ? ["🥈","🥇","🥉"] : ["🥇"];
+
+  podiumRekkefølge.forEach((d, i) => {
+    if (!d) { podiumHTML += '<div></div>'; return; }
+    podiumHTML += `
+      <div class="podium-plass ${podiumKlasser[i]}">
+        <div class="podium-medal">${medals[i]}</div>
+        <div class="podium-navn">${escHTML(d.navn)}</div>
+        <div class="podium-poeng">${d.poeng_totalt}</div>
+        <div class="podium-vinner-tag">${escHTML(d.turneringsvinner || "")}</div>
+        ${senPameldingMerkeHTML(d)}
+      </div>`;
+  });
+  podiumHTML += '</div>';
+
+  let tabellHTML = `
+    <div class="stilling-header">
+      <div>#</div><div>Navn</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe/start</div>
+      <div style="text-align:right">Utsl.</div>
+      <div style="text-align:right">Turn.</div>
+      <div style="text-align:right">Totalt</div>
+    </div>`;
+
+  stilling.forEach((d, i) => {
+    const plass    = i + 1;
+    const plassCls = plass <= 3 ? `p${plass}` : "";
+    const vinnerCls = d.turneringsvinner_riktig ? "riktig" : "";
+
+    tabellHTML += `
+      <div class="stilling-rad" onclick="toggleDetaljer(${i})" id="rad-${i}">
+        <div class="plass-num ${plassCls}">${plass}</div>
+        <div>
+          <span class="rad-navn" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</span>
+          <div class="rad-vinner ${vinnerCls}">🏆 ${escHTML(d.turneringsvinner || "—")}</div>
+          ${senPameldingMerkeHTML(d)}
+        </div>
+        <div class="rad-tall col-gruppe">${gruppeEllerStartpoeng(d)}</div>
+        <div class="rad-tall">${samletUtslagspoeng(d)}</div>
+        <div class="rad-tall">${d.poeng_turneringsvinner}</div>
+        <div class="rad-totalt">${d.poeng_totalt}</div>
+      </div>
+      <div class="detaljer" id="detaljer-${i}">
+        ${byggDetaljer(d)}
+      </div>`;
+  });
+
+  const startpoengHTML = byggStartpoengBanner(stilling);
+  const dagensHTML = byggDagensKamper();
+  document.getElementById("stillingsinnhold").innerHTML = podiumHTML + startpoengHTML + dagensHTML + tabellHTML;
+
+  if (VM_DATA.sist_oppdatert) {
+    const dato = new Date(VM_DATA.sist_oppdatert);
+    document.getElementById("sistOppdatert").textContent =
+      "Sist oppdatert: " + dato.toLocaleString("no-NO", {day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+  }
+
+  byggDetaljertTabell();
+}
+
+function byggDetaljer(d) {
+  let html = startpoengInfoHTML(d);
+  if (!d.tippinger?.length) return html + '<p style="color:var(--muted);font-size:13px">Ingen tippinger registrert</p>';
+  const bonuser = d.tippinger.filter(t => t.type === 'bonus' || t.type === 'helhetsbonus');
+  const ferdigeKamper = d.tippinger.filter(t => (!t.type || t.type === 'kamp') && t.ferdig);
+  if (bonuser.length) {
+    html += '<div class="detaljer-tittel">Bonusspørsmål</div>';
+    bonuser.forEach(t => {
+      const fasit = t.ferdig ? `Fasit: ${t.fasit ?? '—'}` : 'Avventer fasit';
+      const poengCls = t.poeng === 0 ? 'p0' : 'p4';
+      html += `<div class="kamp-rad">
+        <div class="kamp-lag">${escHTML(t.sporsmal || '')}</div>
+        <div class="kamp-score">${escHTML(t.svar ?? '—')}<span style="display:block;color:var(--muted);font-size:11px">${escHTML(fasit)}</span></div>
+        <div style="font-size:10px;color:var(--muted);white-space:nowrap">${escHTML(t.type === 'helhetsbonus' ? 'Hele utslag' : (RUNDE_NAVN[t.runde] || t.runde || ''))}</div>
+        <div class="kamp-poeng ${poengCls}">${t.ferdig ? `${t.poeng || 0}p` : '–'}</div>
+      </div>`;
+    });
+  }
+  if (ferdigeKamper.length) {
+    html += '<div class="detaljer-tittel" style="margin-top:14px">Kamptips</div>';
+    const rundeNavn = { gruppe:"Gruppespill", r32:"R32", r16:"R16", qf:"QF", sf:"SF", final:"Finale" };
+    ferdigeKamper.forEach(t => {
+      const scoreCls = t.eksakt ? "riktig" : "";
+      const poengCls = t.poeng === 0 ? "p0" : t.poeng <= 2 ? "p2" : "p4";
+      const runde = rundeNavn[t.runde] || t.runde || "";
+      html += `<div class="kamp-rad">
+        <div class="kamp-lag">${escHTML(t.hjemmelag || "")} – ${escHTML(t.bortelag || "")}</div>
+        <div class="kamp-score ${scoreCls}">${t.tippa_h ?? "–"}–${t.tippa_b ?? "–"}<span style="color:var(--muted);font-size:11px"> (${t.faktisk_h}–${t.faktisk_b})</span></div>
+        <div style="font-size:10px;color:var(--muted);white-space:nowrap">${runde}</div>
+        <div class="kamp-poeng ${poengCls}">${t.poeng}p</div>
+      </div>`;
+    });
+  }
+  return html || '<p style="color:var(--muted);font-size:13px">Ingen avgjorte tips ennå</p>';
+}
+
+function toggleDetaljer(i) {
+  const detaljer = document.getElementById("detaljer-" + i);
+  const rad      = document.getElementById("rad-" + i);
+  const erAktiv  = detaljer.classList.contains("vis");
+  document.querySelectorAll(".detaljer").forEach(d => d.classList.remove("vis"));
+  document.querySelectorAll(".stilling-rad").forEach(r => r.classList.remove("aktiv"));
+  if (!erAktiv) {
+    detaljer.classList.add("vis");
+    rad.classList.add("aktiv");
+  }
+}
+
+let aktivRunde = "alle";
+
+function byggDetaljertTabell() {
+  if (!VM_DATA?.stilling?.length) return;
+  const runder = ["alle","gruppe","r32","r16","qf","sf","final"];
+  const rundeNavn = { alle:"Alle",gruppe:"Gruppe",r32:"R32",r16:"R16",qf:"QF",sf:"SF",final:"Finale" };
+  document.getElementById("rundeFilter").innerHTML = runder.map(r => `
+    <button class="runde-btn ${r === aktivRunde ? 'active' : ''}"
+      onclick="filtrerRunde('${r}')">${rundeNavn[r]}</button>
+  `).join("");
+  let html = `
+    <div class="stilling-header">
+      <div>#</div><div>Navn</div>
+      <div style="text-align:right" class="col-gruppe">Gruppe/start</div>
+      <div style="text-align:right">Utsl.</div>
+      <div style="text-align:right">Turn.</div>
+      <div style="text-align:right">Totalt</div>
+    </div>`;
+  VM_DATA.stilling.forEach((d, i) => {
+    const poengGruppe = aktivRunde === "alle" ? gruppeEllerStartpoeng(d) :
+      aktivRunde === "gruppe" ? Number(d.poeng_gruppespill || 0) : 0;
+    const poengUtsl = aktivRunde === "alle" ? samletUtslagspoeng(d) :
+      aktivRunde !== "gruppe" ? (d.tippinger?.filter(t => t.runde === aktivRunde).reduce((sum,t) => sum + (t.poeng || 0), 0) || 0) : 0;
+    const poengTurn = aktivRunde === "alle" ? d.poeng_turneringsvinner : 0;
+    const totalt = aktivRunde === "alle" ? d.poeng_totalt : poengGruppe + poengUtsl;
+    html += `
+      <div class="stilling-rad">
+        <div class="plass-num ${i<3?'p'+(i+1):''}">${i+1}</div>
+        <div><div class="rad-navn" style="cursor:pointer" onclick="aapneModal(event, ${i})">${escHTML(d.navn)}</div>${senPameldingMerkeHTML(d)}</div>
+        <div class="rad-tall col-gruppe">${poengGruppe}</div>
+        <div class="rad-tall">${poengUtsl}</div>
+        <div class="rad-tall">${poengTurn}</div>
+        <div class="rad-totalt">${totalt}</div>
+      </div>`;
+  });
+  document.getElementById("detaljertabell").innerHTML = html;
+}
+
+function filtrerRunde(runde) {
+  aktivRunde = runde;
+  byggDetaljertTabell();
+}
+
+function byttSeksjon(id, el) {
+  document.querySelectorAll(".seksjon").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  el.classList.add("active");
+  if (id === 'tabell-seksjon') byggTabellFane();
+  if (id === 'kamper-seksjon') byggKamperFane();
+  if (id === 'detaljer-seksjon') byggBonusstatus();
+}
+
+function escHTML(str) {
+  return String(str)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+async function init() {
+  initBakgrunnsmusikk();
+  await Promise.all([lastKampData(), lastTabellData(), lastStatusData(), lastKampreferater(), lastInnleveringsstatus()]);
+  byggStilling();
+  triggeTestVinnerfeiringEtterLasting();
+  byggTabellFane();
+  byggKamperFane();
+  byggBonusstatus();
+  initProfilOgRecap();
+}
+init();
+</script>
+</body>
+</html>
