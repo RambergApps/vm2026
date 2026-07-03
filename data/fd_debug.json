@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-03T01:01:18Z",
+  "tidspunkt": "2026-07-03T01:15:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1141,10 +1141,10 @@
       "fd_bortelag": "Croatia",
       "hjemmelag_normalisert": "Portugal",
       "bortelag_normalisert": "Croatia",
-      "status": "IN_PLAY",
-      "ferdig": false,
+      "status": "FINISHED",
+      "ferdig": true,
       "hjemme": 2,
-      "borte": 1,
+      "borte": 2,
       "fd_dato": "2026-07-02",
       "fd_utcDate": "2026-07-02T23:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Portugal_Croatia_2026_07_02"

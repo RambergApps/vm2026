@@ -1,15 +1,4 @@
 {
-  "sist_sjekket": "2026-07-03T01:01:19Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Portugal_Croatia_2026_07_02",
-      "hjemmelag": "Portugal",
-      "bortelag": "Croatia",
-      "dato": "2026-07-02",
-      "runde": "r32",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-07-03T01:15:39Z",
+  "kamper": []
 }
