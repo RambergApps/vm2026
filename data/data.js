@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T21:09:23Z
+// Sist oppdatert: 2026-07-04T21:15:38Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T21:09:23Z",
+  "sist_oppdatert": "2026-07-04T21:15:38Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2085,7 +2085,7 @@ const VM_DATA = {
       "spiller": "Kylian Mbappe",
       "maal": 6,
       "assists": 2,
-      "minutter": 378
+      "minutter": 382
     },
     {
       "rank": 3,
@@ -2106,7 +2106,7 @@ const VM_DATA = {
       "spiller": "Ousmane Dembele",
       "maal": 4,
       "assists": 2,
-      "minutter": 304
+      "minutter": 307
     },
     {
       "rank": 6,
@@ -2253,7 +2253,7 @@ const VM_DATA = {
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
-      "minutter": 233
+      "minutter": 237
     },
     {
       "rank": 27,
@@ -2400,7 +2400,7 @@ const VM_DATA = {
       "spiller": "Azzedine Ounahi",
       "maal": 2,
       "assists": 0,
-      "minutter": 375
+      "minutter": 376
     },
     {
       "rank": 48,
@@ -2434,7 +2434,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T21:09:23Z"
+    "sist_beregnet": "2026-07-04T21:15:38Z"
   },
   "stilling": [
     {
