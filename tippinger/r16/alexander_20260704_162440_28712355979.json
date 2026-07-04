@@ -1,0 +1,81 @@
+{
+  "bonus": {
+    "id": "antall_nullen",
+    "svar": 4
+  },
+  "meta": {
+    "deltaker_id": "alexander",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-04T16:24:23.208Z",
+    "navn": "Alexander",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-04T16:24:40Z"
+  },
+  "tippinger": [
+    {
+      "borte": 3,
+      "bortelag": "France",
+      "hjemme": 0,
+      "hjemmelag": "Paraguay",
+      "kamp_id": "Paraguay_France_2026_07_04",
+      "match_no": 89
+    },
+    {
+      "borte": 1,
+      "bortelag": "Morocco",
+      "hjemme": 0,
+      "hjemmelag": "Canada",
+      "kamp_id": "Canada_Morocco_2026_07_04",
+      "match_no": 90
+    },
+    {
+      "borte": 3,
+      "bortelag": "Norway",
+      "hjemme": 2,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Norway_2026_07_05",
+      "match_no": 91
+    },
+    {
+      "borte": 2,
+      "bortelag": "England",
+      "hjemme": 1,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_England_2026_07_05",
+      "match_no": 92
+    },
+    {
+      "borte": 2,
+      "bortelag": "Spain",
+      "hjemme": 1,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Spain_2026_07_06",
+      "match_no": 93
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 2,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Belgium_2026_07_06",
+      "match_no": 94
+    },
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 1,
+      "bortelag": "Colombia",
+      "hjemme": 0,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
