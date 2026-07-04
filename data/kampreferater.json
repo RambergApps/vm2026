@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T21:16:22Z",
+  "sist_oppdatert": "2026-07-04T22:02:12Z",
   "antall_kamper": 90,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18129,8 +18129,8 @@
             "poeng": 3
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 2,
+            "navn": "Sebastian Luranc",
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 3
           },
@@ -18141,21 +18141,27 @@
             "poeng": 3
           },
           {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 3
+          },
+          {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 3,
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 0,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -18168,12 +18174,6 @@
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 3,
-            "tippa_b": 1,
             "poeng": 3
           }
         ],
@@ -18217,7 +18217,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T03:45:52Z"
+      "oppdatert": "2026-07-04T22:02:12Z"
     },
     "Canada_Morocco_2026_07_04": {
       "kamp_id": "Canada_Morocco_2026_07_04",
@@ -18327,17 +18327,17 @@
     "Paraguay_France_2026_07_04": {
       "kamp_id": "Paraguay_France_2026_07_04",
       "canonical_kamp_id": "Paraguay_France_2026_07_04",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537375,
+      "fd_utcDate": "2026-07-04T21:00:00Z",
       "hjemmelag": "Paraguay",
       "bortelag": "France",
       "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Paraguay and France are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Paraguay and France are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18415,7 +18415,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-04T21:15:39Z"
+      "oppdatert": "2026-07-04T22:01:19Z"
     }
   }
 }
