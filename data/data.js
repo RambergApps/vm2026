@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T21:01:26Z
+// Sist oppdatert: 2026-07-04T21:05:52Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T21:01:26Z",
+  "sist_oppdatert": "2026-07-04T21:05:52Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1762,18 +1762,22 @@ const VM_DATA = {
       "canonical_kamp_id": "Paraguay_France_2026_07_04",
       "hjemmelag": "Paraguay",
       "bortelag": "France",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r16",
       "dato_openfootball": "2026-07-04",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-04",
       "fd_match_id": 537375,
       "fd_utcDate": "2026-07-04T21:00:00Z",
       "fd_hjemmelag": "Paraguay",
-      "fd_bortelag": "France"
+      "fd_bortelag": "France",
+      "fifa_event_id": "400021533",
+      "fifa_match_no": 89,
+      "fifa_utcDate": "2026-07-04T21:00:00Z",
+      "fifa_dato": "2026-07-04"
     },
     "Brazil_Norway_2026_07_05": {
       "kamp_id": "Brazil_Norway_2026_07_05",
@@ -2435,7 +2439,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T21:01:26Z"
+    "sist_beregnet": "2026-07-04T21:05:52Z"
   },
   "stilling": [
     {
@@ -3554,11 +3558,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -4957,11 +4961,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -7726,11 +7730,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -9062,11 +9066,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -10380,11 +10384,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -11745,11 +11749,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -14514,11 +14518,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -15917,11 +15921,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -22473,11 +22477,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 1,
           "tippa_b": 4,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -24975,11 +24979,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -26325,11 +26329,11 @@ const VM_DATA = {
           "bortelag": "France",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {

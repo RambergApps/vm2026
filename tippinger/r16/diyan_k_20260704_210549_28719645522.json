@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "deltaker_id": "diyan_k",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-04T21:05:39.568Z",
+    "navn": "Diyan K.",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-04T21:05:49Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Norway",
+      "hjemme": 2,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Norway_2026_07_05",
+      "match_no": 91
+    },
+    {
+      "borte": 3,
+      "bortelag": "England",
+      "hjemme": 1,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_England_2026_07_05",
+      "match_no": 92
+    },
+    {
+      "borte": 3,
+      "bortelag": "Spain",
+      "hjemme": 1,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Spain_2026_07_06",
+      "match_no": 93
+    },
+    {
+      "borte": 2,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Belgium_2026_07_06",
+      "match_no": 94
+    },
+    {
+      "borte": 1,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 1,
+      "bortelag": "Colombia",
+      "hjemme": 1,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
