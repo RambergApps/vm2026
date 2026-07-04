@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-04T05:31:07Z",
+  "sist_oppdatert": "2026-07-04T05:45:41Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -71,6 +71,7 @@
             "Mexico_England_2026_07_05",
             "Paraguay_France_2026_07_04",
             "Portugal_Spain_2026_07_06",
+            "Switzerland_Colombia_2026_07_07",
             "USA_Belgium_2026_07_06"
           ],
           "bonus": true,
@@ -307,6 +308,19 @@
       "navn": "Marita Hauge Gjerde",
       "deltaker_type": "ordinaer",
       "runder": {
+        "r16": {
+          "kamper": [
+            "Brazil_Norway_2026_07_05",
+            "Canada_Morocco_2026_07_04",
+            "Mexico_England_2026_07_05",
+            "Paraguay_France_2026_07_04",
+            "Portugal_Spain_2026_07_06",
+            "Switzerland_Colombia_2026_07_07",
+            "USA_Belgium_2026_07_06"
+          ],
+          "bonus": true,
+          "bonus_id": "antall_nullen"
+        },
         "r32": {
           "kamper": [
             "Argentina_Cape_Verde_2026_07_03",
