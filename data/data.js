@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T23:15:41Z
+// Sist oppdatert: 2026-07-04T23:31:09Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T23:15:41Z",
+  "sist_oppdatert": "2026-07-04T23:31:09Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2023,10 +2023,10 @@ const VM_DATA = {
       },
       "golden_boot": {
         "status": "forelopig",
-        "spiller": "Lionel Messi",
+        "spiller": "Kylian Mbappe",
         "maal": 7,
-        "assists": 0,
-        "minutter": 361,
+        "assists": 2,
+        "minutter": 481,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -2078,17 +2078,17 @@ const VM_DATA = {
   "spillerstatistikk": [
     {
       "rank": 1,
+      "spiller": "Kylian Mbappe",
+      "maal": 7,
+      "assists": 2,
+      "minutter": 481
+    },
+    {
+      "rank": 2,
       "spiller": "Lionel Messi",
       "maal": 7,
       "assists": 0,
       "minutter": 361
-    },
-    {
-      "rank": 2,
-      "spiller": "Kylian Mbappe",
-      "maal": 6,
-      "assists": 2,
-      "minutter": 426
     },
     {
       "rank": 3,
@@ -2109,7 +2109,7 @@ const VM_DATA = {
       "spiller": "Ousmane Dembele",
       "maal": 4,
       "assists": 2,
-      "minutter": 352
+      "minutter": 391
     },
     {
       "rank": 6,
@@ -2281,17 +2281,17 @@ const VM_DATA = {
     },
     {
       "rank": 30,
-      "spiller": "Bradley Barcola",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 282
-    },
-    {
-      "rank": 31,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 288
+    },
+    {
+      "rank": 31,
+      "spiller": "Bradley Barcola",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 297
     },
     {
       "rank": 32,
@@ -2437,7 +2437,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T23:15:41Z"
+    "sist_beregnet": "2026-07-04T23:31:09Z"
   },
   "stilling": [
     {
