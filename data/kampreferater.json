@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T18:02:09Z",
+  "sist_oppdatert": "2026-07-04T18:16:32Z",
   "antall_kamper": 89,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18230,9 +18230,9 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Canada and Morocco are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Canada and Morocco are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18304,7 +18304,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-04T18:01:17Z"
+      "oppdatert": "2026-07-04T18:15:42Z"
     }
   }
 }

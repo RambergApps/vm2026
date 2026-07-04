@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T18:01:16Z",
+  "tidspunkt": "2026-07-04T18:15:40Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -693,7 +693,7 @@
       "fd_bortelag": "Morocco",
       "hjemmelag_normalisert": "Canada",
       "bortelag_normalisert": "Morocco",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,
