@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T22:16:46Z",
+  "sist_oppdatert": "2026-07-04T22:46:24Z",
   "antall_kamper": 90,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18332,12 +18332,12 @@
       "hjemmelag": "Paraguay",
       "bortelag": "France",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "r16",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Paraguay and France are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "France lead Paraguay 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18415,7 +18415,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-04T22:15:51Z"
+      "oppdatert": "2026-07-04T22:45:40Z"
     }
   }
 }
