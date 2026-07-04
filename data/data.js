@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T18:31:09Z
+// Sist oppdatert: 2026-07-04T18:45:40Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T18:31:09Z",
+  "sist_oppdatert": "2026-07-04T18:45:40Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2202,24 +2202,24 @@ const VM_DATA = {
     },
     {
       "rank": 19,
-      "spiller": "Jonathan David",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 393
-    },
-    {
-      "rank": 20,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 21,
+      "rank": 20,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 411
+    },
+    {
+      "rank": 21,
+      "spiller": "Jonathan David",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 440
     },
     {
       "rank": 22,
@@ -2338,7 +2338,7 @@ const VM_DATA = {
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
-      "minutter": 187
+      "minutter": 188
     },
     {
       "rank": 39,
@@ -2435,7 +2435,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T18:31:09Z"
+    "sist_beregnet": "2026-07-04T18:45:40Z"
   },
   "stilling": [
     {
