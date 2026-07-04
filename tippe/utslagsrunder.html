@@ -344,6 +344,21 @@ body {
 .ny-deltaker-info.vis { display: block; }
 .ny-deltaker-info strong { color: var(--success); }
 
+.siste-innlevering-info {
+  display: none;
+  flex-basis: 100%;
+  background: rgba(255,214,0,.07);
+  border: 1px solid rgba(255,214,0,.24);
+  border-radius: 8px;
+  padding: 10px 13px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.siste-innlevering-info.vis { display: block; }
+.siste-innlevering-info strong { color: var(--accent2); }
+.siste-innlevering-info .status { color: var(--muted); }
+
 .navn-duplikat-varsel {
   display: none;
   flex-basis: 100%;
@@ -640,6 +655,8 @@ body::before {
       Når gruppespillet er ferdig, får du gjennomsnittlig gruppespillscore som startpoeng.
       Navnet må være unikt.
     </div>
+
+    <div class="siste-innlevering-info" id="sisteInnleveringInfo" aria-live="polite"></div>
   </div>
 
   <!-- RUNDE-SEKSJONER genereres dynamisk -->
@@ -662,6 +679,7 @@ const TOKEN         = "vm2026-ramberg";
 const STATUS_URL    = "../data/status.json";
 const DELTAKERE_URL = "../data/deltakere.json";
 const VIEWER_KEY    = "vm2026_viewer_id";
+const GITHUB_TIPPINGER_BASE_URL = "https://api.github.com/repos/RambergApps/vm2026/contents/tippinger";
 
 const POENG = { r32: 3, r16: 4, qf: 5, sf: 6, final: 7 };
 const RUNDE_NAVN = {
@@ -695,6 +713,8 @@ let deltakerId = null;
 let deltakerType = null;
 let oppretterNyDeltaker = false;
 let kjenteDeltakere = [];
+let sisteInnlevering = null;
+let henterInnleverteTips = false;
 
 const deepLinkParams = new URLSearchParams(window.location.search);
 const deepLinkRunde = deepLinkParams.get("runde");
@@ -767,6 +787,155 @@ function lagreIdentitetLokalt(navn, id, type) {
   if (type) localStorage.setItem("vm2026_deltaker_type", type);
 }
 
+function formaterInnleveringstid(value) {
+  if (!value) return "";
+  const timestamp = Date.parse(value);
+  if (!Number.isFinite(timestamp)) return "";
+  return new Date(timestamp)
+    .toLocaleString("no-NO", {
+      timeZone: "Europe/Oslo",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    })
+    .replace(",", " kl.");
+}
+
+function oppdaterSisteInnleveringInfo(tekst = "") {
+  const el = document.getElementById("sisteInnleveringInfo");
+  if (!el) return;
+
+  if (tekst) {
+    el.innerHTML = `<span class="status">${escapeHtml(tekst)}</span>`;
+    el.classList.add("vis");
+    return;
+  }
+
+  if (!sisteInnlevering) {
+    el.classList.remove("vis");
+    el.innerHTML = "";
+    return;
+  }
+
+  const tid = formaterInnleveringstid(sisteInnlevering.innlevert);
+  const runde = RUNDE_NAVN[sisteInnlevering.runde] || sisteInnlevering.runde || "Utslagsrunder";
+  const antall = sisteInnlevering.antallKamptips || 0;
+  const bonusTekst = sisteInnlevering.antallBonus
+    ? ` · ${sisteInnlevering.antallBonus} bonus`
+    : "";
+
+  el.innerHTML = `<strong>Siste innleverte tips:</strong> ${escapeHtml(runde)} · ${escapeHtml(tid)} · ${antall} kamptips${bonusTekst}`;
+  el.classList.add("vis");
+}
+
+function filnavnMatcherDeltaker(filnavn, id) {
+  const navn = String(filnavn || "");
+  return Boolean(id && navn.endsWith(".json") && navn.startsWith(id + "_"));
+}
+
+function hentRundeFraInnsending(data, fallbackRunde) {
+  return data?.meta?.runde || fallbackRunde;
+}
+
+async function hentJsonFil(fil) {
+  const url = fil.download_url || fil.url;
+  if (!url) return null;
+  const response = await fetch(url + (url.includes("?") ? "&" : "?") + "t=" + Date.now());
+  if (!response.ok) return null;
+  return await response.json();
+}
+
+function mergeInnlevering(data, fallbackRunde) {
+  const runde = hentRundeFraInnsending(data, fallbackRunde);
+  const innlevert = data?.meta?.innlevert || data?.meta?.server_mottatt || null;
+  const innlevertMs = Date.parse(innlevert || "");
+
+  if (Array.isArray(data?.tippinger)) {
+    data.tippinger.forEach(tip => {
+      if (!tip?.kamp_id) return;
+      if (Number.isInteger(tip.hjemme) && Number.isInteger(tip.borte)) {
+        tippinger[tip.kamp_id] = { hjemme: tip.hjemme, borte: tip.borte };
+      }
+    });
+  }
+
+  if (data?.bonus && runde) {
+    bonusSvar[runde] = data.bonus;
+  }
+
+  if (data?.helhetsbonus && typeof data.helhetsbonus === "object") {
+    helhetsbonus = { ...helhetsbonus, ...data.helhetsbonus };
+  }
+
+  if (innlevert && (!sisteInnlevering || innlevertMs >= Date.parse(sisteInnlevering.innlevert || ""))) {
+    sisteInnlevering = {
+      runde,
+      innlevert,
+      antallKamptips: Array.isArray(data?.tippinger) ? data.tippinger.length : 0,
+      antallBonus: (data?.bonus ? 1 : 0) + (data?.helhetsbonus ? Object.keys(data.helhetsbonus).length : 0)
+    };
+  }
+}
+
+async function hentInnleverteTipsForValgtBruker() {
+  if (!deltakerId || henterInnleverteTips) return;
+
+  henterInnleverteTips = true;
+  oppdaterSisteInnleveringInfo("Henter siste innleverte tips ...");
+
+  try {
+    const filer = [];
+    for (const runde of RUNDE_REKKEFØLGE) {
+      const response = await fetch(`${GITHUB_TIPPINGER_BASE_URL}/${runde}?t=${Date.now()}`);
+      if (!response.ok) continue;
+      const liste = await response.json();
+      if (!Array.isArray(liste)) continue;
+      liste
+        .filter(fil => fil?.type === "file" && filnavnMatcherDeltaker(fil.name, deltakerId))
+        .forEach(fil => filer.push({ ...fil, runde }));
+    }
+
+    if (!filer.length) {
+      sisteInnlevering = null;
+      oppdaterSisteInnleveringInfo("Ingen tidligere innleverte utslagstips funnet for valgt bruker.");
+      return;
+    }
+
+    const datafiler = [];
+    for (const fil of filer.sort((a, b) => a.name.localeCompare(b.name))) {
+      const data = await hentJsonFil(fil);
+      if (!data) continue;
+      const metaId = data?.meta?.deltaker_id;
+      if (metaId && String(metaId) !== String(deltakerId)) continue;
+      const innlevert = data?.meta?.innlevert || data?.meta?.server_mottatt || "";
+      datafiler.push({ data, runde: fil.runde, innlevertMs: Date.parse(innlevert) || 0 });
+    }
+
+    datafiler.sort((a, b) => a.innlevertMs - b.innlevertMs);
+
+    tippinger = {};
+    bonusSvar = {};
+    helhetsbonus = {};
+    sisteInnlevering = null;
+
+    datafiler.forEach(item => mergeInnlevering(item.data, item.runde));
+
+    const kampIds = Object.keys(tippinger);
+    if (kampIds.length) markerKamperLevert(kampIds);
+
+    lagreTilStorage();
+    byggUI();
+    oppdaterSisteInnleveringInfo();
+
+  } catch (error) {
+    oppdaterSisteInnleveringInfo("Kunne ikke hente tidligere innleverte tips akkurat nå.");
+  } finally {
+    henterInnleverteTips = false;
+  }
+}
+
 function visNyDeltakerModus(aktiv) {
   const input = document.getElementById("navnInput");
   const info = document.getElementById("nyDeltakerInfo");
@@ -789,6 +958,8 @@ function visNyDeltakerModus(aktiv) {
     input.value = "";
     if (select) select.value = "";
     validerNyttDeltakernavn();
+    sisteInnlevering = null;
+    oppdaterSisteInnleveringInfo();
     input.focus();
   } else {
     const valgt = kjenteDeltakere.find(d => d.id === select?.value);
@@ -876,6 +1047,7 @@ function byggDeltakerDropdown(deltakere) {
     input.style.display = "none";
     document.getElementById("nyDeltakerInfo").classList.remove("vis");
     lagreIdentitetLokalt(funnet.navn, funnet.id, funnet.deltaker_type);
+    setTimeout(hentInnleverteTipsForValgtBruker, 0);
   } else {
     input.style.display = "none";
   }
@@ -898,7 +1070,13 @@ function byggDeltakerDropdown(deltakere) {
       localStorage.removeItem(VIEWER_KEY);
     }
     lagreTilStorage();
-    if (status) byggUI();
+    if (valgt) {
+      hentInnleverteTipsForValgtBruker();
+    } else {
+      sisteInnlevering = null;
+      oppdaterSisteInnleveringInfo();
+      if (status) byggUI();
+    }
   });
 
   select.style.display = "";
@@ -1511,6 +1689,13 @@ function visSucces(navn, runde, kampIds, harRundebonus=false, antallHelhet=0) {
   if (antallHelhet) deler.push(`${antallHelhet} helhetsbonus${antallHelhet === 1 ? "" : "er"}`);
   document.getElementById("suksessNavn").textContent =
     `${navn} — ${deler.join(", ")} lagret. Nye åpne kamper kan leveres senere.`;
+  sisteInnlevering = {
+    runde,
+    innlevert: new Date().toISOString(),
+    antallKamptips: kampIds.length,
+    antallBonus: (harRundebonus ? 1 : 0) + antallHelhet
+  };
+  oppdaterSisteInnleveringInfo();
   success.scrollIntoView({ behavior: "smooth", block: "center" });
   window.setTimeout(() => success.classList.remove("vis"), 7000);
 }
