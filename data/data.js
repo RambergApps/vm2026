@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T17:15:43Z
+// Sist oppdatert: 2026-07-04T17:31:21Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T17:15:43Z",
+  "sist_oppdatert": "2026-07-04T17:31:21Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2188,38 +2188,38 @@ const VM_DATA = {
     },
     {
       "rank": 17,
-      "spiller": "Jonathan David",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 370
-    },
-    {
-      "rank": 18,
       "spiller": "Cristiano Ronaldo",
       "maal": 3,
       "assists": 0,
       "minutter": 385
     },
     {
-      "rank": 19,
-      "spiller": "Ismael Saibari",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 390
-    },
-    {
-      "rank": 20,
+      "rank": 18,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 21,
+      "rank": 19,
+      "spiller": "Jonathan David",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 393
+    },
+    {
+      "rank": 20,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
+    },
+    {
+      "rank": 21,
+      "spiller": "Ismael Saibari",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 411
     },
     {
       "rank": 22,
@@ -2435,7 +2435,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T17:15:43Z"
+    "sist_beregnet": "2026-07-04T17:31:21Z"
   },
   "stilling": [
     {
