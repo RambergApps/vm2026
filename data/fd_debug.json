@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T00:15:40Z",
+  "tidspunkt": "2026-07-04T00:31:09Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1253,10 +1253,10 @@
       "fd_bortelag": "Cape Verde Islands",
       "hjemmelag_normalisert": "Argentina",
       "bortelag_normalisert": "Cape Verde",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 2,
+      "borte": 2,
       "fd_dato": "2026-07-03",
       "fd_utcDate": "2026-07-03T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Argentina_Cape_Verde_2026_07_03"
