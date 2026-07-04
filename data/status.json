@@ -290,8 +290,8 @@
         "slot_hjemme": "W73",
         "slot_borte": "W75",
         "utcDate": "2026-07-04T17:00:00Z",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Brazil_Norway_2026_07_05",
@@ -372,8 +372,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 8,
-    "neste_frist": "2026-07-04T17:00:00Z"
+    "antall_tippebare": 7,
+    "neste_frist": "2026-07-04T21:00:00Z"
   },
   "qf": {
     "aapen": false,

@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T16:45:37Z
+// Sist oppdatert: 2026-07-04T17:01:20Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T16:45:37Z",
+  "sist_oppdatert": "2026-07-04T17:01:20Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2040,7 +2040,7 @@ const VM_DATA = {
         "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid"
       },
       "r16": {
-        "status": "ikke_startet",
+        "status": "paagaar",
         "ferdige_kamper": 0,
         "totalt_kamper": 8,
         "verdi": 0,
@@ -2435,7 +2435,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T16:45:37Z"
+    "sist_beregnet": "2026-07-04T17:01:20Z"
   },
   "stilling": [
     {
@@ -3535,6 +3535,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -3767,6 +3780,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -4901,6 +4924,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 0,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -5133,6 +5169,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -7633,6 +7679,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -8942,6 +9001,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -9136,6 +9208,16 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 5
@@ -12941,6 +13023,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -13173,6 +13268,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 6,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -14307,6 +14412,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -14539,6 +14657,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 1,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -15673,6 +15801,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -15905,6 +16046,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -23291,6 +23442,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -24614,6 +24778,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -24846,6 +25023,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -25980,6 +26167,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Canada_Morocco_2026_07_04",
+          "hjemmelag": "Canada",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -26212,6 +26412,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "r16",
+          "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
