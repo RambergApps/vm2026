@@ -6660,8 +6660,8 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-04T19:34:34Z",
-    "antall_sok": 61,
+    "sist_sokt": "2026-07-04T19:46:55Z",
+    "antall_sok": 62,
     "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6678,7 +6678,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-04T19:33:48Z",
+      "hentet": "2026-07-04T19:46:03Z",
       "goal_events": [
         {
           "spiller": "Lopes Cabral",
