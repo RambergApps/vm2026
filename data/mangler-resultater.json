@@ -1,15 +1,4 @@
 {
-  "sist_sjekket": "2026-07-04T00:31:09Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
-      "hjemmelag": "Argentina",
-      "bortelag": "Cape Verde",
-      "dato": "2026-07-03",
-      "runde": "r32",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-07-04T00:45:42Z",
+  "kamper": []
 }

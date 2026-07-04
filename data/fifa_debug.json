@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T00:31:09Z",
+  "tidspunkt": "2026-07-04T00:45:42Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1013,7 +1013,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T01:30:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021518": {
       "fifa_event_id": "400021518",
@@ -1058,14 +1058,14 @@
       "fifa_event_id": "400021521",
       "hjemmelag": "Argentina",
       "bortelag": "Cape Verde",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
-      "hjemme": 2,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
+      "hjemme": 3,
       "borte": 2,
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T22:00:00Z",
-      "fifa_match_time": "110'"
+      "fifa_match_time": "124'"
     },
     "400021522": {
       "fifa_event_id": "400021522",

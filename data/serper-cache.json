@@ -6486,5 +6486,65 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Argentina_Cape_Verde_2026_07_03|3-2": {
+    "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+    "resultat": "3-2",
+    "sist_sokt": "2026-07-04T00:47:06Z",
+    "antall_sok": 1,
+    "beste_score": 2,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-highlights-match-report",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": false,
+      "resultat_i_fulltekst": false,
+      "kamp_hjemme_score": 3,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-07-04T00:46:09Z",
+      "goal_events": [],
+      "scorere": [],
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-highlights-match-report",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-highlights-match-report?searchOverlay=1)"
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 2,
+      "mangler": [
+        "riktig_kamp",
+        "resultat_i_fulltekst",
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-highlights-match-report",
+      "direct_fifa_probe": true,
+      "_forsok_url": 2
+    }
   }
 }
