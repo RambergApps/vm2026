@@ -1,4 +1,23 @@
 {
-  "sist_sjekket": "2026-07-04T00:48:12Z",
-  "kamper": []
+  "sist_sjekket": "2026-07-04T00:50:16Z",
+  "kamper": [
+    {
+      "type": "mangler_regulartime",
+      "kamp_id": "Argentina_Cape_Verde_2026_07_03",
+      "hjemmelag": "Argentina",
+      "bortelag": "Cape Verde",
+      "dato": "2026-07-03",
+      "runde": "r32",
+      "gruppe": "",
+      "status": "mangler_regulartime",
+      "status_api": "FINISHED",
+      "duration": "EXTRA_TIME",
+      "fulltime_hjemme": 3,
+      "fulltime_borte": 2,
+      "straffer_hjemme": null,
+      "straffer_borte": null,
+      "avanserer": "Argentina",
+      "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler."
+    }
+  ]
 }
