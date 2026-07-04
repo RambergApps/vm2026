@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T18:45:40Z",
+  "tidspunkt": "2026-07-04T18:53:59Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -696,7 +696,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
-      "borte": 1,
+      "borte": 2,
       "fd_dato": "2026-07-04",
       "fd_utcDate": "2026-07-04T17:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Morocco_2026_07_04"
