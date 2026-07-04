@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T18:32:11Z",
+  "sist_oppdatert": "2026-07-04T19:02:12Z",
   "antall_kamper": 89,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18227,12 +18227,12 @@
       "hjemmelag": "Canada",
       "bortelag": "Morocco",
       "hjemme_score": 0,
-      "borte_score": 1,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "r16",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Morocco lead Canada 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Morocco lead Canada 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18304,7 +18304,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-04T18:31:11Z"
+      "oppdatert": "2026-07-04T19:01:19Z"
     }
   }
 }
