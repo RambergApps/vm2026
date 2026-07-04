@@ -6660,8 +6660,8 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-04T19:02:12Z",
-    "antall_sok": 58,
+    "sist_sokt": "2026-07-04T19:16:30Z",
+    "antall_sok": 59,
     "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6678,7 +6678,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-04T19:01:20Z",
+      "hentet": "2026-07-04T19:15:44Z",
       "goal_events": [
         {
           "spiller": "Lopes Cabral",
@@ -6752,6 +6752,91 @@
       ],
       "rikt_fulltekstgrunnlag": false,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Canada_Morocco_2026_07_04|0-3": {
+    "kamp_id": "Canada_Morocco_2026_07_04",
+    "resultat": "0-3",
+    "sist_sokt": "2026-07-04T19:16:37Z",
+    "antall_sok": 1,
+    "beste_score": 12,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-morocco-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 3,
+      "score": 10,
+      "hentet": "2026-07-04T19:16:37Z",
+      "goal_events": [
+        {
+          "spiller": "Ounahi",
+          "lag": "Morocco",
+          "minutt": "50",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ounahi",
+          "lag": "Morocco",
+          "minutt": "82",
+          "type": "goal"
+        },
+        {
+          "spiller": "Rahaimi",
+          "lag": "Morocco",
+          "minutt": "90+8",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Ounahi",
+        "Rahaimi"
+      ],
+      "lead_scorer": "Ounahi",
+      "brace_scorer": "Ounahi",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Co-hosts Canada’s FIFA World Cup 2026™ adventure came to a end in Houston as Azzedine Ounahi’s second-half double and a late Soufiane Rahimi goal sent Morocco through to the quarter-finals for a second straight tournament.",
+        "The Atlas Lions made history as Africa’s first semi-finalists at Qatar 2022 and after shrugging off a slow start to get through this hard-fought contest, they can now look forward to a Boston quarter-final on 9 July against the winners of the France-Paraguay tie. For Canada, a nation whose footballers had never won a World Cup match before this tournament, there will be great pride in their run to the last 16 once the pain of this defeat has subsided.",
+        "Canada had the better of the first half, starting with impressive energy and intensity, pressing high and forcing several corners. It was no surprise they created the first significant chance when, capitalising on a loose ball out of Morocco’s defence, Ali Ahmed fed Tani Oluwaseyi and he span superbly away from Redouane Halhal to put himself clean through on goal. He shot low but Yassine Bounou, Morocco's Canada-born goalkeeper, saved with his left foot.",
+        "Mohamed Ouahbi’s team could not find their rhythm and their discomfort grew with the departure after 22 minutes of Ismael Saibari, their leading scorer in this tournament, with an apparent muscle injury, Rahimi taking his place.",
+        "In Saibari's absence, midfielder Ounahi stepped up to make the difference, opening the scoring soon after the restart through a well-worked dead-ball routine. From the right, Achraf Hakimi played it across the face of the box where, from the D, Ounahi swept a terrific first-time shot past the diving Maxime Crepeau and inside the left post."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_assist": "It was no surprise they",
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-morocco-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }

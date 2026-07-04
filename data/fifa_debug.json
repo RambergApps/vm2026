@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T19:01:18Z",
+  "tidspunkt": "2026-07-04T19:15:42Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1175,14 +1175,14 @@
       "fifa_event_id": "400021530",
       "hjemmelag": "Canada",
       "bortelag": "Morocco",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
-      "borte": 2,
+      "borte": 3,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T17:00:00Z",
-      "fifa_match_time": "90'+7'"
+      "fifa_match_time": "100'"
     },
     "400021531": {
       "fifa_event_id": "400021531",

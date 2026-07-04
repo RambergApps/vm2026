@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-03",
   "dato_norsk": "Fredag 3. juli 2026",
-  "generert": "2026-07-04T06:16:33Z",
+  "generert": "2026-07-04T19:16:37Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -274,15 +274,15 @@
             "poeng": 0
           },
           {
-            "navn": "sergio gomes",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 1,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 0
           },
           {
@@ -453,13 +453,13 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 176,
+      "poeng_totalt": 180,
       "poeng_i_dag": 10
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 167,
+      "poeng_totalt": 171,
       "poeng_i_dag": 10
     },
     {
@@ -471,13 +471,13 @@
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 152,
+      "poeng_totalt": 156,
       "poeng_i_dag": 10
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 5,
-      "poeng_totalt": 149,
+      "poeng_totalt": 153,
       "poeng_i_dag": 7
     },
     {
@@ -487,16 +487,16 @@
       "poeng_i_dag": 10
     },
     {
-      "navn": "Diyan K.",
+      "navn": "Arne Kristian Johansen",
       "plass": 7,
-      "poeng_totalt": 136,
-      "poeng_i_dag": 10
+      "poeng_totalt": 139,
+      "poeng_i_dag": 3
     },
     {
-      "navn": "Arne Kristian Johansen",
+      "navn": "Diyan K.",
       "plass": 8,
-      "poeng_totalt": 135,
-      "poeng_i_dag": 3
+      "poeng_totalt": 136,
+      "poeng_i_dag": 10
     },
     {
       "navn": "Sondre Garstad",
@@ -535,22 +535,22 @@
       "poeng_i_dag": 3
     },
     {
-      "navn": "Anders Rikheim",
+      "navn": "Marita Hauge Gjerde",
       "plass": 15,
+      "poeng_totalt": 111,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Anders Rikheim",
+      "plass": 16,
       "poeng_totalt": 110,
       "poeng_i_dag": 0
     },
     {
       "navn": "sergio gomes",
-      "plass": 16,
+      "plass": 17,
       "poeng_totalt": 110,
       "poeng_i_dag": 10
-    },
-    {
-      "navn": "Marita Hauge Gjerde",
-      "plass": 17,
-      "poeng_totalt": 107,
-      "poeng_i_dag": 0
     },
     {
       "navn": "Anders Sundero",
