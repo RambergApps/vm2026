@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T22:04:27Z",
+  "tidspunkt": "2026-07-04T22:15:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -679,7 +679,7 @@
       "fd_bortelag": "France",
       "hjemmelag_normalisert": "Paraguay",
       "bortelag_normalisert": "France",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 0,
       "borte": 0,

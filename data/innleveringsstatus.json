@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-04T22:01:19Z",
+  "sist_oppdatert": "2026-07-04T22:15:50Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -80,6 +80,7 @@
       "runder": {
         "r16": {
           "kamper": [
+            "Argentina_Egypt_2026_07_07",
             "Brazil_Norway_2026_07_05",
             "Canada_Morocco_2026_07_04",
             "Mexico_England_2026_07_05",
