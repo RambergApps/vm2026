@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T03:45:52Z",
+  "sist_oppdatert": "2026-07-04T06:16:33Z",
   "antall_kamper": 88,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17495,7 +17495,7 @@
             "poeng": 7
           },
           {
-            "navn": "Sondre Garstad",
+            "navn": "Sebastian Luranc",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
@@ -17507,7 +17507,7 @@
             "poeng": 7
           },
           {
-            "navn": "Sebastian Luranc",
+            "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
@@ -17589,21 +17589,21 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 1,
             "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T03:45:47Z"
+      "oppdatert": "2026-07-04T06:15:39Z"
     },
     "Switzerland_Algeria_2026_07_03": {
       "kamp_id": "Switzerland_Algeria_2026_07_03",
@@ -17675,7 +17675,7 @@
             "poeng": 3
           },
           {
-            "navn": "Sondre Garstad",
+            "navn": "Sebastian Luranc",
             "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 3
@@ -17687,14 +17687,14 @@
             "poeng": 3
           },
           {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 3,
+            "navn": "Sondre Garstad",
+            "tippa_h": 1,
             "tippa_b": 0,
             "poeng": 3
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 1,
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 3
           },
@@ -17737,6 +17737,12 @@
             "poeng": 0
           },
           {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Anders Sundero",
             "tippa_h": 2,
             "tippa_b": 2,
@@ -17747,17 +17753,11 @@
             "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T03:45:48Z"
+      "oppdatert": "2026-07-04T06:15:39Z"
     },
     "Australia_Egypt_2026_07_03": {
       "kamp_id": "Australia_Egypt_2026_07_03",
@@ -17855,9 +17855,9 @@
             "poeng": 0
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 0,
-            "tippa_b": 2,
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -17867,13 +17867,13 @@
             "poeng": 0
           },
           {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
-            "tippa_b": 1,
+            "navn": "Sondre Garstad",
+            "tippa_h": 0,
+            "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "Sebastian Luranc",
+            "navn": "Bjørnar Tallaksrud",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 0
@@ -17897,21 +17897,21 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 1,
             "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T03:45:48Z"
+      "oppdatert": "2026-07-04T06:15:40Z"
     },
     "Argentina_Cape_Verde_2026_07_03": {
       "kamp_id": "Argentina_Cape_Verde_2026_07_03",
@@ -17920,8 +17920,8 @@
       "fd_utcDate": "2026-07-03T22:00:00Z",
       "hjemmelag": "Argentina",
       "bortelag": "Cape Verde",
-      "hjemme_score": 3,
-      "borte_score": 2,
+      "hjemme_score": 1,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "FINISHED",
@@ -17952,119 +17952,119 @@
         "eksakt": [],
         "riktig": [
           {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 4,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 4,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 4,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 5,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 4,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Thomas Lindland",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Alex Myrvokd",
-            "tippa_h": 4,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 3,
-            "tippa_b": 0,
-            "poeng": 3
-          },
-          {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 3,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 0,
             "tippa_b": 0,
             "poeng": 3
           }
         ],
         "bom": [
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 0,
+            "navn": "Pål André Nilsen",
+            "tippa_h": 3,
             "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 4,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 4,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 4,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 5,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 4,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Thomas Lindland",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alex Myrvokd",
+            "tippa_h": 4,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T01:01:21Z"
+      "oppdatert": "2026-07-04T06:16:33Z"
     },
     "Colombia_Ghana_2026_07_04": {
       "kamp_id": "Colombia_Ghana_2026_07_04",

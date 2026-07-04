@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T06:01:18Z",
+  "tidspunkt": "2026-07-04T06:15:38Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -729,6 +729,20 @@
       "fd_utcDate": "2026-07-06T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Mexico_England_2026_07_06"
     },
+    "537379": {
+      "fd_match_id": 537379,
+      "fd_hjemmelag": "Portugal",
+      "fd_bortelag": "Spain",
+      "hjemmelag_normalisert": "Portugal",
+      "bortelag_normalisert": "Spain",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-06",
+      "fd_utcDate": "2026-07-06T19:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Portugal_Spain_2026_07_06"
+    },
     "537380": {
       "fd_match_id": 537380,
       "fd_hjemmelag": "United States",
@@ -742,6 +756,34 @@
       "fd_dato": "2026-07-07",
       "fd_utcDate": "2026-07-07T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "USA_Belgium_2026_07_07"
+    },
+    "537381": {
+      "fd_match_id": 537381,
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Egypt",
+      "hjemmelag_normalisert": "Argentina",
+      "bortelag_normalisert": "Egypt",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T16:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Argentina_Egypt_2026_07_07"
+    },
+    "537382": {
+      "fd_match_id": 537382,
+      "fd_hjemmelag": "Switzerland",
+      "fd_bortelag": "Colombia",
+      "hjemmelag_normalisert": "Switzerland",
+      "bortelag_normalisert": "Colombia",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T20:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Switzerland_Colombia_2026_07_07"
     },
     "537391": {
       "fd_match_id": 537391,
@@ -1254,9 +1296,9 @@
       "hjemmelag_normalisert": "Argentina",
       "bortelag_normalisert": "Cape Verde",
       "status": "FINISHED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-07-03",
       "fd_utcDate": "2026-07-03T22:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Argentina_Cape_Verde_2026_07_03"

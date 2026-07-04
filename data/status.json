@@ -255,6 +255,7 @@
         "utcDate": "2026-07-03T18:00:00Z",
         "fd_match_id": 537428,
         "fifa_event_id": "400021515",
+        "avanserer": "Egypt",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -345,17 +346,17 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "Argentina_W88_2026_07_07",
+        "id": "Argentina_Egypt_2026_07_07",
         "hjemme": "Argentina",
-        "borte": "W88",
+        "borte": "Egypt",
         "dato": "2026-07-07",
         "info": "Autofyll fra avansement",
         "match_no": 95,
         "slot_hjemme": "W86",
         "slot_borte": "W88",
         "utcDate": "2026-07-07T16:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Switzerland_Colombia_2026_07_07",
@@ -371,7 +372,7 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 7,
+    "antall_tippebare": 8,
     "neste_frist": "2026-07-04T17:00:00Z"
   },
   "qf": {
