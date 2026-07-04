@@ -6660,8 +6660,8 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-04T23:02:05Z",
-    "antall_sok": 78,
+    "sist_sokt": "2026-07-04T23:16:27Z",
+    "antall_sok": 79,
     "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6678,7 +6678,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-04T23:01:22Z",
+      "hentet": "2026-07-04T23:15:42Z",
       "goal_events": [
         {
           "spiller": "Lopes Cabral",
@@ -6837,6 +6837,77 @@
       "mangler": [],
       "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-morocco-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Paraguay_France_2026_07_04|0-1": {
+    "kamp_id": "Paraguay_France_2026_07_04",
+    "resultat": "0-1",
+    "sist_sokt": "2026-07-04T23:16:32Z",
+    "antall_sok": 1,
+    "beste_score": 9,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-04T23:16:32Z",
+      "goal_events": [
+        {
+          "spiller": "Mbappe",
+          "lag": "France",
+          "minutt": "69",
+          "type": "penalty"
+        }
+      ],
+      "scorere": [
+        "Mbappe"
+      ],
+      "lead_scorer": "Mbappe",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Kylian Mbappe scored his seventh goal of the FIFA World Cup 2026™ as France overcame Paraguay to set up a quarter-final meeting with Morocco.",
+        "Mbappe struck a second-half penalty to settle an attritional contest at Philadelphia Stadium, moving level with Lionel Messi on goals but leading on assists in the race for the 2026 adidas Golden Boot, and one behind the Argentine’s all-time World Cup tally of 20.",
+        "Having stunned Germany on penalties to reach the Round of 16, Paraguay effectively shut up shop in a frustrating first half for France. Les Bleus dominated possession, but struggled to break down La Albirroja’s disciplined defence, with their efforts limited to speculative attempts from distance and none troubling goalkeeper Orlando Gill.",
+        "France began to make inroads after the restart, with Ousmane Dembele firing into the side netting following a quickly taken corner. As the pressure mounted, Gill had to dive full stretch to keep out Manu Kone's powerful long-range effort.",
+        "Paraguay's resistance was finally broken in the 69th minute after Desire Doue was adjudged to have been upended in the penalty area following a VAR review. Mbappe calmly dispatched the resultant spot-kick, sending Gill the wrong way to punch his team's ticket to the last eight."
+      ],
+      "key_stat": "Mbappe scored a record-extending 11th World Cup knockout-stage goal, while becoming the first player to bag in the Round of 16 in three successive tournaments.",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": true,
+      "referat_fakta_score": 9,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }

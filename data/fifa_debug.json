@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T23:01:21Z",
+  "tidspunkt": "2026-07-04T23:15:40Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1214,14 +1214,14 @@
       "fifa_event_id": "400021533",
       "hjemmelag": "Paraguay",
       "bortelag": "France",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 0,
       "borte": 1,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T21:00:00Z",
-      "fifa_match_time": "90'+7'"
+      "fifa_match_time": "101'"
     },
     "400021534": {
       "fifa_event_id": "400021534",
@@ -1247,6 +1247,19 @@
       "borte": null,
       "fifa_dato": "2026-07-07",
       "fifa_utcDate": "2026-07-07T20:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021536": {
+      "fifa_event_id": "400021536",
+      "hjemmelag": "France",
+      "bortelag": "Morocco",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-09",
+      "fifa_utcDate": "2026-07-09T20:00:00Z",
       "fifa_match_time": null
     }
   }

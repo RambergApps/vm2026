@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T22:46:24Z",
+  "sist_oppdatert": "2026-07-04T23:16:33Z",
   "antall_kamper": 90,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17972,15 +17972,15 @@
             "poeng": 0
           },
           {
-            "navn": "Olympus fc",
-            "tippa_h": 4,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 4,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -18002,12 +18002,6 @@
             "poeng": 0
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 4,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 5,
             "tippa_b": 0,
@@ -18017,6 +18011,12 @@
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 4,
             "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 4,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -18064,7 +18064,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T19:16:30Z"
+      "oppdatert": "2026-07-04T23:16:27Z"
     },
     "Colombia_Ghana_2026_07_04": {
       "kamp_id": "Colombia_Ghana_2026_07_04",
@@ -18135,12 +18135,6 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 0,
@@ -18148,6 +18142,12 @@
           },
           {
             "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 3
+          },
+          {
+            "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 3
@@ -18217,7 +18217,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T22:02:12Z"
+      "oppdatert": "2026-07-04T23:16:27Z"
     },
     "Canada_Morocco_2026_07_04": {
       "kamp_id": "Canada_Morocco_2026_07_04",
@@ -18335,87 +18335,104 @@
       "borte_score": 1,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "France lead Paraguay 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "France beat Paraguay 1-0.\nGoals: Mbappe penalty (69).\n\nFrance began to make inroads after the restart, with Ousmane Dembele firing into the side netting following a quickly taken corner.\nKylian Mbappe scored his seventh goal of the FIFA World Cup 2026™ as France overcame Paraguay to set up a quarter-final meeting with Morocco.\nMbappe struck a second-half penalty to settle an attritional contest at Philadelphia Stadium, moving level with Lionel Messi on goals but leading on assists in the race for the 2026 adidas Golden Boot, and one behind the Argentine’s all-time World Cup tally of 20.\nHaving stunned Germany on penalties to reach the Round of 16, Paraguay effectively shut up shop in a frustrating first half for France.\nKey stat: Mbappe scored a record-extending 11th World Cup knockout-stage goal, while becoming the first player to bag in the Round of 16 in three successive tournaments.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 9,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Paraguay_France_2026_07_04|0-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 9,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-france-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "riktig": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Alexander",
             "tippa_h": 0,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 0,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Sebastian Luranc",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 1,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Sondre Garstad",
             "tippa_h": 0,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 1,
             "tippa_b": 4,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "sergio gomes",
             "tippa_h": 2,
             "tippa_b": 3,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           }
-        ]
+        ],
+        "bom": []
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-04T22:45:40Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-04T23:16:32Z"
     }
   }
 }
