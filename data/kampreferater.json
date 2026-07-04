@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T00:47:06Z",
+  "sist_oppdatert": "2026-07-04T01:01:22Z",
   "antall_kamper": 87,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -17925,31 +17925,27 @@
       "gruppe": "",
       "runde": "r32",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Argentina beat Cape Verde 3-2.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Argentina beat Cape Verde 3-2.\nGoals: Argentina — Borges (11), Messi (29) and L. Martinez (92); Cape Verde — Lopes Cabral (10) and Duarte (59).\n\nAfter the break, Argentina maintained the majority of possession but it was a slick move down the right wing from the Blue Sharks that turned that game on its head.\nIt took every second of the 120 minutes played in Miami for Argentina to overcome a brave Cabo Verde.\nThe Albiceleste took the lead twice and the Blue Sharks answered both times, but with ten minutes to play in extra time a Lionel Messi corner led to an own goal from Diney Borges that sent that defending champions into the Round of 16 at the FIFA World Cup 2026™.\nLisandro Martinez collected a loose ball from a corner kick and lashed over Vozinha at the near post.",
       "recap_kvalitet": {
-        "score": 2,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "Argentina_Cape_Verde_2026_07_03|3-2",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 2,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-highlights-match-report",
-        "mangler": [
-          "riktig_kamp",
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -18068,7 +18064,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-04T00:47:06Z"
+      "oppdatert": "2026-07-04T01:01:21Z"
     }
   }
 }

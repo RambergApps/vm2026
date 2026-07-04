@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T00:45:42Z",
+  "tidspunkt": "2026-07-04T01:01:15Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1144,6 +1144,19 @@
       "fifa_dato": "2026-07-03",
       "fifa_utcDate": "2026-07-03T03:00:00Z",
       "fifa_match_time": "97'"
+    },
+    "400021528": {
+      "fifa_event_id": "400021528",
+      "hjemmelag": "Argentina",
+      "bortelag": "Egypt",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-07",
+      "fifa_utcDate": "2026-07-07T16:00:00Z",
+      "fifa_match_time": null
     },
     "400021529": {
       "fifa_event_id": "400021529",
