@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T06:15:38Z",
+  "tidspunkt": "2026-07-04T06:31:08Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1156,7 +1156,7 @@
       "borte": null,
       "fifa_dato": "2026-07-07",
       "fifa_utcDate": "2026-07-07T16:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021529": {
       "fifa_event_id": "400021529",
@@ -1169,7 +1169,7 @@
       "borte": null,
       "fifa_dato": "2026-07-06",
       "fifa_utcDate": "2026-07-06T19:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021530": {
       "fifa_event_id": "400021530",
@@ -1182,7 +1182,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T17:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021531": {
       "fifa_event_id": "400021531",
@@ -1195,7 +1195,7 @@
       "borte": null,
       "fifa_dato": "2026-07-06",
       "fifa_utcDate": "2026-07-06T00:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021532": {
       "fifa_event_id": "400021532",
@@ -1208,7 +1208,7 @@
       "borte": null,
       "fifa_dato": "2026-07-05",
       "fifa_utcDate": "2026-07-05T20:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021533": {
       "fifa_event_id": "400021533",
@@ -1221,7 +1221,7 @@
       "borte": null,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T21:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021534": {
       "fifa_event_id": "400021534",
@@ -1234,7 +1234,7 @@
       "borte": null,
       "fifa_dato": "2026-07-07",
       "fifa_utcDate": "2026-07-07T00:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     },
     "400021535": {
       "fifa_event_id": "400021535",
@@ -1247,7 +1247,7 @@
       "borte": null,
       "fifa_dato": "2026-07-07",
       "fifa_utcDate": "2026-07-07T20:00:00Z",
-      "fifa_match_time": null
+      "fifa_match_time": "0'"
     }
   }
 }
