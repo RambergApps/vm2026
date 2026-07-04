@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T01:15:40Z
+// Sist oppdatert: 2026-07-04T01:31:07Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T01:15:40Z",
+  "sist_oppdatert": "2026-07-04T01:31:07Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2012,7 +2012,7 @@ const VM_DATA = {
         "spiller": "Lionel Messi",
         "maal": 7,
         "assists": 0,
-        "minutter": 338,
+        "minutter": 361,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -2067,7 +2067,7 @@ const VM_DATA = {
       "spiller": "Lionel Messi",
       "maal": 7,
       "assists": 0,
-      "minutter": 338
+      "minutter": 361
     },
     {
       "rank": 2,
@@ -2423,7 +2423,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T01:15:40Z"
+    "sist_beregnet": "2026-07-04T01:31:07Z"
   },
   "stilling": [
     {
@@ -3576,6 +3576,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -4931,6 +4944,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -6280,6 +6306,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -7635,6 +7674,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -8913,6 +8965,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -10208,6 +10273,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -11563,6 +11641,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -12912,6 +13003,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -14267,6 +14371,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -15619,6 +15736,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -16897,6 +17027,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -18210,6 +18353,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 0,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "Portugal_Croatia_2026_07_02",
           "hjemmelag": "Portugal",
           "bortelag": "Croatia",
@@ -19390,6 +19546,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -20685,6 +20854,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -23139,6 +23321,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r32"
+        },
+        {
           "kamp_id": "England_DR_Congo_2026_07_01",
           "hjemmelag": "England",
           "bortelag": "DR Congo",
@@ -24445,6 +24640,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -25797,6 +26005,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {
@@ -28248,6 +28469,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r32"
+        },
+        {
+          "kamp_id": "Colombia_Ghana_2026_07_04",
+          "hjemmelag": "Colombia",
+          "bortelag": "Ghana",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "r32"
         },
         {

@@ -239,8 +239,8 @@
         "utcDate": "2026-07-04T01:30:00Z",
         "fd_match_id": 537430,
         "fifa_event_id": "400021517",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Australia_Egypt_2026_07_03",
@@ -258,8 +258,8 @@
         "tippe_status": "startet"
       }
     ],
-    "antall_tippebare": 1,
-    "neste_frist": "2026-07-04T01:30:00Z"
+    "antall_tippebare": 0,
+    "neste_frist": null
   },
   "r16": {
     "aapen": true,

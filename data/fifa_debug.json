@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T01:15:39Z",
+  "tidspunkt": "2026-07-04T01:31:06Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1006,14 +1006,14 @@
       "fifa_event_id": "400021517",
       "hjemmelag": "Colombia",
       "bortelag": "Ghana",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-07-04",
       "fifa_utcDate": "2026-07-04T01:30:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "1'"
     },
     "400021518": {
       "fifa_event_id": "400021518",
