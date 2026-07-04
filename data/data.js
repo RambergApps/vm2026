@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-04T11:31:10Z
+// Sist oppdatert: 2026-07-04T11:42:41Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-04T11:31:10Z",
+  "sist_oppdatert": "2026-07-04T11:42:41Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1846,24 +1846,11 @@ const VM_DATA = {
       "fd_hjemmelag": "United States",
       "fd_bortelag": "Belgium"
     },
-    "Switzerland_W87_2026_07_07": {
-      "kamp_id": "Switzerland_W87_2026_07_07",
-      "canonical_kamp_id": "Switzerland_W87_2026_07_07",
-      "hjemmelag": "Switzerland",
-      "bortelag": "W87",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "r16",
-      "dato_openfootball": "2026-07-07",
-      "kilde_score": "openfootball"
-    },
-    "W86_W88_2026_07_07": {
-      "kamp_id": "W86_W88_2026_07_07",
-      "canonical_kamp_id": "W86_W88_2026_07_07",
-      "hjemmelag": "W86",
-      "bortelag": "W88",
+    "Argentina_Egypt_2026_07_07": {
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "canonical_kamp_id": "Argentina_Egypt_2026_07_07",
+      "hjemmelag": "Argentina",
+      "bortelag": "Egypt",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1871,7 +1858,29 @@ const VM_DATA = {
       "runde": "r16",
       "dato_openfootball": "2026-07-07",
       "kilde_score": "openfootball",
-      "match_no": 95
+      "dato_fd_org": "2026-07-07",
+      "fd_match_id": 537381,
+      "fd_utcDate": "2026-07-07T16:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Egypt"
+    },
+    "Switzerland_Colombia_2026_07_07": {
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "canonical_kamp_id": "Switzerland_Colombia_2026_07_07",
+      "hjemmelag": "Switzerland",
+      "bortelag": "Colombia",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "r16",
+      "dato_openfootball": "2026-07-07",
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-07",
+      "fd_match_id": 537382,
+      "fd_utcDate": "2026-07-07T20:00:00Z",
+      "fd_hjemmelag": "Switzerland",
+      "fd_bortelag": "Colombia"
     },
     "W89_W90_2026_07_09": {
       "kamp_id": "W89_W90_2026_07_09",
@@ -2426,7 +2435,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-04T11:31:10Z"
+    "sist_beregnet": "2026-07-04T11:42:41Z"
   },
   "stilling": [
     {

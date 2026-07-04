@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-04T06:15:38Z",
+  "sist_oppdatert": "2026-07-04T11:42:40Z",
   "kamper": {
     "Algeria_Austria_2026_06_27": {
       "of_kamp_id": "Algeria_Austria_2026_06_27",
@@ -72,6 +72,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-28T08:01:05Z"
+    },
+    "Argentina_Egypt_2026_07_07": {
+      "of_kamp_id": "Argentina_Egypt_2026_07_07",
+      "of_dato": "2026-07-07",
+      "of_hjemmelag": "Argentina",
+      "of_bortelag": "Egypt",
+      "runde": "r16",
+      "fd_match_id": 537381,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T16:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Egypt",
+      "fd_hjemmelag_normalisert": "Argentina",
+      "fd_bortelag_normalisert": "Egypt",
+      "dato_avvik_dager": 0,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-04T11:42:40Z"
     },
     "Australia_Egypt_2026_07_03": {
       "of_kamp_id": "Australia_Egypt_2026_07_03",
@@ -1494,6 +1512,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-14T13:10:37Z"
+    },
+    "Switzerland_Colombia_2026_07_07": {
+      "of_kamp_id": "Switzerland_Colombia_2026_07_07",
+      "of_dato": "2026-07-07",
+      "of_hjemmelag": "Switzerland",
+      "of_bortelag": "Colombia",
+      "runde": "r16",
+      "fd_match_id": 537382,
+      "fd_dato": "2026-07-07",
+      "fd_utcDate": "2026-07-07T20:00:00Z",
+      "fd_hjemmelag": "Switzerland",
+      "fd_bortelag": "Colombia",
+      "fd_hjemmelag_normalisert": "Switzerland",
+      "fd_bortelag_normalisert": "Colombia",
+      "dato_avvik_dager": 0,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-04T11:42:40Z"
     },
     "Tunisia_Japan_2026_06_20": {
       "of_kamp_id": "Tunisia_Japan_2026_06_20",
