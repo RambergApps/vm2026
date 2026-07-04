@@ -6585,5 +6585,76 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Colombia_Ghana_2026_07_04|1-0": {
+    "kamp_id": "Colombia_Ghana_2026_07_04",
+    "resultat": "1-0",
+    "sist_sokt": "2026-07-04T03:45:52Z",
+    "antall_sok": 1,
+    "beste_score": 9,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-ghana-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 0,
+      "score": 10,
+      "hentet": "2026-07-04T03:45:52Z",
+      "goal_events": [
+        {
+          "spiller": "Arias",
+          "lag": "Colombia",
+          "minutt": "14",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Arias"
+      ],
+      "lead_scorer": "Arias",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Colombia underlined their credentials as FIFA World Cup 2026™ dark horses with a controlled Round of 32 victory over Ghana at Kansas City Stadium.",
+        "Having finished top of Group K ahead of Portugal, Nestor Lorenzo's side were too strong for the Black Stars, with Jhon Arias's first-half strike enough to book a last-16 meeting with Switzerland.",
+        "Ghana's Thomas Partey went close with a powerful long-range effort inside two minutes, but La Sele - roared on by a sea of Colombian supporters - soon seized the initiative.",
+        "Ghana were a touch fortunate not to be even further behind at the break, as Luis Diaz fired wide from inside the box and Lawrence Ati-Zigi produced a brilliant reaction save to claw away Johan Mojica's downward header.",
+        "Diaz had the ball in the net in the 56th minute, but the goal was ruled out for a marginal offside after he stretched to convert Arias's cross. Moments later the Colombia forward fired straight at Ati-Zigi from an unmarked position inside the penalty area."
+      ],
+      "key_stat": "Colombia have struck first in three of their four matches at World Cup 2026, with the only exception a goalless draw against Portugal.",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": true,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": true,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 9,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/colombia-ghana-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

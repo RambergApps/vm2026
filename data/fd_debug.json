@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T03:31:08Z",
+  "tidspunkt": "2026-07-04T03:45:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -1295,9 +1295,9 @@
       "fd_bortelag": "Ghana",
       "hjemmelag_normalisert": "Colombia",
       "bortelag_normalisert": "Ghana",
-      "status": "IN_PLAY",
-      "ferdig": false,
-      "hjemme": 2,
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 1,
       "borte": 0,
       "fd_dato": "2026-07-04",
       "fd_utcDate": "2026-07-04T01:30:00Z",

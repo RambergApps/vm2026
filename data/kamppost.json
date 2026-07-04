@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-03",
   "dato_norsk": "Fredag 3. juli 2026",
-  "generert": "2026-07-04T00:47:06Z",
+  "generert": "2026-07-04T03:45:52Z",
   "antall_kamper": 3,
   "kamper": [
     {
@@ -44,25 +44,25 @@
             "poeng": 7
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
           },
           {
-            "navn": "Thomas Lindland",
+            "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
           },
           {
             "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 7
+          },
+          {
+            "navn": "Thomas Lindland",
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 7
@@ -218,15 +218,15 @@
             "poeng": 3
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 3
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 1,
             "tippa_b": 0,
+            "poeng": 3
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 3
           },
           {
@@ -280,14 +280,14 @@
             "poeng": 0
           },
           {
-            "navn": "Ulf-Morten Johansen",
-            "tippa_h": 0,
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
+            "navn": "Ulf-Morten Johansen",
+            "tippa_h": 0,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -392,15 +392,15 @@
             "poeng": 0
           },
           {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Sondre Garstad",
             "tippa_h": 0,
             "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -410,14 +410,14 @@
             "poeng": 0
           },
           {
-            "navn": "Thomas Lindland",
-            "tippa_h": 3,
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
+            "navn": "Thomas Lindland",
+            "tippa_h": 3,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -453,13 +453,13 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 176,
+      "poeng_totalt": 189,
       "poeng_i_dag": 10
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 167,
+      "poeng_totalt": 180,
       "poeng_i_dag": 10
     },
     {
@@ -471,50 +471,50 @@
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 152,
+      "poeng_totalt": 155,
       "poeng_i_dag": 10
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 5,
-      "poeng_totalt": 149,
+      "poeng_totalt": 152,
       "poeng_i_dag": 7
     },
     {
-      "navn": "Arne Kristian Johansen",
+      "navn": "Sondre Garstad",
       "plass": 6,
-      "poeng_totalt": 138,
-      "poeng_i_dag": 3
+      "poeng_totalt": 147,
+      "poeng_i_dag": 10
     },
     {
       "navn": "Diyan K.",
       "plass": 7,
-      "poeng_totalt": 136,
+      "poeng_totalt": 139,
       "poeng_i_dag": 10
     },
     {
-      "navn": "Sondre Garstad",
+      "navn": "Arne Kristian Johansen",
       "plass": 8,
-      "poeng_totalt": 134,
-      "poeng_i_dag": 10
+      "poeng_totalt": 138,
+      "poeng_i_dag": 3
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 9,
-      "poeng_totalt": 133,
+      "poeng_totalt": 136,
       "poeng_i_dag": 3
     },
     {
-      "navn": "Thomas Lindland",
+      "navn": "Sebastian Luranc",
       "plass": 10,
       "poeng_totalt": 133,
-      "poeng_i_dag": 7
+      "poeng_i_dag": 10
     },
     {
-      "navn": "Sebastian Luranc",
+      "navn": "Thomas Lindland",
       "plass": 11,
-      "poeng_totalt": 130,
-      "poeng_i_dag": 10
+      "poeng_totalt": 133,
+      "poeng_i_dag": 7
     },
     {
       "navn": "Ken Arne Hansen",
@@ -531,32 +531,32 @@
     {
       "navn": "Geir Magne Evensen",
       "plass": 14,
-      "poeng_totalt": 118,
+      "poeng_totalt": 121,
       "poeng_i_dag": 3
     },
     {
-      "navn": "Anders Rikheim",
-      "plass": 15,
-      "poeng_totalt": 110,
-      "poeng_i_dag": 0
-    },
-    {
       "navn": "sergio gomes",
-      "plass": 16,
-      "poeng_totalt": 110,
+      "plass": 15,
+      "poeng_totalt": 113,
       "poeng_i_dag": 10
     },
     {
-      "navn": "Ulf-Morten Johansen",
-      "plass": 17,
-      "poeng_totalt": 107,
+      "navn": "Anders Rikheim",
+      "plass": 16,
+      "poeng_totalt": 110,
       "poeng_i_dag": 0
     },
     {
       "navn": "Anders Sundero",
-      "plass": 18,
-      "poeng_totalt": 105,
+      "plass": 17,
+      "poeng_totalt": 108,
       "poeng_i_dag": 10
+    },
+    {
+      "navn": "Ulf-Morten Johansen",
+      "plass": 18,
+      "poeng_totalt": 107,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Jorgen Lindland",
@@ -567,31 +567,31 @@
     {
       "navn": "Marita Hauge Gjerde",
       "plass": 20,
-      "poeng_totalt": 101,
+      "poeng_totalt": 104,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Sjur Revheim",
+      "plass": 21,
+      "poeng_totalt": 102,
       "poeng_i_dag": 0
     },
     {
       "navn": "Magnus Børrud",
-      "plass": 21,
+      "plass": 22,
       "poeng_totalt": 98,
       "poeng_i_dag": 0
     },
     {
       "navn": "Atle Johansen",
-      "plass": 22,
-      "poeng_totalt": 96,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Rickard Jacobsson",
       "plass": 23,
       "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Sjur Revheim",
+      "navn": "Rickard Jacobsson",
       "plass": 24,
-      "poeng_totalt": 92,
+      "poeng_totalt": 96,
       "poeng_i_dag": 0
     },
     {

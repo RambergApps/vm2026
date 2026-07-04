@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-07-04T03:31:09Z",
-  "sist_oppdatert_grupper": "2026-07-04T03:31:09Z",
-  "sist_oppdatert_utslag": "2026-07-04T03:31:09Z",
+  "sist_oppdatert": "2026-07-04T03:45:47Z",
+  "sist_oppdatert_grupper": "2026-07-04T03:45:47Z",
+  "sist_oppdatert_utslag": "2026-07-04T03:45:47Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -1082,7 +1082,7 @@
       "borte_kjent": true,
       "hjemme_placeholder": "",
       "borte_placeholder": "",
-      "status": "3",
+      "status": "0",
       "hjemme_score": 1,
       "borte_score": 0
     },
@@ -1237,13 +1237,13 @@
       "utcDate": "2026-07-07T20:00:00Z",
       "dato": "2026-07-07",
       "hjemme": "Switzerland",
-      "borte": "W87",
+      "borte": "Colombia",
       "hjemme_kode": "SUI",
-      "borte_kode": "",
+      "borte_kode": "COL",
       "hjemme_kjent": true,
-      "borte_kjent": false,
+      "borte_kjent": true,
       "hjemme_placeholder": "",
-      "borte_placeholder": "W87",
+      "borte_placeholder": "",
       "status": "1",
       "hjemme_score": null,
       "borte_score": null

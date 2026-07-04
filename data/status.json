@@ -239,6 +239,7 @@
         "utcDate": "2026-07-04T01:30:00Z",
         "fd_match_id": 537430,
         "fifa_event_id": "400021517",
+        "avanserer": "Colombia",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -357,20 +358,20 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "Switzerland_W87_2026_07_07",
+        "id": "Switzerland_Colombia_2026_07_07",
         "hjemme": "Switzerland",
-        "borte": "W87",
+        "borte": "Colombia",
         "dato": "2026-07-07",
         "info": "Autofyll fra avansement",
         "match_no": 96,
         "slot_hjemme": "W85",
         "slot_borte": "W87",
         "utcDate": "2026-07-07T20:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 6,
+    "antall_tippebare": 7,
     "neste_frist": "2026-07-04T17:00:00Z"
   },
   "qf": {
