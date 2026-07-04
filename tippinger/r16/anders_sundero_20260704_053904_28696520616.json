@@ -1,0 +1,73 @@
+{
+  "bonus": {
+    "id": "antall_nullen",
+    "svar": 2
+  },
+  "meta": {
+    "deltaker_id": "anders_sundero",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-04T05:38:45.982Z",
+    "navn": "Anders Sundero",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-04T05:39:04Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "France",
+      "hjemme": 0,
+      "hjemmelag": "Paraguay",
+      "kamp_id": "Paraguay_France_2026_07_04",
+      "match_no": 89
+    },
+    {
+      "borte": 1,
+      "bortelag": "Morocco",
+      "hjemme": 1,
+      "hjemmelag": "Canada",
+      "kamp_id": "Canada_Morocco_2026_07_04",
+      "match_no": 90
+    },
+    {
+      "borte": 2,
+      "bortelag": "Norway",
+      "hjemme": 1,
+      "hjemmelag": "Brazil",
+      "kamp_id": "Brazil_Norway_2026_07_05",
+      "match_no": 91
+    },
+    {
+      "borte": 1,
+      "bortelag": "England",
+      "hjemme": 0,
+      "hjemmelag": "Mexico",
+      "kamp_id": "Mexico_England_2026_07_05",
+      "match_no": 92
+    },
+    {
+      "borte": 1,
+      "bortelag": "Spain",
+      "hjemme": 1,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Spain_2026_07_06",
+      "match_no": 93
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 2,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Belgium_2026_07_06",
+      "match_no": 94
+    },
+    {
+      "borte": 1,
+      "bortelag": "Colombia",
+      "hjemme": 1,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
