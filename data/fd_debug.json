@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-04T21:05:51Z",
+  "tidspunkt": "2026-07-04T21:08:20Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -679,10 +679,10 @@
       "fd_bortelag": "France",
       "hjemmelag_normalisert": "Paraguay",
       "bortelag_normalisert": "France",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-07-04",
       "fd_utcDate": "2026-07-04T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Paraguay_France_2026_07_04"
