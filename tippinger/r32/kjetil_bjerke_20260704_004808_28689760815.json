@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "deltaker_id": "kjetil_bjerke",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-04T00:47:58.483Z",
+    "navn": "Kjetil bjerke",
+    "runde": "r32",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-04T00:48:08Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Ghana",
+      "hjemme": 2,
+      "hjemmelag": "Colombia",
+      "kamp_id": "Colombia_Ghana_2026_07_04",
+      "match_no": 87
+    }
+  ]
+}
