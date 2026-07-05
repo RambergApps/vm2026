@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-05T21:46:39Z",
+  "sist_oppdatert": "2026-07-05T22:01:23Z",
   "antall_kamper": 91,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18442,12 +18442,12 @@
       "hjemmelag": "Brazil",
       "bortelag": "Norway",
       "hjemme_score": 0,
-      "borte_score": 1,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "r16",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Norway lead Brazil 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Norway lead Brazil 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18543,7 +18543,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-05T21:45:46Z"
+      "oppdatert": "2026-07-05T22:01:23Z"
     }
   }
 }
