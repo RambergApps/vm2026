@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-05T05:31:10Z",
+  "tidspunkt": "2026-07-05T05:45:41Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -673,20 +673,6 @@
       "fd_utcDate": "2026-06-27T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Cape_Verde_Saudi_Arabia_2026_06_27"
     },
-    "537375": {
-      "fd_match_id": 537375,
-      "fd_hjemmelag": "Paraguay",
-      "fd_bortelag": "France",
-      "hjemmelag_normalisert": "Paraguay",
-      "bortelag_normalisert": "France",
-      "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 0,
-      "borte": 1,
-      "fd_dato": "2026-07-04",
-      "fd_utcDate": "2026-07-04T21:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Paraguay_France_2026_07_04"
-    },
     "537376": {
       "fd_match_id": 537376,
       "fd_hjemmelag": "Canada",
@@ -700,20 +686,6 @@
       "fd_dato": "2026-07-04",
       "fd_utcDate": "2026-07-04T17:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Morocco_2026_07_04"
-    },
-    "537377": {
-      "fd_match_id": 537377,
-      "fd_hjemmelag": "Brazil",
-      "fd_bortelag": "Norway",
-      "hjemmelag_normalisert": "Brazil",
-      "bortelag_normalisert": "Norway",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-07-05",
-      "fd_utcDate": "2026-07-05T20:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Brazil_Norway_2026_07_05"
     },
     "537378": {
       "fd_match_id": 537378,
