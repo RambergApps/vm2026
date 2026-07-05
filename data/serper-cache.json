@@ -6660,22 +6660,100 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-05T06:01:24Z",
-    "antall_sok": 107,
-    "beste_score": 0,
+    "sist_sokt": "2026-07-05T06:16:46Z",
+    "antall_sok": 108,
+    "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
-      "status": "ikke_funnet",
+      "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "hentet": "2026-07-05T06:01:24Z",
-      "score": -100,
-      "referat_fakta_score": 0,
-      "mangler": [
-        "fulltekst"
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": false,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-05T06:15:55Z",
+      "goal_events": [
+        {
+          "spiller": "Lopes Cabral",
+          "lag": "Cape Verde",
+          "minutt": "10",
+          "type": "goal"
+        },
+        {
+          "spiller": "Borges",
+          "lag": "Argentina",
+          "minutt": "11",
+          "type": "own_goal"
+        },
+        {
+          "spiller": "Messi",
+          "lag": "Argentina",
+          "minutt": "29",
+          "type": "goal"
+        },
+        {
+          "spiller": "Duarte",
+          "lag": "Cape Verde",
+          "minutt": "59",
+          "type": "goal"
+        },
+        {
+          "spiller": "L. Martinez",
+          "lag": "Argentina",
+          "minutt": "92",
+          "type": "goal"
+        }
       ],
-      "_forsok_url": 8
+      "scorere": [
+        "Lopes Cabral",
+        "Borges",
+        "Messi",
+        "Duarte",
+        "L. Martinez"
+      ],
+      "lead_scorer": "Lopes Cabral",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "The defending champions survived a pulsating match against a heroic Cabo Verde. Argentina will face Egypt in the last 16.",
+        "It took every second of the 120 minutes played in Miami for Argentina to overcome a brave Cabo Verde. The Albiceleste took the lead twice and the Blue Sharks answered both times, but with ten minutes to play in extra time a Lionel Messi corner led to an own goal from Diney Borges that sent that defending champions into the Round of 16 at the FIFA World Cup 2026™.",
+        "Lionel Messi broke the deadlock after the first hydration break, lifting the ball over an onrushing Vozinha after controlling a pinpoint ball over the top from Lisandro Martinez. The goal was the Albiceleste No10's 20th goal at the global showpiece and puts him in the lead in the race for the adidas Golden Boot once again.",
+        "After the break, Argentina maintained the majority of possession but it was a slick move down the right wing from the Blue Sharks that turned that game on its head. Centre midfielder Deroy Duarte found himself in space in the penalty area and the Ludogorets man did not hesitate, finishing precisely through Lisandro Martinez's legs and past Emiliano Martinez to draw Cabo Verde level with the reigning champions.",
+        "Vozinha made several key saves, including blocking Messi from point blank range to send the game to extra time. It took the Albiceleste just two minutes of extra time to retake the lead. Lisandro Martinez collected a loose ball from a corner kick and lashed over Vozinha at the near post."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": true,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 10,
+      "mangler": [
+        "resultat_i_fulltekst",
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   },
   "Canada_Morocco_2026_07_04|0-3": {

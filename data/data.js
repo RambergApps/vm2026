@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-05T06:01:19Z
+// Sist oppdatert: 2026-07-05T06:15:46Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-05T06:01:19Z",
+  "sist_oppdatert": "2026-07-05T06:15:46Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1768,11 +1768,13 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "r16",
       "dato_openfootball": "2026-07-04",
-      "kilde_score": "fifa_calendar",
-      "fifa_event_id": "400021533",
-      "fifa_match_no": 89,
-      "fifa_utcDate": "2026-07-04T21:00:00Z",
-      "fifa_dato": "2026-07-04"
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-07-04",
+      "fd_match_id": 537375,
+      "fd_utcDate": "2026-07-04T21:00:00Z",
+      "fd_hjemmelag": "Paraguay",
+      "fd_bortelag": "France",
+      "avanserer": "France"
     },
     "Brazil_Norway_2026_07_05": {
       "kamp_id": "Brazil_Norway_2026_07_05",
@@ -1785,7 +1787,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-05",
+      "fd_match_id": 537377,
+      "fd_utcDate": "2026-07-05T20:00:00Z",
+      "fd_hjemmelag": "Brazil",
+      "fd_bortelag": "Norway"
     },
     "Mexico_England_2026_07_05": {
       "kamp_id": "Mexico_England_2026_07_05",
@@ -2430,7 +2437,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-05T06:01:19Z"
+    "sist_beregnet": "2026-07-05T06:15:46Z"
   },
   "stilling": [
     {

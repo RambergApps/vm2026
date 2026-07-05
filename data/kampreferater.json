@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-05T05:46:33Z",
+  "sist_oppdatert": "2026-07-05T06:16:46Z",
   "antall_kamper": 90,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18327,8 +18327,8 @@
     "Paraguay_France_2026_07_04": {
       "kamp_id": "Paraguay_France_2026_07_04",
       "canonical_kamp_id": "Paraguay_France_2026_07_04",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537375,
+      "fd_utcDate": "2026-07-04T21:00:00Z",
       "hjemmelag": "Paraguay",
       "bortelag": "France",
       "hjemme_score": 0,
@@ -18432,7 +18432,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-05T05:45:42Z"
+      "oppdatert": "2026-07-05T06:15:54Z"
     }
   }
 }
