@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-05T23:15:44Z
+// Sist oppdatert: 2026-07-05T23:31:27Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-05T23:15:44Z",
+  "sist_oppdatert": "2026-07-05T23:31:27Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1806,12 +1806,7 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "openfootball",
-      "dato_fd_org": "2026-07-06",
-      "fd_match_id": 537378,
-      "fd_utcDate": "2026-07-06T00:00:00Z",
-      "fd_hjemmelag": "Mexico",
-      "fd_bortelag": "England"
+      "kilde_score": "openfootball"
     },
     "Portugal_Spain_2026_07_06": {
       "kamp_id": "Portugal_Spain_2026_07_06",
@@ -2443,7 +2438,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-05T23:15:44Z"
+    "sist_beregnet": "2026-07-05T23:31:27Z"
   },
   "stilling": [
     {
