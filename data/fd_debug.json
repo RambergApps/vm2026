@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-05T21:01:21Z",
+  "tidspunkt": "2026-07-05T21:15:22Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -700,20 +700,6 @@
       "fd_dato": "2026-07-04",
       "fd_utcDate": "2026-07-04T17:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Canada_Morocco_2026_07_04"
-    },
-    "537377": {
-      "fd_match_id": 537377,
-      "fd_hjemmelag": "Brazil",
-      "fd_bortelag": "Norway",
-      "hjemmelag_normalisert": "Brazil",
-      "bortelag_normalisert": "Norway",
-      "status": "PAUSED",
-      "ferdig": false,
-      "hjemme": 0,
-      "borte": 0,
-      "fd_dato": "2026-07-05",
-      "fd_utcDate": "2026-07-05T20:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Brazil_Norway_2026_07_05"
     },
     "537378": {
       "fd_match_id": 537378,

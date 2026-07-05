@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-05T21:02:25Z",
+  "sist_oppdatert": "2026-07-05T21:16:20Z",
   "antall_kamper": 91,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18437,17 +18437,17 @@
     "Brazil_Norway_2026_07_05": {
       "kamp_id": "Brazil_Norway_2026_07_05",
       "canonical_kamp_id": "Brazil_Norway_2026_07_05",
-      "fd_match_id": 537377,
-      "fd_utcDate": "2026-07-05T20:00:00Z",
+      "fd_match_id": null,
+      "fd_utcDate": "",
       "hjemmelag": "Brazil",
       "bortelag": "Norway",
       "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "PAUSED",
+      "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Brazil and Norway are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
+      "recap_tekst": "Brazil and Norway are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18543,7 +18543,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-05T21:01:33Z"
+      "oppdatert": "2026-07-05T21:15:23Z"
     }
   }
 }
