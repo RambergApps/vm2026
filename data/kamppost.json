@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-04",
   "dato_norsk": "Lørdag 4. juli 2026",
-  "generert": "2026-07-05T13:46:40Z",
+  "generert": "2026-07-05T14:02:02Z",
   "antall_kamper": 4,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 140,
+        "antall_sok": 141,
         "fallback": true,
         "cache_key": "Argentina_Cape_Verde_2026_07_03|1-1",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 10,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 140,
+        "retry_antall": 141,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
         "mangler": [
