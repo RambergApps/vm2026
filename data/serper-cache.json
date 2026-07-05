@@ -6660,9 +6660,9 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-05T03:02:06Z",
-    "antall_sok": 95,
-    "beste_score": 10,
+    "sist_sokt": "2026-07-05T03:16:40Z",
+    "antall_sok": 96,
+    "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
@@ -6678,59 +6678,19 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-05T03:01:22Z",
-      "goal_events": [
-        {
-          "spiller": "Lopes Cabral",
-          "lag": "Cape Verde",
-          "minutt": "10",
-          "type": "goal"
-        },
-        {
-          "spiller": "Borges",
-          "lag": "Argentina",
-          "minutt": "11",
-          "type": "own_goal"
-        },
-        {
-          "spiller": "Messi",
-          "lag": "Argentina",
-          "minutt": "29",
-          "type": "goal"
-        },
-        {
-          "spiller": "Duarte",
-          "lag": "Cape Verde",
-          "minutt": "59",
-          "type": "goal"
-        },
-        {
-          "spiller": "L. Martinez",
-          "lag": "Argentina",
-          "minutt": "92",
-          "type": "goal"
-        }
-      ],
-      "scorere": [
-        "Lopes Cabral",
-        "Borges",
-        "Messi",
-        "Duarte",
-        "L. Martinez"
-      ],
-      "lead_scorer": "Lopes Cabral",
+      "hentet": "2026-07-05T03:15:50Z",
+      "goal_events": [],
+      "scorere": [],
+      "lead_scorer": "",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "The defending champions survived a pulsating match against a heroic Cabo Verde. Argentina will face Egypt in the last 16.",
-        "It took every second of the 120 minutes played in Miami for Argentina to overcome a brave Cabo Verde. The Albiceleste took the lead twice and the Blue Sharks answered both times, but with ten minutes to play in extra time a Lionel Messi corner led to an own goal from Diney Borges that sent that defending champions into the Round of 16 at the FIFA World Cup 2026™.",
-        "Lionel Messi broke the deadlock after the first hydration break, lifting the ball over an onrushing Vozinha after controlling a pinpoint ball over the top from Lisandro Martinez. The goal was the Albiceleste No10's 20th goal at the global showpiece and puts him in the lead in the race for the adidas Golden Boot once again.",
-        "After the break, Argentina maintained the majority of possession but it was a slick move down the right wing from the Blue Sharks that turned that game on its head. Centre midfielder Deroy Duarte found himself in space in the penalty area and the Ludogorets man did not hesitate, finishing precisely through Lisandro Martinez's legs and past Emiliano Martinez to draw Cabo Verde level with the reigning champions.",
-        "Vozinha made several key saves, including blocking Messi from point blank range to send the game to extra time. It took the Albiceleste just two minutes of extra time to retake the lead. Lisandro Martinez collected a loose ball from a corner kick and lashed over Vozinha at the near post."
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights?searchOverlay=1)"
       ],
       "key_stat": "",
       "player_of_match": "",
-      "early_lead": true,
+      "early_lead": false,
       "came_from_behind": false,
       "knockout_secured": false,
       "group_top": false,
@@ -6738,14 +6698,14 @@
       "late_pressure": false,
       "stoppage": null,
       "brace_text": false,
-      "first_goal_past_keeper": true,
+      "first_goal_past_keeper": false,
       "all_goals_first_half": false,
-      "lead_goal_early": true,
+      "lead_goal_early": false,
       "lead_goal_stoppage": false,
       "fastest_stat": false,
-      "record_stat": true,
+      "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 10,
+      "referat_fakta_score": 4,
       "mangler": [
         "resultat_i_fulltekst",
         "goal_events"
