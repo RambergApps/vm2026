@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-05T18:15:41Z",
+  "sist_oppdatert": "2026-07-05T18:31:10Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -296,6 +296,17 @@
       "navn": "Ken Arne Hansen",
       "deltaker_type": "ordinaer",
       "runder": {
+        "r16": {
+          "kamper": [
+            "Argentina_Egypt_2026_07_07",
+            "Brazil_Norway_2026_07_05",
+            "Mexico_England_2026_07_05",
+            "Portugal_Spain_2026_07_06",
+            "Switzerland_Colombia_2026_07_07",
+            "USA_Belgium_2026_07_06"
+          ],
+          "bonus": false
+        },
         "r32": {
           "kamper": [
             "Argentina_Cape_Verde_2026_07_03",
