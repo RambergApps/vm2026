@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-05T00:15:44Z
+// Sist oppdatert: 2026-07-05T00:31:13Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-05T00:15:44Z",
+  "sist_oppdatert": "2026-07-05T00:31:13Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2026,7 +2026,7 @@ const VM_DATA = {
         "spiller": "Kylian Mbappe",
         "maal": 7,
         "assists": 2,
-        "minutter": 481,
+        "minutter": 482,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -2081,7 +2081,7 @@ const VM_DATA = {
       "spiller": "Kylian Mbappe",
       "maal": 7,
       "assists": 2,
-      "minutter": 481
+      "minutter": 482
     },
     {
       "rank": 2,
@@ -2437,7 +2437,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-05T00:15:44Z"
+    "sist_beregnet": "2026-07-05T00:31:13Z"
   },
   "stilling": [
     {
