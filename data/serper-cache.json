@@ -6911,5 +6911,89 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Brazil_Norway_2026_07_05|1-2": {
+    "kamp_id": "Brazil_Norway_2026_07_05",
+    "resultat": "1-2",
+    "sist_sokt": "2026-07-05T22:15:54Z",
+    "antall_sok": 1,
+    "beste_score": 12,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-norway-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-07-05T22:15:54Z",
+      "goal_events": [
+        {
+          "spiller": "Haaland",
+          "lag": "Norway",
+          "minutt": "79",
+          "type": "goal"
+        },
+        {
+          "spiller": "Neymar",
+          "lag": "Brazil",
+          "minutt": "90+10",
+          "type": "penalty"
+        },
+        {
+          "spiller": "Haaland",
+          "lag": "Norway",
+          "minutt": "90",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Haaland",
+        "Neymar"
+      ],
+      "lead_scorer": "Haaland",
+      "brace_scorer": "Haaland",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "New York New Jersey was hosting its penultimate match of the tournament, with the next fixture being the 19 July final. Norway stand now just two matches from reaching that decider, having downed Brazil in the Round of 16, on the back of Erling Haaland’s sixth and seventh tournament goals. Those goals move him level with Kylian Mbappe and Lionel Messi to seven, as the race for the adidas Golden Boot heats up.",
+        "In mid-afternoon sunshine, the Seleção survived an early Patrick Berg chance before they had a golden opportunity to go ahead just shy of the quarter hour. Kristoffer Ajer mistimed a challenge on Matheus Cunha and after a VAR review, Brazil were awarded a penalty. Initially, Vinicius Junior had possession of the adidas TRIONDA before passing it to Bruno Guimaraes, who saw his shot saved down low to his left by the firm hands of Orjan Nyland.",
+        "The 35-year-old Norwegian keeper was a keen handball player in his youth, but it was his legs that denied firstly Gabriel Martinelli and then Vinicius Junior to send the teams to the break with the score unbroken.",
+        "One of Norway’s chief creative threats, Antonio Nusa, was withdrawn at the interval but it was a Brazilian substitute, Endrick, that spurned a huge chance to break the deadlock. Fifty-two seconds after his arrival, the teenage forward was sent through on goal by a surgical Vinicius Junior pass, only for a heavy first touch to lead to a mis-placed shot.",
+        "The Volda Viking then produced another pair of fine saves to thwart firstly Rayan and then Bruno Guimaraes before Norway struck."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": true,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-norway-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

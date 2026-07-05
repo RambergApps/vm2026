@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-05T22:01:23Z",
+  "sist_oppdatert": "2026-07-05T22:15:54Z",
   "antall_kamper": 91,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18437,35 +18437,108 @@
     "Brazil_Norway_2026_07_05": {
       "kamp_id": "Brazil_Norway_2026_07_05",
       "canonical_kamp_id": "Brazil_Norway_2026_07_05",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537377,
+      "fd_utcDate": "2026-07-05T20:00:00Z",
       "hjemmelag": "Brazil",
       "bortelag": "Norway",
-      "hjemme_score": 0,
+      "hjemme_score": 1,
       "borte_score": 2,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Norway lead Brazil 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "Norway beat Brazil 2-1.\nGoals: Brazil — Neymar penalty (90+10); Norway — Haaland (79, 90).\n\nFifty-two seconds after his arrival, the teenage forward was sent through on goal by a surgical Vinicius Junior pass, only for a heavy first touch to lead to a mis-placed shot.\nNorway stand now just two matches from reaching that decider, having downed Brazil in the Round of 16, on the back of Erling Haaland’s sixth and seventh tournament goals.\nNew York New Jersey was hosting its penultimate match of the tournament, with the next fixture being the 19 July final.\nThose goals move him level with Kylian Mbappe and Lionel Messi to seven, as the race for the adidas Golden Boot heats up.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Brazil_Norway_2026_07_05|1-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/brazil-norway-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
+        "eksakt": [
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 8
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 4
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 4
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 1,
+            "tippa_b": 4,
+            "poeng": 4
+          }
+        ],
         "bom": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 2,
-            "tippa_b": 3,
             "poeng": 0
           },
           {
@@ -18475,57 +18548,9 @@
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Diyan K.",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 1,
-            "tippa_b": 4,
             "poeng": 0
           },
           {
@@ -18533,17 +18558,11 @@
             "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-05T22:01:23Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-05T22:15:54Z"
     }
   }
 }
