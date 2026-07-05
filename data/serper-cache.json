@@ -6660,8 +6660,8 @@
   "Argentina_Cape_Verde_2026_07_03|1-1": {
     "kamp_id": "Argentina_Cape_Verde_2026_07_03",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-05T00:46:41Z",
-    "antall_sok": 86,
+    "sist_sokt": "2026-07-05T01:02:23Z",
+    "antall_sok": 87,
     "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -6678,7 +6678,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-05T00:45:49Z",
+      "hentet": "2026-07-05T01:01:23Z",
       "goal_events": [
         {
           "spiller": "Lopes Cabral",
@@ -6722,15 +6722,15 @@
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-cabo-verde-match-report-highlights?searchOverlay=1)",
         "The defending champions survived a pulsating match against a heroic Cabo Verde. Argentina will face Egypt in the last 16.",
         "It took every second of the 120 minutes played in Miami for Argentina to overcome a brave Cabo Verde. The Albiceleste took the lead twice and the Blue Sharks answered both times, but with ten minutes to play in extra time a Lionel Messi corner led to an own goal from Diney Borges that sent that defending champions into the Round of 16 at the FIFA World Cup 2026™.",
-        "Lionel Messi broke the deadlock after the first hydration break, lifting the ball over an onrushing Vozinha after controlling a pinpoint ball over the top from Lisandro Martinez. The goal was the Albiceleste No10's 20th goal at the global showpiece and puts him in the lead in the race for the adidas Golden Boot once again."
+        "Lionel Messi broke the deadlock after the first hydration break, lifting the ball over an onrushing Vozinha after controlling a pinpoint ball over the top from Lisandro Martinez. The goal was the Albiceleste No10's 20th goal at the global showpiece and puts him in the lead in the race for the adidas Golden Boot once again.",
+        "After the break, Argentina maintained the majority of possession but it was a slick move down the right wing from the Blue Sharks that turned that game on its head. Centre midfielder Deroy Duarte found himself in space in the penalty area and the Ludogorets man did not hesitate, finishing precisely through Lisandro Martinez's legs and past Emiliano Martinez to draw Cabo Verde level with the reigning champions.",
+        "Vozinha made several key saves, including blocking Messi from point blank range to send the game to extra time. It took the Albiceleste just two minutes of extra time to retake the lead. Lisandro Martinez collected a loose ball from a corner kick and lashed over Vozinha at the near post."
       ],
       "key_stat": "",
       "player_of_match": "",
-      "early_lead": false,
+      "early_lead": true,
       "came_from_behind": false,
       "knockout_secured": false,
       "group_top": false,
