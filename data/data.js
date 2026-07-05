@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-05T18:45:37Z
+// Sist oppdatert: 2026-07-05T19:01:16Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-05T18:45:37Z",
+  "sist_oppdatert": "2026-07-05T19:01:16Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1884,11 +1884,11 @@ const VM_DATA = {
       "fd_hjemmelag": "Switzerland",
       "fd_bortelag": "Colombia"
     },
-    "W89_W90_2026_07_09": {
-      "kamp_id": "W89_W90_2026_07_09",
-      "canonical_kamp_id": "W89_W90_2026_07_09",
-      "hjemmelag": "W89",
-      "bortelag": "W90",
+    "France_Morocco_2026_07_09": {
+      "kamp_id": "France_Morocco_2026_07_09",
+      "canonical_kamp_id": "France_Morocco_2026_07_09",
+      "hjemmelag": "France",
+      "bortelag": "Morocco",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1896,7 +1896,11 @@ const VM_DATA = {
       "runde": "qf",
       "dato_openfootball": "2026-07-09",
       "kilde_score": "openfootball",
-      "match_no": 97
+      "dato_fd_org": "2026-07-09",
+      "fd_match_id": 537383,
+      "fd_utcDate": "2026-07-09T20:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Morocco"
     },
     "W93_W94_2026_07_10": {
       "kamp_id": "W93_W94_2026_07_10",
@@ -2437,7 +2441,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-05T18:45:37Z"
+    "sist_beregnet": "2026-07-05T19:01:16Z"
   },
   "stilling": [
     {
