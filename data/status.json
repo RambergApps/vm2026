@@ -303,8 +303,8 @@
         "slot_hjemme": "W76",
         "slot_borte": "W78",
         "utcDate": "2026-07-05T20:00:00Z",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Mexico_England_2026_07_05",
@@ -372,8 +372,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 6,
-    "neste_frist": "2026-07-05T20:00:00Z"
+    "antall_tippebare": 5,
+    "neste_frist": "2026-07-06T00:00:00Z"
   },
   "qf": {
     "aapen": false,
