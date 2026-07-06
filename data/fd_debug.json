@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-06T02:15:40Z",
+  "tidspunkt": "2026-07-06T02:31:16Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -724,7 +724,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 2,
+      "borte": 3,
       "fd_dato": "2026-07-06",
       "fd_utcDate": "2026-07-06T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Mexico_England_2026_07_06"
