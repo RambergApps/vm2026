@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-06T19:15:44Z",
+  "sist_oppdatert": "2026-07-06T20:01:38Z",
   "antall_kamper": 93,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18697,17 +18697,17 @@
     "Portugal_Spain_2026_07_06": {
       "kamp_id": "Portugal_Spain_2026_07_06",
       "canonical_kamp_id": "Portugal_Spain_2026_07_06",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537379,
+      "fd_utcDate": "2026-07-06T19:00:00Z",
       "hjemmelag": "Portugal",
       "bortelag": "Spain",
       "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Portugal and Spain are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Portugal and Spain are level at 0-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18803,7 +18803,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-06T19:15:44Z"
+      "oppdatert": "2026-07-06T20:01:38Z"
     }
   }
 }

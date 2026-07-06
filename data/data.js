@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T19:45:44Z
+// Sist oppdatert: 2026-07-06T20:01:28Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T19:45:44Z",
+  "sist_oppdatert": "2026-07-06T20:01:28Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1826,14 +1826,15 @@ const VM_DATA = {
       "hjemme": 0,
       "borte": 0,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
-      "kilde_score": "fifa_calendar",
-      "fifa_event_id": "400021529",
-      "fifa_match_no": 93,
-      "fifa_utcDate": "2026-07-06T19:00:00Z",
-      "fifa_dato": "2026-07-06",
+      "kilde_score": "football_data_org",
+      "dato_fd_org": "2026-07-06",
+      "fd_match_id": 537379,
+      "fd_utcDate": "2026-07-06T19:00:00Z",
+      "fd_hjemmelag": "Portugal",
+      "fd_bortelag": "Spain",
       "match_no": 93
     },
     "USA_Belgium_2026_07_06": {
@@ -2455,7 +2456,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T19:45:44Z"
+    "sist_beregnet": "2026-07-06T20:01:28Z"
   },
   "stilling": [
     {
@@ -3620,7 +3621,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -5065,7 +5066,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -6510,7 +6511,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -7884,7 +7885,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -10614,7 +10615,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -12021,7 +12022,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -13466,7 +13467,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -14911,7 +14912,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -16328,7 +16329,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -17735,7 +17736,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -19142,7 +19143,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -21703,7 +21704,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -24443,7 +24444,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -25888,7 +25889,7 @@ const VM_DATA = {
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
