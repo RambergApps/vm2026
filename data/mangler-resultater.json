@@ -1,4 +1,15 @@
 {
-  "sist_sjekket": "2026-07-05T23:45:41Z",
-  "kamper": []
+  "sist_sjekket": "2026-07-06T00:01:25Z",
+  "kamper": [
+    {
+      "type": "mangler_resultat",
+      "kamp_id": "Mexico_England_2026_07_05",
+      "hjemmelag": "Mexico",
+      "bortelag": "England",
+      "dato": "2026-07-05",
+      "runde": "r16",
+      "gruppe": "",
+      "status": "mangler_resultat"
+    }
+  ]
 }
