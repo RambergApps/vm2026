@@ -2275,8 +2275,11 @@ def reset_status_til_originale_slots(status):
             kamp["borte"] = slot_b
             kamp["id"] = kamp_id(slot_h, slot_b, dato)
             kamp["info"] = ""
+            # Behold utcDate. Tidspunktet er knyttet til offisielt match_no/slot,
+            # ikke til lagene, og må ikke slettes ved reset. Hvis FIFA senere
+            # endrer avsparkstid, oppdateres utcDate av oppdater_status_med_fifa_tidspunkter().
             for felt in (
-                "avanserer", "utcDate", "fd_match_id", "fifa_event_id",
+                "avanserer", "fd_match_id", "fifa_event_id",
                 "tippebar", "tippe_status"
             ):
                 kamp.pop(felt, None)
@@ -2420,6 +2423,14 @@ def oppdater_status(resultat_lookup):
         return
 
     sikre_status_metadata(status)
+
+    # Viktig: fang opp match_no fra status FØR vi resetter synlige lag tilbake
+    # til Wxx-slotter. Når en R16-kamp allerede står som f.eks.
+    # France_Morocco_2026_07_04 i status.json, men OpenFootball/FD ikke har
+    # match_no i payloaden, er dette koblingen som gjør at W89/W90 kan fylles
+    # videre til QF. Tidligere ble denne informasjonen slettet av reset først.
+    legg_match_no_fra_status(resultat_lookup, status)
+
     reset_status_til_originale_slots(status)
     legg_match_no_fra_status(resultat_lookup, status)
     oppdater_status_med_api_kamper(status, resultat_lookup)
@@ -2428,6 +2439,14 @@ def oppdater_status(resultat_lookup):
     # Kjør én gang til slik at API-oppføringer som nå fikk match_no kan berike metadata.
     oppdater_status_med_api_kamper(status, resultat_lookup)
     autofyll_neste_runder(status, resultat_lookup)
+
+    # Etter autofyll kan neste runde ha fått konkrete lag og ny kamp_id.
+    # Kjør mapping/API-beriking én gang til, slik at samme kjøring også kan
+    # hente fd_match_id/fifa_event_id/utcDate for QF/SF/finale når kilden har det.
+    sikre_status_metadata(status)
+    legg_match_no_fra_status(resultat_lookup, status)
+    oppdater_status_med_api_kamper(status, resultat_lookup)
+
     oppdater_status_med_fifa_tidspunkter(status)
     oppdater_tippebar_status(status)
 
