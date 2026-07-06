@@ -423,11 +423,12 @@
         "hjemme": "Norway",
         "borte": "England",
         "dato": "2026-07-11",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 99,
         "slot_hjemme": "W91",
         "slot_borte": "W92",
         "utcDate": "2026-07-11T21:00:00Z",
+        "fd_match_id": 537385,
         "tippebar": true,
         "tippe_status": "aapen"
       },
