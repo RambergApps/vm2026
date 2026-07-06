@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T08:31:16Z
+// Sist oppdatert: 2026-07-06T08:36:33Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T08:31:16Z",
+  "sist_oppdatert": "2026-07-06T08:36:33Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1736,7 +1736,8 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-04T17:00:00Z",
       "fd_hjemmelag": "Canada",
       "fd_bortelag": "Morocco",
-      "avanserer": "Morocco"
+      "avanserer": "Morocco",
+      "match_no": 90
     },
     "Colombia_Ghana_2026_07_04": {
       "kamp_id": "Colombia_Ghana_2026_07_04",
@@ -1774,7 +1775,8 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-04T21:00:00Z",
       "fd_hjemmelag": "Paraguay",
       "fd_bortelag": "France",
-      "avanserer": "France"
+      "avanserer": "France",
+      "match_no": 89
     },
     "Brazil_Norway_2026_07_05": {
       "kamp_id": "Brazil_Norway_2026_07_05",
@@ -1793,7 +1795,8 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-05T20:00:00Z",
       "fd_hjemmelag": "Brazil",
       "fd_bortelag": "Norway",
-      "avanserer": "Norway"
+      "avanserer": "Norway",
+      "match_no": 91
     },
     "Mexico_England_2026_07_05": {
       "kamp_id": "Mexico_England_2026_07_05",
@@ -1812,7 +1815,8 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-06T01:00:00Z",
       "fd_hjemmelag": "Mexico",
       "fd_bortelag": "England",
-      "avanserer": "England"
+      "avanserer": "England",
+      "match_no": 92
     },
     "Portugal_Spain_2026_07_06": {
       "kamp_id": "Portugal_Spain_2026_07_06",
@@ -1830,7 +1834,8 @@ const VM_DATA = {
       "fd_match_id": 537379,
       "fd_utcDate": "2026-07-06T19:00:00Z",
       "fd_hjemmelag": "Portugal",
-      "fd_bortelag": "Spain"
+      "fd_bortelag": "Spain",
+      "match_no": 93
     },
     "USA_Belgium_2026_07_06": {
       "kamp_id": "USA_Belgium_2026_07_06",
@@ -1848,7 +1853,8 @@ const VM_DATA = {
       "fd_match_id": 537380,
       "fd_utcDate": "2026-07-07T00:00:00Z",
       "fd_hjemmelag": "United States",
-      "fd_bortelag": "Belgium"
+      "fd_bortelag": "Belgium",
+      "match_no": 94
     },
     "Argentina_Egypt_2026_07_07": {
       "kamp_id": "Argentina_Egypt_2026_07_07",
@@ -1866,7 +1872,8 @@ const VM_DATA = {
       "fd_match_id": 537381,
       "fd_utcDate": "2026-07-07T16:00:00Z",
       "fd_hjemmelag": "Argentina",
-      "fd_bortelag": "Egypt"
+      "fd_bortelag": "Egypt",
+      "match_no": 95
     },
     "Switzerland_Colombia_2026_07_07": {
       "kamp_id": "Switzerland_Colombia_2026_07_07",
@@ -1884,7 +1891,8 @@ const VM_DATA = {
       "fd_match_id": 537382,
       "fd_utcDate": "2026-07-07T20:00:00Z",
       "fd_hjemmelag": "Switzerland",
-      "fd_bortelag": "Colombia"
+      "fd_bortelag": "Colombia",
+      "match_no": 96
     },
     "France_Morocco_2026_07_09": {
       "kamp_id": "France_Morocco_2026_07_09",
@@ -1902,7 +1910,8 @@ const VM_DATA = {
       "fd_match_id": 537383,
       "fd_utcDate": "2026-07-09T20:00:00Z",
       "fd_hjemmelag": "France",
-      "fd_bortelag": "Morocco"
+      "fd_bortelag": "Morocco",
+      "match_no": 97
     },
     "W93_W94_2026_07_10": {
       "kamp_id": "W93_W94_2026_07_10",
@@ -2442,7 +2451,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T08:31:16Z"
+    "sist_beregnet": "2026-07-06T08:36:33Z"
   },
   "stilling": [
     {

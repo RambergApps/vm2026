@@ -272,11 +272,13 @@
         "hjemme": "Paraguay",
         "borte": "France",
         "dato": "2026-07-04",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 89,
         "slot_hjemme": "W74",
         "slot_borte": "W77",
         "utcDate": "2026-07-04T21:00:00Z",
+        "fd_match_id": 537375,
+        "avanserer": "France",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -285,11 +287,13 @@
         "hjemme": "Canada",
         "borte": "Morocco",
         "dato": "2026-07-04",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 90,
         "slot_hjemme": "W73",
         "slot_borte": "W75",
         "utcDate": "2026-07-04T17:00:00Z",
+        "fd_match_id": 537376,
+        "avanserer": "Morocco",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -298,11 +302,13 @@
         "hjemme": "Brazil",
         "borte": "Norway",
         "dato": "2026-07-05",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 91,
         "slot_hjemme": "W76",
         "slot_borte": "W78",
         "utcDate": "2026-07-05T20:00:00Z",
+        "fd_match_id": 537377,
+        "avanserer": "Norway",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -310,12 +316,14 @@
         "id": "Mexico_England_2026_07_05",
         "hjemme": "Mexico",
         "borte": "England",
-        "dato": "2026-07-05",
-        "info": "Autofyll fra avansement",
+        "dato": "2026-07-06",
+        "info": "Kampoppsett bekreftet",
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",
         "utcDate": "2026-07-06T01:00:00Z",
+        "fd_match_id": 537378,
+        "avanserer": "England",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -324,11 +332,12 @@
         "hjemme": "Portugal",
         "borte": "Spain",
         "dato": "2026-07-06",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 93,
         "slot_hjemme": "W83",
         "slot_borte": "W84",
         "utcDate": "2026-07-06T19:00:00Z",
+        "fd_match_id": 537379,
         "tippebar": true,
         "tippe_status": "aapen"
       },
@@ -336,12 +345,13 @@
         "id": "USA_Belgium_2026_07_06",
         "hjemme": "USA",
         "borte": "Belgium",
-        "dato": "2026-07-06",
-        "info": "Autofyll fra avansement",
+        "dato": "2026-07-07",
+        "info": "Kampoppsett bekreftet",
         "match_no": 94,
         "slot_hjemme": "W81",
         "slot_borte": "W82",
         "utcDate": "2026-07-07T00:00:00Z",
+        "fd_match_id": 537380,
         "tippebar": true,
         "tippe_status": "aapen"
       },
@@ -350,11 +360,12 @@
         "hjemme": "Argentina",
         "borte": "Egypt",
         "dato": "2026-07-07",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 95,
         "slot_hjemme": "W86",
         "slot_borte": "W88",
         "utcDate": "2026-07-07T16:00:00Z",
+        "fd_match_id": 537381,
         "tippebar": true,
         "tippe_status": "aapen"
       },
@@ -363,11 +374,12 @@
         "hjemme": "Switzerland",
         "borte": "Colombia",
         "dato": "2026-07-07",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 96,
         "slot_hjemme": "W85",
         "slot_borte": "W87",
         "utcDate": "2026-07-07T20:00:00Z",
+        "fd_match_id": 537382,
         "tippebar": true,
         "tippe_status": "aapen"
       }
@@ -376,21 +388,22 @@
     "neste_frist": "2026-07-06T19:00:00Z"
   },
   "qf": {
-    "aapen": false,
+    "aapen": true,
     "frist": "2026-07-09T20:00:00Z",
     "kamper": [
       {
-        "id": "W89_W90_2026_07_09",
-        "hjemme": "W89",
-        "borte": "W90",
+        "id": "France_Morocco_2026_07_09",
+        "hjemme": "France",
+        "borte": "Morocco",
         "dato": "2026-07-09",
-        "info": "",
+        "info": "Kampoppsett bekreftet",
         "match_no": 97,
         "slot_hjemme": "W89",
         "slot_borte": "W90",
         "utcDate": "2026-07-09T20:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "fd_match_id": 537383,
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "W93_W94_2026_07_10",
@@ -406,17 +419,17 @@
         "tippe_status": "venter_pa_lag"
       },
       {
-        "id": "W91_W92_2026_07_11",
-        "hjemme": "W91",
-        "borte": "W92",
+        "id": "Norway_England_2026_07_11",
+        "hjemme": "Norway",
+        "borte": "England",
         "dato": "2026-07-11",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 99,
         "slot_hjemme": "W91",
         "slot_borte": "W92",
         "utcDate": "2026-07-11T21:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "W95_W96_2026_07_11",
@@ -432,8 +445,8 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 0,
-    "neste_frist": null
+    "antall_tippebare": 2,
+    "neste_frist": "2026-07-09T20:00:00Z"
   },
   "sf": {
     "aapen": false,
