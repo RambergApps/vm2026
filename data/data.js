@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T01:45:40Z
+// Sist oppdatert: 2026-07-06T02:01:20Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T01:45:40Z",
+  "sist_oppdatert": "2026-07-06T02:01:20Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1800,10 +1800,10 @@ const VM_DATA = {
       "canonical_kamp_id": "Mexico_England_2026_07_05",
       "hjemmelag": "Mexico",
       "bortelag": "England",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 2,
       "ferdig": false,
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
       "kilde_score": "football_data_org",
@@ -2107,8 +2107,8 @@ const VM_DATA = {
       "rank": 4,
       "spiller": "Harry Kane",
       "maal": 5,
-      "assists": 0,
-      "minutter": 394
+      "assists": 1,
+      "minutter": 440
     },
     {
       "rank": 5,
@@ -2126,192 +2126,192 @@ const VM_DATA = {
     },
     {
       "rank": 7,
+      "spiller": "Jude Bellingham",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 386
+    },
+    {
+      "rank": 8,
+      "spiller": "Julian Quinones",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 399
+    },
+    {
+      "rank": 9,
       "spiller": "Ismaila Sarr",
       "maal": 4,
       "assists": 1,
       "minutter": 419
     },
     {
-      "rank": 8,
+      "rank": 10,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 505
     },
     {
-      "rank": 9,
+      "rank": 11,
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
       "minutter": 174
     },
     {
-      "rank": 10,
+      "rank": 12,
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 2,
       "minutter": 220
     },
     {
-      "rank": 11,
-      "spiller": "Julian Quinones",
-      "maal": 3,
-      "assists": 1,
-      "minutter": 354
-    },
-    {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Cody Gakpo",
       "maal": 3,
       "assists": 1,
       "minutter": 394
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 14,
+      "rank": 15,
       "spiller": "Folarin Balogun",
       "maal": 3,
       "assists": 0,
       "minutter": 250
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 324
     },
     {
-      "rank": 17,
+      "rank": 18,
       "spiller": "Cristiano Ronaldo",
       "maal": 3,
       "assists": 0,
       "minutter": 385
     },
     {
-      "rank": 18,
+      "rank": 19,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 19,
+      "rank": 20,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 20,
+      "rank": 21,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 411
     },
     {
-      "rank": 21,
+      "rank": 22,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 475
     },
     {
-      "rank": 22,
+      "rank": 23,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 23,
+      "rank": 24,
       "spiller": "Breel Embolo",
       "maal": 2,
       "assists": 2,
       "minutter": 369
     },
     {
-      "rank": 24,
+      "rank": 25,
       "spiller": "Soufiane Rahimi",
       "maal": 2,
       "assists": 1,
       "minutter": 180
     },
     {
-      "rank": 25,
+      "rank": 26,
       "spiller": "Romelu Lukaku",
       "maal": 2,
       "assists": 1,
       "minutter": 215
     },
     {
-      "rank": 26,
+      "rank": 27,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 27,
+      "rank": 28,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 257
     },
     {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 268
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 288
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 297
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
-    },
-    {
-      "rank": 33,
-      "spiller": "Jude Bellingham",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 340
     },
     {
       "rank": 34,
@@ -2364,17 +2364,17 @@ const VM_DATA = {
     },
     {
       "rank": 41,
-      "spiller": "Raul Jimenez",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 241
-    },
-    {
-      "rank": 42,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 247
+    },
+    {
+      "rank": 42,
+      "spiller": "Raul Jimenez",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 287
     },
     {
       "rank": 43,
@@ -2443,7 +2443,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T01:45:40Z"
+    "sist_beregnet": "2026-07-06T02:01:20Z"
   },
   "stilling": [
     {
@@ -3576,11 +3576,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -5007,11 +5007,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -6438,11 +6438,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -7798,11 +7798,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -10514,11 +10514,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -11907,11 +11907,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -13338,11 +13338,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -14769,11 +14769,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -16186,11 +16186,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -17579,11 +17579,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -20098,11 +20098,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -22800,11 +22800,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -24231,11 +24231,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
@@ -25662,11 +25662,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
-          "status": "IN_PLAY",
+          "status": "PAUSED",
           "runde": "r16"
         },
         {
