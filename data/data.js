@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T18:45:41Z
+// Sist oppdatert: 2026-07-06T19:01:27Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T18:45:41Z",
+  "sist_oppdatert": "2026-07-06T19:01:27Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1823,18 +1823,22 @@ const VM_DATA = {
       "canonical_kamp_id": "Portugal_Spain_2026_07_06",
       "hjemmelag": "Portugal",
       "bortelag": "Spain",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-06",
       "fd_match_id": 537379,
       "fd_utcDate": "2026-07-06T19:00:00Z",
       "fd_hjemmelag": "Portugal",
       "fd_bortelag": "Spain",
+      "fifa_event_id": "400021529",
+      "fifa_match_no": 93,
+      "fifa_utcDate": "2026-07-06T19:00:00Z",
+      "fifa_dato": "2026-07-06",
       "match_no": 93
     },
     "USA_Belgium_2026_07_06": {
@@ -2456,7 +2460,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T18:45:41Z"
+    "sist_beregnet": "2026-07-06T19:01:27Z"
   },
   "stilling": [
     {
@@ -3609,6 +3613,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -5044,6 +5061,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -6476,6 +6506,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -7834,6 +7877,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -10554,6 +10610,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -11945,6 +12014,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -13380,6 +13462,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -14812,6 +14907,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -16216,6 +16324,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -17610,6 +17731,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -19001,6 +19135,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -21549,6 +21696,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -24279,6 +24439,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -25708,6 +25881,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Portugal_Spain_2026_07_06",
+          "hjemmelag": "Portugal",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
