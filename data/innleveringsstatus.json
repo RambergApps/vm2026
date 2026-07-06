@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-06T18:01:29Z",
+  "sist_oppdatert": "2026-07-06T18:15:47Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -125,6 +125,13 @@
       "navn": "Arne Kristian Johansen",
       "deltaker_type": "ordinaer",
       "runder": {
+        "qf": {
+          "kamper": [
+            "France_Morocco_2026_07_09",
+            "Norway_England_2026_07_11"
+          ],
+          "bonus": false
+        },
         "r16": {
           "kamper": [
             "Argentina_Egypt_2026_07_07",
