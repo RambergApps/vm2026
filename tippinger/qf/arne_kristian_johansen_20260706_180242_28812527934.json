@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "deltaker_id": "arne_kristian_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-06T18:02:28.968Z",
+    "navn": "Arne Kristian Johansen",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-06T18:02:42Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Morocco",
+      "hjemme": 1,
+      "hjemmelag": "France",
+      "kamp_id": "France_Morocco_2026_07_09",
+      "match_no": 97
+    },
+    {
+      "borte": 1,
+      "bortelag": "England",
+      "hjemme": 2,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    }
+  ]
+}
