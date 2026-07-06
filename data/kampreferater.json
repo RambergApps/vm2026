@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-06T02:45:45Z",
+  "sist_oppdatert": "2026-07-06T03:15:50Z",
   "antall_kamper": 92,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18490,13 +18490,13 @@
             "poeng": 8
           },
           {
-            "navn": "Ken Arne Hansen",
+            "navn": "Geir Magne Evensen",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 8
           },
           {
-            "navn": "Geir Magne Evensen",
+            "navn": "Ken Arne Hansen",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 8
@@ -18516,15 +18516,15 @@
             "poeng": 4
           },
           {
-            "navn": "Sondre Garstad",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 4
-          },
-          {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 0,
             "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 3,
             "poeng": 4
           },
           {
@@ -18562,7 +18562,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-05T22:15:54Z"
+      "oppdatert": "2026-07-06T03:15:43Z"
     },
     "Mexico_England_2026_07_05": {
       "kamp_id": "Mexico_England_2026_07_05",
@@ -18575,39 +18575,82 @@
       "borte_score": 3,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "England lead Mexico 3-2.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "England beat Mexico 3-2.\nGoals: Mexico — Quinones (42) and Jimenez penalty (69); England — Bellingham (36, 38) and Kane penalty (60).\n\nThe Three Lions prevailed despite playing for most of the second half with ten men following Jarell Quansah’s 54th-minute red card.\nEngland overcame co-hosts Mexico in a thrilling, incident-packed last-16 tie to set up a FIFA World Cup 2026™ quarter-final showdown with Norway.\nBacked by a feverish home crowd, co-hosts Mexico fought tirelessly in their bid to reach first quarter-final in 40 years, but England held on to keep their title dreams alive.\nMexico dominated possession in the game’s opening stages, but a quick-fire Bellingham double swung the game in England’s favour.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Mexico_England_2026_07_05|2-3",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 3,
+            "poeng": 8
+          }
+        ],
+        "riktig": [
           {
             "navn": "Alexander",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 0,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 4
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 1,
             "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 3,
+            "poeng": 4
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 4
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 1,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -18629,38 +18672,14 @@
             "poeng": 0
           },
           {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
             "navn": "Ken Arne Hansen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Geir Magne Evensen",
-            "tippa_h": 2,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 0,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -18672,8 +18691,8 @@
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-06T02:45:45Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-06T03:15:50Z"
     }
   }
 }

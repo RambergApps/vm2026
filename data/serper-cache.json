@@ -6995,5 +6995,104 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Mexico_England_2026_07_05|2-3": {
+    "kamp_id": "Mexico_England_2026_07_05",
+    "resultat": "2-3",
+    "sist_sokt": "2026-07-06T03:15:50Z",
+    "antall_sok": 1,
+    "beste_score": 12,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 2,
+      "kamp_borte_score": 3,
+      "score": 10,
+      "hentet": "2026-07-06T03:15:50Z",
+      "goal_events": [
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "36",
+          "type": "goal"
+        },
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "38",
+          "type": "goal"
+        },
+        {
+          "spiller": "Quinones",
+          "lag": "Mexico",
+          "minutt": "42",
+          "type": "goal"
+        },
+        {
+          "spiller": "Kane",
+          "lag": "England",
+          "minutt": "60",
+          "type": "penalty"
+        },
+        {
+          "spiller": "Jimenez",
+          "lag": "Mexico",
+          "minutt": "69",
+          "type": "penalty"
+        }
+      ],
+      "scorere": [
+        "Bellingham",
+        "Quinones",
+        "Kane",
+        "Jimenez"
+      ],
+      "lead_scorer": "Bellingham",
+      "brace_scorer": "Bellingham",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "England overcame co-hosts Mexico in a thrilling, incident-packed last-16 tie to set up a FIFA World Cup 2026™ quarter-final showdown with Norway.",
+        "The Three Lions prevailed despite playing for most of the second half with ten men following Jarell Quansah’s 54th-minute red card. Backed by a feverish home crowd, co-hosts Mexico fought tirelessly in their bid to reach first quarter-final in 40 years, but England held on to keep their title dreams alive.",
+        "Mexico dominated possession in the game’s opening stages, but a quick-fire Bellingham double swung the game in England’s favour.",
+        "First, he headed in from Bukayo Saka’s inviting cross to open the scoring. Almost straight from kick-off, Bellingham made it 2-0. Mexico turned over possession and Harry Kane set up the Real Madrid superstar to slot home.",
+        "Mexico City Stadium was shellshocked, but El Tri quickly responded, with Julian Quinones crashing an unstoppable shot past Jordan Pickford from close range. The co-hosts’ tails were up and only a spectacular Pickford save prevented Raul Jimenez from levelling before half-time."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_assist": "Bukayo Saka’s inviting",
+      "first_goal_past_keeper": true,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
