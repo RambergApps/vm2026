@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-06T01:01:27Z",
+  "sist_oppdatert": "2026-07-06T01:45:42Z",
   "antall_kamper": 92,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18572,12 +18572,12 @@
       "hjemmelag": "Mexico",
       "bortelag": "England",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "r16",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Mexico and England are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "England lead Mexico 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -18673,7 +18673,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-06T01:01:27Z"
+      "oppdatert": "2026-07-06T01:45:41Z"
     }
   }
 }
