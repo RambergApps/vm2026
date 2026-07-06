@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-06T06:01:28Z",
+  "tidspunkt": "2026-07-06T06:15:42Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -798,6 +798,20 @@
       "fd_dato": "2026-07-09",
       "fd_utcDate": "2026-07-09T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "France_Morocco_2026_07_09"
+    },
+    "537385": {
+      "fd_match_id": 537385,
+      "fd_hjemmelag": "Norway",
+      "fd_bortelag": "England",
+      "hjemmelag_normalisert": "Norway",
+      "bortelag_normalisert": "England",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-11",
+      "fd_utcDate": "2026-07-11T21:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Norway_England_2026_07_11"
     },
     "537391": {
       "fd_match_id": 537391,
