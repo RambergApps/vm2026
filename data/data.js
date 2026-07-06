@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T19:01:27Z
+// Sist oppdatert: 2026-07-06T19:15:43Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T19:01:27Z",
+  "sist_oppdatert": "2026-07-06T19:15:43Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1830,11 +1830,6 @@ const VM_DATA = {
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
       "kilde_score": "fifa_calendar",
-      "dato_fd_org": "2026-07-06",
-      "fd_match_id": 537379,
-      "fd_utcDate": "2026-07-06T19:00:00Z",
-      "fd_hjemmelag": "Portugal",
-      "fd_bortelag": "Spain",
       "fifa_event_id": "400021529",
       "fifa_match_no": 93,
       "fifa_utcDate": "2026-07-06T19:00:00Z",
@@ -2139,7 +2134,7 @@ const VM_DATA = {
       "spiller": "Mikel Oyarzabal",
       "maal": 4,
       "assists": 1,
-      "minutter": 333
+      "minutter": 340
     },
     {
       "rank": 7,
@@ -2227,17 +2222,17 @@ const VM_DATA = {
     },
     {
       "rank": 19,
-      "spiller": "Cristiano Ronaldo",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 385
-    },
-    {
-      "rank": 20,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
+    },
+    {
+      "rank": 20,
+      "spiller": "Cristiano Ronaldo",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 393
     },
     {
       "rank": 21,
@@ -2460,7 +2455,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T19:01:27Z"
+    "sist_beregnet": "2026-07-06T19:15:43Z"
   },
   "stilling": [
     {

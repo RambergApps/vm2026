@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-06T19:01:28Z",
+  "sist_oppdatert": "2026-07-06T19:15:44Z",
   "antall_kamper": 93,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18697,8 +18697,8 @@
     "Portugal_Spain_2026_07_06": {
       "kamp_id": "Portugal_Spain_2026_07_06",
       "canonical_kamp_id": "Portugal_Spain_2026_07_06",
-      "fd_match_id": 537379,
-      "fd_utcDate": "2026-07-06T19:00:00Z",
+      "fd_match_id": null,
+      "fd_utcDate": "",
       "hjemmelag": "Portugal",
       "bortelag": "Spain",
       "hjemme_score": 0,
@@ -18803,7 +18803,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-06T19:01:27Z"
+      "oppdatert": "2026-07-06T19:15:44Z"
     }
   }
 }
