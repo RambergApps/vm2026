@@ -7094,5 +7094,74 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Portugal_Spain_2026_07_06|0-1": {
+    "kamp_id": "Portugal_Spain_2026_07_06",
+    "resultat": "0-1",
+    "sist_sokt": "2026-07-06T21:15:55Z",
+    "antall_sok": 1,
+    "beste_score": 8,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-06T21:15:55Z",
+      "goal_events": [
+        {
+          "spiller": "Merino",
+          "lag": "Spain",
+          "minutt": "90+1",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Merino"
+      ],
+      "lead_scorer": "Merino",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights",
+        "Spain edged Portugal in the Round of 16 of the FIFA World Cup 2026, Mikel Merino grabbing the only goal late on.",
+        "Spain became the first team ever to register six successive clean sheets in the World Cup."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": true,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 8,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-spain-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

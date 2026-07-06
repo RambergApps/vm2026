@@ -338,6 +338,7 @@
         "slot_borte": "W84",
         "utcDate": "2026-07-06T19:00:00Z",
         "fd_match_id": 537379,
+        "avanserer": "Spain",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -406,11 +407,11 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "W93_W94_2026_07_10",
-        "hjemme": "W93",
+        "id": "Spain_W94_2026_07_10",
+        "hjemme": "Spain",
         "borte": "W94",
         "dato": "2026-07-10",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 98,
         "slot_hjemme": "W93",
         "slot_borte": "W94",
