@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-07-06T00:01:25Z",
+  "sist_oppdatert": "2026-07-06T00:15:42Z",
   "sist_oppdatert_grupper": "2026-07-05T22:45:39Z",
-  "sist_oppdatert_utslag": "2026-07-06T00:01:25Z",
+  "sist_oppdatert_utslag": "2026-07-06T00:15:42Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -1164,7 +1164,7 @@
       "match_no": 92,
       "fifa_event_id": "400021531",
       "runde": "r16",
-      "utcDate": "2026-07-06T00:00:00Z",
+      "utcDate": "2026-07-06T01:00:00Z",
       "dato": "2026-07-06",
       "hjemme": "Mexico",
       "borte": "England",
