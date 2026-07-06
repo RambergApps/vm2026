@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-06T21:15:45Z
+// Sist oppdatert: 2026-07-06T21:31:22Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-06T21:15:45Z",
+  "sist_oppdatert": "2026-07-06T21:31:22Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2133,17 +2133,17 @@ const VM_DATA = {
     },
     {
       "rank": 6,
-      "spiller": "Mikel Oyarzabal",
-      "maal": 4,
-      "assists": 1,
-      "minutter": 384
-    },
-    {
-      "rank": 7,
       "spiller": "Ismaila Sarr",
       "maal": 4,
       "assists": 1,
       "minutter": 419
+    },
+    {
+      "rank": 7,
+      "spiller": "Mikel Oyarzabal",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 435
     },
     {
       "rank": 8,
@@ -2245,17 +2245,17 @@ const VM_DATA = {
     },
     {
       "rank": 22,
-      "spiller": "Cristiano Ronaldo",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 436
-    },
-    {
-      "rank": 23,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 475
+    },
+    {
+      "rank": 23,
+      "spiller": "Cristiano Ronaldo",
+      "maal": 3,
+      "assists": 0,
+      "minutter": 490
     },
     {
       "rank": 24,
@@ -2457,7 +2457,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-06T21:15:45Z"
+    "sist_beregnet": "2026-07-06T21:31:22Z"
   },
   "stilling": [
     {
