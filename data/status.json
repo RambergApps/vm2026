@@ -316,8 +316,8 @@
         "slot_hjemme": "W79",
         "slot_borte": "W80",
         "utcDate": "2026-07-06T01:00:00Z",
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Portugal_Spain_2026_07_06",
@@ -372,8 +372,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 5,
-    "neste_frist": "2026-07-06T01:00:00Z"
+    "antall_tippebare": 4,
+    "neste_frist": "2026-07-06T19:00:00Z"
   },
   "qf": {
     "aapen": false,
