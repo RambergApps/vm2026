@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "deltaker_id": "arne_kristian_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-06T18:02:00.454Z",
+    "navn": "Arne Kristian Johansen",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-06T18:02:13Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Spain",
+      "hjemme": 1,
+      "hjemmelag": "Portugal",
+      "kamp_id": "Portugal_Spain_2026_07_06",
+      "match_no": 93
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "USA",
+      "kamp_id": "USA_Belgium_2026_07_06",
+      "match_no": 94
+    },
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 0,
+      "bortelag": "Colombia",
+      "hjemme": 0,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
