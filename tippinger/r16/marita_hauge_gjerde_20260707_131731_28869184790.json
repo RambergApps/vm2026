@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "deltaker_id": "marita_hauge_gjerde",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-07T13:17:19.890Z",
+    "navn": "Marita Hauge Gjerde",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-07T13:17:31Z"
+  },
+  "tippinger": [
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 3,
+      "bortelag": "Colombia",
+      "hjemme": 0,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
