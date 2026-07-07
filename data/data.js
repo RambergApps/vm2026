@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T10:49:46Z
+// Sist oppdatert: 2026-07-07T11:01:38Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T10:49:46Z",
+  "sist_oppdatert": "2026-07-07T11:01:38Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1915,11 +1915,11 @@ const VM_DATA = {
       "fd_bortelag": "Morocco",
       "match_no": 97
     },
-    "W93_W94_2026_07_10": {
-      "kamp_id": "W93_W94_2026_07_10",
-      "canonical_kamp_id": "W93_W94_2026_07_10",
-      "hjemmelag": "W93",
-      "bortelag": "W94",
+    "Spain_Belgium_2026_07_10": {
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "canonical_kamp_id": "Spain_Belgium_2026_07_10",
+      "hjemmelag": "Spain",
+      "bortelag": "Belgium",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1927,6 +1927,11 @@ const VM_DATA = {
       "runde": "qf",
       "dato_openfootball": "2026-07-10",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-10",
+      "fd_match_id": 537384,
+      "fd_utcDate": "2026-07-10T19:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Belgium",
       "match_no": 98
     },
     "Norway_England_2026_07_11": {
@@ -2458,7 +2463,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T10:49:46Z"
+    "sist_beregnet": "2026-07-07T11:01:38Z"
   },
   "stilling": [
     {

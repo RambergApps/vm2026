@@ -412,11 +412,12 @@
         "hjemme": "Spain",
         "borte": "Belgium",
         "dato": "2026-07-10",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 98,
         "slot_hjemme": "W93",
         "slot_borte": "W94",
         "utcDate": "2026-07-10T19:00:00Z",
+        "fd_match_id": 537384,
         "tippebar": true,
         "tippe_status": "aapen"
       },
