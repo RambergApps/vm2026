@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-07T22:45:45Z",
+  "sist_oppdatert": "2026-07-07T23:01:37Z",
   "antall_kamper": 96,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18929,15 +18929,15 @@
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 0,
             "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -18949,7 +18949,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-07T22:31:24Z"
+      "oppdatert": "2026-07-07T23:01:32Z"
     },
     "Argentina_Egypt_2026_07_07": {
       "kamp_id": "Argentina_Egypt_2026_07_07",
@@ -19014,13 +19014,13 @@
             "poeng": 4
           },
           {
-            "navn": "Olympus fc",
+            "navn": "Arne Kristian Johansen",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 4
           },
           {
-            "navn": "Arne Kristian Johansen",
+            "navn": "Olympus fc",
             "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 4
@@ -19050,14 +19050,14 @@
             "poeng": 4
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 2,
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 3,
             "tippa_b": 0,
             "poeng": 4
           },
           {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 3,
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
             "tippa_b": 0,
             "poeng": 4
           }
@@ -19084,7 +19084,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-07T22:31:24Z"
+      "oppdatert": "2026-07-07T23:01:32Z"
     },
     "Switzerland_Colombia_2026_07_07": {
       "kamp_id": "Switzerland_Colombia_2026_07_07",
@@ -19097,35 +19097,77 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "PAUSED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Switzerland and Colombia drew 0-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "Switzerland and Colombia drew 0-0.\nRuben Vargas scored the winning penalty as Switzerland set up a quarter-final with Lionel Messi and Co.\n\nSwitzerland will take on Argentina in the FIFA World Cup 2026™ last eight after edging Colombia on penalties following a gritty goalless draw in Vancouver.\n## Switzerland 0-0 (4-3 PSO) Colombia Switzerland 0-0 (4-3 PSO) Colombia",
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 6,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 2,
-        "fallback": true,
+        "antall_sok": 3,
+        "fallback": false,
         "cache_key": "Switzerland_Colombia_2026_07_07|0-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 6,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 2,
+        "retry_antall": 3,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-colombia-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
+        "eksakt": [
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 0,
+            "tippa_b": 0,
+            "poeng": 8
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 4
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 3,
+            "tippa_b": 3,
+            "poeng": 4
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 4
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 4
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 4
+          }
+        ],
         "bom": [
           {
             "navn": "Pål André Nilsen",
@@ -19158,38 +19200,8 @@
             "poeng": 0
           },
           {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 0,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Bjørnar Tallaksrud",
             "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 3,
-            "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -19200,27 +19212,15 @@
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 0,
             "tippa_b": 3,
-            "poeng": 0
-          },
-          {
-            "navn": "sergio gomes",
-            "tippa_h": 1,
-            "tippa_b": 1,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-07T22:45:44Z"
+      "oppdatert": "2026-07-07T23:01:37Z"
     }
   }
 }
