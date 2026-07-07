@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "deltaker_id": "olympus_fc",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-07T10:49:16.801Z",
+    "navn": "Olympus fc",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-07T10:49:26Z"
+  },
+  "tippinger": [
+    {
+      "borte": 0,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 2,
+      "bortelag": "Colombia",
+      "hjemme": 1,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
