@@ -7262,5 +7262,103 @@
       "direct_fifa_probe": true,
       "_forsok_url": 3
     }
+  },
+  "Argentina_Egypt_2026_07_07|3-2": {
+    "kamp_id": "Argentina_Egypt_2026_07_07",
+    "resultat": "3-2",
+    "sist_sokt": "2026-07-07T18:15:52Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-egypt-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 3,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-07-07T18:15:52Z",
+      "goal_events": [
+        {
+          "spiller": "Ibrahim",
+          "lag": "Egypt",
+          "minutt": "15",
+          "type": "goal"
+        },
+        {
+          "spiller": "Zizo",
+          "lag": "Egypt",
+          "minutt": "67",
+          "type": "goal"
+        },
+        {
+          "spiller": "Romero",
+          "lag": "Argentina",
+          "minutt": "79",
+          "type": "goal"
+        },
+        {
+          "spiller": "Messi",
+          "lag": "Argentina",
+          "minutt": "84",
+          "type": "goal"
+        },
+        {
+          "spiller": "Fernandez",
+          "lag": "Argentina",
+          "minutt": "90+2",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Ibrahim",
+        "Zizo",
+        "Romero",
+        "Messi",
+        "Fernandez"
+      ],
+      "lead_scorer": "Ibrahim",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-egypt-match-report-highlights",
+        "Yasser Ibrahim and Mostafa Zico got the goals as Egypt beat Argentina in the Round of 32 of the FIFA World Cup 2026.",
+        "Argentina produced a comeback for the ages to edge Egypt in the Round of 16 at the FIFA World Cup 2026™. Yasser Ibrahim and Mostafa Zico had Hossam Hassan’s Pharaohs on the cusp of one of the competition’s greatest upsets at Atlanta Stadium, but late goals form Christian Romero, Lionel Messi and Enzo Fernandez transformed the outcome. Argentina will now await the Switzerland-Colombia winners in the quarter-finals. Yasser Ibrahim headed Egypt into a shock lead, before Mostafa Shoubir protected it magnificently. The goalkeeper dived south-west to save a Messi penalty, which Nicolas Tagliafico had craftily earned, and made superb stops from Alexis Mac Allister and Julian Alvarez. Egypt thought they had made it two just before the hour. Haissem Hassan made an imperial dash down the right and fed Salah, who enabled Zizo to ripple the net. The goal was, however, ruled out for a foul in the build-up. It merely delayed the Al Ahly man doubling the lead, though, as he finished off a rapid counter-attack involving Salah and Hassan. It left Egypt on the cusp of victory, but after Christian Romero pulled one back, Messi’s brilliant finish equalised and Fernandez completed an epic survival story.",
+        "* Mostafa Shoubir, who repelled a spot-kick from IR Iran’s Mehdi Taremi in the group stage, became only the fourth goalkeeper to save two penalties in games in one World Cup. The 26-year-old emulated Pole Jan Tomaszewski, American Brad Friedel and another Pole in Wojciech Szczesny."
+      ],
+      "key_stat": "",
+      "player_of_match": "Lionel Messi (Argentina)",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": true,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-egypt-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

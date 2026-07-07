@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-06",
   "dato_norsk": "Mandag 6. juli 2026",
-  "generert": "2026-07-06T22:00:02Z",
+  "generert": "2026-07-07T18:15:52Z",
   "antall_kamper": 2,
   "kamper": [
     {
@@ -256,55 +256,55 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 188,
+      "poeng_totalt": 192,
       "poeng_i_dag": 4
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 187,
+      "poeng_totalt": 191,
       "poeng_i_dag": 8
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 3,
-      "poeng_totalt": 173,
+      "poeng_totalt": 177,
       "poeng_i_dag": 8
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 164,
+      "poeng_totalt": 168,
       "poeng_i_dag": 4
     },
     {
       "navn": "Olympus fc",
       "plass": 5,
-      "poeng_totalt": 159,
+      "poeng_totalt": 163,
       "poeng_i_dag": 0
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 155,
+      "poeng_totalt": 159,
       "poeng_i_dag": 4
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 7,
-      "poeng_totalt": 152,
+      "poeng_totalt": 156,
       "poeng_i_dag": 0
     },
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 8,
-      "poeng_totalt": 149,
+      "poeng_totalt": 153,
       "poeng_i_dag": 8
     },
     {
       "navn": "Diyan K.",
       "plass": 9,
-      "poeng_totalt": 144,
+      "poeng_totalt": 148,
       "poeng_i_dag": 8
     },
     {
@@ -316,7 +316,7 @@
     {
       "navn": "Ken Arne Hansen",
       "plass": 11,
-      "poeng_totalt": 137,
+      "poeng_totalt": 141,
       "poeng_i_dag": 4
     },
     {
@@ -334,17 +334,17 @@
     {
       "navn": "Anders Sundero",
       "plass": 14,
-      "poeng_totalt": 121,
+      "poeng_totalt": 125,
       "poeng_i_dag": 4
     },
     {
-      "navn": "Alex Myrvokd",
+      "navn": "Marita Hauge Gjerde",
       "plass": 15,
-      "poeng_totalt": 119,
+      "poeng_totalt": 123,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Alex Myrvokd",
       "plass": 16,
       "poeng_totalt": 119,
       "poeng_i_dag": 0

@@ -368,6 +368,7 @@
         "slot_borte": "W88",
         "utcDate": "2026-07-07T16:00:00Z",
         "fd_match_id": 537381,
+        "avanserer": "Argentina",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -436,11 +437,11 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "W95_W96_2026_07_11",
-        "hjemme": "W95",
+        "id": "Argentina_W96_2026_07_11",
+        "hjemme": "Argentina",
         "borte": "W96",
         "dato": "2026-07-11",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 100,
         "slot_hjemme": "W95",
         "slot_borte": "W96",
