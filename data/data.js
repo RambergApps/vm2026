@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T15:45:43Z
+// Sist oppdatert: 2026-07-07T16:01:26Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T15:45:43Z",
+  "sist_oppdatert": "2026-07-07T16:01:26Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2463,7 +2463,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T15:45:43Z"
+    "sist_beregnet": "2026-07-07T16:01:26Z"
   },
   "stilling": [
     {
@@ -3561,6 +3561,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -5023,6 +5036,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -6483,6 +6509,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -7870,6 +7909,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -9265,6 +9317,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
           "hjemmelag": "Argentina",
           "bortelag": "Cape Verde",
@@ -10629,6 +10694,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -12091,6 +12169,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -13497,6 +13588,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -14959,6 +15063,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -16379,6 +16496,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -17841,6 +17971,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -19078,6 +19221,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -21809,6 +21965,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",
@@ -24566,6 +24735,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "Brazil_Norway_2026_07_05",
           "hjemmelag": "Brazil",
           "bortelag": "Norway",
@@ -26024,6 +26206,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Argentina_Egypt_2026_07_07",
+          "hjemmelag": "Argentina",
+          "bortelag": "Egypt",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "r16"
         },
         {
           "kamp_id": "Brazil_Norway_2026_07_05",

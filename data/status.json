@@ -368,8 +368,8 @@
         "slot_borte": "W88",
         "utcDate": "2026-07-07T16:00:00Z",
         "fd_match_id": 537381,
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Switzerland_Colombia_2026_07_07",
@@ -386,8 +386,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 2,
-    "neste_frist": "2026-07-07T16:00:00Z"
+    "antall_tippebare": 1,
+    "neste_frist": "2026-07-07T20:00:00Z"
   },
   "qf": {
     "aapen": true,
