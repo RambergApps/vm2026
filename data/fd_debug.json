@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-07T22:15:42Z",
+  "tidspunkt": "2026-07-07T22:31:23Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -777,10 +777,10 @@
       "fd_bortelag": "Colombia",
       "hjemmelag_normalisert": "Switzerland",
       "bortelag_normalisert": "Colombia",
-      "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 0,
-      "borte": 0,
+      "status": "IN_PLAY",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
       "fd_dato": "2026-07-07",
       "fd_utcDate": "2026-07-07T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Switzerland_Colombia_2026_07_07"
