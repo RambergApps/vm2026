@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-07T16:15:57Z",
+  "sist_oppdatert": "2026-07-07T16:31:20Z",
   "antall_kamper": 95,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18959,12 +18959,12 @@
       "hjemmelag": "Argentina",
       "bortelag": "Egypt",
       "hjemme_score": 0,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "r16",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Argentina and Egypt are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Egypt lead Argentina 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -19066,7 +19066,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-07T16:15:57Z"
+      "oppdatert": "2026-07-07T16:31:20Z"
     }
   }
 }
