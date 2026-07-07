@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-07T16:01:25Z",
+  "tidspunkt": "2026-07-07T16:15:43Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -756,20 +756,6 @@
       "fd_dato": "2026-07-07",
       "fd_utcDate": "2026-07-07T00:00:00Z",
       "fd_kamp_id_basert_paa_dato": "USA_Belgium_2026_07_07"
-    },
-    "537381": {
-      "fd_match_id": 537381,
-      "fd_hjemmelag": "Argentina",
-      "fd_bortelag": "Egypt",
-      "hjemmelag_normalisert": "Argentina",
-      "bortelag_normalisert": "Egypt",
-      "status": "TIMED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
-      "fd_dato": "2026-07-07",
-      "fd_utcDate": "2026-07-07T16:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Argentina_Egypt_2026_07_07"
     },
     "537382": {
       "fd_match_id": 537382,

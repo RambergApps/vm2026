@@ -1,6 +1,6 @@
 {
-  "sist_oppdatert": "2026-07-07T02:15:57Z",
-  "antall_kamper": 94,
+  "sist_oppdatert": "2026-07-07T16:15:57Z",
+  "antall_kamper": 95,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
       "kamp_id": "Belgium_Iran_2026_06_21",
@@ -18950,6 +18950,123 @@
       },
       "kilde": "fifa.com",
       "oppdatert": "2026-07-07T02:15:57Z"
+    },
+    "Argentina_Egypt_2026_07_07": {
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "canonical_kamp_id": "Argentina_Egypt_2026_07_07",
+      "fd_match_id": null,
+      "fd_utcDate": "",
+      "hjemmelag": "Argentina",
+      "bortelag": "Egypt",
+      "hjemme_score": 0,
+      "borte_score": 0,
+      "gruppe": "",
+      "runde": "r16",
+      "kampstatus": "IN_PLAY",
+      "referatstatus": "midlertidig",
+      "recap_tekst": "Argentina and Egypt are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_kvalitet": {
+        "status": "live",
+        "grunnlag": "bekreftet_score_og_status"
+      },
+      "tippinger": {
+        "eksakt": [],
+        "riktig": [],
+        "bom": [
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Geir Magne Evensen",
+            "tippa_h": 2,
+            "tippa_b": 2,
+            "poeng": 0
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 3,
+            "tippa_b": 0,
+            "poeng": 0
+          },
+          {
+            "navn": "sergio gomes",
+            "tippa_h": 1,
+            "tippa_b": 1,
+            "poeng": 0
+          }
+        ]
+      },
+      "kilde": "football-data.org / data.js",
+      "oppdatert": "2026-07-07T16:15:57Z"
     }
   }
 }
