@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "deltaker_id": "kjetil_bjerke",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-07T09:58:38.824Z",
+    "navn": "Kjetil bjerke",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-07T09:58:48Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Morocco_2026_07_09",
+      "match_no": 97
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 1,
+      "bortelag": "England",
+      "hjemme": 2,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    }
+  ]
+}
