@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T19:45:46Z
+// Sist oppdatert: 2026-07-07T20:01:26Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T19:45:46Z",
+  "sist_oppdatert": "2026-07-07T20:01:26Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1883,18 +1883,22 @@ const VM_DATA = {
       "canonical_kamp_id": "Switzerland_Colombia_2026_07_07",
       "hjemmelag": "Switzerland",
       "bortelag": "Colombia",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "r16",
       "dato_openfootball": "2026-07-07",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-07",
       "fd_match_id": 537382,
       "fd_utcDate": "2026-07-07T20:00:00Z",
       "fd_hjemmelag": "Switzerland",
       "fd_bortelag": "Colombia",
+      "fifa_event_id": "400021535",
+      "fifa_match_no": 96,
+      "fifa_utcDate": "2026-07-07T20:00:00Z",
+      "fifa_dato": "2026-07-07",
       "match_no": 96
     },
     "France_Morocco_2026_07_09": {
@@ -2464,7 +2468,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T19:45:46Z"
+    "sist_beregnet": "2026-07-07T20:01:26Z"
   },
   "stilling": [
     {
@@ -3645,6 +3649,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -5122,6 +5139,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 0,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -6596,6 +6626,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -7999,6 +8042,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -9333,6 +9389,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -10783,6 +10852,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 0,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -12246,6 +12328,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -13679,6 +13774,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -15125,6 +15233,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -16592,6 +16713,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 3,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -18038,6 +18172,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -19288,6 +19435,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -22064,6 +22224,19 @@ const VM_DATA = {
           "runde": "r16"
         },
         {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "r16"
+        },
+        {
           "kamp_id": "USA_Belgium_2026_07_06",
           "hjemmelag": "USA",
           "bortelag": "Belgium",
@@ -23535,6 +23708,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 0,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
@@ -26304,6 +26490,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "r16"
+        },
+        {
+          "kamp_id": "Switzerland_Colombia_2026_07_07",
+          "hjemmelag": "Switzerland",
+          "bortelag": "Colombia",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "r16"
         },
         {
