@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-07T16:31:20Z",
+  "sist_oppdatert": "2026-07-07T17:01:27Z",
   "antall_kamper": 95,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -18954,17 +18954,17 @@
     "Argentina_Egypt_2026_07_07": {
       "kamp_id": "Argentina_Egypt_2026_07_07",
       "canonical_kamp_id": "Argentina_Egypt_2026_07_07",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537381,
+      "fd_utcDate": "2026-07-07T16:00:00Z",
       "hjemmelag": "Argentina",
       "bortelag": "Egypt",
       "hjemme_score": 0,
       "borte_score": 1,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Egypt lead Argentina 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Egypt lead Argentina 1-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -19066,7 +19066,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-07T16:31:20Z"
+      "oppdatert": "2026-07-07T17:01:27Z"
     }
   }
 }
