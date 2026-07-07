@@ -353,6 +353,7 @@
         "slot_borte": "W82",
         "utcDate": "2026-07-07T00:00:00Z",
         "fd_match_id": 537380,
+        "avanserer": "Belgium",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -407,17 +408,17 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "Spain_W94_2026_07_10",
+        "id": "Spain_Belgium_2026_07_10",
         "hjemme": "Spain",
-        "borte": "W94",
+        "borte": "Belgium",
         "dato": "2026-07-10",
         "info": "Autofyll fra avansement",
         "match_no": 98,
         "slot_hjemme": "W93",
         "slot_borte": "W94",
         "utcDate": "2026-07-10T19:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "Norway_England_2026_07_11",
@@ -447,7 +448,7 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 2,
+    "antall_tippebare": 3,
     "neste_frist": "2026-07-09T20:00:00Z"
   },
   "sf": {

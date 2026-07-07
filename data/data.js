@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T02:01:23Z
+// Sist oppdatert: 2026-07-07T02:15:40Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T02:01:23Z",
+  "sist_oppdatert": "2026-07-07T02:15:40Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1844,9 +1844,9 @@ const VM_DATA = {
       "hjemmelag": "USA",
       "bortelag": "Belgium",
       "hjemme": 1,
-      "borte": 3,
-      "ferdig": false,
-      "status": "IN_PLAY",
+      "borte": 4,
+      "ferdig": true,
+      "status": "FINISHED",
       "runde": "r16",
       "dato_openfootball": "2026-07-06",
       "kilde_score": "football_data_org",
@@ -1855,6 +1855,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-07T00:00:00Z",
       "fd_hjemmelag": "United States",
       "fd_bortelag": "Belgium",
+      "avanserer": "Belgium",
       "match_no": 94
     },
     "Argentina_Egypt_2026_07_07": {
@@ -2022,20 +2023,20 @@ const VM_DATA = {
       "flest_maal_lag": {
         "status": "paagaar",
         "ledere": [
-          "England"
+          "Belgium"
         ],
-        "antall_maal": 5,
-        "ferdige_kamper": 21,
+        "antall_maal": 6,
+        "ferdige_kamper": 22,
         "totalt_kamper": 31,
         "fasit": null,
         "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
       },
       "totale_maal_utslag": {
         "status": "paagaar",
-        "antall": 51,
+        "antall": 56,
         "forelopig_kategori": "47_77",
         "forelopig_kategori_tekst": "47–77 mål",
-        "ferdige_kamper": 21,
+        "ferdige_kamper": 22,
         "totalt_kamper": 31,
         "fasit": null,
         "fasit_tekst": null,
@@ -2063,7 +2064,7 @@ const VM_DATA = {
       },
       "r16": {
         "status": "paagaar",
-        "ferdige_kamper": 5,
+        "ferdige_kamper": 6,
         "totalt_kamper": 8,
         "verdi": 3,
         "fasit": null,
@@ -2457,7 +2458,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T02:01:23Z"
+    "sist_beregnet": "2026-07-07T02:15:40Z"
   },
   "stilling": [
     {
@@ -3633,10 +3634,11 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -5092,10 +5094,11 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -6551,10 +6554,11 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -7939,10 +7943,11 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -10697,10 +10702,11 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -12142,10 +12148,11 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -13563,10 +13570,11 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -14994,10 +15002,11 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 2,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -16443,10 +16452,11 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -17874,10 +17884,11 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -19112,10 +19123,11 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -21870,10 +21882,11 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -24624,10 +24637,11 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 0,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {
@@ -26083,10 +26097,11 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 3,
+          "faktisk_b": 4,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "r16"
         },
         {

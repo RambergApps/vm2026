@@ -1,15 +1,4 @@
 {
-  "sist_sjekket": "2026-07-07T02:01:23Z",
-  "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "USA_Belgium_2026_07_06",
-      "hjemmelag": "USA",
-      "bortelag": "Belgium",
-      "dato": "2026-07-06",
-      "runde": "r16",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    }
-  ]
+  "sist_sjekket": "2026-07-07T02:15:40Z",
+  "kamper": []
 }
