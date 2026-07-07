@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-07T14:45:44Z",
+  "sist_oppdatert": "2026-07-07T15:01:31Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -78,6 +78,14 @@
       "navn": "Anders Sundero",
       "deltaker_type": "ordinaer",
       "runder": {
+        "qf": {
+          "kamper": [
+            "France_Morocco_2026_07_09",
+            "Norway_England_2026_07_11",
+            "Spain_Belgium_2026_07_10"
+          ],
+          "bonus": false
+        },
         "r16": {
           "kamper": [
             "Argentina_Egypt_2026_07_07",
