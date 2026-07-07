@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T23:01:31Z
+// Sist oppdatert: 2026-07-07T23:15:42Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T23:01:31Z",
+  "sist_oppdatert": "2026-07-07T23:15:42Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2315,38 +2315,38 @@ const VM_DATA = {
     },
     {
       "rank": 31,
-      "spiller": "Ruben Vargas",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 269
-    },
-    {
-      "rank": 32,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 33,
+      "rank": 32,
       "spiller": "Charles De Ketelaere",
       "maal": 2,
       "assists": 1,
       "minutter": 283
     },
     {
-      "rank": 34,
+      "rank": 33,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 288
     },
     {
-      "rank": 35,
+      "rank": 34,
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
       "minutter": 297
+    },
+    {
+      "rank": 35,
+      "spiller": "Ruben Vargas",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 304
     },
     {
       "rank": 36,
@@ -2451,7 +2451,7 @@ const VM_DATA = {
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
-      "minutter": 416
+      "minutter": 451
     }
   ],
   "startpoengstatus": {
@@ -2464,7 +2464,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T23:01:31Z"
+    "sist_beregnet": "2026-07-07T23:15:42Z"
   },
   "stilling": [
     {
