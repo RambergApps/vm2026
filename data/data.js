@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-07T17:31:27Z
+// Sist oppdatert: 2026-07-07T17:35:09Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-07T17:31:27Z",
+  "sist_oppdatert": "2026-07-07T17:35:09Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2111,17 +2111,17 @@ const VM_DATA = {
     },
     {
       "rank": 2,
-      "spiller": "Lionel Messi",
-      "maal": 7,
-      "assists": 0,
-      "minutter": 369
-    },
-    {
-      "rank": 3,
       "spiller": "Erling Haaland",
       "maal": 7,
       "assists": 0,
       "minutter": 416
+    },
+    {
+      "rank": 3,
+      "spiller": "Lionel Messi",
+      "maal": 7,
+      "assists": 0,
+      "minutter": 429
     },
     {
       "rank": 4,
@@ -2419,31 +2419,31 @@ const VM_DATA = {
     },
     {
       "rank": 46,
-      "spiller": "Emam Ashour",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 352
-    },
-    {
-      "rank": 47,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 359
     },
     {
-      "rank": 48,
+      "rank": 47,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 371
     },
     {
-      "rank": 49,
+      "rank": 48,
       "spiller": "Azzedine Ounahi",
       "maal": 2,
       "assists": 0,
       "minutter": 376
+    },
+    {
+      "rank": 49,
+      "spiller": "Emam Ashour",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 395
     },
     {
       "rank": 50,
@@ -2463,7 +2463,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-07T17:31:27Z"
+    "sist_beregnet": "2026-07-07T17:35:09Z"
   },
   "stilling": [
     {
