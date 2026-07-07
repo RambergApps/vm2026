@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-07T17:45:40Z",
+  "tidspunkt": "2026-07-07T18:01:30Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -765,7 +765,7 @@
       "bortelag_normalisert": "Egypt",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 3,
       "borte": 2,
       "fd_dato": "2026-07-07",
       "fd_utcDate": "2026-07-07T16:00:00Z",
