@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "deltaker_id": "sondre_garstad",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-07T06:27:57.472Z",
+    "navn": "Sondre Garstad",
+    "runde": "r16",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-07T06:28:07Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Egypt",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Egypt_2026_07_07",
+      "match_no": 95
+    },
+    {
+      "borte": 3,
+      "bortelag": "Colombia",
+      "hjemme": 3,
+      "hjemmelag": "Switzerland",
+      "kamp_id": "Switzerland_Colombia_2026_07_07",
+      "match_no": 96
+    }
+  ]
+}
