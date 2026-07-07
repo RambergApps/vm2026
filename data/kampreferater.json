@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-07T22:31:24Z",
+  "sist_oppdatert": "2026-07-07T22:45:45Z",
   "antall_kamper": 96,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19097,7 +19097,7 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "r16",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "forelopig",
       "recap_tekst": "Switzerland and Colombia drew 0-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
@@ -19220,7 +19220,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-07T22:31:24Z"
+      "oppdatert": "2026-07-07T22:45:44Z"
     }
   }
 }
