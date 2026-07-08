@@ -1,0 +1,49 @@
+{
+  "bonus": {
+    "id": "antall_ettmaalsseier",
+    "svar": 2
+  },
+  "meta": {
+    "deltaker_id": "kjetil_bjerke",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-08T06:27:40.248Z",
+    "navn": "Kjetil bjerke",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-08T06:27:52Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Morocco_2026_07_09",
+      "match_no": 97
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 1,
+      "bortelag": "England",
+      "hjemme": 2,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    },
+    {
+      "borte": 1,
+      "bortelag": "Switzerland",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "match_no": 100
+    }
+  ]
+}
