@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-08T10:45:41Z
+// Sist oppdatert: 2026-07-08T11:01:27Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-08T10:45:41Z",
+  "sist_oppdatert": "2026-07-08T11:01:27Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1936,6 +1936,25 @@ const VM_DATA = {
       "fd_bortelag": "Belgium",
       "match_no": 98
     },
+    "Argentina_Switzerland_2026_07_11": {
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "canonical_kamp_id": "Argentina_Switzerland_2026_07_11",
+      "hjemmelag": "Argentina",
+      "bortelag": "Switzerland",
+      "hjemme": null,
+      "borte": null,
+      "ferdig": false,
+      "status": "TIMED",
+      "runde": "qf",
+      "dato_openfootball": "2026-07-11",
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-12",
+      "fd_match_id": 537386,
+      "fd_utcDate": "2026-07-12T01:00:00Z",
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Switzerland",
+      "match_no": 100
+    },
     "Norway_England_2026_07_11": {
       "kamp_id": "Norway_England_2026_07_11",
       "canonical_kamp_id": "Norway_England_2026_07_11",
@@ -1954,20 +1973,6 @@ const VM_DATA = {
       "fd_hjemmelag": "Norway",
       "fd_bortelag": "England",
       "match_no": 99
-    },
-    "W95_W96_2026_07_11": {
-      "kamp_id": "W95_W96_2026_07_11",
-      "canonical_kamp_id": "W95_W96_2026_07_11",
-      "hjemmelag": "W95",
-      "bortelag": "W96",
-      "hjemme": null,
-      "borte": null,
-      "ferdig": false,
-      "status": "TIMED",
-      "runde": "qf",
-      "dato_openfootball": "2026-07-11",
-      "kilde_score": "openfootball",
-      "match_no": 100
     },
     "W97_W98_2026_07_14": {
       "kamp_id": "W97_W98_2026_07_14",
@@ -2465,7 +2470,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-08T10:45:41Z"
+    "sist_beregnet": "2026-07-08T11:01:27Z"
   },
   "stilling": [
     {

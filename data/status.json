@@ -441,12 +441,13 @@
         "id": "Argentina_Switzerland_2026_07_11",
         "hjemme": "Argentina",
         "borte": "Switzerland",
-        "dato": "2026-07-11",
-        "info": "Autofyll fra avansement",
+        "dato": "2026-07-12",
+        "info": "Kampoppsett bekreftet",
         "match_no": 100,
         "slot_hjemme": "W95",
         "slot_borte": "W96",
         "utcDate": "2026-07-12T01:00:00Z",
+        "fd_match_id": 537386,
         "tippebar": true,
         "tippe_status": "aapen"
       }
