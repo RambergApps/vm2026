@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-08T18:15:41Z",
+  "sist_oppdatert": "2026-07-08T18:31:19Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -137,10 +137,13 @@
       "runder": {
         "qf": {
           "kamper": [
+            "Argentina_Switzerland_2026_07_11",
             "France_Morocco_2026_07_09",
-            "Norway_England_2026_07_11"
+            "Norway_England_2026_07_11",
+            "Spain_Belgium_2026_07_10"
           ],
-          "bonus": false
+          "bonus": true,
+          "bonus_id": "antall_ettmaalsseier"
         },
         "r16": {
           "kamper": [
