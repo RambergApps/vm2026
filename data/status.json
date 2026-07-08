@@ -383,6 +383,7 @@
         "slot_borte": "W87",
         "utcDate": "2026-07-07T20:00:00Z",
         "fd_match_id": 537382,
+        "avanserer": "Switzerland",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -437,20 +438,20 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "Argentina_W96_2026_07_11",
+        "id": "Argentina_Switzerland_2026_07_11",
         "hjemme": "Argentina",
-        "borte": "W96",
+        "borte": "Switzerland",
         "dato": "2026-07-11",
         "info": "Autofyll fra avansement",
         "match_no": 100,
         "slot_hjemme": "W95",
         "slot_borte": "W96",
         "utcDate": "2026-07-12T01:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 3,
+    "antall_tippebare": 4,
     "neste_frist": "2026-07-09T20:00:00Z"
   },
   "sf": {

@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-08T06:11:02Z",
+  "tidspunkt": "2026-07-08T06:15:42Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -826,6 +826,20 @@
       "fd_dato": "2026-07-11",
       "fd_utcDate": "2026-07-11T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Norway_England_2026_07_11"
+    },
+    "537386": {
+      "fd_match_id": 537386,
+      "fd_hjemmelag": "Argentina",
+      "fd_bortelag": "Switzerland",
+      "hjemmelag_normalisert": "Argentina",
+      "bortelag_normalisert": "Switzerland",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-12",
+      "fd_utcDate": "2026-07-12T01:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Argentina_Switzerland_2026_07_12"
     },
     "537391": {
       "fd_match_id": 537391,
