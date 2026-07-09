@@ -406,6 +406,7 @@
         "slot_borte": "W90",
         "utcDate": "2026-07-09T20:00:00Z",
         "fd_match_id": 537383,
+        "avanserer": "France",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -460,11 +461,11 @@
     "frist": "2026-07-14T19:00:00Z",
     "kamper": [
       {
-        "id": "W97_W98_2026_07_14",
-        "hjemme": "W97",
+        "id": "France_W98_2026_07_14",
+        "hjemme": "France",
         "borte": "W98",
         "dato": "2026-07-14",
-        "info": "",
+        "info": "Autofyll fra avansement",
         "match_no": 101,
         "slot_hjemme": "W97",
         "slot_borte": "W98",

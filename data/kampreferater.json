@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-09T21:45:40Z",
+  "sist_oppdatert": "2026-07-09T22:16:59Z",
   "antall_kamper": 97,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19233,57 +19233,90 @@
       "borte_score": 0,
       "gruppe": "",
       "runde": "qf",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "France lead Morocco 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "France beat Morocco 2-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 6,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "France_Morocco_2026_07_09|2-0",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 6,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-morocco-match-report-highlights",
+        "mangler": [
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 2,
             "tippa_b": 0,
-            "poeng": 0
-          },
+            "poeng": 9
+          }
+        ],
+        "riktig": [
           {
             "navn": "Alexander",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 5
           },
           {
             "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 1,
             "tippa_b": 0,
-            "poeng": 0
+            "poeng": 5
           },
           {
             "navn": "Kjetil bjerke",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
+            "poeng": 5
           },
           {
             "navn": "Olympus fc",
             "tippa_h": 2,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 5
           },
           {
             "navn": "Sebastian Luranc",
             "tippa_h": 2,
             "tippa_b": 1,
+            "poeng": 5
+          },
+          {
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 5
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 5
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 0
           },
           {
@@ -19297,23 +19330,11 @@
             "tippa_h": 2,
             "tippa_b": 2,
             "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 3,
-            "tippa_b": 1,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-09T21:45:40Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-09T22:16:59Z"
     }
   }
 }
