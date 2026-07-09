@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "deltaker_id": "diyan_k",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-09T16:36:17.831Z",
+    "navn": "Diyan K.",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-09T16:36:29Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Morocco_2026_07_09",
+      "match_no": 97
+    },
+    {
+      "borte": 2,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 2,
+      "bortelag": "England",
+      "hjemme": 1,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    },
+    {
+      "borte": 1,
+      "bortelag": "Switzerland",
+      "hjemme": 3,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "match_no": 100
+    }
+  ]
+}
