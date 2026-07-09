@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-09T19:45:42Z
+// Sist oppdatert: 2026-07-09T20:01:32Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-09T19:45:42Z",
+  "sist_oppdatert": "2026-07-09T20:01:32Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1903,18 +1903,22 @@ const VM_DATA = {
       "canonical_kamp_id": "France_Morocco_2026_07_09",
       "hjemmelag": "France",
       "bortelag": "Morocco",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "qf",
       "dato_openfootball": "2026-07-09",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-09",
       "fd_match_id": 537383,
       "fd_utcDate": "2026-07-09T20:00:00Z",
       "fd_hjemmelag": "France",
       "fd_bortelag": "Morocco",
+      "fifa_event_id": "400021536",
+      "fifa_match_no": 97,
+      "fifa_utcDate": "2026-07-09T20:00:00Z",
+      "fifa_dato": "2026-07-09",
       "match_no": 97
     },
     "Spain_Belgium_2026_07_10": {
@@ -2083,7 +2087,7 @@ const VM_DATA = {
         "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid"
       },
       "qf": {
-        "status": "ikke_startet",
+        "status": "paagaar",
         "ferdige_kamper": 0,
         "totalt_kamper": 4,
         "verdi": 0,
@@ -2470,7 +2474,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-09T19:45:42Z"
+    "sist_beregnet": "2026-07-09T20:01:32Z"
   },
   "stilling": [
     {
@@ -3570,6 +3574,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -3924,6 +3941,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -5058,6 +5085,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -5412,6 +5452,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -6546,6 +6596,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -6862,6 +6925,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 3,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 3
@@ -7963,6 +8036,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -8283,6 +8369,16 @@ const VM_DATA = {
           "eksakt": true,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 4
@@ -9384,6 +9480,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -9738,6 +9847,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -10872,6 +10991,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -11132,6 +11264,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 1,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -12266,6 +12408,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -12568,6 +12723,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 1,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -15190,6 +15355,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -15506,6 +15684,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 0,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -16640,6 +16828,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -16994,6 +17195,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 1,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -18128,6 +18339,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -18294,6 +18518,16 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 1,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 11
@@ -23642,6 +23876,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "France_Morocco_2026_07_09",
+          "hjemmelag": "France",
+          "bortelag": "Morocco",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -23996,6 +24243,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "qf",
+          "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 2,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",

@@ -406,8 +406,9 @@
         "slot_borte": "W90",
         "utcDate": "2026-07-09T20:00:00Z",
         "fd_match_id": 537383,
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "fifa_event_id": "400021536",
+        "tippebar": false,
+        "tippe_status": "startet"
       },
       {
         "id": "Spain_Belgium_2026_07_10",
@@ -452,8 +453,8 @@
         "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 4,
-    "neste_frist": "2026-07-09T20:00:00Z"
+    "antall_tippebare": 3,
+    "neste_frist": "2026-07-10T19:00:00Z"
   },
   "sf": {
     "aapen": false,
