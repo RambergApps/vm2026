@@ -1,0 +1,49 @@
+{
+  "bonus": {
+    "id": "antall_ettmaalsseier",
+    "svar": 2
+  },
+  "meta": {
+    "deltaker_id": "paal_andr_nilsen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-09T13:28:31.540Z",
+    "navn": "Pål André Nilsen",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-09T13:28:43Z"
+  },
+  "tippinger": [
+    {
+      "borte": 0,
+      "bortelag": "Morocco",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Morocco_2026_07_09",
+      "match_no": 97
+    },
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 2,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 2,
+      "bortelag": "England",
+      "hjemme": 1,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    },
+    {
+      "borte": 0,
+      "bortelag": "Switzerland",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "match_no": 100
+    }
+  ]
+}
