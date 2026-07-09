@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-09T16:31:16Z",
+  "sist_oppdatert": "2026-07-09T16:45:43Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -256,7 +256,8 @@
             "Norway_England_2026_07_11",
             "Spain_Belgium_2026_07_10"
           ],
-          "bonus": false
+          "bonus": true,
+          "bonus_id": "antall_ettmaalsseier"
         },
         "r16": {
           "kamper": [
