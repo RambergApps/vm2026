@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-09T21:31:21Z
+// Sist oppdatert: 2026-07-09T21:45:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-09T21:31:21Z",
+  "sist_oppdatert": "2026-07-09T21:45:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1903,7 +1903,7 @@ const VM_DATA = {
       "canonical_kamp_id": "France_Morocco_2026_07_09",
       "hjemmelag": "France",
       "bortelag": "Morocco",
-      "hjemme": 1,
+      "hjemme": 2,
       "borte": 0,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2470,7 +2470,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-09T21:31:21Z"
+    "sist_beregnet": "2026-07-09T21:45:39Z"
   },
   "stilling": [
     {
@@ -3575,7 +3575,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -5086,7 +5086,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -6597,7 +6597,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -8037,7 +8037,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -9481,7 +9481,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -10992,7 +10992,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -12409,7 +12409,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -15356,7 +15356,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -16829,7 +16829,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -18340,7 +18340,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -23877,7 +23877,7 @@ const VM_DATA = {
           "bortelag": "Morocco",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
