@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-10T20:45:40Z
+// Sist oppdatert: 2026-07-10T21:01:32Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-10T20:45:40Z",
+  "sist_oppdatert": "2026-07-10T21:01:32Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1923,7 +1923,7 @@ const VM_DATA = {
       "canonical_kamp_id": "Spain_Belgium_2026_07_10",
       "hjemmelag": "Spain",
       "bortelag": "Belgium",
-      "hjemme": 1,
+      "hjemme": 2,
       "borte": 1,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2169,17 +2169,17 @@ const VM_DATA = {
     },
     {
       "rank": 9,
-      "spiller": "Mikel Oyarzabal",
-      "maal": 4,
-      "assists": 1,
-      "minutter": 483
-    },
-    {
-      "rank": 10,
       "spiller": "Vinicius Junior",
       "maal": 4,
       "assists": 1,
       "minutter": 505
+    },
+    {
+      "rank": 10,
+      "spiller": "Mikel Oyarzabal",
+      "maal": 4,
+      "assists": 1,
+      "minutter": 519
     },
     {
       "rank": 11,
@@ -2200,14 +2200,14 @@ const VM_DATA = {
       "spiller": "Romelu Lukaku",
       "maal": 3,
       "assists": 1,
-      "minutter": 242
+      "minutter": 274
     },
     {
       "rank": 14,
       "spiller": "Charles De Ketelaere",
       "maal": 3,
       "assists": 1,
-      "minutter": 331
+      "minutter": 380
     },
     {
       "rank": 15,
@@ -2305,7 +2305,7 @@ const VM_DATA = {
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 2,
-      "minutter": 544
+      "minutter": 561
     },
     {
       "rank": 29,
@@ -2407,59 +2407,59 @@ const VM_DATA = {
     },
     {
       "rank": 43,
+      "spiller": "Mikel Merino",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 175
+    },
+    {
+      "rank": 44,
       "spiller": "Amad Diallo",
       "maal": 2,
       "assists": 0,
       "minutter": 211
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 224
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 247
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 359
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 371
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Emam Ashour",
       "maal": 2,
       "assists": 0,
       "minutter": 395
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Daniel Munoz",
       "maal": 2,
       "assists": 0,
       "minutter": 451
-    },
-    {
-      "rank": 50,
-      "spiller": "Azzedine Ounahi",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 477
     }
   ],
   "startpoengstatus": {
@@ -2472,7 +2472,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-10T20:45:40Z"
+    "sist_beregnet": "2026-07-10T21:01:32Z"
   },
   "stilling": [
     {
@@ -3591,7 +3591,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -5116,7 +5116,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -6641,7 +6641,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -8095,7 +8095,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -9553,7 +9553,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -10984,7 +10984,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -12509,7 +12509,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -13968,7 +13968,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -15483,7 +15483,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -16970,7 +16970,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -18274,7 +18274,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -19799,7 +19799,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -22760,7 +22760,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
@@ -30498,7 +30498,7 @@ const VM_DATA = {
           "bortelag": "Belgium",
           "tippa_h": 2,
           "tippa_b": 3,
-          "faktisk_h": 1,
+          "faktisk_h": 2,
           "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
