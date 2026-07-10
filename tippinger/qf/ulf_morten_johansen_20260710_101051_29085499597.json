@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "deltaker_id": "ulf_morten_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-10T10:10:39.719Z",
+    "navn": "Ulf-Morten Johansen",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-10T10:10:51Z"
+  },
+  "tippinger": [
+    {
+      "borte": 3,
+      "bortelag": "Belgium",
+      "hjemme": 2,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 0,
+      "bortelag": "England",
+      "hjemme": 2,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    },
+    {
+      "borte": 0,
+      "bortelag": "Switzerland",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "match_no": 100
+    }
+  ]
+}
