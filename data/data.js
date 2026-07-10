@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-10T18:45:45Z
+// Sist oppdatert: 2026-07-10T19:01:21Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-10T18:45:45Z",
+  "sist_oppdatert": "2026-07-10T19:01:21Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1923,18 +1923,22 @@ const VM_DATA = {
       "canonical_kamp_id": "Spain_Belgium_2026_07_10",
       "hjemmelag": "Spain",
       "bortelag": "Belgium",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "qf",
       "dato_openfootball": "2026-07-10",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-10",
       "fd_match_id": 537384,
       "fd_utcDate": "2026-07-10T19:00:00Z",
       "fd_hjemmelag": "Spain",
       "fd_bortelag": "Belgium",
+      "fifa_event_id": "400021538",
+      "fifa_match_no": 98,
+      "fifa_utcDate": "2026-07-10T19:00:00Z",
+      "fifa_dato": "2026-07-10",
       "match_no": 98
     },
     "Argentina_Switzerland_2026_07_11": {
@@ -2472,7 +2476,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-10T18:45:45Z"
+    "sist_beregnet": "2026-07-10T19:01:21Z"
   },
   "stilling": [
     {
@@ -3583,6 +3587,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -5098,6 +5115,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -6610,6 +6640,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -8048,6 +8091,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -9496,6 +9552,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -10911,6 +10980,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -12426,6 +12508,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -13870,6 +13965,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
         },
         {
           "kamp_id": "Argentina_Egypt_2026_07_07",
@@ -15374,6 +15482,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -16848,6 +16969,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Argentina_Egypt_2026_07_07",
           "hjemmelag": "Argentina",
           "bortelag": "Egypt",
@@ -18136,6 +18270,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -19648,6 +19795,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -22597,6 +22757,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
         },
         {
           "kamp_id": "Argentina_Egypt_2026_07_07",
@@ -30322,6 +30495,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Belgium_2026_07_10",
+          "hjemmelag": "Spain",
+          "bortelag": "Belgium",
+          "tippa_h": 2,
+          "tippa_b": 3,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "qf"
         },
         {
           "kamp_id": "Argentina_Cape_Verde_2026_07_03",
