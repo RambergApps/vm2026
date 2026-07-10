@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-10T00:01:25Z
+// Sist oppdatert: 2026-07-10T00:15:16Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-10T00:01:25Z",
+  "sist_oppdatert": "2026-07-10T00:15:16Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2361,7 +2361,7 @@ const VM_DATA = {
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
-      "minutter": 317
+      "minutter": 316
     },
     {
       "rank": 37,
@@ -2472,7 +2472,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-10T00:01:25Z"
+    "sist_beregnet": "2026-07-10T00:15:16Z"
   },
   "stilling": [
     {
