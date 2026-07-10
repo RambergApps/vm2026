@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-10T10:01:29Z",
+  "sist_oppdatert": "2026-07-10T10:15:47Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -202,6 +202,14 @@
       "navn": "Bjørnar Tallaksrud",
       "deltaker_type": "ordinaer",
       "runder": {
+        "qf": {
+          "kamper": [
+            "Argentina_Switzerland_2026_07_11",
+            "Norway_England_2026_07_11",
+            "Spain_Belgium_2026_07_10"
+          ],
+          "bonus": false
+        },
         "r16": {
           "kamper": [
             "Argentina_Egypt_2026_07_07",
@@ -741,6 +749,14 @@
       "navn": "Ulf-Morten Johansen",
       "deltaker_type": "ordinaer",
       "runder": {
+        "qf": {
+          "kamper": [
+            "Argentina_Switzerland_2026_07_11",
+            "Norway_England_2026_07_11",
+            "Spain_Belgium_2026_07_10"
+          ],
+          "bonus": false
+        },
         "r32": {
           "kamper": [
             "Argentina_Cape_Verde_2026_07_03",
