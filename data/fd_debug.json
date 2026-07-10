@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-10T19:31:17Z",
+  "tidspunkt": "2026-07-10T19:45:43Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -807,7 +807,7 @@
       "bortelag_normalisert": "Belgium",
       "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "fd_dato": "2026-07-10",
       "fd_utcDate": "2026-07-10T19:00:00Z",
