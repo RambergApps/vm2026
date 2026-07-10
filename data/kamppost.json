@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-09",
   "dato_norsk": "Torsdag 9. juli 2026",
-  "generert": "2026-07-09T23:31:28Z",
+  "generert": "2026-07-10T21:15:50Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -115,38 +115,38 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 201,
+      "poeng_totalt": 210,
       "poeng_i_dag": 9
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 196,
+      "poeng_totalt": 201,
       "poeng_i_dag": 5
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 3,
-      "poeng_totalt": 192,
+      "poeng_totalt": 201,
       "poeng_i_dag": 5
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 4,
-      "poeng_totalt": 173,
-      "poeng_i_dag": 5
-    },
-    {
-      "navn": "Olympus fc",
-      "plass": 5,
-      "poeng_totalt": 168,
+      "poeng_totalt": 178,
       "poeng_i_dag": 5
     },
     {
       "navn": "Arne Kristian Johansen",
-      "plass": 6,
-      "poeng_totalt": 167,
+      "plass": 5,
+      "poeng_totalt": 176,
       "poeng_i_dag": 0
+    },
+    {
+      "navn": "Olympus fc",
+      "plass": 6,
+      "poeng_totalt": 173,
+      "poeng_i_dag": 5
     },
     {
       "navn": "Sebastian Luranc",
@@ -157,19 +157,19 @@
     {
       "navn": "Bjørnar Tallaksrud",
       "plass": 8,
-      "poeng_totalt": 153,
+      "poeng_totalt": 158,
       "poeng_i_dag": 0
     },
     {
       "navn": "Diyan K.",
       "plass": 9,
-      "poeng_totalt": 152,
+      "poeng_totalt": 157,
       "poeng_i_dag": 0
     },
     {
       "navn": "Ken Arne Hansen",
       "plass": 10,
-      "poeng_totalt": 150,
+      "poeng_totalt": 155,
       "poeng_i_dag": 5
     },
     {
@@ -179,21 +179,21 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Anders Sundero",
+      "navn": "Marita Hauge Gjerde",
       "plass": 12,
+      "poeng_totalt": 138,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Anders Sundero",
+      "plass": 13,
       "poeng_totalt": 134,
       "poeng_i_dag": 5
     },
     {
       "navn": "Geir Magne Evensen",
-      "plass": 13,
-      "poeng_totalt": 134,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Marita Hauge Gjerde",
       "plass": 14,
-      "poeng_totalt": 133,
+      "poeng_totalt": 134,
       "poeng_i_dag": 0
     },
     {

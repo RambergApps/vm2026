@@ -421,6 +421,7 @@
         "slot_borte": "W94",
         "utcDate": "2026-07-10T19:00:00Z",
         "fd_match_id": 537384,
+        "avanserer": "Spain",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -457,21 +458,21 @@
     "neste_frist": "2026-07-11T21:00:00Z"
   },
   "sf": {
-    "aapen": false,
+    "aapen": true,
     "frist": "2026-07-14T19:00:00Z",
     "kamper": [
       {
-        "id": "France_W98_2026_07_14",
+        "id": "France_Spain_2026_07_14",
         "hjemme": "France",
-        "borte": "W98",
+        "borte": "Spain",
         "dato": "2026-07-14",
         "info": "Autofyll fra avansement",
         "match_no": 101,
         "slot_hjemme": "W97",
         "slot_borte": "W98",
         "utcDate": "2026-07-14T19:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       },
       {
         "id": "W99_W100_2026_07_15",
@@ -487,8 +488,8 @@
         "tippe_status": "venter_pa_lag"
       }
     ],
-    "antall_tippebare": 0,
-    "neste_frist": null
+    "antall_tippebare": 1,
+    "neste_frist": "2026-07-14T19:00:00Z"
   },
   "final": {
     "aapen": false,

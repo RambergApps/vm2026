@@ -7497,5 +7497,90 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Spain_Belgium_2026_07_10|2-1": {
+    "kamp_id": "Spain_Belgium_2026_07_10",
+    "resultat": "2-1",
+    "sist_sokt": "2026-07-10T21:15:50Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-belgium-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 2,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-10T21:15:50Z",
+      "goal_events": [
+        {
+          "spiller": "Ruiz",
+          "lag": "Spain",
+          "minutt": "30",
+          "type": "goal"
+        },
+        {
+          "spiller": "De Ketelaere",
+          "lag": "Belgium",
+          "minutt": "41",
+          "type": "goal"
+        },
+        {
+          "spiller": "Merino",
+          "lag": "Spain",
+          "minutt": "88",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Ruiz",
+        "De Ketelaere",
+        "Merino"
+      ],
+      "lead_scorer": "Ruiz",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Title: Spain edge Belgium in quarter-finals | Match report & highlights",
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-belgium-match-report-highlights",
+        "Fabian Ruiz and Mikel Merino got the goals as Spain edged Belgium 2-1 in FIFA World Cup 2026 quarter-finals, securing them a showdown with France.",
+        "Surprise starter Fabian Ruiz and late replacement Mikel Merino slotted home rebounds to secure Spain victory over Belgium in their FIFA World Cup 2026™ quarter-final at Los Angeles Stadium. Luis de la Fuente’s side will now face France at Dallas Stadium in one of the biggest semi-finals in World Cup history.",
+        "Ruiz, who unexpectedly started at the expense of Pedri, broke the deadlock after Thibaut Courtois had repelled Dani Olmo’s shot. The electrifying Lamine Yamal cut inside and flashed an attempt narrowly wide, before Belgium struck back on the break’s brink. An intuitive Kevin De Bruyne pass freed Timothy Castagne, whose excellent cross was headed home by Charles De Ketelaere, who had craftily crept onside. The great Courtois went off injured in the 71st minute. When his replacement, Senne Lammens, failed to hold a Pau Cubarsi drive from distance, Merino, who had been on the pitch merely minutes, lashed home the loose ball to settle the match."
+      ],
+      "key_stat": "",
+      "player_of_match": "Lamine Yamal (Spain)",
+      "early_lead": true,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": true,
+      "deciding_last_goal": true,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-belgium-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }
