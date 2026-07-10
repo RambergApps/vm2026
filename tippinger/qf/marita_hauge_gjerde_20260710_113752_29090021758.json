@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "deltaker_id": "marita_hauge_gjerde",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-10T11:37:42.178Z",
+    "navn": "Marita Hauge Gjerde",
+    "runde": "qf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-10T11:37:52Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Belgium",
+      "hjemme": 3,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Belgium_2026_07_10",
+      "match_no": 98
+    },
+    {
+      "borte": 0,
+      "bortelag": "England",
+      "hjemme": 3,
+      "hjemmelag": "Norway",
+      "kamp_id": "Norway_England_2026_07_11",
+      "match_no": 99
+    },
+    {
+      "borte": 0,
+      "bortelag": "Switzerland",
+      "hjemme": 2,
+      "hjemmelag": "Argentina",
+      "kamp_id": "Argentina_Switzerland_2026_07_11",
+      "match_no": 100
+    }
+  ]
+}
