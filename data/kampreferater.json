@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-10T19:45:45Z",
+  "sist_oppdatert": "2026-07-10T19:47:25Z",
   "antall_kamper": 98,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19342,12 +19342,12 @@
       "hjemmelag": "Spain",
       "bortelag": "Belgium",
       "hjemme_score": 1,
-      "borte_score": 0,
+      "borte_score": 1,
       "gruppe": "",
       "runde": "qf",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Spain lead Belgium 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Spain and Belgium are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -19443,7 +19443,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-10T19:45:44Z"
+      "oppdatert": "2026-07-10T19:47:25Z"
     }
   }
 }

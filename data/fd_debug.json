@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-10T19:45:43Z",
+  "tidspunkt": "2026-07-10T19:47:23Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -808,7 +808,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 0,
+      "borte": 1,
       "fd_dato": "2026-07-10",
       "fd_utcDate": "2026-07-10T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Spain_Belgium_2026_07_10"
