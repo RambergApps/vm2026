@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-11T21:01:21Z
+// Sist oppdatert: 2026-07-11T21:15:38Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-11T21:01:21Z",
+  "sist_oppdatert": "2026-07-11T21:15:38Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1809,13 +1809,11 @@ const VM_DATA = {
       "status": "FINISHED",
       "runde": "r16",
       "dato_openfootball": "2026-07-05",
-      "kilde_score": "football_data_org",
-      "dato_fd_org": "2026-07-06",
-      "fd_match_id": 537378,
-      "fd_utcDate": "2026-07-06T01:00:00Z",
-      "fd_hjemmelag": "Mexico",
-      "fd_bortelag": "England",
-      "avanserer": "England",
+      "kilde_score": "fifa_calendar",
+      "fifa_event_id": "400021531",
+      "fifa_match_no": 92,
+      "fifa_utcDate": "2026-07-06T01:00:00Z",
+      "fifa_dato": "2026-07-06",
       "match_no": 92
     },
     "Portugal_Spain_2026_07_06": {
@@ -1962,13 +1960,13 @@ const VM_DATA = {
       "canonical_kamp_id": "Norway_England_2026_07_11",
       "hjemmelag": "Norway",
       "bortelag": "England",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "qf",
       "dato_openfootball": "2026-07-11",
-      "kilde_score": "openfootball",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-07-11",
       "fd_match_id": 537385,
       "fd_utcDate": "2026-07-11T21:00:00Z",
@@ -2477,7 +2475,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-11T21:01:21Z"
+    "sist_beregnet": "2026-07-11T21:15:38Z"
   },
   "stilling": [
     {
@@ -3596,11 +3594,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -5135,11 +5133,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -6674,11 +6672,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -8142,11 +8140,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -9614,11 +9612,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -11153,11 +11151,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -12598,11 +12596,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 3,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -14071,11 +14069,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -15600,11 +15598,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -17101,11 +17099,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 1,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -18419,11 +18417,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -19944,11 +19942,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 3,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -21473,11 +21471,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {
@@ -30685,11 +30683,11 @@ const VM_DATA = {
           "bortelag": "England",
           "tippa_h": 2,
           "tippa_b": 0,
-          "faktisk_h": null,
-          "faktisk_b": null,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
-          "status": "TIMED",
+          "status": "IN_PLAY",
           "runde": "qf"
         },
         {

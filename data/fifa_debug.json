@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-11T21:01:20Z",
+  "tidspunkt": "2026-07-11T21:15:37Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1292,14 +1292,14 @@
       "fifa_event_id": "400021539",
       "hjemmelag": "Norway",
       "bortelag": "England",
-      "status": "TIMED",
-      "fifa_status_raw": 1,
+      "status": "IN_PLAY",
+      "fifa_status_raw": 3,
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fifa_dato": "2026-07-11",
       "fifa_utcDate": "2026-07-11T21:00:00Z",
-      "fifa_match_time": "0'"
+      "fifa_match_time": "14'"
     },
     "400021541": {
       "fifa_event_id": "400021541",

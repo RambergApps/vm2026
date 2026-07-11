@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-11T21:01:20Z",
+  "tidspunkt": "2026-07-11T21:15:37Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -715,20 +715,6 @@
       "fd_utcDate": "2026-07-05T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Brazil_Norway_2026_07_05"
     },
-    "537378": {
-      "fd_match_id": 537378,
-      "fd_hjemmelag": "Mexico",
-      "fd_bortelag": "England",
-      "hjemmelag_normalisert": "Mexico",
-      "bortelag_normalisert": "England",
-      "status": "FINISHED",
-      "ferdig": true,
-      "hjemme": 2,
-      "borte": 3,
-      "fd_dato": "2026-07-06",
-      "fd_utcDate": "2026-07-06T01:00:00Z",
-      "fd_kamp_id_basert_paa_dato": "Mexico_England_2026_07_06"
-    },
     "537379": {
       "fd_match_id": 537379,
       "fd_hjemmelag": "Portugal",
@@ -819,10 +805,10 @@
       "fd_bortelag": "England",
       "hjemmelag_normalisert": "Norway",
       "bortelag_normalisert": "England",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "fd_dato": "2026-07-11",
       "fd_utcDate": "2026-07-11T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Norway_England_2026_07_11"
