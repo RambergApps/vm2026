@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-11T20:45:38Z
+// Sist oppdatert: 2026-07-11T21:01:21Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-11T20:45:38Z",
+  "sist_oppdatert": "2026-07-11T21:01:21Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2477,7 +2477,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-11T20:45:38Z"
+    "sist_beregnet": "2026-07-11T21:01:21Z"
   },
   "stilling": [
     {
@@ -3588,6 +3588,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": true,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -5117,6 +5130,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -6643,6 +6669,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -8095,6 +8134,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -9554,6 +9606,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -11083,6 +11148,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -12512,6 +12590,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -13973,6 +14064,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
         },
         {
           "kamp_id": "Spain_Belgium_2026_07_10",
@@ -15491,6 +15595,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -16979,6 +17096,19 @@ const VM_DATA = {
           "runde": "qf"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -18281,6 +18411,19 @@ const VM_DATA = {
           "riktig_utfall": false,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -19796,6 +19939,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 3,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
+        },
+        {
           "kamp_id": "Spain_Belgium_2026_07_10",
           "hjemmelag": "Spain",
           "bortelag": "Belgium",
@@ -21309,6 +21465,19 @@ const VM_DATA = {
           "riktig_utfall": true,
           "eksakt": false,
           "ferdig": true,
+          "runde": "qf"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
           "runde": "qf"
         },
         {
@@ -30509,6 +30678,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Norway_England_2026_07_11",
+          "hjemmelag": "Norway",
+          "bortelag": "England",
+          "tippa_h": 2,
+          "tippa_b": 0,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "qf"
         },
         {
           "kamp_id": "Spain_Belgium_2026_07_10",
