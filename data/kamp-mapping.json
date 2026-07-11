@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-08T11:01:27Z",
+  "sist_oppdatert": "2026-07-11T14:01:24Z",
   "kamper": {
     "Algeria_Austria_2026_06_27": {
       "of_kamp_id": "Algeria_Austria_2026_06_27",
@@ -684,6 +684,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-14T13:10:37Z"
+    },
+    "France_Spain_2026_07_14": {
+      "of_kamp_id": "France_Spain_2026_07_14",
+      "of_dato": "2026-07-14",
+      "of_hjemmelag": "France",
+      "of_bortelag": "Spain",
+      "runde": "sf",
+      "fd_match_id": 537387,
+      "fd_dato": "2026-07-14",
+      "fd_utcDate": "2026-07-14T19:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Spain",
+      "fd_hjemmelag_normalisert": "France",
+      "fd_bortelag_normalisert": "Spain",
+      "dato_avvik_dager": 0,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-11T14:01:24Z"
     },
     "France_Sweden_2026_06_30": {
       "of_kamp_id": "France_Sweden_2026_06_30",

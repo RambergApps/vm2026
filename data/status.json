@@ -466,11 +466,12 @@
         "hjemme": "France",
         "borte": "Spain",
         "dato": "2026-07-14",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 101,
         "slot_hjemme": "W97",
         "slot_borte": "W98",
         "utcDate": "2026-07-14T19:00:00Z",
+        "fd_match_id": 537387,
         "tippebar": true,
         "tippe_status": "aapen"
       },

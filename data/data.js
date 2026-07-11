@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-11T13:45:49Z
+// Sist oppdatert: 2026-07-11T14:01:24Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-11T13:45:49Z",
+  "sist_oppdatert": "2026-07-11T14:01:24Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1976,11 +1976,11 @@ const VM_DATA = {
       "fd_bortelag": "England",
       "match_no": 99
     },
-    "W97_W98_2026_07_14": {
-      "kamp_id": "W97_W98_2026_07_14",
-      "canonical_kamp_id": "W97_W98_2026_07_14",
-      "hjemmelag": "W97",
-      "bortelag": "W98",
+    "France_Spain_2026_07_14": {
+      "kamp_id": "France_Spain_2026_07_14",
+      "canonical_kamp_id": "France_Spain_2026_07_14",
+      "hjemmelag": "France",
+      "bortelag": "Spain",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -1988,6 +1988,11 @@ const VM_DATA = {
       "runde": "sf",
       "dato_openfootball": "2026-07-14",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-14",
+      "fd_match_id": 537387,
+      "fd_utcDate": "2026-07-14T19:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "Spain",
       "match_no": 101
     },
     "W99_W100_2026_07_15": {
@@ -2472,7 +2477,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-11T13:45:49Z"
+    "sist_beregnet": "2026-07-11T14:01:24Z"
   },
   "stilling": [
     {
