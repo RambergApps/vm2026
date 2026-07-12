@@ -482,11 +482,12 @@
         "hjemme": "England",
         "borte": "Argentina",
         "dato": "2026-07-15",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 102,
         "slot_hjemme": "W99",
         "slot_borte": "W100",
         "utcDate": "2026-07-15T19:00:00Z",
+        "fd_match_id": 537388,
         "tippebar": true,
         "tippe_status": "aapen"
       }

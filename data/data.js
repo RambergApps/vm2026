@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-12T15:01:31Z
+// Sist oppdatert: 2026-07-12T15:08:48Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-12T15:01:31Z",
+  "sist_oppdatert": "2026-07-12T15:08:48Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1997,11 +1997,11 @@ const VM_DATA = {
       "fd_bortelag": "Spain",
       "match_no": 101
     },
-    "W99_W100_2026_07_15": {
-      "kamp_id": "W99_W100_2026_07_15",
-      "canonical_kamp_id": "W99_W100_2026_07_15",
-      "hjemmelag": "W99",
-      "bortelag": "W100",
+    "England_Argentina_2026_07_15": {
+      "kamp_id": "England_Argentina_2026_07_15",
+      "canonical_kamp_id": "England_Argentina_2026_07_15",
+      "hjemmelag": "England",
+      "bortelag": "Argentina",
       "hjemme": null,
       "borte": null,
       "ferdig": false,
@@ -2009,6 +2009,11 @@ const VM_DATA = {
       "runde": "sf",
       "dato_openfootball": "2026-07-15",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-15",
+      "fd_match_id": 537388,
+      "fd_utcDate": "2026-07-15T19:00:00Z",
+      "fd_hjemmelag": "England",
+      "fd_bortelag": "Argentina",
       "match_no": 102
     },
     "L101_L102_2026_07_18": {
@@ -2479,7 +2484,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-12T15:01:31Z"
+    "sist_beregnet": "2026-07-12T15:08:48Z"
   },
   "stilling": [
     {
