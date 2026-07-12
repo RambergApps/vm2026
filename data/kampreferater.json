@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-12T04:46:31Z",
+  "sist_oppdatert": "2026-07-12T05:01:36Z",
   "antall_kamper": 100,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19605,30 +19605,27 @@
       "gruppe": "",
       "runde": "qf",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Argentina beat Switzerland 3-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Argentina beat Switzerland 3-1.\nGoals: Argentina — Mac Allister (10), Alvarez (11) and Lautaro (12); Switzerland — Ndoye (67).\n\nTitle: Argentina beat Switzerland in quarters | Match report & highlights\nThe contest then swung back into Argentina’s favour when, in the 72nd minute, Embolo collected his second yellow card for simulation and was sent off.\nThiago Almada clipped the outside of Gregor Kobel’s post at the start of extra time, before a breathtaking Alvarez curler put Argentina in front and Lautaro sealed the deal.\nArgentina downed 10-man Switzerland in extra time in their FIFA World Cup 2026 quarter-final, a Julian Alvarez golazo headlining a hard-fought victory.\nPlayer of the Match: Julian Alvarez (Argentina).",
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 13,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 6,
-        "fallback": true,
+        "antall_sok": 7,
+        "fallback": false,
         "cache_key": "Argentina_Switzerland_2026_07_11|3-1",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 13,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 6,
+        "retry_antall": 7,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -19724,7 +19721,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-12T04:46:31Z"
+      "oppdatert": "2026-07-12T05:01:35Z"
     }
   }
 }
