@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-12T06:01:26Z",
+  "tidspunkt": "2026-07-12T06:15:40Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -715,6 +715,20 @@
       "fd_utcDate": "2026-07-05T20:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Brazil_Norway_2026_07_05"
     },
+    "537378": {
+      "fd_match_id": 537378,
+      "fd_hjemmelag": "Mexico",
+      "fd_bortelag": "England",
+      "hjemmelag_normalisert": "Mexico",
+      "bortelag_normalisert": "England",
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 2,
+      "borte": 3,
+      "fd_dato": "2026-07-06",
+      "fd_utcDate": "2026-07-06T01:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "Mexico_England_2026_07_06"
+    },
     "537379": {
       "fd_match_id": 537379,
       "fd_hjemmelag": "Portugal",
@@ -806,9 +820,9 @@
       "hjemmelag_normalisert": "Norway",
       "bortelag_normalisert": "England",
       "status": "FINISHED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-07-11",
       "fd_utcDate": "2026-07-11T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Norway_England_2026_07_11"
@@ -820,9 +834,9 @@
       "hjemmelag_normalisert": "Argentina",
       "bortelag_normalisert": "Switzerland",
       "status": "FINISHED",
-      "ferdig": false,
-      "hjemme": null,
-      "borte": null,
+      "ferdig": true,
+      "hjemme": 1,
+      "borte": 1,
       "fd_dato": "2026-07-12",
       "fd_utcDate": "2026-07-12T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Argentina_Switzerland_2026_07_12"
@@ -840,6 +854,20 @@
       "fd_dato": "2026-07-14",
       "fd_utcDate": "2026-07-14T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "France_Spain_2026_07_14"
+    },
+    "537388": {
+      "fd_match_id": 537388,
+      "fd_hjemmelag": "England",
+      "fd_bortelag": "Argentina",
+      "hjemmelag_normalisert": "England",
+      "bortelag_normalisert": "Argentina",
+      "status": "TIMED",
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fd_dato": "2026-07-15",
+      "fd_utcDate": "2026-07-15T19:00:00Z",
+      "fd_kamp_id_basert_paa_dato": "England_Argentina_2026_07_15"
     },
     "537391": {
       "fd_match_id": 537391,

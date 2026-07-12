@@ -7758,5 +7758,179 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "Norway_England_2026_07_11|1-1": {
+    "kamp_id": "Norway_England_2026_07_11",
+    "resultat": "1-1",
+    "sist_sokt": "2026-07-12T06:16:07Z",
+    "antall_sok": 1,
+    "beste_score": 12,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-12T06:15:50Z",
+      "goal_events": [
+        {
+          "spiller": "Schjelderup",
+          "lag": "Norway",
+          "minutt": "36",
+          "type": "goal"
+        },
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "45+2",
+          "type": "goal"
+        },
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "93",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Schjelderup",
+        "Bellingham"
+      ],
+      "lead_scorer": "Schjelderup",
+      "brace_scorer": "Bellingham",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Jude Bellingham's brace helped the Three Lions turn the tables on Norway and secure a semi-final date with either Argentina or Switzerland.",
+        "Jude Bellingham struck twice as England came from behind to beat Norway in extra time and book their place in the FIFA World Cup 2026™ semi-finals.",
+        "After a tentative start at Miami Stadium, Norway seized the initiative. Erling Haaland's header straight at Jordan Pickford was a warning England didn't heed, as Schjelderup swept a cross-shot in off the inside of the far post to give the Nordics a 36th-minute lead.",
+        "The Three Lions weathered a wave of pressure before levelling in first-half stoppage time through Bellingham's driving run and cool finish. Harry Kane had the ball in the net moments later, but the goal was ruled out for offside.",
+        "Torbjorn Heggem thought he had restored Norway's lead just before the hour mark, only for VAR to intervene and chalk off the effort for Haaland's push on Elliot Anderson following a corner."
+      ],
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": true,
+      "came_from_behind": true,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": true,
+      "brace_text": true,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 12,
+      "mangler": [
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
+  },
+  "Argentina_Switzerland_2026_07_11|1-1": {
+    "kamp_id": "Argentina_Switzerland_2026_07_11",
+    "resultat": "1-1",
+    "sist_sokt": "2026-07-12T06:16:52Z",
+    "antall_sok": 1,
+    "beste_score": 13,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 1,
+      "kamp_borte_score": 1,
+      "score": 10,
+      "hentet": "2026-07-12T06:16:14Z",
+      "goal_events": [
+        {
+          "spiller": "Mac Allister",
+          "lag": "Argentina",
+          "minutt": "10",
+          "type": "goal"
+        },
+        {
+          "spiller": "Alvarez",
+          "lag": "Argentina",
+          "minutt": "11",
+          "type": "goal"
+        },
+        {
+          "spiller": "Lautaro",
+          "lag": "Argentina",
+          "minutt": "12",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ndoye",
+          "lag": "Switzerland",
+          "minutt": "67",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Mac Allister",
+        "Alvarez",
+        "Lautaro",
+        "Ndoye"
+      ],
+      "lead_scorer": "Mac Allister",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Title: Argentina beat Switzerland in quarters | Match report & highlights",
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights?searchOverlay=1)",
+        "Argentina downed 10-man Switzerland in extra time in their FIFA World Cup 2026 quarter-final, a Julian Alvarez golazo headlining a hard-fought victory.",
+        "Julian Alvarez and Lautaro Martinez struck in extra time as Argentina outlasted Switzerland at Kansas City Stadium in the FIFA World Cup 2026™ quarter-finals. Lionel Scaloni’s side, who were at a numerical advantage for almost 50 minutes, will now face fierce rivals England in the second semi-final at Atlanta Stadium on Wednesday."
+      ],
+      "key_stat": "",
+      "player_of_match": "Julian Alvarez (Argentina)",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": true,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 13,
+      "mangler": [
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

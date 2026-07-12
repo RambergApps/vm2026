@@ -1,41 +1,4 @@
 {
-  "sist_sjekket": "2026-07-12T06:01:27Z",
-  "kamper": [
-    {
-      "type": "mangler_regulartime",
-      "kamp_id": "Argentina_Switzerland_2026_07_11",
-      "hjemmelag": "Argentina",
-      "bortelag": "Switzerland",
-      "dato": "2026-07-11",
-      "runde": "qf",
-      "gruppe": "",
-      "status": "mangler_regulartime",
-      "status_api": "FINISHED",
-      "duration": "EXTRA_TIME",
-      "fulltime_hjemme": 3,
-      "fulltime_borte": 1,
-      "straffer_hjemme": null,
-      "straffer_borte": null,
-      "avanserer": "Argentina",
-      "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler."
-    },
-    {
-      "type": "mangler_regulartime",
-      "kamp_id": "Norway_England_2026_07_11",
-      "hjemmelag": "Norway",
-      "bortelag": "England",
-      "dato": "2026-07-11",
-      "runde": "qf",
-      "gruppe": "",
-      "status": "mangler_regulartime",
-      "status_api": "FINISHED",
-      "duration": "EXTRA_TIME",
-      "fulltime_hjemme": 1,
-      "fulltime_borte": 2,
-      "straffer_hjemme": null,
-      "straffer_borte": null,
-      "avanserer": "England",
-      "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler."
-    }
-  ]
+  "sist_sjekket": "2026-07-12T06:15:41Z",
+  "kamper": []
 }

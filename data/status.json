@@ -316,13 +316,14 @@
         "id": "Mexico_England_2026_07_05",
         "hjemme": "Mexico",
         "borte": "England",
-        "dato": "2026-07-05",
+        "dato": "2026-07-06",
         "info": "Kampoppsett bekreftet",
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",
         "utcDate": "2026-07-06T01:00:00Z",
-        "fifa_event_id": "400021531",
+        "fd_match_id": 537378,
+        "avanserer": "England",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -435,7 +436,6 @@
         "slot_borte": "W92",
         "utcDate": "2026-07-11T21:00:00Z",
         "fd_match_id": 537385,
-        "fifa_event_id": "400021539",
         "avanserer": "England",
         "tippebar": false,
         "tippe_status": "startet"
@@ -451,7 +451,6 @@
         "slot_borte": "W96",
         "utcDate": "2026-07-12T01:00:00Z",
         "fd_match_id": 537386,
-        "fifa_event_id": "400021537",
         "avanserer": "Argentina",
         "tippebar": false,
         "tippe_status": "startet"
