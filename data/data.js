@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-12T04:31:20Z
+// Sist oppdatert: 2026-07-12T04:45:50Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-12T04:31:20Z",
+  "sist_oppdatert": "2026-07-12T04:45:50Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2138,7 +2138,7 @@ const VM_DATA = {
       "spiller": "Lionel Messi",
       "maal": 8,
       "assists": 2,
-      "minutter": 588
+      "minutter": 607
     },
     {
       "rank": 3,
@@ -2320,7 +2320,7 @@ const VM_DATA = {
       "spiller": "Breel Embolo",
       "maal": 2,
       "assists": 2,
-      "minutter": 577
+      "minutter": 596
     },
     {
       "rank": 29,
@@ -2359,17 +2359,17 @@ const VM_DATA = {
     },
     {
       "rank": 34,
-      "spiller": "Ruben Vargas",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 304
-    },
-    {
-      "rank": 35,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
+    },
+    {
+      "rank": 35,
+      "spiller": "Ruben Vargas",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 313
     },
     {
       "rank": 36,
@@ -2380,101 +2380,101 @@ const VM_DATA = {
     },
     {
       "rank": 37,
+      "spiller": "Lautaro Martinez",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 347
+    },
+    {
+      "rank": 38,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Mostafa Zico",
       "maal": 2,
       "assists": 1,
       "minutter": 398
     },
     {
-      "rank": 39,
+      "rank": 40,
       "spiller": "Malik Tillman",
       "maal": 2,
       "assists": 1,
       "minutter": 415
     },
     {
-      "rank": 40,
+      "rank": 41,
       "spiller": "Ermin Mahmic",
       "maal": 2,
       "assists": 0,
       "minutter": 88
     },
     {
-      "rank": 41,
+      "rank": 42,
       "spiller": "Habib Diarra",
       "maal": 2,
       "assists": 0,
       "minutter": 168
     },
     {
-      "rank": 42,
+      "rank": 43,
       "spiller": "Marko Arnautovic",
       "maal": 2,
       "assists": 0,
       "minutter": 173
     },
     {
-      "rank": 43,
+      "rank": 44,
       "spiller": "Mikel Merino",
       "maal": 2,
       "assists": 0,
       "minutter": 180
     },
     {
-      "rank": 44,
+      "rank": 45,
       "spiller": "Amad Diallo",
       "maal": 2,
       "assists": 0,
       "minutter": 211
     },
     {
-      "rank": 45,
+      "rank": 46,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 224
     },
     {
-      "rank": 46,
+      "rank": 47,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 247
     },
     {
-      "rank": 47,
+      "rank": 48,
       "spiller": "Daichi Kamada",
       "maal": 2,
       "assists": 0,
       "minutter": 359
     },
     {
-      "rank": 48,
+      "rank": 49,
       "spiller": "Yasin Ayari",
       "maal": 2,
       "assists": 0,
       "minutter": 371
     },
     {
-      "rank": 49,
+      "rank": 50,
       "spiller": "Emam Ashour",
       "maal": 2,
       "assists": 0,
       "minutter": 395
-    },
-    {
-      "rank": 50,
-      "spiller": "Dan Ndoye",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 437
     }
   ],
   "startpoengstatus": {
@@ -2487,7 +2487,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-12T04:31:20Z"
+    "sist_beregnet": "2026-07-12T04:45:50Z"
   },
   "stilling": [
     {
