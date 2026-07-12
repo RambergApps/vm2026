@@ -7762,8 +7762,8 @@
   "Norway_England_2026_07_11|1-1": {
     "kamp_id": "Norway_England_2026_07_11",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-12T11:31:46Z",
-    "antall_sok": 25,
+    "sist_sokt": "2026-07-12T11:46:05Z",
+    "antall_sok": 26,
     "beste_score": 12,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -7780,7 +7780,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-12T11:31:24Z",
+      "hentet": "2026-07-12T11:45:46Z",
       "goal_events": [
         {
           "spiller": "Schjelderup",
@@ -7845,8 +7845,8 @@
   "Argentina_Switzerland_2026_07_11|1-1": {
     "kamp_id": "Argentina_Switzerland_2026_07_11",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-12T11:32:36Z",
-    "antall_sok": 25,
+    "sist_sokt": "2026-07-12T11:46:50Z",
+    "antall_sok": 26,
     "beste_score": 11,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -7863,7 +7863,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-12T11:31:47Z",
+      "hentet": "2026-07-12T11:46:06Z",
       "goal_events": [
         {
           "spiller": "Mac Allister",
