@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-12T02:45:42Z",
+  "sist_oppdatert": "2026-07-12T03:46:42Z",
   "antall_kamper": 100,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19514,13 +19514,13 @@
             "poeng": 9
           },
           {
-            "navn": "Bjørnar Tallaksrud",
+            "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 9
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Bjørnar Tallaksrud",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 9
@@ -19565,6 +19565,12 @@
             "poeng": 0
           },
           {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -19574,12 +19580,6 @@
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 3,
-            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -19591,7 +19591,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-12T00:01:38Z"
+      "oppdatert": "2026-07-12T03:45:49Z"
     },
     "Argentina_Switzerland_2026_07_11": {
       "kamp_id": "Argentina_Switzerland_2026_07_11",
@@ -19600,109 +19600,131 @@
       "fd_utcDate": "2026-07-12T01:00:00Z",
       "hjemmelag": "Argentina",
       "bortelag": "Switzerland",
-      "hjemme_score": 1,
+      "hjemme_score": 3,
       "borte_score": 1,
       "gruppe": "",
       "runde": "qf",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Argentina and Switzerland are level at 1-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "Argentina beat Switzerland 3-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 4,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "Argentina_Switzerland_2026_07_11|3-1",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
+        "mangler": [
+          "resultat_i_fulltekst",
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 3,
-            "tippa_b": 2,
-            "poeng": 0
-          },
+        "eksakt": [
           {
             "navn": "Diyan K.",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
+            "poeng": 9
           },
           {
             "navn": "Ken Arne Hansen",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 2,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Marita Hauge Gjerde",
-            "tippa_h": 2,
-            "tippa_b": 0,
-            "poeng": 0
+            "poeng": 9
           },
           {
             "navn": "Anders Sundero",
             "tippa_h": 3,
             "tippa_b": 1,
-            "poeng": 0
+            "poeng": 9
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 5
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 5
+          },
+          {
+            "navn": "Vegard Hammervold Midtbø",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 5
+          },
+          {
+            "navn": "Kjetil bjerke",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 5
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 5
+          },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 0,
+            "poeng": 5
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 2,
+            "poeng": 5
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 5
+          },
+          {
+            "navn": "Marita Hauge Gjerde",
+            "tippa_h": 2,
+            "tippa_b": 0,
+            "poeng": 5
           },
           {
             "navn": "Ulf-Morten Johansen",
             "tippa_h": 2,
             "tippa_b": 0,
+            "poeng": 5
+          }
+        ],
+        "bom": [
+          {
+            "navn": "Sondre Garstad",
+            "tippa_h": 2,
+            "tippa_b": 2,
             "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-12T02:45:41Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-12T03:46:42Z"
     }
   }
 }

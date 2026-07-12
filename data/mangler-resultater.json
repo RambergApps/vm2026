@@ -1,16 +1,6 @@
 {
-  "sist_sjekket": "2026-07-12T03:31:34Z",
+  "sist_sjekket": "2026-07-12T03:45:41Z",
   "kamper": [
-    {
-      "type": "mangler_resultat",
-      "kamp_id": "Argentina_Switzerland_2026_07_11",
-      "hjemmelag": "Argentina",
-      "bortelag": "Switzerland",
-      "dato": "2026-07-11",
-      "runde": "qf",
-      "gruppe": "",
-      "status": "mangler_resultat"
-    },
     {
       "type": "mangler_regulartime",
       "kamp_id": "Norway_England_2026_07_11",

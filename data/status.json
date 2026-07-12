@@ -478,20 +478,20 @@
         "tippe_status": "aapen"
       },
       {
-        "id": "England_W100_2026_07_15",
+        "id": "England_Argentina_2026_07_15",
         "hjemme": "England",
-        "borte": "W100",
+        "borte": "Argentina",
         "dato": "2026-07-15",
         "info": "Autofyll fra avansement",
         "match_no": 102,
         "slot_hjemme": "W99",
         "slot_borte": "W100",
         "utcDate": "2026-07-15T19:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 1,
+    "antall_tippebare": 2,
     "neste_frist": "2026-07-14T19:00:00Z"
   },
   "final": {

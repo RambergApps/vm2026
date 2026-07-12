@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-11",
   "dato_norsk": "Lørdag 11. juli 2026",
-  "generert": "2026-07-12T00:01:38Z",
+  "generert": "2026-07-12T03:46:42Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -50,13 +50,13 @@
             "poeng": 9
           },
           {
-            "navn": "Bjørnar Tallaksrud",
+            "navn": "Diyan K.",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 9
           },
           {
-            "navn": "Diyan K.",
+            "navn": "Bjørnar Tallaksrud",
             "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 9
@@ -101,6 +101,12 @@
             "poeng": 0
           },
           {
+            "navn": "Anders Sundero",
+            "tippa_h": 3,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
             "navn": "Sondre Garstad",
             "tippa_h": 2,
             "tippa_b": 1,
@@ -110,12 +116,6 @@
             "navn": "Marita Hauge Gjerde",
             "tippa_h": 3,
             "tippa_b": 0,
-            "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 3,
-            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -132,79 +132,79 @@
     {
       "navn": "Pål André Nilsen",
       "plass": 1,
-      "poeng_totalt": 219,
+      "poeng_totalt": 234,
       "poeng_i_dag": 9
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 201,
+      "poeng_totalt": 216,
       "poeng_i_dag": 0
     },
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 3,
-      "poeng_totalt": 201,
+      "poeng_totalt": 206,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Olympus fc",
-      "plass": 4,
-      "poeng_totalt": 182,
-      "poeng_i_dag": 9
-    },
-    {
       "navn": "Kjetil bjerke",
-      "plass": 5,
-      "poeng_totalt": 178,
+      "plass": 4,
+      "poeng_totalt": 193,
       "poeng_i_dag": 0
     },
     {
       "navn": "Arne Kristian Johansen",
-      "plass": 6,
-      "poeng_totalt": 176,
+      "plass": 5,
+      "poeng_totalt": 191,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Bjørnar Tallaksrud",
-      "plass": 7,
-      "poeng_totalt": 167,
+      "navn": "Olympus fc",
+      "plass": 6,
+      "poeng_totalt": 187,
       "poeng_i_dag": 9
     },
     {
       "navn": "Diyan K.",
+      "plass": 7,
+      "poeng_totalt": 175,
+      "poeng_i_dag": 9
+    },
+    {
+      "navn": "Bjørnar Tallaksrud",
       "plass": 8,
-      "poeng_totalt": 166,
+      "poeng_totalt": 172,
       "poeng_i_dag": 9
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 9,
-      "poeng_totalt": 165,
+      "poeng_totalt": 170,
       "poeng_i_dag": 0
     },
     {
       "navn": "Ken Arne Hansen",
       "plass": 10,
-      "poeng_totalt": 155,
+      "poeng_totalt": 164,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Anders Sundero",
+      "plass": 11,
+      "poeng_totalt": 153,
       "poeng_i_dag": 0
     },
     {
       "navn": "Sondre Garstad",
-      "plass": 11,
+      "plass": 12,
       "poeng_totalt": 146,
       "poeng_i_dag": 0
     },
     {
       "navn": "Marita Hauge Gjerde",
-      "plass": 12,
-      "poeng_totalt": 138,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Anders Sundero",
       "plass": 13,
-      "poeng_totalt": 134,
+      "poeng_totalt": 143,
       "poeng_i_dag": 0
     },
     {
@@ -238,13 +238,13 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Jorgen Lindland",
+      "navn": "Ulf-Morten Johansen",
       "plass": 19,
-      "poeng_totalt": 104,
+      "poeng_totalt": 109,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Ulf-Morten Johansen",
+      "navn": "Jorgen Lindland",
       "plass": 20,
       "poeng_totalt": 104,
       "poeng_i_dag": 0
