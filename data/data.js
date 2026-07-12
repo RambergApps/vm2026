@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-12T01:01:25Z
+// Sist oppdatert: 2026-07-12T01:15:39Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-12T01:01:25Z",
+  "sist_oppdatert": "2026-07-12T01:15:39Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1947,16 +1947,12 @@ const VM_DATA = {
       "status": "IN_PLAY",
       "runde": "qf",
       "dato_openfootball": "2026-07-11",
-      "kilde_score": "fifa_calendar",
+      "kilde_score": "football_data_org",
       "dato_fd_org": "2026-07-12",
       "fd_match_id": 537386,
       "fd_utcDate": "2026-07-12T01:00:00Z",
       "fd_hjemmelag": "Argentina",
       "fd_bortelag": "Switzerland",
-      "fifa_event_id": "400021537",
-      "fifa_match_no": 100,
-      "fifa_utcDate": "2026-07-12T01:00:00Z",
-      "fifa_dato": "2026-07-12",
       "match_no": 100
     },
     "Norway_England_2026_07_11": {
@@ -2485,7 +2481,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-12T01:01:25Z"
+    "sist_beregnet": "2026-07-12T01:15:39Z"
   },
   "stilling": [
     {
