@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-12T03:01:26Z",
+  "tidspunkt": "2026-07-12T03:15:40Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -819,10 +819,10 @@
       "fd_bortelag": "Switzerland",
       "hjemmelag_normalisert": "Argentina",
       "bortelag_normalisert": "Switzerland",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "ferdig": false,
-      "hjemme": 1,
-      "borte": 1,
+      "hjemme": null,
+      "borte": null,
       "fd_dato": "2026-07-12",
       "fd_utcDate": "2026-07-12T01:00:00Z",
       "fd_kamp_id_basert_paa_dato": "Argentina_Switzerland_2026_07_12"
