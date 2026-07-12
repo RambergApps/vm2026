@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-12T03:52:21Z",
+  "sist_oppdatert": "2026-07-12T04:02:26Z",
   "antall_kamper": 100,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19612,7 +19612,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 2,
+        "antall_sok": 3,
         "fallback": true,
         "cache_key": "Argentina_Switzerland_2026_07_11|3-1",
         "serper_score": -100,
@@ -19622,7 +19622,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
+        "retry_antall": 3,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
         "mangler": [
@@ -19724,7 +19724,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-12T03:52:21Z"
+      "oppdatert": "2026-07-12T04:02:25Z"
     }
   }
 }

@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-12T03:51:39Z
+// Sist oppdatert: 2026-07-12T04:01:27Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-12T03:51:39Z",
+  "sist_oppdatert": "2026-07-12T04:01:27Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1957,6 +1957,7 @@ const VM_DATA = {
       "fifa_match_no": 100,
       "fifa_utcDate": "2026-07-12T01:00:00Z",
       "fifa_dato": "2026-07-12",
+      "avanserer": "Argentina",
       "match_no": 100
     },
     "Norway_England_2026_07_11": {
@@ -2486,7 +2487,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-12T03:51:39Z"
+    "sist_beregnet": "2026-07-12T04:01:27Z"
   },
   "stilling": [
     {
