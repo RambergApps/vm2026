@@ -451,12 +451,13 @@
         "slot_borte": "W96",
         "utcDate": "2026-07-12T01:00:00Z",
         "fd_match_id": 537386,
-        "tippebar": true,
-        "tippe_status": "aapen"
+        "fifa_event_id": "400021537",
+        "tippebar": false,
+        "tippe_status": "startet"
       }
     ],
-    "antall_tippebare": 1,
-    "neste_frist": "2026-07-12T01:00:00Z"
+    "antall_tippebare": 0,
+    "neste_frist": null
   },
   "sf": {
     "aapen": true,
