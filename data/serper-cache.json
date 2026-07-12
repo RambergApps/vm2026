@@ -7762,9 +7762,9 @@
   "Norway_England_2026_07_11|1-1": {
     "kamp_id": "Norway_England_2026_07_11",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-12T18:16:08Z",
-    "antall_sok": 56,
-    "beste_score": 4,
+    "sist_sokt": "2026-07-12T18:31:41Z",
+    "antall_sok": 57,
+    "beste_score": 10,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
@@ -7780,34 +7780,59 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-12T18:15:46Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
-      "brace_scorer": "",
+      "hentet": "2026-07-12T18:31:22Z",
+      "goal_events": [
+        {
+          "spiller": "Schjelderup",
+          "lag": "Norway",
+          "minutt": "36",
+          "type": "goal"
+        },
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "45+2",
+          "type": "goal"
+        },
+        {
+          "spiller": "Bellingham",
+          "lag": "England",
+          "minutt": "93",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Schjelderup",
+        "Bellingham"
+      ],
+      "lead_scorer": "Schjelderup",
+      "brace_scorer": "Bellingham",
       "hat_trick_player": "",
       "article_paragraphs": [
-        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights?searchOverlay=1)"
+        "Jude Bellingham's brace helped the Three Lions turn the tables on Norway and secure a semi-final date with either Argentina or Switzerland.",
+        "Jude Bellingham struck twice as England came from behind to beat Norway in extra time and book their place in the FIFA World Cup 2026™ semi-finals.",
+        "After a tentative start at Miami Stadium, Norway seized the initiative. Erling Haaland's header straight at Jordan Pickford was a warning England didn't heed, as Schjelderup swept a cross-shot in off the inside of the far post to give the Nordics a 36th-minute lead.",
+        "The Three Lions weathered a wave of pressure before levelling in first-half stoppage time through Bellingham's driving run and cool finish. Harry Kane had the ball in the net moments later, but the goal was ruled out for offside.",
+        "Torbjorn Heggem thought he had restored Norway's lead just before the hour mark, only for VAR to intervene and chalk off the effort for Haaland's push on Elliot Anderson following a corner."
       ],
       "key_stat": "",
       "player_of_match": "",
-      "early_lead": false,
-      "came_from_behind": false,
+      "early_lead": true,
+      "came_from_behind": true,
       "knockout_secured": false,
       "group_top": false,
       "hit_bar": false,
       "late_pressure": false,
-      "stoppage": null,
-      "brace_text": false,
+      "stoppage": true,
+      "brace_text": true,
       "first_goal_past_keeper": false,
       "all_goals_first_half": false,
       "lead_goal_early": false,
       "lead_goal_stoppage": false,
       "fastest_stat": false,
-      "record_stat": false,
+      "record_stat": true,
       "eliminated_loser": false,
-      "referat_fakta_score": 4,
+      "referat_fakta_score": 10,
       "mangler": [
         "resultat_i_fulltekst",
         "goal_events"
@@ -7821,8 +7846,8 @@
   "Argentina_Switzerland_2026_07_11|1-1": {
     "kamp_id": "Argentina_Switzerland_2026_07_11",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-12T18:16:56Z",
-    "antall_sok": 56,
+    "sist_sokt": "2026-07-12T18:32:31Z",
+    "antall_sok": 57,
     "beste_score": 11,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
@@ -7839,7 +7864,7 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-12T18:16:09Z",
+      "hentet": "2026-07-12T18:31:42Z",
       "goal_events": [
         {
           "spiller": "Mac Allister",
