@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-11T23:15:43Z",
+  "sist_oppdatert": "2026-07-12T00:01:38Z",
   "antall_kamper": 99,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19475,23 +19475,59 @@
       "borte_score": 2,
       "gruppe": "",
       "runde": "qf",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "England lead Norway 2-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "England beat Norway 2-1.\nGoals: Norway — Schjelderup (36); England — Bellingham (45+2, 93).\n\nJude Bellingham struck twice as England came from behind to beat Norway in extra time and book their place in the FIFA World Cup 2026™ semi-finals.\nErling Haaland's header straight at Jordan Pickford was a warning England didn't heed, as Schjelderup swept a cross-shot in off the inside of the far post to give the Nordics a 36th-minute lead.\nJude Bellingham's brace helped the Three Lions turn the tables on Norway and secure a semi-final date with either Argentina or Switzerland.\nAfter a tentative start at Miami Stadium, Norway seized the initiative.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "Norway_England_2026_07_11|1-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
             "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 2,
-            "poeng": 0
+            "poeng": 9
           },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 9
+          },
+          {
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 9
+          },
+          {
+            "navn": "Diyan K.",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 9
+          }
+        ],
+        "riktig": [],
+        "bom": [
           {
             "navn": "Alexander",
             "tippa_h": 2,
@@ -19517,26 +19553,8 @@
             "poeng": 0
           },
           {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
             "navn": "Sebastian Luranc",
             "tippa_h": 3,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 1,
             "tippa_b": 2,
             "poeng": 0
           },
@@ -19572,8 +19590,8 @@
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-11T23:15:43Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-12T00:01:38Z"
     }
   }
 }
