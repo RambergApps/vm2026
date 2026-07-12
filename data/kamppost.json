@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-11",
   "dato_norsk": "Lørdag 11. juli 2026",
-  "generert": "2026-07-12T06:32:27Z",
+  "generert": "2026-07-12T06:44:37Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 2,
+        "antall_sok": 3,
         "fallback": true,
         "cache_key": "Norway_England_2026_07_11|1-1",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 12,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
+        "retry_antall": 3,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-match-report-highlights",
         "mangler": [
