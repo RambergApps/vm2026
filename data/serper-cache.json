@@ -7846,9 +7846,9 @@
   "Argentina_Switzerland_2026_07_11|1-1": {
     "kamp_id": "Argentina_Switzerland_2026_07_11",
     "resultat": "1-1",
-    "sist_sokt": "2026-07-13T19:46:39Z",
-    "antall_sok": 167,
-    "beste_score": 4,
+    "sist_sokt": "2026-07-13T20:02:22Z",
+    "antall_sok": 168,
+    "beste_score": 11,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
@@ -7864,20 +7864,52 @@
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 1,
       "score": 10,
-      "hentet": "2026-07-13T19:45:52Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-07-13T20:01:34Z",
+      "goal_events": [
+        {
+          "spiller": "Mac Allister",
+          "lag": "Argentina",
+          "minutt": "10",
+          "type": "goal"
+        },
+        {
+          "spiller": "Alvarez",
+          "lag": "Argentina",
+          "minutt": "11",
+          "type": "goal"
+        },
+        {
+          "spiller": "Lautaro",
+          "lag": "Argentina",
+          "minutt": "12",
+          "type": "goal"
+        },
+        {
+          "spiller": "Ndoye",
+          "lag": "Switzerland",
+          "minutt": "67",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Mac Allister",
+        "Alvarez",
+        "Lautaro",
+        "Ndoye"
+      ],
+      "lead_scorer": "Mac Allister",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
         "Title: Argentina beat Switzerland in quarters | Match report & highlights",
         "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights?searchOverlay=1)"
+        "Argentina downed 10-man Switzerland in extra time in their FIFA World Cup 2026 quarter-final, a Julian Alvarez golazo headlining a hard-fought victory.",
+        "Julian Alvarez and Lautaro Martinez struck in extra time as Argentina outlasted Switzerland at Kansas City Stadium in the FIFA World Cup 2026™ quarter-finals. Lionel Scaloni’s side, who were at a numerical advantage for almost 50 minutes, will now face fierce rivals England in the second semi-final at Atlanta Stadium on Wednesday.",
+        "Switzerland started brightly, but Argentina struck first early through an unlikely source. Lionel Messi swung in the corner and 1.76-metre Alexis Mac Allister, despite being surrounded by towering opponents, headed it home firmly. They were indebted to Emiliano Martinez for staying ahead. Breel Embolo escaped Lisandro Martinez’s handcuffs and raced through on goal, only for the goalkeeper to race from his line and avert the danger. A defence-piercing Messi pass sent Nahuel Molina racing towards goal shortly into the second half, but the right-back dragged his shot wide. Switzerland suddenly took over and Dan Ndoye, after having one attempt heroically blocked by Lisandro and another saved superbly by Emiliano, slotted them level. The contest then swung back into Argentina’s favour when, in the 72nd minute, Embolo collected his second yellow card for simulation and was sent off. Messi almost snatched victory in normal time when he jinked inside and, with his right foot, curled the ball narrowly wide. Thiago Almada clipped the outside of Gregor Kobel’s post at the start of extra time, before a breathtaking Alvarez curler put Argentina in front and Lautaro sealed the deal."
       ],
       "key_stat": "",
-      "player_of_match": "",
-      "early_lead": false,
+      "player_of_match": "Julian Alvarez (Argentina)",
+      "early_lead": true,
       "came_from_behind": false,
       "knockout_secured": false,
       "group_top": false,
@@ -7887,12 +7919,12 @@
       "brace_text": false,
       "first_goal_past_keeper": false,
       "all_goals_first_half": false,
-      "lead_goal_early": false,
+      "lead_goal_early": true,
       "lead_goal_stoppage": false,
       "fastest_stat": false,
       "record_stat": false,
       "eliminated_loser": false,
-      "referat_fakta_score": 4,
+      "referat_fakta_score": 11,
       "mangler": [
         "resultat_i_fulltekst",
         "goal_events"
