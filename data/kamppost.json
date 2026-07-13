@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-12",
   "dato_norsk": "Søndag 12. juli 2026",
-  "generert": "2026-07-13T20:46:41Z",
+  "generert": "2026-07-13T21:02:21Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -15,21 +15,21 @@
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 11,
+        "score": 4,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 172,
+        "antall_sok": 173,
         "fallback": true,
         "cache_key": "Argentina_Switzerland_2026_07_11|1-1",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 11,
+        "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 172,
+        "retry_antall": 173,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
         "mangler": [
