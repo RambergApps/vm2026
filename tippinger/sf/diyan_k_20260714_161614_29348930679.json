@@ -1,0 +1,25 @@
+{
+  "bonus": {
+    "id": "totale_maal",
+    "svar": 6
+  },
+  "meta": {
+    "deltaker_id": "diyan_k",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-14T16:16:03.565Z",
+    "navn": "Diyan K.",
+    "runde": "sf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-14T16:16:14Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Spain",
+      "hjemme": 1,
+      "hjemmelag": "France",
+      "kamp_id": "France_Spain_2026_07_14",
+      "match_no": 101
+    }
+  ]
+}
