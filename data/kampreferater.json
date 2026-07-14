@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-14T20:31:31Z",
+  "sist_oppdatert": "2026-07-14T21:15:53Z",
   "antall_kamper": 101,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19732,12 +19732,29 @@
       "borte_score": 2,
       "gruppe": "",
       "runde": "sf",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Spain lead France 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "endelig",
+      "recap_tekst": "Spain beat France 2-0.\nGoals: Oyarzabal penalty (22) and Porro (58).\n\nGoals from Mikel Oyarzabal and Pedro Porro earned Spain a deserved 2-0 win over France at Dallas Stadium in their FIFA World Cup 2026 semi-final.\nLa Roja limited Les Bleus’ chances though some flawless defending, and scored thorough Mikel Oyarzabal and Pedro Porro.\nTitle: Spain outplay France to reach final | Match report & highlights\nSpain frustrated France at one end and punished them at the other to deservedly win their FIFA World Cup 2026™ semi-final at Dallas Stadium.\nPlayer of the Match: Pedro Porro (Spain).",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 11,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": false,
+        "cache_key": "France_Spain_2026_07_14|0-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 11,
+        "venter_pa_bedre_kilde": false,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-spain-match-report-highlights",
+        "mangler": [],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [],
@@ -19817,8 +19834,8 @@
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-14T20:31:31Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-14T21:15:52Z"
     }
   }
 }

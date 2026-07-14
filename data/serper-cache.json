@@ -7934,5 +7934,83 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "France_Spain_2026_07_14|0-2": {
+    "kamp_id": "France_Spain_2026_07_14",
+    "resultat": "0-2",
+    "sist_sokt": "2026-07-14T21:15:52Z",
+    "antall_sok": 1,
+    "beste_score": 11,
+    "status": "ok",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ok",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-spain-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": true,
+      "kamp_hjemme_score": 0,
+      "kamp_borte_score": 2,
+      "score": 10,
+      "hentet": "2026-07-14T21:15:52Z",
+      "goal_events": [
+        {
+          "spiller": "Oyarzabal",
+          "lag": "Spain",
+          "minutt": "22",
+          "type": "penalty"
+        },
+        {
+          "spiller": "Porro",
+          "lag": "Spain",
+          "minutt": "58",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Oyarzabal",
+        "Porro"
+      ],
+      "lead_scorer": "Oyarzabal",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "Title: Spain outplay France to reach final | Match report & highlights",
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-spain-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-spain-match-report-highlights?searchOverlay=1)",
+        "Goals from Mikel Oyarzabal and Pedro Porro earned Spain a deserved 2-0 win over France at Dallas Stadium in their FIFA World Cup 2026 semi-final.",
+        "Spain frustrated France at one end and punished them at the other to deservedly win their FIFA World Cup 2026™ semi-final at Dallas Stadium. La Roja limited Les Bleus’ chances though some flawless defending, and scored thorough Mikel Oyarzabal and Pedro Porro. Spain will now face the England-Argentina victors at New York New Jersey Stadium on Sunday. They emerged triumphant in their only previous appearance in the fixture, Andres Iniesta sinking the Netherlands at Soccer City in 2010. France started as the slight favourites and, though Kylian Mbappe threatened on the break, Lamine Yamal gave Luis de la Fuente’s side the game’s first big chance. The winger, a day after his 19th birthday, got to the ball before Lucas Digne and was clipped inside the box. Oyarzabal struck the resulting penalty past spot-kick-saving specialist Mike Maignan."
+      ],
+      "key_stat": "",
+      "player_of_match": "Pedro Porro (Spain)",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "winner_trailed_first": false,
+      "late_winner": false,
+      "deciding_last_goal": false,
+      "fastest_stat": false,
+      "record_stat": true,
+      "eliminated_loser": false,
+      "referat_fakta_score": 11,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-spain-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
+    }
   }
 }

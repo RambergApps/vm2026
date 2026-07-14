@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-14T21:01:31Z
+// Sist oppdatert: 2026-07-14T21:15:43Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-14T21:01:31Z",
+  "sist_oppdatert": "2026-07-14T21:15:43Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1985,8 +1985,8 @@ const VM_DATA = {
       "bortelag": "Spain",
       "hjemme": 0,
       "borte": 2,
-      "ferdig": false,
-      "status": "IN_PLAY",
+      "ferdig": true,
+      "status": "FINISHED",
       "runde": "sf",
       "dato_openfootball": "2026-07-14",
       "kilde_score": "football_data_org",
@@ -1995,6 +1995,7 @@ const VM_DATA = {
       "fd_utcDate": "2026-07-14T19:00:00Z",
       "fd_hjemmelag": "France",
       "fd_bortelag": "Spain",
+      "avanserer": "Spain",
       "match_no": 101
     },
     "England_Argentina_2026_07_15": {
@@ -2049,20 +2050,20 @@ const VM_DATA = {
       "flest_maal_lag": {
         "status": "paagaar",
         "ledere": [
-          "Belgium"
+          "Spain"
         ],
-        "antall_maal": 7,
-        "ferdige_kamper": 28,
+        "antall_maal": 8,
+        "ferdige_kamper": 29,
         "totalt_kamper": 31,
         "fasit": null,
         "sporsmal": "Hvilket lag scorer flest mål fra 32-delsfinalene til og med finalen i løpet av de første 90 minuttene, inkludert tilleggstid?"
       },
       "totale_maal_utslag": {
         "status": "paagaar",
-        "antall": 70,
+        "antall": 72,
         "forelopig_kategori": "47_77",
         "forelopig_kategori_tekst": "47–77 mål",
-        "ferdige_kamper": 28,
+        "ferdige_kamper": 29,
         "totalt_kamper": 31,
         "fasit": null,
         "fasit_tekst": null,
@@ -2073,7 +2074,7 @@ const VM_DATA = {
         "spiller": "Kylian Mbappe",
         "maal": 8,
         "assists": 3,
-        "minutter": 614,
+        "minutter": 666,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -2106,9 +2107,9 @@ const VM_DATA = {
       },
       "sf": {
         "status": "paagaar",
-        "ferdige_kamper": 0,
+        "ferdige_kamper": 1,
         "totalt_kamper": 2,
-        "verdi": 0,
+        "verdi": 2,
         "fasit": null,
         "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid"
       },
@@ -2128,7 +2129,7 @@ const VM_DATA = {
       "spiller": "Kylian Mbappe",
       "maal": 8,
       "assists": 3,
-      "minutter": 614
+      "minutter": 666
     },
     {
       "rank": 2,
@@ -2163,14 +2164,14 @@ const VM_DATA = {
       "spiller": "Ousmane Dembele",
       "maal": 5,
       "assists": 2,
-      "minutter": 543
+      "minutter": 595
     },
     {
       "rank": 7,
       "spiller": "Mikel Oyarzabal",
       "maal": 5,
       "assists": 1,
-      "minutter": 570
+      "minutter": 599
     },
     {
       "rank": 8,
@@ -2387,7 +2388,7 @@ const VM_DATA = {
       "spiller": "Bradley Barcola",
       "maal": 2,
       "assists": 1,
-      "minutter": 368
+      "minutter": 379
     },
     {
       "rank": 39,
@@ -2429,7 +2430,7 @@ const VM_DATA = {
       "spiller": "Mikel Merino",
       "maal": 2,
       "assists": 0,
-      "minutter": 180
+      "minutter": 200
     },
     {
       "rank": 45,
@@ -2484,7 +2485,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-14T21:01:31Z"
+    "sist_beregnet": "2026-07-14T21:15:43Z"
   },
   "stilling": [
     {
@@ -3984,8 +3985,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -5561,8 +5563,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -7110,8 +7113,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -8560,8 +8564,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -10113,8 +10118,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -11637,8 +11643,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -13172,8 +13179,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -14571,8 +14579,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -16095,8 +16104,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -17658,8 +17668,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -19187,8 +19198,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
@@ -22284,8 +22296,9 @@ const VM_DATA = {
           "faktisk_h": 0,
           "faktisk_b": 2,
           "poeng": 0,
-          "ferdig": false,
-          "status": "IN_PLAY",
+          "riktig_utfall": false,
+          "eksakt": false,
+          "ferdig": true,
           "runde": "sf"
         },
         {
