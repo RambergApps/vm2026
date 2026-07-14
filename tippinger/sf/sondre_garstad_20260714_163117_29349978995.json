@@ -1,0 +1,33 @@
+{
+  "bonus": {
+    "id": "totale_maal",
+    "svar": 3
+  },
+  "meta": {
+    "deltaker_id": "sondre_garstad",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-14T16:31:06.907Z",
+    "navn": "Sondre Garstad",
+    "runde": "sf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-14T16:31:17Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Spain",
+      "hjemme": 2,
+      "hjemmelag": "France",
+      "kamp_id": "France_Spain_2026_07_14",
+      "match_no": 101
+    },
+    {
+      "borte": 1,
+      "bortelag": "Argentina",
+      "hjemme": 1,
+      "hjemmelag": "England",
+      "kamp_id": "England_Argentina_2026_07_15",
+      "match_no": 102
+    }
+  ]
+}
