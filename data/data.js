@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-14T19:15:45Z
+// Sist oppdatert: 2026-07-14T19:31:24Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-14T19:15:45Z",
+  "sist_oppdatert": "2026-07-14T19:31:24Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1984,7 +1984,7 @@ const VM_DATA = {
       "hjemmelag": "France",
       "bortelag": "Spain",
       "hjemme": 0,
-      "borte": 0,
+      "borte": 1,
       "ferdig": false,
       "status": "IN_PLAY",
       "runde": "sf",
@@ -2484,7 +2484,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-14T19:15:45Z"
+    "sist_beregnet": "2026-07-14T19:31:24Z"
   },
   "stilling": [
     {
@@ -3982,7 +3982,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -5559,7 +5559,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -7108,7 +7108,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -8558,7 +8558,7 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -10111,7 +10111,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -11635,7 +11635,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -13170,7 +13170,7 @@ const VM_DATA = {
           "tippa_h": 3,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -14569,7 +14569,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 0,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -16093,7 +16093,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 2,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -17656,7 +17656,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -19185,7 +19185,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -22282,7 +22282,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 0,
-          "faktisk_b": 0,
+          "faktisk_b": 1,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
