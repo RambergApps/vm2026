@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-14T20:15:42Z",
+  "sist_oppdatert": "2026-07-14T20:31:31Z",
   "antall_kamper": 101,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19729,12 +19729,12 @@
       "hjemmelag": "France",
       "bortelag": "Spain",
       "hjemme_score": 0,
-      "borte_score": 1,
+      "borte_score": 2,
       "gruppe": "",
       "runde": "sf",
       "kampstatus": "IN_PLAY",
       "referatstatus": "midlertidig",
-      "recap_tekst": "Spain lead France 1-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "Spain lead France 2-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -19818,7 +19818,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-14T20:15:42Z"
+      "oppdatert": "2026-07-14T20:31:31Z"
     }
   }
 }
