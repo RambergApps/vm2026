@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-14T08:45:54Z",
+  "sist_oppdatert": "2026-07-14T08:53:12Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -896,6 +896,14 @@
             "USA_Bosnia___Herzegovina_2026_07_02"
           ],
           "bonus": false
+        },
+        "sf": {
+          "kamper": [
+            "England_Argentina_2026_07_15",
+            "France_Spain_2026_07_14"
+          ],
+          "bonus": true,
+          "bonus_id": "totale_maal"
         }
       }
     },
