@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-14T18:45:46Z
+// Sist oppdatert: 2026-07-14T19:01:29Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-14T18:45:46Z",
+  "sist_oppdatert": "2026-07-14T19:01:29Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -1983,18 +1983,22 @@ const VM_DATA = {
       "canonical_kamp_id": "France_Spain_2026_07_14",
       "hjemmelag": "France",
       "bortelag": "Spain",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "sf",
       "dato_openfootball": "2026-07-14",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-14",
       "fd_match_id": 537387,
       "fd_utcDate": "2026-07-14T19:00:00Z",
       "fd_hjemmelag": "France",
       "fd_bortelag": "Spain",
+      "fifa_event_id": "400021541",
+      "fifa_match_no": 101,
+      "fifa_utcDate": "2026-07-14T19:00:00Z",
+      "fifa_dato": "2026-07-14",
       "match_no": 101
     },
     "England_Argentina_2026_07_15": {
@@ -2105,7 +2109,7 @@ const VM_DATA = {
         "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid"
       },
       "sf": {
-        "status": "ikke_startet",
+        "status": "paagaar",
         "ferdige_kamper": 0,
         "totalt_kamper": 2,
         "verdi": 0,
@@ -2180,13 +2184,6 @@ const VM_DATA = {
       "minutter": 440
     },
     {
-      "rank": 9,
-      "spiller": "Vinicius Junior",
-      "maal": 4,
-      "assists": 1,
-      "minutter": 505
-    },
-    {
       "rank": 10,
       "spiller": "Mikel Oyarzabal",
       "maal": 4,
@@ -2241,13 +2238,6 @@ const VM_DATA = {
       "maal": 3,
       "assists": 0,
       "minutter": 291
-    },
-    {
-      "rank": 18,
-      "spiller": "Matheus Cunha",
-      "maal": 3,
-      "assists": 0,
-      "minutter": 324
     },
     {
       "rank": 19,
@@ -2472,6 +2462,20 @@ const VM_DATA = {
       "maal": 2,
       "assists": 0,
       "minutter": 395
+    },
+    {
+      "rank": 51,
+      "spiller": "Dan Ndoye",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 437
+    },
+    {
+      "rank": 52,
+      "spiller": "Daniel Munoz",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 451
     }
   ],
   "startpoengstatus": {
@@ -2484,7 +2488,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-14T18:45:46Z"
+    "sist_beregnet": "2026-07-14T19:01:29Z"
   },
   "stilling": [
     {
@@ -3976,6 +3980,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -4004,6 +4021,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 4,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -5530,6 +5557,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -5558,6 +5598,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -7056,6 +7106,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r16",
           "sporsmal": "Antall lag som holder nullen i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -7074,6 +7137,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 3
@@ -8483,6 +8556,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -8501,6 +8587,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 7,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -10013,6 +10109,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "qf",
           "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -10021,6 +10130,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 5
@@ -11514,6 +11633,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -11542,6 +11674,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -13026,6 +13168,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 3,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -13044,6 +13199,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 6,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -14402,6 +14567,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 0,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "qf",
           "sporsmal": "Antall kamper som avgjøres med ett mål i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -14410,6 +14588,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 3,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 8
@@ -15903,6 +16091,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -15931,6 +16132,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 3,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -17441,6 +17652,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "type": "bonus",
@@ -18959,6 +19183,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -18977,6 +19214,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 6,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -22033,6 +22280,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "France_Spain_2026_07_14",
+          "hjemmelag": "France",
+          "bortelag": "Spain",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "type": "bonus",
           "runde": "r32",
           "sporsmal": "Antall kamper som ender uavgjort i løpet av de første 90 minuttene, inkludert tilleggstid",
@@ -22061,6 +22321,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "sf",
+          "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid",
+          "svar": 5,
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
