@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-14T11:45:41Z",
+  "sist_oppdatert": "2026-07-14T12:01:37Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -587,6 +587,14 @@
             "totale_maal_utslag": true,
             "golden_boot": true
           }
+        },
+        "sf": {
+          "kamper": [
+            "England_Argentina_2026_07_15",
+            "France_Spain_2026_07_14"
+          ],
+          "bonus": true,
+          "bonus_id": "totale_maal"
         }
       }
     },
