@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-15T22:45:42Z
+// Sist oppdatert: 2026-07-15T23:01:37Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-15T22:45:42Z",
+  "sist_oppdatert": "2026-07-15T23:01:37Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2151,14 +2151,14 @@ const VM_DATA = {
       "spiller": "Jude Bellingham",
       "maal": 6,
       "assists": 1,
-      "minutter": 678
+      "minutter": 679
     },
     {
       "rank": 5,
       "spiller": "Harry Kane",
       "maal": 6,
       "assists": 1,
-      "minutter": 731
+      "minutter": 732
     },
     {
       "rank": 6,
@@ -2221,7 +2221,7 @@ const VM_DATA = {
       "spiller": "Lautaro Martinez",
       "maal": 3,
       "assists": 1,
-      "minutter": 369
+      "minutter": 368
     },
     {
       "rank": 15,
@@ -2486,7 +2486,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-15T22:45:42Z"
+    "sist_beregnet": "2026-07-15T23:01:37Z"
   },
   "stilling": [
     {
