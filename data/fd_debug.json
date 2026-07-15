@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-15T20:45:39Z",
+  "tidspunkt": "2026-07-15T21:01:28Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -864,7 +864,7 @@
       "status": "IN_PLAY",
       "ferdig": false,
       "hjemme": 1,
-      "borte": 0,
+      "borte": 2,
       "fd_dato": "2026-07-15",
       "fd_utcDate": "2026-07-15T19:00:00Z",
       "fd_kamp_id_basert_paa_dato": "England_Argentina_2026_07_15"

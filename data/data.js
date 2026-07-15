@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-15T20:45:40Z
+// Sist oppdatert: 2026-07-15T21:01:28Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-15T20:45:40Z",
+  "sist_oppdatert": "2026-07-15T21:01:28Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2004,7 +2004,7 @@ const VM_DATA = {
       "hjemmelag": "England",
       "bortelag": "Argentina",
       "hjemme": 1,
-      "borte": 0,
+      "borte": 2,
       "ferdig": false,
       "status": "IN_PLAY",
       "runde": "sf",
@@ -2135,8 +2135,8 @@ const VM_DATA = {
       "rank": 2,
       "spiller": "Lionel Messi",
       "maal": 8,
-      "assists": 2,
-      "minutter": 657
+      "assists": 3,
+      "minutter": 699
     },
     {
       "rank": 3,
@@ -2150,14 +2150,14 @@ const VM_DATA = {
       "spiller": "Jude Bellingham",
       "maal": 6,
       "assists": 1,
-      "minutter": 624
+      "minutter": 665
     },
     {
       "rank": 5,
       "spiller": "Harry Kane",
       "maal": 6,
       "assists": 1,
-      "minutter": 677
+      "minutter": 718
     },
     {
       "rank": 6,
@@ -2371,17 +2371,17 @@ const VM_DATA = {
     },
     {
       "rank": 36,
-      "spiller": "Lautaro Martinez",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 347
-    },
-    {
-      "rank": 37,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
+    },
+    {
+      "rank": 37,
+      "spiller": "Lautaro Martinez",
+      "maal": 2,
+      "assists": 1,
+      "minutter": 355
     },
     {
       "rank": 38,
@@ -2485,7 +2485,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-15T20:45:40Z"
+    "sist_beregnet": "2026-07-15T21:01:28Z"
   },
   "stilling": [
     {
@@ -3983,7 +3983,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -5574,7 +5574,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -7137,7 +7137,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -8601,7 +8601,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 2,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -10168,7 +10168,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -11706,7 +11706,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -13255,7 +13255,7 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -14668,7 +14668,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -16206,7 +16206,7 @@ const VM_DATA = {
           "tippa_h": 1,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -17783,7 +17783,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -19326,7 +19326,7 @@ const VM_DATA = {
           "tippa_h": 2,
           "tippa_b": 1,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
@@ -22437,7 +22437,7 @@ const VM_DATA = {
           "tippa_h": 0,
           "tippa_b": 2,
           "faktisk_h": 1,
-          "faktisk_b": 0,
+          "faktisk_b": 2,
           "poeng": 0,
           "ferdig": false,
           "status": "IN_PLAY",
