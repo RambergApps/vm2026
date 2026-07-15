@@ -1,0 +1,25 @@
+{
+  "bonus": {
+    "id": "begge_lag_scorer",
+    "svar": "ja"
+  },
+  "meta": {
+    "deltaker_id": "kjetil_bjerke",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-15T22:06:39.021Z",
+    "navn": "Kjetil bjerke",
+    "runde": "final",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-15T22:06:49Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Argentina",
+      "hjemme": 1,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Argentina_2026_07_19",
+      "match_no": 104
+    }
+  ]
+}
