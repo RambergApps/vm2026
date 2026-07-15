@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "deltaker_id": "diyan_k",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-15T14:41:26.573Z",
+    "navn": "Diyan K.",
+    "runde": "sf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-15T14:41:37Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Argentina",
+      "hjemme": 2,
+      "hjemmelag": "England",
+      "kamp_id": "England_Argentina_2026_07_15",
+      "match_no": 102
+    }
+  ]
+}
