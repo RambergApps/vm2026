@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-15T20:15:52Z
+// Sist oppdatert: 2026-07-15T20:31:25Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-15T20:15:52Z",
+  "sist_oppdatert": "2026-07-15T20:31:25Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2003,7 +2003,7 @@ const VM_DATA = {
       "canonical_kamp_id": "England_Argentina_2026_07_15",
       "hjemmelag": "England",
       "bortelag": "Argentina",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "ferdig": false,
       "status": "IN_PLAY",
@@ -2485,7 +2485,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-15T20:15:52Z"
+    "sist_beregnet": "2026-07-15T20:31:25Z"
   },
   "stilling": [
     {
@@ -3982,7 +3982,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -5573,7 +5573,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -7136,7 +7136,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -8600,7 +8600,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -10167,7 +10167,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -11705,7 +11705,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -13254,7 +13254,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 0,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -14667,7 +14667,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -16205,7 +16205,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -17782,7 +17782,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -19325,7 +19325,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -22436,7 +22436,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 0,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
