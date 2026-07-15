@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-15T22:01:29Z",
+  "sist_oppdatert": "2026-07-15T22:15:40Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -440,6 +440,13 @@
       "navn": "Kjetil bjerke",
       "deltaker_type": "ordinaer",
       "runder": {
+        "final": {
+          "kamper": [
+            "Spain_Argentina_2026_07_19"
+          ],
+          "bonus": true,
+          "bonus_id": "begge_lag_scorer"
+        },
         "qf": {
           "kamper": [
             "Argentina_Switzerland_2026_07_11",
