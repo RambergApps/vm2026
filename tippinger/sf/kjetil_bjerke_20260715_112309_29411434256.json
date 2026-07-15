@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "deltaker_id": "kjetil_bjerke",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-15T11:22:58.438Z",
+    "navn": "Kjetil bjerke",
+    "runde": "sf",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-15T11:23:09Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Argentina",
+      "hjemme": 1,
+      "hjemmelag": "England",
+      "kamp_id": "England_Argentina_2026_07_15",
+      "match_no": 102
+    }
+  ]
+}
