@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-15T08:15:46Z
+// Sist oppdatert: 2026-07-15T08:31:25Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-15T08:15:46Z",
+  "sist_oppdatert": "2026-07-15T08:31:25Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2017,10 +2017,10 @@ const VM_DATA = {
       "fd_bortelag": "Argentina",
       "match_no": 102
     },
-    "L101_L102_2026_07_18": {
-      "kamp_id": "L101_L102_2026_07_18",
-      "canonical_kamp_id": "L101_L102_2026_07_18",
-      "hjemmelag": "L101",
+    "France_L102_2026_07_18": {
+      "kamp_id": "France_L102_2026_07_18",
+      "canonical_kamp_id": "France_L102_2026_07_18",
+      "hjemmelag": "France",
       "bortelag": "L102",
       "hjemme": null,
       "borte": null,
@@ -2030,10 +2030,10 @@ const VM_DATA = {
       "dato_openfootball": "2026-07-18",
       "kilde_score": "openfootball"
     },
-    "W101_W102_2026_07_19": {
-      "kamp_id": "W101_W102_2026_07_19",
-      "canonical_kamp_id": "W101_W102_2026_07_19",
-      "hjemmelag": "W101",
+    "Spain_W102_2026_07_19": {
+      "kamp_id": "Spain_W102_2026_07_19",
+      "canonical_kamp_id": "Spain_W102_2026_07_19",
+      "hjemmelag": "Spain",
       "bortelag": "W102",
       "hjemme": null,
       "borte": null,
@@ -2485,7 +2485,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-15T08:15:46Z"
+    "sist_beregnet": "2026-07-15T08:31:25Z"
   },
   "stilling": [
     {
