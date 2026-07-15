@@ -8016,10 +8016,10 @@
   "England_Argentina_2026_07_15|1-2": {
     "kamp_id": "England_Argentina_2026_07_15",
     "resultat": "1-2",
-    "sist_sokt": "2026-07-15T21:12:00Z",
-    "antall_sok": 1,
-    "beste_score": 4,
-    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "sist_sokt": "2026-07-15T21:15:52Z",
+    "antall_sok": 2,
+    "beste_score": 12,
+    "status": "ok",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
@@ -8030,19 +8030,45 @@
       "domene": "fifa.com",
       "source_type": "article_report",
       "fulltekst_riktig_kamp": true,
-      "resultat_i_fulltekst": false,
+      "resultat_i_fulltekst": true,
       "kamp_hjemme_score": 1,
       "kamp_borte_score": 2,
       "score": 10,
-      "hentet": "2026-07-15T21:11:34Z",
-      "goal_events": [],
-      "scorere": [],
-      "lead_scorer": "",
+      "hentet": "2026-07-15T21:15:52Z",
+      "goal_events": [
+        {
+          "spiller": "Gordon",
+          "lag": "England",
+          "minutt": "55",
+          "type": "goal"
+        },
+        {
+          "spiller": "Fernandez",
+          "lag": "Argentina",
+          "minutt": "85",
+          "type": "goal"
+        },
+        {
+          "spiller": "Martinez",
+          "lag": "Argentina",
+          "minutt": "90+2",
+          "type": "goal"
+        }
+      ],
+      "scorere": [
+        "Gordon",
+        "Fernandez",
+        "Martinez"
+      ],
+      "lead_scorer": "Gordon",
       "brace_scorer": "",
       "hat_trick_player": "",
       "article_paragraphs": [
         "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights",
-        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights?searchOverlay=1)"
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights?searchOverlay=1)",
+        "Holders Argentina staged a late fightback to defeat England 2-1 and advance to Sunday's final against Spain in New York New Jersey.",
+        "Holders Argentina fought back from the brink to beat England and advance to Sunday's FIFA World Cup 2026™ final against Spain.",
+        "Enzo Fernandez and Lisandro Martinez struck the late goals in a dramatic turnaround in Atlanta just when England were closing in on their first final in 60 years, following Anthony Gordon's goal early in the second half. Instead Lionel Scaloni's men can now look forward to their seventh World Cup final, and stand a step away from retaining their world crown."
       ],
       "key_stat": "",
       "player_of_match": "",
@@ -8054,19 +8080,20 @@
       "late_pressure": false,
       "stoppage": null,
       "brace_text": false,
-      "first_goal_past_keeper": false,
+      "first_goal_assist": "the right.",
+      "first_goal_past_keeper": true,
       "all_goals_first_half": false,
       "lead_goal_early": false,
       "lead_goal_stoppage": false,
+      "winner_trailed_first": true,
+      "late_winner": true,
+      "deciding_last_goal": true,
       "fastest_stat": false,
-      "record_stat": false,
+      "record_stat": true,
       "eliminated_loser": false,
-      "referat_fakta_score": 4,
-      "mangler": [
-        "resultat_i_fulltekst",
-        "goal_events"
-      ],
-      "rikt_fulltekstgrunnlag": false,
+      "referat_fakta_score": 12,
+      "mangler": [],
+      "rikt_fulltekstgrunnlag": true,
       "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights",
       "direct_fifa_probe": true,
       "_forsok_url": 1

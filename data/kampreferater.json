@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-15T21:12:00Z",
+  "sist_oppdatert": "2026-07-15T21:15:52Z",
   "antall_kamper": 102,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19849,30 +19849,27 @@
       "gruppe": "",
       "runde": "sf",
       "kampstatus": "FINISHED",
-      "referatstatus": "forelopig",
-      "recap_tekst": "Argentina beat England 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "referatstatus": "endelig",
+      "recap_tekst": "Argentina beat England 2-1.\nGoals: England — Gordon (55); Argentina — Fernandez (85) and Martinez (90+2).\n\nHolders Argentina fought back from the brink to beat England and advance to Sunday's FIFA World Cup 2026™ final against Spain.\nEnzo Fernandez and Lisandro Martinez struck the late goals in a dramatic turnaround in Atlanta just when England were closing in on their first final in 60 years, following Anthony Gordon's goal early in the second half.\nHolders Argentina staged a late fightback to defeat England 2-1 and advance to Sunday's final against Spain in New York New Jersey.\nInstead Lionel Scaloni's men can now look forward to their seventh World Cup final, and stand a step away from retaining their world crown.",
       "recap_kvalitet": {
-        "score": 4,
-        "status": "forelopig_fifa_kriterier_ikke_mott",
-        "grunnlag": "forelopig",
+        "score": 12,
+        "status": "ok",
+        "grunnlag": "fifa_fulltekst",
         "source_type": "article_report",
-        "antall_sok": 1,
-        "fallback": true,
+        "antall_sok": 2,
+        "fallback": false,
         "cache_key": "England_Argentina_2026_07_15|1-2",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
         "fulltekst_score": 10,
-        "referat_fakta_score": 4,
-        "venter_pa_bedre_kilde": true,
+        "referat_fakta_score": 12,
+        "venter_pa_bedre_kilde": false,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights",
-        "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
-        ],
+        "mangler": [],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
@@ -19956,7 +19953,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-15T21:12:00Z"
+      "oppdatert": "2026-07-15T21:15:52Z"
     }
   }
 }
