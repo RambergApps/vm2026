@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-15T18:45:44Z
+// Sist oppdatert: 2026-07-15T19:01:31Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-15T18:45:44Z",
+  "sist_oppdatert": "2026-07-15T19:01:31Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2003,18 +2003,22 @@ const VM_DATA = {
       "canonical_kamp_id": "England_Argentina_2026_07_15",
       "hjemmelag": "England",
       "bortelag": "Argentina",
-      "hjemme": null,
-      "borte": null,
+      "hjemme": 0,
+      "borte": 0,
       "ferdig": false,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "runde": "sf",
       "dato_openfootball": "2026-07-15",
-      "kilde_score": "openfootball",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-15",
       "fd_match_id": 537388,
       "fd_utcDate": "2026-07-15T19:00:00Z",
       "fd_hjemmelag": "England",
       "fd_bortelag": "Argentina",
+      "fifa_event_id": "400021540",
+      "fifa_match_no": 102,
+      "fifa_utcDate": "2026-07-15T19:00:00Z",
+      "fifa_dato": "2026-07-15",
       "match_no": 102
     },
     "France_L102_2026_07_18": {
@@ -2485,7 +2489,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-15T18:45:44Z"
+    "sist_beregnet": "2026-07-15T19:01:31Z"
   },
   "stilling": [
     {
@@ -3975,6 +3979,19 @@ const VM_DATA = {
           "eksakt": true,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -5555,6 +5572,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "kamp_id": "France_Spain_2026_07_14",
           "hjemmelag": "France",
           "bortelag": "Spain",
@@ -7105,6 +7135,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "kamp_id": "France_Spain_2026_07_14",
           "hjemmelag": "France",
           "bortelag": "Spain",
@@ -8554,6 +8597,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -10110,6 +10166,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "kamp_id": "France_Spain_2026_07_14",
           "hjemmelag": "France",
           "bortelag": "Spain",
@@ -11633,6 +11702,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -13171,6 +13253,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 0,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "kamp_id": "France_Spain_2026_07_14",
           "hjemmelag": "France",
           "bortelag": "Spain",
@@ -14569,6 +14664,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -16094,6 +16202,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -17660,6 +17781,19 @@ const VM_DATA = {
           "runde": "r32"
         },
         {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
+        },
+        {
           "kamp_id": "France_Spain_2026_07_14",
           "hjemmelag": "France",
           "bortelag": "Spain",
@@ -19188,6 +19322,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
@@ -22286,6 +22433,19 @@ const VM_DATA = {
           "eksakt": false,
           "ferdig": true,
           "runde": "r32"
+        },
+        {
+          "kamp_id": "England_Argentina_2026_07_15",
+          "hjemmelag": "England",
+          "bortelag": "Argentina",
+          "tippa_h": 0,
+          "tippa_b": 2,
+          "faktisk_h": 0,
+          "faktisk_b": 0,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "IN_PLAY",
+          "runde": "sf"
         },
         {
           "kamp_id": "France_Spain_2026_07_14",
