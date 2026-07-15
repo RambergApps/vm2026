@@ -489,6 +489,7 @@
         "slot_borte": "W100",
         "utcDate": "2026-07-15T19:00:00Z",
         "fd_match_id": 537388,
+        "avanserer": "Argentina",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -497,24 +498,24 @@
     "neste_frist": null
   },
   "final": {
-    "aapen": false,
+    "aapen": true,
     "frist": "2026-07-19T19:00:00Z",
     "kamper": [
       {
-        "id": "Spain_W102_2026_07_19",
+        "id": "Spain_Argentina_2026_07_19",
         "hjemme": "Spain",
-        "borte": "W102",
+        "borte": "Argentina",
         "dato": "2026-07-19",
-        "info": "Autofyll fra avansement",
+        "info": "Kampoppsett bekreftet",
         "match_no": 104,
         "slot_hjemme": "W101",
         "slot_borte": "W102",
         "utcDate": "2026-07-19T19:00:00Z",
-        "tippebar": false,
-        "tippe_status": "venter_pa_lag"
+        "tippebar": true,
+        "tippe_status": "aapen"
       }
     ],
-    "antall_tippebare": 0,
-    "neste_frist": null
+    "antall_tippebare": 1,
+    "neste_frist": "2026-07-19T19:00:00Z"
   }
 }

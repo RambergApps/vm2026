@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-15T21:01:28Z",
+  "tidspunkt": "2026-07-15T21:11:26Z",
   "kamper": {
     "400021440": {
       "fifa_event_id": "400021440",
@@ -1305,14 +1305,14 @@
       "fifa_event_id": "400021540",
       "hjemmelag": "England",
       "bortelag": "Argentina",
-      "status": "IN_PLAY",
-      "fifa_status_raw": 3,
-      "ferdig": false,
+      "status": "FINISHED",
+      "fifa_status_raw": 0,
+      "ferdig": true,
       "hjemme": 1,
       "borte": 2,
       "fifa_dato": "2026-07-15",
       "fifa_utcDate": "2026-07-15T19:00:00Z",
-      "fifa_match_time": "90'+10'"
+      "fifa_match_time": "102'"
     },
     "400021541": {
       "fifa_event_id": "400021541",
@@ -1326,6 +1326,32 @@
       "fifa_dato": "2026-07-14",
       "fifa_utcDate": "2026-07-14T19:00:00Z",
       "fifa_match_time": "98'"
+    },
+    "400021542": {
+      "fifa_event_id": "400021542",
+      "hjemmelag": "France",
+      "bortelag": "England",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-18",
+      "fifa_utcDate": "2026-07-18T21:00:00Z",
+      "fifa_match_time": null
+    },
+    "400021543": {
+      "fifa_event_id": "400021543",
+      "hjemmelag": "Spain",
+      "bortelag": "Argentina",
+      "status": "TIMED",
+      "fifa_status_raw": 1,
+      "ferdig": false,
+      "hjemme": null,
+      "borte": null,
+      "fifa_dato": "2026-07-19",
+      "fifa_utcDate": "2026-07-19T19:00:00Z",
+      "fifa_match_time": null
     }
   }
 }

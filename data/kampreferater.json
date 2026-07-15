@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-15T21:01:30Z",
+  "sist_oppdatert": "2026-07-15T21:12:00Z",
   "antall_kamper": 102,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19761,7 +19761,7 @@
         "riktig": [],
         "bom": [
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -19773,7 +19773,7 @@
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -19835,7 +19835,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-14T21:15:52Z"
+      "oppdatert": "2026-07-15T21:11:27Z"
     },
     "England_Argentina_2026_07_15": {
       "kamp_id": "England_Argentina_2026_07_15",
@@ -19848,23 +19848,63 @@
       "borte_score": 2,
       "gruppe": "",
       "runde": "sf",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "Argentina lead England 2-1.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "Argentina beat England 2-1.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 4,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "article_report",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "England_Argentina_2026_07_15|1-2",
+        "serper_score": -100,
+        "fulltekst_status": "ok",
+        "fulltekst_kilde": "fifa.com",
+        "fulltekst_score": 10,
+        "referat_fakta_score": 4,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": true,
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights",
+        "mangler": [
+          "resultat_i_fulltekst",
+          "goal_events"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [],
-        "riktig": [],
-        "bom": [
+        "eksakt": [
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
+            "tippa_b": 2,
+            "poeng": 10
           },
+          {
+            "navn": "Olympus fc",
+            "tippa_h": 1,
+            "tippa_b": 2,
+            "poeng": 10
+          }
+        ],
+        "riktig": [
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 0,
+            "tippa_b": 1,
+            "poeng": 6
+          },
+          {
+            "navn": "Anders Sundero",
+            "tippa_h": 0,
+            "tippa_b": 2,
+            "poeng": 6
+          }
+        ],
+        "bom": [
           {
             "navn": "Alexander",
             "tippa_h": 1,
@@ -19872,15 +19912,9 @@
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Pål André Nilsen",
             "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 0
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -19892,12 +19926,6 @@
           {
             "navn": "Arne Kristian Johansen",
             "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 0,
             "tippa_b": 1,
             "poeng": 0
           },
@@ -19924,17 +19952,11 @@
             "tippa_h": 2,
             "tippa_b": 1,
             "poeng": 0
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 0
           }
         ]
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-15T21:01:29Z"
+      "kilde": "fifa.com",
+      "oppdatert": "2026-07-15T21:12:00Z"
     }
   }
 }

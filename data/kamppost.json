@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-14",
   "dato_norsk": "Tirsdag 14. juli 2026",
-  "generert": "2026-07-14T22:01:33Z",
+  "generert": "2026-07-15T21:12:00Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -40,7 +40,7 @@
         "riktig": [],
         "bom": [
           {
-            "navn": "Pål André Nilsen",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -52,7 +52,7 @@
             "poeng": 0
           },
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Pål André Nilsen",
             "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 0
@@ -117,45 +117,45 @@
   ],
   "stilling": [
     {
-      "navn": "Pål André Nilsen",
+      "navn": "Vegard Hammervold Midtbø",
       "plass": 1,
-      "poeng_totalt": 210,
+      "poeng_totalt": 221,
       "poeng_i_dag": 0
     },
     {
       "navn": "Alexander",
       "plass": 2,
-      "poeng_totalt": 201,
+      "poeng_totalt": 211,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Vegard Hammervold Midtbø",
+      "navn": "Pål André Nilsen",
       "plass": 3,
-      "poeng_totalt": 201,
+      "poeng_totalt": 210,
       "poeng_i_dag": 0
     },
     {
       "navn": "Olympus fc",
       "plass": 4,
-      "poeng_totalt": 183,
+      "poeng_totalt": 193,
       "poeng_i_dag": 0
     },
     {
       "navn": "Kjetil bjerke",
       "plass": 5,
-      "poeng_totalt": 178,
+      "poeng_totalt": 188,
       "poeng_i_dag": 0
     },
     {
       "navn": "Arne Kristian Johansen",
       "plass": 6,
-      "poeng_totalt": 176,
+      "poeng_totalt": 186,
       "poeng_i_dag": 0
     },
     {
       "navn": "Sebastian Luranc",
       "plass": 7,
-      "poeng_totalt": 175,
+      "poeng_totalt": 181,
       "poeng_i_dag": 0
     },
     {
@@ -183,15 +183,15 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Marita Hauge Gjerde",
+      "navn": "Anders Sundero",
       "plass": 12,
-      "poeng_totalt": 138,
+      "poeng_totalt": 150,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Anders Sundero",
+      "navn": "Marita Hauge Gjerde",
       "plass": 13,
-      "poeng_totalt": 134,
+      "poeng_totalt": 138,
       "poeng_i_dag": 0
     },
     {
