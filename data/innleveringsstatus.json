@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-15T21:31:23Z",
+  "sist_oppdatert": "2026-07-15T21:45:41Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -675,6 +675,13 @@
       "navn": "Sebastian Luranc",
       "deltaker_type": "ordinaer",
       "runder": {
+        "final": {
+          "kamper": [
+            "Spain_Argentina_2026_07_19"
+          ],
+          "bonus": true,
+          "bonus_id": "begge_lag_scorer"
+        },
         "qf": {
           "kamper": [
             "Argentina_Switzerland_2026_07_11",
