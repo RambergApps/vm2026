@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-12T15:08:48Z",
+  "sist_oppdatert": "2026-07-16T06:15:46Z",
   "kamper": {
     "Algeria_Austria_2026_06_27": {
       "of_kamp_id": "Algeria_Austria_2026_06_27",
@@ -648,6 +648,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-14T13:10:37Z"
+    },
+    "France_England_2026_07_18": {
+      "of_kamp_id": "France_England_2026_07_18",
+      "of_dato": "2026-07-18",
+      "of_hjemmelag": "France",
+      "of_bortelag": "England",
+      "runde": "ukjent",
+      "fd_match_id": 537389,
+      "fd_dato": "2026-07-18",
+      "fd_utcDate": "2026-07-18T21:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "England",
+      "fd_hjemmelag_normalisert": "France",
+      "fd_bortelag_normalisert": "England",
+      "dato_avvik_dager": 0,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-16T06:15:46Z"
     },
     "France_Iraq_2026_06_22": {
       "of_kamp_id": "France_Iraq_2026_06_22",
@@ -1476,6 +1494,24 @@
       "match_type": "auto_lag_dato",
       "confidence": "high",
       "sist_matchet": "2026-06-14T13:10:37Z"
+    },
+    "Spain_Argentina_2026_07_19": {
+      "of_kamp_id": "Spain_Argentina_2026_07_19",
+      "of_dato": "2026-07-19",
+      "of_hjemmelag": "Spain",
+      "of_bortelag": "Argentina",
+      "runde": "final",
+      "fd_match_id": 537390,
+      "fd_dato": "2026-07-19",
+      "fd_utcDate": "2026-07-19T19:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Argentina",
+      "fd_hjemmelag_normalisert": "Spain",
+      "fd_bortelag_normalisert": "Argentina",
+      "dato_avvik_dager": 0,
+      "match_type": "auto_lag_dato",
+      "confidence": "high",
+      "sist_matchet": "2026-07-16T06:15:46Z"
     },
     "Spain_Austria_2026_07_02": {
       "of_kamp_id": "Spain_Austria_2026_07_02",

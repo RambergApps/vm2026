@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-16T06:01:31Z
+// Sist oppdatert: 2026-07-16T06:15:55Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-16T06:01:31Z",
+  "sist_oppdatert": "2026-07-16T06:15:55Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2029,7 +2029,12 @@ const VM_DATA = {
       "status": "TIMED",
       "runde": "ukjent",
       "dato_openfootball": "2026-07-18",
-      "kilde_score": "openfootball"
+      "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-18",
+      "fd_match_id": 537389,
+      "fd_utcDate": "2026-07-18T21:00:00Z",
+      "fd_hjemmelag": "France",
+      "fd_bortelag": "England"
     },
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
@@ -2043,6 +2048,11 @@ const VM_DATA = {
       "runde": "final",
       "dato_openfootball": "2026-07-19",
       "kilde_score": "openfootball",
+      "dato_fd_org": "2026-07-19",
+      "fd_match_id": 537390,
+      "fd_utcDate": "2026-07-19T19:00:00Z",
+      "fd_hjemmelag": "Spain",
+      "fd_bortelag": "Argentina",
       "match_no": 104
     }
   },
@@ -2486,7 +2496,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-16T06:01:31Z"
+    "sist_beregnet": "2026-07-16T06:15:55Z"
   },
   "stilling": [
     {
