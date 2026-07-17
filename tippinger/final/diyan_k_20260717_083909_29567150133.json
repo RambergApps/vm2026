@@ -1,0 +1,25 @@
+{
+  "bonus": {
+    "id": "begge_lag_scorer",
+    "svar": "ja"
+  },
+  "meta": {
+    "deltaker_id": "diyan_k",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-17T08:38:59.539Z",
+    "navn": "Diyan K.",
+    "runde": "final",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-17T08:39:09Z"
+  },
+  "tippinger": [
+    {
+      "borte": 2,
+      "bortelag": "Argentina",
+      "hjemme": 2,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Argentina_2026_07_19",
+      "match_no": 104
+    }
+  ]
+}
