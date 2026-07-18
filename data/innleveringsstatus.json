@@ -1,6 +1,6 @@
 {
   "format": "innleveringsstatus_v1",
-  "sist_oppdatert": "2026-07-18T07:01:04Z",
+  "sist_oppdatert": "2026-07-18T07:15:39Z",
   "deltakere": {
     "alex_myrvokd": {
       "navn": "Alex Myrvokd",
@@ -927,6 +927,13 @@
       "navn": "Vegard Hammervold Midtbø",
       "deltaker_type": "ordinaer",
       "runder": {
+        "final": {
+          "kamper": [
+            "Spain_Argentina_2026_07_19"
+          ],
+          "bonus": true,
+          "bonus_id": "begge_lag_scorer"
+        },
         "qf": {
           "kamper": [
             "Argentina_Switzerland_2026_07_11",
