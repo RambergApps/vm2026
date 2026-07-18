@@ -1,6 +1,6 @@
 {
-  "sist_oppdatert": "2026-07-15T21:15:52Z",
-  "antall_kamper": 102,
+  "sist_oppdatert": "2026-07-18T21:02:07Z",
+  "antall_kamper": 103,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
       "kamp_id": "Belgium_Iran_2026_06_21",
@@ -19954,6 +19954,32 @@
       },
       "kilde": "fifa.com",
       "oppdatert": "2026-07-15T21:15:52Z"
+    },
+    "France_England_2026_07_18": {
+      "kamp_id": "France_England_2026_07_18",
+      "canonical_kamp_id": "France_England_2026_07_18",
+      "fd_match_id": 537389,
+      "fd_utcDate": "2026-07-18T21:00:00Z",
+      "hjemmelag": "France",
+      "bortelag": "England",
+      "hjemme_score": 0,
+      "borte_score": 0,
+      "gruppe": "",
+      "runde": "ukjent",
+      "kampstatus": "IN_PLAY",
+      "referatstatus": "midlertidig",
+      "recap_tekst": "France and England are level at 0-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_kvalitet": {
+        "status": "live",
+        "grunnlag": "bekreftet_score_og_status"
+      },
+      "tippinger": {
+        "eksakt": [],
+        "riktig": [],
+        "bom": []
+      },
+      "kilde": "football-data.org / data.js",
+      "oppdatert": "2026-07-18T21:02:07Z"
     }
   }
 }
