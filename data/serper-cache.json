@@ -8102,22 +8102,60 @@
   "France_England_2026_07_18|4-6": {
     "kamp_id": "France_England_2026_07_18",
     "resultat": "4-6",
-    "sist_sokt": "2026-07-18T23:15:42Z",
-    "antall_sok": 1,
-    "beste_score": 0,
+    "sist_sokt": "2026-07-18T23:31:33Z",
+    "antall_sok": 2,
+    "beste_score": 4,
     "status": "forelopig_fifa_kriterier_ikke_mott",
     "query": "direct_fifa_article_probe",
     "kandidater": [],
     "fulltekst_fakta": {
-      "status": "ikke_funnet",
+      "status": "ok",
       "versjon": "v23-fifa-slugs-multiline-goals",
-      "hentet": "2026-07-18T23:15:42Z",
-      "score": -100,
-      "referat_fakta_score": 0,
-      "mangler": [
-        "fulltekst"
+      "kilde_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
+      "kilde_tittel": "",
+      "domene": "fifa.com",
+      "source_type": "article_report",
+      "fulltekst_riktig_kamp": true,
+      "resultat_i_fulltekst": false,
+      "kamp_hjemme_score": 4,
+      "kamp_borte_score": 6,
+      "score": 10,
+      "hentet": "2026-07-18T23:31:13Z",
+      "goal_events": [],
+      "scorere": [],
+      "lead_scorer": "",
+      "brace_scorer": "",
+      "hat_trick_player": "",
+      "article_paragraphs": [
+        "URL Source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
+        "[](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights?searchOverlay=1)"
       ],
-      "_forsok_url": 4
+      "key_stat": "",
+      "player_of_match": "",
+      "early_lead": false,
+      "came_from_behind": false,
+      "knockout_secured": false,
+      "group_top": false,
+      "hit_bar": false,
+      "late_pressure": false,
+      "stoppage": null,
+      "brace_text": false,
+      "first_goal_past_keeper": false,
+      "all_goals_first_half": false,
+      "lead_goal_early": false,
+      "lead_goal_stoppage": false,
+      "fastest_stat": false,
+      "record_stat": false,
+      "eliminated_loser": false,
+      "referat_fakta_score": 4,
+      "mangler": [
+        "resultat_i_fulltekst",
+        "goal_events"
+      ],
+      "rikt_fulltekstgrunnlag": false,
+      "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
+      "direct_fifa_probe": true,
+      "_forsok_url": 1
     }
   }
 }

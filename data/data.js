@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-18T23:15:39Z
+// Sist oppdatert: 2026-07-18T23:31:03Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-18T23:15:39Z",
+  "sist_oppdatert": "2026-07-18T23:31:03Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2083,10 +2083,10 @@ const VM_DATA = {
       },
       "golden_boot": {
         "status": "forelopig",
-        "spiller": "Lionel Messi",
-        "maal": 8,
+        "spiller": "Kylian Mbappe",
+        "maal": 10,
         "assists": 4,
-        "minutter": 712,
+        "minutter": 769,
         "fasit": null,
         "kilde": "FIFA",
         "sporsmal": "Hvem vinner FIFA Golden Boot?"
@@ -2138,45 +2138,45 @@ const VM_DATA = {
   "spillerstatistikk": [
     {
       "rank": 1,
+      "spiller": "Kylian Mbappe",
+      "maal": 10,
+      "assists": 4,
+      "minutter": 769
+    },
+    {
+      "rank": 2,
       "spiller": "Lionel Messi",
       "maal": 8,
       "assists": 4,
       "minutter": 712
     },
     {
-      "rank": 2,
-      "spiller": "Kylian Mbappe",
-      "maal": 8,
-      "assists": 3,
-      "minutter": 716
+      "rank": 3,
+      "spiller": "Jude Bellingham",
+      "maal": 7,
+      "assists": 1,
+      "minutter": 698
     },
     {
-      "rank": 3,
+      "rank": 4,
       "spiller": "Erling Haaland",
       "maal": 7,
       "assists": 0,
       "minutter": 537
     },
     {
-      "rank": 4,
-      "spiller": "Jude Bellingham",
+      "rank": 5,
+      "spiller": "Ousmane Dembele",
       "maal": 6,
-      "assists": 1,
-      "minutter": 679
+      "assists": 2,
+      "minutter": 648
     },
     {
-      "rank": 5,
+      "rank": 6,
       "spiller": "Harry Kane",
       "maal": 6,
       "assists": 1,
       "minutter": 732
-    },
-    {
-      "rank": 6,
-      "spiller": "Ousmane Dembele",
-      "maal": 5,
-      "assists": 2,
-      "minutter": 595
     },
     {
       "rank": 7,
@@ -2208,206 +2208,206 @@ const VM_DATA = {
     },
     {
       "rank": 11,
+      "spiller": "Bukayo Saka",
+      "maal": 3,
+      "assists": 3,
+      "minutter": 411
+    },
+    {
+      "rank": 12,
       "spiller": "Deniz Undav",
       "maal": 3,
       "assists": 2,
       "minutter": 174
     },
     {
-      "rank": 12,
+      "rank": 13,
       "spiller": "Johan Manzambi",
       "maal": 3,
       "assists": 2,
       "minutter": 220
     },
     {
-      "rank": 13,
+      "rank": 14,
       "spiller": "Romelu Lukaku",
       "maal": 3,
       "assists": 1,
       "minutter": 279
     },
     {
-      "rank": 14,
+      "rank": 15,
       "spiller": "Lautaro Martinez",
       "maal": 3,
       "assists": 1,
       "minutter": 368
     },
     {
-      "rank": 15,
+      "rank": 16,
       "spiller": "Charles De Ketelaere",
       "maal": 3,
       "assists": 1,
       "minutter": 385
     },
     {
-      "rank": 16,
+      "rank": 17,
       "spiller": "Cody Gakpo",
       "maal": 3,
       "assists": 1,
       "minutter": 394
     },
     {
-      "rank": 17,
+      "rank": 18,
+      "spiller": "Bradley Barcola",
+      "maal": 3,
+      "assists": 1,
+      "minutter": 432
+    },
+    {
+      "rank": 19,
       "spiller": "Brian Brobbey",
       "maal": 3,
       "assists": 0,
       "minutter": 245
     },
     {
-      "rank": 18,
+      "rank": 20,
       "spiller": "Elijah Just",
       "maal": 3,
       "assists": 0,
       "minutter": 291
     },
     {
-      "rank": 19,
+      "rank": 21,
       "spiller": "Matheus Cunha",
       "maal": 3,
       "assists": 0,
       "minutter": 324
     },
     {
-      "rank": 20,
+      "rank": 22,
       "spiller": "Folarin Balogun",
       "maal": 3,
       "assists": 0,
       "minutter": 348
     },
     {
-      "rank": 21,
+      "rank": 23,
       "spiller": "Raul Jimenez",
       "maal": 3,
       "assists": 0,
       "minutter": 348
     },
     {
-      "rank": 22,
+      "rank": 24,
       "spiller": "Kai Havertz",
       "maal": 3,
       "assists": 0,
       "minutter": 392
     },
     {
-      "rank": 23,
+      "rank": 25,
       "spiller": "Yoane Wissa",
       "maal": 3,
       "assists": 0,
       "minutter": 409
     },
     {
-      "rank": 24,
+      "rank": 26,
       "spiller": "Ismael Saibari",
       "maal": 3,
       "assists": 0,
       "minutter": 411
     },
     {
-      "rank": 25,
+      "rank": 27,
       "spiller": "Jonathan David",
       "maal": 3,
       "assists": 0,
       "minutter": 475
     },
     {
-      "rank": 26,
+      "rank": 28,
       "spiller": "Cristiano Ronaldo",
       "maal": 3,
       "assists": 0,
       "minutter": 490
     },
     {
-      "rank": 27,
-      "spiller": "Bukayo Saka",
-      "maal": 2,
-      "assists": 3,
-      "minutter": 358
-    },
-    {
-      "rank": 28,
+      "rank": 29,
       "spiller": "Crysencio Summerville",
       "maal": 2,
       "assists": 2,
       "minutter": 282
     },
     {
-      "rank": 29,
+      "rank": 30,
       "spiller": "Breel Embolo",
       "maal": 2,
       "assists": 2,
       "minutter": 531
     },
     {
-      "rank": 30,
+      "rank": 31,
       "spiller": "Leandro Trossard",
       "maal": 2,
       "assists": 2,
       "minutter": 561
     },
     {
-      "rank": 31,
+      "rank": 32,
       "spiller": "Soufiane Rahimi",
       "maal": 2,
       "assists": 1,
       "minutter": 215
     },
     {
-      "rank": 32,
+      "rank": 33,
       "spiller": "Nicolas Pepe",
       "maal": 2,
       "assists": 1,
       "minutter": 255
     },
     {
-      "rank": 33,
+      "rank": 34,
       "spiller": "Pape Gueye",
       "maal": 2,
       "assists": 1,
       "minutter": 257
     },
     {
-      "rank": 34,
+      "rank": 35,
       "spiller": "Maxi Araujo",
       "maal": 2,
       "assists": 1,
       "minutter": 278
     },
     {
-      "rank": 35,
+      "rank": 36,
       "spiller": "Riyad Mahrez",
       "maal": 2,
       "assists": 1,
       "minutter": 288
     },
     {
-      "rank": 36,
+      "rank": 37,
       "spiller": "Ramin Rezaeian",
       "maal": 2,
       "assists": 1,
       "minutter": 309
     },
     {
-      "rank": 37,
+      "rank": 38,
       "spiller": "Ruben Vargas",
       "maal": 2,
       "assists": 1,
       "minutter": 314
     },
     {
-      "rank": 38,
+      "rank": 39,
       "spiller": "Ayase Ueda",
       "maal": 2,
       "assists": 1,
       "minutter": 349
-    },
-    {
-      "rank": 39,
-      "spiller": "Bradley Barcola",
-      "maal": 2,
-      "assists": 1,
-      "minutter": 379
     },
     {
       "rank": 40,
@@ -2497,7 +2497,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-18T23:15:39Z"
+    "sist_beregnet": "2026-07-18T23:31:03Z"
   },
   "stilling": [
     {
