@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-18T21:30:54Z
+// Sist oppdatert: 2026-07-18T21:45:38Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-18T21:30:54Z",
+  "sist_oppdatert": "2026-07-18T21:45:38Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2024,7 +2024,7 @@ const VM_DATA = {
       "hjemmelag": "France",
       "bortelag": "England",
       "hjemme": 0,
-      "borte": 2,
+      "borte": 3,
       "ferdig": false,
       "status": "IN_PLAY",
       "runde": "ukjent",
@@ -2496,7 +2496,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-18T21:30:54Z"
+    "sist_beregnet": "2026-07-18T21:45:38Z"
   },
   "stilling": [
     {
