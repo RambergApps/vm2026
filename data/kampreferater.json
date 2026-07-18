@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-18T23:01:05Z",
+  "sist_oppdatert": "2026-07-18T23:15:42Z",
   "antall_kamper": 103,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19962,24 +19962,43 @@
       "fd_utcDate": "2026-07-18T21:00:00Z",
       "hjemmelag": "France",
       "bortelag": "England",
-      "hjemme_score": 3,
-      "borte_score": 5,
+      "hjemme_score": 4,
+      "borte_score": 6,
       "gruppe": "",
       "runde": "ukjent",
-      "kampstatus": "IN_PLAY",
-      "referatstatus": "midlertidig",
-      "recap_tekst": "England lead France 5-3.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "kampstatus": "FINISHED",
+      "referatstatus": "forelopig",
+      "recap_tekst": "England beat France 6-4.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
-        "status": "live",
-        "grunnlag": "bekreftet_score_og_status"
+        "score": 0,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "France_England_2026_07_18|4-6",
+        "serper_score": -100,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
+        "venter_pa_bedre_kilde": true,
+        "next_retry_at": "",
+        "retry_antall": 1,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
+        "mangler": [
+          "fulltekst"
+        ],
+        "offisiell_kilde_sokt": []
       },
       "tippinger": {
         "eksakt": [],
         "riktig": [],
         "bom": []
       },
-      "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-18T23:01:05Z"
+      "kilde": "forelopig",
+      "oppdatert": "2026-07-18T23:15:42Z"
     }
   }
 }

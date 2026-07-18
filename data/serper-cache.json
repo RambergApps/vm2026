@@ -8098,5 +8098,26 @@
       "direct_fifa_probe": true,
       "_forsok_url": 1
     }
+  },
+  "France_England_2026_07_18|4-6": {
+    "kamp_id": "France_England_2026_07_18",
+    "resultat": "4-6",
+    "sist_sokt": "2026-07-18T23:15:42Z",
+    "antall_sok": 1,
+    "beste_score": 0,
+    "status": "forelopig_fifa_kriterier_ikke_mott",
+    "query": "direct_fifa_article_probe",
+    "kandidater": [],
+    "fulltekst_fakta": {
+      "status": "ikke_funnet",
+      "versjon": "v23-fifa-slugs-multiline-goals",
+      "hentet": "2026-07-18T23:15:42Z",
+      "score": -100,
+      "referat_fakta_score": 0,
+      "mangler": [
+        "fulltekst"
+      ],
+      "_forsok_url": 4
+    }
   }
 }

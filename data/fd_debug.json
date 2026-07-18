@@ -1,5 +1,5 @@
 {
-  "tidspunkt": "2026-07-18T23:02:22Z",
+  "tidspunkt": "2026-07-18T23:15:39Z",
   "kamper": {
     "537327": {
       "fd_match_id": 537327,
@@ -875,10 +875,10 @@
       "fd_bortelag": "England",
       "hjemmelag_normalisert": "France",
       "bortelag_normalisert": "England",
-      "status": "IN_PLAY",
-      "ferdig": false,
-      "hjemme": 3,
-      "borte": 5,
+      "status": "FINISHED",
+      "ferdig": true,
+      "hjemme": 4,
+      "borte": 6,
       "fd_dato": "2026-07-18",
       "fd_utcDate": "2026-07-18T21:00:00Z",
       "fd_kamp_id_basert_paa_dato": "France_England_2026_07_18"

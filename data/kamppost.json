@@ -1,119 +1,46 @@
 {
-  "dato": "2026-07-15",
-  "dato_norsk": "Onsdag 15. juli 2026",
-  "generert": "2026-07-15T22:01:30Z",
+  "dato": "2026-07-18",
+  "dato_norsk": "Lørdag 18. juli 2026",
+  "generert": "2026-07-18T23:15:42Z",
   "antall_kamper": 1,
   "kamper": [
     {
-      "kamp_id": "England_Argentina_2026_07_15",
-      "hjemmelag": "England",
-      "bortelag": "Argentina",
-      "hjemme_score": 1,
-      "borte_score": 2,
+      "kamp_id": "France_England_2026_07_18",
+      "hjemmelag": "France",
+      "bortelag": "England",
+      "hjemme_score": 4,
+      "borte_score": 6,
       "gruppe": "",
-      "recap_tekst": "Argentina beat England 2-1.\nGoals: England — Gordon (55); Argentina — Fernandez (85) and Martinez (90+2).\n\nHolders Argentina fought back from the brink to beat England and advance to Sunday's FIFA World Cup 2026™ final against Spain.\nEnzo Fernandez and Lisandro Martinez struck the late goals in a dramatic turnaround in Atlanta just when England were closing in on their first final in 60 years, following Anthony Gordon's goal early in the second half.\nHolders Argentina staged a late fightback to defeat England 2-1 and advance to Sunday's final against Spain in New York New Jersey.\nInstead Lionel Scaloni's men can now look forward to their seventh World Cup final, and stand a step away from retaining their world crown.",
+      "recap_tekst": "England beat France 6-4.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
-        "score": 12,
-        "status": "ok",
-        "grunnlag": "fifa_fulltekst",
-        "source_type": "article_report",
-        "antall_sok": 2,
-        "fallback": false,
-        "cache_key": "England_Argentina_2026_07_15|1-2",
+        "score": 0,
+        "status": "forelopig_fifa_kriterier_ikke_mott",
+        "grunnlag": "forelopig",
+        "source_type": "",
+        "antall_sok": 1,
+        "fallback": true,
+        "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
-        "fulltekst_status": "ok",
-        "fulltekst_kilde": "fifa.com",
-        "fulltekst_score": 10,
-        "referat_fakta_score": 12,
-        "venter_pa_bedre_kilde": false,
+        "fulltekst_status": "ikke_funnet",
+        "fulltekst_kilde": "",
+        "fulltekst_score": -100,
+        "referat_fakta_score": 0,
+        "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 2,
-        "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-argentina-match-report-highlights",
-        "mangler": [],
+        "retry_antall": 1,
+        "direct_fifa_probe": false,
+        "fifa_direct_probe_url": "",
+        "mangler": [
+          "fulltekst"
+        ],
         "offisiell_kilde_sokt": []
       },
       "tippinger": {
-        "eksakt": [
-          {
-            "navn": "Vegard Hammervold Midtbø",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 10
-          },
-          {
-            "navn": "Olympus fc",
-            "tippa_h": 1,
-            "tippa_b": 2,
-            "poeng": 10
-          }
-        ],
-        "riktig": [
-          {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 0,
-            "tippa_b": 1,
-            "poeng": 6
-          },
-          {
-            "navn": "Anders Sundero",
-            "tippa_h": 0,
-            "tippa_b": 2,
-            "poeng": 6
-          }
-        ],
-        "bom": [
-          {
-            "navn": "Alexander",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Kjetil bjerke",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Ken Arne Hansen",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Sondre Garstad",
-            "tippa_h": 1,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          },
-          {
-            "navn": "Diyan K.",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 0
-          }
-        ]
+        "eksakt": [],
+        "riktig": [],
+        "bom": []
       }
     }
   ],
@@ -122,7 +49,7 @@
       "navn": "Vegard Hammervold Midtbø",
       "plass": 1,
       "poeng_totalt": 221,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 0
     },
     {
       "navn": "Alexander",
@@ -140,7 +67,7 @@
       "navn": "Olympus fc",
       "plass": 4,
       "poeng_totalt": 193,
-      "poeng_i_dag": 10
+      "poeng_i_dag": 0
     },
     {
       "navn": "Kjetil bjerke",
@@ -158,7 +85,7 @@
       "navn": "Sebastian Luranc",
       "plass": 7,
       "poeng_totalt": 181,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 0
     },
     {
       "navn": "Ken Arne Hansen",
@@ -188,7 +115,7 @@
       "navn": "Anders Sundero",
       "plass": 12,
       "poeng_totalt": 150,
-      "poeng_i_dag": 6
+      "poeng_i_dag": 0
     },
     {
       "navn": "Marita Hauge Gjerde",
