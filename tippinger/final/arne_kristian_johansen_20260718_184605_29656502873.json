@@ -1,0 +1,25 @@
+{
+  "bonus": {
+    "id": "begge_lag_scorer",
+    "svar": "ja"
+  },
+  "meta": {
+    "deltaker_id": "arne_kristian_johansen",
+    "deltaker_type": "ordinaer",
+    "innlevert": "2026-07-18T18:45:55.455Z",
+    "navn": "Arne Kristian Johansen",
+    "runde": "final",
+    "token": "vm2026-ramberg",
+    "server_mottatt": "2026-07-18T18:46:05Z"
+  },
+  "tippinger": [
+    {
+      "borte": 1,
+      "bortelag": "Argentina",
+      "hjemme": 2,
+      "hjemmelag": "Spain",
+      "kamp_id": "Spain_Argentina_2026_07_19",
+      "match_no": 104
+    }
+  ]
+}
