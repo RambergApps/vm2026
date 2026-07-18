@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-18T21:45:39Z",
+  "sist_oppdatert": "2026-07-18T22:00:39Z",
   "antall_kamper": 103,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19963,12 +19963,12 @@
       "hjemmelag": "France",
       "bortelag": "England",
       "hjemme_score": 0,
-      "borte_score": 3,
+      "borte_score": 4,
       "gruppe": "",
       "runde": "ukjent",
-      "kampstatus": "IN_PLAY",
+      "kampstatus": "PAUSED",
       "referatstatus": "midlertidig",
-      "recap_tekst": "England lead France 3-0.\n\nThe match is in progress. This temporary report will be updated as confirmed information becomes available.",
+      "recap_tekst": "England lead France 4-0.\n\nThe match is paused. This temporary report will be updated when play resumes.",
       "recap_kvalitet": {
         "status": "live",
         "grunnlag": "bekreftet_score_og_status"
@@ -19979,7 +19979,7 @@
         "bom": []
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-18T21:45:39Z"
+      "oppdatert": "2026-07-18T22:00:39Z"
     }
   }
 }
