@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-19T21:30:56Z
+// Sist oppdatert: 2026-07-19T21:45:51Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-19T21:30:56Z",
+  "sist_oppdatert": "2026-07-19T21:45:51Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2042,18 +2042,22 @@ const VM_DATA = {
       "canonical_kamp_id": "Spain_Argentina_2026_07_19",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
-      "hjemme": 0,
+      "hjemme": 1,
       "borte": 0,
       "ferdig": false,
       "status": "IN_PLAY",
       "runde": "final",
       "dato_openfootball": "2026-07-19",
-      "kilde_score": "football_data_org",
+      "kilde_score": "fifa_calendar",
       "dato_fd_org": "2026-07-19",
       "fd_match_id": 537390,
       "fd_utcDate": "2026-07-19T19:00:00Z",
       "fd_hjemmelag": "Spain",
       "fd_bortelag": "Argentina",
+      "fifa_event_id": "400021543",
+      "fifa_match_no": 104,
+      "fifa_utcDate": "2026-07-19T19:00:00Z",
+      "fifa_dato": "2026-07-19",
       "match_no": 104
     }
   },
@@ -2148,7 +2152,7 @@ const VM_DATA = {
       "spiller": "Lionel Messi",
       "maal": 8,
       "assists": 4,
-      "minutter": 762
+      "minutter": 832
     },
     {
       "rank": 3,
@@ -2183,7 +2187,7 @@ const VM_DATA = {
       "spiller": "Mikel Oyarzabal",
       "maal": 5,
       "assists": 1,
-      "minutter": 648
+      "minutter": 664
     },
     {
       "rank": 8,
@@ -2446,24 +2450,24 @@ const VM_DATA = {
     },
     {
       "rank": 45,
-      "spiller": "Mikel Merino",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 200
-    },
-    {
-      "rank": 46,
       "spiller": "Amad Diallo",
       "maal": 2,
       "assists": 0,
       "minutter": 211
     },
     {
-      "rank": 47,
+      "rank": 46,
       "spiller": "Cyle Larin",
       "maal": 2,
       "assists": 0,
       "minutter": 224
+    },
+    {
+      "rank": 47,
+      "spiller": "Mikel Merino",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 241
     },
     {
       "rank": 48,
@@ -2497,7 +2501,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-19T21:30:56Z"
+    "sist_beregnet": "2026-07-19T21:45:51Z"
   },
   "stilling": [
     {
@@ -3602,7 +3606,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -5146,7 +5150,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -6761,7 +6765,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -9874,7 +9878,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -11422,7 +11426,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -13037,7 +13041,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -14600,7 +14604,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -17586,7 +17590,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 3,
           "tippa_b": 1,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -19167,7 +19171,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 2,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
@@ -20744,7 +20748,7 @@ const VM_DATA = {
           "bortelag": "Argentina",
           "tippa_h": 1,
           "tippa_b": 2,
-          "faktisk_h": 0,
+          "faktisk_h": 1,
           "faktisk_b": 0,
           "poeng": 0,
           "ferdig": false,
