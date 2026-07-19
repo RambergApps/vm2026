@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-19T23:01:08Z
+// Sist oppdatert: 2026-07-19T23:05:43Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-19T23:01:08Z",
+  "sist_oppdatert": "2026-07-19T23:05:43Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2155,7 +2155,7 @@ const VM_DATA = {
       "spiller": "Lionel Messi",
       "maal": 8,
       "assists": 4,
-      "minutter": 832
+      "minutter": 853
     },
     {
       "rank": 3,
@@ -2467,17 +2467,17 @@ const VM_DATA = {
     },
     {
       "rank": 47,
-      "spiller": "Mikel Merino",
-      "maal": 2,
-      "assists": 0,
-      "minutter": 241
-    },
-    {
-      "rank": 48,
       "spiller": "Anthony Elanga",
       "maal": 2,
       "assists": 0,
       "minutter": 247
+    },
+    {
+      "rank": 48,
+      "spiller": "Mikel Merino",
+      "maal": 2,
+      "assists": 0,
+      "minutter": 262
     },
     {
       "rank": 49,
@@ -2504,7 +2504,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-19T23:01:08Z"
+    "sist_beregnet": "2026-07-19T23:05:43Z"
   },
   "stilling": [
     {
