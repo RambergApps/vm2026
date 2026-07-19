@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-19T22:05:26Z",
+  "sist_oppdatert": "2026-07-19T22:16:37Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19974,7 +19974,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 104,
+        "antall_sok": 105,
         "fallback": true,
         "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
@@ -19984,7 +19984,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 104,
+        "retry_antall": 105,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
         "mangler": [
@@ -19999,13 +19999,13 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-19T22:05:26Z"
+      "oppdatert": "2026-07-19T22:16:36Z"
     },
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
       "canonical_kamp_id": "Spain_Argentina_2026_07_19",
-      "fd_match_id": null,
-      "fd_utcDate": "",
+      "fd_match_id": 537390,
+      "fd_utcDate": "2026-07-19T19:00:00Z",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
       "hjemme_score": 1,
@@ -20020,7 +20020,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 1,
+        "antall_sok": 2,
         "fallback": true,
         "cache_key": "Spain_Argentina_2026_07_19|1-0",
         "serper_score": -100,
@@ -20030,7 +20030,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 1,
+        "retry_antall": 2,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-match-report-highlights",
         "mangler": [
@@ -20107,7 +20107,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-19T22:04:53Z"
+      "oppdatert": "2026-07-19T22:16:07Z"
     }
   }
 }
