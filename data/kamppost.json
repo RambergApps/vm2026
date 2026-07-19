@@ -1,7 +1,7 @@
 {
   "dato": "2026-07-18",
   "dato_norsk": "Lørdag 18. juli 2026",
-  "generert": "2026-07-19T17:16:15Z",
+  "generert": "2026-07-19T17:31:31Z",
   "antall_kamper": 1,
   "kamper": [
     {
@@ -19,7 +19,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 80,
+        "antall_sok": 81,
         "fallback": true,
         "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
@@ -29,7 +29,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 80,
+        "retry_antall": 81,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
         "mangler": [
