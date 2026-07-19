@@ -1,9 +1,9 @@
 // Denne filen genereres automatisk av GitHub Actions
 // Ikke rediger manuelt — endringer overskrives ved neste kjøring
-// Sist oppdatert: 2026-07-19T18:45:53Z
+// Sist oppdatert: 2026-07-19T19:01:05Z
 
 const VM_DATA = {
-  "sist_oppdatert": "2026-07-19T18:45:53Z",
+  "sist_oppdatert": "2026-07-19T19:01:05Z",
   "resultater": {
     "Mexico_South_Africa_2026_06_11": {
       "kamp_id": "Mexico_South_Africa_2026_06_11",
@@ -2126,7 +2126,7 @@ const VM_DATA = {
         "sporsmal": "Totalt antall mål i semifinalene i løpet av de første 90 minuttene, inkludert tilleggstid"
       },
       "final": {
-        "status": "ikke_startet",
+        "status": "paagaar",
         "ferdige_kamper": 0,
         "totalt_kamper": 1,
         "verdi": null,
@@ -2497,7 +2497,7 @@ const VM_DATA = {
     "gjennomsnitt_eksakt": 93.724,
     "startpoeng": 94,
     "avrunding": "narmeste hele poeng, 0.5 rundes opp",
-    "sist_beregnet": "2026-07-19T18:45:53Z"
+    "sist_beregnet": "2026-07-19T19:01:05Z"
   },
   "stilling": [
     {
@@ -3597,6 +3597,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -4017,6 +4030,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 1
@@ -5118,6 +5141,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -5576,6 +5612,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -6710,6 +6756,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -7168,6 +7227,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -9800,6 +9869,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -10224,6 +10306,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 5
@@ -11325,6 +11417,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -11783,6 +11888,16 @@ const VM_DATA = {
           "poeng": 10,
           "riktig": true,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -12917,6 +13032,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -13323,6 +13451,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -14457,6 +14595,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -14727,6 +14878,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         }
       ],
       "plass": 8
@@ -17420,6 +17581,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 3,
+          "tippa_b": 1,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -17844,6 +18018,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -18978,6 +19162,19 @@ const VM_DATA = {
           "runde": "gruppe"
         },
         {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 2,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
+        },
+        {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
           "hjemmelag": "Argentina",
           "bortelag": "Switzerland",
@@ -19398,6 +19595,16 @@ const VM_DATA = {
           "poeng": 0,
           "riktig": false,
           "ferdig": true
+        },
+        {
+          "type": "bonus",
+          "runde": "final",
+          "sporsmal": "Scorer begge lag i finalen i løpet av de første 90 minuttene, inkludert tilleggstid?",
+          "svar": "ja",
+          "fasit": null,
+          "poeng": 0,
+          "riktig": false,
+          "ferdig": false
         },
         {
           "type": "helhetsbonus",
@@ -20530,6 +20737,19 @@ const VM_DATA = {
           "ferdig": true,
           "status": "FINISHED",
           "runde": "gruppe"
+        },
+        {
+          "kamp_id": "Spain_Argentina_2026_07_19",
+          "hjemmelag": "Spain",
+          "bortelag": "Argentina",
+          "tippa_h": 1,
+          "tippa_b": 2,
+          "faktisk_h": null,
+          "faktisk_b": null,
+          "poeng": 0,
+          "ferdig": false,
+          "status": "TIMED",
+          "runde": "final"
         },
         {
           "kamp_id": "Argentina_Switzerland_2026_07_11",
