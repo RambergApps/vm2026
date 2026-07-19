@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-19T21:46:22Z",
+  "sist_oppdatert": "2026-07-19T22:01:35Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19974,7 +19974,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 102,
+        "antall_sok": 103,
         "fallback": true,
         "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
@@ -19984,7 +19984,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 102,
+        "retry_antall": 103,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
         "mangler": [
@@ -19999,13 +19999,13 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-19T21:46:22Z"
+      "oppdatert": "2026-07-19T22:01:35Z"
     },
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
       "canonical_kamp_id": "Spain_Argentina_2026_07_19",
-      "fd_match_id": 537390,
-      "fd_utcDate": "2026-07-19T19:00:00Z",
+      "fd_match_id": null,
+      "fd_utcDate": "",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
       "hjemme_score": 1,
@@ -20086,7 +20086,7 @@
         ]
       },
       "kilde": "football-data.org / data.js",
-      "oppdatert": "2026-07-19T21:45:58Z"
+      "oppdatert": "2026-07-19T22:01:05Z"
     }
   }
 }
