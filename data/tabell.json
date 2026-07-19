@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-07-19T22:45:40Z",
-  "sist_oppdatert_grupper": "2026-07-19T22:45:40Z",
-  "sist_oppdatert_utslag": "2026-07-19T22:45:40Z",
+  "sist_oppdatert": "2026-07-19T23:01:08Z",
+  "sist_oppdatert_grupper": "2026-07-19T23:01:08Z",
+  "sist_oppdatert_utslag": "2026-07-19T23:01:08Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -272,7 +272,7 @@
       {
         "plass": 4,
         "lag": "Turkey",
-        "fifa_navn": "Turkey",
+        "fifa_navn": "Türkiye",
         "kode": "TUR",
         "flagg_url": "https://api.fifa.com/api/v3/picture/flags-sq-1/TUR%201x",
         "spilt": 3,
