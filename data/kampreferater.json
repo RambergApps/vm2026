@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-20T07:46:31Z",
+  "sist_oppdatert": "2026-07-20T08:02:07Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19974,7 +19974,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 138,
+        "antall_sok": 139,
         "fallback": true,
         "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
@@ -19984,9 +19984,9 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 138,
+        "retry_antall": 139,
         "direct_fifa_probe": true,
-        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-highlights-match-report",
+        "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
         "mangler": [
           "resultat_i_fulltekst",
           "goal_events"
@@ -19999,7 +19999,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-20T07:46:30Z"
+      "oppdatert": "2026-07-20T08:02:06Z"
     },
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
@@ -20020,7 +20020,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 8,
+        "antall_sok": 9,
         "fallback": true,
         "cache_key": "Spain_Argentina_2026_07_19|0-0",
         "serper_score": -100,
@@ -20030,7 +20030,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 8,
+        "retry_antall": 9,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-match-report-highlights",
         "mangler": [
@@ -20106,7 +20106,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-20T07:46:09Z"
+      "oppdatert": "2026-07-20T08:01:44Z"
     }
   }
 }
