@@ -1,17 +1,17 @@
 {
   "dato": "2026-07-19",
   "dato_norsk": "Søndag 19. juli 2026",
-  "generert": "2026-07-20T06:02:07Z",
+  "generert": "2026-07-20T06:16:38Z",
   "antall_kamper": 1,
   "kamper": [
     {
       "kamp_id": "Spain_Argentina_2026_07_19",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
-      "hjemme_score": 1,
+      "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
-      "recap_tekst": "Spain beat Argentina 1-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "Spain and Argentina drew 0-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "snippets_raa": [],
       "serper_kandidater": [],
       "recap_kvalitet": {
@@ -19,9 +19,9 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 27,
+        "antall_sok": 1,
         "fallback": true,
-        "cache_key": "Spain_Argentina_2026_07_19|1-0",
+        "cache_key": "Spain_Argentina_2026_07_19|0-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
@@ -29,12 +29,11 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 27,
+        "retry_antall": 1,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-match-report-highlights",
         "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
+          "resultat_i_fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -42,47 +41,47 @@
         "eksakt": [],
         "riktig": [
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Diyan K.",
             "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_b": 2,
             "poeng": 7
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 3,
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 7
           }
         ],
         "bom": [
           {
-            "navn": "Diyan K.",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
-            "tippa_b": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -92,15 +91,15 @@
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 2,
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Ken Arne Hansen",
+            "navn": "Anders Sundero",
             "tippa_h": 1,
-            "tippa_b": 1,
+            "tippa_b": 2,
             "poeng": 0
           }
         ]
@@ -111,8 +110,8 @@
     {
       "navn": "Vegard Hammervold Midtbø",
       "plass": 1,
-      "poeng_totalt": 298,
-      "poeng_i_dag": 7
+      "poeng_totalt": 291,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Sondre Garstad",
@@ -121,39 +120,39 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Sebastian Luranc",
+      "navn": "Diyan K.",
       "plass": 3,
-      "poeng_totalt": 258,
+      "poeng_totalt": 254,
       "poeng_i_dag": 7
+    },
+    {
+      "navn": "Sebastian Luranc",
+      "plass": 4,
+      "poeng_totalt": 251,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Pål André Nilsen",
-      "plass": 4,
-      "poeng_totalt": 257,
-      "poeng_i_dag": 7
+      "plass": 5,
+      "poeng_totalt": 250,
+      "poeng_i_dag": 0
     },
     {
-      "navn": "Diyan K.",
-      "plass": 5,
-      "poeng_totalt": 247,
+      "navn": "Olympus fc",
+      "plass": 6,
+      "poeng_totalt": 213,
       "poeng_i_dag": 0
     },
     {
       "navn": "Alexander",
-      "plass": 6,
-      "poeng_totalt": 218,
-      "poeng_i_dag": 7
+      "plass": 7,
+      "poeng_totalt": 211,
+      "poeng_i_dag": 0
     },
     {
       "navn": "Arne Kristian Johansen",
-      "plass": 7,
-      "poeng_totalt": 213,
-      "poeng_i_dag": 7
-    },
-    {
-      "navn": "Olympus fc",
       "plass": 8,
-      "poeng_totalt": 213,
+      "poeng_totalt": 206,
       "poeng_i_dag": 0
     },
     {
@@ -163,39 +162,39 @@
       "poeng_i_dag": 0
     },
     {
-      "navn": "Bjørnar Tallaksrud",
-      "plass": 10,
-      "poeng_totalt": 185,
-      "poeng_i_dag": 7
-    },
-    {
       "navn": "Sjur Revheim",
-      "plass": 11,
+      "plass": 10,
       "poeng_totalt": 182,
       "poeng_i_dag": 0
     },
     {
-      "navn": "Anders Sundero",
+      "navn": "Bjørnar Tallaksrud",
+      "plass": 11,
+      "poeng_totalt": 178,
+      "poeng_i_dag": 0
+    },
+    {
+      "navn": "Ken Arne Hansen",
       "plass": 12,
+      "poeng_totalt": 172,
+      "poeng_i_dag": 7
+    },
+    {
+      "navn": "Anders Sundero",
+      "plass": 13,
       "poeng_totalt": 170,
       "poeng_i_dag": 0
     },
     {
       "navn": "Magnus Børrud",
-      "plass": 13,
+      "plass": 14,
       "poeng_totalt": 168,
       "poeng_i_dag": 0
     },
     {
       "navn": "Rickard Jacobsson",
-      "plass": 14,
-      "poeng_totalt": 166,
-      "poeng_i_dag": 0
-    },
-    {
-      "navn": "Ken Arne Hansen",
       "plass": 15,
-      "poeng_totalt": 165,
+      "poeng_totalt": 166,
       "poeng_i_dag": 0
     },
     {

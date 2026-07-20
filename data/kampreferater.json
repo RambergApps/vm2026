@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-20T06:02:07Z",
+  "sist_oppdatert": "2026-07-20T06:16:38Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -19974,7 +19974,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 130,
+        "antall_sok": 131,
         "fallback": true,
         "cache_key": "France_England_2026_07_18|4-6",
         "serper_score": -100,
@@ -19984,7 +19984,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 130,
+        "retry_antall": 131,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-england-match-report-highlights",
         "mangler": [
@@ -19999,7 +19999,7 @@
         "bom": []
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-20T06:02:07Z"
+      "oppdatert": "2026-07-20T06:16:38Z"
     },
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
@@ -20008,21 +20008,21 @@
       "fd_utcDate": "2026-07-19T19:00:00Z",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
-      "hjemme_score": 1,
+      "hjemme_score": 0,
       "borte_score": 0,
       "gruppe": "",
       "runde": "final",
       "kampstatus": "FINISHED",
       "referatstatus": "forelopig",
-      "recap_tekst": "Spain beat Argentina 1-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
+      "recap_tekst": "Spain and Argentina drew 0-0.\nA fuller match summary will be updated automatically when FIFA's match report is complete.",
       "recap_kvalitet": {
         "score": 4,
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 27,
+        "antall_sok": 1,
         "fallback": true,
-        "cache_key": "Spain_Argentina_2026_07_19|1-0",
+        "cache_key": "Spain_Argentina_2026_07_19|0-0",
         "serper_score": -100,
         "fulltekst_status": "ok",
         "fulltekst_kilde": "fifa.com",
@@ -20030,12 +20030,11 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 27,
+        "retry_antall": 1,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-match-report-highlights",
         "mangler": [
-          "resultat_i_fulltekst",
-          "goal_events"
+          "resultat_i_fulltekst"
         ],
         "offisiell_kilde_sokt": []
       },
@@ -20043,47 +20042,47 @@
         "eksakt": [],
         "riktig": [
           {
-            "navn": "Vegard Hammervold Midtbø",
+            "navn": "Diyan K.",
             "tippa_h": 2,
-            "tippa_b": 1,
+            "tippa_b": 2,
             "poeng": 7
           },
           {
-            "navn": "Sebastian Luranc",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Pål André Nilsen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Alexander",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Arne Kristian Johansen",
-            "tippa_h": 2,
-            "tippa_b": 1,
-            "poeng": 7
-          },
-          {
-            "navn": "Bjørnar Tallaksrud",
-            "tippa_h": 3,
+            "navn": "Ken Arne Hansen",
+            "tippa_h": 1,
             "tippa_b": 1,
             "poeng": 7
           }
         ],
         "bom": [
           {
-            "navn": "Diyan K.",
+            "navn": "Vegard Hammervold Midtbø",
             "tippa_h": 2,
-            "tippa_b": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Sebastian Luranc",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Pål André Nilsen",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Alexander",
+            "tippa_h": 2,
+            "tippa_b": 1,
+            "poeng": 0
+          },
+          {
+            "navn": "Arne Kristian Johansen",
+            "tippa_h": 2,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
@@ -20093,21 +20092,21 @@
             "poeng": 0
           },
           {
-            "navn": "Anders Sundero",
-            "tippa_h": 1,
-            "tippa_b": 2,
+            "navn": "Bjørnar Tallaksrud",
+            "tippa_h": 3,
+            "tippa_b": 1,
             "poeng": 0
           },
           {
-            "navn": "Ken Arne Hansen",
+            "navn": "Anders Sundero",
             "tippa_h": 1,
-            "tippa_b": 1,
+            "tippa_b": 2,
             "poeng": 0
           }
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-20T06:01:28Z"
+      "oppdatert": "2026-07-20T06:16:14Z"
     }
   }
 }

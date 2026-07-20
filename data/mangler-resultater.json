@@ -1,23 +1,4 @@
 {
-  "sist_sjekket": "2026-07-20T06:01:05Z",
-  "kamper": [
-    {
-      "type": "mangler_regulartime",
-      "kamp_id": "Spain_Argentina_2026_07_19",
-      "hjemmelag": "Spain",
-      "bortelag": "Argentina",
-      "dato": "2026-07-19",
-      "runde": "final",
-      "gruppe": "",
-      "status": "mangler_regulartime",
-      "status_api": "FINISHED",
-      "duration": "EXTRA_TIME",
-      "fulltime_hjemme": 1,
-      "fulltime_borte": 0,
-      "straffer_hjemme": null,
-      "straffer_borte": null,
-      "avanserer": "Spain",
-      "melding": "Kampen er ferdig, men resultatet etter de første 90 minuttene mangler."
-    }
-  ]
+  "sist_sjekket": "2026-07-20T06:15:44Z",
+  "kamper": []
 }
