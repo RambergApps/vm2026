@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-20T10:01:32Z",
+  "sist_oppdatert": "2026-07-20T10:16:16Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -20020,7 +20020,7 @@
         "status": "forelopig_fifa_kriterier_ikke_mott",
         "grunnlag": "forelopig",
         "source_type": "article_report",
-        "antall_sok": 17,
+        "antall_sok": 18,
         "fallback": true,
         "cache_key": "Spain_Argentina_2026_07_19|0-0",
         "serper_score": -100,
@@ -20030,7 +20030,7 @@
         "referat_fakta_score": 4,
         "venter_pa_bedre_kilde": true,
         "next_retry_at": "",
-        "retry_antall": 17,
+        "retry_antall": 18,
         "direct_fifa_probe": true,
         "fifa_direct_probe_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-match-report-highlights",
         "mangler": [
@@ -20106,7 +20106,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-20T10:01:31Z"
+      "oppdatert": "2026-07-20T10:16:16Z"
     }
   }
 }
