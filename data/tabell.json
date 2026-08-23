@@ -1,7 +1,7 @@
 {
-  "sist_oppdatert": "2026-08-23T17:30:46Z",
+  "sist_oppdatert": "2026-08-23T17:45:43Z",
   "sist_oppdatert_grupper": "2026-08-23T02:00:56Z",
-  "sist_oppdatert_utslag": "2026-08-23T17:30:46Z",
+  "sist_oppdatert_utslag": "2026-08-23T17:45:43Z",
   "kilde": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
   "kilder": {
     "grupper": "https://r.jina.ai/https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
@@ -18,7 +18,7 @@
     "utslag": true
   },
   "advarsler": [
-    "Gruppetabell beholdt fra forrige gyldige fil: FIFA/Jina-svaret mangler gruppetabellene"
+    "Gruppetabell beholdt fra forrige gyldige fil: Ufullstendig FIFA-tabell. Mangler komplett gruppe: A, B, C, D, E, F, G, H, I, J, K, L"
   ],
   "antall_grupper": 12,
   "antall_lag": 48,
