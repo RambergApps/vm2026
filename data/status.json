@@ -15,7 +15,6 @@
         "utcDate": "2026-06-28T19:00:00Z",
         "fd_match_id": 537417,
         "fifa_event_id": "400021518",
-        "avanserer": "Canada",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -31,7 +30,6 @@
         "utcDate": "2026-06-29T20:30:00Z",
         "fd_match_id": 537415,
         "fifa_event_id": "400021513",
-        "avanserer": "Paraguay",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -47,7 +45,6 @@
         "utcDate": "2026-06-30T01:00:00Z",
         "fd_match_id": 537418,
         "fifa_event_id": "400021522",
-        "avanserer": "Morocco",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -63,7 +60,6 @@
         "utcDate": "2026-06-29T17:00:00Z",
         "fd_match_id": 537423,
         "fifa_event_id": "400021516",
-        "avanserer": "Brazil",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -79,7 +75,6 @@
         "utcDate": "2026-06-30T21:00:00Z",
         "fd_match_id": 537416,
         "fifa_event_id": "400021523",
-        "avanserer": "France",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -95,7 +90,6 @@
         "utcDate": "2026-06-30T17:00:00Z",
         "fd_match_id": 537424,
         "fifa_event_id": "400021514",
-        "avanserer": "Norway",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -111,7 +105,6 @@
         "utcDate": "2026-07-01T02:00:00Z",
         "fd_match_id": 537425,
         "fifa_event_id": "400021520",
-        "avanserer": "Mexico",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -127,7 +120,6 @@
         "utcDate": "2026-07-01T16:00:00Z",
         "fd_match_id": 537426,
         "fifa_event_id": "400021512",
-        "avanserer": "England",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -143,7 +135,6 @@
         "utcDate": "2026-07-02T00:00:00Z",
         "fd_match_id": 537421,
         "fifa_event_id": "400021524",
-        "avanserer": "USA",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -159,7 +150,6 @@
         "utcDate": "2026-07-01T20:00:00Z",
         "fd_match_id": 537422,
         "fifa_event_id": "400021525",
-        "avanserer": "Belgium",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -175,7 +165,6 @@
         "utcDate": "2026-07-02T23:00:00Z",
         "fd_match_id": 537419,
         "fifa_event_id": "400021526",
-        "avanserer": "Portugal",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -191,7 +180,6 @@
         "utcDate": "2026-07-02T19:00:00Z",
         "fd_match_id": 537420,
         "fifa_event_id": "400021519",
-        "avanserer": "Spain",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -207,7 +195,6 @@
         "utcDate": "2026-07-03T03:00:00Z",
         "fd_match_id": 537429,
         "fifa_event_id": "400021527",
-        "avanserer": "Switzerland",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -223,7 +210,6 @@
         "utcDate": "2026-07-03T22:00:00Z",
         "fd_match_id": 537427,
         "fifa_event_id": "400021521",
-        "avanserer": "Argentina",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -239,7 +225,6 @@
         "utcDate": "2026-07-04T01:30:00Z",
         "fd_match_id": 537430,
         "fifa_event_id": "400021517",
-        "avanserer": "Colombia",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -255,7 +240,6 @@
         "utcDate": "2026-07-03T18:00:00Z",
         "fd_match_id": 537428,
         "fifa_event_id": "400021515",
-        "avanserer": "Egypt",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -277,8 +261,7 @@
         "slot_hjemme": "W74",
         "slot_borte": "W77",
         "utcDate": "2026-07-04T21:00:00Z",
-        "fd_match_id": 537375,
-        "avanserer": "France",
+        "fifa_event_id": "400021533",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -292,8 +275,7 @@
         "slot_hjemme": "W73",
         "slot_borte": "W75",
         "utcDate": "2026-07-04T17:00:00Z",
-        "fd_match_id": 537376,
-        "avanserer": "Morocco",
+        "fifa_event_id": "400021530",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -307,8 +289,7 @@
         "slot_hjemme": "W76",
         "slot_borte": "W78",
         "utcDate": "2026-07-05T20:00:00Z",
-        "fd_match_id": 537377,
-        "avanserer": "Norway",
+        "fifa_event_id": "400021532",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -316,14 +297,13 @@
         "id": "Mexico_England_2026_07_05",
         "hjemme": "Mexico",
         "borte": "England",
-        "dato": "2026-07-06",
+        "dato": "2026-07-05",
         "info": "Kampoppsett bekreftet",
         "match_no": 92,
         "slot_hjemme": "W79",
         "slot_borte": "W80",
         "utcDate": "2026-07-06T01:00:00Z",
-        "fd_match_id": 537378,
-        "avanserer": "England",
+        "fifa_event_id": "400021531",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -337,8 +317,7 @@
         "slot_hjemme": "W83",
         "slot_borte": "W84",
         "utcDate": "2026-07-06T19:00:00Z",
-        "fd_match_id": 537379,
-        "avanserer": "Spain",
+        "fifa_event_id": "400021529",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -346,14 +325,13 @@
         "id": "USA_Belgium_2026_07_06",
         "hjemme": "USA",
         "borte": "Belgium",
-        "dato": "2026-07-07",
+        "dato": "2026-07-06",
         "info": "Kampoppsett bekreftet",
         "match_no": 94,
         "slot_hjemme": "W81",
         "slot_borte": "W82",
         "utcDate": "2026-07-07T00:00:00Z",
-        "fd_match_id": 537380,
-        "avanserer": "Belgium",
+        "fifa_event_id": "400021534",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -367,8 +345,7 @@
         "slot_hjemme": "W86",
         "slot_borte": "W88",
         "utcDate": "2026-07-07T16:00:00Z",
-        "fd_match_id": 537381,
-        "avanserer": "Argentina",
+        "fifa_event_id": "400021528",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -382,8 +359,7 @@
         "slot_hjemme": "W85",
         "slot_borte": "W87",
         "utcDate": "2026-07-07T20:00:00Z",
-        "fd_match_id": 537382,
-        "avanserer": "Switzerland",
+        "fifa_event_id": "400021535",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -405,8 +381,7 @@
         "slot_hjemme": "W89",
         "slot_borte": "W90",
         "utcDate": "2026-07-09T20:00:00Z",
-        "fd_match_id": 537383,
-        "avanserer": "France",
+        "fifa_event_id": "400021536",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -420,8 +395,7 @@
         "slot_hjemme": "W93",
         "slot_borte": "W94",
         "utcDate": "2026-07-10T19:00:00Z",
-        "fd_match_id": 537384,
-        "avanserer": "Spain",
+        "fifa_event_id": "400021538",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -435,8 +409,7 @@
         "slot_hjemme": "W91",
         "slot_borte": "W92",
         "utcDate": "2026-07-11T21:00:00Z",
-        "fd_match_id": 537385,
-        "avanserer": "England",
+        "fifa_event_id": "400021539",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -444,14 +417,13 @@
         "id": "Argentina_Switzerland_2026_07_11",
         "hjemme": "Argentina",
         "borte": "Switzerland",
-        "dato": "2026-07-12",
+        "dato": "2026-07-11",
         "info": "Kampoppsett bekreftet",
         "match_no": 100,
         "slot_hjemme": "W95",
         "slot_borte": "W96",
         "utcDate": "2026-07-12T01:00:00Z",
-        "fd_match_id": 537386,
-        "avanserer": "Argentina",
+        "fifa_event_id": "400021537",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -473,8 +445,7 @@
         "slot_hjemme": "W97",
         "slot_borte": "W98",
         "utcDate": "2026-07-14T19:00:00Z",
-        "fd_match_id": 537387,
-        "avanserer": "Spain",
+        "fifa_event_id": "400021541",
         "tippebar": false,
         "tippe_status": "startet"
       },
@@ -488,8 +459,7 @@
         "slot_hjemme": "W99",
         "slot_borte": "W100",
         "utcDate": "2026-07-15T19:00:00Z",
-        "fd_match_id": 537388,
-        "avanserer": "Argentina",
+        "fifa_event_id": "400021540",
         "tippebar": false,
         "tippe_status": "startet"
       }
@@ -511,8 +481,7 @@
         "slot_hjemme": "W101",
         "slot_borte": "W102",
         "utcDate": "2026-07-19T19:00:00Z",
-        "fd_match_id": 537390,
-        "avanserer": "Spain",
+        "fifa_event_id": "400021543",
         "tippebar": false,
         "tippe_status": "startet"
       }

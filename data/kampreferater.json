@@ -1,5 +1,5 @@
 {
-  "sist_oppdatert": "2026-07-21T07:01:13Z",
+  "sist_oppdatert": "2026-09-30T12:59:43Z",
   "antall_kamper": 104,
   "kamper": {
     "Belgium_Iran_2026_06_21": {
@@ -20004,8 +20004,8 @@
     "Spain_Argentina_2026_07_19": {
       "kamp_id": "Spain_Argentina_2026_07_19",
       "canonical_kamp_id": "Spain_Argentina_2026_07_19",
-      "fd_match_id": 537390,
-      "fd_utcDate": "2026-07-19T19:00:00Z",
+      "fd_match_id": null,
+      "fd_utcDate": "",
       "hjemmelag": "Spain",
       "bortelag": "Argentina",
       "hjemme_score": 0,
@@ -20106,7 +20106,7 @@
         ]
       },
       "kilde": "fifa.com",
-      "oppdatert": "2026-07-21T07:01:13Z"
+      "oppdatert": "2026-09-30T12:59:43Z"
     }
   }
 }
